@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mưa sao băng từ vựng</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --space-deep: #141d4a;
+    --space-mid: #2a2163;
+    --nebula: rgba(120, 90, 220, 0.28);
+    --nebula-2: rgba(60, 150, 200, 0.18);
+    --head: #f2f8ff;
+    --glow: rgba(160, 205, 255, 0.85);
+    --tail: #ffc58a;
+    --text: #f1f3ff;
+    --muted: #aeb6e6;
+    --panel: rgba(16, 20, 58, 0.78);
+    --panel-edge: rgba(190, 200, 255, 0.22);
+    --rail: rgba(14, 18, 52, 0.72);
+    --card: rgba(255, 255, 255, 0.045);
+    --card-hover: rgba(255, 255, 255, 0.09);
+    --c-hot: #ffb86b;
+    --c-work: #8cc8ff;
+    --c-life: #7fe0b8;
+    --c-heart: #ff9fb8;
+    color-scheme: dark;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --space-deep: #060a24;
+      --space-mid: #170f3c;
+      --nebula: rgba(110, 70, 210, 0.24);
+      --nebula-2: rgba(40, 120, 180, 0.16);
+      --panel: rgba(8, 11, 38, 0.8);
+      --rail: rgba(7, 10, 34, 0.74);
+    }
+  }
+  :root[data-theme="dark"] {
+    --space-deep: #060a24;
+    --space-mid: #170f3c;
+    --nebula: rgba(110, 70, 210, 0.24);
+    --nebula-2: rgba(40, 120, 180, 0.16);
+    --panel: rgba(8, 11, 38, 0.8);
+    --rail: rgba(7, 10, 34, 0.74);
+  }
+  *, *::before, *::after { box-sizing: inherit; }
+  html { height: 100%; scroll-padding-top: env(safe-area-inset-top, 0px); }
+  body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    background: var(--space-deep);
+    color: var(--text);
+    font-family: "Be Vietnam Pro", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+
+  #sky {
+    position: fixed; inset: 0;
+    background:
+      radial-gradient(ellipse 50% 45% at 80% 22%, var(--nebula), transparent 70%),
+      radial-gradient(ellipse 40% 40% at 45% 90%, var(--nebula-2), transparent 70%),
+      linear-gradient(170deg, var(--space-mid), var(--space-deep) 65%);
+  }
+  #stars { position: fixed; inset: 0; width: 100%; height: 100%; }
+
+  /* ---------- News rail (left third) ---------- */
+  #news {
+    position: fixed;
+    top: 0; bottom: 0; left: 0;
+    width: 33.333vw;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    display: flex; flex-direction: column;
+    background: var(--rail);
+    border-right: 1px solid var(--panel-edge);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    z-index: 8;
+  }
+  #news header { padding: clamp(18px, 2.6vh, 32px) clamp(18px, 1.8vw, 32px) 12px; }
+  #news h1 {
+    margin: 0;
+    font-family: "Bricolage Grotesque", "Segoe UI", Roboto, Arial, sans-serif;
+    font-weight: 800;
+    font-size: clamp(1.5rem, 2.2vw, 2.4rem);
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+  }
+  #news .stamp { margin: 6px 0 0; color: var(--muted); font-size: clamp(0.85rem, 0.95vw, 1.05rem); }
+
+  #feature {
+    flex: 0 1 auto;
+    max-height: 66%;
+    overflow-y: auto;
+    margin: 4px clamp(14px, 1.4vw, 26px) 0;
+    padding: clamp(16px, 1.6vw, 26px);
+    background: var(--card);
+    border-left: 3px solid var(--cat);
+    border-radius: 4px 14px 14px 4px;
+    transition: opacity .4s ease;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(190,200,255,.25) transparent;
+  }
+  #feature.fade { opacity: 0; }
+  #feature:focus-visible { outline: 2px solid var(--cat); outline-offset: 3px; }
+  #feature .top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+  #feature .cat { font-weight: 600; color: var(--cat); font-size: clamp(0.95rem, 1.05vw, 1.2rem); }
+  #feature .count { color: var(--muted); font-size: clamp(0.8rem, 0.85vw, 1rem); font-variant-numeric: tabular-nums; }
+  #bar { height: 3px; margin: 10px 0 0; background: rgba(255,255,255,.1); border-radius: 3px; overflow: hidden; }
+  #bar i { display: block; height: 100%; width: 0; background: var(--cat); }
+  #feature h3 {
+    margin: 14px 0 0;
+    font-family: "Bricolage Grotesque", "Segoe UI", Roboto, Arial, sans-serif;
+    font-weight: 600;
+    font-size: clamp(1.35rem, 1.75vw, 2.1rem);
+    line-height: 1.2;
+  }
+  #feature p { margin: 12px 0 0; line-height: 1.6; font-size: clamp(0.98rem, 1.05vw, 1.25rem); }
+  #feature .why { padding: 12px 14px; border-left: 3px solid var(--cat); background: var(--card); border-radius: 4px 10px 10px 4px; }
+  #feature .src { color: var(--muted); font-size: clamp(0.82rem, 0.85vw, 1rem); }
+  #feature .ask { margin-top: 14px; }
+  #answer { white-space: pre-wrap; color: #dfe3fb; }
+  #answer:empty { display: none; }
+
+  #queue {
+    flex: 1; min-height: 0;
+    overflow-y: auto;
+    padding: 16px clamp(14px, 1.4vw, 26px) 24px;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(190,200,255,.25) transparent;
+  }
+  #queue h4 { margin: 0 0 6px; color: var(--muted); font-weight: 500; font-size: clamp(0.85rem, 0.9vw, 1.02rem); }
+  .q {
+    display: flex; gap: 10px; align-items: flex-start;
+    width: 100%; text-align: left;
+    background: none; border: 0; border-radius: 8px;
+    padding: 7px 8px;
+    color: var(--muted);
+    font: inherit;
+    font-size: clamp(0.85rem, 0.95vw, 1.1rem);
+    line-height: 1.4;
+    cursor: pointer;
+  }
+  .q::before { content: ""; flex: 0 0 8px; height: 8px; margin-top: 0.45em; border-radius: 50%; background: var(--cat); }
+  .q:hover { background: var(--card); color: var(--text); }
+  .q.now { background: var(--card-hover); color: var(--text); font-weight: 600; }
+  .q:focus-visible { outline: 2px solid var(--cat); }
+
+  /* ---------- Meteor field (right two thirds) ---------- */
+  #field { position: fixed; top: 0; bottom: 0; right: 0; left: 33.333vw; overflow: hidden; }
+  .meteor {
+    position: absolute; left: 0; top: 0;
+    will-change: transform;
+    font-size: calc(var(--s) * clamp(1.3rem, 2.3vw, 3rem));
+    opacity: calc(0.45 + var(--s) * 0.55);
+    cursor: pointer;
+    transition: opacity .6s ease;
+  }
+  .meteor .tail {
+    position: absolute; left: 0; top: 0;
+    width: calc(var(--s) * 34vmin); height: 2px;
+    transform-origin: 0 50%;
+    transform: translateY(-1px) rotate(var(--tail-angle));
+    background: linear-gradient(90deg, var(--tail), rgba(255, 197, 138, 0.35) 30%, transparent);
+    border-radius: 2px;
+    filter: blur(0.4px);
+  }
+  .meteor .head {
+    position: absolute; left: -0.22em; top: -0.22em;
+    width: 0.44em; height: 0.44em; border-radius: 50%;
+    background: var(--head);
+    box-shadow: 0 0 0.5em 0.15em var(--glow), 0 0 1.4em 0.3em rgba(255, 190, 120, 0.35);
+  }
+  .meteor .label { position: absolute; left: 0.55em; top: 0.1em; white-space: nowrap; line-height: 1.1; }
+  .meteor .w {
+    display: block;
+    font-family: "Bricolage Grotesque", "Segoe UI", Roboto, Arial, sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    text-shadow: 0 0 18px rgba(150, 190, 255, 0.45);
+  }
+  .meteor .vi { display: block; margin-top: 0.15em; font-size: 0.48em; color: var(--muted); }
+  .meteor.lit { opacity: 1; z-index: 5; }
+  .meteor.lit .w { color: #fff; text-shadow: 0 0 22px var(--glow), 0 0 44px rgba(255, 190, 120, 0.5); }
+  .meteor.lit .head { transform: scale(1.5); }
+  .meteor.dim { opacity: 0.25; }
+
+  #card {
+    position: fixed;
+    left: calc(33.333vw + clamp(16px, 3vw, 56px));
+    bottom: calc(clamp(16px, 5vh, 56px) + env(safe-area-inset-bottom, 0px));
+    max-width: min(680px, calc(66.666vw - 48px));
+    padding: clamp(18px, 2.2vw, 30px) clamp(20px, 2.6vw, 36px);
+    background: var(--panel);
+    border: 1px solid var(--panel-edge);
+    border-radius: 22px 22px 22px 6px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    opacity: 0; transform: translateY(16px);
+    transition: opacity .5s ease, transform .5s ease;
+    pointer-events: none;
+    z-index: 10;
+  }
+  #card.show { opacity: 1; transform: none; }
+  #card h2 {
+    margin: 0;
+    font-family: "Bricolage Grotesque", "Segoe UI", Roboto, Arial, sans-serif;
+    font-weight: 800;
+    font-size: clamp(2rem, 4.2vw, 4.2rem);
+    letter-spacing: -0.02em;
+    line-height: 1;
+  }
+  #card .meta { margin: 0.6em 0 0; color: var(--muted); font-size: clamp(1rem, 1.4vw, 1.45rem); }
+  #card .meta span + span { margin-left: 0.9em; }
+  #card .mean { margin: 0.5em 0 0; font-size: clamp(1.25rem, 2vw, 2rem); font-weight: 500; }
+  #card .ex { margin: 0.6em 0 0; font-size: clamp(1rem, 1.5vw, 1.5rem); line-height: 1.5; color: #d9def9; font-style: italic; }
+  #card .ex:empty, #card .meta span:empty { display: none; }
+
+  #hud {
+    position: fixed;
+    top: calc(16px + env(safe-area-inset-top, 0px));
+    right: 16px;
+    display: flex; gap: 10px; align-items: center;
+    z-index: 20;
+  }
+  #hint { color: var(--muted); font-size: clamp(0.82rem, 1vw, 1.02rem); transition: opacity 1s ease; }
+  #hint kbd { font-family: inherit; padding: 0.1em 0.45em; border: 1px solid var(--panel-edge); border-radius: 6px; margin-right: 0.3em; }
+  #hint span + span { margin-left: 1em; }
+  #hud.quiet #hint { opacity: 0; }
+  button.pill {
+    font: inherit;
+    color: var(--text);
+    background: var(--panel);
+    border: 1px solid var(--panel-edge);
+    border-radius: 999px;
+    padding: 0.55em 1.1em;
+    cursor: pointer;
+  }
+  button.pill:hover { border-color: rgba(220, 225, 255, 0.5); }
+  button.pill:focus-visible, textarea:focus-visible { outline: 3px solid var(--tail); outline-offset: 2px; }
+  button.ask { background: var(--cat); color: #141030; border-color: var(--cat); font-weight: 600; }
+  button.ask[hidden] { display: none; }
+
+  #paused {
+    position: fixed; top: 50%; left: 66.666vw;
+    transform: translate(-50%, -50%);
+    font-family: "Bricolage Grotesque", "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: clamp(1.4rem, 2.5vw, 2.4rem);
+    color: var(--muted);
+    display: none;
+    z-index: 15;
+  }
+  body.is-paused #paused { display: block; }
+
+  dialog {
+    width: min(760px, calc(100vw - 32px));
+    max-height: calc(100% - 48px);
+    color: var(--text);
+    background: #10143a;
+    border: 1px solid var(--panel-edge);
+    border-radius: 18px;
+    padding: 24px;
+  }
+  dialog::backdrop { background: rgba(3, 5, 20, 0.7); }
+  dialog h3 { margin: 0 0 6px; font-family: "Bricolage Grotesque", "Segoe UI", Roboto, Arial, sans-serif; font-size: 1.5rem; }
+  dialog p { margin: 0 0 14px; color: var(--muted); line-height: 1.5; }
+  dialog code { color: var(--tail); }
+  textarea {
+    width: 100%; min-height: 300px;
+    font: 0.95rem/1.55 ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    color: var(--text);
+    background: #0a0d2a;
+    border: 1px solid var(--panel-edge);
+    border-radius: 10px;
+    padding: 12px;
+    resize: vertical;
+  }
+  .actions { display: flex; gap: 10px; justify-content: flex-end; margin-top: 14px; flex-wrap: wrap; }
+  .actions .primary { background: var(--tail); color: #1b1230; border-color: var(--tail); font-weight: 600; }
+  #err { color: #ffb4a8; margin: 10px 0 0; min-height: 1.2em; }
+
+  @media (max-width: 1100px) {
+    #hint { display: none; }
+  }
+  @media (max-width: 760px) {
+    #news { top: auto; width: 100%; height: 55%; border-right: 0; border-top: 1px solid var(--panel-edge); }
+    #field { left: 0; bottom: 55%; }
+    #card { left: 12px; right: 12px; max-width: none; bottom: calc(55% + 12px); }
+    #paused { left: 50%; top: 22%; }
+  }
+</style>
+</head>
+<body>
+<div id="sky"></div>
+<canvas id="stars" aria-hidden="true"></canvas>
+
+<aside id="news" aria-label="Bản tin hôm nay">
+  <header>
+    <h1>Bản tin hôm nay</h1>
+    <p class="stamp" id="stamp"></p>
+  </header>
+  <article id="feature" tabindex="0" aria-live="polite">
+    <div class="top"><span class="cat" id="dCat"></span><span class="count" id="dCount"></span></div>
+    <div id="bar"><i></i></div>
+    <h3 id="dTitle"></h3>
+    <p id="dSummary"></p>
+    <p class="why" id="dWhy"></p>
+    <p class="src" id="dSrc"></p>
+    <button class="pill ask" type="button" id="askBtn" hidden>Hỏi Claude thêm về tin này</button>
+    <p id="answer"></p>
+  </article>
+  <div id="queue">
+    <h4>Các tin trong bản tin</h4>
+    <div id="qlist"></div>
+  </div>
+</aside>
+
+<div id="field" aria-hidden="true"></div>
+
+<div id="hud">
+  <div id="hint">
+    <span><kbd>←</kbd>bản tin</span>
+    <span><kbd>Space</kbd>tạm dừng</span>
+    <span><kbd>↑ ↓</kbd>tốc độ</span>
+    <span><kbd>OK</kbd>xem từ</span>
+  </div>
+  <button class="pill" id="editBtn" type="button">Sửa danh sách từ</button>
+</div>
+
+<div id="paused">Đang tạm dừng</div>
+
+<section id="card" aria-live="polite">
+  <h2 id="cWord"></h2>
+  <p class="meta"><span id="cIpa"></span><span id="cPos"></span></p>
+  <p class="mean" id="cVi"></p>
+  <p class="ex" id="cEx"></p>
+</section>
+
+<dialog id="editor">
+  <h3>Danh sách từ vựng</h3>
+  <p>Mỗi dòng một từ, các phần cách nhau bằng dấu <code>|</code>:<br>
+  <code>từ | phiên âm | loại từ | nghĩa | ví dụ</code><br>
+  Chỉ cần <code>từ | nghĩa</code> cũng được.</p>
+  <textarea id="txt" spellcheck="false"></textarea>
+  <p id="err"></p>
+  <div class="actions">
+    <button class="pill" type="button" id="resetBtn">Khôi phục mặc định</button>
+    <button class="pill" type="button" id="cancelBtn">Hủy</button>
+    <button class="pill primary" type="button" id="saveBtn">Lưu danh sách</button>
+  </div>
+</dialog>
+
+<!-- News snapshot. To refresh: replace this JSON (or load it from your own API when self-hosting). -->
+<script id="brief-data" type="application/json">
+{
+  "updated": "Cập nhật sáng thứ Hai, 26/10/2026",
+  "sections": [
+    {
+      "id": "hot", "name": "Nổi bật", "color": "--c-hot",
+      "items": [
+        {
+          "title": "Quốc hội bước vào tuần làm việc thứ ba của Kỳ họp thứ hai",
+          "summary": "Từ 26 đến 31/10, Quốc hội khóa XVI thảo luận ở hội trường và ở tổ về nhiều dự án luật, nghị quyết quan trọng.",
+          "why": "Tuần này có nhiều nội dung về luật và chính sách có thể tác động đến doanh nghiệp, thuế và đời sống, nên dễ thành chủ đề trao đổi.",
+          "source": "Báo Mới", "date": "26/10"
+        },
+        {
+          "title": "Lãi suất tiền gửi niêm yết giảm, nhưng lãi thực tế vẫn cao",
+          "summary": "Một tuần sau khi Ngân hàng Nhà nước yêu cầu giảm lãi suất huy động kỳ hạn từ 6 tháng ít nhất 0,5%/năm và cấm đua lãi suất, mức lãi trên thị trường đã giảm nhưng vẫn ở mức cao.",
+          "why": "Nếu đang có khoản tiết kiệm sắp đáo hạn hoặc định vay mua nhà, đây là lúc nên so sánh kỹ giữa lãi niêm yết và lãi thực tế ngân hàng trả.",
+          "source": "Tuổi Trẻ", "date": "25/10"
+        },
+        {
+          "title": "TP.HCM tính phương án nâng cấp chợ Bến Thành, Tân Định, Đa Kao",
+          "summary": "Nhiều chợ truyền thống ở trung tâm sẽ được sắp xếp lại ngành hàng, đồng thời nâng cấp hạ tầng trong và ngoài chợ.",
+          "why": "Các chợ này là biểu tượng của thành phố, thay đổi sẽ ảnh hưởng tới tiểu thương, khách du lịch và diện mạo khu trung tâm.",
+          "source": "Tuổi Trẻ", "date": "25/10"
+        }
+      ]
+    },
+    {
+      "id": "work", "name": "Công việc", "color": "--c-work",
+      "items": [
+        {
+          "title": "Chính sách quyền riêng tư mới: dữ liệu Gmail, Drive, Photos có thể dùng cho quảng cáo",
+          "summary": "Bản cập nhật có hiệu lực từ 16/10 thêm ngoại lệ: dữ liệu từ các dịch vụ này có thể cá nhân hóa quảng cáo nếu người dùng chủ động kết nối chúng với các tính năng AI qua Personal Intelligence.",
+          "why": "Tin đang được báo chí công nghệ đưa rộng rãi. Khách hàng và người quen có thể hỏi, nên nắm rõ phạm vi thực tế của thay đổi để giải thích chính xác.",
+          "source": "9to5Google / Yahoo Tech", "date": "23–24/10"
+        },
+        {
+          "title": "A/B test có kiểm soát cho asset group trong Performance Max chính thức triển khai",
+          "summary": "Sau giai đoạn được phát hiện thử nghiệm, Google Ads đã công bố triển khai A/B test có kiểm soát cho các nhóm tài sản trong PMax.",
+          "why": "Cuối cùng đã có cách so sánh thông điệp sáng tạo bài bản trong PMax. Đây là thời điểm tốt để đề xuất khách hàng chạy thử trước mùa mua sắm cuối năm.",
+          "source": "Ignite Visibility", "date": "23/10"
+        },
+        {
+          "title": "Google Ads thử nghiệm dòng chữ chạy và thêm nút bật/tắt “Sourced videos”",
+          "summary": "Một số kết quả tài trợ trên Google Search đang được thử định dạng chữ chạy ngang, và mục tối ưu tài sản có thêm nút bật/tắt cho video lấy từ nguồn khác.",
+          "why": "Thay đổi nhỏ nhưng ảnh hưởng tới cách quảng cáo hiển thị và kiểm soát tài sản video tự động, nên lưu ý khi rà soát tài khoản.",
+          "source": "Search Engine Roundtable", "date": "23/10"
+        },
+        {
+          "title": "Display & Video 360 API v5 ra mắt bản beta",
+          "summary": "Google công bố bản beta của DV360 API v5, cùng đợt “Drop” đầu tiên của Google Marketing Platform với các công cụ mới về ROI.",
+          "why": "Hữu ích nếu làm việc với khách hàng dùng hệ sinh thái Marketing Platform hoặc các đội kỹ thuật tích hợp qua API.",
+          "source": "Google Ads Developer Blog", "date": "22/10"
+        }
+      ]
+    },
+    {
+      "id": "life", "name": "Cuộc sống cần biết", "color": "--c-life",
+      "items": [
+        {
+          "title": "TP.HCM hôm nay nắng nóng, chiều tối có mưa dông",
+          "summary": "Ngày nắng, nhiệt độ cao nhất 32–34°C, thấp nhất 25–27°C. Chiều tối và đêm có mưa rào và dông vài nơi, gió nhẹ.",
+          "why": "Mang theo áo mưa nếu ra ngoài buổi chiều tối, và uống đủ nước vào giữa trưa khi trời oi nóng.",
+          "source": "VOV / HTV", "date": "26/10"
+        },
+        {
+          "title": "Cảnh báo ngập sâu khi triều cường đạt đỉnh 27–29/10",
+          "summary": "Triều cường tại TP.HCM dự báo lên đỉnh trong ba ngày 27–29/10, vượt báo động 3, có nguy cơ gây ngập sâu ở nhiều khu vực trũng thấp.",
+          "why": "Nên tránh các tuyến đường hay ngập vào sáng sớm và chiều tối mấy ngày tới, nhất là khi mưa trùng với giờ triều lên.",
+          "source": "Môi trường & Đô thị", "date": "26/10"
+        }
+      ]
+    },
+    {
+      "id": "heart", "name": "Ý nghĩa", "color": "--c-heart",
+      "items": [
+        {
+          "title": "Những người lặng lẽ nối dài hành trình yêu thương",
+          "summary": "Mỗi người một nghề, một nơi sống, khác nhau cả tuổi tác lẫn cơ duyên, nhưng họ gặp nhau ở sự tận tâm với các hoạt động thiện nguyện.",
+          "why": "Lời nhắc rằng việc tốt không cần điều kiện đặc biệt: chỉ cần bắt đầu từ thời gian và kỹ năng mình đang có.",
+          "source": "Hà Nội Online", "date": "24/10"
+        },
+        {
+          "title": "15 gương mặt được vinh danh Thanh niên sống đẹp năm 2026",
+          "summary": "Giải thưởng năm nay nhận 129 hồ sơ đề cử, và sau 10 năm đã tuyên dương 227 thanh niên tiêu biểu vì những nghĩa cử nhân văn.",
+          "why": "Những câu chuyện về người trẻ sống có ích, từ y tế, tình nguyện đến phát triển cộng đồng, là nguồn cảm hứng tốt cho một tuần mới.",
+          "source": "VietnamNet", "date": "10/10"
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<script>
+(() => {
+  const DEFAULT_WORDS = [
+    { w: "leverage", ipa: "/ˈlev.ər.ɪdʒ/", pos: "verb", vi: "tận dụng", ex: "We leverage first-party data to improve targeting." },
+    { w: "resilient", ipa: "/rɪˈzɪl.i.ənt/", pos: "adj", vi: "kiên cường, bền bỉ", ex: "A resilient team adapts quickly to change." },
+    { w: "insight", ipa: "/ˈɪn.saɪt/", pos: "noun", vi: "hiểu biết sâu sắc", ex: "The report gave us real insight into customer behavior." },
+    { w: "ambiguous", ipa: "/æmˈbɪɡ.ju.əs/", pos: "adj", vi: "mơ hồ, không rõ ràng", ex: "The brief was too ambiguous to act on." },
+    { w: "streamline", ipa: "/ˈstriːm.laɪn/", pos: "verb", vi: "tinh gọn, đơn giản hóa", ex: "We streamlined the approval process." },
+    { w: "incentive", ipa: "/ɪnˈsen.tɪv/", pos: "noun", vi: "động lực, ưu đãi", ex: "The bonus is a strong incentive to hit the target." },
+    { w: "thrive", ipa: "/θraɪv/", pos: "verb", vi: "phát triển mạnh", ex: "Small brands can thrive with the right strategy." },
+    { w: "meticulous", ipa: "/məˈtɪk.jə.ləs/", pos: "adj", vi: "tỉ mỉ, kỹ lưỡng", ex: "She’s meticulous about checking every number." },
+    { w: "benchmark", ipa: "/ˈbentʃ.mɑːk/", pos: "noun", vi: "chuẩn để so sánh", ex: "Use last quarter as the benchmark." },
+    { w: "serendipity", ipa: "/ˌser.ənˈdɪp.ə.ti/", pos: "noun", vi: "sự tình cờ may mắn", ex: "Meeting my co-founder was pure serendipity." },
+    { w: "pivot", ipa: "/ˈpɪv.ət/", pos: "verb", vi: "chuyển hướng", ex: "The startup pivoted to B2B sales." },
+    { w: "retention", ipa: "/rɪˈten.ʃən/", pos: "noun", vi: "sự giữ chân (khách hàng)", ex: "Customer retention matters more than one-time sales." },
+    { w: "scalable", ipa: "/ˈskeɪ.lə.bəl/", pos: "adj", vi: "có thể mở rộng quy mô", ex: "We need a scalable way to onboard clients." },
+    { w: "trade-off", ipa: "/ˈtreɪd.ɒf/", pos: "noun", vi: "sự đánh đổi", ex: "There’s always a trade-off between speed and quality." },
+    { w: "nuance", ipa: "/ˈnjuː.ɑːns/", pos: "noun", vi: "sắc thái tinh tế", ex: "Translation often loses the nuance of the original." },
+    { w: "diligent", ipa: "/ˈdɪl.ɪ.dʒənt/", pos: "adj", vi: "siêng năng, cần cù", ex: "Diligent practice beats talent." },
+    { w: "momentum", ipa: "/məˈmen.təm/", pos: "noun", vi: "đà, động lực", ex: "Keep the momentum going after launch." },
+    { w: "articulate", ipa: "/ɑːˈtɪk.jə.leɪt/", pos: "verb", vi: "diễn đạt rõ ràng", ex: "Can you articulate the main goal in one sentence?" },
+    { w: "bottleneck", ipa: "/ˈbɒt.əl.nek/", pos: "noun", vi: "điểm nghẽn", ex: "Manual reporting is our biggest bottleneck." },
+    { w: "candid", ipa: "/ˈkæn.dɪd/", pos: "adj", vi: "thẳng thắn", ex: "Thanks for the candid feedback." },
+    { w: "curate", ipa: "/kjʊəˈreɪt/", pos: "verb", vi: "tuyển chọn", ex: "She curates a weekly list of industry news." },
+    { w: "foresee", ipa: "/fɔːˈsiː/", pos: "verb", vi: "thấy trước, lường trước", ex: "Nobody could foresee the market shift." },
+    { w: "tangible", ipa: "/ˈtæn.dʒə.bəl/", pos: "adj", vi: "hữu hình, cụ thể", ex: "The campaign delivered tangible results." },
+    { w: "orbit", ipa: "/ˈɔː.bɪt/", pos: "noun", vi: "quỹ đạo", ex: "The satellite stays in a stable orbit." },
+    { w: "gravitate", ipa: "/ˈɡræv.ɪ.teɪt/", pos: "verb", vi: "bị thu hút về phía", ex: "Users gravitate toward simple designs." }
+  ];
+  const STORE_KEY = "meteor-words-v1";
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const $ = (id) => document.getElementById(id);
+
+  /* =================== NEWS RAIL (auto-rotating full stories) =================== */
+  const brief = JSON.parse($("brief-data").textContent);
+  const feature = $("feature");
+  const qlist = $("qlist");
+  const askBtn = $("askBtn");
+  const answer = $("answer");
+  const barFill = $("bar").firstElementChild;
+  const answers = new Map();
+  const stories = [];
+  let currentUpdated = "";
+  function loadBrief(b) {
+    stories.length = 0;
+    qlist.innerHTML = "";
+    answers.clear();
+    currentUpdated = b.updated || "";
+    $("stamp").textContent = currentUpdated;
+    b.sections.forEach(sec => sec.items.forEach(it => {
+      it._sec = sec;
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "q";
+      btn.style.setProperty("--cat", `var(${sec.color})`);
+      btn.textContent = it.title;
+      const i = stories.length;
+      btn.addEventListener("click", () => { showStory(i); feature.focus({ preventScroll: true }); });
+      it._q = btn;
+      stories.push(it);
+      qlist.appendChild(btn);
+    }));
+  }
+  loadBrief(brief);
+
+  // When hosted (e.g. GitHub Pages), pull the latest brief.json so news can be updated without touching this file.
+  async function refreshBrief() {
+    try {
+      const r = await fetch("brief.json", { cache: "no-store" });
+      if (!r.ok) return;
+      const b = await r.json();
+      if (!b || !Array.isArray(b.sections) || b.updated === currentUpdated) return;
+      loadBrief(b);
+      showStory(0);
+    } catch (e) { /* offline or not hosted: keep the built-in brief */ }
+  }
+
+  let idx = -1, elapsed = 0, dur = 15000, hovering = false, asking = false, holdUntil = 0, swapTimer = null;
+  function durationFor(it) {
+    const n = (it.title + it.summary + (it.why || "")).length;
+    return Math.min(32, Math.max(14, 6 + n / 20)) * 1000;   // longer stories stay longer
+  }
+  function fill(it) {
+    feature.style.setProperty("--cat", `var(${it._sec.color})`);
+    $("dCat").textContent = it._sec.name;
+    $("dCount").textContent = `${idx + 1}/${stories.length}`;
+    $("dTitle").textContent = it.title;
+    $("dSummary").textContent = it.summary;
+    $("dWhy").textContent = it.why || "";
+    $("dWhy").style.display = it.why ? "" : "none";
+    $("dSrc").textContent = `Nguồn: ${it.source}, ${it.date}`;
+    answer.textContent = answers.get(it) || "";
+    feature.scrollTop = 0;
+    stories.forEach(x => x._q.classList.toggle("now", x === it));
+    it._q.scrollIntoView({ block: "nearest", behavior: reduceMotion ? "auto" : "smooth" });
+    feature.classList.remove("fade");
+  }
+  function showStory(i) {
+    idx = (i + stories.length) % stories.length;
+    elapsed = 0;
+    holdUntil = 0;
+    dur = durationFor(stories[idx]);
+    barFill.style.width = "0%";
+    clearTimeout(swapTimer);
+    if (reduceMotion) { fill(stories[idx]); return; }
+    feature.classList.add("fade");
+    const it = stories[idx];
+    swapTimer = setTimeout(() => fill(it), 400);
+  }
+  feature.addEventListener("pointerenter", () => hovering = true);
+  feature.addEventListener("pointerleave", () => hovering = false);
+
+  function tickNews(t, dt) {
+    if (!stories.length || paused || hovering || asking || performance.now() < holdUntil) return;
+    elapsed += dt * 1000;
+    barFill.style.width = Math.min(100, (elapsed / dur) * 100) + "%";
+    if (elapsed >= dur) showStory(idx + 1);
+  }
+
+  // Optional: ask Claude for more context (works when opened inside Claude)
+  let sample = null;
+  if (window.claude && typeof window.claude.use === "function") {
+    window.claude.use("sample").then(s => { sample = s; askBtn.hidden = !s; }).catch(() => {});
+  }
+  function clean(t) { return (t || "").replace(/\*\*/g, "").replace(/^#+\s*/gm, ""); }
+  async function askClaude() {
+    if (!sample || idx < 0 || asking) return;
+    const it = stories[idx];
+    const prompt =
+`Bạn giúp một người đọc bản tin buổi sáng hiểu sâu hơn một tin ngắn. Trả lời bằng tiếng Việt, văn xuôi gọn gàng, không dùng markdown, tối đa khoảng 180 từ.
+
+Tin thuộc mục: ${it._sec.name}
+Tiêu đề: ${it.title}
+Tóm tắt: ${it.summary}
+Vì sao đáng chú ý: ${it.why || ""}
+Nguồn: ${it.source}, ngày ${it.date}/2026
+
+Hãy viết ba phần, mỗi phần một đoạn ngắn:
+1. Bối cảnh: giải thích các khái niệm hoặc bối cảnh giúp hiểu tin này.
+2. Tác động: tin này có thể ảnh hưởng thế nào tới công việc hoặc cuộc sống hằng ngày.
+3. Gợi chuyện: hai câu hỏi hoặc ý có thể dùng để bắt chuyện về chủ đề này.
+
+Chỉ dựa trên thông tin ở trên và kiến thức chung. Không bịa thêm số liệu, ngày tháng hay trích dẫn mới; nếu điều gì chưa chắc thì nói rõ là chưa chắc.`;
+    asking = true;
+    askBtn.disabled = true;
+    answer.textContent = "Claude đang suy nghĩ…";
+    try {
+      const res = await sample(prompt, {
+        modelTier: "quick",
+        onText: ({ text }) => { if (stories[idx] === it) answer.textContent = clean(text); }
+      });
+      const out = clean(res.text);
+      answers.set(it, out);
+      if (stories[idx] === it) answer.textContent = out;
+      holdUntil = performance.now() + 45000;   // give time to read before moving on
+    } catch (e) {
+      if (e && e.code === "not_granted") { answer.textContent = "Trang chưa được phép hỏi Claude, nên tính năng này đã được ẩn."; askBtn.hidden = true; }
+      else if (e && e.code === "rate_limited") { answer.textContent = "Đang hỏi quá nhiều lần. Đợi vài phút rồi thử lại."; }
+      else { answer.textContent = "Không lấy được câu trả lời. Thử lại sau."; }
+    } finally {
+      asking = false;
+      askBtn.disabled = false;
+    }
+  }
+  askBtn.addEventListener("click", askClaude);
+
+  /* =================== VOCABULARY METEORS =================== */
+  const field = $("field");
+  const hud = $("hud");
+  const card = $("card");
+
+  function loadWords() {
+    try {
+      const raw = localStorage.getItem(STORE_KEY);
+      if (raw) {
+        const parsed = JSON.parse(raw);
+        if (Array.isArray(parsed) && parsed.length) return parsed;
+      }
+    } catch (e) {}
+    return DEFAULT_WORDS.slice();
+  }
+  let words = loadWords();
+  let bag = [];
+  function nextWord() {
+    if (!bag.length) {
+      bag = words.slice();
+      for (let i = bag.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [bag[i], bag[j]] = [bag[j], bag[i]];
+      }
+    }
+    return bag.pop();
+  }
+
+  const canvas = $("stars");
+  const ctx = canvas.getContext("2d");
+  let W = 0, H = 0, FW = 0, FH = 0, stars = [];
+  function resize() {
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    W = window.innerWidth; H = window.innerHeight;
+    FW = field.clientWidth; FH = field.clientHeight;
+    canvas.width = W * dpr; canvas.height = H * dpr;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    const count = Math.round((W * H) / 2600);
+    stars = Array.from({ length: count }, () => ({
+      x: Math.random() * W, y: Math.random() * H,
+      r: Math.random() < 0.08 ? 1.4 + Math.random() : 0.4 + Math.random() * 0.8,
+      a: 0.3 + Math.random() * 0.7,
+      tw: Math.random() * Math.PI * 2,
+      sp: 0.4 + Math.random() * 1.6
+    }));
+  }
+  function drawStars(t) {
+    ctx.clearRect(0, 0, W, H);
+    ctx.fillStyle = "#fff";
+    for (const s of stars) {
+      ctx.globalAlpha = reduceMotion ? s.a : s.a * (0.65 + 0.35 * Math.sin(t * 0.001 * s.sp + s.tw));
+      ctx.beginPath();
+      ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+    ctx.globalAlpha = 1;
+  }
+
+  const DRIFT = 0.32;
+  const TAIL_ANGLE = (Math.atan2(1, DRIFT) * 180 / Math.PI) + 180;
+  const MAX_METEORS = 11;
+  let meteors = [];
+  let speed = reduceMotion ? 0.4 : 1;
+  let paused = false, spawnClock = 0, lit = null, cardTimer = null;
+
+  function spawn() {
+    if (meteors.length >= MAX_METEORS || !words.length) return;
+    const item = nextWord();
+    const z = 0.55 + Math.random() * 0.45;
+    const el = document.createElement("div");
+    el.className = "meteor";
+    el.style.setProperty("--s", z.toFixed(3));
+    el.style.setProperty("--tail-angle", TAIL_ANGLE + "deg");
+    el.innerHTML = '<i class="tail"></i><i class="head"></i><span class="label"><b class="w"></b><span class="vi"></span></span>';
+    el.querySelector(".w").textContent = item.w;
+    el.querySelector(".vi").textContent = item.vi || "";
+    const m = {
+      el, item, z,
+      x: -0.2 * FW + Math.random() * 0.9 * FW,
+      y: -80 - Math.random() * 60,
+      v: (55 + Math.random() * 30) * z * Math.max(0.6, FH / 900)
+    };
+    el.addEventListener("click", () => spotlight(m));
+    field.appendChild(el);
+    meteors.push(m);
+  }
+
+  function spotlight(m) {
+    if (!m) {
+      const c = meteors.filter(x => x.y > FH * 0.1 && x.y < FH * 0.55 && x !== lit);
+      if (!c.length) return;
+      c.sort((a, b) => b.z - a.z);
+      m = c[0];
+    }
+    if (lit) lit.el.classList.remove("lit");
+    lit = m;
+    m.el.classList.add("lit");
+    meteors.forEach(x => x.el.classList.toggle("dim", x !== m));
+    $("cWord").textContent = m.item.w;
+    $("cIpa").textContent = m.item.ipa || "";
+    $("cPos").textContent = m.item.pos || "";
+    $("cVi").textContent = m.item.vi || "";
+    $("cEx").textContent = m.item.ex || "";
+    card.classList.add("show");
+    clearTimeout(cardTimer);
+    cardTimer = setTimeout(clearSpotlight, 9000);
+  }
+  function clearSpotlight() {
+    card.classList.remove("show");
+    if (lit) lit.el.classList.remove("lit");
+    lit = null;
+    meteors.forEach(x => x.el.classList.remove("dim"));
+  }
+
+  let autoClock = 0, last = performance.now();
+  function frame(t) {
+    const dt = Math.min((t - last) / 1000, 0.1);
+    last = t;
+    drawStars(t);
+    tickNews(t, dt);
+    if (!paused) {
+      spawnClock += dt * 1000 * speed;
+      if (spawnClock > 1900) { spawnClock = 0; spawn(); }
+      autoClock += dt * 1000;
+      if (autoClock > 15000) { autoClock = 0; if (!lit) spotlight(); }
+      for (let i = meteors.length - 1; i >= 0; i--) {
+        const m = meteors[i];
+        const step = m.v * speed * (m === lit ? 0.25 : 1) * dt;
+        m.y += step;
+        m.x += step * DRIFT;
+        m.el.style.transform = `translate3d(${m.x.toFixed(1)}px, ${m.y.toFixed(1)}px, 0)`;
+        if (m.y > FH + 120 || m.x > FW + 400) {
+          if (m === lit) clearSpotlight();
+          m.el.remove();
+          meteors.splice(i, 1);
+        }
+      }
+    }
+    requestAnimationFrame(frame);
+  }
+
+  /* =================== CONTROLS (keyboard + TV remote) =================== */
+  const editor = $("editor");
+  function setPaused(p) { paused = p; document.body.classList.toggle("is-paused", p); }
+
+  window.addEventListener("keydown", (e) => {
+    if (editor.open) return;
+    const a = document.activeElement;
+
+    if (a && $("news").contains(a)) {
+      if (e.key === "ArrowDown") { e.preventDefault(); showStory(idx + 1); feature.focus({ preventScroll: true }); }
+      else if (e.key === "ArrowUp") { e.preventDefault(); showStory(idx - 1); feature.focus({ preventScroll: true }); }
+      else if (e.key === "Enter" && a === feature) { e.preventDefault(); askClaude(); }
+      else if (e.key === "ArrowRight" || e.key === "Escape" || e.key === "Backspace") { e.preventDefault(); a.blur(); }
+      else if (e.key === " ") { e.preventDefault(); setPaused(!paused); }
+      return;
+    }
+
+    if (e.key === "ArrowLeft") { e.preventDefault(); feature.focus(); }
+    else if (e.key === " " || e.key === "MediaPlayPause") { e.preventDefault(); setPaused(!paused); }
+    else if (e.key === "ArrowUp") { e.preventDefault(); speed = Math.min(speed + 0.2, 3); }
+    else if (e.key === "ArrowDown") { e.preventDefault(); speed = Math.max(speed - 0.2, 0.2); }
+    else if (e.key === "Enter" && (a === document.body || !a)) { e.preventDefault(); autoClock = 0; spotlight(); }
+    else if (e.key === "Escape" || e.key === "Backspace") { clearSpotlight(); }
+  });
+  setTimeout(() => hud.classList.add("quiet"), 8000);
+
+  /* =================== WORD LIST EDITOR =================== */
+  const txt = $("txt"), err = $("err");
+  function toText(lst) {
+    return lst.map(o => [o.w, o.ipa, o.pos, o.vi, o.ex].map(v => v || "").join(" | ").replace(/( \| )+$/, "")).join("\n");
+  }
+  function parse(text) {
+    const out = [];
+    for (const line of text.split("\n")) {
+      const p = line.split("|").map(s => s.trim());
+      if (!p[0]) continue;
+      if (p.length === 2) out.push({ w: p[0], vi: p[1] });
+      else out.push({ w: p[0], ipa: p[1] || "", pos: p[2] || "", vi: p[3] || "", ex: p[4] || "" });
+    }
+    return out;
+  }
+  $("editBtn").addEventListener("click", () => { txt.value = toText(words); err.textContent = ""; setPaused(true); editor.showModal(); });
+  $("cancelBtn").addEventListener("click", () => editor.close());
+  editor.addEventListener("close", () => setPaused(false));
+  $("resetBtn").addEventListener("click", () => { txt.value = toText(DEFAULT_WORDS); err.textContent = ""; });
+  $("saveBtn").addEventListener("click", () => {
+    const lst = parse(txt.value);
+    if (!lst.length) { err.textContent = "Danh sách đang trống. Thêm ít nhất một dòng có từ vựng."; return; }
+    words = lst; bag = [];
+    try { localStorage.setItem(STORE_KEY, JSON.stringify(lst)); } catch (e) {}
+    editor.close();
+  });
+
+  window.addEventListener("resize", resize);
+  resize();
+  for (let i = 0; i < 4; i++) {
+    spawn();
+    const m = meteors[meteors.length - 1];
+    if (m) m.y = Math.random() * FH * 0.6;
+  }
+  showStory(0);
+  refreshBrief();
+  setInterval(refreshBrief, 30 * 60 * 1000);
+  requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>

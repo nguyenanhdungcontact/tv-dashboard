@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 320x180 banner shown in the Google TV apps row -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="320dp" android:height="180dp"
+    android:viewportWidth="320" android:viewportHeight="180">
+    <path android:fillColor="#0B1238" android:pathData="M0,0h320v180h-320z" />
+    <path android:fillColor="#2A1F66" android:pathData="M180,0h140v180h-220z" />
+    <path android:strokeColor="#FFC58A" android:strokeWidth="3" android:strokeLineCap="round"
+        android:pathData="M120,40 L200,112" />
+    <path android:fillColor="#F2F8FF" android:pathData="M200,112m-9,0a9,9 0,1 1,18 0a9,9 0,1 1,-18 0" />
+    <path android:fillColor="#FFFFFF" android:pathData="M60,50m-2,0a2,2 0,1 1,4 0a2,2 0,1 1,-4 0" />
+    <path android:fillColor="#FFFFFF" android:pathData="M260,40m-1.5,0a1.5,1.5 0,1 1,3 0a1.5,1.5 0,1 1,-3 0" />
+    <path android:fillColor="#FFFFFF" android:pathData="M90,140m-1.5,0a1.5,1.5 0,1 1,3 0a1.5,1.5 0,1 1,-3 0" />
+    <path android:fillColor="#FFFFFF" android:pathData="M285,150m-2,0a2,2 0,1 1,4 0a2,2 0,1 1,-4 0" />
+</vector>
