@@ -1,26 +1,26 @@
 {
-  "updated": "Cập nhật sáng thứ Hai, 26/10/2026",
+  "updated": "Cập nhật thứ Bảy, 31/10/2026",
   "sections": [
     {
       "id": "hot", "name": "Nổi bật", "color": "--c-hot",
       "items": [
         {
-          "title": "Quốc hội bước vào tuần làm việc thứ ba của Kỳ họp thứ hai",
-          "summary": "Từ 26 đến 31/10, Quốc hội khóa XVI thảo luận ở hội trường và ở tổ về nhiều dự án luật, nghị quyết quan trọng.",
-          "why": "Tuần này có nhiều nội dung về luật và chính sách có thể tác động đến doanh nghiệp, thuế và đời sống, nên dễ thành chủ đề trao đổi.",
-          "source": "Báo Mới", "date": "26/10"
+          "title": "Kim ngạch thương mại Việt Nam vượt 1.000 tỉ USD chỉ sau 10 tháng",
+          "summary": "Tổng kim ngạch xuất nhập khẩu lần đầu vượt mốc 1.000 tỉ USD sau 10 tháng, xuất siêu theo tháng lập kỷ lục 6,8 tỉ USD, đưa Việt Nam tiến gần nhóm 15 cường quốc thương mại toàn cầu.",
+          "why": "Một cột mốc kinh tế lớn, hữu ích làm số liệu nền khi trao đổi với khách hàng về sức mua, xuất khẩu và triển vọng cuối năm.",
+          "source": "Thanh Niên", "date": "31/10"
         },
         {
-          "title": "Lãi suất tiền gửi niêm yết giảm, nhưng lãi thực tế vẫn cao",
-          "summary": "Một tuần sau khi Ngân hàng Nhà nước yêu cầu giảm lãi suất huy động kỳ hạn từ 6 tháng ít nhất 0,5%/năm và cấm đua lãi suất, mức lãi trên thị trường đã giảm nhưng vẫn ở mức cao.",
-          "why": "Nếu đang có khoản tiết kiệm sắp đáo hạn hoặc định vay mua nhà, đây là lúc nên so sánh kỹ giữa lãi niêm yết và lãi thực tế ngân hàng trả.",
-          "source": "Tuổi Trẻ", "date": "25/10"
+          "title": "TP.HCM mở thêm kênh huy động vốn dài hạn cho hạ tầng qua trái phiếu",
+          "summary": "Thành phố đang hướng tới phát hành trái phiếu để có nguồn vốn dài hạn cho các dự án hạ tầng, thay vì chủ yếu dựa vào ngân sách.",
+          "why": "Hạ tầng được đầu tư nhanh hơn sẽ tác động đến giao thông, giá đất và đời sống ở nhiều khu vực của thành phố.",
+          "source": "Tuổi Trẻ", "date": "31/10"
         },
         {
-          "title": "TP.HCM tính phương án nâng cấp chợ Bến Thành, Tân Định, Đa Kao",
-          "summary": "Nhiều chợ truyền thống ở trung tâm sẽ được sắp xếp lại ngành hàng, đồng thời nâng cấp hạ tầng trong và ngoài chợ.",
-          "why": "Các chợ này là biểu tượng của thành phố, thay đổi sẽ ảnh hưởng tới tiểu thương, khách du lịch và diện mạo khu trung tâm.",
-          "source": "Tuổi Trẻ", "date": "25/10"
+          "title": "Fed giữ nguyên lãi suất",
+          "summary": "Cục Dự trữ Liên bang Mỹ quyết định giữ nguyên lãi suất trong cuộc họp mới nhất.",
+          "why": "Quyết định của Fed ảnh hưởng đến tỷ giá, dòng vốn và mặt bằng lãi suất trong nước, kể cả lãi vay mua nhà.",
+          "source": "Báo Tin tức", "date": "31/10"
         }
       ]
     },
@@ -28,28 +28,28 @@
       "id": "work", "name": "Công việc", "color": "--c-work",
       "items": [
         {
-          "title": "Chính sách quyền riêng tư mới: dữ liệu Gmail, Drive, Photos có thể dùng cho quảng cáo",
-          "summary": "Bản cập nhật có hiệu lực từ 16/10 thêm ngoại lệ: dữ liệu từ các dịch vụ này có thể cá nhân hóa quảng cáo nếu người dùng chủ động kết nối chúng với các tính năng AI qua Personal Intelligence.",
-          "why": "Tin đang được báo chí công nghệ đưa rộng rãi. Khách hàng và người quen có thể hỏi, nên nắm rõ phạm vi thực tế của thay đổi để giải thích chính xác.",
-          "source": "9to5Google / Yahoo Tech", "date": "23–24/10"
+          "title": "Google cho biết quảng cáo trong AI Mode đang mang lại doanh thu thấp hơn quảng cáo tìm kiếm truyền thống",
+          "summary": "Thông tin được nhắc đến trong đợt công bố kết quả kinh doanh gần đây và đang được giới search marketing bàn tán nhiều.",
+          "why": "Đây là chủ đề khách hàng hay hỏi về tương lai của quảng cáo tìm kiếm khi AI Mode mở rộng. Nên nắm rõ phát biểu gốc trước khi bình luận.",
+          "source": "Search Engine Roundtable", "date": "30/10"
         },
         {
-          "title": "A/B test có kiểm soát cho asset group trong Performance Max chính thức triển khai",
-          "summary": "Sau giai đoạn được phát hiện thử nghiệm, Google Ads đã công bố triển khai A/B test có kiểm soát cho các nhóm tài sản trong PMax.",
-          "why": "Cuối cùng đã có cách so sánh thông điệp sáng tạo bài bản trong PMax. Đây là thời điểm tốt để đề xuất khách hàng chạy thử trước mùa mua sắm cuối năm.",
-          "source": "Ignite Visibility", "date": "23/10"
+          "title": "Chính sách quảng cáo cá nhân hóa trên YouTube cho phép ngành đồ uống có cồn",
+          "summary": "Từ 30/10, Google cập nhật chính sách để cho phép quảng cáo cá nhân hóa về đồ uống có cồn trên YouTube ở những nơi pháp luật cho phép, vẫn giữ giới hạn độ tuổi và cấm nhắm mục tiêu theo thông tin sức khỏe.",
+          "why": "Liên quan trực tiếp nếu bạn có khách hàng ngành bia rượu hoặc F&B. Cần kiểm tra quy định quảng cáo đồ uống có cồn tại Việt Nam trước khi đề xuất.",
+          "source": "Google Ads Policy Help", "date": "30/10"
         },
         {
-          "title": "Google Ads thử nghiệm dòng chữ chạy và thêm nút bật/tắt “Sourced videos”",
-          "summary": "Một số kết quả tài trợ trên Google Search đang được thử định dạng chữ chạy ngang, và mục tối ưu tài sản có thêm nút bật/tắt cho video lấy từ nguồn khác.",
-          "why": "Thay đổi nhỏ nhưng ảnh hưởng tới cách quảng cáo hiển thị và kiểm soát tài sản video tự động, nên lưu ý khi rà soát tài khoản.",
-          "source": "Search Engine Roundtable", "date": "23/10"
+          "title": "Gemini ngừng gắn tham số UTM vào các đường link được trích dẫn",
+          "summary": "Google từng thêm UTM vào link trong câu trả lời của Gemini từ đầu tháng 9, nhưng khoảng cuối tháng 9 đã ngừng.",
+          "why": "Lưu lượng đến từ Gemini có thể khó nhận diện hơn trong Analytics. Đáng lưu ý khi khách hàng hỏi về đo lường traffic từ AI.",
+          "source": "Search Engine Roundtable", "date": "30/10"
         },
         {
-          "title": "Display & Video 360 API v5 ra mắt bản beta",
-          "summary": "Google công bố bản beta của DV360 API v5, cùng đợt “Drop” đầu tiên của Google Marketing Platform với các công cụ mới về ROI.",
-          "why": "Hữu ích nếu làm việc với khách hàng dùng hệ sinh thái Marketing Platform hoặc các đội kỹ thuật tích hợp qua API.",
-          "source": "Google Ads Developer Blog", "date": "22/10"
+          "title": "ChatGPT mở rộng quảng cáo, thêm định dạng nhiều hình ảnh",
+          "summary": "Quảng cáo trên ChatGPT được mở rộng phạm vi và bổ sung định dạng nhiều hình ảnh.",
+          "why": "Một kênh cạnh tranh mới cho ngân sách quảng cáo, hiểu rõ để tư vấn khách hàng trong bối cảnh đa kênh.",
+          "source": "Search Engine Roundtable", "date": "30/10"
         }
       ]
     },
@@ -57,16 +57,22 @@
       "id": "life", "name": "Cuộc sống cần biết", "color": "--c-life",
       "items": [
         {
-          "title": "TP.HCM hôm nay nắng nóng, chiều tối có mưa dông",
-          "summary": "Ngày nắng, nhiệt độ cao nhất 32–34°C, thấp nhất 25–27°C. Chiều tối và đêm có mưa rào và dông vài nơi, gió nhẹ.",
-          "why": "Mang theo áo mưa nếu ra ngoài buổi chiều tối, và uống đủ nước vào giữa trưa khi trời oi nóng.",
-          "source": "VOV / HTV", "date": "26/10"
+          "title": "Lo ngại thị trường đóng băng khi cấm chuyển nhượng nhà ở hình thành trong tương lai",
+          "summary": "Báo Thanh Niên số ra hôm nay có bài phân tích về quy định cấm chuyển nhượng nhà ở hình thành trong tương lai và nỗi lo thị trường bị đóng băng.",
+          "why": "Nếu đang tìm mua nhà, đặc biệt là căn hộ dự án chưa bàn giao, nên đọc kỹ quy định này trước khi đặt cọc hay ký hợp đồng.",
+          "source": "Thanh Niên", "date": "31/10"
         },
         {
-          "title": "Cảnh báo ngập sâu khi triều cường đạt đỉnh 27–29/10",
-          "summary": "Triều cường tại TP.HCM dự báo lên đỉnh trong ba ngày 27–29/10, vượt báo động 3, có nguy cơ gây ngập sâu ở nhiều khu vực trũng thấp.",
-          "why": "Nên tránh các tuyến đường hay ngập vào sáng sớm và chiều tối mấy ngày tới, nhất là khi mưa trùng với giờ triều lên.",
-          "source": "Môi trường & Đô thị", "date": "26/10"
+          "title": "Giá chào bán chung cư chuyển nhượng tiếp tục giảm, người mua vẫn dè dặt",
+          "summary": "Nhiều báo cáo thị trường quý III cho thấy giá chung cư chuyển nhượng tại Hà Nội tiếp tục đi xuống, nhưng thị trường cuối năm khó phục hồi chỉ nhờ giảm giá.",
+          "why": "Tín hiệu tham khảo cho mặt bằng giá căn hộ và tâm lý người mua trên cả nước.",
+          "source": "Hà Nội Mới", "date": "31/10"
+        },
+        {
+          "title": "Sân bay Long Thành đang ở giai đoạn chuẩn bị trước ngày khai thác",
+          "summary": "Báo Thanh Niên có loạt bài cập nhật tình hình sân bay Long Thành trong giai đoạn chuẩn bị đưa vào khai thác.",
+          "why": "Sân bay mới sẽ thay đổi cách di chuyển của người dân TP.HCM, đáng theo dõi nếu bạn hay đi công tác hoặc có kế hoạch đi xa.",
+          "source": "Thanh Niên", "date": "30/10"
         }
       ]
     },
@@ -74,16 +80,16 @@
       "id": "heart", "name": "Ý nghĩa", "color": "--c-heart",
       "items": [
         {
-          "title": "Những người lặng lẽ nối dài hành trình yêu thương",
-          "summary": "Mỗi người một nghề, một nơi sống, khác nhau cả tuổi tác lẫn cơ duyên, nhưng họ gặp nhau ở sự tận tâm với các hoạt động thiện nguyện.",
-          "why": "Lời nhắc rằng việc tốt không cần điều kiện đặc biệt: chỉ cần bắt đầu từ thời gian và kỹ năng mình đang có.",
-          "source": "Hà Nội Online", "date": "24/10"
+          "title": "“Không phải cứ đăng ký là hiến tạng được”",
+          "summary": "Giám đốc Bệnh viện Hữu nghị Việt Đức chia sẻ về những điều kiện và quy trình phía sau mỗi ca hiến tạng, giúp người đăng ký hiểu rõ hơn.",
+          "why": "Hiến tạng là món quà sự sống. Hiểu đúng quy trình giúp việc đăng ký trở thành một cam kết có ý nghĩa thực sự.",
+          "source": "VietNamNet", "date": "31/10"
         },
         {
-          "title": "15 gương mặt được vinh danh Thanh niên sống đẹp năm 2026",
-          "summary": "Giải thưởng năm nay nhận 129 hồ sơ đề cử, và sau 10 năm đã tuyên dương 227 thanh niên tiêu biểu vì những nghĩa cử nhân văn.",
-          "why": "Những câu chuyện về người trẻ sống có ích, từ y tế, tình nguyện đến phát triển cộng đồng, là nguồn cảm hứng tốt cho một tuần mới.",
-          "source": "VietnamNet", "date": "10/10"
+          "title": "Công viên Lê Thị Riêng sẽ được chỉnh trang thành công viên tưởng niệm",
+          "summary": "Nhiều nghệ sĩ đồng tình với kế hoạch cải tạo công viên văn hóa Lê Thị Riêng ở TP.HCM thành công viên tưởng niệm.",
+          "why": "Thêm một không gian xanh để nhớ về lịch sử và để mọi người tìm đến những phút tĩnh lặng giữa thành phố.",
+          "source": "Tuổi Trẻ", "date": "31/10"
         }
       ]
     }
