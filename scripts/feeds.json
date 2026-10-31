@@ -1,0 +1,16 @@
+{
+  "vn": [
+    { "name": "VnExpress", "url": "https://vnexpress.net/rss/tin-noi-bat.rss" },
+    { "name": "VnExpress", "url": "https://vnexpress.net/rss/thoi-su.rss" },
+    { "name": "VnExpress", "url": "https://vnexpress.net/rss/kinh-doanh.rss" },
+    { "name": "VnExpress", "url": "https://vnexpress.net/rss/the-gioi.rss" },
+    { "name": "Tuổi Trẻ", "url": "https://tuoitre.vn/rss/tin-moi-nhat.rss" },
+    { "name": "Thanh Niên", "url": "https://thanhnien.vn/rss/home.rss" }
+  ],
+  "work": [
+    { "name": "Search Engine Land", "url": "https://searchengineland.com/feed" },
+    { "name": "Search Engine Roundtable", "url": "https://www.seroundtable.com/index.xml" },
+    { "name": "Google Ads & Commerce Blog", "url": "https://blog.google/products/ads-commerce/rss/" },
+    { "name": "Google Ads Developer Blog", "url": "https://ads-developers.googleblog.com/feeds/posts/default" }
+  ]
+}
