@@ -20,6 +20,19 @@ android {
         buildConfigField("String", "DASHBOARD_URL", "\"$dashboardUrl\"")
     }
 
+    // Fixed key so every build from GitHub Actions can be installed over the previous one.
+    signingConfigs {
+        create("tvdash") {
+            storeFile = file("tvdash.keystore")
+            storePassword = "tvdash123"
+            keyAlias = "tvdash"
+            keyPassword = "tvdash123"
+        }
+    }
+    buildTypes {
+        getByName("debug") { signingConfig = signingConfigs.getByName("tvdash") }
+    }
+
     buildFeatures { buildConfig = true }
 
     compileOptions {
