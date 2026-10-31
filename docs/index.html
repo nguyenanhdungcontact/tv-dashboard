@@ -127,6 +127,12 @@
   #feature p { margin: 10px 0 0; line-height: 1.55; font-size: clamp(0.85rem, 0.95vw, 1.15rem); }
   #feature .why { padding: 12px 14px; border-left: 3px solid var(--cat); background: var(--card); border-radius: 4px 10px 10px 4px; }
   #feature .src { color: var(--muted); font-size: clamp(0.82rem, 0.85vw, 1rem); }
+  #dPoints { margin: 10px 0 0; padding-left: 1.1em; }
+  #dPoints li { margin: 5px 0; line-height: 1.5; font-size: clamp(0.85rem, 0.95vw, 1.15rem); }
+  #dPoints li::marker { color: var(--cat); }
+  #dPoints:empty { display: none; }
+  body.mode-news #feature { box-shadow: 0 0 0 2px var(--cat); }
+  body.mode-vocab #news { opacity: 0.55; transition: opacity .4s ease; }
   #feature .ask { margin-top: 14px; }
   #answer { white-space: pre-wrap; color: #dfe3fb; }
   #answer:empty { display: none; }
@@ -223,6 +229,13 @@
   #card .meta span + span { margin-left: 0.9em; }
   #card .mean { margin: 0.5em 0 0; font-size: clamp(1.25rem, 2vw, 2rem); font-weight: 500; }
   #card .ex { margin: 0.6em 0 0; font-size: clamp(1rem, 1.5vw, 1.5rem); line-height: 1.5; color: #d9def9; font-style: italic; }
+  #card .col { margin: 0.8em 0 0; display: flex; flex-wrap: wrap; gap: 0.45em; }
+  #card .col span { font-size: clamp(0.9rem, 1.2vw, 1.25rem); padding: 0.2em 0.65em; border-radius: 999px;
+    border: 1px solid rgba(255, 197, 138, 0.45); color: #ffe2c2; background: rgba(255, 197, 138, 0.08); }
+  #card .col:empty { display: none; }
+  #card .nav { margin: 0.9em 0 0; color: var(--muted); font-size: clamp(0.8rem, 1vw, 1.05rem); }
+  #card .nav span + span { margin-left: 1.2em; }
+  body.mode-vocab #card { box-shadow: 0 0 0 2px var(--tail); }
   #card .ex:empty, #card .meta span:empty { display: none; }
 
   #hud {
@@ -314,6 +327,7 @@
     <div id="bar"><i></i></div>
     <h3 id="dTitle"></h3>
     <p id="dSummary"></p>
+    <ul id="dPoints"></ul>
     <p class="why" id="dWhy"></p>
     <p class="src" id="dSrc"></p>
     <button class="pill ask" type="button" id="askBtn" hidden>Hỏi Claude thêm về tin này</button>
@@ -329,10 +343,10 @@
 
 <div id="hud">
   <div id="hint">
-    <span><kbd>←</kbd>bản tin</span>
-    <span><kbd>Space</kbd>tạm dừng</span>
-    <span><kbd>↑ ↓</kbd>tốc độ</span>
-    <span><kbd>OK</kbd>xem từ</span>
+    <span><kbd>↑ ↓</kbd>đổi tin</span>
+    <span><kbd>→</kbd>từ vựng</span>
+    <span><kbd>← →</kbd>đổi từ</span>
+    <span><kbd>Back</kbd>quay lại</span>
   </div>
   <button class="pill" id="editBtn" type="button">Sửa danh sách từ</button>
 </div>
@@ -344,6 +358,8 @@
   <p class="meta"><span id="cIpa"></span><span id="cPos"></span></p>
   <p class="mean" id="cVi"></p>
   <p class="ex" id="cEx"></p>
+  <p class="col" id="cCol"></p>
+  <p class="nav" id="cNav"></p>
 </section>
 
 <dialog id="editor">
@@ -540,7 +556,7 @@
 
   let idx = -1, elapsed = 0, dur = 15000, hovering = false, asking = false, holdUntil = 0, swapTimer = null;
   function durationFor(it) {
-    const n = (it.title + it.summary + (it.why || "")).length;
+    const n = (it.title + it.summary + (it.why || "") + (Array.isArray(it.points) ? it.points.join("") : "")).length;
     return Math.min(32, Math.max(14, 6 + n / 20)) * 1000;   // longer stories stay longer
   }
   function fill(it) {
@@ -549,6 +565,13 @@
     $("dCount").textContent = `${idx + 1}/${stories.length}`;
     $("dTitle").textContent = it.title;
     $("dSummary").textContent = it.summary;
+    const ul = $("dPoints");
+    ul.innerHTML = "";
+    (Array.isArray(it.points) ? it.points : []).slice(0, 4).forEach(t => {
+      const li = document.createElement("li");
+      li.textContent = t;
+      ul.appendChild(li);
+    });
     $("dWhy").textContent = it.why || "";
     $("dWhy").style.display = it.why ? "" : "none";
     $("dSrc").textContent = `Nguồn: ${it.source}, ${it.date}`;
@@ -727,9 +750,9 @@ Chỉ dựa trên thông tin ở trên và kiến thức chung. Không bịa th�
     lastX = x;
     return x;
   }
-  function spawn() {
-    if (meteors.length >= MAX_METEORS || !words.length) return;
-    const item = nextWord();
+  function spawn(forced, startY) {
+    if (!forced && (meteors.length >= MAX_METEORS || !words.length)) return null;
+    const item = forced || nextWord();
     const z = 0.55 + Math.random() * 0.45;
     const el = document.createElement("div");
     el.className = "meteor";
@@ -741,12 +764,48 @@ Chỉ dựa trên thông tin ở trên và kiến thức chung. Không bịa th�
     const m = {
       el, item, z,
       x: pickX(),
-      y: -80 - Math.random() * 60,
+      y: startY != null ? startY : -80 - Math.random() * 60,
       v: (55 + Math.random() * 30) * z * Math.max(0.6, FH / 900)
     };
     el.addEventListener("click", () => spotlight(m));
     field.appendChild(el);
     meteors.push(m);
+    return m;
+  }
+
+  let mode = "news", vIdx = 0;
+  function setMode(m) {
+    mode = m;
+    document.body.classList.toggle("mode-news", m === "news");
+    document.body.classList.toggle("mode-vocab", m === "vocab");
+  }
+
+  function lightMeteor(m) {
+    if (lit) lit.el.classList.remove("lit");
+    lit = m || null;
+    if (lit) lit.el.classList.add("lit");
+    meteors.forEach(x => x.el.classList.toggle("dim", !!lit && x !== lit));
+  }
+
+  function showCard(item) {
+    $("cWord").textContent = item.w;
+    $("cIpa").textContent = item.ipa || "";
+    $("cPos").textContent = item.pos || "";
+    $("cVi").textContent = item.vi || "";
+    $("cEx").textContent = item.ex || "";
+    const col = $("cCol");
+    col.innerHTML = "";
+    (Array.isArray(item.col) ? item.col : []).slice(0, 4).forEach(c => {
+      const span = document.createElement("span");
+      span.textContent = c;
+      col.appendChild(span);
+    });
+    $("cNav").innerHTML = mode === "vocab"
+      ? `<span>${vIdx + 1}/${words.length}</span><span>← → đổi từ</span><span>Back: về bản tin</span>`
+      : `<span>Bấm → để xem từ vựng</span>`;
+    card.classList.add("show");
+    clearTimeout(cardTimer);
+    if (mode !== "vocab") cardTimer = setTimeout(clearSpotlight, 9000);
   }
 
   function spotlight(m) {
@@ -756,24 +815,41 @@ Chỉ dựa trên thông tin ở trên và kiến thức chung. Không bịa th�
       c.sort((a, b) => b.z - a.z);
       m = c[0];
     }
-    if (lit) lit.el.classList.remove("lit");
-    lit = m;
-    m.el.classList.add("lit");
-    meteors.forEach(x => x.el.classList.toggle("dim", x !== m));
-    $("cWord").textContent = m.item.w;
-    $("cIpa").textContent = m.item.ipa || "";
-    $("cPos").textContent = m.item.pos || "";
-    $("cVi").textContent = m.item.vi || "";
-    $("cEx").textContent = m.item.ex || "";
-    card.classList.add("show");
-    clearTimeout(cardTimer);
-    cardTimer = setTimeout(clearSpotlight, 9000);
+    const i = words.findIndex(w => w.w === m.item.w);
+    if (i >= 0) vIdx = i;
+    lightMeteor(m);
+    showCard(m.item);
   }
+
   function clearSpotlight() {
     card.classList.remove("show");
-    if (lit) lit.el.classList.remove("lit");
-    lit = null;
-    meteors.forEach(x => x.el.classList.remove("dim"));
+    lightMeteor(null);
+  }
+
+  // Show word number i: light its meteor, or send one across the sky for it.
+  function showWordAt(i) {
+    if (!words.length) return;
+    vIdx = (i + words.length) % words.length;
+    const item = words[vIdx];
+    let m = meteors.find(x => x.item.w === item.w && x.y < FH * 0.7);
+    if (!m) m = spawn(item, FH * (0.12 + Math.random() * 0.15));
+    lightMeteor(m);
+    showCard(item);
+  }
+
+  function enterVocab() {
+    setMode("vocab");
+    if (lit) {
+      const i = words.findIndex(w => w.w === lit.item.w);
+      showWordAt(i >= 0 ? i : vIdx);
+    } else {
+      showWordAt(vIdx);
+    }
+  }
+
+  function exitVocab() {
+    setMode("news");
+    clearSpotlight();
   }
 
   let autoClock = 0, last = performance.now();
@@ -786,7 +862,7 @@ Chỉ dựa trên thông tin ở trên và kiến thức chung. Không bịa th�
       spawnClock += dt * 1000 * speed;
       if (spawnClock > 1900) { spawnClock = 0; spawn(); }
       autoClock += dt * 1000;
-      if (autoClock > 15000) { autoClock = 0; if (!lit) spotlight(); }
+      if (autoClock > 15000) { autoClock = 0; if (!lit && mode === "news") spotlight(); }
       for (let i = meteors.length - 1; i >= 0; i--) {
         const m = meteors[i];
         const step = m.v * speed * (m === lit ? 0.25 : 1) * dt;
@@ -794,7 +870,7 @@ Chỉ dựa trên thông tin ở trên và kiến thức chung. Không bịa th�
         m.x += step * DRIFT;
         m.el.style.transform = `translate3d(${m.x.toFixed(1)}px, ${m.y.toFixed(1)}px, 0)`;
         if (m.y > FH + 120 || m.x > FW + 400) {
-          if (m === lit) clearSpotlight();
+          if (m === lit) { if (mode === "vocab") lightMeteor(null); else clearSpotlight(); }
           m.el.remove();
           meteors.splice(i, 1);
         }
@@ -807,33 +883,37 @@ Chỉ dựa trên thông tin ở trên và kiến thức chung. Không bịa th�
   const editor = $("editor");
   function setPaused(p) { paused = p; document.body.classList.toggle("is-paused", p); }
 
+  // News: ↑ ↓ change story, → go to vocabulary, OK holds/releases the current story.
+  // Vocabulary: ← → previous/next word, ↑ ↓ meteor speed, Back returns to the news.
   window.addEventListener("keydown", (e) => {
     if (editor.open) return;
-    const a = document.activeElement;
+    const k = e.key;
+    if (k === " " || k === "MediaPlayPause") { e.preventDefault(); setPaused(!paused); return; }
 
-    if (a && $("news").contains(a)) {
-      if (e.key === "ArrowDown") { e.preventDefault(); showStory(idx + 1); feature.focus({ preventScroll: true }); }
-      else if (e.key === "ArrowUp") { e.preventDefault(); showStory(idx - 1); feature.focus({ preventScroll: true }); }
-      else if (e.key === "Enter" && a === feature) { e.preventDefault(); askClaude(); }
-      else if (e.key === "ArrowRight" || e.key === "Escape" || e.key === "Backspace") { e.preventDefault(); a.blur(); }
-      else if (e.key === " ") { e.preventDefault(); setPaused(!paused); }
-      return;
+    if (mode === "news") {
+      if (k === "ArrowDown") { e.preventDefault(); showStory(idx + 1); holdUntil = performance.now() + 25000; }
+      else if (k === "ArrowUp") { e.preventDefault(); showStory(idx - 1); holdUntil = performance.now() + 25000; }
+      else if (k === "ArrowRight") { e.preventDefault(); enterVocab(); }
+      else if (k === "Enter") {
+        e.preventDefault();
+        if (sample) askClaude();
+        else holdUntil = holdUntil > performance.now() ? 0 : performance.now() + 120000;
+      }
+      else if (k === "Escape" || k === "Backspace") { clearSpotlight(); }
+    } else {
+      if (k === "ArrowRight") { e.preventDefault(); showWordAt(vIdx + 1); }
+      else if (k === "ArrowLeft") { e.preventDefault(); showWordAt(vIdx - 1); }
+      else if (k === "ArrowUp") { e.preventDefault(); speed = Math.min(speed + 0.2, 3); }
+      else if (k === "ArrowDown") { e.preventDefault(); speed = Math.max(speed - 0.2, 0.2); }
+      else if (k === "Escape" || k === "Backspace") { e.preventDefault(); exitVocab(); }
     }
-
-    if (e.key === "ArrowLeft") { e.preventDefault(); feature.focus(); }
-    else if (e.key === " " || e.key === "MediaPlayPause") { e.preventDefault(); setPaused(!paused); }
-    else if (e.key === "ArrowUp") { e.preventDefault(); speed = Math.min(speed + 0.2, 3); }
-    else if (e.key === "ArrowDown") { e.preventDefault(); speed = Math.max(speed - 0.2, 0.2); }
-    else if (e.key === "Enter" && (a === document.body || !a)) { e.preventDefault(); autoClock = 0; spotlight(); }
-    else if (e.key === "Escape" || e.key === "Backspace") { clearSpotlight(); }
   });
 
-  // Called by the Android app when the remote's Back button is pressed.
+  // Called by the Android app when the remote's Back button is pressed (hold Back to quit).
   window.tvBack = function () {
     if (editor.open) { editor.close(); return; }
-    const a = document.activeElement;
-    if (a && $("news").contains(a)) { a.blur(); return; }
-    clearSpotlight();
+    if (mode === "vocab") exitVocab();
+    else clearSpotlight();
   };
   let hudTimer = setTimeout(() => hud.classList.add("quiet"), 8000);
   function wakeHud() {
@@ -884,6 +964,7 @@ Chỉ dựa trên thông tin ở trên và kiến thức chung. Không bịa th�
     const m = meteors[meteors.length - 1];
     if (m) m.y = Math.random() * FH * 0.6;
   }
+  setMode("news");
   showStory(0);
   refreshBrief();
   refreshWords();

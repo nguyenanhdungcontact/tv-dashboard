@@ -23,8 +23,8 @@ API_URL = "https://api.anthropic.com/v1/messages"
 NEWS_MODEL = os.environ.get("CLAUDE_NEWS_MODEL", "claude-sonnet-5-5")
 WORDS_MODEL = os.environ.get("CLAUDE_WORDS_MODEL", "claude-haiku-5-5")
 WORDS_PER_DAY = int(os.environ.get("WORDS_PER_DAY", "10"))
-MAX_AGE_HOURS = int(os.environ.get("NEWS_MAX_AGE_HOURS", "36"))
-PER_FEED = 15
+MAX_AGE_HOURS = int(os.environ.get("NEWS_MAX_AGE_HOURS", "48"))
+PER_FEED = 25
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BRIEF_PATH = os.path.join(ROOT, "docs", "brief.json")
@@ -141,24 +141,28 @@ def collect_articles():
 
 
 # ---------------------------------------------------------------- news
-NEWS_PROMPT = """Hôm nay là {today} (giờ Việt Nam). Dưới đây là các bài báo mới đăng, lấy từ RSS. Hãy chọn tin và viết bản tin buổi sáng cho một người làm quảng cáo số (Google Ads) sống ở TP.HCM. Bản tin hiển thị trên TV để đọc lướt trong ngày.
+NEWS_PROMPT = """Hôm nay là {today} (giờ Việt Nam). Dưới đây là các bài báo đăng trong 48 giờ qua, lấy từ RSS. Hãy làm bản tin cho một người làm quảng cáo số (Google Ads) sống ở TP.HCM. Bản tin hiển thị trên TV lớn, đọc thong thả trong ngày.
 
-Chia thành 4 mục:
-- "hot" – Nổi bật: 3 tin quan trọng nhất ở Việt Nam và thế giới (kinh tế, chính sách, sự kiện lớn).
-- "work" – Công việc: 3–4 tin về Google Ads, quảng cáo tìm kiếm, YouTube Ads, AI trong marketing, đo lường (chủ yếu từ nhóm "work").
-- "life" – Cuộc sống cần biết: 2–3 tin thiết thực cho người sống ở TP.HCM (thời tiết, giao thông, giá cả, chính sách mới, nhà ở).
-- "heart" – Ý nghĩa: 2 câu chuyện tích cực, nhân văn hoặc truyền cảm hứng. Nếu không có tin phù hợp thì để mục này ít tin hơn, đừng ép.
+Chọn TẤT CẢ các bài mà người đọc thực sự nên quan tâm, không giới hạn số lượng; bỏ những bài không liên quan, giật gân hoặc trùng chủ đề (khi trùng, giữ bài đầy đủ nhất). Xếp vào 4 mục:
+- "hot" – Nổi bật: tin quan trọng ở Việt Nam và thế giới (kinh tế, chính sách, tài chính, công nghệ, sự kiện lớn).
+- "work" – Công việc: Google Ads, quảng cáo tìm kiếm, YouTube Ads, AI trong marketing, đo lường, chính sách quảng cáo, đối thủ (Meta, TikTok, ChatGPT ads…).
+- "life" – Cuộc sống cần biết: tin thiết thực cho người sống ở TP.HCM (thời tiết, giao thông, giá cả, lãi suất, chính sách mới, nhà ở, sức khỏe cộng đồng).
+- "heart" – Ý nghĩa: câu chuyện tích cực, nhân văn hoặc truyền cảm hứng. Nếu không có thì để trống.
+Trong mỗi mục, xếp tin quan trọng nhất lên trước.
 
 Quy tắc:
 - Chỉ dùng các bài trong danh sách. Mỗi tin ghi "ref" là số id của bài gốc. Không thêm chi tiết, số liệu hay ngày tháng không có trong bài.
 - Viết tiếng Việt bằng lời của bạn (kể cả khi bài gốc là tiếng Anh), không chép nguyên văn câu của bài báo.
-- "title": ngắn gọn, tối đa khoảng 15 từ. "summary": 1–2 câu. "why": 1–2 câu, nói vì sao tin này đáng chú ý với người đọc.
-- Bỏ qua tin án mạng, tai nạn thương tâm, bạo hành và các tin gây ám ảnh. Không chọn hai tin trùng chủ đề.
+- "title": rõ ràng, tối đa khoảng 18 từ.
+- "summary": 2–4 câu kể lại nội dung chính của bài.
+- "points": 2–3 ý ngắn (mỗi ý tối đa khoảng 15 từ) nêu chi tiết đáng nhớ có trong bài: con số, mốc thời gian, ai bị ảnh hưởng.
+- "why": 1–2 câu nói vì sao tin này đáng chú ý với người đọc, hoặc gợi ý nên làm gì.
+- Bỏ qua tin án mạng, tai nạn thương tâm, bạo hành và các tin gây ám ảnh.
 - Dùng “ ” và ’ trong văn bản, không dùng dấu " bên trong nội dung.
 
 Chỉ trả về đúng một đối tượng JSON, không có lời dẫn hay markdown:
 {{"sections": [
-  {{"id": "hot", "items": [{{"ref": 0, "title": "", "summary": "", "why": ""}}]}},
+  {{"id": "hot", "items": [{{"ref": 0, "title": "", "summary": "", "points": ["", ""], "why": ""}}]}},
   {{"id": "work", "items": [...]}},
   {{"id": "life", "items": [...]}},
   {{"id": "heart", "items": [...]}}
@@ -177,7 +181,7 @@ SECTION_META = {
 
 def update_news():
     articles = collect_articles()
-    if len(articles) < 12:
+    if len(articles) < 10:
         raise ValueError(f"only {len(articles)} recent articles from RSS, keeping the old brief")
 
     lines = []
@@ -187,7 +191,7 @@ def update_news():
 
     now = datetime.now(VN)
     today = f"{WEEKDAYS[now.weekday()]}, {now:%d/%m/%Y}"
-    reply = call_claude(NEWS_PROMPT.format(today=today, articles="\n".join(lines)), NEWS_MODEL, 5000)
+    reply = call_claude(NEWS_PROMPT.format(today=today, articles="\n".join(lines)), NEWS_MODEL, 16000)
     data = extract_json(reply, "{", "}")
 
     by_id = {a["id"]: a for a in articles}
@@ -211,6 +215,7 @@ def update_news():
             items.append({
                 "title": title,
                 "summary": summary,
+                "points": [str(p).strip() for p in (it.get("points") or []) if str(p).strip()][:4],
                 "why": str(it.get("why", "")).strip(),
                 "source": src["source"],          # always taken from the feed, never from the model
                 "date": when,
@@ -243,8 +248,31 @@ Với mỗi từ, trả về:
 - "pos": loại từ bằng tiếng Anh (noun, verb, adj, adv, phrasal verb, idiom…)
 - "vi": nghĩa tiếng Việt ngắn gọn
 - "ex": một câu ví dụ tự nhiên bằng tiếng Anh, tối đa 14 từ, dùng dấu nháy ’ thay cho '
+- "col": 3 cụm từ (collocations) phổ biến nhất có chứa từ đó, thể hiện cách dùng thường gặp, ví dụ với "pragmatic": ["pragmatic approach", "pragmatic solution", "take a pragmatic view"]
 
 Chỉ trả về một mảng JSON, không có lời dẫn hay markdown."""
+
+COL_PROMPT = """Với mỗi từ tiếng Anh dưới đây, đưa ra 3 cụm từ (collocations) phổ biến nhất có chứa từ đó, thể hiện cách người bản xứ hay dùng. Ví dụ "pragmatic" -> ["pragmatic approach", "pragmatic solution", "take a pragmatic view"].
+
+Các từ: {words}
+
+Chỉ trả về một đối tượng JSON dạng {{"từ": ["cụm 1", "cụm 2", "cụm 3"], ...}}, không có lời dẫn hay markdown."""
+
+
+def backfill_collocations(words, limit=40):
+    missing = [w for w in words if isinstance(w, dict) and not w.get("col")][:limit]
+    if not missing:
+        return 0
+    reply = call_claude(COL_PROMPT.format(words=", ".join(w["w"] for w in missing)), WORDS_MODEL, 3000)
+    data = extract_json(reply, "{", "}")
+    lookup = {k.strip().lower(): v for k, v in data.items() if isinstance(v, list)}
+    done = 0
+    for w in missing:
+        cols = [str(c).strip() for c in lookup.get(w["w"].strip().lower(), []) if str(c).strip()]
+        if cols:
+            w["col"] = cols[:3]
+            done += 1
+    return done
 
 
 def update_words():
@@ -271,6 +299,7 @@ def update_words():
         if not w or w.lower() in existing or not str(it.get("vi", "")).strip():
             continue
         entry = {k: str(it.get(k, "")).strip() for k in ("w", "ipa", "pos", "vi", "ex")}
+        entry["col"] = [str(c).strip() for c in (it.get("col") or []) if str(c).strip()][:3]
         entry["added"] = today
         added.append(entry)
         existing.add(w.lower())
@@ -278,6 +307,12 @@ def update_words():
     if not added:
         raise ValueError("no new words returned")
     words.extend(added[:WORDS_PER_DAY])
+    try:
+        filled = backfill_collocations(words)
+        if filled:
+            print(f"  collocations added to {filled} older words")
+    except Exception as e:
+        print(f"  collocation backfill skipped: {e}")
     with open(WORDS_PATH, "w", encoding="utf-8") as f:
         json.dump(words, f, ensure_ascii=False, indent=2)
         f.write("\n")
