@@ -33,7 +33,8 @@ FEEDS_PATH = os.path.join(ROOT, "scripts", "feeds.json")
 
 VN = timezone(timedelta(hours=7))
 WEEKDAYS = ["thứ Hai", "thứ Ba", "thứ Tư", "thứ Năm", "thứ Sáu", "thứ Bảy", "Chủ nhật"]
-UA = "Mozilla/5.0 (TV-dashboard RSS reader)"
+UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
+      "(KHTML, like Gecko) Chrome/130.0 Safari/537.36")
 
 
 # ---------------------------------------------------------------- Claude
@@ -51,7 +52,8 @@ def call_claude(prompt, model, max_tokens=6000):
     with urllib.request.urlopen(req, timeout=300) as r:
         data = json.loads(r.read().decode("utf-8"))
     usage = data.get("usage", {})
-    print(f"  {model}: {usage.get('input_tokens', '?')} in / {usage.get('output_tokens', '?')} out tokens")
+    note = "  (CUT OFF: hit max_tokens)" if data.get("stop_reason") == "max_tokens" else ""
+    print(f"  {model}: {usage.get('input_tokens', '?')} in / {usage.get('output_tokens', '?')} out tokens{note}")
     return "".join(b.get("text", "") for b in data.get("content", []) if b.get("type") == "text")
 
 
@@ -88,8 +90,18 @@ def local(tag):
     return tag.rsplit("}", 1)[-1]
 
 
+def first(fields, *names):
+    for n in names:
+        if fields.get(n) is not None:
+            return fields[n]
+    return None
+
+
 def read_feed(name, url):
-    req = urllib.request.Request(url, headers={"User-Agent": UA})
+    req = urllib.request.Request(url, headers={
+        "User-Agent": UA,
+        "Accept": "application/rss+xml, application/atom+xml, application/xml;q=0.9, */*;q=0.8",
+    })
     with urllib.request.urlopen(req, timeout=30) as r:
         root = ET.fromstring(r.read())
     items = []
@@ -98,13 +110,13 @@ def read_feed(name, url):
             continue
         fields = {local(c.tag): c for c in node}
         title = clean_text((fields.get("title").text if fields.get("title") is not None else ""), 200)
-        desc_node = fields.get("description") or fields.get("summary") or fields.get("content")
+        desc_node = first(fields, "description", "summary", "content")
         desc = clean_text("".join(desc_node.itertext()) if desc_node is not None else "")
         link_node = fields.get("link")
         link = ""
         if link_node is not None:
             link = (link_node.text or link_node.attrib.get("href", "")).strip()
-        date_node = fields.get("pubDate") or fields.get("published") or fields.get("updated") or fields.get("date")
+        date_node = first(fields, "pubDate", "published", "updated", "date")
         when = parse_date(date_node.text if date_node is not None else "")
         if title:
             items.append({"source": name, "title": title, "desc": desc, "link": link, "when": when})
@@ -141,34 +153,35 @@ def collect_articles():
 
 
 # ---------------------------------------------------------------- news
-NEWS_PROMPT = """Hôm nay là {today} (giờ Việt Nam). Dưới đây là các bài báo đăng trong 48 giờ qua, lấy từ RSS. Hãy làm bản tin cho một người làm quảng cáo số (Google Ads) sống ở TP.HCM. Bản tin hiển thị trên TV lớn, đọc thong thả trong ngày.
+SELECT_PROMPT = """Hôm nay là {today} (giờ Việt Nam). Dưới đây là các bài báo đăng trong 48 giờ qua, lấy từ RSS. Người đọc là một người làm quảng cáo số (Google Ads) sống ở TP.HCM, xem bản tin trên TV lớn trong ngày.
 
-Chọn TẤT CẢ các bài mà người đọc thực sự nên quan tâm, không giới hạn số lượng; bỏ những bài không liên quan, giật gân hoặc trùng chủ đề (khi trùng, giữ bài đầy đủ nhất). Xếp vào 4 mục:
+Hãy chọn TẤT CẢ các bài người đọc thực sự nên quan tâm, không giới hạn số lượng; bỏ bài không liên quan, giật gân hoặc trùng chủ đề (khi trùng, giữ bài đầy đủ nhất). Bỏ qua tin án mạng, tai nạn thương tâm, bạo hành, tin gây ám ảnh. Xếp vào 4 mục:
 - "hot" – Nổi bật: tin quan trọng ở Việt Nam và thế giới (kinh tế, chính sách, tài chính, công nghệ, sự kiện lớn).
 - "work" – Công việc: Google Ads, quảng cáo tìm kiếm, YouTube Ads, AI trong marketing, đo lường, chính sách quảng cáo, đối thủ (Meta, TikTok, ChatGPT ads…).
 - "life" – Cuộc sống cần biết: tin thiết thực cho người sống ở TP.HCM (thời tiết, giao thông, giá cả, lãi suất, chính sách mới, nhà ở, sức khỏe cộng đồng).
-- "heart" – Ý nghĩa: câu chuyện tích cực, nhân văn hoặc truyền cảm hứng. Nếu không có thì để trống.
-Trong mỗi mục, xếp tin quan trọng nhất lên trước.
+- "heart" – Ý nghĩa: câu chuyện tích cực, nhân văn hoặc truyền cảm hứng.
+Trong mỗi mục, xếp bài quan trọng nhất lên trước.
 
-Quy tắc:
-- Chỉ dùng các bài trong danh sách. Mỗi tin ghi "ref" là số id của bài gốc. Không thêm chi tiết, số liệu hay ngày tháng không có trong bài.
-- Viết tiếng Việt bằng lời của bạn (kể cả khi bài gốc là tiếng Anh), không chép nguyên văn câu của bài báo.
-- "title": rõ ràng, tối đa khoảng 18 từ.
-- "summary": 2–4 câu kể lại nội dung chính của bài.
-- "points": 2–3 ý ngắn (mỗi ý tối đa khoảng 15 từ) nêu chi tiết đáng nhớ có trong bài: con số, mốc thời gian, ai bị ảnh hưởng.
-- "why": 1–2 câu nói vì sao tin này đáng chú ý với người đọc, hoặc gợi ý nên làm gì.
-- Bỏ qua tin án mạng, tai nạn thương tâm, bạo hành và các tin gây ám ảnh.
-- Dùng “ ” và ’ trong văn bản, không dùng dấu " bên trong nội dung.
-
-Chỉ trả về đúng một đối tượng JSON, không có lời dẫn hay markdown:
-{{"sections": [
-  {{"id": "hot", "items": [{{"ref": 0, "title": "", "summary": "", "points": ["", ""], "why": ""}}]}},
-  {{"id": "work", "items": [...]}},
-  {{"id": "life", "items": [...]}},
-  {{"id": "heart", "items": [...]}}
-]}}
+Chỉ trả về JSON chứa số id của bài, không có lời dẫn hay markdown:
+{{"hot": [1, 2], "work": [3], "life": [4], "heart": [5]}}
 
 Danh sách bài:
+{articles}"""
+
+WRITE_PROMPT = """Hôm nay là {today}. Hãy viết lại các bài báo dưới đây cho bản tin của một người làm quảng cáo số (Google Ads) sống ở TP.HCM, mục “{section}”. Bản tin hiển thị trên TV lớn.
+
+Với mỗi bài, trả về:
+- "ref": số id của bài
+- "title": rõ ràng, tối đa khoảng 18 từ
+- "summary": 2–4 câu kể lại nội dung chính
+- "points": 2–3 ý ngắn (mỗi ý tối đa khoảng 15 từ) nêu chi tiết đáng nhớ có trong bài: con số, mốc thời gian, ai bị ảnh hưởng
+- "why": 1–2 câu nói vì sao tin này đáng chú ý với người đọc, hoặc gợi ý nên làm gì
+
+Quy tắc: viết tiếng Việt bằng lời của bạn (kể cả khi bài gốc là tiếng Anh), không chép nguyên văn; chỉ dùng thông tin có trong bài, không thêm số liệu hay ngày tháng; dùng “ ” và ’, không dùng dấu " bên trong nội dung.
+
+Chỉ trả về một mảng JSON, không có lời dẫn hay markdown.
+
+Các bài:
 {articles}"""
 
 SECTION_META = {
@@ -177,40 +190,66 @@ SECTION_META = {
     "life": ("Cuộc sống cần biết", "--c-life"),
     "heart": ("Ý nghĩa", "--c-heart"),
 }
+CHUNK = 6   # stories written per call, keeps every reply well under the output limit
+
+
+def article_line(a):
+    d = a["when"].astimezone(VN).strftime("%d/%m %H:%M") if a["when"] else "?"
+    return f"[{a['id']}] ({a['group']}) {a['source']} | {d} | {a['title']} — {a['desc']}"
 
 
 def update_news():
     articles = collect_articles()
     if len(articles) < 10:
         raise ValueError(f"only {len(articles)} recent articles from RSS, keeping the old brief")
-
-    lines = []
-    for a in articles:
-        d = a["when"].astimezone(VN).strftime("%d/%m %H:%M") if a["when"] else "?"
-        lines.append(f"[{a['id']}] ({a['group']}) {a['source']} | {d} | {a['title']} — {a['desc']}")
+    by_id = {a["id"]: a for a in articles}
 
     now = datetime.now(VN)
     today = f"{WEEKDAYS[now.weekday()]}, {now:%d/%m/%Y}"
-    reply = call_claude(NEWS_PROMPT.format(today=today, articles="\n".join(lines)), NEWS_MODEL, 16000)
-    data = extract_json(reply, "{", "}")
 
-    by_id = {a["id"]: a for a in articles}
+    # Step 1: pick the stories (tiny reply: just ids)
+    reply = call_claude(SELECT_PROMPT.format(today=today, articles="\n".join(article_line(a) for a in articles)),
+                        NEWS_MODEL, 2000)
+    picks = extract_json(reply, "{", "}")
+
     used, sections = set(), []
-    for sec in data.get("sections", []):
-        sid = sec.get("id")
-        if sid not in SECTION_META:
-            continue
-        items = []
-        for it in sec.get("items", []):
+    for sid in ("hot", "work", "life", "heart"):
+        ids = []
+        for x in picks.get(sid, []) or []:
             try:
-                ref = int(it.get("ref"))
+                x = int(x)
             except (TypeError, ValueError):
                 continue
-            src = by_id.get(ref)
-            title, summary = str(it.get("title", "")).strip(), str(it.get("summary", "")).strip()
-            if not src or ref in used or not title or not summary:
+            if x in by_id and x not in used:
+                used.add(x)
+                ids.append(x)
+        if not ids:
+            continue
+
+        # Step 2: write them, a few at a time
+        written = {}
+        for i in range(0, len(ids), CHUNK):
+            chunk = ids[i:i + CHUNK]
+            try:
+                out = call_claude(WRITE_PROMPT.format(
+                    today=today, section=SECTION_META[sid][0],
+                    articles="\n".join(article_line(by_id[x]) for x in chunk)), NEWS_MODEL, 6000)
+                for it in extract_json(out, "[", "]"):
+                    try:
+                        written[int(it.get("ref"))] = it
+                    except (TypeError, ValueError, AttributeError):
+                        pass
+            except Exception as e:
+                print(f"  {sid} chunk skipped: {e}")
+
+        items = []
+        for x in ids:                      # keep the importance order from step 1
+            it, src = written.get(x), by_id[x]
+            if not it:
                 continue
-            used.add(ref)
+            title, summary = str(it.get("title", "")).strip(), str(it.get("summary", "")).strip()
+            if not title or not summary:
+                continue
             when = src["when"].astimezone(VN).strftime("%d/%m") if src["when"] else now.strftime("%d/%m")
             items.append({
                 "title": title,
@@ -259,19 +298,23 @@ Các từ: {words}
 Chỉ trả về một đối tượng JSON dạng {{"từ": ["cụm 1", "cụm 2", "cụm 3"], ...}}, không có lời dẫn hay markdown."""
 
 
-def backfill_collocations(words, limit=40):
+def backfill_collocations(words, limit=60, batch=12):
     missing = [w for w in words if isinstance(w, dict) and not w.get("col")][:limit]
-    if not missing:
-        return 0
-    reply = call_claude(COL_PROMPT.format(words=", ".join(w["w"] for w in missing)), WORDS_MODEL, 3000)
-    data = extract_json(reply, "{", "}")
-    lookup = {k.strip().lower(): v for k, v in data.items() if isinstance(v, list)}
     done = 0
-    for w in missing:
-        cols = [str(c).strip() for c in lookup.get(w["w"].strip().lower(), []) if str(c).strip()]
-        if cols:
-            w["col"] = cols[:3]
-            done += 1
+    for i in range(0, len(missing), batch):
+        part = missing[i:i + batch]
+        try:
+            reply = call_claude(COL_PROMPT.format(words=", ".join(w["w"] for w in part)), WORDS_MODEL, 4000)
+            data = extract_json(reply, "{", "}")
+        except Exception as e:
+            print(f"  collocation batch skipped: {e}")
+            continue
+        lookup = {k.strip().lower(): v for k, v in data.items() if isinstance(v, list)}
+        for w in part:
+            cols = [str(c).strip() for c in lookup.get(w["w"].strip().lower(), []) if str(c).strip()]
+            if cols:
+                w["col"] = cols[:3]
+                done += 1
     return done
 
 
@@ -287,7 +330,7 @@ def update_words():
     reply = call_claude(WORDS_PROMPT.format(
         existing=", ".join(sorted(existing)) or "(chưa có)",
         n=WORDS_PER_DAY, n_work=n_work, n_life=WORDS_PER_DAY - n_work,
-    ), WORDS_MODEL, 3000)
+    ), WORDS_MODEL, 8000)
     new = extract_json(reply, "[", "]")
 
     today = datetime.now(VN).strftime("%Y-%m-%d")
