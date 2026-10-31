@@ -131,6 +131,12 @@
   #dPoints li { margin: 5px 0; line-height: 1.5; font-size: clamp(0.85rem, 0.95vw, 1.15rem); }
   #dPoints li::marker { color: var(--cat); }
   #dPoints:empty { display: none; }
+  #readHint { display: none; position: sticky; bottom: calc(-1 * clamp(16px, 1.6vw, 26px)); margin: 14px calc(-1 * clamp(16px, 1.6vw, 26px)) calc(-1 * clamp(16px, 1.6vw, 26px));
+    padding: 8px clamp(16px, 1.6vw, 26px); background: var(--panel); border-top: 1px solid var(--panel-edge);
+    color: var(--muted); font-size: clamp(0.72rem, 0.8vw, 0.95rem); }
+  #readHint span + span { margin-left: 1em; }
+  #feature.reading #readHint { display: block; }
+  #feature.reading #bar i { opacity: 0.3; }
   body.mode-news #feature { box-shadow: 0 0 0 2px var(--cat); }
   body.mode-vocab #news { opacity: 0.55; transition: opacity .4s ease; }
   #feature .ask { margin-top: 14px; }
@@ -332,6 +338,7 @@
     <p class="src" id="dSrc"></p>
     <button class="pill ask" type="button" id="askBtn" hidden>Hỏi Claude thêm về tin này</button>
     <p id="answer"></p>
+    <p id="readHint"><span>Đang đọc</span><span>↑ ↓ cuộn</span><span>OK hoặc Back: chạy tiếp</span></p>
   </article>
   <div id="queue">
     <h4>Các tin trong bản tin</h4>
@@ -582,6 +589,7 @@
     feature.classList.remove("fade");
   }
   function showStory(i) {
+    if (reading) { reading = false; feature.classList.remove("reading"); }
     idx = (i + stories.length) % stories.length;
     elapsed = 0;
     holdUntil = 0;
@@ -600,8 +608,15 @@
   feature.addEventListener("pointerenter", () => hovering = true);
   feature.addEventListener("pointerleave", () => hovering = false);
 
+  let reading = false;
+  function setReading(on) {
+    reading = on;
+    feature.classList.toggle("reading", on);
+    if (!on) { holdUntil = performance.now() + 4000; }   // short pause before rotating again
+  }
+
   function tickNews(t, dt) {
-    if (!stories.length || paused || hovering || asking || performance.now() < holdUntil) return;
+    if (!stories.length || reading || paused || hovering || asking || performance.now() < holdUntil) return;
     elapsed += dt * 1000;
     barFill.style.width = Math.min(100, (elapsed / dur) * 100) + "%";
     const over = feature.scrollHeight - feature.clientHeight;
@@ -890,14 +905,21 @@ Chỉ dựa trên thông tin ở trên và kiến thức chung. Không bịa th�
     const k = e.key;
     if (k === " " || k === "MediaPlayPause") { e.preventDefault(); setPaused(!paused); return; }
 
-    if (mode === "news") {
+    if (mode === "news" && reading) {
+      // Reading one story: ↑ ↓ scroll it, OK/Back/→ leave reading mode.
+      const step = Math.max(80, feature.clientHeight * 0.45);
+      if (k === "ArrowDown") { e.preventDefault(); feature.scrollBy({ top: step, behavior: reduceMotion ? "auto" : "smooth" }); }
+      else if (k === "ArrowUp") { e.preventDefault(); feature.scrollBy({ top: -step, behavior: reduceMotion ? "auto" : "smooth" }); }
+      else if (k === "Enter" || k === "Escape" || k === "Backspace") { e.preventDefault(); setReading(false); }
+      else if (k === "ArrowRight") { e.preventDefault(); setReading(false); enterVocab(); }
+    } else if (mode === "news") {
       if (k === "ArrowDown") { e.preventDefault(); showStory(idx + 1); holdUntil = performance.now() + 25000; }
       else if (k === "ArrowUp") { e.preventDefault(); showStory(idx - 1); holdUntil = performance.now() + 25000; }
       else if (k === "ArrowRight") { e.preventDefault(); enterVocab(); }
       else if (k === "Enter") {
         e.preventDefault();
         if (sample) askClaude();
-        else holdUntil = holdUntil > performance.now() ? 0 : performance.now() + 120000;
+        else setReading(true);
       }
       else if (k === "Escape" || k === "Backspace") { clearSpotlight(); }
     } else {
@@ -912,6 +934,7 @@ Chỉ dựa trên thông tin ở trên và kiến thức chung. Không bịa th�
   // Called by the Android app when the remote's Back button is pressed (hold Back to quit).
   window.tvBack = function () {
     if (editor.open) { editor.close(); return; }
+    if (mode === "news" && reading) { setReading(false); return; }
     if (mode === "vocab") exitVocab();
     else clearSpotlight();
   };
