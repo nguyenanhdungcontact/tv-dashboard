@@ -113,22 +113,22 @@
   #feature { scrollbar-width: none; }
   #feature:focus-visible { outline: 2px solid var(--cat); outline-offset: 3px; }
   #feature .top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
-  #feature .cat { font-weight: 600; color: var(--cat); font-size: clamp(0.95rem, 1.05vw, 1.2rem); }
-  #feature .count { color: var(--muted); font-size: clamp(0.8rem, 0.85vw, 1rem); font-variant-numeric: tabular-nums; }
+  #feature .cat { font-weight: 600; color: var(--cat); font-size: clamp(0.8rem, 0.9vw, 1.02rem); }
+  #feature .count { color: var(--muted); font-size: clamp(0.68rem, 0.72vw, 0.85rem); font-variant-numeric: tabular-nums; }
   #bar { height: 3px; margin: 10px 0 0; background: rgba(255,255,255,.1); border-radius: 3px; overflow: hidden; }
   #bar i { display: block; height: 100%; width: 0; background: var(--cat); }
   #feature h3 {
     margin: 14px 0 0;
     font-family: "Bricolage Grotesque", "Segoe UI", Roboto, Arial, sans-serif;
     font-weight: 600;
-    font-size: clamp(1.1rem, 1.5vw, 1.9rem);
+    font-size: clamp(0.94rem, 1.28vw, 1.6rem);
     line-height: 1.2;
   }
-  #feature p { margin: 10px 0 0; line-height: 1.55; font-size: clamp(0.85rem, 0.95vw, 1.15rem); }
+  #feature p { margin: 9px 0 0; line-height: 1.55; font-size: clamp(0.72rem, 0.81vw, 0.98rem); }
   #feature .why { padding: 12px 14px; border-left: 3px solid var(--cat); background: var(--card); border-radius: 4px 10px 10px 4px; }
-  #feature .src { color: var(--muted); font-size: clamp(0.82rem, 0.85vw, 1rem); }
+  #feature .src { color: var(--muted); font-size: clamp(0.7rem, 0.72vw, 0.85rem); }
   #dPoints { margin: 10px 0 0; padding-left: 1.1em; }
-  #dPoints li { margin: 5px 0; line-height: 1.5; font-size: clamp(0.85rem, 0.95vw, 1.15rem); }
+  #dPoints li { margin: 4px 0; line-height: 1.5; font-size: clamp(0.72rem, 0.81vw, 0.98rem); }
   #dPoints li::marker { color: var(--cat); }
   #dPoints:empty { display: none; }
   #readHint { display: none; position: sticky; bottom: calc(-1 * clamp(16px, 1.6vw, 26px)); margin: 14px calc(-1 * clamp(16px, 1.6vw, 26px)) calc(-1 * clamp(16px, 1.6vw, 26px));
@@ -150,7 +150,7 @@
     scrollbar-width: thin;
     scrollbar-color: rgba(190,200,255,.25) transparent;
   }
-  #queue h4 { margin: 0 0 6px; color: var(--muted); font-weight: 500; font-size: clamp(0.85rem, 0.9vw, 1.02rem); }
+  #queue h4 { margin: 0 0 6px; color: var(--muted); font-weight: 500; font-size: clamp(0.72rem, 0.77vw, 0.87rem); }
   .q {
     display: flex; gap: 10px; align-items: flex-start;
     width: 100%; text-align: left;
@@ -158,7 +158,7 @@
     padding: 7px 8px;
     color: var(--muted);
     font: inherit;
-    font-size: clamp(0.78rem, 0.85vw, 1rem);
+    font-size: clamp(0.66rem, 0.72vw, 0.85rem);
     line-height: 1.35;
     cursor: pointer;
   }
@@ -241,6 +241,7 @@
   #card .col:empty { display: none; }
   #card .nav { margin: 0.9em 0 0; color: var(--muted); font-size: clamp(0.62rem, 0.72vw, 0.75rem); }
   #card .nav span + span { margin-left: 1.2em; }
+  #card .nav:empty { display: none; }
   body.mode-vocab #card { box-shadow: 0 0 0 2px var(--tail); }
   #card .ex:empty, #card .meta span:empty { display: none; }
 
@@ -338,7 +339,7 @@
     <p class="src" id="dSrc"></p>
     <button class="pill ask" type="button" id="askBtn" hidden>Hỏi Claude thêm về tin này</button>
     <p id="answer"></p>
-    <p id="readHint"><span>Đang đọc</span><span>↑ ↓ cuộn</span><span>OK hoặc Back: chạy tiếp</span></p>
+    <p id="readHint"><span>Đang đọc</span><span>↑ ↓ cuộn, hết bài thì sang tin kế</span><span>OK hoặc Back: chạy tiếp</span></p>
   </article>
   <div id="queue">
     <h4>Các tin trong bản tin</h4>
@@ -817,7 +818,7 @@ Chỉ dựa trên thông tin ở trên và kiến thức chung. Không bịa th�
     });
     $("cNav").innerHTML = mode === "vocab"
       ? `<span>${vIdx + 1}/${words.length}</span><span>← → đổi từ</span><span>Back: về bản tin</span>`
-      : `<span>Bấm → để xem từ vựng</span>`;
+      : "";
     card.classList.add("show");
     clearTimeout(cardTimer);
     if (mode !== "vocab") cardTimer = setTimeout(clearSpotlight, 9000);
@@ -908,8 +909,18 @@ Chỉ dựa trên thông tin ở trên và kiến thức chung. Không bịa th�
     if (mode === "news" && reading) {
       // Reading one story: ↑ ↓ scroll it, OK/Back/→ leave reading mode.
       const step = Math.max(80, feature.clientHeight * 0.45);
-      if (k === "ArrowDown") { e.preventDefault(); feature.scrollBy({ top: step, behavior: reduceMotion ? "auto" : "smooth" }); }
-      else if (k === "ArrowUp") { e.preventDefault(); feature.scrollBy({ top: -step, behavior: reduceMotion ? "auto" : "smooth" }); }
+      const atEnd = feature.scrollTop + feature.clientHeight >= feature.scrollHeight - 4;
+      const atTop = feature.scrollTop <= 4;
+      if (k === "ArrowDown") {
+        e.preventDefault();
+        if (atEnd) { showStory(idx + 1); reading = true; feature.classList.add("reading"); }
+        else feature.scrollBy({ top: step, behavior: reduceMotion ? "auto" : "smooth" });
+      }
+      else if (k === "ArrowUp") {
+        e.preventDefault();
+        if (atTop) { showStory(idx - 1); reading = true; feature.classList.add("reading"); }
+        else feature.scrollBy({ top: -step, behavior: reduceMotion ? "auto" : "smooth" });
+      }
       else if (k === "Enter" || k === "Escape" || k === "Backspace") { e.preventDefault(); setReading(false); }
       else if (k === "ArrowRight") { e.preventDefault(); setReading(false); enterVocab(); }
     } else if (mode === "news") {
