@@ -825,6 +825,14 @@ Chỉ dựa trên thông tin ở trên và kiến thức chung. Không bịa th�
     else if (e.key === "Enter" && (a === document.body || !a)) { e.preventDefault(); autoClock = 0; spotlight(); }
     else if (e.key === "Escape" || e.key === "Backspace") { clearSpotlight(); }
   });
+
+  // Called by the Android app when the remote's Back button is pressed.
+  window.tvBack = function () {
+    if (editor.open) { editor.close(); return; }
+    const a = document.activeElement;
+    if (a && $("news").contains(a)) { a.blur(); return; }
+    clearSpotlight();
+  };
   let hudTimer = setTimeout(() => hud.classList.add("quiet"), 8000);
   function wakeHud() {
     hud.classList.remove("quiet");
