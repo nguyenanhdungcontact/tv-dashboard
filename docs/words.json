@@ -748,5 +748,135 @@
       "put nervous people at ease"
     ],
     "added": "2026-10-31"
+  },
+  {
+    "w": "bottleneck",
+    "ipa": "/ˈbɒt.l.nek/",
+    "pos": "noun",
+    "vi": "điểm nghẽn, khâu làm chậm cả quy trình",
+    "ex": "The approval process became a bottleneck that slowed every campaign launch.",
+    "col": [
+      "production bottleneck",
+      "cause a bottleneck",
+      "remove a bottleneck"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "w": "trade-off",
+    "ipa": "/ˈtreɪd.ɒf/",
+    "pos": "noun",
+    "vi": "sự đánh đổi, được cái này thì mất cái kia",
+    "ex": "There’s a trade-off between reach and cost per conversion, so choose carefully.",
+    "col": [
+      "clear trade-off",
+      "accept a trade-off",
+      "involve a trade-off"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "w": "sanity check",
+    "ipa": "/ˈsæn.ə.ti tʃek/",
+    "pos": "noun",
+    "vi": "kiểm tra nhanh xem có hợp lý không",
+    "ex": "Before launching, let’s do a quick sanity check on the tracking codes.",
+    "col": [
+      "quick sanity check",
+      "do a sanity check",
+      "run a sanity check"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "w": "run the numbers",
+    "ipa": "/rʌn ðə ˈnʌm.bəz/",
+    "pos": "idiom",
+    "vi": "tính toán, phân tích số liệu để xem có khả thi không",
+    "ex": "Can you run the numbers and see if this budget actually works?",
+    "col": [
+      "run the numbers first",
+      "really run the numbers",
+      "hasn’t run the numbers yet"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "w": "bounce rate",
+    "ipa": "/ˈbaʊns ˌreɪt/",
+    "pos": "noun",
+    "vi": "tỷ lệ người truy cập rời trang ngay mà không tương tác",
+    "ex": "The landing page’s bounce rate is high, so visitors aren’t finding what they need.",
+    "col": [
+      "high bounce rate",
+      "reduce the bounce rate",
+      "bounce rate drops"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "w": "make a case for",
+    "ipa": "/meɪk ə keɪs fɔːr/",
+    "pos": "idiom",
+    "vi": "đưa ra lý lẽ thuyết phục ủng hộ điều gì",
+    "ex": "I need to make a case for a bigger budget with real numbers.",
+    "col": [
+      "make a strong case",
+      "make the case that",
+      "make a case for change"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "w": "lean on someone",
+    "ipa": "/liːn ɒn ˈsʌm.wʌn/",
+    "pos": "phrasal verb",
+    "vi": "dựa vào ai đó để được hỗ trợ, động viên",
+    "ex": "When my project fell apart, I leaned on my sister for support.",
+    "col": [
+      "lean on a friend",
+      "lean on someone for support",
+      "know you can lean on someone"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "w": "take someone for granted",
+    "ipa": "/teɪk ˈsʌm.wʌn fɔːr ˈɡrɑːn.tɪd/",
+    "pos": "idiom",
+    "vi": "coi nhẹ, không biết trân trọng ai đó hay điều gì",
+    "ex": "Don’t take your family for granted, especially when work gets stressful.",
+    "col": [
+      "never take someone for granted",
+      "feel taken for granted",
+      "take good health for granted"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "w": "fall out with someone",
+    "ipa": "/fɔːl aʊt wɪð ˈsʌm.wʌn/",
+    "pos": "phrasal verb",
+    "vi": "cãi nhau, mất hòa khí với ai đó",
+    "ex": "I fell out with my flatmate over unpaid bills last year.",
+    "col": [
+      "fall out with a friend",
+      "fall out over money",
+      "fall out with your boss"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "w": "rub someone the wrong way",
+    "ipa": "/rʌb ˈsʌm.wʌn ðə rɒŋ weɪ/",
+    "pos": "idiom",
+    "vi": "làm ai đó khó chịu, không ưa dù không cố ý",
+    "ex": "His sarcastic tone rubs me the wrong way, even though he means well.",
+    "col": [
+      "rub people the wrong way",
+      "somehow rub someone the wrong way",
+      "tends to rub colleagues the wrong way"
+    ],
+    "added": "2026-11-01"
   }
 ]
