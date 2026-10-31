@@ -1,5 +1,5 @@
 {
-  "updated": "Cập nhật 11:58 thứ Bảy, 31/10/2026",
+  "updated": "Cập nhật 12:29 thứ Bảy, 31/10/2026",
   "sections": [
     {
       "id": "hot",
@@ -7,28 +7,225 @@
       "color": "--c-hot",
       "items": [
         {
-          "title": "Doanh nghiệp, hộ kinh doanh được giảm 30% thuế từng kỳ kê khai",
-          "summary": "Doanh nghiệp và hộ kinh doanh được giảm 30% thuế ở mỗi kỳ kê khai theo thông tin mới đăng.",
-          "why": "Nếu bạn chạy quảng cáo cho khách hàng là doanh nghiệp nhỏ hoặc hộ kinh doanh, chính sách này có thể ảnh hưởng đến chi phí và ngân sách của họ.",
+          "title": "ACV: Sân bay Long Thành dự kiến mở khai thác từ 0h ngày 24/12",
+          "summary": "Tổng công ty Cảng hàng không Việt Nam (ACV) cho biết sân bay Long Thành dự kiến bắt đầu khai thác từ 0h ngày 24/12. Ở giai đoạn đầu, sân bay sẽ phục vụ tối đa khoảng 366 chuyến bay mỗi tuần.",
+          "points": [
+            "Dự kiến khai thác từ 0h ngày 24/12",
+            "Giai đoạn đầu: tối đa khoảng 366 chuyến bay mỗi tuần",
+            "ACV thông báo ngày 30/10"
+          ],
+          "why": "Sân bay mới gần TP.HCM có thể làm thay đổi hành vi tìm kiếm và đặt vé của khách. Nếu bạn chạy quảng cáo cho du lịch hoặc dịch vụ liên quan, nên theo dõi để chuẩn bị từ khóa và thông điệp.",
           "source": "VnExpress",
-          "date": "31/10",
-          "link": "https://vnexpress.net/doanh-nghiep-ho-kinh-doanh-duoc-giam-30-thue-tung-ky-ke-khai-5138953.html"
+          "date": "30/10",
+          "link": "https://vnexpress.net/san-bay-long-thanh-du-kien-khai-thac-tu-0h-ngay-24-12-5138000.html"
         },
         {
-          "title": "Giá USD ngân hàng xuống dưới mức 26.000 đồng",
-          "summary": "Giá USD tại các ngân hàng đã giảm xuống dưới 26.000 đồng.",
-          "why": "Tỷ giá đáng để theo dõi nếu bạn có khoản chi hoặc thanh toán liên quan đến ngoại tệ.",
+          "title": "Long Thành dự kiến đón chuyến bay thương mại từ 24/12 với Vietnam Airlines và Vietjet Air",
+          "summary": "Sân bay Long Thành dự kiến bắt đầu khai thác thương mại từ 0 giờ ngày 24/12. Giai đoạn đầu, sân bay phục vụ khoảng 20–30 chuyến bay mỗi ngày. Hai hãng bay tham gia là Vietnam Airlines và Vietjet Air.",
+          "points": [
+            "Khai thác thương mại từ 0 giờ ngày 24/12",
+            "Khoảng 20–30 chuyến bay mỗi ngày lúc đầu",
+            "Hai hãng tham gia: Vietnam Airlines và Vietjet Air"
+          ],
+          "why": "Đây là thông tin cụ thể về hãng bay và số chuyến mỗi ngày. Bạn có thể dùng nó để cập nhật kế hoạch chiến dịch quảng cáo du lịch, đặc biệt nếu khách hàng làm trong lĩnh vực này.",
+          "source": "Thanh Niên",
+          "date": "31/10",
+          "link": "https://thanhnien.vn/san-bay-long-thanh-du-kien-don-chuyen-bay-thuong-mai-tu-ngay-2412-185261031093609929.htm"
+        },
+        {
+          "title": "Giá vàng thế giới lao dốc, chạm mức thấp nhất trong một năm",
+          "summary": "Vàng và nhiều kim loại khác bị bán tháo mạnh trong phiên cuối tháng. Giá vàng thế giới hiện xuống mức thấp nhất kể từ cuối năm 2025.",
+          "points": [
+            "Bán tháo diễn ra trong phiên cuối tháng",
+            "Không chỉ vàng, nhiều kim loại khác cũng giảm",
+            "Vàng về đáy một năm, thấp nhất từ cuối năm 2025"
+          ],
+          "why": "Thị trường tài chính biến động mạnh thường kéo theo thay đổi trong mức quan tâm của người dùng. Nếu bạn quảng cáo cho ngành vàng hoặc đầu tư, hãy theo dõi sát hiệu quả chiến dịch.",
+          "source": "VnExpress",
+          "date": "31/10",
+          "link": "https://vnexpress.net/gia-vang-the-gioi-lao-doc-xuong-thap-nhat-mot-nam-5139023.html"
+        },
+        {
+          "title": "Vàng miếng trong nước đồng loạt giảm 2,4 triệu đồng, còn 139 triệu đồng một lượng",
+          "summary": "Giá vàng thế giới lao dốc kéo giá vàng miếng trong nước giảm theo. Các thương hiệu đồng loạt hạ giá bán 2,4 triệu đồng so với cuối ngày hôm qua, xuống 139 triệu đồng một lượng.",
+          "points": [
+            "Giảm 2,4 triệu đồng so với cuối ngày hôm qua",
+            "Giá bán vàng miếng còn 139 triệu đồng một lượng",
+            "Các thương hiệu trong nước giảm đồng loạt"
+          ],
+          "why": "Giá vàng trong nước biến động nhanh, theo sát giá thế giới. Nếu bạn làm quảng cáo cho tiệm vàng hoặc dịch vụ đầu tư, nên rà lại nội dung quảng cáo có nhắc đến giá.",
+          "source": "VnExpress",
+          "date": "31/10",
+          "link": "https://vnexpress.net/gia-vang-moi-nhat-hom-nay-ngay-31-10-5139058.html"
+        },
+        {
+          "title": "Giá USD tại nhiều ngân hàng xuống dưới 26.000 đồng lần đầu sau một năm rưỡi",
+          "summary": "Nhiều ngân hàng trong nước hiện niêm yết cả giá mua lẫn giá bán USD dưới mốc 26.000 đồng. Đây là lần đầu tiên điều này xảy ra sau một năm rưỡi.",
+          "points": [
+            "Giá mua và giá bán USD đều dưới 26.000 đồng",
+            "Áp dụng tại nhiều ngân hàng trong nước",
+            "Lần đầu tiên sau một năm rưỡi"
+          ],
+          "why": "Nếu bạn có khoản chi bằng USD, như công cụ hoặc dịch vụ nước ngoài, tỷ giá thấp hơn có thể có lợi. Bạn nên so sánh giá giữa các ngân hàng trước khi đổi.",
           "source": "VnExpress",
           "date": "31/10",
           "link": "https://vnexpress.net/gia-usd-ngan-hang-xuong-duoi-26-000-dong-5139037.html"
         },
         {
-          "title": "Cổ phiếu Intel giảm mạnh nhất trong 50 năm",
-          "summary": "Cổ phiếu Intel vừa có mức giảm mạnh nhất trong vòng nửa thế kỷ.",
-          "why": "Đây là biến động lớn của một tên tuổi công nghệ toàn cầu, đáng chú ý với người làm trong ngành công nghệ và quảng cáo số.",
+          "title": "Doanh nghiệp và hộ kinh doanh doanh thu đến 10 tỷ đồng mỗi năm được giảm 30% thuế thu nhập",
+          "summary": "Doanh nghiệp và hộ kinh doanh có doanh thu không quá 10 tỷ đồng mỗi năm được giảm 30% thuế thu nhập. Mức giảm được áp dụng ngay khi kê khai hoặc tạm nộp thuế ở từng kỳ.",
+          "points": [
+            "Giảm 30% thuế thu nhập",
+            "Áp dụng cho doanh thu không quá 10 tỷ đồng mỗi năm",
+            "Giảm ngay khi kê khai hoặc tạm nộp từng kỳ"
+          ],
+          "why": "Nhiều khách hàng hoặc chủ doanh nghiệp nhỏ có thể thuộc diện này. Chi phí thuế giảm có thể giúp họ có thêm ngân sách cho quảng cáo, nên bạn có thể nhắc họ kiểm tra điều kiện áp dụng.",
           "source": "VnExpress",
           "date": "31/10",
-          "link": "https://vnexpress.net/co-phieu-intel-giam-manh-nhat-50-nam-5139027.html"
+          "link": "https://vnexpress.net/doanh-nghiep-ho-kinh-doanh-duoc-giam-30-thue-tung-ky-ke-khai-5138953.html"
+        },
+        {
+          "title": "Điểm lại 10 vụ hack lớn nhất ngành tiền mã hóa, vụ Binance đứng đầu",
+          "summary": "Vụ tấn công Binance làm mất 6,3 tỉ USD chỉ trong khoảng 20 phút, trở thành vụ hack lớn nhất từ trước đến nay của ngành tiền mã hóa. Trước đó đã có nhiều vụ tấn công khác, nhưng chỉ một phần nhỏ tài sản bị lấy cắp được thu hồi.",
+          "points": [
+            "6,3 tỉ USD bị đánh cắp",
+            "Toàn bộ vụ việc diễn ra trong khoảng 20 phút",
+            "Các vụ hack trước đó chỉ thu hồi được một phần nhỏ tài sản"
+          ],
+          "why": "Nếu bạn chạy quảng cáo cho khách hàng trong lĩnh vực tiền số hoặc đầu tư, tâm lý lo ngại về an toàn có thể ảnh hưởng đến thông điệp và hiệu quả chiến dịch. Nên rà lại nội dung quảng cáo.",
+          "source": "Thanh Niên",
+          "date": "31/10",
+          "link": "https://thanhnien.vn/10-vu-hack-lon-nhat-lich-su-tien-ma-hoa-185261031111713695.htm"
+        },
+        {
+          "title": "Nhà đầu tư lớn tăng tốc rút tiền số khỏi các sàn sau vụ Binance bị hack",
+          "summary": "Sau vụ Binance bị tấn công, các nhà đầu tư tổ chức, được gọi là “cá mập”, đang rút nhanh tài sản khỏi các sàn giao dịch tập trung. Mục đích là giảm rủi ro bảo mật cho khoản tiền của họ.",
+          "points": [
+            "Người rút tiền chủ yếu là nhà đầu tư tổ chức",
+            "Dòng tiền rời khỏi các sàn giao dịch tập trung",
+            "Nguyên nhân là lo ngại rủi ro bảo mật sau vụ Binance"
+          ],
+          "why": "Niềm tin vào các sàn đang bị lung lay, nên chiến dịch nhắm đến nhóm khách hàng này có thể cần điều chỉnh. Hãy theo dõi sát số liệu chiến dịch trong những ngày tới.",
+          "source": "VnExpress",
+          "date": "30/10",
+          "link": "https://vnexpress.net/ca-map-dang-rao-riet-rut-tien-so-khoi-cac-san-sau-vu-binance-bi-hack-5138574.html"
+        },
+        {
+          "title": "Tổng thống Trump nói Iran muốn đàm phán, Mỹ “có thời gian”",
+          "summary": "Ông Trump cho biết phía Iran muốn ngồi vào bàn đàm phán với Mỹ. Ông cũng nhấn mạnh Mỹ không bị áp lực về thời gian trong việc này.",
+          "points": [
+            "Người phát biểu là Tổng thống Mỹ Donald Trump",
+            "Iran được cho là muốn đàm phán với Mỹ",
+            "Ông Trump khẳng định Mỹ “có thời gian”"
+          ],
+          "why": "Đây là diễn biến địa chính trị đáng theo dõi cùng với tin về eo biển Hormuz. Tình hình quốc tế căng thẳng có thể tác động đến tâm lý thị trường.",
+          "source": "VnExpress",
+          "date": "31/10",
+          "link": "https://vnexpress.net/ong-trump-iran-muon-dam-phan-5139012.html"
+        },
+        {
+          "title": "Iran thông báo 3 tàu chở dầu nổ và cháy ở eo biển Hormuz",
+          "summary": "Vệ binh Cách mạng Hồi giáo Iran cho biết 3 tàu chở dầu đã phát nổ và bốc cháy ở eo biển Hormuz. Theo phía Iran, các tàu này cố đi vào một tuyến đường bị cấm để qua eo biển.",
+          "points": [
+            "Có 3 tàu chở dầu bị nổ và cháy",
+            "Thông tin do Vệ binh Cách mạng Hồi giáo Iran đưa ra",
+            "Theo Iran, tàu cố đi vào “tuyến đường cấm”"
+          ],
+          "why": "Đây là thông tin từ một phía, nên cần chờ thêm nguồn xác nhận. Nên theo dõi tiếp vì tin liên quan đến một tuyến hàng hải quan trọng.",
+          "source": "VnExpress",
+          "date": "30/10",
+          "link": "https://vnexpress.net/iran-noi-3-tau-cho-dau-boc-chay-o-eo-bien-hormuz-5138951.html"
+        },
+        {
+          "title": "Mỹ đồng ý bán 500 tên lửa Patriot PAC-3 cho Ukraine, trị giá khoảng 2,1 tỷ USD",
+          "summary": "Bộ Ngoại giao Mỹ thông báo chính quyền Tổng thống Trump đã chấp thuận thương vụ bán tên lửa Patriot PAC-3 cho Ukraine. Hợp đồng gồm 500 quả tên lửa và có giá trị khoảng 2,1 tỷ USD.",
+          "points": [
+            "Số lượng: 500 tên lửa Patriot PAC-3",
+            "Giá trị thương vụ khoảng 2,1 tỷ USD",
+            "Bộ Ngoại giao Mỹ là nơi công bố thông tin"
+          ],
+          "why": "Tin cho thấy Mỹ tiếp tục hỗ trợ quân sự cho Ukraine. Bạn có thể đọc lướt để nắm bối cảnh quốc tế chung.",
+          "source": "VnExpress",
+          "date": "31/10",
+          "link": "https://vnexpress.net/my-bat-den-xanh-ban-500-ten-lua-patriot-cho-ukraine-5139005.html"
+        },
+        {
+          "title": "Động thổ cao tốc Gò Dầu - Xa Mát hơn 10.200 tỷ đồng, nối TP.HCM với núi Bà Đen",
+          "summary": "Cao tốc Gò Dầu - Xa Mát đã được động thổ, với chiều dài 28 km và tổng vốn hơn 10.200 tỷ đồng. Tuyến đường mở thêm một hướng kết nối TP.HCM với núi Bà Đen. Dự kiến công trình hoàn thành sau 3 năm.",
+          "points": [
+            "Chiều dài tuyến cao tốc: 28 km",
+            "Vốn đầu tư hơn 10.200 tỷ đồng",
+            "Dự kiến hoàn thành sau 3 năm"
+          ],
+          "why": "Tin gần với TP.HCM và có thể liên quan đến khách hàng ngành du lịch hoặc dịch vụ. Hãy cân nhắc đưa vào kế hoạch quảng cáo dài hạn.",
+          "source": "VnExpress",
+          "date": "30/10",
+          "link": "https://vnexpress.net/dong-tho-cao-toc-go-dau-xa-mat-hon-10-200-ty-dong-5138815.html"
+        },
+        {
+          "title": "Metro Bến Thành - Cần Giờ sắp thi công đồng loạt, cao điểm cần khoảng 10.000 nhân lực",
+          "summary": "Nhà đầu tư dự án đường sắt Bến Thành - Cần Giờ cho biết sẽ đẩy mạnh thi công cùng lúc nhiều hạng mục. Vào giai đoạn cao điểm, dự án sẽ huy động công nhân, kỹ sư và nhân lực kỹ thuật với tổng số khoảng 10.000 người. Tuyến dài 54 km và dự kiến đi vào vận hành năm 2029.",
+          "points": [
+            "Tuyến đường sắt dài 54 km, nối Bến Thành với Cần Giờ",
+            "Cao điểm thi công cần khoảng 10.000 công nhân, kỹ sư và nhân lực kỹ thuật",
+            "Dự kiến vận hành vào năm 2029"
+          ],
+          "why": "Đây là dự án hạ tầng lớn của TP.HCM, nên đáng theo dõi tiến độ vì có thể tác động đến khu vực tuyến đi qua. Người làm quảng cáo nên chú ý nếu có khách hàng hoạt động ở khu vực này.",
+          "source": "VnExpress",
+          "date": "30/10",
+          "link": "https://vnexpress.net/metro-ben-thanh-can-gio-thi-cong-dong-loat-5138707.html"
+        },
+        {
+          "title": "GitHub phải mở rộng thêm bốn triệu nhân CPU vì làn sóng mã do AI tạo ra",
+          "summary": "GitHub, nền tảng lưu trữ mã nguồn lớn nhất thế giới, cho biết lượng mã do AI sinh ra tăng rất mạnh. Vì vậy, chỉ trong một năm, họ phải bổ sung bốn triệu nhân CPU và 160 PB dung lượng lưu trữ. Bài báo gọi hiện tượng này là “bão code AI”.",
+          "points": [
+            "Bổ sung thêm bốn triệu nhân CPU trong một năm",
+            "Thêm 160 PB dung lượng lưu trữ",
+            "Nguyên nhân là lượng mã do AI tạo ra tăng vọt"
+          ],
+          "why": "Tin cho thấy AI đang được dùng để viết mã với quy mô rất lớn. Nếu bạn dùng script hay công cụ tự động trong Google Ads, đây là xu hướng nên theo dõi.",
+          "source": "VnExpress",
+          "date": "31/10",
+          "link": "https://vnexpress.net/github-phai-bo-sung-bon-trieu-nhan-cpu-vi-bao-code-ai-5138530.html"
+        },
+        {
+          "title": "TP.HCM sẽ phát hành trái phiếu để lấy vốn cho các dự án trọng điểm",
+          "summary": "TP.HCM dự kiến phát hành trái phiếu đô thị và trái phiếu công trình tại Trung tâm tài chính quốc tế. Thành phố cũng sẽ huy động vốn trong nước bằng nhiều loại trái phiếu và khoản vay khác nhau. Nguồn tiền này dành cho các dự án trọng điểm.",
+          "points": [
+            "Có trái phiếu đô thị và trái phiếu công trình",
+            "Trái phiếu công trình gắn với Trung tâm tài chính quốc tế",
+            "Vốn huy động trong nước qua nhiều loại trái phiếu, khoản vay"
+          ],
+          "why": "Thành phố đang tìm thêm nguồn vốn cho các dự án lớn, có thể thúc đẩy đầu tư và hoạt động kinh doanh tại địa phương. Bạn nên theo dõi các ngành có thể hưởng lợi để cân nhắc kế hoạch quảng cáo.",
+          "source": "VnExpress",
+          "date": "30/10",
+          "link": "https://vnexpress.net/tp-hcm-phat-hanh-trai-phieu-de-huy-dong-von-cho-cac-du-an-trong-diem-5138747.html"
+        },
+        {
+          "title": "Đại biểu đề xuất thí điểm chứng chỉ vàng để đưa vàng trong dân vào nền kinh tế",
+          "summary": "Đại biểu Lê Hoàng Anh đề xuất thí điểm chứng chỉ vàng. Mục tiêu là tạo thêm một kênh dẫn vốn cho nền kinh tế. Theo bài báo, người dân đang nắm giữ khoảng 500 tấn vàng.",
+          "points": [
+            "Người đề xuất là đại biểu Lê Hoàng Anh",
+            "Đề xuất ở dạng thí điểm chứng chỉ vàng",
+            "Người dân đang giữ khoảng 500 tấn vàng"
+          ],
+          "why": "Đây mới chỉ là đề xuất, nhưng có thể mở ra một kênh tài chính mới. Người làm quảng cáo trong lĩnh vực tài chính hoặc đầu tư nên theo dõi diễn biến tiếp theo.",
+          "source": "VnExpress",
+          "date": "30/10",
+          "link": "https://vnexpress.net/de-xuat-thi-diem-chung-chi-vang-5138821.html"
+        },
+        {
+          "title": "Phó thủ tướng: chủ xe phải được tự chọn dịch vụ thanh toán phí đường bộ điện tử",
+          "summary": "Theo Phó thủ tướng, cần bảo đảm quyền lựa chọn của chủ xe khi thanh toán phí đường bộ điện tử. Chủ xe được chọn dịch vụ thanh toán phù hợp với mình. Họ cũng không bị tính mức phí cao hơn so với quy định khi thanh toán.",
+          "points": [
+            "Chủ xe được quyền chọn dịch vụ thanh toán phí đường bộ",
+            "Không được tăng mức phí thanh toán trái quy định",
+            "Phát biểu của Phó thủ tướng"
+          ],
+          "why": "Tin liên quan trực tiếp đến người đi ô tô và cách thanh toán phí đường bộ. Nếu bạn có xe, nên theo dõi hướng dẫn cụ thể để chọn dịch vụ phù hợp.",
+          "source": "VnExpress",
+          "date": "30/10",
+          "link": "https://vnexpress.net/pho-thu-tuong-can-bao-dam-quyen-lua-chon-thanh-toan-phi-dien-tu-duong-bo-5138947.html"
         }
       ]
     },
@@ -38,36 +235,160 @@
       "color": "--c-work",
       "items": [
         {
-          "title": "Google: Quảng cáo trong AI Mode kiếm được ít hơn quảng cáo tìm kiếm truyền thống",
-          "summary": "Google cho biết quảng cáo hiển thị trong AI Mode đang mang lại doanh thu thấp hơn so với quảng cáo tìm kiếm truyền thống.",
-          "why": "Giúp bạn có cái nhìn thực tế khi cân nhắc phân bổ ngân sách giữa AI Mode và tìm kiếm truyền thống.",
+          "title": "ChatGPT Ads mở thêm 26 quốc gia, có khung quảng cáo rộng hơn và quảng cáo nhiều ảnh",
+          "summary": "Trong email cập nhật hằng tuần gửi nhà quảng cáo, OpenAI cho biết quảng cáo trên ChatGPT đã hoạt động ở thêm 26 quốc gia. Hãng cũng giới thiệu một định dạng quảng cáo tiêu chuẩn mới với chiều ngang rộng hơn. Quảng cáo nhiều ảnh nay đã mở bản beta cho mọi nhà quảng cáo.",
+          "points": [
+            "Quảng cáo ChatGPT có mặt ở thêm 26 quốc gia",
+            "Có định dạng quảng cáo tiêu chuẩn mới, rộng hơn",
+            "Quảng cáo nhiều ảnh mở beta cho tất cả nhà quảng cáo"
+          ],
+          "why": "ChatGPT đang trở thành một kênh quảng cáo thực thụ bên cạnh Google Ads. Bạn nên kiểm tra xem thị trường của khách hàng đã nằm trong danh sách mở rộng chưa để cân nhắc thử nghiệm.",
           "source": "Search Engine Roundtable",
-          "date": "31/10",
+          "date": "30/10",
+          "link": "https://www.seroundtable.com/chatgpt-ads-update-42427.html"
+        },
+        {
+          "title": "Google thừa nhận quảng cáo trong AI Mode kiếm tiền kém hơn quảng cáo tìm kiếm truyền thống",
+          "summary": "Trong cuộc họp công bố kết quả kinh doanh, Philipp Schindler, phó chủ tịch cấp cao kiêm giám đốc kinh doanh của Google, nói quảng cáo trong AI Mode có mức “lower monetization” so với quảng cáo tìm kiếm truyền thống. Nói cách khác, loại quảng cáo này hiện mang về ít tiền hơn cho Google.",
+          "points": [
+            "Người phát biểu: Philipp Schindler, giám đốc kinh doanh của Google",
+            "Nhận định đưa ra trong cuộc họp công bố kết quả kinh doanh",
+            "Quảng cáo AI Mode có mức kiếm tiền thấp hơn tìm kiếm truyền thống"
+          ],
+          "why": "Tìm kiếm truyền thống vẫn là nguồn thu chính của Google, nên khó có chuyện ngân sách và cách tối ưu thay đổi ngay. Hãy theo dõi cách Google cải thiện mảng này, vì nó có thể ảnh hưởng đến cách bạn triển khai quảng cáo sau này.",
+          "source": "Search Engine Roundtable",
+          "date": "29/10",
           "link": "https://www.seroundtable.com/google-ai-mode-ads-earn-less-42417.html"
         },
         {
-          "title": "Gemini ngừng gắn tham số UTM vào các URL được trích dẫn",
-          "summary": "Google Gemini không còn tự gắn tham số UTM vào những đường dẫn mà nó trích dẫn.",
-          "why": "Việc này có thể làm khó việc nhận diện lưu lượng truy cập đến từ Gemini, nên cần kiểm tra lại cách đo lường.",
+          "title": "Bing bắt đầu hiển thị quảng cáo trong AI Overviews do Copilot vận hành",
+          "summary": "Microsoft đang đưa quảng cáo vào phần AI Overviews của Bing, được vận hành bởi Copilot. Tác giả bài viết chưa từng thấy quảng cáo trong câu trả lời AI của Bing và cũng chưa tự kích hoạt được. Tuy nhiên, Khushal Bherwani đã chia sẻ thông tin về việc này.",
+          "points": [
+            "Quảng cáo xuất hiện trong AI Overviews của Bing do Copilot vận hành",
+            "Tác giả bài viết chưa tự kích hoạt được quảng cáo này",
+            "Thông tin đến từ chia sẻ của Khushal Bherwani"
+          ],
+          "why": "Quảng cáo đang len vào câu trả lời AI ở nhiều nền tảng, không riêng Google. Nếu bạn chạy Microsoft Advertising, hãy để ý xem mẫu quảng cáo của mình có xuất hiện ở vị trí mới này không.",
           "source": "Search Engine Roundtable",
-          "date": "31/10",
+          "date": "30/10",
+          "link": "https://www.seroundtable.com/bing-ads-copilot-ai-overviews-42416.html"
+        },
+        {
+          "title": "Nghiên cứu nhỏ: tính năng AI của Google Search chỉ đạt tỷ lệ nhấp khoảng 0,9%",
+          "summary": "Nhiều người luôn thắc mắc các tính năng AI của Google Search như AI Overviews và AI Mode mang lại tỷ lệ nhấp bao nhiêu. Một nghiên cứu quy mô nhỏ mới cho thấy con số này vào khoảng 0,9%. Bài viết cũng nhắc đến phần “opt out” trong nghiên cứu.",
+          "points": [
+            "Tỷ lệ nhấp từ AI Overviews và AI Mode khoảng 0,9%",
+            "Đây là nghiên cứu quy mô nhỏ, nên cần dè dặt khi diễn giải",
+            "Nghiên cứu có đề cập đến việc từ chối (opt out)"
+          ],
+          "why": "Nếu con số này đúng, lượt nhấp từ các khung trả lời AI rất thấp. Bạn nên cẩn trọng khi kỳ vọng traffic từ đây và đối chiếu với số liệu thực tế trong tài khoản của mình.",
+          "source": "Search Engine Roundtable",
+          "date": "30/10",
+          "link": "https://www.seroundtable.com/google-ai-overviews-mode-ctr-42421.html"
+        },
+        {
+          "title": "Gemini ngừng gắn tham số UTM vào các liên kết được trích dẫn trong câu trả lời",
+          "summary": "Google dường như đã thôi gắn tham số UTM vào các liên kết được Gemini trích dẫn trong câu trả lời AI. Việc này bắt đầu từ đầu tháng 9, nhưng sau đó Google đã dừng lại.",
+          "points": [
+            "Gemini bắt đầu gắn UTM vào liên kết từ đầu tháng 9",
+            "Sau đó Google dường như đã ngừng làm vậy",
+            "Ảnh hưởng đến các liên kết được trích dẫn trong câu trả lời AI"
+          ],
+          "why": "Không có UTM, lượt truy cập từ Gemini có thể khó nhận diện hơn trong công cụ phân tích. Hãy kiểm tra báo cáo nguồn truy cập để xem traffic này có bị lẫn vào nhóm khác không.",
+          "source": "Search Engine Roundtable",
+          "date": "30/10",
           "link": "https://www.seroundtable.com/gemini-utm-parameters-42399.html"
         },
         {
-          "title": "Performance Max sẽ bật sẵn trích xuất hình ảnh từ ngày 4/12/2026",
-          "summary": "Từ ngày 4/12/2026, tính năng trích xuất hình ảnh sẽ mặc định được bật cho các chiến dịch Performance Max tạo mới trên các giao diện Google Ads.",
-          "why": "Chiến dịch PMax mới có thể tự lấy hình ảnh mà bạn chưa chủ động chọn, nên cần xem lại thiết lập khi tạo chiến dịch.",
-          "source": "Google Ads Developer Blog",
-          "date": "31/10",
-          "link": "http://ads-developers.googleblog.com/2026/10/upcoming-changes-to-image-extraction-in.html"
+          "title": "Google áp dụng cơ chế kiểm soát huấn luyện AI mới, đang được IETF xem xét",
+          "summary": "Google đang áp dụng các cách kiểm soát việc huấn luyện AI mới, hiện được IETF xem xét. Mục tiêu là đơn giản hóa và tinh gọn việc kiểm soát cho nhà xuất bản và chủ sở hữu website.",
+          "points": [
+            "Cơ chế kiểm soát mới đang được IETF xem xét",
+            "Dành cho nhà xuất bản và chủ sở hữu website",
+            "Mục tiêu là đơn giản hóa việc kiểm soát huấn luyện AI"
+          ],
+          "why": "Tin này liên quan nhiều hơn nếu bạn quản lý website hoặc nội dung của khách hàng. Hãy theo dõi để biết có cần thiết lập lại cách cho phép AI sử dụng nội dung hay không.",
+          "source": "Search Engine Roundtable",
+          "date": "30/10",
+          "link": "https://www.seroundtable.com/google-ai-training-control-42430.html"
         },
         {
-          "title": "Biến nội dung mạng xã hội có sẵn thành quảng cáo YouTube",
-          "summary": "Google Ads giới thiệu cách tận dụng tài sản sẵn có trên mạng xã hội để làm quảng cáo YouTube hiệu quả.",
-          "why": "Có thể giúp tiết kiệm thời gian sản xuất nội dung khi triển khai quảng cáo video.",
-          "source": "Google Ads & Commerce Blog",
-          "date": "31/10",
-          "link": "https://blog.google/products/ads-commerce/creating-assets-youtube-ads/"
+          "title": "Microsoft ra tùy chọn mới, đơn giản hơn để kiểm soát cách Bing AI dùng nội dung website",
+          "summary": "Microsoft vừa công bố bộ điều khiển nội dung AI mới cho Bing, với các lựa chọn rõ ràng và dễ hiểu hơn. Chủ website có thể quyết định nội dung của mình được dùng để huấn luyện AI, làm nguồn dẫn chứng cho câu trả lời (grounding), hoặc cả hai. Dù chọn thế nào, trang vẫn đủ điều kiện xuất hiện trên Bing Search.",
+          "points": [
+            "Ba hướng lựa chọn: huấn luyện, grounding hoặc cả hai",
+            "Tùy chọn mới được mô tả là mới hơn, đơn giản hơn, rõ ràng hơn",
+            "Chọn hạn chế vẫn không mất điều kiện hiển thị trên Bing Search"
+          ],
+          "why": "Nếu bạn quản lý website của mình hoặc của khách hàng, đây là dịp xem lại cách nội dung được dùng trong AI. Hãy kiểm tra các tùy chọn mới để chọn mức phù hợp.",
+          "source": "Search Engine Roundtable",
+          "date": "30/10",
+          "link": "https://www.seroundtable.com/microsoft-bing-ai-controls-42429.html"
+        },
+        {
+          "title": "Google có thể khôi phục tham số num=100 để xem 100 kết quả tìm kiếm mỗi trang",
+          "summary": "Có dấu hiệu cho thấy Google Search đang cân nhắc đưa lại tham số num=100, cho phép hiển thị 100 kết quả trên một trang. Google đã bỏ tính năng này vào tháng 9/2025, như một trong nhiều biện pháp được áp dụng. Hiện thông tin mới dừng ở mức “có thể”, chưa phải xác nhận chính thức.",
+          "points": [
+            "Tham số num=100 cho phép xem 100 kết quả mỗi trang",
+            "Google bỏ tính năng này vào tháng 9/2025",
+            "Hiện mới là khả năng quay lại, chưa chắc chắn"
+          ],
+          "why": "Nếu bạn hay kiểm tra kết quả tìm kiếm theo cách thủ công hoặc bằng công cụ, nên theo dõi xem Google có chính thức đưa tính năng này trở lại không.",
+          "source": "Search Engine Roundtable",
+          "date": "30/10",
+          "link": "https://www.seroundtable.com/google-search-100-search-results-parameter-back-42423.html"
+        },
+        {
+          "title": "Điểm lại tuần: Google biến động hai lần, cập nhật spam, AI Overviews lan rộng, quảng cáo trộn với kết quả tự nhiên",
+          "summary": "Bản tin video tổng hợp tuần của Search Engine Roundtable ghi nhận Google Search biến động hai lần trong cùng một tuần. Google nhắc các công cụ về nguyên tắc chống spam trong nội dung do người dùng tạo, và cho rằng báo cáo lập chỉ mục theo thời gian thực không quá quan trọng. Video cũng nhắc đến AI Overviews xuất hiện ngày càng nhiều, việc trộn quảng cáo với kết quả tự nhiên, và kết quả kinh doanh của Google và Microsoft.",
+          "points": [
+            "Google Search biến động hai lần trong một tuần",
+            "Google nhắc các công cụ về nguyên tắc spam nội dung người dùng tạo",
+            "Chủ đề khác: AI Overviews, trộn quảng cáo với organic, báo cáo thu nhập"
+          ],
+          "why": "Đây là bản tóm tắt nhanh cho người làm Google Ads muốn nắm xu hướng trong tuần. Hãy chú ý phần quảng cáo trộn với kết quả tự nhiên và AI Overviews.",
+          "source": "Search Engine Roundtable",
+          "date": "30/10",
+          "link": "https://www.seroundtable.com/video-10-30-2026-42418.html"
+        },
+        {
+          "title": "Google mở rộng tính năng nhắn tin dùng AI trên Google Business Profile cho thêm nhiều doanh nghiệp",
+          "summary": "Google dường như đang cho nhiều doanh nghiệp hơn dùng tính năng nhắn tin có AI hỗ trợ trong Google Business Profile. Tác giả cho biết đã đưa tin về tính năng này hồi tháng 6 năm nay. Từ đó đến nay Google đã có thêm một số cập nhật cho tính năng.",
+          "points": [
+            "Quyền truy cập đang mở rộng cho nhiều doanh nghiệp hơn",
+            "Tính năng từng được đưa tin vào tháng 6 năm nay",
+            "Google đã cập nhật tính năng kể từ đó"
+          ],
+          "why": "Nếu bạn quản lý hồ sơ doanh nghiệp cho mình hoặc khách hàng, hãy kiểm tra xem tài khoản đã có tính năng nhắn tin AI này chưa.",
+          "source": "Search Engine Roundtable",
+          "date": "29/10",
+          "link": "https://www.seroundtable.com/google-business-profiles-ai-powered-messaging-42419.html"
+        },
+        {
+          "title": "Gary Illyes của Google: AI khiến tình trạng giả mạo bot trở nên tệ hơn",
+          "summary": "Gary Illyes của Google trả lời phỏng vấn của Aneta Samkoff, người dẫn chương trình Odys Podcast. Cuộc trò chuyện xoay quanh bot và crawler, với nhiều chủ đề được đề cập. Ông cho rằng việc giả mạo bot là vấn đề đáng lo hơn, và AI đã làm nó nặng nề thêm.",
+          "points": [
+            "Phỏng vấn trên Odys Podcast do Aneta Samkoff dẫn",
+            "Chủ đề chính: bot và crawler",
+            "Theo Gary, AI làm tình trạng giả mạo bot tệ đi"
+          ],
+          "why": "Nếu bạn quan tâm cách Google nhìn nhận bot và crawler, đây là cuộc trò chuyện đáng nghe thêm.",
+          "source": "Search Engine Roundtable",
+          "date": "30/10",
+          "link": "https://www.seroundtable.com/google-ai-made-bot-impersonation-worse-42422.html"
+        },
+        {
+          "title": "John Mueller của Google: Về lâu dài, hệ thống sẽ phát hiện được spam và mánh khóe dùng AI",
+          "summary": "John Mueller của Google được David Iwanow phỏng vấn về nhiều chủ đề. Ông chia sẻ về nội dung do AI tạo ra và tương lai của SEO. Cuộc trò chuyện cũng đi vào SEO kỹ thuật, báo cáo thống kê thu thập dữ liệu (crawl stats), chuỗi chuyển hướng và dữ liệu sản phẩm thương mại điện tử.",
+          "points": [
+            "Người phỏng vấn: David Iwanow",
+            "Chủ đề: nội dung AI, tương lai SEO, SEO kỹ thuật",
+            "Cũng bàn về crawl stats, chuỗi chuyển hướng, dữ liệu sản phẩm"
+          ],
+          "why": "Nếu bạn làm việc với website bán hàng, phần về dữ liệu sản phẩm và chuyển hướng có thể đáng nghe. Quan điểm về nội dung AI cũng giúp bạn định hướng lâu dài.",
+          "source": "Search Engine Roundtable",
+          "date": "30/10",
+          "link": "https://www.seroundtable.com/john-mueller-google-systems-ai-spam-42420.html"
         }
       ]
     },
@@ -77,28 +398,160 @@
       "color": "--c-life",
       "items": [
         {
-          "title": "TP.HCM gộp ba số khẩn cấp 113, 114, 115 thành tổng đài 113",
-          "summary": "Thành phố sẽ tích hợp ba số khẩn cấp 113, 114 và 115 vào một tổng đài duy nhất là 113.",
-          "why": "Người dân TP.HCM chỉ cần nhớ một số khi cần hỗ trợ khẩn cấp.",
-          "source": "Thanh Niên",
-          "date": "31/10",
-          "link": "https://thanhnien.vn/tphcm-tich-hop-3-so-khan-cap-113-114-115-thanh-tong-dai-113-185261031101129376.htm"
-        },
-        {
-          "title": "Mùa mưa ở Nam Bộ kết thúc sớm nửa tháng",
-          "summary": "Mùa mưa ở Nam Bộ năm nay kết thúc sớm hơn khoảng nửa tháng.",
-          "why": "Thời tiết đổi mùa sớm ảnh hưởng đến việc đi lại và sinh hoạt hằng ngày ở TP.HCM.",
+          "title": "Mùa mưa ở TP.HCM và Nam Bộ dự báo kết thúc sớm hơn trung bình khoảng nửa tháng",
+          "summary": "Theo dự báo, mùa mưa ở TP.HCM và cả Nam Bộ sẽ chấm dứt từ tuần thứ hai của tháng 11. Mốc này sớm hơn mức trung bình nhiều năm. Sang tháng 12, nắng nóng có thể bắt đầu xuất hiện.",
+          "points": [
+            "Mùa mưa kết thúc từ tuần thứ hai tháng 11",
+            "Sớm hơn trung bình 10–15 ngày",
+            "Nắng nóng có thể xuất hiện từ tháng 12"
+          ],
+          "why": "Thời tiết chuyển nhanh sang khô nóng nên cần chuẩn bị sớm cho sức khỏe và lịch sinh hoạt. Nếu chiến dịch của bạn phụ thuộc vào thời tiết, hãy cân nhắc điều chỉnh kế hoạch theo mùa.",
           "source": "VnExpress",
           "date": "31/10",
           "link": "https://vnexpress.net/mua-mua-o-nam-bo-ket-thuc-som-nua-thang-5138731.html"
         },
         {
-          "title": "Phó thủ tướng: Cần bảo đảm quyền lựa chọn cách thanh toán phí điện tử đường bộ",
-          "summary": "Phó thủ tướng nhấn mạnh người dân phải có quyền lựa chọn hình thức thanh toán phí điện tử trên đường bộ.",
-          "why": "Thông tin hữu ích cho người thường xuyên đi qua các trạm thu phí.",
+          "title": "TP.HCM gộp ba số khẩn cấp 113, 114, 115 về một đầu mối là tổng đài 113",
+          "summary": "TP.HCM đang triển khai kế hoạch thống nhất ba số khẩn cấp 113, 114 và 115 thành một đầu mối duy nhất. Tổng đài 113 sẽ tiếp nhận, điều phối và xử lý thông tin từ người dân.",
+          "points": [
+            "Ba số 113, 114, 115 được thống nhất làm một",
+            "Tổng đài 113 là đầu mối tiếp nhận thông tin",
+            "Tổng đài cũng điều phối và xử lý tình huống"
+          ],
+          "why": "Khi gặp sự cố khẩn cấp, bạn sẽ chỉ cần nhớ một số điện thoại. Hãy báo cho cả gia đình và người thân để mọi người cùng biết.",
+          "source": "Thanh Niên",
+          "date": "31/10",
+          "link": "https://thanhnien.vn/tphcm-tich-hop-3-so-khan-cap-113-114-115-thanh-tong-dai-113-185261031101129376.htm"
+        },
+        {
+          "title": "Bộ Nông nghiệp và Môi trường đề xuất thu phí túi nilon, đồ nhựa dùng một lần thay vì cấm ngay",
+          "summary": "Bộ Nông nghiệp và Môi trường đề xuất thu tiền đối với túi nilon và đồ nhựa dùng một lần ở siêu thị, khách sạn. Cách làm này thay cho việc cấm hoàn toàn ngay từ năm nay.",
+          "points": [
+            "Đề xuất thu tiền túi nilon, cốc nhựa, đồ nhựa dùng một lần",
+            "Áp dụng tại siêu thị và khách sạn",
+            "Thay cho phương án cấm hoàn toàn từ năm nay"
+          ],
+          "why": "Nếu được áp dụng, mua sắm và dùng dịch vụ có thể phát sinh thêm khoản phí nhỏ. Mang theo túi và cốc dùng nhiều lần là cách tránh khoản này.",
           "source": "VnExpress",
           "date": "31/10",
-          "link": "https://vnexpress.net/pho-thu-tuong-can-bao-dam-quyen-lua-chon-thanh-toan-phi-dien-tu-duong-bo-5138947.html"
+          "link": "https://vnexpress.net/de-xuat-thu-phi-tui-nilon-coc-nhua-thay-vi-cam-ngay-nam-nay-5138860.html"
+        },
+        {
+          "title": "TP.HCM mở cơ chế tiến cử người giỏi vào khu vực công, lương chuyên gia vượt 265 triệu đồng mỗi tháng",
+          "summary": "TP.HCM sẽ tiếp nhận người giỏi vào khu vực công qua hình thức tiến cử, không chờ ứng viên tự đăng ký. Mức lương dành cho chuyên gia lên đến hơn 265 triệu đồng mỗi tháng. Con số này gấp gần 2,7 lần so với trước đây.",
+          "points": [
+            "Tiến cử chủ động, không chờ ứng viên đăng ký",
+            "Lương chuyên gia đến hơn 265 triệu đồng mỗi tháng",
+            "Mức mới gấp gần 2,7 lần so với trước"
+          ],
+          "why": "Đây là cơ hội mới cho người có chuyên môn cao muốn làm việc ở khu vực công. Bạn có thể theo dõi thêm nếu quan tâm hoặc quen ai phù hợp.",
+          "source": "VnExpress",
+          "date": "30/10",
+          "link": "https://vnexpress.net/tp-hcm-mo-co-che-tien-cu-tra-luong-chuyen-gia-den-265-trieu-dong-thang-5138876.html"
+        },
+        {
+          "title": "Hơn 2.500 tỷ đồng cải tạo kênh Hy Vọng để giảm ngập khu vực sân bay Tân Sơn Nhất",
+          "summary": "Kênh Hy Vọng, đoạn dài hơn 1 km, đang được đầu tư cải tạo nhằm tăng khả năng thoát nước. Mục tiêu là giảm ngập ở khu vực sân bay Tân Sơn Nhất. Tổng vốn của dự án vượt 2.500 tỷ đồng.",
+          "points": [
+            "Kênh Hy Vọng dài hơn 1 km",
+            "Tổng vốn đầu tư hơn 2.500 tỷ đồng",
+            "Mục tiêu là giảm ngập quanh sân bay Tân Sơn Nhất"
+          ],
+          "why": "Người thường di chuyển qua khu vực sân bay có thể bớt lo tình trạng ngập khi dự án hoàn thành. Hãy theo dõi tiến độ để biết khi nào đường đi thuận lợi hơn.",
+          "source": "VnExpress",
+          "date": "30/10",
+          "link": "https://vnexpress.net/hon-2-500-ty-cai-tao-kenh-thoat-nuoc-san-bay-tan-son-nhat-5138541.html"
+        },
+        {
+          "title": "Sốt xuất huyết, tay chân miệng chưa có thuốc đặc trị: ngành y tế TP.HCM kêu gọi phòng bệnh",
+          "summary": "Ngành y tế TP.HCM đang đẩy mạnh phòng, chống sốt xuất huyết và tay chân miệng, hai bệnh chưa có thuốc đặc trị. Trọng tâm là diệt lăng quăng và loại bỏ nơi muỗi sinh sản. Việc giữ vệ sinh ở trường lớp cũng được chú trọng để hạn chế dịch lây lan.",
+          "points": [
+            "Cả hai bệnh đều chưa có thuốc đặc trị",
+            "Diệt lăng quăng, loại bỏ nơi muỗi sinh sản",
+            "Giữ vệ sinh trường lớp để hạn chế lây lan"
+          ],
+          "why": "Vì chưa có thuốc đặc trị nên phòng bệnh là cách tốt nhất. Hãy kiểm tra nhà cửa, dọn các vật chứa nước đọng và nhắc con giữ vệ sinh.",
+          "source": "Thanh Niên",
+          "date": "31/10",
+          "link": "https://thanhnien.vn/sot-xuat-huyet-tay-chan-mieng-chua-co-thuoc-dac-tri-nguoi-dan-can-lam-gi-185261031100534428.htm"
+        },
+        {
+          "title": "TP HCM hỗ trợ tiền học nghề cho lao động về nước sau khi hết hợp đồng",
+          "summary": "Một số nhóm lao động thuộc diện chính sách ở TP HCM sẽ được hỗ trợ chi phí học nghề. Điều kiện là họ đã hoàn thành hợp đồng làm việc ở nước ngoài và trở về. Mức hỗ trợ cao nhất là 4,5 triệu đồng.",
+          "points": [
+            "Mức hỗ trợ tối đa 4,5 triệu đồng cho mỗi người học nghề",
+            "Áp dụng cho một số nhóm chính sách ở TP HCM",
+            "Người hưởng phải đã hoàn thành hợp đồng ở nước ngoài"
+          ],
+          "why": "Nếu bạn hoặc người quen từng đi làm ở nước ngoài và muốn học nghề mới, hãy hỏi cơ quan địa phương xem có thuộc diện được hỗ trợ không.",
+          "source": "VnExpress",
+          "date": "30/10",
+          "link": "https://vnexpress.net/tp-hcm-ho-tro-hoc-nghe-cho-lao-dong-hoi-huong-5138635.html"
+        },
+        {
+          "title": "Tiểu thương đường Cách Mạng Tháng Tám xoay xở buôn bán sau rào chắn metro",
+          "summary": "Công trình metro Bến Thành - Tham Lương khiến nhiều hộ kinh doanh trên đường Cách Mạng Tháng Tám bị rào tôn che gần kín mặt tiền. Lối đi trước quán hẹp, chỉ vừa một xe máy, nên việc bán hàng gặp nhiều khó khăn. Các tiểu thương đang tìm đủ cách để giữ khách.",
+          "points": [
+            "Rào tôn gần như che kín mặt tiền các cửa hàng",
+            "Lối đi trước quán chỉ vừa một chiếc xe máy",
+            "Công trình thuộc tuyến metro Bến Thành - Tham Lương"
+          ],
+          "why": "Nếu bạn có khách hàng kinh doanh quanh khu này, hãy lưu ý lượng khách ghé trực tiếp có thể giảm. Đây là lúc nên tính thêm các kênh bán và quảng bá khác.",
+          "source": "VnExpress",
+          "date": "31/10",
+          "link": "https://vnexpress.net/tieu-thuong-xoay-du-cach-ban-hang-sau-rao-chan-metro-ben-thanh-tham-luong-5136661.html"
+        },
+        {
+          "title": "Cà Mau chuẩn bị cấp nước bằng sà lan để ứng phó hạn mặn",
+          "summary": "Cà Mau yêu cầu rà soát từng hộ dân có nguy cơ thiếu nước và chuẩn bị phương án cấp nước khẩn cấp. Dự báo cho thấy hạn hán, thiếu nước và xâm nhập mặn có thể kéo dài khá lâu. Sà lan là một trong những phương tiện được tính đến để chở nước.",
+          "points": [
+            "Rà soát từng hộ có nguy cơ thiếu nước",
+            "Hạn mặn có thể kéo dài đến tháng 5.2027",
+            "Chuẩn bị phương án cấp nước khẩn cấp, gồm cả sà lan"
+          ],
+          "why": "Nếu bạn có người thân ở Cà Mau hoặc làm chiến dịch nhắm khu vực này, nên theo dõi tình hình thiếu nước. Thông tin cũng giúp bạn hiểu bối cảnh khi tiêu dùng ở đó thay đổi.",
+          "source": "Thanh Niên",
+          "date": "31/10",
+          "link": "https://thanhnien.vn/ca-mau-chuan-bi-cap-nuoc-bang-sa-lan-ung-pho-han-man-185261031100625549.htm"
+        },
+        {
+          "title": "Phường Cát Lái nâng cấp 35 tuyến đường, hẻm với hơn 51 tỉ đồng",
+          "summary": "Phường Cát Lái ở TP.HCM đang triển khai nâng cấp 35 tuyến đường và hẻm. Tổng vốn đầu tư là hơn 51 tỉ đồng. Dự kiến các hạng mục sẽ xong trước Tết Nguyên đán 2027.",
+          "points": [
+            "Nâng cấp 35 tuyến đường, hẻm tại phường Cát Lái",
+            "Tổng vốn hơn 51 tỉ đồng",
+            "Dự kiến hoàn thành trước Tết Nguyên đán 2027"
+          ],
+          "why": "Nếu bạn sống hoặc hay đi lại ở Cát Lái, nên để ý các đoạn đang thi công khi di chuyển. Đổi lại, đường sá dự kiến sẽ tốt hơn trước Tết.",
+          "source": "Thanh Niên",
+          "date": "31/10",
+          "link": "https://thanhnien.vn/phuong-cat-lai-o-tphcm-nang-cap-35-tuyen-duong-hem-185261031104533342.htm"
+        },
+        {
+          "title": "Giá nông sản sáng 31-10: rau má ruộng khan hàng, ổi miền Tây còn 10.000 đồng/kg",
+          "summary": "Thị trường nông sản ngày 31-10 ghi nhận rau má ruộng tại TP.HCM đang khan hàng nên giá tăng. Ở chiều ngược lại, ổi miền Tây có giá thấp, chỉ khoảng 10.000 đồng mỗi ký.",
+          "points": [
+            "Rau má ruộng tại TP.HCM tăng lên 40.000 - 45.000 đồng/kg",
+            "Nguyên nhân giá tăng là do khan hàng",
+            "Ổi miền Tây còn khoảng 10.000 đồng/kg"
+          ],
+          "why": "Thông tin hữu ích để cân nhắc khi đi chợ cuối tuần. Ổi đang rẻ, còn rau má ruộng thì đắt hơn bình thường.",
+          "source": "Tuổi Trẻ",
+          "date": "31/10",
+          "link": "https://tuoitre.vn/gia-ca-dau-ngay-rau-ma-ruong-khan-hang-oi-mien-tay-con-10000-dong-kg-100261031100209914.htm"
+        },
+        {
+          "title": "Lập di chúc miệng hay viết tay đều có thể hợp pháp, không bắt buộc công chứng",
+          "summary": "Bài viết hướng dẫn cách lập di chúc theo nhiều hình thức: miệng, viết tay, công chứng và chứng thực. Điểm chính là di chúc không nhất thiết phải công chứng hay chứng thực mới có hiệu lực. Di chúc miệng hoặc viết tay vẫn có giá trị pháp lý nếu đáp ứng đủ điều kiện luật định.",
+          "points": [
+            "Công chứng, chứng thực không phải điều kiện bắt buộc",
+            "Di chúc miệng và viết tay vẫn có thể có giá trị pháp lý",
+            "Phải đáp ứng đầy đủ các điều kiện theo quy định"
+          ],
+          "why": "Nếu bạn đang cân nhắc lập di chúc, nên tìm hiểu kỹ điều kiện của từng hình thức. Khi cần chắc chắn, hãy hỏi người có chuyên môn pháp lý.",
+          "source": "Thanh Niên",
+          "date": "31/10",
+          "link": "https://thanhnien.vn/huong-dan-cach-lap-di-chuc-mieng-viet-tay-cong-chung-chung-thuc-dung-phap-luat-18526103110210854.htm"
         }
       ]
     },
@@ -108,20 +561,82 @@
       "color": "--c-heart",
       "items": [
         {
-          "title": "Cô gái Pa Kô học tiếng Anh qua AI để đưa thổ cẩm ra thế giới",
-          "summary": "Một cô gái người Pa Kô tự học tiếng Anh bằng AI để giới thiệu sản phẩm thổ cẩm của quê hương ra thị trường quốc tế.",
-          "why": "Câu chuyện cho thấy công nghệ có thể mở đường cho nghề truyền thống đến với thế giới.",
+          "title": "Học sinh lớp 5 ở TP.HCM giành quán quân cuộc thi Robotics quốc tế tại Trung Quốc",
+          "summary": "Một nhóm học sinh lớp 5 của Trường Tiểu học & THCS Phan Văn Trị (TP.HCM) vừa đoạt ngôi quán quân cuộc thi Robotics quốc tế tổ chức tại Trung Quốc. Câu chuyện được kể trong cuộc thi Lan tỏa năng lượng tích cực 2026. Thành tích này cho thấy giáo dục STEM có thể nuôi đam mê công nghệ ngay từ bậc tiểu học.",
+          "points": [
+            "Nhóm học sinh lớp 5 của trường Phan Văn Trị, TP.HCM",
+            "Giành quán quân cuộc thi Robotics quốc tế tại Trung Quốc",
+            "Bài thuộc cuộc thi Lan tỏa năng lượng tích cực 2026"
+          ],
+          "why": "Đây là tin tích cực về nhân lực công nghệ trẻ ngay tại TP.HCM, đáng để theo dõi nếu bạn làm trong ngành số. Nó cũng gợi ý một chủ đề giáo dục STEM có thể khai thác khi làm nội dung.",
+          "source": "Tuổi Trẻ",
+          "date": "31/10",
+          "link": "https://tuoitre.vn/cuoc-thi-lan-toa-nang-luong-tich-cuc-2026-chap-canh-dam-me-cong-nghe-dua-tri-tue-viet-vuon-tam-quoc-te-100261031064528325.htm"
+        },
+        {
+          "title": "Cô gái Pa Kô tự học tiếng Anh bằng AI để đưa thổ cẩm đến du khách quốc tế",
+          "summary": "Lê Thị Chưng Nhi, một cô gái dân tộc Pa Kô, cách tân thổ cẩm truyền thống và tự học tiếng Anh nhờ AI. Nhờ vốn tiếng Anh đó, cô làm các clip giới thiệu bản làng và văn hóa quê hương. Sản phẩm thủ công của đồng bào nhờ vậy đến được với du khách nước ngoài.",
+          "points": [
+            "Nhân vật chính: Lê Thị Chưng Nhi, người Pa Kô",
+            "Tự học tiếng Anh qua AI, không cần lớp học truyền thống",
+            "Làm clip quảng bá bản làng, văn hóa và hàng thủ công"
+          ],
+          "why": "Câu chuyện là ví dụ rõ về việc AI và video ngắn giúp một sản phẩm địa phương tiếp cận khách quốc tế. Bạn có thể tham khảo cách kể chuyện chân thực này cho chiến dịch của mình.",
           "source": "Tuổi Trẻ",
           "date": "31/10",
           "link": "https://tuoitre.vn/co-gai-pa-ko-hoc-tieng-anh-qua-ai-dua-tho-cam-ra-the-gioi-100261031101848793.htm"
         },
         {
-          "title": "92 rùa con nở và trở về biển ở Hòn Cau",
-          "summary": "92 chú rùa con đã nở và được trả về biển tại Hòn Cau.",
-          "why": "Một tin nhẹ nhàng, tích cực về bảo vệ thiên nhiên để bắt đầu ngày mới.",
+          "title": "Đắk Lắk: tìm thấy hài cốt nữ liệt sĩ được bọc trong hai lớp võng dù",
+          "summary": "Dựa vào lời kể của nhân chứng và quá trình khảo sát, Đội K51 phối hợp lực lượng chức năng tỉnh Đắk Lắk đã tìm thấy và quy tập hài cốt một nữ liệt sĩ ở xã Hòa Mỹ. Hài cốt được bọc trong hai lớp võng dù, đi kèm nhiều di vật.",
+          "points": [
+            "Địa điểm: xã Hòa Mỹ, tỉnh Đắk Lắk",
+            "Lực lượng thực hiện: Đội K51 cùng lực lượng chức năng",
+            "Hài cốt được bọc trong hai lớp võng dù, có nhiều di vật"
+          ],
+          "why": "Tin cho thấy công tác tìm kiếm liệt sĩ vẫn tiếp tục và lời kể của nhân chứng có vai trò quan trọng. Đây là tin để đọc và trân trọng, không liên quan trực tiếp đến công việc quảng cáo.",
+          "source": "Tuổi Trẻ",
+          "date": "31/10",
+          "link": "https://tuoitre.vn/tim-thay-hai-cot-nu-liet-si-duoc-boc-trong-2-lop-vong-du-100261031104418647.htm"
+        },
+        {
+          "title": "Hòa thượng Thích Thanh Quyết: hiến tạng sau khi qua đời là phúc đức vô lượng",
+          "summary": "Hòa thượng Thích Thanh Quyết nhìn nhận việc hiến mô, tạng sau khi qua đời để cứu người là một nghĩa cử nhân văn. Theo ông, hành động ấy giúp sự sống được tiếp nối và mang lại phúc đức vô lượng.",
+          "points": [
+            "Người phát biểu: Hòa thượng Thích Thanh Quyết",
+            "Nói về việc hiến mô, tạng sau khi qua đời",
+            "Bài đăng trên VnExpress lúc 18:18 ngày 30/10"
+          ],
+          "why": "Đây là góc nhìn tôn giáo về hiến tạng, giúp người đọc hiểu thêm một việc nhân văn. Nếu bạn quan tâm, đây là dịp để tìm hiểu và trao đổi với gia đình.",
+          "source": "VnExpress",
+          "date": "30/10",
+          "link": "https://vnexpress.net/hoa-thuong-thich-thanh-quyet-hien-tang-sau-khi-qua-doi-la-phuc-duc-vo-luong-5138908.html"
+        },
+        {
+          "title": "Cô gái Cờ Lao 9X xây thương hiệu nông sản trên cao nguyên đá Đồng Văn",
+          "summary": "Bài viết kể về Lưu Thị Hòa, cô gái dân tộc Cờ Lao ở Đồng Văn, Tuyên Quang. Một chuyến xe chở hàng trăm kg rau xuống miền xuôi từng khiến cô day dứt. Tiêu đề cho biết sau đó cô dựng được thương hiệu nông sản trên cao nguyên đá.",
+          "points": [
+            "Nhân vật: Lưu Thị Hòa, người Cờ Lao, thế hệ 9X",
+            "Địa bàn: Đồng Văn, Tuyên Quang, vùng cao nguyên đá",
+            "Khởi đầu từ chuyến xe chở hàng trăm kg rau xuống miền xuôi"
+          ],
+          "why": "Đây là câu chuyện về việc đưa nông sản vùng cao ra thị trường bằng thương hiệu riêng, một bài học thú vị về cách làm thương hiệu từ con số không. Bạn nên đọc bài gốc để nắm thêm chi tiết.",
           "source": "VnExpress",
           "date": "31/10",
-          "link": "https://vnexpress.net/92-rua-con-no-tro-ve-bien-o-hon-cau-5139079.html"
+          "link": "https://vnexpress.net/9x-dung-thuong-hieu-nong-san-tren-cao-nguyen-da-5137070.html"
+        },
+        {
+          "title": "Quán chè gần 40 năm ở TP.HCM vẫn sống khỏe dù không app, không chuyển khoản",
+          "summary": "Quán chè của bà Tre ở TP.HCM đã tồn tại gần 40 năm. Bà vẫn vắt cốt dừa bằng tay và nấu đậu hàng giờ. Quán giữ nguyên cách nấu và kiểu ăn hàng ở chợ ngày trước, đi ngược xu hướng TikTok, app và thanh toán chuyển khoản.",
+          "points": [
+            "Quán hoạt động gần 40 năm tại TP.HCM",
+            "Cốt dừa vắt tay, đậu nấu hàng giờ",
+            "Không dùng app, không nhận chuyển khoản"
+          ],
+          "why": "Quán cho thấy chất lượng và nét truyền thống vẫn giữ được khách, dù không chạy theo công nghệ. Với người làm quảng cáo, đây là gợi ý về giá trị của sự chân thực khi kể chuyện thương hiệu.",
+          "source": "Thanh Niên",
+          "date": "31/10",
+          "link": "https://thanhnien.vn/quan-che-gan-40-nam-o-tphcm-tang-hinh-giua-thoi-tiktok-khong-app-khong-chuyen-khoan-18526102719091847.htm"
         }
       ]
     }
