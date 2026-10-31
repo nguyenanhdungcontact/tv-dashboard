@@ -4,7 +4,9 @@ on:
   push:
     branches: [main]
     paths-ignore:
-      - "docs/brief.json"
+      - "docs/**"
+      - "scripts/**"
+      - ".github/workflows/daily-update.yml"
       - "README.md"
   workflow_dispatch:
 
@@ -19,6 +21,7 @@ jobs:
           distribution: temurin
           java-version: "17"
 
+      # The runner already ships the Android SDK; just make sure the packages we need are there.
       - name: Android SDK packages
         run: |
           SDKMANAGER=$(ls -d "$ANDROID_HOME"/cmdline-tools/*/bin | sort -V | tail -1)/sdkmanager

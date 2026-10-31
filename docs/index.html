@@ -669,7 +669,9 @@ Chỉ dựa trên thông tin ở trên và kiến thức chung. Không bịa th�
   let bag = [];
   function nextWord() {
     if (!bag.length) {
-      bag = words.slice();
+      const cutoff = Date.now() - 3 * 86400000;           // words added in the last 3 days
+      const recent = words.filter(o => o.added && Date.parse(o.added) >= cutoff);
+      bag = words.concat(recent);                          // ...appear twice as often
       for (let i = bag.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [bag[i], bag[j]] = [bag[j], bag[i]];

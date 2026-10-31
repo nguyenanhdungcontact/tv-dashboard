@@ -1,0 +1,56 @@
+name: Daily content update
+
+on:
+  schedule:
+    - cron: "0 23 * * *"   # 06:00 Vietnam time – news + 10 new words
+    - cron: "0 10 * * *"   # 17:00 Vietnam time – news only
+  workflow_dispatch:
+    inputs:
+      tasks:
+        description: "What to update"
+        default: "news words"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-content
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Pick tasks
+        id: pick
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "tasks=${{ github.event.inputs.tasks }}" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event.schedule }}" = "0 23 * * *" ]; then
+            echo "tasks=news words" >> "$GITHUB_OUTPUT"
+          else
+            echo "tasks=news" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Update content with Claude
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python scripts/daily_update.py ${{ steps.pick.outputs.tasks }}
+
+      - name: Commit changes
+        run: |
+          git config user.name "tv-dashboard-bot"
+          git config user.email "tv-dashboard-bot@users.noreply.github.com"
+          git add docs/brief.json docs/words.json
+          if git diff --cached --quiet; then
+            echo "Nothing changed."
+          else
+            git commit -m "Daily update $(TZ=Asia/Ho_Chi_Minh date '+%d/%m %H:%M')"
+            git push
+          fi
