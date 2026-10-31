@@ -1,95 +1,127 @@
 {
-  "updated": "Cập nhật thứ Bảy, 31/10/2026",
+  "updated": "Cập nhật 11:58 thứ Bảy, 31/10/2026",
   "sections": [
     {
-      "id": "hot", "name": "Nổi bật", "color": "--c-hot",
+      "id": "hot",
+      "name": "Nổi bật",
+      "color": "--c-hot",
       "items": [
         {
-          "title": "Kim ngạch thương mại Việt Nam vượt 1.000 tỉ USD chỉ sau 10 tháng",
-          "summary": "Tổng kim ngạch xuất nhập khẩu lần đầu vượt mốc 1.000 tỉ USD sau 10 tháng, xuất siêu theo tháng lập kỷ lục 6,8 tỉ USD, đưa Việt Nam tiến gần nhóm 15 cường quốc thương mại toàn cầu.",
-          "why": "Một cột mốc kinh tế lớn, hữu ích làm số liệu nền khi trao đổi với khách hàng về sức mua, xuất khẩu và triển vọng cuối năm.",
-          "source": "Thanh Niên", "date": "31/10"
+          "title": "Doanh nghiệp, hộ kinh doanh được giảm 30% thuế từng kỳ kê khai",
+          "summary": "Doanh nghiệp và hộ kinh doanh được giảm 30% thuế ở mỗi kỳ kê khai theo thông tin mới đăng.",
+          "why": "Nếu bạn chạy quảng cáo cho khách hàng là doanh nghiệp nhỏ hoặc hộ kinh doanh, chính sách này có thể ảnh hưởng đến chi phí và ngân sách của họ.",
+          "source": "VnExpress",
+          "date": "31/10",
+          "link": "https://vnexpress.net/doanh-nghiep-ho-kinh-doanh-duoc-giam-30-thue-tung-ky-ke-khai-5138953.html"
         },
         {
-          "title": "TP.HCM mở thêm kênh huy động vốn dài hạn cho hạ tầng qua trái phiếu",
-          "summary": "Thành phố đang hướng tới phát hành trái phiếu để có nguồn vốn dài hạn cho các dự án hạ tầng, thay vì chủ yếu dựa vào ngân sách.",
-          "why": "Hạ tầng được đầu tư nhanh hơn sẽ tác động đến giao thông, giá đất và đời sống ở nhiều khu vực của thành phố.",
-          "source": "Tuổi Trẻ", "date": "31/10"
+          "title": "Giá USD ngân hàng xuống dưới mức 26.000 đồng",
+          "summary": "Giá USD tại các ngân hàng đã giảm xuống dưới 26.000 đồng.",
+          "why": "Tỷ giá đáng để theo dõi nếu bạn có khoản chi hoặc thanh toán liên quan đến ngoại tệ.",
+          "source": "VnExpress",
+          "date": "31/10",
+          "link": "https://vnexpress.net/gia-usd-ngan-hang-xuong-duoi-26-000-dong-5139037.html"
         },
         {
-          "title": "Fed giữ nguyên lãi suất",
-          "summary": "Cục Dự trữ Liên bang Mỹ quyết định giữ nguyên lãi suất trong cuộc họp mới nhất.",
-          "why": "Quyết định của Fed ảnh hưởng đến tỷ giá, dòng vốn và mặt bằng lãi suất trong nước, kể cả lãi vay mua nhà.",
-          "source": "Báo Tin tức", "date": "31/10"
+          "title": "Cổ phiếu Intel giảm mạnh nhất trong 50 năm",
+          "summary": "Cổ phiếu Intel vừa có mức giảm mạnh nhất trong vòng nửa thế kỷ.",
+          "why": "Đây là biến động lớn của một tên tuổi công nghệ toàn cầu, đáng chú ý với người làm trong ngành công nghệ và quảng cáo số.",
+          "source": "VnExpress",
+          "date": "31/10",
+          "link": "https://vnexpress.net/co-phieu-intel-giam-manh-nhat-50-nam-5139027.html"
         }
       ]
     },
     {
-      "id": "work", "name": "Công việc", "color": "--c-work",
+      "id": "work",
+      "name": "Công việc",
+      "color": "--c-work",
       "items": [
         {
-          "title": "Google cho biết quảng cáo trong AI Mode đang mang lại doanh thu thấp hơn quảng cáo tìm kiếm truyền thống",
-          "summary": "Thông tin được nhắc đến trong đợt công bố kết quả kinh doanh gần đây và đang được giới search marketing bàn tán nhiều.",
-          "why": "Đây là chủ đề khách hàng hay hỏi về tương lai của quảng cáo tìm kiếm khi AI Mode mở rộng. Nên nắm rõ phát biểu gốc trước khi bình luận.",
-          "source": "Search Engine Roundtable", "date": "30/10"
+          "title": "Google: Quảng cáo trong AI Mode kiếm được ít hơn quảng cáo tìm kiếm truyền thống",
+          "summary": "Google cho biết quảng cáo hiển thị trong AI Mode đang mang lại doanh thu thấp hơn so với quảng cáo tìm kiếm truyền thống.",
+          "why": "Giúp bạn có cái nhìn thực tế khi cân nhắc phân bổ ngân sách giữa AI Mode và tìm kiếm truyền thống.",
+          "source": "Search Engine Roundtable",
+          "date": "31/10",
+          "link": "https://www.seroundtable.com/google-ai-mode-ads-earn-less-42417.html"
         },
         {
-          "title": "Chính sách quảng cáo cá nhân hóa trên YouTube cho phép ngành đồ uống có cồn",
-          "summary": "Từ 30/10, Google cập nhật chính sách để cho phép quảng cáo cá nhân hóa về đồ uống có cồn trên YouTube ở những nơi pháp luật cho phép, vẫn giữ giới hạn độ tuổi và cấm nhắm mục tiêu theo thông tin sức khỏe.",
-          "why": "Liên quan trực tiếp nếu bạn có khách hàng ngành bia rượu hoặc F&B. Cần kiểm tra quy định quảng cáo đồ uống có cồn tại Việt Nam trước khi đề xuất.",
-          "source": "Google Ads Policy Help", "date": "30/10"
+          "title": "Gemini ngừng gắn tham số UTM vào các URL được trích dẫn",
+          "summary": "Google Gemini không còn tự gắn tham số UTM vào những đường dẫn mà nó trích dẫn.",
+          "why": "Việc này có thể làm khó việc nhận diện lưu lượng truy cập đến từ Gemini, nên cần kiểm tra lại cách đo lường.",
+          "source": "Search Engine Roundtable",
+          "date": "31/10",
+          "link": "https://www.seroundtable.com/gemini-utm-parameters-42399.html"
         },
         {
-          "title": "Gemini ngừng gắn tham số UTM vào các đường link được trích dẫn",
-          "summary": "Google từng thêm UTM vào link trong câu trả lời của Gemini từ đầu tháng 9, nhưng khoảng cuối tháng 9 đã ngừng.",
-          "why": "Lưu lượng đến từ Gemini có thể khó nhận diện hơn trong Analytics. Đáng lưu ý khi khách hàng hỏi về đo lường traffic từ AI.",
-          "source": "Search Engine Roundtable", "date": "30/10"
+          "title": "Performance Max sẽ bật sẵn trích xuất hình ảnh từ ngày 4/12/2026",
+          "summary": "Từ ngày 4/12/2026, tính năng trích xuất hình ảnh sẽ mặc định được bật cho các chiến dịch Performance Max tạo mới trên các giao diện Google Ads.",
+          "why": "Chiến dịch PMax mới có thể tự lấy hình ảnh mà bạn chưa chủ động chọn, nên cần xem lại thiết lập khi tạo chiến dịch.",
+          "source": "Google Ads Developer Blog",
+          "date": "31/10",
+          "link": "http://ads-developers.googleblog.com/2026/10/upcoming-changes-to-image-extraction-in.html"
         },
         {
-          "title": "ChatGPT mở rộng quảng cáo, thêm định dạng nhiều hình ảnh",
-          "summary": "Quảng cáo trên ChatGPT được mở rộng phạm vi và bổ sung định dạng nhiều hình ảnh.",
-          "why": "Một kênh cạnh tranh mới cho ngân sách quảng cáo, hiểu rõ để tư vấn khách hàng trong bối cảnh đa kênh.",
-          "source": "Search Engine Roundtable", "date": "30/10"
+          "title": "Biến nội dung mạng xã hội có sẵn thành quảng cáo YouTube",
+          "summary": "Google Ads giới thiệu cách tận dụng tài sản sẵn có trên mạng xã hội để làm quảng cáo YouTube hiệu quả.",
+          "why": "Có thể giúp tiết kiệm thời gian sản xuất nội dung khi triển khai quảng cáo video.",
+          "source": "Google Ads & Commerce Blog",
+          "date": "31/10",
+          "link": "https://blog.google/products/ads-commerce/creating-assets-youtube-ads/"
         }
       ]
     },
     {
-      "id": "life", "name": "Cuộc sống cần biết", "color": "--c-life",
+      "id": "life",
+      "name": "Cuộc sống cần biết",
+      "color": "--c-life",
       "items": [
         {
-          "title": "Lo ngại thị trường đóng băng khi cấm chuyển nhượng nhà ở hình thành trong tương lai",
-          "summary": "Báo Thanh Niên số ra hôm nay có bài phân tích về quy định cấm chuyển nhượng nhà ở hình thành trong tương lai và nỗi lo thị trường bị đóng băng.",
-          "why": "Nếu đang tìm mua nhà, đặc biệt là căn hộ dự án chưa bàn giao, nên đọc kỹ quy định này trước khi đặt cọc hay ký hợp đồng.",
-          "source": "Thanh Niên", "date": "31/10"
+          "title": "TP.HCM gộp ba số khẩn cấp 113, 114, 115 thành tổng đài 113",
+          "summary": "Thành phố sẽ tích hợp ba số khẩn cấp 113, 114 và 115 vào một tổng đài duy nhất là 113.",
+          "why": "Người dân TP.HCM chỉ cần nhớ một số khi cần hỗ trợ khẩn cấp.",
+          "source": "Thanh Niên",
+          "date": "31/10",
+          "link": "https://thanhnien.vn/tphcm-tich-hop-3-so-khan-cap-113-114-115-thanh-tong-dai-113-185261031101129376.htm"
         },
         {
-          "title": "Giá chào bán chung cư chuyển nhượng tiếp tục giảm, người mua vẫn dè dặt",
-          "summary": "Nhiều báo cáo thị trường quý III cho thấy giá chung cư chuyển nhượng tại Hà Nội tiếp tục đi xuống, nhưng thị trường cuối năm khó phục hồi chỉ nhờ giảm giá.",
-          "why": "Tín hiệu tham khảo cho mặt bằng giá căn hộ và tâm lý người mua trên cả nước.",
-          "source": "Hà Nội Mới", "date": "31/10"
+          "title": "Mùa mưa ở Nam Bộ kết thúc sớm nửa tháng",
+          "summary": "Mùa mưa ở Nam Bộ năm nay kết thúc sớm hơn khoảng nửa tháng.",
+          "why": "Thời tiết đổi mùa sớm ảnh hưởng đến việc đi lại và sinh hoạt hằng ngày ở TP.HCM.",
+          "source": "VnExpress",
+          "date": "31/10",
+          "link": "https://vnexpress.net/mua-mua-o-nam-bo-ket-thuc-som-nua-thang-5138731.html"
         },
         {
-          "title": "Sân bay Long Thành đang ở giai đoạn chuẩn bị trước ngày khai thác",
-          "summary": "Báo Thanh Niên có loạt bài cập nhật tình hình sân bay Long Thành trong giai đoạn chuẩn bị đưa vào khai thác.",
-          "why": "Sân bay mới sẽ thay đổi cách di chuyển của người dân TP.HCM, đáng theo dõi nếu bạn hay đi công tác hoặc có kế hoạch đi xa.",
-          "source": "Thanh Niên", "date": "30/10"
+          "title": "Phó thủ tướng: Cần bảo đảm quyền lựa chọn cách thanh toán phí điện tử đường bộ",
+          "summary": "Phó thủ tướng nhấn mạnh người dân phải có quyền lựa chọn hình thức thanh toán phí điện tử trên đường bộ.",
+          "why": "Thông tin hữu ích cho người thường xuyên đi qua các trạm thu phí.",
+          "source": "VnExpress",
+          "date": "31/10",
+          "link": "https://vnexpress.net/pho-thu-tuong-can-bao-dam-quyen-lua-chon-thanh-toan-phi-dien-tu-duong-bo-5138947.html"
         }
       ]
     },
     {
-      "id": "heart", "name": "Ý nghĩa", "color": "--c-heart",
+      "id": "heart",
+      "name": "Ý nghĩa",
+      "color": "--c-heart",
       "items": [
         {
-          "title": "“Không phải cứ đăng ký là hiến tạng được”",
-          "summary": "Giám đốc Bệnh viện Hữu nghị Việt Đức chia sẻ về những điều kiện và quy trình phía sau mỗi ca hiến tạng, giúp người đăng ký hiểu rõ hơn.",
-          "why": "Hiến tạng là món quà sự sống. Hiểu đúng quy trình giúp việc đăng ký trở thành một cam kết có ý nghĩa thực sự.",
-          "source": "VietNamNet", "date": "31/10"
+          "title": "Cô gái Pa Kô học tiếng Anh qua AI để đưa thổ cẩm ra thế giới",
+          "summary": "Một cô gái người Pa Kô tự học tiếng Anh bằng AI để giới thiệu sản phẩm thổ cẩm của quê hương ra thị trường quốc tế.",
+          "why": "Câu chuyện cho thấy công nghệ có thể mở đường cho nghề truyền thống đến với thế giới.",
+          "source": "Tuổi Trẻ",
+          "date": "31/10",
+          "link": "https://tuoitre.vn/co-gai-pa-ko-hoc-tieng-anh-qua-ai-dua-tho-cam-ra-the-gioi-100261031101848793.htm"
         },
         {
-          "title": "Công viên Lê Thị Riêng sẽ được chỉnh trang thành công viên tưởng niệm",
-          "summary": "Nhiều nghệ sĩ đồng tình với kế hoạch cải tạo công viên văn hóa Lê Thị Riêng ở TP.HCM thành công viên tưởng niệm.",
-          "why": "Thêm một không gian xanh để nhớ về lịch sử và để mọi người tìm đến những phút tĩnh lặng giữa thành phố.",
-          "source": "Tuổi Trẻ", "date": "31/10"
+          "title": "92 rùa con nở và trở về biển ở Hòn Cau",
+          "summary": "92 chú rùa con đã nở và được trả về biển tại Hòn Cau.",
+          "why": "Một tin nhẹ nhàng, tích cực về bảo vệ thiên nhiên để bắt đầu ngày mới.",
+          "source": "VnExpress",
+          "date": "31/10",
+          "link": "https://vnexpress.net/92-rua-con-no-tro-ve-bien-o-hon-cau-5139079.html"
         }
       ]
     }

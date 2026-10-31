@@ -1,32 +1,292 @@
 [
-  { "w": "attribution", "ipa": "/ˌæt.rɪˈbjuː.ʃən/", "pos": "noun", "vi": "sự ghi nhận, phân bổ (chuyển đổi)", "ex": "Last-click attribution undervalues upper-funnel campaigns." },
-  { "w": "incremental", "ipa": "/ˌɪŋ.krəˈmen.təl/", "pos": "adj", "vi": "gia tăng thêm", "ex": "We need proof of incremental sales, not just more clicks." },
-  { "w": "granular", "ipa": "/ˈɡræn.jə.lər/", "pos": "adj", "vi": "chi tiết đến từng phần", "ex": "The report breaks spend down at a granular level." },
-  { "w": "headroom", "ipa": "/ˈhed.ruːm/", "pos": "noun", "vi": "dư địa (để tăng trưởng)", "ex": "There’s still headroom to scale this campaign." },
-  { "w": "cannibalize", "ipa": "/ˈkæn.ɪ.bə.laɪz/", "pos": "verb", "vi": "lấn át, ăn mất (doanh số, lưu lượng)", "ex": "Brand ads may cannibalize some organic traffic." },
-  { "w": "saturated", "ipa": "/ˈsætʃ.ər.eɪ.tɪd/", "pos": "adj", "vi": "bão hòa", "ex": "The market is already saturated with similar apps." },
-  { "w": "diminishing returns", "ipa": "/dɪˈmɪn.ɪ.ʃɪŋ rɪˈtɜːnz/", "pos": "noun phrase", "vi": "lợi ích giảm dần", "ex": "Past this budget, we start to hit diminishing returns." },
-  { "w": "pragmatic", "ipa": "/præɡˈmæt.ɪk/", "pos": "adj", "vi": "thực tế, thực tiễn", "ex": "Let’s take a pragmatic approach and test one change at a time." },
-  { "w": "stakeholder", "ipa": "/ˈsteɪkˌhəʊl.dər/", "pos": "noun", "vi": "bên liên quan", "ex": "Align with key stakeholders before the launch." },
-  { "w": "bandwidth", "ipa": "/ˈbænd.wɪtθ/", "pos": "noun", "vi": "khả năng, thời gian để xử lý thêm việc", "ex": "I don’t have the bandwidth for another project this week." },
-  { "w": "caveat", "ipa": "/ˈkæv.i.æt/", "pos": "noun", "vi": "lưu ý, điều kiện kèm theo", "ex": "One caveat: the data only covers two weeks." },
-  { "w": "robust", "ipa": "/rəʊˈbʌst/", "pos": "adj", "vi": "vững chắc, chặt chẽ", "ex": "We need a robust measurement plan." },
-  { "w": "holistic", "ipa": "/həʊˈlɪs.tɪk/", "pos": "adj", "vi": "toàn diện, tổng thể", "ex": "Look at performance holistically, not channel by channel." },
-  { "w": "discrepancy", "ipa": "/dɪˈskrep.ən.si/", "pos": "noun", "vi": "sự chênh lệch, không khớp", "ex": "There’s a discrepancy between the two reports." },
-  { "w": "consolidate", "ipa": "/kənˈsɒl.ɪ.deɪt/", "pos": "verb", "vi": "hợp nhất, gộp lại", "ex": "We consolidated ten campaigns into three." },
-  { "w": "seasonality", "ipa": "/ˌsiː.zənˈæl.ə.ti/", "pos": "noun", "vi": "tính mùa vụ", "ex": "Account for seasonality before comparing months." },
-  { "w": "feasible", "ipa": "/ˈfiː.zə.bəl/", "pos": "adj", "vi": "khả thi", "ex": "Is this timeline actually feasible?" },
-  { "w": "leeway", "ipa": "/ˈliː.weɪ/", "pos": "noun", "vi": "sự linh hoạt, khoảng xê dịch", "ex": "Give the algorithm some leeway on the target." },
-  { "w": "skeptical", "ipa": "/ˈskep.tɪ.kəl/", "pos": "adj", "vi": "hoài nghi", "ex": "The client was skeptical about automation at first." },
-  { "w": "reassure", "ipa": "/ˌriː.əˈʃɔːr/", "pos": "verb", "vi": "trấn an", "ex": "The early results helped reassure the team." },
-  { "w": "rapport", "ipa": "/ræˈpɔːr/", "pos": "noun", "vi": "mối quan hệ hòa hợp, tin cậy", "ex": "Building rapport with clients takes time." },
-  { "w": "milestone", "ipa": "/ˈmaɪl.stəʊn/", "pos": "noun", "vi": "cột mốc quan trọng", "ex": "Reaching our first thousand users was a big milestone." },
-  { "w": "procrastinate", "ipa": "/prəˈkræs.tɪ.neɪt/", "pos": "verb", "vi": "trì hoãn, chần chừ", "ex": "Stop procrastinating and start the first draft." },
-  { "w": "overwhelmed", "ipa": "/ˌəʊ.vəˈwelmd/", "pos": "adj", "vi": "choáng ngợp, quá tải", "ex": "I felt overwhelmed by the number of emails." },
-  { "w": "well-rounded", "ipa": "/ˌwelˈraʊn.dɪd/", "pos": "adj", "vi": "toàn diện, cân bằng", "ex": "She has a well-rounded skill set." },
-  { "w": "down-to-earth", "ipa": "/ˌdaʊn.tuˈɜːθ/", "pos": "adj", "vi": "giản dị, thực tế", "ex": "Despite his success, he’s very down-to-earth." },
-  { "w": "cherish", "ipa": "/ˈtʃer.ɪʃ/", "pos": "verb", "vi": "trân trọng, nâng niu", "ex": "Cherish the small moments with the people you love." },
-  { "w": "wholesome", "ipa": "/ˈhəʊl.səm/", "pos": "adj", "vi": "lành mạnh, tích cực", "ex": "We had a wholesome weekend with family." },
-  { "w": "unwind", "ipa": "/ʌnˈwaɪnd/", "pos": "verb", "vi": "thư giãn, xả hơi", "ex": "I unwind with a short run after work." },
-  { "w": "commute", "ipa": "/kəˈmjuːt/", "pos": "noun / verb", "vi": "(quãng đường) đi làm hằng ngày", "ex": "My commute takes about thirty minutes." }
+  {
+    "w": "attribution",
+    "ipa": "/ˌæt.rɪˈbjuː.ʃən/",
+    "pos": "noun",
+    "vi": "sự ghi nhận, phân bổ (chuyển đổi)",
+    "ex": "Last-click attribution undervalues upper-funnel campaigns."
+  },
+  {
+    "w": "incremental",
+    "ipa": "/ˌɪŋ.krəˈmen.təl/",
+    "pos": "adj",
+    "vi": "gia tăng thêm",
+    "ex": "We need proof of incremental sales, not just more clicks."
+  },
+  {
+    "w": "granular",
+    "ipa": "/ˈɡræn.jə.lər/",
+    "pos": "adj",
+    "vi": "chi tiết đến từng phần",
+    "ex": "The report breaks spend down at a granular level."
+  },
+  {
+    "w": "headroom",
+    "ipa": "/ˈhed.ruːm/",
+    "pos": "noun",
+    "vi": "dư địa (để tăng trưởng)",
+    "ex": "There’s still headroom to scale this campaign."
+  },
+  {
+    "w": "cannibalize",
+    "ipa": "/ˈkæn.ɪ.bə.laɪz/",
+    "pos": "verb",
+    "vi": "lấn át, ăn mất (doanh số, lưu lượng)",
+    "ex": "Brand ads may cannibalize some organic traffic."
+  },
+  {
+    "w": "saturated",
+    "ipa": "/ˈsætʃ.ər.eɪ.tɪd/",
+    "pos": "adj",
+    "vi": "bão hòa",
+    "ex": "The market is already saturated with similar apps."
+  },
+  {
+    "w": "diminishing returns",
+    "ipa": "/dɪˈmɪn.ɪ.ʃɪŋ rɪˈtɜːnz/",
+    "pos": "noun phrase",
+    "vi": "lợi ích giảm dần",
+    "ex": "Past this budget, we start to hit diminishing returns."
+  },
+  {
+    "w": "pragmatic",
+    "ipa": "/præɡˈmæt.ɪk/",
+    "pos": "adj",
+    "vi": "thực tế, thực tiễn",
+    "ex": "Let’s take a pragmatic approach and test one change at a time."
+  },
+  {
+    "w": "stakeholder",
+    "ipa": "/ˈsteɪkˌhəʊl.dər/",
+    "pos": "noun",
+    "vi": "bên liên quan",
+    "ex": "Align with key stakeholders before the launch."
+  },
+  {
+    "w": "bandwidth",
+    "ipa": "/ˈbænd.wɪtθ/",
+    "pos": "noun",
+    "vi": "khả năng, thời gian để xử lý thêm việc",
+    "ex": "I don’t have the bandwidth for another project this week."
+  },
+  {
+    "w": "caveat",
+    "ipa": "/ˈkæv.i.æt/",
+    "pos": "noun",
+    "vi": "lưu ý, điều kiện kèm theo",
+    "ex": "One caveat: the data only covers two weeks."
+  },
+  {
+    "w": "robust",
+    "ipa": "/rəʊˈbʌst/",
+    "pos": "adj",
+    "vi": "vững chắc, chặt chẽ",
+    "ex": "We need a robust measurement plan."
+  },
+  {
+    "w": "holistic",
+    "ipa": "/həʊˈlɪs.tɪk/",
+    "pos": "adj",
+    "vi": "toàn diện, tổng thể",
+    "ex": "Look at performance holistically, not channel by channel."
+  },
+  {
+    "w": "discrepancy",
+    "ipa": "/dɪˈskrep.ən.si/",
+    "pos": "noun",
+    "vi": "sự chênh lệch, không khớp",
+    "ex": "There’s a discrepancy between the two reports."
+  },
+  {
+    "w": "consolidate",
+    "ipa": "/kənˈsɒl.ɪ.deɪt/",
+    "pos": "verb",
+    "vi": "hợp nhất, gộp lại",
+    "ex": "We consolidated ten campaigns into three."
+  },
+  {
+    "w": "seasonality",
+    "ipa": "/ˌsiː.zənˈæl.ə.ti/",
+    "pos": "noun",
+    "vi": "tính mùa vụ",
+    "ex": "Account for seasonality before comparing months."
+  },
+  {
+    "w": "feasible",
+    "ipa": "/ˈfiː.zə.bəl/",
+    "pos": "adj",
+    "vi": "khả thi",
+    "ex": "Is this timeline actually feasible?"
+  },
+  {
+    "w": "leeway",
+    "ipa": "/ˈliː.weɪ/",
+    "pos": "noun",
+    "vi": "sự linh hoạt, khoảng xê dịch",
+    "ex": "Give the algorithm some leeway on the target."
+  },
+  {
+    "w": "skeptical",
+    "ipa": "/ˈskep.tɪ.kəl/",
+    "pos": "adj",
+    "vi": "hoài nghi",
+    "ex": "The client was skeptical about automation at first."
+  },
+  {
+    "w": "reassure",
+    "ipa": "/ˌriː.əˈʃɔːr/",
+    "pos": "verb",
+    "vi": "trấn an",
+    "ex": "The early results helped reassure the team."
+  },
+  {
+    "w": "rapport",
+    "ipa": "/ræˈpɔːr/",
+    "pos": "noun",
+    "vi": "mối quan hệ hòa hợp, tin cậy",
+    "ex": "Building rapport with clients takes time."
+  },
+  {
+    "w": "milestone",
+    "ipa": "/ˈmaɪl.stəʊn/",
+    "pos": "noun",
+    "vi": "cột mốc quan trọng",
+    "ex": "Reaching our first thousand users was a big milestone."
+  },
+  {
+    "w": "procrastinate",
+    "ipa": "/prəˈkræs.tɪ.neɪt/",
+    "pos": "verb",
+    "vi": "trì hoãn, chần chừ",
+    "ex": "Stop procrastinating and start the first draft."
+  },
+  {
+    "w": "overwhelmed",
+    "ipa": "/ˌəʊ.vəˈwelmd/",
+    "pos": "adj",
+    "vi": "choáng ngợp, quá tải",
+    "ex": "I felt overwhelmed by the number of emails."
+  },
+  {
+    "w": "well-rounded",
+    "ipa": "/ˌwelˈraʊn.dɪd/",
+    "pos": "adj",
+    "vi": "toàn diện, cân bằng",
+    "ex": "She has a well-rounded skill set."
+  },
+  {
+    "w": "down-to-earth",
+    "ipa": "/ˌdaʊn.tuˈɜːθ/",
+    "pos": "adj",
+    "vi": "giản dị, thực tế",
+    "ex": "Despite his success, he’s very down-to-earth."
+  },
+  {
+    "w": "cherish",
+    "ipa": "/ˈtʃer.ɪʃ/",
+    "pos": "verb",
+    "vi": "trân trọng, nâng niu",
+    "ex": "Cherish the small moments with the people you love."
+  },
+  {
+    "w": "wholesome",
+    "ipa": "/ˈhəʊl.səm/",
+    "pos": "adj",
+    "vi": "lành mạnh, tích cực",
+    "ex": "We had a wholesome weekend with family."
+  },
+  {
+    "w": "unwind",
+    "ipa": "/ʌnˈwaɪnd/",
+    "pos": "verb",
+    "vi": "thư giãn, xả hơi",
+    "ex": "I unwind with a short run after work."
+  },
+  {
+    "w": "commute",
+    "ipa": "/kəˈmjuːt/",
+    "pos": "noun / verb",
+    "vi": "(quãng đường) đi làm hằng ngày",
+    "ex": "My commute takes about thirty minutes."
+  },
+  {
+    "w": "bid",
+    "ipa": "/bɪd/",
+    "pos": "noun, verb",
+    "vi": "giá thầu (đặt giá cho từ khóa hoặc vị trí quảng cáo); đặt giá thầu",
+    "ex": "Let’s lower our bid on broad keywords and watch the cost per click.",
+    "added": "2026-10-31"
+  },
+  {
+    "w": "click-through rate",
+    "ipa": "/ˈklɪk.θruː ˌreɪt/",
+    "pos": "noun phrase",
+    "vi": "tỷ lệ nhấp chuột (CTR)",
+    "ex": "Our click-through rate jumped to 6% after we rewrote the headlines.",
+    "added": "2026-10-31"
+  },
+  {
+    "w": "touch base",
+    "ipa": "/ˌtʌtʃ ˈbeɪs/",
+    "pos": "idiom",
+    "vi": "liên lạc, trao đổi nhanh để cập nhật tình hình",
+    "ex": "Can we touch base tomorrow morning about the budget changes?",
+    "added": "2026-10-31"
+  },
+  {
+    "w": "ballpark figure",
+    "ipa": "/ˈbɔːl.pɑːk ˈfɪɡ.ər/",
+    "pos": "noun phrase",
+    "vi": "con số ước chừng, số liệu sơ bộ",
+    "ex": "Give me a ballpark figure for next month’s spend, please.",
+    "added": "2026-10-31"
+  },
+  {
+    "w": "deliverable",
+    "ipa": "/dɪˈlɪv.ər.ə.bəl/",
+    "pos": "noun",
+    "vi": "sản phẩm bàn giao, đầu ra công việc",
+    "ex": "The final deliverable is a monthly report with campaign insights.",
+    "added": "2026-10-31"
+  },
+  {
+    "w": "uplift",
+    "ipa": "/ˈʌp.lɪft/",
+    "pos": "noun",
+    "vi": "mức tăng trưởng, sự cải thiện (về con số)",
+    "ex": "The new landing page gave us a 15% uplift in conversions.",
+    "added": "2026-10-31"
+  },
+  {
+    "w": "bounce back",
+    "ipa": "/ˌbaʊns ˈbæk/",
+    "pos": "phrasal verb",
+    "vi": "phục hồi nhanh sau thất bại hoặc khó khăn",
+    "ex": "She bounced back quickly after that disappointing quarter.",
+    "added": "2026-10-31"
+  },
+  {
+    "w": "burn out",
+    "ipa": "/ˈbɜːn ˌaʊt/",
+    "pos": "phrasal verb",
+    "vi": "kiệt sức vì làm việc quá nhiều",
+    "ex": "Don’t let yourself burn out just to hit the monthly target.",
+    "added": "2026-10-31"
+  },
+  {
+    "w": "open up",
+    "ipa": "/ˈəʊ.pən ʌp/",
+    "pos": "phrasal verb",
+    "vi": "cởi mở, chia sẻ suy nghĩ và cảm xúc thật",
+    "ex": "He finally opened up about how stressed he felt at work.",
+    "added": "2026-10-31"
+  },
+  {
+    "w": "get along with",
+    "ipa": "/ɡet əˈlɒŋ wɪð/",
+    "pos": "phrasal verb",
+    "vi": "hòa hợp, có quan hệ tốt với ai đó",
+    "ex": "I really get along with my new team lead, honestly.",
+    "added": "2026-10-31"
+  }
 ]
