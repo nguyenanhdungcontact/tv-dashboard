@@ -194,7 +194,7 @@
     letter-spacing: -0.01em;
     text-shadow: 0 0 18px rgba(150, 190, 255, 0.45);
   }
-  .meteor .vi { display: block; margin-top: 0.15em; font-size: 0.48em; color: var(--muted); }
+  .meteor .vi { display: block; margin-top: 0.15em; font-size: 0.48em; color: var(--muted); max-width: 24em; overflow: hidden; text-overflow: ellipsis; }
   .meteor.lit { opacity: 1; z-index: 5; }
   .meteor.lit .w { color: #fff; text-shadow: 0 0 22px var(--glow), 0 0 44px rgba(255, 190, 120, 0.5); }
   .meteor.lit .head { transform: scale(1.5); }
@@ -204,11 +204,11 @@
     position: fixed;
     left: calc(33.333vw + clamp(16px, 3vw, 56px));
     bottom: calc(clamp(16px, 5vh, 56px) + env(safe-area-inset-bottom, 0px));
-    max-width: min(680px, calc(66.666vw - 48px));
-    padding: clamp(18px, 2.2vw, 30px) clamp(20px, 2.6vw, 36px);
+    max-width: min(480px, calc(66.666vw - 48px));
+    padding: clamp(13px, 1.55vw, 21px) clamp(14px, 1.8vw, 25px);
     background: var(--panel);
     border: 1px solid var(--panel-edge);
-    border-radius: 22px 22px 22px 6px;
+    border-radius: 16px 16px 16px 5px;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     opacity: 0; transform: translateY(16px);
@@ -221,19 +221,19 @@
     margin: 0;
     font-family: "Bricolage Grotesque", "Segoe UI", Roboto, Arial, sans-serif;
     font-weight: 800;
-    font-size: clamp(2rem, 4.2vw, 4.2rem);
+    font-size: clamp(1.4rem, 2.95vw, 2.95rem);
     letter-spacing: -0.02em;
     line-height: 1;
   }
-  #card .meta { margin: 0.6em 0 0; color: var(--muted); font-size: clamp(1rem, 1.4vw, 1.45rem); }
+  #card .meta { margin: 0.6em 0 0; color: var(--muted); font-size: clamp(0.75rem, 1vw, 1.02rem); }
   #card .meta span + span { margin-left: 0.9em; }
-  #card .mean { margin: 0.5em 0 0; font-size: clamp(1.25rem, 2vw, 2rem); font-weight: 500; }
-  #card .ex { margin: 0.6em 0 0; font-size: clamp(1rem, 1.5vw, 1.5rem); line-height: 1.5; color: #d9def9; font-style: italic; }
+  #card .mean { margin: 0.5em 0 0; font-size: clamp(0.9rem, 1.4vw, 1.4rem); font-weight: 500; }
+  #card .ex { margin: 0.6em 0 0; font-size: clamp(0.75rem, 1.05vw, 1.05rem); line-height: 1.5; color: #d9def9; font-style: italic; }
   #card .col { margin: 0.8em 0 0; display: flex; flex-wrap: wrap; gap: 0.45em; }
-  #card .col span { font-size: clamp(0.9rem, 1.2vw, 1.25rem); padding: 0.2em 0.65em; border-radius: 999px;
+  #card .col span { font-size: clamp(0.68rem, 0.85vw, 0.88rem); padding: 0.2em 0.65em; border-radius: 999px;
     border: 1px solid rgba(255, 197, 138, 0.45); color: #ffe2c2; background: rgba(255, 197, 138, 0.08); }
   #card .col:empty { display: none; }
-  #card .nav { margin: 0.9em 0 0; color: var(--muted); font-size: clamp(0.8rem, 1vw, 1.05rem); }
+  #card .nav { margin: 0.9em 0 0; color: var(--muted); font-size: clamp(0.62rem, 0.72vw, 0.75rem); }
   #card .nav span + span { margin-left: 1.2em; }
   body.mode-vocab #card { box-shadow: 0 0 0 2px var(--tail); }
   #card .ex:empty, #card .meta span:empty { display: none; }
@@ -744,7 +744,7 @@ Chỉ dựa trên thông tin ở trên và kiến thức chung. Không bịa th�
   function pickX() {
     let x = 0;
     for (let i = 0; i < 6; i++) {
-      x = 0.02 * FW + Math.random() * 0.78 * FW;
+      x = 0.02 * FW + Math.random() * 0.68 * FW;
       if (Math.abs(x - lastX) > FW * 0.18) break;
     }
     lastX = x;
