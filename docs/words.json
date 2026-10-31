@@ -288,5 +288,135 @@
     "vi": "hòa hợp, có quan hệ tốt với ai đó",
     "ex": "I really get along with my new team lead, honestly.",
     "added": "2026-10-31"
+  },
+  {
+    "w": "scale up",
+    "ipa": "/skeɪl ʌp/",
+    "pos": "phrasal verb",
+    "vi": "mở rộng quy mô, tăng quy mô hoạt động",
+    "ex": "We’ll scale up the campaign once the cost per lead drops.",
+    "col": [
+      "scale up operations",
+      "scale up quickly",
+      "scale up a campaign"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "w": "iterate",
+    "ipa": "/ˈɪt.ə.reɪt/",
+    "pos": "verb",
+    "vi": "lặp lại quy trình để cải tiến dần dần",
+    "ex": "We’ll iterate on the ad copy based on weekly performance data.",
+    "col": [
+      "iterate on a design",
+      "iterate quickly",
+      "iterate based on feedback"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "w": "pitch",
+    "ipa": "/pɪtʃ/",
+    "pos": "verb",
+    "vi": "trình bày đề xuất nhằm thuyết phục ai đó",
+    "ex": "She pitched a new video strategy to the client yesterday afternoon.",
+    "col": [
+      "pitch an idea",
+      "pitch to a client",
+      "make a pitch"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "w": "conversion rate",
+    "ipa": "/kənˈvɜː.ʃən reɪt/",
+    "pos": "noun phrase",
+    "vi": "tỷ lệ chuyển đổi (người xem thành khách hàng hoặc hành động mong muốn)",
+    "ex": "Our conversion rate dropped after we changed the landing page layout.",
+    "col": [
+      "improve the conversion rate",
+      "high conversion rate",
+      "conversion rate optimization"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "w": "target audience",
+    "ipa": "/ˈtɑː.ɡɪt ˈɔː.di.əns/",
+    "pos": "noun phrase",
+    "vi": "đối tượng mục tiêu",
+    "ex": "Our target audience is busy parents looking for affordable meal kits.",
+    "col": [
+      "define the target audience",
+      "reach the target audience",
+      "narrow down the target audience"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "w": "roll out",
+    "ipa": "/rəʊl aʊt/",
+    "pos": "phrasal verb",
+    "vi": "triển khai rộng rãi, tung ra thị trường",
+    "ex": "The team will roll out the new campaign across all regions next month.",
+    "col": [
+      "roll out a feature",
+      "roll out a campaign",
+      "roll out gradually"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "w": "hit it off",
+    "ipa": "/ˌhɪt ɪt ˈɒf/",
+    "pos": "idiom",
+    "vi": "nhanh chóng hợp nhau ngay từ lần đầu gặp",
+    "ex": "I met my new neighbor at a party and we hit it off immediately.",
+    "col": [
+      "hit it off with someone",
+      "really hit it off",
+      "hit it off straightaway"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "w": "let off steam",
+    "ipa": "/let ɒf stiːm/",
+    "pos": "idiom",
+    "vi": "xả stress, giải tỏa căng thẳng",
+    "ex": "I go for a run after work to let off steam.",
+    "col": [
+      "need to let off steam",
+      "a way to let off steam",
+      "let off steam after work"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "w": "keep in touch",
+    "ipa": "/kiːp ɪn tʌtʃ/",
+    "pos": "phrasal verb",
+    "vi": "giữ liên lạc với ai đó",
+    "ex": "We moved to different cities, but we still keep in touch every month.",
+    "col": [
+      "keep in touch with friends",
+      "keep in touch regularly",
+      "promise to keep in touch"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "w": "look up to",
+    "ipa": "/lʊk ʌp tuː/",
+    "pos": "phrasal verb",
+    "vi": "ngưỡng mộ, kính trọng ai đó",
+    "ex": "Many young designers look up to her for her creativity and courage.",
+    "col": [
+      "look up to a mentor",
+      "look up to someone as a role model",
+      "have always looked up to"
+    ],
+    "added": "2026-10-31"
   }
 ]
