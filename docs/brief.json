@@ -1,5 +1,5 @@
 {
-  "updated": "Cập nhật 06:30 Chủ nhật, 01/11/2026",
+  "updated": "Cập nhật 17:35 Chủ nhật, 01/11/2026",
   "sections": [
     {
       "id": "hot",
@@ -7,301 +7,225 @@
       "color": "--c-hot",
       "items": [
         {
-          "title": "Thuế tiêu thụ đặc biệt với xăng giảm về 0% từ 1/11 đến hết tháng 3/2027",
-          "summary": "Chính phủ vừa ban hành nghị quyết đưa thuế tiêu thụ đặc biệt đối với các loại xăng về mức 0%. Mức thuế này áp dụng từ ngày 1/11, tức hôm nay, và kéo dài đến hết tháng 3/2027.",
+          "title": "Binance mất 6,3 tỉ USD trong 20 phút, được xem là vụ hack tiền số lớn nhất lịch sử",
+          "summary": "Tin tặc đã lấy đi 6,3 tỉ USD tiền số từ sàn giao dịch tiền mã hóa lớn nhất thế giới. Chúng làm được điều này nhờ thao túng hệ thống phê duyệt các lệnh rút tiền. Toàn bộ vụ tấn công chỉ diễn ra trong khoảng 20 phút.",
           "points": [
-            "Thuế tiêu thụ đặc biệt với xăng về 0%",
-            "Hiệu lực từ ngày 1/11",
-            "Áp dụng đến hết tháng 3/2027"
+            "Số tiền bị đánh cắp: 6,3 tỉ USD",
+            "Thời gian thực hiện: chỉ khoảng 20 phút",
+            "Điểm yếu bị khai thác: khâu phê duyệt lệnh rút tiền"
           ],
-          "why": "Chi phí đi lại, gặp khách hàng hay chạy xe ở TP.HCM có thể nhẹ hơn trong nhiều tháng tới. Bạn nên tính lại các khoản chi vận hành hằng tháng.",
-          "source": "VnExpress",
-          "date": "31/10",
-          "link": "https://vnexpress.net/thue-tieu-thu-dac-biet-voi-xang-ve-0-tu-ngay-mai-5139239.html"
-        },
-        {
-          "title": "Giá điện bán lẻ bình quân giảm 2% từ 1/11, lần giảm đầu tiên sau gần 20 năm",
-          "summary": "Từ ngày 1/11, giá bán lẻ điện bình quân giảm xuống gần 2.160 đồng mỗi kWh. Đây là lần giảm đầu tiên sau gần 20 năm giá điện liên tục tăng.",
-          "points": [
-            "Giá điện giảm 2%",
-            "Mức mới gần 2.160 đồng mỗi kWh",
-            "Lần giảm đầu tiên sau gần 20 năm tăng liên tục"
-          ],
-          "why": "Làm việc với máy tính và màn hình nhiều giờ mỗi ngày thì tiền điện văn phòng hay tại nhà cũng là một khoản chi. Mức giảm tuy nhỏ nhưng là tín hiệu hiếm thấy.",
-          "source": "VnExpress",
-          "date": "31/10",
-          "link": "https://vnexpress.net/gia-dien-giam-2-tu-ngay-mai-5139154.html"
-        },
-        {
-          "title": "Giá USD tại nhiều ngân hàng xuống dưới mốc 26.000 đồng lần đầu sau một năm rưỡi",
-          "summary": "Nhiều ngân hàng trong nước hiện niêm yết cả giá mua lẫn giá bán USD dưới 26.000 đồng. Đây là lần đầu tiên giá xuống dưới mốc này sau một năm rưỡi.",
-          "points": [
-            "Nhiều ngân hàng mua và bán USD dưới 26.000 đồng",
-            "Lần đầu tiên sau một năm rưỡi"
-          ],
-          "why": "Nếu bạn có khoản chi bằng USD như công cụ, phần mềm hay dịch vụ nước ngoài, đây là thời điểm đáng theo dõi tỷ giá để cân nhắc đổi ngoại tệ.",
-          "source": "VnExpress",
-          "date": "31/10",
-          "link": "https://vnexpress.net/gia-usd-ngan-hang-xuong-duoi-26-000-dong-5139037.html"
-        },
-        {
-          "title": "Giá vàng thế giới lao dốc, xuống mức thấp nhất trong một năm",
-          "summary": "Vàng cùng nhiều kim loại khác bị bán tháo mạnh trong phiên cuối tháng. Giá vàng thế giới hiện về mức thấp nhất kể từ cuối năm 2025.",
-          "points": [
-            "Vàng và nhiều kim loại khác bị bán tháo",
-            "Diễn ra trong phiên cuối tháng",
-            "Giá thấp nhất kể từ cuối năm 2025"
-          ],
-          "why": "Nếu bạn có khách hàng ngành vàng, trang sức hoặc đầu tư, biến động này có thể ảnh hưởng đến nhu cầu và thông điệp quảng cáo của họ. Nên theo dõi sát diễn biến giá.",
-          "source": "VnExpress",
-          "date": "31/10",
-          "link": "https://vnexpress.net/gia-vang-the-gioi-lao-doc-xuong-thap-nhat-mot-nam-5139023.html"
-        },
-        {
-          "title": "Doanh nghiệp, hộ kinh doanh doanh thu đến 10 tỷ đồng được giảm 30% thuế thu nhập mỗi kỳ kê khai",
-          "summary": "Doanh nghiệp và hộ kinh doanh có doanh thu không quá 10 tỷ đồng mỗi năm được giảm 30% thuế thu nhập. Mức giảm được áp dụng ngay khi kê khai hoặc tạm nộp từng kỳ.",
-          "points": [
-            "Giảm 30% thuế thu nhập",
-            "Áp dụng cho doanh thu không quá 10 tỷ đồng mỗi năm",
-            "Giảm ngay khi kê khai hoặc tạm nộp từng kỳ"
-          ],
-          "why": "Nhiều khách hàng nhỏ của bạn có thể thuộc diện này và có thêm tiền mặt trong tay. Hãy kiểm tra xem chính bạn có đủ điều kiện hay không.",
-          "source": "VnExpress",
-          "date": "31/10",
-          "link": "https://vnexpress.net/doanh-nghiep-ho-kinh-doanh-duoc-giam-30-thue-tung-ky-ke-khai-5138953.html"
-        },
-        {
-          "title": "IMF dự báo năm 2026 Việt Nam lần đầu vượt Indonesia về GDP bình quân đầu người",
-          "summary": "Quỹ Tiền tệ quốc tế (IMF) dự báo năm 2026 Việt Nam sẽ lần đầu vượt Indonesia về GDP bình quân đầu người. Bài báo cho rằng đây không chỉ là thay đổi thứ hạng trong ASEAN mà còn cho thấy những chuyển động tích cực của nền kinh tế.",
-          "points": [
-            "Nguồn dự báo là IMF",
-            "Mốc dự báo: năm 2026",
-            "Việt Nam lần đầu vượt Indonesia về GDP bình quân đầu người"
-          ],
-          "why": "Thu nhập bình quân tăng thường đi cùng nhu cầu chi tiêu của người tiêu dùng. Đây là bối cảnh hữu ích khi bạn lên kế hoạch chiến dịch quảng cáo dài hạn.",
+          "why": "Nếu bạn chạy quảng cáo cho khách hàng trong lĩnh vực tiền số hoặc tài chính, hãy chú ý phản ứng của người dùng và nội dung truyền thông của khách sau sự cố này.",
           "source": "Thanh Niên",
           "date": "01/11",
-          "link": "https://thanhnien.vn/thu-nhap-nguoi-viet-dang-tang-len-18526103122393548.htm"
+          "link": "https://thanhnien.vn/binance-mat-63-ti-usd-vu-hack-tien-so-lon-nhat-lich-su-dien-ra-the-nao-185261101125202162.htm"
         },
         {
-          "title": "Cổ phiếu Intel lao dốc mạnh nhất trong 50 năm sau dự báo kinh doanh kém",
-          "summary": "Giá cổ phiếu hãng chip Mỹ Intel rơi gần 30% chỉ trong một phiên. Nguyên nhân là hãng đưa ra dự báo kết quả kinh doanh quý này thấp hơn kỳ vọng. Mức giảm này được ghi nhận là mạnh nhất trong nửa thế kỷ.",
+          "title": "Các nhà điều tra chạy đua truy vết và thu hồi 6,3 tỷ USD bị đánh cắp khỏi Binance",
+          "summary": "Các nhà điều tra đang làm việc không ngừng nghỉ để lần theo dòng tiền bị đánh cắp từ sàn Binance. Mục tiêu là lấy lại tài sản trước khi tin tặc kịp rửa tiền.",
           "points": [
-            "Giá cổ phiếu giảm gần 30% trong một phiên",
-            "Mức giảm mạnh nhất trong 50 năm của Intel",
-            "Nguyên nhân: dự báo quý này thấp hơn dự kiến"
+            "Tài sản cần truy tìm: 6,3 tỷ USD",
+            "Các nhà điều tra đang chạy đua với thời gian",
+            "Nguy cơ chính: tin tặc rửa tiền trước khi bị chặn"
           ],
-          "why": "Cú rơi của một tên tuổi lớn ngành công nghệ có thể làm tâm lý thị trường xáo động. Nếu bạn chạy quảng cáo cho nhóm khách hàng công nghệ hoặc tài chính, nên theo dõi thêm diễn biến.",
+          "why": "Đây là phần tiếp theo của vụ hack Binance. Kết quả thu hồi có thể ảnh hưởng đến niềm tin của nhà đầu tư và thông điệp của các thương hiệu tiền số.",
           "source": "VnExpress",
-          "date": "31/10",
-          "link": "https://vnexpress.net/co-phieu-intel-giam-manh-nhat-50-nam-5139027.html"
-        },
-        {
-          "title": "Động thổ cao tốc Gò Dầu - Xa Mát hơn 10.200 tỷ đồng, nối TP HCM với núi Bà Đen",
-          "summary": "Dự án cao tốc Gò Dầu - Xa Mát vừa được khởi công. Tuyến đường dài 28 km, tổng vốn hơn 10.200 tỷ đồng. Khi xong, tuyến sẽ mở thêm một hướng kết nối từ TP HCM tới núi Bà Đen.",
-          "points": [
-            "Chiều dài tuyến: 28 km",
-            "Tổng vốn đầu tư: hơn 10.200 tỷ đồng",
-            "Dự kiến hoàn thành sau 3 năm"
-          ],
-          "why": "Đi lại từ TP HCM về phía núi Bà Đen sẽ thuận tiện hơn trong vài năm tới. Nếu làm quảng cáo cho du lịch hoặc vận tải, bạn có thể tính trước cơ hội từ tuyến đường mới.",
-          "source": "VnExpress",
-          "date": "30/10",
-          "link": "https://vnexpress.net/dong-tho-cao-toc-go-dau-xa-mat-hon-10-200-ty-dong-5138815.html"
-        },
-        {
-          "title": "TP HCM tiến cử người giỏi vào khu vực công, lương chuyên gia đến hơn 265 triệu đồng/tháng",
-          "summary": "TP HCM áp dụng cơ chế chủ động tiến cử người giỏi vào làm việc trong khu vực công, thay vì chờ ứng viên tự đăng ký. Mức lương cho chuyên gia lên tới hơn 265 triệu đồng mỗi tháng. Con số này cao gấp gần 2,7 lần so với trước đây.",
-          "points": [
-            "Tiếp nhận nhân tài qua tiến cử, không chờ đăng ký",
-            "Lương chuyên gia đến hơn 265 triệu đồng mỗi tháng",
-            "Mức lương gấp gần 2,7 lần so với trước"
-          ],
-          "why": "Thành phố đang cạnh tranh nhân sự giỏi bằng đãi ngộ cao hơn hẳn. Nếu bạn có chuyên môn mạnh, đây có thể là một hướng đi mới đáng tìm hiểu.",
-          "source": "VnExpress",
-          "date": "30/10",
-          "link": "https://vnexpress.net/tp-hcm-mo-co-che-tien-cu-tra-luong-chuyen-gia-den-265-trieu-dong-thang-5138876.html"
-        },
-        {
-          "title": "Thống đốc: Người dân gửi tiền nhiều vì tin tưởng hệ thống ngân hàng",
-          "summary": "Thống đốc Phạm Đức Ấn giải thích vì sao hệ thống tín dụng vẫn gánh phần lớn nhu cầu vốn của nền kinh tế. Theo ông, đây là “một nét riêng” của Việt Nam, vì người dân vẫn gửi tiết kiệm rất nhiều. Ông cho rằng tình trạng này sẽ thay đổi khi thị trường vốn có chuyển biến.",
-          "points": [
-            "Tín dụng ngân hàng vẫn gánh phần lớn nhu cầu vốn",
-            "Thống đốc gọi đây là “một nét riêng” của Việt Nam",
-            "Người dân gửi tiết kiệm nhiều nhờ tin tưởng ngân hàng"
-          ],
-          "why": "Tin này cho thấy ngân hàng vẫn là kênh vốn chính của nền kinh tế. Doanh nghiệp bạn phục vụ có thể còn phụ thuộc vào vốn vay trong thời gian tới.",
-          "source": "VnExpress",
-          "date": "31/10",
-          "link": "https://vnexpress.net/thong-doc-nguoi-dan-gui-tien-nhieu-vi-tin-tuong-he-thong-ngan-hang-5139105.html"
-        },
-        {
-          "title": "Thêm nhiều tàu dầu bốc cháy ở eo biển Hormuz, giá dầu leo thang",
-          "summary": "Theo Reuters ngày 31/10, hải quân Vệ binh Cách mạng Hồi giáo Iran (IRGC) thông báo có 4 tàu dầu bốc cháy và nổ tung tại eo biển Hormuz. Các tàu đang di chuyển trên một tuyến hàng hải thì xảy ra sự cố. Giá dầu vì vậy tiếp tục tăng.",
-          "points": [
-            "4 tàu dầu cháy và nổ tại eo biển Hormuz",
-            "Thông tin do hải quân IRGC công bố, Reuters dẫn lại",
-            "Giá dầu leo thang sau vụ việc"
-          ],
-          "why": "Giá dầu tăng có thể kéo theo chi phí vận tải và làm thị trường biến động. Nếu bạn quản lý ngân sách quảng cáo cho ngành vận chuyển hay thương mại, nên theo dõi sát.",
-          "source": "Thanh Niên",
           "date": "01/11",
-          "link": "https://thanhnien.vn/them-nhieu-tau-dau-bi-chay-gia-dau-leo-thang-185261031174916993.htm"
+          "link": "https://vnexpress.net/gap-rut-truy-vet-thu-hoi-6-3-ty-usd-bi-danh-cap-tu-binance-5139194.html"
         },
         {
-          "title": "Bên trong chiến dịch của hải quân Mỹ nhằm lập lá chắn bảo vệ dòng dầu qua Hormuz",
-          "summary": "Hải quân Mỹ đang cố gắng duy trì một lá chắn bảo vệ dòng dầu đi qua eo biển Hormuz. Họ phải gồng mình vượt qua nhiều khó khăn vì sức ép liên tục từ phía Iran. Bài viết nhìn vào những gì diễn ra bên trong chiến dịch này.",
+          "title": "Ông Trump nói chỉ còn vài mục tiêu ở Iran, Tehran cảnh báo quân Mỹ sẽ gặp “bãi tử địa”",
+          "summary": "Tổng thống Trump cho biết Mỹ chỉ còn vài mục tiêu cần tấn công tại Iran. Phía Tehran đáp lại bằng cảnh báo sẽ trả đũa, và nói quân Mỹ sẽ đối mặt với một “bãi tử địa”.",
           "points": [
-            "Mục tiêu: bảo vệ dòng dầu đi qua Hormuz",
-            "Hải quân Mỹ chịu sức ép không ngừng từ Iran"
+            "Ông Trump: Mỹ chỉ còn vài mục tiêu tại Iran",
+            "Iran cảnh báo sẽ đáp trả",
+            "Tehran nói quân Mỹ sẽ gặp “bãi tử địa”"
           ],
-          "why": "Đây là bối cảnh giúp hiểu vì sao căng thẳng ở Hormuz làm giá dầu dễ biến động. Hãy đọc cùng tin tàu dầu bốc cháy để nắm đầy đủ tình hình.",
-          "source": "VnExpress",
-          "date": "31/10",
-          "link": "https://vnexpress.net/ben-trong-chien-dich-lap-la-chan-hormuz-cua-hai-quan-my-5138764.html"
+          "why": "Căng thẳng Mỹ - Iran vẫn đang leo thang. Bạn nên theo dõi tin này để kịp điều chỉnh kế hoạch nếu chiến dịch của khách phụ thuộc vào tâm lý thị trường.",
+          "source": "Tuổi Trẻ",
+          "date": "01/11",
+          "link": "https://tuoitre.vn/ong-trump-doa-tan-cong-chop-nhoang-iran-canh-bao-bai-tu-dia-cho-quan-my-100261101142730676.htm"
         },
         {
-          "title": "Lãnh tụ Tối cao Iran ra lệnh sẵn sàng đáp trả không giới hạn nếu bị tấn công",
-          "summary": "Lãnh tụ Tối cao Khamenei đã họp với các chỉ huy quân sự Iran. Ông yêu cầu lực lượng này lập tức đáp trả nếu đối phương tấn công, và phạm vi phản công được nêu là không bị giới hạn về mặt địa lý.",
+          "title": "Iran tuyên bố khép lại đàm phán hạt nhân, các nước vùng Vịnh gấp rút tìm cách cứu vãn",
+          "summary": "Iran khẳng định không có ý định thương lượng về chương trình hạt nhân của mình, dù dưới hình thức hay áp lực nào. Trước tình hình đó, các nước vùng Vịnh đang gấp rút tìm cách cứu vãn tình thế.",
           "points": [
-            "Khamenei trực tiếp họp với các chỉ huy Iran",
-            "Lệnh đáp trả lập tức nếu bị tấn công",
-            "Phạm vi phản công không giới hạn về địa lý"
+            "Iran khép lại đàm phán hạt nhân",
+            "Tehran bác bỏ thương lượng dưới mọi áp lực",
+            "Các nước vùng Vịnh vội vàng tìm cách hạ nhiệt"
           ],
-          "why": "Đây là tín hiệu căng thẳng mới ở Trung Đông. Bạn nên theo dõi thêm diễn biến, nhất là khi có chiến dịch nhắm đến nội dung hoặc đối tượng liên quan tin quốc tế.",
+          "why": "Cánh cửa ngoại giao đang hẹp lại, nên tình hình có thể còn nhiều biến động. Hãy theo dõi sát nếu bạn quản lý ngân sách quảng cáo cho các ngành nhạy cảm với tin thế giới.",
+          "source": "Tuổi Trẻ",
+          "date": "01/11",
+          "link": "https://tuoitre.vn/iran-tuyen-bo-khep-lai-dam-phan-hat-nhan-vung-vinh-gap-rut-cuu-van-tinh-the-100261101161442107.htm"
+        },
+        {
+          "title": "Lãnh tụ Tối cao Iran ra lệnh sẵn sàng phản công “không giới hạn” nếu bị tấn công",
+          "summary": "Lãnh tụ Tối cao Khamenei đã họp với các chỉ huy quân sự Iran. Ông yêu cầu lực lượng đáp trả ngay lập tức nếu đối phương tấn công, và phạm vi phản công không bị giới hạn về địa lý.",
+          "points": [
+            "Người ra lệnh: Lãnh tụ Tối cao Khamenei",
+            "Đối tượng nhận lệnh: các chỉ huy Iran",
+            "Phản công ngay, “không giới hạn về mặt địa lý”"
+          ],
+          "why": "Đây là tín hiệu cho thấy Tehran sẵn sàng leo thang nếu bị tấn công. Bạn nên tiếp tục theo dõi tin này như một yếu tố rủi ro bên ngoài.",
           "source": "VnExpress",
           "date": "31/10",
           "link": "https://vnexpress.net/lanh-tu-toi-cao-iran-ra-lenh-san-sang-phan-cong-khong-gioi-han-5139193.html"
         },
         {
-          "title": "Iran đánh giá tích cực thư của Phó tổng thống Mỹ nhưng vẫn cảnh báo sẵn sàng cho chiến tranh",
-          "summary": "Iran nhận được một bức thư do Phó tổng thống Mỹ JD Vance gửi tới Tehran và coi đó là bước đi tích cực. Tuy vậy, Tehran tuyên bố đã chuẩn bị cho mọi kịch bản, kể cả nguy cơ xảy ra chiến tranh.",
+          "title": "Ông Trump: Mỹ đã làm suy yếu phần lớn quân đội Iran nhưng còn vài mục tiêu cần xử lý",
+          "summary": "Tổng thống Trump tuyên bố Mỹ đã triệt tiêu phần lớn sức mạnh quân sự của Iran. Tuy vậy, ông nói Mỹ vẫn phải giải quyết thêm một hoặc hai mục tiêu nữa.",
           "points": [
-            "Thư do Phó tổng thống Mỹ JD Vance gửi Tehran",
-            "Iran gọi đây là bước đi tích cực",
-            "Tehran nói đã chuẩn bị cho mọi kịch bản, kể cả chiến tranh"
+            "Theo ông Trump, phần lớn sức mạnh quân sự Iran đã bị triệt tiêu",
+            "Còn một hoặc hai mục tiêu cần giải quyết",
+            "Ông nói đây là tuyên bố của Tổng thống Mỹ"
           ],
-          "why": "Quan hệ Mỹ và Iran vừa có tín hiệu đối thoại, vừa còn nguy cơ leo thang. Bạn nên cập nhật thường xuyên thay vì chỉ dựa vào một bản tin.”",
+          "why": "Phát biểu này cho thấy Washington chưa muốn dừng lại, nên căng thẳng có thể kéo dài. Hãy cập nhật tin đều đặn trước khi quyết định điều chỉnh chiến dịch.",
+          "source": "VnExpress",
+          "date": "01/11",
+          "link": "https://vnexpress.net/ong-trump-my-van-phai-xu-ly-vai-muc-tieu-tai-iran-5139286.html"
+        },
+        {
+          "title": "Sức ép từ AI khiến kỹ sư IT Trung Quốc rời văn phòng, xuống nhà máy làm việc",
+          "summary": "Nhiều lập trình viên ở Trung Quốc đang bỏ công việc văn phòng vì áp lực từ trí tuệ nhân tạo. Họ chuyển sang học tự động hóa để tìm cơ hội ở các phân xưởng sản xuất. Làn sóng chuyển nghề này được mô tả là khá ồ ạt.",
+          "points": [
+            "Người chuyển nghề: lập trình viên, kỹ sư IT tại Trung Quốc",
+            "Nguyên nhân chính: sức ép từ AI",
+            "Hướng đi mới: học tự động hóa, làm ở phân xưởng"
+          ],
+          "why": "AI đang làm thay đổi thị trường việc làm công nghệ, và ngành quảng cáo số cũng có thể chịu tác động. Đây là dịp để xem lại những kỹ năng mà máy khó thay thế.",
+          "source": "VnExpress",
+          "date": "01/11",
+          "link": "https://vnexpress.net/ky-su-it-o-at-bo-van-phong-xuong-nha-may-5139274.html"
+        },
+        {
+          "title": "Biểu tình cuối tuần tại Pháp: đụng độ ở Paris và nhiều thành phố vì giá sinh hoạt tăng",
+          "summary": "Hàng trăm nghìn người đã xuống đường ở Paris và nhiều thành phố khác của Pháp. Họ phản đối chi phí sinh hoạt tăng vọt. Các cuộc biểu tình kéo theo những vụ đụng độ.",
+          "points": [
+            "Quy mô: hàng trăm nghìn người tham gia",
+            "Địa điểm: Paris và nhiều thành phố khác của Pháp",
+            "Lý do: chi phí sinh hoạt tăng vọt"
+          ],
+          "why": "Giá cả tăng làm người tiêu dùng thắt chặt chi tiêu, và điều này có thể ảnh hưởng đến thị trường châu Âu. Nếu bạn chạy quảng cáo cho khách hàng bán sang đó, hãy theo dõi thêm diễn biến.",
+          "source": "VnExpress",
+          "date": "01/11",
+          "link": "https://vnexpress.net/khoi-lua-bao-trum-bieu-tinh-cuoi-tuan-tai-phap-5139266.html"
+        },
+        {
+          "title": "Biểu tình cuối tuần ở châu Âu: bạo lực bùng phát tại Đức và Pháp",
+          "summary": "Hàng trăm ngàn người đã xuống đường biểu tình ở châu Âu vào cuối tuần. Các cuộc biểu tình dẫn đến đụng độ tại những thành phố lớn. Bạo lực được ghi nhận ở cả Đức và Pháp.",
+          "points": [
+            "Quy mô: hàng trăm ngàn người xuống đường",
+            "Bạo lực xảy ra tại Đức và Pháp",
+            "Đụng độ diễn ra ở các thành phố lớn"
+          ],
+          "why": "Bất ổn ở châu Âu có thể ảnh hưởng đến hoạt động kinh doanh và nhu cầu tại khu vực này. Nếu đang chạy chiến dịch nhắm thị trường châu Âu, bạn nên chú ý đến diễn biến.",
           "source": "Tuổi Trẻ",
           "date": "01/11",
-          "link": "https://tuoitre.vn/iran-vua-khen-vua-canh-bao-my-sau-khi-nhan-mot-buc-thu-100261031210610823.htm"
+          "link": "https://tuoitre.vn/bieu-tinh-cuoi-tuan-o-chau-au-bao-luc-bung-phat-tai-duc-va-phap-100261101103647331.htm"
         },
         {
-          "title": "Mỹ phê duyệt bán 500 tên lửa Patriot PAC-3 MSE cho Ukraine, trị giá khoảng 2,1 tỷ USD",
-          "summary": "Bộ Ngoại giao Mỹ đã thông qua thương vụ bán cho Ukraine 500 tên lửa PAC-3 MSE, được mô tả là loại hiện đại nhất của hệ thống Patriot. Giá trị hợp đồng vào khoảng 2,1 tỷ USD.",
+          "title": "Elon Musk chi kỷ lục cho bầu cử giữa kỳ Mỹ, hỗ trợ đảng Cộng hòa",
+          "summary": "Tỉ phú Elon Musk đã chi ít nhất 445,77 triệu USD để hỗ trợ đảng Cộng hòa trong giai đoạn bầu cử giữa nhiệm kỳ Mỹ năm 2026. Với khoản chi này, ông trở thành một trong những nhà tài trợ chính trị lớn nhất trong lịch sử hiện đại của nước Mỹ.",
           "points": [
-            "Số lượng: 500 tên lửa PAC-3 MSE",
-            "Giá trị thương vụ khoảng 2,1 tỷ USD",
-            "Bộ Ngoại giao Mỹ là bên phê duyệt"
+            "Số tiền chi: ít nhất 445,77 triệu USD",
+            "Bên được hỗ trợ: đảng Cộng hòa",
+            "Bối cảnh: bầu cử giữa nhiệm kỳ Mỹ năm 2026"
           ],
-          "why": "Tin cho thấy Mỹ vẫn tiếp tục hỗ trợ quân sự cho Ukraine. Bạn có thể đưa vào danh sách tin địa chính trị cần theo dõi.",
-          "source": "VnExpress",
-          "date": "31/10",
-          "link": "https://vnexpress.net/my-duyet-ban-500-ten-lua-patriot-hien-dai-nhat-cho-ukraine-5139005.html"
-        },
-        {
-          "title": "GitHub phải thêm bốn triệu nhân CPU và 160 PB lưu trữ vì mã do AI tạo ra tăng vọt",
-          "summary": "GitHub, nền tảng lưu trữ mã nguồn lớn nhất thế giới, cho biết lượng mã do AI tạo ra tăng rất mạnh. Vì vậy, chỉ trong một năm công ty phải bổ sung bốn triệu nhân CPU và 160 PB dung lượng lưu trữ.",
-          "points": [
-            "Bổ sung bốn triệu nhân CPU trong một năm",
-            "Thêm 160 PB dung lượng lưu trữ",
-            "Nguyên nhân: mã do AI tạo ra tăng vọt"
-          ],
-          "why": "Con số này cho thấy AI đang được dùng rất nhiều trong việc tạo mã. Nếu bạn dùng công cụ AI hoặc script để tự động hóa quảng cáo, đây là xu hướng đáng để ý.",
-          "source": "VnExpress",
-          "date": "31/10",
-          "link": "https://vnexpress.net/github-phai-bo-sung-bon-trieu-nhan-cpu-vi-bao-code-ai-5138530.html"
-        },
-        {
-          "title": "Vụ tin tặc đánh cắp 6,36 tỉ USD trên Binance phơi bày lỗ hổng bảo mật của ngành tiền số",
-          "summary": "Tin tặc đã đánh cắp 6,36 tỉ USD trên sàn giao dịch Binance. Vụ việc cho thấy ngành tiền số vẫn chưa khắc phục triệt để các lỗ hổng bảo mật, dù giới chuyên môn đã cảnh báo nhiều lần.",
-          "points": [
-            "Số tiền bị đánh cắp: 6,36 tỉ USD",
-            "Nơi xảy ra: sàn giao dịch Binance",
-            "Giới chuyên môn đã cảnh báo nhiều lần trước đó"
-          ],
-          "why": "Nếu bạn chạy quảng cáo cho khách hàng thuộc lĩnh vực tiền số hoặc tài chính, niềm tin của người dùng có thể bị ảnh hưởng. Bạn nên chú ý cách truyền thông về độ an toàn.",
+          "why": "Tiền chính trị cỡ này cho thấy mức độ khốc liệt của cuộc bầu cử Mỹ. Nó cũng có thể ảnh hưởng đến các nền tảng quảng cáo lớn mà bạn đang dùng hằng ngày.",
           "source": "Thanh Niên",
           "date": "01/11",
-          "link": "https://thanhnien.vn/lo-hong-lon-tren-thi-truong-tien-so-18526103119553227.htm"
+          "link": "https://thanhnien.vn/ti-phu-elon-musk-chi-tien-ky-luc-cho-bau-cu-giua-ky-my-185261101163758156.htm"
         },
         {
-          "title": "Chính quyền Trump đẩy mạnh kiện tụng nhằm gây khó cho đảng Dân chủ trước bầu cử giữa kỳ Mỹ",
-          "summary": "Cuộc bầu cử giữa kỳ ở Mỹ đang đến gần, với những diễn biến bất lợi cho đảng Cộng hòa. Trong bối cảnh đó, chính quyền Tổng thống Donald Trump tăng cường các vụ kiện để gây khó cho phe Dân chủ, khiến căng thẳng pháp lý leo thang.",
+          "title": "BSR, chủ nhà máy lọc dầu Dung Quất, gửi ngân hàng hơn 58.000 tỷ đồng",
+          "summary": "Tổng công ty Lọc hóa dầu Việt Nam (BSR) đang gửi ngân hàng hơn 58.000 tỷ đồng, tương đương hơn 2 tỷ USD. Số tiền này chiếm gần một nửa giá trị tài sản của doanh nghiệp. Việc gửi tiền diễn ra khi lãi suất huy động vẫn neo ở mức cao.",
           "points": [
-            "Bầu cử giữa kỳ Mỹ đang đến gần",
-            "Diễn biến hiện bất lợi cho đảng Cộng hòa",
-            "Chính quyền Trump tăng kiện tụng nhằm vào phe Dân chủ"
+            "Số tiền gửi: hơn 58.000 tỷ đồng, hơn 2 tỷ USD",
+            "Tỷ trọng: gần một nửa giá trị tài sản của BSR",
+            "Bối cảnh: lãi suất huy động đang neo cao"
           ],
-          "why": "Chính trị Mỹ đang nóng lên khi bầu cử đến gần. Nếu bạn làm chiến dịch hướng đến khán giả Mỹ, hãy theo dõi để kịp điều chỉnh thông điệp.",
+          "why": "Lãi suất cao khiến doanh nghiệp lớn ưu tiên giữ tiền gửi ngân hàng. Bạn có thể cân nhắc điều này khi tư vấn ngân sách quảng cáo cho khách hàng.",
+          "source": "VnExpress",
+          "date": "01/11",
+          "link": "https://vnexpress.net/chu-nha-may-loc-dau-dung-quat-gui-ngan-hang-hon-2-ty-usd-5139328.html"
+        },
+        {
+          "title": "VietinBank vượt Vietcombank, dẫn đầu lợi nhuận ngành ngân hàng quý III",
+          "summary": "VietinBank trở thành ngân hàng có lợi nhuận lớn nhất ngành trong quý III, vượt qua Vietcombank. Lợi nhuận trước thuế của nhà băng này đạt 13.688 tỷ đồng.",
+          "points": [
+            "Lợi nhuận trước thuế quý III: 13.688 tỷ đồng",
+            "VietinBank vượt Vietcombank để đứng đầu ngành",
+            "Xếp hạng tính theo lợi nhuận trong quý III"
+          ],
+          "why": "Ngân hàng là nhóm khách hàng quảng cáo lớn. Nếu bạn làm cho lĩnh vực tài chính, đây là thông tin hữu ích để theo dõi vị thế của từng thương hiệu.",
+          "source": "VnExpress",
+          "date": "31/10",
+          "link": "https://vnexpress.net/vietinbank-dan-dau-loi-nhuan-nganh-ngan-hang-trong-quy-iii-5139002.html"
+        },
+        {
+          "title": "Thống đốc Phạm Đức Ấn: người dân gửi tiền nhiều vì tin tưởng ngân hàng nên tín dụng vẫn gánh phần lớn vốn",
+          "summary": "Thống đốc Phạm Đức Ấn giải thích vì sao hệ thống tín dụng vẫn đáp ứng phần lớn nhu cầu vốn của nền kinh tế. Theo ông, đây là “một nét riêng” của Việt Nam vì người dân vẫn gửi tiết kiệm nhiều. Ông cũng cho rằng tình hình này sẽ thay đổi khi thị trường vốn có chuyển biến.",
+          "points": [
+            "Ngân hàng vẫn là kênh cung cấp vốn chính cho nền kinh tế",
+            "Người dân gửi tiết kiệm nhiều vì tin tưởng hệ thống ngân hàng",
+            "Thống đốc dự báo cơ cấu này sẽ thay đổi theo thị trường vốn"
+          ],
+          "why": "Vốn vay ngân hàng ảnh hưởng đến ngân sách của nhiều doanh nghiệp, trong đó có khách hàng chạy quảng cáo. Nên theo dõi thêm nếu bạn phục vụ ngành tài chính hoặc ngành cần vốn vay.",
+          "source": "VnExpress",
+          "date": "31/10",
+          "link": "https://vnexpress.net/thong-doc-nguoi-dan-gui-tien-nhieu-vi-tin-tuong-he-thong-ngan-hang-5139105.html"
+        },
+        {
+          "title": "Cầu Cần Thơ 2 thiết kế dây văng hai tầng, vừa chạy cao tốc vừa có đường sắt",
+          "summary": "Cầu Cần Thơ 2 được thiết kế theo dạng dây văng hai tầng. Tầng trên dành cho đường bộ cao tốc, tầng dưới dành cho đường sắt. Tổng vốn đầu tư dự kiến vượt 27.000 tỷ đồng.",
+          "points": [
+            "Tầng trên có 6 làn cao tốc",
+            "Tầng dưới là đường sắt",
+            "Tổng vốn đầu tư dự kiến hơn 27.000 tỷ đồng"
+          ],
+          "why": "Đây là dự án hạ tầng lớn, kết hợp cả đường bộ và đường sắt. Nếu khách hàng của bạn làm logistics, vận tải hoặc bất động sản, hãy theo dõi tiến độ dự án này.",
+          "source": "VnExpress",
+          "date": "01/11",
+          "link": "https://vnexpress.net/cau-can-tho-2-duoc-thiet-ke-cho-ca-duong-bo-va-duong-sat-5139218.html"
+        },
+        {
+          "title": "Phú Quốc bắt đầu bàn giao 1.200 nền tái định cư An Thới phục vụ công trình APEC 2027",
+          "summary": "Khu tái định cư An Thới ở Phú Quốc, quy mô 1.200 nền, đã bắt đầu được bàn giao cho các hộ dân bị thu hồi mặt bằng. Số đất thu hồi dùng để triển khai công trình trọng điểm phục vụ APEC. Khu này hoàn thành sau khoảng 8 tháng thi công, có sự hỗ trợ của Tập đoàn Sun Group.",
+          "points": [
+            "Khu tái định cư có quy mô 1.200 nền",
+            "Thi công khoảng 8 tháng, có Sun Group đồng hành",
+            "Bàn giao cho các hộ bị thu hồi mặt bằng làm công trình APEC"
+          ],
+          "why": "Phú Quốc đang chuẩn bị cho sự kiện APEC 2027. Nếu bạn có khách hàng ngành du lịch hoặc bất động sản, đây là địa bàn nên theo dõi.",
           "source": "Thanh Niên",
           "date": "01/11",
-          "link": "https://thanhnien.vn/cang-thang-phap-ly-quanh-bau-cu-giua-ky-my-185261031174345164.htm"
+          "link": "https://thanhnien.vn/phu-quoc-ban-giao-1200-nen-tai-dinh-cu-phuc-vu-apec-2027-185261101141142786.htm"
         },
         {
-          "title": "Elon Musk rót gần nửa tỷ USD vào bầu cử giữa kỳ Mỹ, thành nhà tài trợ lớn nhất lịch sử hiện đại",
-          "summary": "Elon Musk đã chi một khoản gần nửa tỷ USD cho cuộc bầu cử giữa kỳ ở Mỹ. Với số tiền này, ông trở thành nhà tài trợ lớn nhất trong lịch sử chính trị Mỹ hiện đại.",
+          "title": "Chuyên gia cảnh báo san núi Một ở Quy Nhơn làm khu dân cư sẽ mất mảng xanh và cảnh quan",
+          "summary": "GS.TS Đỗ Minh Đức cho rằng việc san núi Một để xây khu dân cư có thể gây nhiều tác động xấu. Theo ông, khu vực này có nguy cơ sạt lở, bụi, tiếng ồn và rung chấn trong thời gian dài. Cảnh quan tự nhiên cũng sẽ bị mất vĩnh viễn.",
           "points": [
-            "Số tiền Musk chi: gần nửa tỷ USD",
-            "Mục tiêu chi tiêu: cuộc bầu cử giữa kỳ của Mỹ",
-            "Vị thế: nhà tài trợ lớn nhất lịch sử chính trị Mỹ hiện đại"
+            "Nguy cơ sạt lở, bụi, tiếng ồn và rung chấn",
+            "Tác động có thể kéo dài 3-5 năm",
+            "Cảnh quan tự nhiên mất vĩnh viễn"
           ],
-          "why": "Đây là thước đo cho sức nặng của tiền trong chính trị Mỹ, một tin quốc tế đáng theo dõi. Bạn có thể xem thêm các diễn biến tiếp theo để nắm bối cảnh trên các nền tảng quảng cáo lớn.",
+          "why": "Đây là tranh luận giữa phát triển đô thị và bảo vệ môi trường. Nếu làm quảng cáo cho dự án bất động sản, bạn nên cân nhắc cách truyền thông để tránh bị phản ứng.",
+          "source": "VnExpress",
+          "date": "01/11",
+          "link": "https://vnexpress.net/chuyen-gia-san-phang-nui-o-quy-nhon-se-mat-mang-xanh-canh-quan-5139277.html"
+        },
+        {
+          "title": "Elon Musk rót gần nửa tỷ USD vào bầu cử giữa kỳ Mỹ, thành nhà tài trợ lớn nhất lịch sử chính trị Mỹ hiện đại",
+          "summary": "Elon Musk đã chi gần nửa tỷ USD cho cuộc bầu cử giữa kỳ của Mỹ. Với khoản tiền này, ông trở thành nhà tài trợ lớn nhất trong lịch sử chính trị Mỹ hiện đại.",
+          "points": [
+            "Số tiền Musk chi gần nửa tỷ USD",
+            "Cuộc bầu cử là kỳ bầu cử giữa kỳ của Mỹ",
+            "Ông là nhà tài trợ lớn nhất lịch sử chính trị Mỹ hiện đại"
+          ],
+          "why": "Đây là một ví dụ về quy mô chi tiền khổng lồ của giới tỷ phú trong chính trị. Bạn có thể theo dõi để hiểu thêm về bối cảnh kinh tế và truyền thông toàn cầu.",
           "source": "VnExpress",
           "date": "01/11",
           "link": "https://vnexpress.net/con-mua-tien-elon-musk-rot-vao-bau-cu-giua-ky-my-5139020.html"
-        },
-        {
-          "title": "Phó thủ tướng: chủ xe phải được tự chọn dịch vụ thanh toán phí điện tử đường bộ",
-          "summary": "Phó thủ tướng yêu cầu bảo đảm quyền lựa chọn thanh toán phí đường bộ điện tử cho chủ xe. Người dùng được chọn dịch vụ thanh toán phù hợp. Họ cũng không bị tăng mức phí thanh toán trái quy định.",
-          "points": [
-            "Chủ xe có quyền chọn dịch vụ thanh toán phí đường bộ",
-            "Không được tăng mức phí thanh toán trái quy định",
-            "Yêu cầu do Phó thủ tướng nêu ra"
-          ],
-          "why": "Nếu bạn thường lái xe qua các tuyến thu phí, hãy để ý quyền chọn dịch vụ và mức phí áp dụng cho mình.",
-          "source": "VnExpress",
-          "date": "30/10",
-          "link": "https://vnexpress.net/pho-thu-tuong-can-bao-dam-quyen-lua-chon-thanh-toan-phi-dien-tu-duong-bo-5138947.html"
-        },
-        {
-          "title": "Đề xuất thu phí túi nilon, cốc nhựa dùng một lần thay vì cấm ngay trong năm nay",
-          "summary": "Bộ Nông nghiệp và Môi trường đề xuất thu tiền đối với túi nilon và đồ nhựa dùng một lần. Việc thu phí sẽ áp dụng tại siêu thị, khách sạn thay vì cấm hoàn toàn ngay từ năm nay.",
-          "points": [
-            "Đơn vị đề xuất: Bộ Nông nghiệp và Môi trường",
-            "Nơi áp dụng: siêu thị, khách sạn",
-            "Phương án: thu phí thay vì cấm hoàn toàn từ năm nay"
-          ],
-          "why": "Bán lẻ và khách sạn có thể phải điều chỉnh cách vận hành. Nếu bạn chạy quảng cáo cho các ngành này, hãy lưu ý để cập nhật thông điệp khi chính sách rõ hơn.",
-          "source": "VnExpress",
-          "date": "31/10",
-          "link": "https://vnexpress.net/de-xuat-thu-phi-tui-nilon-coc-nhua-thay-vi-cam-ngay-nam-nay-5138860.html"
-        },
-        {
-          "title": "Tin sáng 1-11: Bộ Nội vụ yêu cầu báo cáo gấp thu nhập viên chức, TP.HCM xử phạt nhiều phòng khám",
-          "summary": "Bộ Nội vụ đề nghị báo cáo gấp về tiền lương và thu nhập của viên chức. TP.HCM đang rà soát từng ngành và chọn doanh nghiệp để thúc đẩy tăng trưởng. Ngoài ra, nhiều phòng khám trên địa bàn thành phố bị xử phạt.",
-          "points": [
-            "Bộ Nội vụ đề nghị báo cáo gấp lương, thu nhập viên chức",
-            "TP.HCM rà từng ngành, chọn doanh nghiệp để thúc tăng trưởng",
-            "Nhiều phòng khám ở TP.HCM bị xử phạt"
-          ],
-          "why": "Việc TP.HCM chọn doanh nghiệp thúc tăng trưởng có thể mở ra cơ hội với khách hàng mới. Nếu bạn làm cho ngành y tế, nên kiểm tra lại việc tuân thủ quy định.",
-          "source": "Tuổi Trẻ",
-          "date": "01/11",
-          "link": "https://tuoitre.vn/tin-tuc-sang-1-11-bo-noi-vu-de-nghi-bao-cao-gap-thu-nhap-cua-vien-chuc-tphcm-xu-phat-nhieu-phong-kham-100261031222328827.htm"
-        },
-        {
-          "title": "TP.HCM định hình mạng lưới trung tâm logistics tại 10 đầu mối lớn",
-          "summary": "TP.HCM định hướng phát triển mạng lưới trung tâm logistics hạt nhân tại 10 khu vực. Các khu vực này trải từ Cát Lái, Long Bình, Linh Trung đến Hiệp Phước, Củ Chi, Hóc Môn và sân bay Tân Sơn Nhất.",
-          "points": [
-            "Tổng cộng 10 đầu mối logistics hạt nhân",
-            "Gồm Cát Lái, Long Bình, Linh Trung, Hiệp Phước",
-            "Còn có Củ Chi, Hóc Môn và sân bay Tân Sơn Nhất"
-          ],
-          "why": "Logistics và vận tải là nhóm khách hàng quảng cáo tiềm năng. Hãy theo dõi quy hoạch này để nhắm đúng khu vực và nhu cầu của họ.",
-          "source": "VnExpress",
-          "date": "31/10",
-          "link": "https://vnexpress.net/tp-hcm-dinh-hinh-mang-luoi-trung-tam-logistics-tai-10-dau-moi-lon-5139061.html"
         }
       ]
     },
@@ -311,131 +235,117 @@
       "color": "--c-work",
       "items": [
         {
-          "title": "ChatGPT Ads mở rộng sang thêm 26 quốc gia, có định dạng rộng hơn và quảng cáo nhiều ảnh",
-          "summary": "Trong email cập nhật hằng tuần gửi nhà quảng cáo, OpenAI cho biết quảng cáo trên ChatGPT đã chạy ở thêm 26 quốc gia. Hãng cũng giới thiệu một định dạng quảng cáo chuẩn mới có chiều ngang rộng hơn. Quảng cáo nhiều hình ảnh (multi-image) giờ đã có bản beta mở cho mọi nhà quảng cáo.",
+          "title": "ChatGPT Ads mở rộng sang thêm 26 quốc gia, có khổ quảng cáo rộng hơn và quảng cáo nhiều ảnh",
+          "summary": "OpenAI vừa gửi email cập nhật hằng tuần cho nhà quảng cáo. Theo email, quảng cáo trên ChatGPT đã chạy ở thêm 26 quốc gia và có thêm một định dạng quảng cáo chuẩn với chiều ngang rộng hơn. Quảng cáo nhiều ảnh (multi-image ads) cũng đã mở bản beta cho mọi nhà quảng cáo.",
           "points": [
             "ChatGPT Ads có mặt ở thêm 26 quốc gia",
-            "Có định dạng quảng cáo chuẩn mới, rộng hơn",
-            "Multi-image ads ở dạng beta mở cho mọi nhà quảng cáo"
+            "Có khổ quảng cáo chuẩn mới, rộng hơn",
+            "Quảng cáo nhiều ảnh mở beta cho tất cả nhà quảng cáo"
           ],
-          "why": "ChatGPT Ads đang mở rộng nhanh và có thêm định dạng, nên có thể trở thành kênh thử nghiệm bên cạnh Google Ads. Phần trích không nói rõ Việt Nam có nằm trong danh sách 26 nước hay không, bạn nên kiểm tra thêm.",
+          "why": "ChatGPT đang trở thành một kênh quảng cáo thực sự bên cạnh Google Ads. Bài không nêu danh sách nước, nên bạn cần kiểm tra xem Việt Nam đã nằm trong đó chưa.",
           "source": "Search Engine Roundtable",
           "date": "30/10",
           "link": "https://www.seroundtable.com/chatgpt-ads-update-42427.html"
         },
         {
-          "title": "Bing bắt đầu hiển thị quảng cáo bên trong AI Overviews do Copilot hỗ trợ",
-          "summary": "Microsoft đang đưa quảng cáo vào phần AI Overviews của Bing, vốn chạy bằng Copilot. Tác giả bài viết chưa từng thấy quảng cáo nằm trong câu trả lời AI của Bing và đến nay vẫn chưa tự kích hoạt được. Thông tin dựa trên nội dung do Khushal Bherwani chia sẻ.",
-          "points": [
-            "Quảng cáo xuất hiện trong AI Overviews của Bing",
-            "AI Overviews này chạy bằng Copilot",
-            "Tác giả vẫn chưa tự kích hoạt được quảng cáo"
-          ],
-          "why": "Quảng cáo đang dần chen vào câu trả lời của AI ở nhiều nền tảng, không chỉ Google. Nếu bạn có chạy Microsoft Ads, hãy theo dõi xem vị trí mới này có ảnh hưởng đến hiệu quả hay không.",
-          "source": "Search Engine Roundtable",
-          "date": "30/10",
-          "link": "https://www.seroundtable.com/bing-ads-copilot-ai-overviews-42416.html"
-        },
-        {
           "title": "Nghiên cứu nhỏ: tỷ lệ nhấp từ AI Overviews và AI Mode của Google chỉ khoảng 0,9%",
-          "summary": "Một nghiên cứu quy mô nhỏ cho biết các tính năng AI trên Google Search như AI Overviews và AI Mode đạt tỷ lệ nhấp khoảng 0,9%. Đây là con số mà nhiều người trong ngành đang tìm kiếm. Nghiên cứu còn có thêm kết quả khác, nhưng phần trích không nêu chi tiết.",
+          "summary": "Câu hỏi về tỷ lệ nhấp (CTR) mà các tính năng AI của Google Search mang lại được hỏi rất nhiều. Một nghiên cứu quy mô nhỏ vừa ước tính con số này vào khoảng 0,9% cho AI Overviews và AI Mode. Nghiên cứu còn có thêm các phát hiện khác, nhưng phần trích không nêu rõ.",
           "points": [
-            "Tỷ lệ nhấp ước tính khoảng 0,9%",
+            "CTR ước tính khoảng 0,9%",
             "Áp dụng cho AI Overviews và AI Mode",
             "Đây chỉ là nghiên cứu quy mô nhỏ"
           ],
-          "why": "Con số này cho thấy người dùng ít bấm vào liên kết trong phần trả lời AI. Vì mẫu nghiên cứu nhỏ, bạn chỉ nên dùng làm tham khảo khi đánh giá lưu lượng từ tìm kiếm.",
+          "why": "Nếu kết quả này đúng, phần lượt nhấp từ các khung AI rất ít. Tuy vậy mẫu nhỏ nên chỉ nên dùng làm tham khảo khi đánh giá lưu lượng.",
           "source": "Search Engine Roundtable",
           "date": "30/10",
           "link": "https://www.seroundtable.com/google-ai-overviews-mode-ctr-42421.html"
         },
         {
-          "title": "Google Gemini ngừng gắn tham số UTM vào các liên kết được trích dẫn",
-          "summary": "Google dường như đã thôi gắn tham số UTM vào các liên kết nguồn trong câu trả lời của Gemini. Việc gắn UTM mới bắt đầu từ đầu tháng 9. Sau đó, vào khoảng tháng 9, việc này lại dừng.",
+          "title": "Bing bắt đầu hiển thị quảng cáo bên trong AI Overviews do Copilot hỗ trợ",
+          "summary": "Microsoft đang đưa quảng cáo vào phần AI Overviews của Bing, vốn chạy bằng Copilot. Tác giả bài viết chưa từng thấy quảng cáo trong câu trả lời AI của Bing và cũng chưa tự kích hoạt được. Tuy nhiên, một người tên Khushal Bherwani đã chia sẻ về hiện tượng này.",
           "points": [
-            "Gemini bắt đầu gắn UTM vào đầu tháng 9",
-            "Hiện dường như đã ngừng gắn UTM",
-            "Ảnh hưởng đến liên kết nguồn trong câu trả lời AI"
+            "Quảng cáo nằm trong AI Overviews của Bing",
+            "AI Overviews của Bing chạy bằng Copilot",
+            "Tác giả chưa tự kích hoạt được quảng cáo này"
           ],
-          "why": "Không có UTM, việc nhận biết lượt truy cập đến từ Gemini trong báo cáo có thể khó hơn. Bạn nên xem lại cách phân loại nguồn truy cập trong công cụ phân tích.",
+          "why": "Quảng cáo trong câu trả lời AI đang lan sang nhiều nền tảng. Nếu bạn chạy Microsoft Advertising, hãy theo dõi xem vị trí mới này có ảnh hưởng đến chiến dịch không.",
+          "source": "Search Engine Roundtable",
+          "date": "30/10",
+          "link": "https://www.seroundtable.com/bing-ads-copilot-ai-overviews-42416.html"
+        },
+        {
+          "title": "Gemini dường như đã ngừng gắn tham số UTM vào các đường dẫn được trích dẫn",
+          "summary": "Google có vẻ đã thôi thêm tham số UTM vào các liên kết trích dẫn trong câu trả lời AI của Gemini. Việc gắn UTM này bắt đầu từ đầu tháng 9. Sau đó, vào khoảng giữa tháng 9, tình trạng đã thay đổi.",
+          "points": [
+            "Gemini từng gắn UTM vào link trích dẫn từ đầu tháng 9",
+            "Hiện Google dường như không còn gắn nữa"
+          ],
+          "why": "Không có UTM, lượt truy cập từ Gemini có thể khó nhận diện trong báo cáo phân tích. Bạn nên kiểm tra lại cách nguồn truy cập này được ghi nhận.",
           "source": "Search Engine Roundtable",
           "date": "30/10",
           "link": "https://www.seroundtable.com/gemini-utm-parameters-42399.html"
         },
         {
-          "title": "Google Search có thể đưa trở lại tham số num=100 để xem 100 kết quả mỗi trang",
-          "summary": "Có dấu hiệu Google Search sẽ cho dùng lại tham số num=100, giúp xem 100 kết quả trên một trang. Google đã bỏ tính năng này vào tháng 9/2025, trong số nhiều biện pháp mà hãng áp dụng. Hiện mới chỉ là khả năng, chưa phải xác nhận chính thức.",
+          "title": "Bing ra tùy chọn kiểm soát nội dung AI mới: chọn cho huấn luyện, cho grounding hoặc cả hai",
+          "summary": "Microsoft công bố các tùy chọn kiểm soát nội dung AI mới cho Bing, được mô tả là mới hơn, đơn giản hơn và rõ ràng hơn. Chủ website có thể chọn cho phép nội dung dùng để huấn luyện AI, để làm nguồn dẫn chứng cho câu trả lời (grounding), hoặc cả hai. Dù chọn thế nào, trang vẫn đủ điều kiện xuất hiện trong Bing Search.",
           "points": [
-            "Tham số num=100 có thể quay lại",
-            "Google bỏ tính năng này vào tháng 9/2025",
-            "Hiện mới là dấu hiệu, chưa chắc chắn"
+            "Ba lựa chọn: huấn luyện, grounding hoặc cả hai",
+            "Các tùy chọn được mô tả là đơn giản và rõ ràng hơn",
+            "Trang vẫn đủ điều kiện hiển thị trên Bing Search"
           ],
-          "why": "Nếu bạn dùng công cụ theo dõi thứ hạng hoặc nghiên cứu từ khóa dựa vào danh sách kết quả dài, thay đổi này có thể ảnh hưởng đến cách công cụ hoạt động. Hãy chờ thêm xác nhận trước khi điều chỉnh quy trình.",
-          "source": "Search Engine Roundtable",
-          "date": "30/10",
-          "link": "https://www.seroundtable.com/google-search-100-search-results-parameter-back-42423.html"
-        },
-        {
-          "title": "Google áp dụng cơ chế kiểm soát huấn luyện AI mới, đang được IETF xem xét",
-          "summary": "Google đang áp dụng các cách kiểm soát việc huấn luyện AI mới, hiện được IETF cân nhắc. Mục tiêu là giúp nhà xuất bản và chủ website quản lý việc này đơn giản, gọn gàng hơn.",
-          "points": [
-            "Cơ chế mới đang được IETF xem xét",
-            "Dành cho nhà xuất bản và chủ website",
-            "Mục tiêu là đơn giản hóa việc kiểm soát huấn luyện AI"
-          ],
-          "why": "Nếu bạn quản lý website hoặc trang đích cho khách hàng, đây là thay đổi nên theo dõi. Hãy xem khi nào có hướng dẫn chi tiết để cân nhắc thiết lập phù hợp.",
-          "source": "Search Engine Roundtable",
-          "date": "30/10",
-          "link": "https://www.seroundtable.com/google-ai-training-control-42430.html"
-        },
-        {
-          "title": "Microsoft ra bộ tùy chọn mới cho Bing: chủ nội dung tự chọn cho AI huấn luyện, làm nguồn dẫn chứng, hoặc cả hai",
-          "summary": "Microsoft vừa công bố các tùy chọn kiểm soát nội dung AI mới trên Bing. Theo hãng, các tùy chọn này mới hơn, đơn giản hơn và rõ ràng hơn. Chủ nội dung có thể quyết định cho phép dùng nội dung để huấn luyện AI, để làm nguồn dẫn chứng (grounding) cho câu trả lời, hoặc cả hai.",
-          "points": [
-            "Ba hướng lựa chọn: huấn luyện AI, grounding, hoặc cả hai.",
-            "Chọn xong vẫn đủ điều kiện xuất hiện trong kết quả tìm kiếm Bing.",
-            "Microsoft nhấn mạnh các tùy chọn mới đơn giản và rõ ràng hơn trước."
-          ],
-          "why": "Nếu bạn quản lý website của mình hoặc của khách hàng, đây là thiết lập nên xem lại để quyết định nội dung được AI dùng đến mức nào. Việc này không làm mất khả năng hiển thị trên Bing.",
+          "why": "Nếu bạn quản lý website hoặc trang đích, đây là cơ hội xem lại cách nội dung được AI sử dụng. Việc từ chối huấn luyện không làm mất khả năng lên Bing Search.",
           "source": "Search Engine Roundtable",
           "date": "30/10",
           "link": "https://www.seroundtable.com/microsoft-bing-ai-controls-42429.html"
         },
         {
-          "title": "Gary Illyes của Google: AI khiến tình trạng bot giả mạo trở nên tệ hơn",
-          "summary": "Gary Illyes của Google vừa trả lời phỏng vấn trên Odys Podcast do Aneta Samkoff dẫn chương trình. Cuộc trò chuyện xoay quanh bot và crawler, với nhiều chủ đề được đề cập. Ông cho rằng việc bot giả mạo danh tính là vấn đề lớn hơn trong thời AI.",
+          "title": "Google áp dụng cách kiểm soát huấn luyện AI mới mà IETF đang xem xét",
+          "summary": "Google đang áp dụng một cơ chế kiểm soát huấn luyện AI mới, hiện đang được IETF cân nhắc. Cơ chế này nhằm giúp nhà xuất bản và chủ website quản lý việc nội dung bị dùng để huấn luyện AI dễ hơn, gọn hơn.",
           "points": [
-            "Người được phỏng vấn: Gary Illyes của Google.",
-            "Người dẫn: Aneta Samkoff, chương trình Odys Podcast.",
-            "Chủ đề chính: bot, crawler và nạn giả mạo bot."
+            "Cơ chế kiểm soát đang được IETF xem xét",
+            "Dành cho nhà xuất bản và chủ website",
+            "Mục tiêu là đơn giản hóa việc kiểm soát huấn luyện AI"
           ],
-          "why": "Bot giả mạo có thể làm nhiễu dữ liệu truy cập và log máy chủ. Khi đọc số liệu lưu lượng từ website, bạn nên cẩn trọng hơn với nguồn truy cập lạ.",
+          "why": "Tin này liên quan nhiều nhất nếu bạn quản lý website hoặc nội dung cho khách hàng. Cùng với thay đổi bên Bing, các nền tảng đang chuẩn hóa cách chủ nội dung kiểm soát AI.",
           "source": "Search Engine Roundtable",
           "date": "30/10",
-          "link": "https://www.seroundtable.com/google-ai-made-bot-impersonation-worse-42422.html"
+          "link": "https://www.seroundtable.com/google-ai-training-control-42430.html"
         },
         {
-          "title": "Tóm tắt tuần: Google biến động hai lần, cập nhật spam, AI Overviews lan rộng, quảng cáo và kết quả tự nhiên hòa vào nhau",
-          "summary": "Bản tin video của Search Engine Roundtable ghi nhận kết quả tìm kiếm Google biến động hai lần trong tuần. Google cũng cảnh báo các công cụ về nguyên tắc chống spam do người dùng tạo ra, và hạ thấp tầm quan trọng của báo cáo về lập chỉ mục mới. Tuần này còn có các chủ đề như AI Overviews xuất hiện ở nhiều nơi, quảng cáo hòa lẫn kết quả tự nhiên, cùng báo cáo thu nhập của Google và Microsoft.",
+          "title": "Tổng kết tuần: Google biến động hai lần, cập nhật chống spam, AI Overviews lan rộng và quảng cáo hòa lẫn kết quả tự nhiên",
+          "summary": "Bản tổng hợp tuần của Search Engine Roundtable ghi nhận Google Search biến động tới hai lần. Google cũng cảnh báo các công cụ SEO về nguyên tắc xử lý spam do người dùng tạo nội dung. Google còn hạ thấp tầm quan trọng của báo cáo lập chỉ mục mới. Bản tóm tắt còn nhắc đến chuyện quảng cáo và kết quả tự nhiên bị pha trộn, cùng kết quả kinh doanh của Google và Microsoft.",
           "points": [
-            "Google Search biến động hai lần trong cùng một tuần.",
-            "Google hạ thấp tầm quan trọng của báo cáo lập chỉ mục mới.",
-            "Chủ đề nổi bật: AI Overviews, quảng cáo hòa với kết quả tự nhiên, báo cáo thu nhập."
+            "Google Search biến động hai lần chỉ trong một tuần.",
+            "Google cảnh báo các công cụ về nguyên tắc spam do người dùng tạo.",
+            "Google và Microsoft cùng công bố kết quả kinh doanh trong tuần."
           ],
-          "why": "Đây là bản tổng hợp nhanh để nắm xu hướng của tuần, nhất là việc quảng cáo và kết quả tự nhiên ngày càng khó tách bạch. Biến động thứ hạng cũng có thể ảnh hưởng đến lưu lượng vào trang đích của chiến dịch.",
+          "why": "Thứ hạng và lưu lượng biến động có thể làm số liệu chiến dịch lệch bất thường. Hãy ghi chú các ngày biến động để đối chiếu khi đọc báo cáo Google Ads.",
           "source": "Search Engine Roundtable",
           "date": "30/10",
           "link": "https://www.seroundtable.com/video-10-30-2026-42418.html"
         },
         {
-          "title": "Diễn đàn tìm kiếm 30/10/2026: quảng cáo trong AI Mode của Google giúp Google kiếm ít hơn trên mỗi lượt tìm",
-          "summary": "Search Engine Roundtable tổng hợp các thảo luận nổi bật trên diễn đàn tìm kiếm trong ngày 30/10/2026. Một chủ đề đáng chú ý là quảng cáo trong AI Mode của Google. Theo đó, Google thu được ít hơn trên mỗi lượt tìm, còn phần tiếp theo của nhận định này không có trong đoạn trích.",
+          "title": "Gary Illyes của Google: AI khiến tình trạng bot giả mạo trở nên tồi tệ hơn",
+          "summary": "Gary Illyes của Google vừa trả lời phỏng vấn trên Odys Podcast do Aneta Samkoff dẫn chương trình. Cuộc trò chuyện xoay quanh bot và trình thu thập dữ liệu, với nhiều chủ đề được đề cập. Ông cho rằng việc bot giả mạo danh tính đang là vấn đề lớn hơn, và AI làm nó nặng thêm.",
           "points": [
-            "Chủ đề: quảng cáo hiển thị trong AI Mode của Google.",
-            "Nhận định: Google kiếm ít hơn trên mỗi lượt tìm kiếm.",
-            "Nguồn: Search Engine Roundtable và các diễn đàn tìm kiếm khác."
+            "Người phỏng vấn là Aneta Samkoff, dẫn chương trình Odys Podcast.",
+            "Chủ đề chính: bot và trình thu thập dữ liệu.",
+            "Theo Illyes, AI làm bot giả mạo trầm trọng hơn."
           ],
-          "why": "Quảng cáo trong AI Mode là khu vực bạn nên theo dõi khi làm Google Ads. Nên đọc bài gốc để biết đầy đủ nhận định, vì đoạn trích chưa nêu hết.",
+          "why": "Bot giả mạo có thể làm sai lệch dữ liệu truy cập trên website của khách hàng. Khi đọc số liệu lưu lượng, bạn nên cẩn trọng hơn với những đột biến khó giải thích.",
+          "source": "Search Engine Roundtable",
+          "date": "30/10",
+          "link": "https://www.seroundtable.com/google-ai-made-bot-impersonation-worse-42422.html"
+        },
+        {
+          "title": "Điểm tin diễn đàn tìm kiếm 30/10/2026: quảng cáo trong Google AI Mode và tác động đến doanh thu mỗi lượt tìm",
+          "summary": "Bản tổng hợp hằng ngày của Search Engine Roundtable điểm lại những gì diễn ra trên các diễn đàn tìm kiếm ngày 30/10/2026. Một chủ đề nổi bật là quảng cáo trong Google AI Mode, nơi Google kiếm được ít hơn trên mỗi lượt tìm kiếm. Phần còn lại của nhận định này không hiển thị đầy đủ trong đoạn trích.",
+          "points": [
+            "Chủ đề nổi bật: quảng cáo trong Google AI Mode.",
+            "Google thu được ít hơn trên mỗi lượt tìm kiếm.",
+            "Nội dung tổng hợp lấy từ các diễn đàn tìm kiếm ngày 30/10."
+          ],
+          "why": "Quảng cáo trong AI Mode có thể ảnh hưởng đến cách bạn đặt chiến dịch. Hãy theo dõi thêm thông tin để biết có cần điều chỉnh chiến lược hay không.",
           "source": "Search Engine Roundtable",
           "date": "30/10",
           "link": "https://www.seroundtable.com/recap-10-30-2026-42424.html"
@@ -448,199 +358,277 @@
       "color": "--c-life",
       "items": [
         {
-          "title": "Giá xăng giảm hơn 1.500 đồng mỗi lít từ 0h ngày 1/11 sau khi thuế tiêu thụ đặc biệt về 0%",
-          "summary": "Từ 0h ngày 1/11, giá các loại xăng được điều chỉnh giảm. Nguyên nhân là thuế tiêu thụ đặc biệt đối với xăng được đưa về mức 0%. Mức giảm dao động từ 1.580 đến 1.800 đồng mỗi lít tùy loại.",
+          "title": "Giá xăng giảm gần 1.600 đồng mỗi lít từ 0h ngày 1/11",
+          "summary": "Từ 0h ngày 1/11, thuế tiêu thụ đặc biệt đối với xăng được đưa về 0%. Nhờ vậy giá các loại xăng giảm trong khoảng 1.580–1.800 đồng mỗi lít.",
           "points": [
-            "Giá mới áp dụng từ 0h ngày 1/11",
-            "Mức giảm 1.580–1.800 đồng mỗi lít tùy loại xăng",
-            "Thuế tiêu thụ đặc biệt đối với xăng về 0%"
+            "Áp dụng từ 0h ngày 1/11, tức là đã có hiệu lực từ hôm nay",
+            "Mức giảm tùy loại xăng, từ 1.580 đến 1.800 đồng mỗi lít",
+            "Nguyên nhân: thuế tiêu thụ đặc biệt về 0%"
           ],
-          "why": "Chi phí đi lại hằng ngày nhẹ bớt, nhất là khi bạn thường xuyên di chuyển gặp khách hàng hoặc đối tác. Đây cũng là dịp để rà lại khoản chi cho xăng xe trong tháng.",
+          "why": "Người thường xuyên chạy xe đi gặp khách hàng hay đối tác sẽ tiết kiệm được một khoản nhỏ mỗi lần đổ xăng. Có thể tính lại ngân sách đi lại trong tháng.",
           "source": "VnExpress",
           "date": "31/10",
           "link": "https://vnexpress.net/gia-xang-giam-gan-1-600-dong-mot-lit-5139243.html"
         },
         {
-          "title": "Mùa mưa ở TP.HCM và Nam Bộ dự báo kết thúc sớm hơn trung bình 10–15 ngày",
-          "summary": "Dự báo cho biết mùa mưa tại TP.HCM và cả Nam Bộ sẽ chấm dứt từ tuần thứ hai của tháng 11. Mốc này sớm hơn mức trung bình nhiều năm khoảng 10–15 ngày. Nắng nóng có thể bắt đầu xuất hiện từ tháng 12.",
+          "title": "Giá điện bán lẻ bình quân giảm 2% từ ngày 1/11",
+          "summary": "Từ ngày 1/11, giá bán lẻ điện bình quân giảm xuống còn gần 2.160 đồng mỗi kWh, tương đương mức giảm 2%. Đây là lần giảm đầu tiên sau gần 20 năm giá điện liên tục tăng.",
           "points": [
-            "Mùa mưa kết thúc từ tuần thứ hai tháng 11",
+            "Giá bình quân mới: gần 2.160 đồng mỗi kWh",
+            "Mức giảm 2%, áp dụng từ ngày 1/11",
+            "Lần giảm đầu tiên sau gần 20 năm tăng liên tục"
+          ],
+          "why": "Hóa đơn điện của nhà và văn phòng có thể nhẹ hơn một chút từ kỳ này. Nên đối chiếu số liệu với thông báo chính thức của EVN, vì một bài khác nêu mức giảm khác.",
+          "source": "VnExpress",
+          "date": "31/10",
+          "link": "https://vnexpress.net/gia-dien-giam-2-tu-ngay-mai-5139154.html"
+        },
+        {
+          "title": "Thuế tiêu thụ đặc biệt với xăng về 0% từ 1/11 đến hết tháng 3/2027",
+          "summary": "Chính phủ vừa ban hành nghị quyết đưa thuế tiêu thụ đặc biệt của các loại xăng về 0%. Mức thuế này áp dụng từ ngày 1/11 đến hết tháng 3/2027.",
+          "points": [
+            "Hiệu lực từ ngày 1/11/2026",
+            "Kéo dài đến hết tháng 3/2027",
+            "Áp dụng cho các loại xăng, theo nghị quyết của Chính phủ"
+          ],
+          "why": "Đây là lý do giá xăng giảm và chính sách có thời hạn rõ ràng. Có thể tạm yên tâm về chi phí xăng đến hết tháng 3/2027, nhưng sau đó mức thuế có thể khác.",
+          "source": "VnExpress",
+          "date": "31/10",
+          "link": "https://vnexpress.net/thue-tieu-thu-dac-biet-voi-xang-ve-0-tu-ngay-mai-5139239.html"
+        },
+        {
+          "title": "Biểu giá điện sinh hoạt 5 bậc mới: dùng bao nhiêu kWh thì hóa đơn mới tăng?",
+          "summary": "Sau khi EVN thông báo giảm giá điện bình quân, Bộ Công Thương ban hành Quyết định 2892 về giá bán điện. Theo biểu giá mới, giá điện sinh hoạt được chính thức điều chỉnh giảm, chia theo 5 bậc. Bài viết phân tích mức tiêu thụ nào thì hóa đơn mới tăng, nhưng phần trích không nêu chi tiết.",
+          "points": [
+            "Văn bản mới: Quyết định 2892 của Bộ Công Thương",
+            "Giá điện sinh hoạt tính theo biểu giá 5 bậc",
+            "Bài này ghi mức giảm bình quân 20%, khác bài khác (2%)"
+          ],
+          "why": "Hóa đơn nhà bạn tăng hay giảm còn tùy số kWh dùng mỗi tháng. Nên xem lại số điện đã dùng và kiểm tra con số chính xác trong Quyết định 2892 hoặc thông báo của EVN.",
+          "source": "Thanh Niên",
+          "date": "01/11",
+          "link": "https://thanhnien.vn/bieu-gia-dien-sinh-hoat-5-bac-dung-bao-nhieu-kwh-hoa-don-tien-dien-moi-tang-185261101171820854.htm"
+        },
+        {
+          "title": "Mùa mưa ở TP.HCM và Nam Bộ dự báo kết thúc sớm nửa tháng",
+          "summary": "Mùa mưa ở TP.HCM và Nam Bộ được dự báo kết thúc từ tuần thứ hai của tháng 11. Thời điểm này sớm hơn trung bình nhiều năm khoảng 10–15 ngày. Nắng nóng có thể bắt đầu xuất hiện từ tháng 12.",
+          "points": [
+            "Kết thúc từ tuần thứ hai tháng 11",
             "Sớm hơn trung bình 10–15 ngày",
             "Nắng nóng có thể xuất hiện từ tháng 12"
           ],
-          "why": "Thời tiết khô ráo hơn sẽ thuận tiện cho việc đi lại và làm việc bên ngoài. Bạn nên chuẩn bị sớm cho những ngày nắng nóng cuối năm.",
+          "why": "Thời tiết ráo hơn giúp việc đi lại, gặp khách hàng thuận tiện hơn. Nên chuẩn bị sớm cho những ngày nắng nóng từ tháng 12.",
           "source": "VnExpress",
           "date": "31/10",
           "link": "https://vnexpress.net/mua-mua-o-nam-bo-ket-thuc-som-nua-thang-5138731.html"
         },
         {
-          "title": "Thời tiết ngày 1/11: cả nước ổn định, ban ngày nhiều mây đến nắng, chiều tối có nơi mưa rào",
-          "summary": "Dự báo cho ngày đầu tháng 11 cho thấy thời tiết trên cả nước nhìn chung ổn định. Ban ngày trời nhiều mây đến nắng ráo. Đến chiều tối, một số nơi có thể xuất hiện mưa rào.",
+          "title": "Tháng 11 dự báo ít bão và áp thấp nhiệt đới hơn trung bình do El Nino mạnh",
+          "summary": "Sau một tháng không có bão, dự báo cho thấy trong tháng 11 bão và áp thấp nhiệt đới vẫn hoạt động ít hơn mức trung bình các năm. Nguyên nhân được nêu là hiện tượng El Nino rất mạnh.",
           "points": [
-            "Dự báo cho ngày 1/11, áp dụng trên cả nước",
-            "Ban ngày nhiều mây đến nắng ráo",
-            "Chiều về tối có nơi mưa rào"
+            "Trước đó đã có một tháng không có bão",
+            "Tháng 11: bão và áp thấp nhiệt đới ít hơn trung bình",
+            "Nguyên nhân: El Nino rất mạnh"
           ],
-          "why": "Nếu chiều tối có việc ra ngoài, bạn nên mang theo áo mưa phòng khi gặp mưa rào bất chợt.",
+          "why": "Nguy cơ bão trong tháng 11 được dự báo thấp hơn thường lệ, nên lịch đi lại và công tác ít bị xáo trộn hơn. Dù vậy vẫn nên theo dõi dự báo thời tiết hằng ngày.",
           "source": "Tuổi Trẻ",
           "date": "01/11",
-          "link": "https://tuoitre.vn/thoi-tiet-hom-nay-1-11-ngay-dau-thang-thoi-tiet-ca-nuoc-on-dinh-100261031153636456.htm"
+          "link": "https://tuoitre.vn/thang-11-mua-bao-dien-bien-the-nao-sau-mot-thang-khong-co-bao-100261101141319696.htm"
         },
         {
-          "title": "Tiểu thương đường Cách Mạng Tháng Tám xoay xở bán hàng sau rào chắn công trình metro",
-          "summary": "Rào chắn tôn của công trình metro Bến Thành - Tham Lương gần như che kín mặt tiền nhiều cửa hàng. Lối đi trước quán chỉ vừa một xe máy, khiến việc buôn bán của tiểu thương trên đường Cách Mạng Tháng Tám gặp nhiều khó khăn. Nhiều người phải nghĩ đủ cách để giữ khách.",
+          "title": "Công trường metro Bến Thành - Tham Lương khiến người dân đổi đường, quán xá xoay xở giữ khách",
+          "summary": "Nhiều đoạn đường Cách Mạng Tháng Tám và Trường Chinh đang bị rào chắn để thi công tuyến metro Bến Thành - Tham Lương. Người dân buộc phải tìm lộ trình khác để di chuyển. Các hàng quán dọc công trường cũng tìm cách giữ chân khách.",
           "points": [
-            "Rào chắn tôn gần như che kín mặt tiền",
-            "Lối đi trước quán chỉ vừa một xe máy",
-            "Ảnh hưởng tiểu thương dọc đường Cách Mạng Tháng Tám"
+            "Hai tuyến đường bị ảnh hưởng: Cách Mạng Tháng Tám và Trường Chinh",
+            "Công trường thuộc tuyến metro Bến Thành - Tham Lương",
+            "Người đi đường đổi lộ trình, quán xá phải tìm cách giữ khách"
           ],
-          "why": "Nếu bạn có khách hàng là cửa hàng nhỏ quanh khu vực này, hãy lưu ý họ đang khó thu hút khách trực tiếp. Đây có thể là lúc họ cần thêm kênh quảng cáo trực tuyến.",
-          "source": "VnExpress",
-          "date": "31/10",
-          "link": "https://vnexpress.net/tieu-thuong-xoay-du-cach-ban-hang-sau-rao-chan-metro-ben-thanh-tham-luong-5136661.html"
-        },
-        {
-          "title": "Cư xá Thanh Đa: dự kiến cưỡng chế các hộ dân chưa di dời trong tháng 11.2026",
-          "summary": "Công tác bồi thường tại dự án cư xá Thanh Đa đã hoàn tất với 1.183 trên tổng số 1.354 căn. Phường Bình Quới, TP.HCM dự kiến cưỡng chế các trường hợp còn lại ngay trong tháng 11.2026.",
-          "points": [
-            "Đã bồi thường 1.183/1.354 căn",
-            "Phường Bình Quới là nơi tổ chức thực hiện",
-            "Dự kiến cưỡng chế các hộ còn lại trong tháng 11.2026"
-          ],
-          "why": "Đây là tin đáng theo dõi nếu bạn có người thân, khách hàng hoặc công việc liên quan đến khu vực Thanh Đa.",
-          "source": "Thanh Niên",
-          "date": "01/11",
-          "link": "https://thanhnien.vn/cu-xa-thanh-da-tphcm-du-kien-cuong-che-di-doi-cac-ho-dan-trong-thang-112026-185261031125136746.htm"
-        },
-        {
-          "title": "Công ty ở TP.HCM đóng cửa, nợ lương và BHXH: người lao động cần biết quyền lợi gì",
-          "summary": "Một công ty tại TP.HCM đã đóng cửa, còn nợ lương và bảo hiểm xã hội của người lao động. BHXH TP.HCM cho biết 454 lao động Công ty Hoàng Sinh chưa được xác nhận quá trình đóng. Những người này vẫn có thể tiếp tục tham gia BHXH tại nơi làm việc mới.",
-          "points": [
-            "454 lao động Công ty Hoàng Sinh chưa được xác nhận quá trình đóng BHXH",
-            "Công ty đóng cửa, nợ lương và BHXH",
-            "Có thể tiếp tục tham gia BHXH ở nơi làm việc mới"
-          ],
-          "why": "Bạn nên kiểm tra định kỳ quá trình đóng BHXH của mình để kịp phát hiện thiếu sót. Nếu chẳng may đổi việc, quyền tham gia BHXH vẫn được tiếp tục ở nơi mới.",
-          "source": "Thanh Niên",
-          "date": "01/11",
-          "link": "https://thanhnien.vn/mot-cong-ty-o-tphcm-dong-cua-no-luong-bhxh-quyen-loi-lao-dong-ra-sao-18526103110012147.htm"
-        },
-        {
-          "title": "Vàng miếng đồng loạt giảm 2,4 triệu đồng, còn 139 triệu đồng một lượng",
-          "summary": "Giá vàng thế giới đi xuống mạnh nên các thương hiệu trong nước cùng hạ giá bán vàng miếng. Mức giảm là 2,4 triệu đồng so với cuối ngày hôm trước. Giá bán sau điều chỉnh còn 139 triệu đồng một lượng.",
-          "points": [
-            "Giảm 2,4 triệu đồng so với cuối ngày hôm trước",
-            "Giá bán còn 139 triệu đồng một lượng",
-            "Các thương hiệu trong nước giảm đồng loạt theo giá thế giới"
-          ],
-          "why": "Giá vàng biến động nhanh, nhất là khi thế giới đang giảm sâu. Mức giá trên được ghi nhận lúc 10 giờ sáng 31/10, nên cần kiểm tra lại giá mới nhất trước khi ra quyết định.",
-          "source": "VnExpress",
-          "date": "31/10",
-          "link": "https://vnexpress.net/gia-vang-moi-nhat-hom-nay-ngay-31-10-5139058.html"
-        },
-        {
-          "title": "Vừa đi vừa uống nước ừng ực dễ khiến bụng tức, người uể oải",
-          "summary": "Nhiều người có thói quen dốc chai uống vội khi đang di chuyển trên đường hoặc đi bộ để hết khát nhanh. Bài viết cảnh báo cách nạp nước cấp tốc lúc đang vận động gây khó chịu cho cơ thể. Hai biểu hiện được nhắc đến là bụng tức và người uể oải.",
-          "points": [
-            "Thói quen phổ biến: uống vội khi đi đường hoặc đi bộ",
-            "Biểu hiện thường gặp: bụng tức, người uể oải",
-            "Vấn đề nằm ở việc uống dồn dập lúc đang vận động"
-          ],
-          "why": "Người hay di chuyển ngoài đường dễ mắc thói quen này mà không để ý. Lần sau nên uống chậm rãi thay vì uống dồn một lúc.”",
-          "source": "Thanh Niên",
-          "date": "01/11",
-          "link": "https://thanhnien.vn/vua-di-vua-uong-nuoc-ung-uc-sao-bung-tuc-nguoi-ue-oai-185261028103817418.htm"
-        },
-        {
-          "title": "Phụ huynh kiểm tra bữa ăn bán trú: ai có quyền cho là cản trở?",
-          "summary": "Bài viết nêu hai tình huống phụ huynh quan tâm đến bếp ăn bán trú. Một người thấy thực phẩm có dấu hiệu không bảo đảm chất lượng và yêu cầu nhà trường kiểm tra trước khi nấu. Người khác muốn đối chiếu định lượng thực phẩm thực tế. Từ đó bài đặt câu hỏi ai có thẩm quyền xác định phụ huynh đang cản trở bữa ăn.",
-          "points": [
-            "Trường hợp 1: nghi thực phẩm không bảo đảm, yêu cầu kiểm tra trước khi chế biến",
-            "Trường hợp 2: đề nghị đối chiếu định lượng thực phẩm thực tế",
-            "Câu hỏi chính: ai có quyền kết luận phụ huynh cản trở"
-          ],
-          "why": "Nhà có con học bán trú nên biết quyền giám sát bữa ăn của con đến đâu. Đây cũng là vấn đề nhiều phụ huynh có thể gặp ở trường của mình.",
-          "source": "Thanh Niên",
-          "date": "01/11",
-          "link": "https://thanhnien.vn/ai-co-quyen-xac-dinh-phu-huynh-dang-can-tro-bua-an-ban-tru-185261031105553636.htm"
-        },
-        {
-          "title": "Chưa có sàn vận tải số, doanh nghiệp logistics phải chạy xe rỗng gây lãng phí",
-          "summary": "Hiện chưa có hệ thống giao dịch vận tải số đủ rộng để nối chủ hàng với doanh nghiệp vận tải. Vì vậy thị trường logistics bị lãng phí nhiều, một biểu hiện là xe chạy rỗng. Tình trạng này diễn ra ở TP.HCM và cả nước.",
-          "points": [
-            "Thiếu hệ thống giao dịch vận tải số kết nối rộng",
-            "Hai bên cần kết nối: chủ hàng và doanh nghiệp vận tải",
-            "Hệ quả: xe chạy rỗng, lãng phí ở TP.HCM và cả nước"
-          ],
-          "why": "Nếu bạn làm quảng cáo cho ngành vận tải hoặc logistics, đây là điểm nghẽn lớn của khách hàng. Nhu cầu về giải pháp kết nối số trong ngành có thể đáng để theo dõi.",
-          "source": "Thanh Niên",
-          "date": "01/11",
-          "link": "https://thanhnien.vn/thieu-san-van-tai-so-doanh-nghiep-phai-chay-xe-rong-lang-phi-18526103120200965.htm"
-        },
-        {
-          "title": "TP.HCM ra mắt ba mô hình chuyển đổi số để chính quyền chủ động đến với dân",
-          "summary": "UBND TP.HCM vừa tổ chức lễ ra mắt ba mô hình chuyển đổi số được đánh giá là tiên phong, sáng tạo và nhân văn. Các mô hình tập trung vào kết nối giao thông công cộng và kết nối kho dữ liệu để giải quyết thủ tục hành chính. Bài viết nhìn đây như bước chính quyền chủ động tìm đến người dân.",
-          "points": [
-            "Đơn vị tổ chức: UBND TP.HCM",
-            "Ba mô hình chuyển đổi số mới được giới thiệu",
-            "Lĩnh vực: giao thông công cộng và dữ liệu cho thủ tục hành chính"
-          ],
-          "why": "Người dân TP.HCM có thể sẽ dùng các tiện ích này khi đi lại và làm thủ tục. Nên theo dõi để biết khi nào được áp dụng.",
-          "source": "Thanh Niên",
-          "date": "01/11",
-          "link": "https://thanhnien.vn/khi-chinh-quyen-chu-dong-tim-den-nguoi-dan-185261031175626826.htm"
-        },
-        {
-          "title": "Đại biểu: đấu giá căng tin có thể đẩy giá suất ăn học sinh lên cao",
-          "summary": "Đại biểu Châu Quỳnh Dao cho rằng đấu giá mặt bằng căng tin trường học có thể làm giá suất ăn tăng. Theo bà, tiền thuê mặt bằng sau đấu giá có thể chiếm 30-40% giá suất ăn. Hệ quả là học sinh có thể phải mua đồ ăn bên ngoài với giá đắt hơn.",
-          "points": [
-            "Người nêu ý kiến: đại biểu Châu Quỳnh Dao",
-            "Tiền thuê mặt bằng có thể chiếm 30-40% giá suất ăn",
-            "Học sinh có thể phải mua đồ ăn đắt hơn bên ngoài"
-          ],
-          "why": "Phụ huynh nên theo dõi vì giá bữa ăn của con ở trường có thể bị ảnh hưởng. Đây cũng là cách nhìn về chi phí ẩn trong một khoản chi quen thuộc.",
-          "source": "VnExpress",
-          "date": "31/10",
-          "link": "https://vnexpress.net/dai-bieu-dau-gia-cang-tin-day-gia-suat-an-hoc-sinh-5139088.html"
-        },
-        {
-          "title": "Phiên giao dịch việc làm Hà Nội: gần 8.000 chỉ tiêu, hơn 77% có lương từ 15 triệu đồng",
-          "summary": "Một phiên giao dịch việc làm tại Hà Nội vừa đưa ra gần 8.000 chỉ tiêu tuyển dụng. Phần lớn vị trí có mức thu nhập khá, từ 15 triệu đồng mỗi tháng trở lên. Dù vậy, các doanh nghiệp xây dựng vẫn gặp khó khi tìm người làm.",
-          "points": [
-            "Gần 8.000 chỉ tiêu tuyển dụng trong một phiên giao dịch",
-            "Hơn 77% vị trí có thu nhập từ 15 triệu đồng mỗi tháng",
-            "Doanh nghiệp xây dựng vẫn khó tuyển lao động"
-          ],
-          "why": "Đây là tín hiệu cho thấy nhu cầu nhân lực ở nhóm xây dựng và giao thông vẫn cao, dù lương đã khá tốt. Nếu làm quảng cáo cho mảng tuyển dụng hay xây dựng, bạn nên để ý nhóm khách hàng này.",
-          "source": "VnExpress",
-          "date": "31/10",
-          "link": "https://vnexpress.net/san-lao-dong-xay-dung-giao-thong-luong-tu-15-trieu-dong-5139111.html"
-        },
-        {
-          "title": "Giao dịch tiền số OTC có giúp tránh rủi ro bị khóa tài khoản ngân hàng không?",
-          "summary": "Theo chuyên gia, hình thức giao dịch OTC khắc phục được một số điểm bất tiện của giao dịch P2P. Tuy nhiên, nhà đầu tư vẫn có thể gặp rủi ro liên quan đến nguồn tiền. Khi cần, họ cũng phải giải trình được nguồn tiền đó.",
-          "points": [
-            "OTC giải quyết một số bất tiện của P2P",
-            "Nhà đầu tư vẫn có thể vướng rủi ro về nguồn tiền",
-            "Có thể phải giải trình khi được yêu cầu"
-          ],
-          "why": "OTC không có nghĩa là hết rủi ro. Nếu bạn có giao dịch tiền số, hãy nắm rõ nguồn tiền của mình và sẵn sàng giải trình trước khi chọn cách giao dịch.",
+          "why": "Nếu hay đi qua hai trục đường này, bạn nên tính lại lộ trình và thời gian trước khi ra khỏi nhà. Đây cũng là ví dụ cho thấy thói quen di chuyển và mua sắm quanh khu vực có thể thay đổi.",
           "source": "VnExpress",
           "date": "01/11",
-          "link": "https://vnexpress.net/co-nen-giao-dich-tien-so-otc-de-tranh-rui-ro-khoa-tai-khoan-ngan-hang-5138336.html"
+          "link": "https://vnexpress.net/nguoi-dan-doi-lo-trinh-hang-quan-xoay-xo-ben-cong-truong-metro-5138925.html"
         },
         {
-          "title": "Rác từ lồng nuôi tôm hùm tràn dọc bờ biển Cam Ranh, bốc mùi và ảnh hưởng du lịch",
-          "summary": "Rác thải từ các lồng nuôi tôm hùm đang tích tụ dọc bờ biển Cam Ranh. Nhiều thời điểm khu vực này bốc mùi hôi. Tình trạng này gây ảnh hưởng đến môi trường và hoạt động du lịch của địa phương.",
+          "title": "Đã gỡ biển báo tốc độ tối thiểu 30 km/giờ trước trạm thu phí cao tốc Phan Thiết - Dầu Giây",
+          "summary": "Sau khi tài xế phản ánh, biển báo hạn chế tốc độ tối thiểu 30 km/giờ đặt trước trạm thu phí cao tốc Phan Thiết - Dầu Giây đã được tháo dỡ. Trạm này thuộc địa phận xã Ông Quế, thành phố Đồng Nai.",
           "points": [
-            "Nguồn rác chính đến từ các lồng nuôi tôm hùm",
-            "Rác tích tụ dọc bờ biển Cam Ranh",
-            "Nhiều thời điểm có mùi hôi, ảnh hưởng du lịch"
+            "Biển báo tốc độ tối thiểu 30 km/giờ đã được tháo",
+            "Vị trí: trước trạm thu phí cao tốc Phan Thiết - Dầu Giây",
+            "Việc tháo biển diễn ra sau phản ánh của tài xế"
           ],
-          "why": "Nếu bạn định đi nghỉ ở Cam Ranh, nên tìm hiểu tình hình bãi biển trước khi đi. Nếu làm quảng cáo cho du lịch khu vực này, hãy theo dõi vì hình ảnh điểm đến có thể bị ảnh hưởng.",
+          "why": "Ai thường chạy cao tốc này cần biết biển báo ở đoạn trước trạm thu phí đã thay đổi. Tin này cũng cho thấy phản ánh của người dân có thể dẫn đến điều chỉnh thực tế.",
+          "source": "Thanh Niên",
+          "date": "01/11",
+          "link": "https://thanhnien.vn/da-thao-bien-bao-toc-do-toi-thieu-30-km-gio-tai-tram-thu-phi-cao-toc-185261101145419542.htm"
+        },
+        {
+          "title": "Những chính sách mới nổi bật có hiệu lực từ tháng 11: giáo dục, xử phạt dữ liệu, phụ huynh",
+          "summary": "Từ tháng 11 có một số quy định mới bắt đầu áp dụng. Các quy định này nói cụ thể hơn về phổ cập giáo dục mầm non, mức phạt hành chính trong lĩnh vực dữ liệu, và quy chế hoạt động của ban đại diện cha mẹ học sinh.",
+          "points": [
+            "Có hiệu lực từ tháng 11",
+            "Phổ cập mầm non được quy định cụ thể hơn",
+            "Có quy định về mức phạt hành chính trong lĩnh vực dữ liệu"
+          ],
+          "why": "Người làm quảng cáo số thường xử lý dữ liệu, nên nên tìm hiểu kỹ quy định phạt về dữ liệu. Nhà có con nhỏ cũng nên xem phần về mầm non và ban đại diện cha mẹ học sinh.",
           "source": "VnExpress",
-          "date": "31/10",
-          "link": "https://vnexpress.net/rac-tu-long-tom-hum-bua-vay-bo-bien-cam-ranh-5138277.html"
+          "date": "01/11",
+          "link": "https://vnexpress.net/chinh-sach-noi-bat-co-hieu-luc-tu-thang-11-5139157.html"
+        },
+        {
+          "title": "Giáo dục bắt buộc ở tiểu học và THCS: ai có nghĩa vụ và trách nhiệm thực hiện?",
+          "summary": "Từ hôm nay 1.11, Nghị định 353/2026/NĐ-CP của Chính phủ chính thức có hiệu lực. Nghị định quy định cụ thể về giáo dục bắt buộc ở cấp tiểu học và THCS. Đây được xem là bước triển khai quan trọng, và bài viết điểm lại những ai có nghĩa vụ, trách nhiệm trong việc thực hiện.",
+          "points": [
+            "Nghị định 353/2026/NĐ-CP có hiệu lực từ hôm nay, 1.11",
+            "Áp dụng cho giáo dục bắt buộc cấp tiểu học và THCS",
+            "Bài nêu rõ các bên có nghĩa vụ và trách nhiệm"
+          ],
+          "why": "Gia đình có con trong độ tuổi tiểu học hoặc THCS nên xem nghị định để hiểu trách nhiệm của phụ huynh và các bên liên quan.",
+          "source": "Thanh Niên",
+          "date": "01/11",
+          "link": "https://thanhnien.vn/giao-duc-bat-buoc-nhung-ai-co-nghia-vu-trach-nhiem-thuc-hien-185261101154308595.htm"
+        },
+        {
+          "title": "Đề xuất cấm chuyển nhượng hợp đồng mua bán nhà ở hình thành trong tương lai: chống đầu cơ hay hạn chế quyền giao dịch?",
+          "summary": "Có đề xuất cấm chuyển nhượng hợp đồng mua bán nhà ở hình thành trong tương lai. Mục tiêu là ngăn đầu cơ, lướt sóng và bảo vệ người mua nhà ở thực. Bài viết đặt câu hỏi liệu đề xuất này chống đầu cơ hay sẽ hạn chế quyền giao dịch hợp pháp.",
+          "points": [
+            "Đối tượng: hợp đồng mua bán nhà ở hình thành trong tương lai",
+            "Mục tiêu: ngăn đầu cơ, lướt sóng, bảo vệ người mua ở thực",
+            "Tranh luận: quyền giao dịch hợp pháp có bị hạn chế không"
+          ],
+          "why": "Nếu bạn đang cân nhắc mua nhà chưa xây xong hoặc định bán lại hợp đồng, hãy theo dõi tin này. Hiện mới là đề xuất, chưa phải quy định chính thức.",
+          "source": "Tuổi Trẻ",
+          "date": "01/11",
+          "link": "https://tuoitre.vn/de-xuat-cam-chuyen-nhuong-hop-dong-mua-ban-nha-o-hinh-thanh-trong-tuong-lai-chong-dau-co-hay-han-che-quyen-giao-dich-hop-phap-100261101153435414.htm"
+        },
+        {
+          "title": "Gần 200 ngành nghề trung cấp, cao đẳng dự kiến được giảm 70% học phí",
+          "summary": "Bộ GD-ĐT đã ban hành dự thảo danh mục ngành, nghề đào tạo nặng nhọc, độc hại, nguy hiểm. Danh mục bổ sung nhiều ngành thuộc lĩnh vực sức khỏe, an ninh, quốc phòng, đồng thời bỏ ra ngoài hàng loạt nghề. Gần 200 ngành nghề trình độ trung cấp, cao đẳng dự kiến được giảm 70% học phí.",
+          "points": [
+            "Gần 200 ngành nghề trung cấp, cao đẳng dự kiến giảm 70% học phí",
+            "Bổ sung nhiều ngành sức khỏe, an ninh, quốc phòng",
+            "Nhiều nghề bị đưa ra khỏi danh mục; hiện mới là dự thảo"
+          ],
+          "why": "Nhà có người định học nghề hoặc cao đẳng nên kiểm tra ngành quan tâm có trong danh mục không. Vì mới là dự thảo, nội dung cuối cùng vẫn có thể thay đổi.",
+          "source": "Thanh Niên",
+          "date": "01/11",
+          "link": "https://thanhnien.vn/gan-200-nganh-nghe-trinh-do-trung-cap-cao-dang-du-kien-giam-70-hoc-phi-185261101131053011.htm"
+        },
+        {
+          "title": "Đại biểu Quốc hội đề nghị không để lỗi dữ liệu đất đai làm gián đoạn giao dịch của người dân",
+          "summary": "Một số đại biểu Quốc hội cho rằng dữ liệu đất đai bị thiếu hoặc sai lệch không nên trở thành rào cản với người dân. Sự cố của hệ thống thông tin đất đai cũng không được làm ngưng trệ quyền giao dịch. Các đại biểu đã nêu đề nghị này trong phiên thảo luận.",
+          "points": [
+            "Dữ liệu đất đai thiếu hoặc sai lệch là vấn đề được nêu ra",
+            "Sự cố hệ thống thông tin đất đai cũng bị nhắc tới",
+            "Yêu cầu chính: bảo đảm quyền giao dịch của người dân"
+          ],
+          "why": "Nếu bạn đang có kế hoạch mua bán hoặc chuyển nhượng đất, đây là chủ đề nên theo dõi. Việc hoàn thiện dữ liệu đất đai có thể ảnh hưởng đến thủ tục của bạn.",
+          "source": "VnExpress",
+          "date": "01/11",
+          "link": "https://vnexpress.net/khong-de-loi-du-lieu-can-tro-giao-dich-dat-dai-5139312.html"
+        },
+        {
+          "title": "Cô gái 18 tuổi báo công an vì bị “bắt cóc online”, đã chuyển gần 2 tỉ đồng cho kẻ lừa đảo",
+          "summary": "Công an TP.HCM đang điều tra hai vụ “bắt cóc online” nhắm vào hai cô gái 18 tuổi. Một nạn nhân ở phường Dĩ An vì quá lo sợ đã cạy két sắt, lấy tiền và vàng đem bán rồi chuyển cho kẻ lừa đảo. Số tiền bị chuyển đi lên tới gần 2 tỉ đồng.",
+          "points": [
+            "Có 2 vụ, cả hai nạn nhân đều 18 tuổi",
+            "Nạn nhân ở phường Dĩ An cạy két sắt lấy tiền, vàng",
+            "Số tiền chuyển cho kẻ lừa đảo: gần 2 tỉ đồng"
+          ],
+          "why": "Đây là chiêu lừa đánh vào nỗi sợ của người trẻ. Hãy nhắc người thân: nếu nhận cuộc gọi đe dọa kiểu này thì báo công an, đừng chuyển tiền.",
+          "source": "Tuổi Trẻ",
+          "date": "01/11",
+          "link": "https://tuoitre.vn/co-gai-18-tuoi-bao-cong-an-vi-bi-bat-coc-online-chuyen-gan-2-ti-cho-ke-lua-dao-100261101154417314.htm"
+        },
+        {
+          "title": "Bộ Tài chính: hơn 2,5 triệu doanh nghiệp ngừng hoạt động vẫn chưa đóng mã số thuế",
+          "summary": "Theo số liệu của Bộ Tài chính, còn hơn 2,5 triệu doanh nghiệp đã ngừng hoạt động nhưng chưa đóng mã số thuế. Nhiều doanh nghiệp trong số này đã bỏ địa chỉ đăng ký từ nhiều năm trước.",
+          "points": [
+            "Hơn 2,5 triệu doanh nghiệp chưa đóng mã số thuế",
+            "Các doanh nghiệp này đã ngừng hoạt động",
+            "Nhiều doanh nghiệp bỏ địa chỉ đăng ký nhiều năm"
+          ],
+          "why": "Nếu bạn có công ty riêng hoặc làm việc với doanh nghiệp đã ngừng kinh doanh, nên kiểm tra tình trạng mã số thuế. Việc này giúp tránh tồn đọng thủ tục.",
+          "source": "VnExpress",
+          "date": "01/11",
+          "link": "https://vnexpress.net/bo-tai-chinh-hon-2-5-trieu-doanh-nghiep-ngung-hoat-dong-chua-dong-ma-so-thue-5138092.html"
+        },
+        {
+          "title": "Doanh nghiệp khu công nghiệp Hải Phòng dự kiến thưởng Tết 2027 khoảng 1,11 tháng lương",
+          "summary": "Hơn 230 doanh nghiệp trong các khu công nghiệp ở Hải Phòng đã lên phương án thưởng Tết 2027. Mức thưởng dự kiến khoảng 1,11 tháng lương. Tính bình quân, mỗi người nhận khoảng 7,7 triệu đồng.",
+          "points": [
+            "Hơn 230 doanh nghiệp trong khu công nghiệp Hải Phòng",
+            "Thưởng Tết khoảng 1,11 tháng lương",
+            "Bình quân khoảng 7,7 triệu đồng mỗi người"
+          ],
+          "why": "Đây là mốc tham khảo nếu bạn muốn hình dung mặt bằng thưởng Tết. Nó cũng giúp bạn cân nhắc kế hoạch chi tiêu cuối năm.",
+          "source": "VnExpress",
+          "date": "01/11",
+          "link": "https://vnexpress.net/doanh-nghiep-hai-phong-len-phuong-an-thuong-tet-2027-5139335.html"
+        },
+        {
+          "title": "Toàn cảnh 17h: người vá xe miễn phí bị đe dọa, siêu El Nino khiến mùa mưa kết thúc sớm",
+          "summary": "Bản tin Toàn cảnh 17h của Thanh Niên điểm các tin nóng trong ngày và những câu chuyện được quan tâm trên mạng xã hội. Hai tin nổi bật là chuyện một người bị đe dọa vì vá xe miễn phí và thông tin siêu El Nino làm mùa mưa kết thúc sớm.",
+          "points": [
+            "Một người bị đe dọa vì vá xe miễn phí",
+            "Siêu El Nino khiến mùa mưa kết thúc sớm",
+            "Bản tin phát lúc 17h ngày 01/11"
+          ],
+          "why": "Mùa mưa kết thúc sớm là thông tin thời tiết đáng để ý khi bạn sắp xếp việc đi lại và sinh hoạt. Có thể xem thêm video để biết chi tiết.",
+          "source": "Thanh Niên",
+          "date": "01/11",
+          "link": "https://thanhnien.vn/toan-canh-17h-bi-de-doa-vi-va-xe-mien-phi-sieu-el-nino-khien-mua-mua-ket-thuc-som-185261101164649461.htm"
+        },
+        {
+          "title": "Cà Mau tính dùng sà lan, xe bồn chở nước cho dân nếu El Nino gây hạn mặn nghiêm trọng",
+          "summary": "Tỉnh Cà Mau đã chuẩn bị phương án hỗ trợ nước cho người dân nếu El Nino khiến hạn mặn trở nên nghiêm trọng. Theo phương án, địa phương sẽ dùng sà lan và xe bồn để chở nước đến cho dân.",
+          "points": [
+            "Phương tiện dự kiến: sà lan và xe bồn",
+            "Chỉ áp dụng nếu hạn mặn xảy ra nghiêm trọng",
+            "Nguyên nhân được nhắc tới: El Nino"
+          ],
+          "why": "Tin này cho thấy các địa phương đang chuẩn bị ứng phó với tác động của El Nino. Bạn nên tiếp tục theo dõi thông tin thời tiết và nguồn nước.",
+          "source": "Tuổi Trẻ",
+          "date": "01/11",
+          "link": "https://tuoitre.vn/ca-mau-se-dung-sa-lan-xe-bon-cho-nuoc-cho-nguoi-dan-neu-el-nino-nghiem-trong-100261101164453872.htm"
+        },
+        {
+          "title": "Hà Nội ô nhiễm không khí nặng hơn TP HCM dù ít dân và ít xe hơn",
+          "summary": "Hà Nội có dân số và lượng xe ít hơn TP HCM, nhưng bụi mịn PM2.5 trung bình năm 2024 lại cao gần gấp đôi. Bài báo giải thích điều này do khí hậu và địa hình bất lợi. Ngoài ra, khí thải công nghiệp từ các tỉnh lân cận cũng góp phần làm không khí xấu đi.",
+          "points": [
+            "PM2.5 trung bình năm 2024 của Hà Nội cao gần gấp đôi TP HCM",
+            "Dân số và lượng xe của Hà Nội ít hơn TP HCM",
+            "Nguyên nhân: khí hậu, địa hình và công nghiệp từ các tỉnh lân cận"
+          ],
+          "why": "Ô nhiễm không chỉ phụ thuộc vào số xe hay số dân mà còn do điều kiện tự nhiên và nguồn thải xung quanh. Người ở TP HCM nên hiểu rõ điều này khi theo dõi chất lượng không khí.",
+          "source": "VnExpress",
+          "date": "01/11",
+          "link": "https://vnexpress.net/vi-sao-ha-noi-o-nhiem-khong-khi-nang-hon-tp-hcm-5132631.html"
+        },
+        {
+          "title": "Honda ADV 160 bản mới dùng được xăng sinh học E85 chính thức ra mắt",
+          "summary": "Sau một thời gian phát triển, Honda đã tung ra phiên bản mới của mẫu xe tay ga địa hình ADV 160. Xe được trang bị công nghệ FlexTech nên động cơ có thể chạy bằng xăng sinh học E85.",
+          "points": [
+            "Mẫu xe: tay ga địa hình Honda ADV 160",
+            "Công nghệ FlexTech cho phép động cơ chạy xăng E85",
+            "Hãng xe Nhật Bản chính thức tung ra sau thời gian phát triển"
+          ],
+          "why": "Đây là tin đáng theo dõi với người quan tâm xe máy và nhiên liệu sinh học. Nếu định mua xe, bạn nên xem kỹ thông tin chính thức từ hãng.",
+          "source": "Thanh Niên",
+          "date": "01/11",
+          "link": "https://thanhnien.vn/xe-tay-ga-honda-adv-160-chay-xang-sinh-hoc-e85-gia-nhap-thi-truong-185261031173530156.htm"
+        },
+        {
+          "title": "Các hãng hàng không như Air France dồn lực vào khoang hạng sang cho khách thượng lưu",
+          "summary": "Chi phí nhiên liệu tăng cao vì cuộc chiến tại Iran, trong khi nhu cầu ở phân khúc bình dân giảm. Vì vậy, các hãng bay như Air France đang đặt cược vào nhóm khách thượng lưu và các khoang hạng sang.",
+          "points": [
+            "Nhiên liệu đắt hơn do cuộc chiến tại Iran",
+            "Nhu cầu tiêu dùng ở phân khúc bình dân suy giảm",
+            "Air France là một hãng đặt cược vào khách thượng lưu"
+          ],
+          "why": "Xu hướng này cho thấy tiền đang dồn về nhóm khách có khả năng chi tiêu cao. Người làm quảng cáo có thể tham khảo khi cân nhắc nhóm đối tượng mục tiêu.",
+          "source": "Thanh Niên",
+          "date": "01/11",
+          "link": "https://thanhnien.vn/bat-ngo-khoang-hang-sang-dinh-chop-cua-nganh-hang-khong-185261031104811563.htm"
         }
       ]
     },
@@ -650,95 +638,108 @@
       "color": "--c-heart",
       "items": [
         {
-          "title": "Công nhân gen Z vào nghề mài cơ khí từ con số 0, hai năm sau giành giải vàng tay nghề thế giới",
-          "summary": "Nguyễn Đức Quyền bước vào nhà máy khi chưa có chút kinh nghiệm nào về mài cơ khí. Hai năm sau, anh đứng trên bục cao nhất tại hội thi tay nghề thế giới ở Nhật Bản. Anh cũng là thí sinh nhỏ tuổi nhất giành được huy chương vàng ở kỳ thi này.",
+          "title": "Anh Đức giành vô địch Olympia 2026 với 240 điểm, điểm cầu Hà Nội vỡ òa",
+          "summary": "Đoàn Lê Anh Đức, học sinh Trường THPT chuyên Hà Nội - Amsterdam, đã giành chức vô địch Đường lên đỉnh Olympia 2026 với 240 điểm. Tại điểm cầu Hà Nội, thầy cô, học sinh và phụ huynh vẫn đến cổ vũ dù thời tiết nắng nóng. Khoảnh khắc chiến thắng khiến cả điểm cầu bùng nổ cảm xúc.",
           "points": [
-            "Kinh nghiệm mài cơ khí lúc mới vào nhà máy bằng 0",
-            "Chỉ hai năm sau đã giành giải vàng",
-            "Là thí sinh nhỏ tuổi nhất đoạt giải vàng tại Nhật Bản"
+            "Tổng điểm của Anh Đức là 240",
+            "Anh Đức học Trường THPT chuyên Hà Nội - Amsterdam",
+            "Thầy cô, học sinh và phụ huynh đến tiếp lửa dù trời nắng nóng"
           ],
-          "why": "Câu chuyện nhắc rằng kỹ năng được rèn đều đặn có thể đi rất nhanh, kể cả khi xuất phát từ số 0. Đây là động lực tốt cho ai đang học một mảng mới như tối ưu chiến dịch hay đo lường.",
+          "why": "Đây là câu chuyện chiến thắng có sức lan tỏa lớn, dễ trở thành chủ đề được quan tâm trên mạng. Người làm quảng cáo có thể để ý các xu hướng tìm kiếm liên quan trong những ngày tới.",
+          "source": "Tuổi Trẻ",
+          "date": "01/11",
+          "link": "https://tuoitre.vn/khoanh-khac-bung-no-cam-xuc-tai-diem-cau-ha-noi-khi-anh-duc-vo-dich-olympia-2026-100261101153746521.htm"
+        },
+        {
+          "title": "Chàng trai Cà Mau đỗ đầu kỳ thi bác sĩ nội trú tại Đại học Y khoa Phạm Ngọc Thạch",
+          "summary": "Dương Chí Quỳnh, người Cà Mau, đã đỗ đầu kỳ thi bác sĩ nội trú ở Đại học Y khoa Phạm Ngọc Thạch. Anh từng mông lung về ngành học và trượt một môn ngay năm đầu. Nhờ nỗ lực bền bỉ, anh vẫn vươn lên nhóm đứng đầu của trường.",
+          "points": [
+            "Dương Chí Quỳnh đến từ Cà Mau",
+            "Anh trượt môn ngay năm đầu đại học",
+            "Kết quả: đỗ đầu kỳ thi bác sĩ nội trú tại Đại học Y khoa Phạm Ngọc Thạch"
+          ],
+          "why": "Câu chuyện nhắc rằng khởi đầu chưa suôn sẻ không quyết định kết quả cuối cùng. Với công việc cần thử nghiệm và tối ưu liên tục như chạy quảng cáo, sự kiên trì cũng quan trọng không kém.",
+          "source": "VnExpress",
+          "date": "01/11",
+          "link": "https://vnexpress.net/chang-trai-ca-mau-do-dau-ky-thi-bac-si-noi-tru-5138997.html"
+        },
+        {
+          "title": "Công nhân gen Z từ con số không nghề mài cơ khí thành giải vàng tay nghề thế giới",
+          "summary": "Nguyễn Đức Quyền vào nhà máy khi chưa có chút kinh nghiệm mài cơ khí nào. Hai năm sau, anh trở thành thí sinh nhỏ tuổi nhất giành giải vàng tại hội thi tay nghề thế giới ở Nhật Bản.",
+          "points": [
+            "Kinh nghiệm mài cơ khí ban đầu bằng 0",
+            "Chỉ sau hai năm, anh đã đoạt giải vàng",
+            "Anh là thí sinh nhỏ tuổi nhất giành giải vàng tại hội thi ở Nhật Bản"
+          ],
+          "why": "Tin này cho thấy học có phương pháp và luyện tập đều đặn có thể rút ngắn quãng đường lên giỏi. Bạn có thể áp dụng tinh thần này khi học thêm một kỹ năng quảng cáo mới.",
           "source": "VnExpress",
           "date": "01/11",
           "link": "https://vnexpress.net/tu-xuong-mai-co-khi-den-giai-vang-tay-nghe-cua-cong-nhan-gen-z-5138442.html"
         },
         {
-          "title": "92 rùa con nở ở Hòn Cau và tự tìm đường trở về biển",
-          "summary": "Trứng vích ở đảo Hòn Cau được bảo vệ tại bãi ấp suốt 49 ngày. Trong 101 trứng, có 92 quả nở thành rùa con. Sáng 31/10, đàn rùa tự bò xuống biển.",
+          "title": "Nhà vô địch Olympia 2026 Anh Đức kể lý do thuộc quốc ca của 136 quốc gia",
+          "summary": "Đoàn Lê Anh Đức, học sinh Trường THPT chuyên Hà Nội - Amsterdam và là nhà vô địch Đường lên đỉnh Olympia 2026, tự tìm hiểu và ghi nhớ quốc ca của nhiều nước. Em có thể hát quốc ca của 136 quốc gia. Em cũng chia sẻ lý do đằng sau sở thích đặc biệt này.",
           "points": [
-            "Thời gian bảo vệ tại bãi ấp: 49 ngày",
-            "92 trong 101 trứng vích nở thành công",
-            "Rùa con xuống biển vào sáng 31/10"
+            "Anh Đức có thể hát quốc ca của 136 quốc gia",
+            "Em tự tìm hiểu và ghi nhớ, không ai bắt buộc",
+            "Em là nhà vô địch Đường lên đỉnh Olympia 2026"
           ],
-          "why": "Tin vui về bảo tồn, cho thấy sự chăm sóc kiên trì có thể cho kết quả tốt. Cuối tuần này bạn có thể đọc thêm để đổi gió sau những con số quảng cáo.",
+          "why": "Sở thích tự học đến nơi đến chốn đã tạo nên điểm nhấn riêng cho nhân vật. Trong quảng cáo, một chi tiết riêng biệt và chân thực cũng dễ gây ấn tượng hơn thông điệp chung chung.",
+          "source": "Thanh Niên",
+          "date": "01/11",
+          "link": "https://thanhnien.vn/nha-vo-dich-duong-len-dinh-olympia-2026-tiet-lo-ly-do-thuoc-135-quoc-ca-185261101143738883.htm"
+        },
+        {
+          "title": "92 rùa con nở ở Hòn Cau, được thả về biển sau 49 ngày bảo vệ tại bãi ấp",
+          "summary": "Trong 101 trứng vích ở đảo Hòn Cau, 92 trứng đã nở thành rùa con sau 49 ngày được bảo vệ tại bãi ấp. Những chú rùa tự tìm đường về biển vào sáng 31/10.",
+          "points": [
+            "92 trong 101 trứng vích đã nở",
+            "Trứng được bảo vệ tại bãi ấp suốt 49 ngày",
+            "Rùa con tự bò về biển sáng 31/10"
+          ],
+          "why": "Đây là tin tích cực về bảo tồn thiên nhiên, hợp để đọc thư giãn cuối tuần. Nó cũng cho thấy việc bảo vệ bền bỉ từ đầu mang lại kết quả rõ rệt.",
           "source": "VnExpress",
           "date": "31/10",
           "link": "https://vnexpress.net/92-rua-con-no-tro-ve-bien-o-hon-cau-5139079.html"
         },
         {
-          "title": "Người dân Oleshky khóc òa khi được về nhà sau 1.700 ngày mắc kẹt giữa vùng chiến sự",
-          "summary": "Một chiến dịch sơ tán đã đưa hàng trăm người dân thành phố Oleshky của Ukraine ra khỏi vùng chiến sự. Cảnh đoàn tụ của họ với người thân khiến nhiều người xúc động. Đó là một trong những khoảnh khắc đáng nhớ nhất của đợt sơ tán.",
+          "title": "Phú Quốc bàn giao hơn 200 nền tái định cư cho người dân ngày 1-11",
+          "summary": "Ngày 1-11, UBND đặc khu Phú Quốc, tỉnh An Giang, tổ chức lễ bàn giao hơn 200 nền tái định cư. Người dân trên đảo nhận nền với tâm trạng vui vẻ để ổn định chỗ ở và làm ăn.",
           "points": [
-            "Người dân mắc kẹt khoảng 1.700 ngày",
-            "Chiến dịch sơ tán hàng trăm người ở Oleshky",
-            "Cuộc đoàn tụ là khoảnh khắc xúc động nhất"
+            "Lễ bàn giao diễn ra ngày 1-11",
+            "Hơn 200 nền tái định cư được trao cho người dân",
+            "Đơn vị tổ chức là UBND đặc khu Phú Quốc, tỉnh An Giang"
           ],
-          "why": "Đây là tin thời sự quốc tế mang tính nhân văn, không liên quan trực tiếp đến công việc. Nó nhắc ta trân trọng sự bình yên và những điều bình thường như được về nhà.",
+          "why": "Tin này cho thấy người dân Phú Quốc đang ổn định chỗ ở để làm ăn. Nếu bạn có khách hàng hoặc chiến dịch nhắm vào khu vực này, hãy theo dõi thêm diễn biến tại địa phương.",
           "source": "Tuổi Trẻ",
           "date": "01/11",
-          "link": "https://tuoitre.vn/nguoi-dan-ukraine-khoc-oa-duoc-ve-nha-sau-1700-ngay-mac-ket-giua-vung-chien-su-100261031223001246.htm"
+          "link": "https://tuoitre.vn/hang-tram-ho-dan-o-phu-quoc-vui-ve-nhan-nen-tai-dinh-cu-100261101150440709.htm"
         },
         {
-          "title": "Cô gái Cờ Lao 9X dựng thương hiệu nông sản trên cao nguyên đá Đồng Văn",
-          "summary": "Lưu Thị Hòa, người dân tộc Cờ Lao ở Đồng Văn, Tuyên Quang, từng day dứt sau một chuyến xe chở hàng trăm kg rau xuống miền xuôi. Từ trăn trở đó, cô theo đuổi việc xây dựng thương hiệu nông sản cho vùng cao nguyên đá.",
+          "title": "Cụ ông 90 tuổi đi thi thể hình, tự tin khoe cơ bắp trên sân khấu",
+          "summary": "Cụ ông Toshisuke Kanazawa đã 90 tuổi nhưng vẫn tham gia thi thể hình. Cụ tự hào trình diễn cơ bắp trước khán giả trên sân khấu. Hình ảnh của cụ được nhắc đến như minh chứng rằng tuổi tác không nhất thiết là rào cản. Tiêu đề bài báo cho biết cụ có chia sẻ bí quyết của mình.",
           "points": [
-            "Nhân vật: Lưu Thị Hòa, dân tộc Cờ Lao, thuộc thế hệ 9X",
-            "Địa bàn: Đồng Văn, Tuyên Quang",
-            "Khởi đầu từ chuyến xe chở hàng trăm kg rau"
+            "Nhân vật chính là cụ ông Toshisuke Kanazawa, 90 tuổi",
+            "Cụ tự hào khoe cơ bắp ngay trên sân khấu thi đấu",
+            "Thông điệp chính: tuổi tác không phải rào cản"
           ],
-          "why": "Một thương hiệu nông sản thường bắt đầu từ việc nhìn ra vấn đề thật của người bán. Với người làm quảng cáo, đây là ví dụ hay về việc dựa vào câu chuyện để tạo khác biệt.",
-          "source": "VnExpress",
-          "date": "31/10",
-          "link": "https://vnexpress.net/9x-dung-thuong-hieu-nong-san-tren-cao-nguyen-da-5137070.html"
-        },
-        {
-          "title": "Nhiều hộ Khmer ở vùng giồng cát miền Tây chuyển sang trồng măng tây",
-          "summary": "Ở vùng giồng cát ven biển miền Tây, nhiều hộ người Khmer đang đổi sang trồng măng tây. Họ được hỗ trợ đầu tư và có đơn vị bao tiêu sản phẩm. Măng tây sau đó trở thành nguyên liệu cho xuất khẩu.",
-          "points": [
-            "Người trồng: các hộ Khmer ở giồng cát ven biển miền Tây",
-            "Được hỗ trợ đầu tư ban đầu",
-            "Sản phẩm được bao tiêu làm nguyên liệu xuất khẩu"
-          ],
-          "why": "Việc có đầu ra ổn định giúp nông dân yên tâm đổi cây trồng. Tin này gợi ý rằng một ngách sản phẩm rõ ràng cùng đối tác mua hàng đáng tin cậy là nền tảng tốt để phát triển.",
-          "source": "VnExpress",
-          "date": "01/11",
-          "link": "https://vnexpress.net/nguoi-khmer-trong-mang-tay-tren-dat-giong-cat-5104997.html"
-        },
-        {
-          "title": "Nữ kỹ sư Việt 9X từng học ở Mỹ theo đuổi công nghệ camera smartphone tại Hàn Quốc",
-          "summary": "Đặng Thị Tuyết Mai từng học ở Mỹ, sau đó sang Hàn Quốc làm việc trong lĩnh vực camera điện thoại thông minh. Chị tham gia nghiên cứu các công nghệ chống rung và lấy nét. Chị cũng phối hợp với khâu sản xuất tại Thái Nguyên.",
-          "points": [
-            "Hành trình: từ Mỹ sang Hàn Quốc",
-            "Mảng nghiên cứu: chống rung và lấy nét",
-            "Phối hợp sản xuất tại Thái Nguyên"
-          ],
-          "why": "Camera điện thoại ảnh hưởng đến chất lượng hình ảnh và video quảng cáo mà bạn làm hằng ngày. Câu chuyện cũng cho thấy kỹ sư Việt có thể đóng góp vào chuỗi công nghệ toàn cầu.",
+          "why": "Đây là câu chuyện truyền cảm hứng về sự bền bỉ, hợp để đọc lúc nghỉ giữa những buổi tối ưu chiến dịch. Bạn cũng có thể tham khảo cách kể chuyện lấy con người làm trung tâm cho nội dung của mình.",
           "source": "Thanh Niên",
           "date": "01/11",
-          "link": "https://thanhnien.vn/tung-hoc-o-my-co-gai-viet-9x-theo-duoi-cong-nghe-camera-smartphone-tai-han-quoc-185261030150414619.htm"
+          "link": "https://thanhnien.vn/cu-90-tuoi-di-thi-the-hinh-tiet-lo-bi-quyet-185261101154855366.htm"
         },
         {
-          "title": "Hòa thượng Thích Thanh Quyết: hiến mô, tạng sau khi qua đời là việc làm nhân văn, mang lại phúc đức rất lớn",
-          "summary": "Hòa thượng Thích Thanh Quyết nói về việc hiến mô và tạng sau khi qua đời để cứu người khác. Theo ông, đây là nghĩa cử nhân văn. Nhờ đó, sự sống của người bệnh được tiếp nối. Ông cũng cho rằng việc làm này mang lại phúc đức không đo đếm được.",
+          "title": "Họa sĩ Lê Sa Long muốn công viên tưởng niệm Lê Thị Riêng kể lại hành trình đưa liệt sĩ về đất mẹ",
+          "summary": "Họa sĩ Lê Sa Long, từng là người lính, mong công viên tưởng niệm Lê Thị Riêng không chỉ có tượng đài và hiện vật. Ông muốn nơi này tái hiện cả hành trình tìm kiếm, quy tập và đưa các anh hùng liệt sĩ trở về đất mẹ. Những câu chuyện ấy sẽ được kể qua tranh, hình ảnh và các hình thức khác để truyền lại cho thế hệ sau.",
           "points": [
-            "Người chia sẻ quan điểm: Hòa thượng Thích Thanh Quyết",
-            "Nội dung chính: hiến mô, tạng sau khi qua đời để cứu người",
-            "Ý nghĩa nêu ra: sự sống được tiếp nối và tích phúc đức"
+            "Người đề xuất là họa sĩ Lê Sa Long, từng là người lính",
+            "Ngoài tượng đài và hiện vật, công viên cần có câu chuyện",
+            "Hành trình tìm kiếm, quy tập liệt sĩ được kể bằng tranh, hình ảnh"
           ],
-          "why": "Đây là góc nhìn tôn giáo và nhân văn về một quyết định lớn của đời người, có thể giúp bạn hiểu thêm về chủ đề hiến tạng. Nếu quan tâm, bạn có thể đọc bài đầy đủ trên VnExpress.”",
-          "source": "VnExpress",
-          "date": "30/10",
-          "link": "https://vnexpress.net/hoa-thuong-thich-thanh-quyet-hien-tang-sau-khi-qua-doi-la-phuc-duc-vo-luong-5138908.html"
+          "why": "Tin cho thấy sức mạnh của việc kể chuyện bằng hình ảnh để chạm đến cảm xúc người xem. Đây là gợi ý hay khi bạn nghĩ về nội dung quảng cáo hiển thị hoặc video.",
+          "source": "Tuổi Trẻ",
+          "date": "01/11",
+          "link": "https://tuoitre.vn/cong-vien-tuong-niem-le-thi-rieng-se-ke-nhung-cau-chuyen-xuc-dong-cho-hau-the-100261101142136344.htm"
         }
       ]
     }
