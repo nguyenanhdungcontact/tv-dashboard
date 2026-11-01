@@ -137,6 +137,53 @@ body.simple #osd .bar i{background:var(--warm)}
 body.simple .endinfo h3{font-size:3.3rem}
 body.simple .btn,body.simple .endinfo .cnt{font-size:1.6rem}
 
+/* ---------- Thanh cụm từ bên phải ---------- */
+#player{--pw:31rem}
+#ytWrap{transition:right .28s ease}
+#player.panel #ytWrap{right:var(--pw)}
+#player.panel #osd{left:calc((100% - var(--pw)) / 2)}
+#panel{position:absolute;top:0;right:0;bottom:0;width:var(--pw);z-index:6;display:flex;flex-direction:column;
+  background:radial-gradient(ellipse 120% 50% at 100% 0%,#2a2170 0%,transparent 60%),linear-gradient(180deg,var(--bg1),var(--bg0));
+  border-left:.1rem solid rgba(255,255,255,.08);transform:translateX(100%);transition:transform .28s ease}
+#player.panel #panel{transform:none}
+.ph-head{padding:2rem 2rem 1rem}
+.ph-head h3{font-family:var(--head);font-weight:800;font-size:1.9rem;letter-spacing:-.02em;display:flex;align-items:baseline;gap:.8rem}
+.ph-head h3 span{font-family:var(--body);font-weight:600;font-size:.95rem;color:var(--warm);padding:.1rem .55rem;border:.1rem solid rgba(255,211,110,.45);border-radius:.4rem}
+.ph-sum{margin-top:.6rem;font-size:.95rem;line-height:1.5;color:var(--ink2);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.ph-list{flex:1;overflow:hidden;position:relative;-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 1rem,#000 calc(100% - 2rem),transparent 100%);mask-image:linear-gradient(to bottom,transparent 0,#000 1rem,#000 calc(100% - 2rem),transparent 100%)}
+.ph-inner{position:relative;padding:1rem 1.4rem 6rem;transition:transform .25s ease}
+.ph{padding:1rem 1.2rem;border-radius:1rem;margin-bottom:.6rem;background:rgba(255,255,255,.035);cursor:pointer;transition:background .15s,box-shadow .15s}
+.ph .row1{display:flex;align-items:baseline;justify-content:space-between;gap:1rem}
+.ph .p{font-family:var(--head);font-weight:700;font-size:1.3rem;letter-spacing:-.01em;line-height:1.25}
+.ph .tm{font-size:.85rem;color:var(--ink3);font-weight:600;flex:none}
+.ph .m{font-size:1rem;color:var(--ink2);margin-top:.25rem;line-height:1.4}
+.ph .more{display:none;margin-top:.8rem;padding-top:.8rem;border-top:.1rem solid rgba(255,255,255,.1);font-size:.98rem;line-height:1.5}
+.ph .q{font-style:italic;color:#dfe3ff}
+.ph .q mark{background:none;color:var(--warm);font-weight:600}
+.ph .u{color:var(--ink2);margin-top:.5rem}
+.ph .ex{margin-top:.5rem;color:#fff}
+.ph .ex small{display:block;color:var(--ink2);font-size:.92rem}
+.ph.sel{background:rgba(255,255,255,.1);box-shadow:0 0 0 var(--ringw) var(--ring)}
+.ph.sel .more{display:block}
+.ph.now .tm{color:var(--warm)}
+.ph.now .tm::before{content:"● ";}
+.ph-empty{padding:2rem;color:var(--ink2);font-size:1.1rem;line-height:1.55}
+.ph-foot{padding:1rem 2rem 1.4rem;font-size:.9rem;color:var(--ink3);display:flex;flex-wrap:wrap;gap:.4rem 1.4rem;border-top:.1rem solid rgba(255,255,255,.06)}
+.ph-foot .k{font-size:.85rem}
+body.simple #player{--pw:36rem}
+body.simple .ph .p{font-size:1.7rem}
+body.simple .ph .m,body.simple .ph .more{font-size:1.3rem}
+
+/* ---------- Menu nhanh (▼) ---------- */
+#qmenu{position:absolute;left:50%;bottom:3rem;transform:translate(-50%,.6rem);z-index:7;display:flex;gap:1rem;padding:1rem;border-radius:1.4rem;background:rgba(12,15,50,.93);box-shadow:0 1rem 3rem rgba(0,0,0,.5);opacity:0;pointer-events:none;transition:opacity .2s,transform .2s}
+#qmenu.show{opacity:1;transform:translate(-50%,0);pointer-events:auto}
+.qi{padding:.8rem 1.5rem;border-radius:99rem;background:rgba(255,255,255,.08);font-size:1.2rem;font-weight:600;color:#fff;cursor:pointer;white-space:nowrap}
+.qi small{display:block;font-size:.8rem;font-weight:500;color:var(--ink2)}
+.qi.info{cursor:default}
+.qi.sel{background:#fff;color:#141846}
+.qi.sel small{color:#4b5190}
+body.simple .qi{font-size:1.6rem}
+
 #toast{position:fixed;left:50%;bottom:3rem;transform:translate(-50%,1rem);z-index:50;max-width:70rem;padding:1rem 1.8rem;border-radius:1rem;background:rgba(22,26,74,.96);border:.1rem solid rgba(255,255,255,.16);font-size:1.2rem;opacity:0;transition:opacity .25s,transform .25s;pointer-events:none}
 #toast.show{opacity:1;transform:translate(-50%,0)}
 body.simple #toast{font-size:1.6rem}
@@ -174,6 +221,8 @@ body.simple #toast{font-size:1.6rem}
   <div id="ytWrap"></div>
   <button id="pBack" title="Quay lại danh sách">←</button>
   <div id="osd" class="nobar"><div class="l1"></div><div class="l2"></div><div class="bar"><i></i></div></div>
+  <aside id="panel"></aside>
+  <div id="qmenu"></div>
   <div id="endcard"></div>
 </section>
 
@@ -399,8 +448,15 @@ function play(r, c){
   if (v.blocked){ toast('Video này không phát được trên TV, hãy chọn video khác'); return; }
   clearEnd();
   S.play = { r, c }; S.row = r; S.cols[r] = c; S.ccApplied = false;
+  S.phr = null; S.sel = 0; S.nowIdx = -1; closeMenu();
   show('player');
   osd(v.title, v.channel, 3500, false);
+  renderPanel();
+  loadPhrases(v.id).then(d => {
+    const now = cur(); if (!now || now.id !== v.id) return;
+    S.phr = d; renderPanel();
+    if (d && !S.panel) osd(v.title, `Bấm ▲ để xem ${d.phrases.length} cụm từ hay trong video`, 4500, false);
+  });
   if (!ytReady){ pendingId = v.id; return; }
   createOrLoad(v.id);
 }
@@ -423,7 +479,11 @@ function createOrLoad(id){
 function onState(e){
   if (e.data === YT.PlayerState.PLAYING){
     S.errors = 0;
-    if (!S.ccApplied){ S.ccApplied = true; const m = ccGet(); if (m !== 'off') applyCC(m, false); }
+    if (!S.ccApplied){
+      S.ccApplied = true;
+      const m = ccGet(); if (m !== 'off') applyCC(m, false);
+      applySpeed(speedGet());
+    }
   }
   if (e.data === YT.PlayerState.ENDED) showEnd();
 }
@@ -449,7 +509,7 @@ function onErr(e){
 }
 
 function closePlayer(){
-  clearEnd();
+  clearEnd(); closeMenu(); closePanel(false);
   if (player){ try { player.destroy(); } catch(e){} player = null; }   // giải phóng RAM cho TV
   $('#ytWrap').innerHTML = '';
   pendingId = null;
@@ -548,7 +608,7 @@ function toggleFullscreen(){
 
 /* Màn hình hết video: tự phát video kế trong cùng hàng, không có gợi ý ngoài danh sách */
 function showEnd(){
-  clearEnd();
+  clearEnd(); closeMenu();
   const { r, c } = S.play;
   const row = rows()[r];
   const n = nextIdx(r, c);
@@ -583,15 +643,182 @@ function playerKey(k){
     else if (k === 'back' || k === 'ok') closePlayer();
     return;
   }
+  if (S.menu){ menuKey(k); return; }
+  if (S.panel){ panelKey(k); return; }
   switch (k){
     case 'back': closePlayer(); break;
     case 'ok': case 'playpause': togglePlay(); break;
     case 'left': seek(-10); break;
     case 'right': seek(10); break;
-    case 'up': { const v = cur(); osd(v ? v.title : '', `${timeLine()}   ·   Chất lượng: ${qualityLabel()}   ·   ${CC_LABEL[ccGet()]}`, 3000); break; }
-    case 'down': cycleCC(); break;
+    case 'up': openPanel(); break;
+    case 'down': openMenu(); break;
     case 'fullscreen': toggleFullscreen(); break;
   }
+}
+
+/* ===== Cụm từ: đọc file JSON do workflow Gemini + Claude tạo ===== */
+const phraseCache = {};
+async function loadPhrases(id){
+  if (id in phraseCache) return phraseCache[id];
+  let d = null;
+  try {
+    const r = await fetch(`video-data/phrases/${id}.json`, { cache:'no-store' });
+    if (r.ok){ const j = await r.json(); if (j.phrases && j.phrases.length) d = j; }
+  } catch(e){}
+  phraseCache[id] = d;
+  return d;
+}
+
+function markQuote(q, phrase){
+  const qs = esc(q || '');
+  const words = String(phrase || '').toLowerCase().split(/\s+/).filter(w => w.length > 2 && !['one','someone','something','sth','sb','the','and','for','your','yours','their','with','from'].includes(w));
+  if (!words.length) return qs;
+  // Tô màu các từ của cụm từ xuất hiện trong câu trích
+  return qs.replace(/[A-Za-zÀ-ỹ'’-]+/g, w => words.some(x => w.toLowerCase().startsWith(x.slice(0, Math.max(3, x.length - 2)))) ? `<mark>${w}</mark>` : w);
+}
+
+function renderPanel(){
+  const el = $('#panel');
+  const d = S.phr;
+  if (!d){
+    el.innerHTML = `<div class="ph-head"><h3>Cụm từ hay</h3></div>
+      <div class="ph-empty">Video này chưa có cụm từ.<br><br>Cụm từ được soạn tự động mỗi sáng cho các video trong danh sách luyện tiếng Anh.</div>
+      <div class="ph-foot"><span><b class="k">Back</b>Đóng</span></div>`;
+    return;
+  }
+  el.innerHTML = `<div class="ph-head"><h3>Cụm từ hay ${d.level ? `<span>${esc(d.level)}</span>` : ''}</h3>
+      ${d.summary_vi ? `<div class="ph-sum">${esc(d.summary_vi)}</div>` : ''}</div>
+    <div class="ph-list"><div class="ph-inner">${d.phrases.map((p, i) => `
+      <div class="ph" data-i="${i}">
+        <div class="row1"><div class="p">${esc(p.phrase)}</div><div class="tm">${fmt(p.t)}</div></div>
+        <div class="m">${esc(p.meaning_vi)}</div>
+        <div class="more">
+          <div class="q">“${markQuote(p.quote, p.phrase)}”</div>
+          ${p.usage_vi ? `<div class="u">${esc(p.usage_vi)}</div>` : ''}
+          ${p.example_en ? `<div class="ex">${esc(p.example_en)}<small>${esc(p.example_vi)}</small></div>` : ''}
+        </div>
+      </div>`).join('')}</div></div>
+    <div class="ph-foot"><span><b class="k">▲▼</b>Chọn</span><span><b class="k">OK</b>Nghe câu này</span><span><b class="k">◀▶</b>Tua</span><span><b class="k">Back</b>Đóng</span></div>`;
+  selectPhrase(Math.min(S.sel, d.phrases.length - 1), false);
+  markNow(S.nowIdx);
+}
+
+function selectPhrase(i, animate = true){
+  if (!S.phr) return;
+  S.sel = Math.max(0, Math.min(i, S.phr.phrases.length - 1));
+  const items = document.querySelectorAll('#panel .ph');
+  items.forEach((el, j) => el.classList.toggle('sel', j === S.sel));
+  const el = items[S.sel], inner = $('#panel .ph-inner'), list = $('#panel .ph-list');
+  if (!el || !inner) return;
+  if (!animate) inner.style.transition = 'none';
+  requestAnimationFrame(() => {
+    const max = Math.max(0, inner.offsetHeight - list.clientHeight);
+    const y = Math.min(Math.max(0, el.offsetTop - list.clientHeight * 0.18), max);
+    inner.style.transform = `translateY(${-y}px)`;
+    if (!animate) requestAnimationFrame(() => inner.style.transition = '');
+  });
+}
+
+function markNow(idx){
+  S.nowIdx = idx;
+  document.querySelectorAll('#panel .ph').forEach((el, j) => el.classList.toggle('now', j === idx));
+}
+
+function currentPhraseIdx(){
+  if (!S.phr) return -1;
+  const { t } = progress();
+  let idx = -1;
+  S.phr.phrases.forEach((p, i) => { if (p.t <= t + 0.5) idx = i; });
+  return idx;
+}
+
+function openPanel(){
+  S.panel = true;
+  $('#player').classList.add('panel');
+  $('#osd').classList.remove('show');
+  renderPanel();
+  const idx = currentPhraseIdx();
+  if (idx >= 0) selectPhrase(idx, false);
+  // Tạm dừng để đọc
+  S.pausedByPanel = false;
+  try { if (player.getPlayerState() === YT.PlayerState.PLAYING){ player.pauseVideo(); S.pausedByPanel = true; } } catch(e){}
+}
+function closePanel(resume = true){
+  if (!S.panel) return;
+  S.panel = false;
+  $('#player').classList.remove('panel');
+  if (resume && S.pausedByPanel){ try { player.playVideo(); } catch(e){} }
+  S.pausedByPanel = false;
+}
+function playPhrase(i){
+  if (!S.phr || !player || !player.seekTo) return;
+  const p = S.phr.phrases[i];
+  player.seekTo(Math.max(0, p.t - 1), true);
+  player.playVideo();
+  S.pausedByPanel = false;
+  S.navHold = 0;
+}
+function panelKey(k){
+  const n = S.phr ? S.phr.phrases.length : 0;
+  switch (k){
+    case 'back': closePanel(); break;
+    case 'up': if (n){ selectPhrase(S.sel - 1); S.navHold = Date.now() + 8000; } break;
+    case 'down': if (n){ selectPhrase(S.sel + 1); S.navHold = Date.now() + 8000; } break;
+    case 'ok': if (n) playPhrase(S.sel); else closePanel(); break;
+    case 'playpause': togglePlay(); break;
+    case 'left': seek(-10); break;
+    case 'right': seek(10); break;
+  }
+}
+// Khi video đang chạy: đánh dấu cụm từ vừa được nói và cho thanh chạy theo
+setInterval(() => {
+  if (S.screen !== 'player' || !S.phr || !player || !player.getPlayerState) return;
+  let playing = false; try { playing = player.getPlayerState() === YT.PlayerState.PLAYING; } catch(e){}
+  if (!playing) return;
+  const idx = currentPhraseIdx();
+  if (idx !== S.nowIdx) markNow(idx);
+  if (S.panel && idx >= 0 && idx !== S.sel && Date.now() > (S.navHold || 0)) selectPhrase(idx);
+}, 700);
+
+/* ===== Tốc độ phát ===== */
+const SPEEDS = [0.5, 0.75, 1, 1.25, 1.5];
+function speedGet(){ const v = parseFloat(store.get('tvv.speed.' + S.profile)); return SPEEDS.includes(v) ? v : 1; }
+function applySpeed(r){ try { player.setPlaybackRate(r); } catch(e){} }
+function nextSpeed(){
+  const r = SPEEDS[(SPEEDS.indexOf(speedGet()) + 1) % SPEEDS.length];
+  store.set('tvv.speed.' + S.profile, String(r));
+  applySpeed(r);
+}
+
+/* ===== Menu nhanh (▼): tốc độ, phụ đề, chất lượng ===== */
+let menuT;
+function menuItems(){
+  return [
+    { key:'speed', label:`Tốc độ ${String(speedGet()).replace('.', ',')}×`, sub:'OK để đổi' },
+    { key:'cc', label:CC_LABEL[ccGet()], sub:'OK để đổi' },
+    { key:'quality', label:qualityLabel(), sub:'Chất lượng (YouTube tự chọn)', info:true },
+  ];
+}
+function renderMenu(){
+  $('#qmenu').innerHTML = menuItems().map((m, i) =>
+    `<div class="qi${m.info ? ' info' : ''}${i === S.msel ? ' sel' : ''}" data-i="${i}">${esc(m.label)}<small>${esc(m.sub)}</small></div>`).join('');
+}
+function bumpMenuTimer(){ clearTimeout(menuT); menuT = setTimeout(closeMenu, 8000); }
+function openMenu(){ S.menu = true; S.msel = S.msel || 0; renderMenu(); $('#qmenu').classList.add('show'); bumpMenuTimer(); }
+function closeMenu(){ S.menu = false; clearTimeout(menuT); const m = $('#qmenu'); if (m) m.classList.remove('show'); }
+function menuAct(i){
+  const it = menuItems()[i];
+  if (it.key === 'speed') nextSpeed();
+  else if (it.key === 'cc'){ cycleCC(); setTimeout(() => S.menu && renderMenu(), 900); }
+  renderMenu(); bumpMenuTimer();
+}
+function menuKey(k){
+  const n = menuItems().length;
+  if (k === 'left'){ S.msel = (S.msel + n - 1) % n; renderMenu(); bumpMenuTimer(); }
+  else if (k === 'right'){ S.msel = (S.msel + 1) % n; renderMenu(); bumpMenuTimer(); }
+  else if (k === 'ok') menuAct(S.msel);
+  else if (k === 'playpause') togglePlay();
+  else closeMenu();   // ▲, ▼ hoặc Back
 }
 
 /* ===== Bàn phím, remote, chuột ===== */
@@ -638,6 +865,8 @@ $('#home').addEventListener('wheel', e => {
   else homeKey(e.deltaY > 0 ? 'down' : 'up');
 }, { passive:false });
 $('#pBack').addEventListener('click', closePlayer);
+$('#panel').addEventListener('click', e => { const p = e.target.closest('.ph'); if (p){ selectPhrase(+p.dataset.i); playPhrase(+p.dataset.i); } });
+$('#qmenu').addEventListener('click', e => { const q = e.target.closest('.qi'); if (q){ S.msel = +q.dataset.i; menuAct(S.msel); } });
 $('#endcard').addEventListener('click', e => {
   const b = e.target.closest('[data-act]'); if (!b) return;
   if (b.dataset.act === 'next' && S.endNext !== null) play(S.play.r, S.endNext); else closePlayer();
