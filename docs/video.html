@@ -398,7 +398,7 @@ function play(r, c){
   const v = rows()[r].items[c];
   if (v.blocked){ toast('Video này không phát được trên TV, hãy chọn video khác'); return; }
   clearEnd();
-  S.play = { r, c }; S.row = r; S.cols[r] = c;
+  S.play = { r, c }; S.row = r; S.cols[r] = c; S.ccApplied = false;
   show('player');
   osd(v.title, v.channel, 3500, false);
   if (!ytReady){ pendingId = v.id; return; }
@@ -408,7 +408,7 @@ function play(r, c){
 function createOrLoad(id){
   if (player && player.loadVideoById){ player.loadVideoById(id); return; }
   $('#ytWrap').innerHTML = '<div id="yt"></div>';
-  const vars = { autoplay:1, rel:0, playsinline:1, iv_load_policy:3, fs:0, cc_load_policy:0, hl:'vi' };
+  const vars = { autoplay:1, rel:0, playsinline:1, iv_load_policy:3, fs:0, cc_load_policy:0, hl:'vi', vq:'hd1080' };
   if (location.protocol.startsWith('http')) vars.origin = location.origin;
   player = new YT.Player('yt', {
     width:'100%', height:'100%', videoId:id, playerVars:vars,
@@ -421,7 +421,10 @@ function createOrLoad(id){
 }
 
 function onState(e){
-  if (e.data === YT.PlayerState.PLAYING) S.errors = 0;
+  if (e.data === YT.PlayerState.PLAYING){
+    S.errors = 0;
+    if (!S.ccApplied){ S.ccApplied = true; const m = ccGet(); if (m !== 'off') applyCC(m, false); }
+  }
   if (e.data === YT.PlayerState.ENDED) showEnd();
 }
 
@@ -471,6 +474,10 @@ function osd(l1, l2, ms = 1800, bar = true){
   clearTimeout(osdT);
   if (ms > 0) osdT = setTimeout(() => el.classList.remove('show'), ms);
 }
+function qualityLabel(){
+  const map = { tiny:'144p', small:'240p', medium:'360p', large:'480p', hd720:'720p', hd1080:'1080p', hd1440:'1440p', hd2160:'4K', highres:'4K+' };
+  try { const q = player.getPlaybackQuality(); return map[q] || 'Tự động'; } catch(e){ return 'Tự động'; }
+}
 function timeLine(){ const { t, d } = progress(); return `${fmt(t)} / ${fmt(d)}`; }
 
 function togglePlay(){
@@ -485,6 +492,54 @@ function seek(d){
   player.seekTo(to, true);
   setTimeout(() => osd(d > 0 ? 'Tua tới 10 giây' : 'Tua lùi 10 giây', `${fmt(to)} / ${fmt(dur)}`), 60);
 }
+/* ===== Phụ đề: Tắt → Tiếng Anh → Tiếng Việt, nhớ riêng cho từng hồ sơ ===== */
+const CC_MODES = ['off','en','vi'];
+const CC_LABEL = { off:'Tắt phụ đề', en:'Phụ đề tiếng Anh', vi:'Phụ đề tiếng Việt' };
+function ccGet(){
+  return store.get('tvv.cc.' + S.profile) || (PROFILES[S.profile].simple ? 'vi' : 'off');
+}
+function ccTracks(){
+  try { return player.getOption('captions','tracklist') || []; } catch(e){ return []; }
+}
+function applyCC(mode, announce){
+  if (!player || !player.loadModule) return;
+  try {
+    if (mode === 'off'){
+      player.unloadModule('captions'); player.unloadModule('cc');
+      if (announce) osd(CC_LABEL.off, '', 1800, false);
+      return;
+    }
+    player.loadModule('captions');
+    // Chờ trình phát nạp danh sách phụ đề rồi mới chọn
+    setTimeout(() => {
+      const tracks = ccTracks();
+      if (!tracks.length){
+        if (announce) osd('Video này không có phụ đề', '', 2200, false);
+        return;
+      }
+      const exact = tracks.find(t => (t.languageCode || '').startsWith(mode));
+      const english = tracks.find(t => (t.languageCode || '').startsWith('en'));
+      if (exact){
+        player.setOption('captions','track',{ languageCode: exact.languageCode });
+      } else if (mode === 'vi'){
+        // Không có phụ đề tiếng Việt: dịch tự động từ phụ đề có sẵn
+        const base = english || tracks[0];
+        player.setOption('captions','track',{ languageCode: base.languageCode, translationLanguage:{ languageCode:'vi', languageName:'Tiếng Việt' } });
+      } else {
+        player.setOption('captions','track',{ languageCode: tracks[0].languageCode });
+      }
+      if (announce) osd(CC_LABEL[mode], exact || mode !== 'vi' ? '' : 'Dịch tự động', 1800, false);
+    }, 700);
+  } catch(e){
+    if (announce) osd('Không đổi được phụ đề cho video này', '', 2200, false);
+  }
+}
+function cycleCC(){
+  const next = CC_MODES[(CC_MODES.indexOf(ccGet()) + 1) % CC_MODES.length];
+  store.set('tvv.cc.' + S.profile, next);
+  applyCC(next, true);
+}
+
 function toggleFullscreen(){
   const el = document.documentElement;
   if (document.fullscreenElement) document.exitFullscreen().catch(() => {});
@@ -533,7 +588,8 @@ function playerKey(k){
     case 'ok': case 'playpause': togglePlay(); break;
     case 'left': seek(-10); break;
     case 'right': seek(10); break;
-    case 'up': case 'down': { const v = cur(); osd(v ? v.title : '', timeLine(), 2500); break; }
+    case 'up': { const v = cur(); osd(v ? v.title : '', `${timeLine()}   ·   Chất lượng: ${qualityLabel()}   ·   ${CC_LABEL[ccGet()]}`, 3000); break; }
+    case 'down': cycleCC(); break;
     case 'fullscreen': toggleFullscreen(); break;
   }
 }
