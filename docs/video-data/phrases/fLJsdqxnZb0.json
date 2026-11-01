@@ -1,12 +1,149 @@
 {
  "id": "fLJsdqxnZb0",
  "created": "2026-11-01",
+ "attempts": 2,
  "models": {
   "transcript": "gemini-3.6-flash",
   "phrases": "claude-haiku-5-5"
  },
- "error": "Gemini không trả nội dung: {\"candidates\": [{\"content\": {}, \"finishReason\": \"RECITATION\", \"index\": 0, \"finishMessage\": \"The generated content was filtered because it may contain material that resembles existing copyrighted works. Try rephrasing the prompt. If you think this was an error, [send feedba",
- "summary_vi": "",
- "level": "",
- "phrases": []
+ "source": "full",
+ "summary_vi": "Diễn giả Shawn Achor kể câu chuyện thời thơ ấu với em gái để mở đầu, rồi phê phán cách khoa học và giáo dục chỉ tập trung vào mức trung bình và tiêu cực. Ông cho rằng hạnh phúc không phải là kết quả của thành công, mà thành công đến từ việc giữ tâm thế tích cực trong hiện tại.",
+ "level": "C1",
+ "phrases": [
+  {
+   "t": 22,
+   "phrase": "two years older than",
+   "quote": "I was two years older than my sister at the time",
+   "meaning_vi": "lớn hơn ai đó bao nhiêu tuổi",
+   "usage_vi": "Dùng để nói chênh lệch tuổi tác một cách tự nhiên.",
+   "example_en": "She is three years older than her brother, so she always got to make the rules.",
+   "example_vi": "Chị ấy lớn hơn em trai ba tuổi, nên lúc nào cũng là người đặt ra luật."
+  },
+  {
+   "t": 51,
+   "phrase": "on the clumsy side",
+   "quote": "Which is my sister is a little bit on the clumsy side.",
+   "meaning_vi": "hơi vụng về",
+   "usage_vi": "Cụm dùng để mô tả nhẹ nhàng một đặc điểm tính cách hoặc thể chất.",
+   "example_en": "He's a good manager, but he's a bit on the cautious side.",
+   "example_vi": "Anh ấy là một quản lý giỏi, nhưng hơi thận trọng quá mức."
+  },
+  {
+   "t": 116,
+   "phrase": "seeing as how",
+   "quote": "And seeing as how I had accidentally broken Amy's arm just one week before,",
+   "meaning_vi": "vì rằng, xét đến việc",
+   "usage_vi": "Cách nói thân mật, dùng để đưa ra lý do; thường gặp trong văn nói.",
+   "example_en": "Seeing as how the deadline is tomorrow, we should finish the report tonight.",
+   "example_vi": "Vì hạn chót là ngày mai, chúng ta nên hoàn thành báo cáo tối nay."
+  },
+  {
+   "t": 138,
+   "phrase": "on my best behavior",
+   "quote": "I was trying as hard as I could to be on my best behavior.",
+   "meaning_vi": "cư xử thật tốt, giữ ý tứ",
+   "usage_vi": "Dùng khi ai đó cố gắng cư xử đúng mực, thường là trong tình huống bị theo dõi.",
+   "example_en": "The kids were on their best behavior during the dinner with the client.",
+   "example_vi": "Bọn trẻ cư xử rất ngoan trong bữa tối với khách hàng."
+  },
+  {
+   "t": 216,
+   "phrase": "at no point",
+   "quote": "Of course, this was an option that was open to her brain at no point in the past.",
+   "meaning_vi": "chưa bao giờ, không lúc nào",
+   "usage_vi": "Dùng để nhấn mạnh rằng điều gì đó chưa từng xảy ra; mang sắc thái trang trọng.",
+   "example_en": "At no point did the team consider giving up on the project.",
+   "example_vi": "Nhóm chưa một lần nào cân nhắc từ bỏ dự án."
+  },
+  {
+   "t": 314,
+   "phrase": "the very first thing",
+   "quote": "The very first thing I wanted to do is start my talk with a graph.",
+   "meaning_vi": "điều đầu tiên, điều đầu tiên đó",
+   "usage_vi": "Dùng để nhấn mạnh điều đầu tiên trong một chuỗi việc; thường đi với động từ 'do'.",
+   "example_en": "The very first thing I do every morning is check my emails.",
+   "example_vi": "Điều đầu tiên tôi làm mỗi sáng là kiểm tra email."
+  },
+  {
+   "t": 351,
+   "phrase": "measurement error",
+   "quote": "I can delete that dot because that's clearly a measurement error,",
+   "meaning_vi": "sai số đo lường",
+   "usage_vi": "Thuật ngữ thống kê/khoa học; dùng khi nói về sai lệch trong dữ liệu.",
+   "example_en": "The sudden spike in sales was just a measurement error in the system.",
+   "example_vi": "Mức tăng đột biến về doanh số chỉ là sai số trong hệ thống đo lường."
+  },
+  {
+   "t": 420,
+   "phrase": "the cult of the average",
+   "quote": "what we're doing is we're creating the cult of the average with science.",
+   "meaning_vi": "sự sùng bái mức trung bình",
+   "usage_vi": "Cách nói ẩn dụ để phê phán việc chỉ chú trọng vào mức trung bình.",
+   "example_en": "Our hiring process has become a cult of the average, rewarding people who look just like everyone else.",
+   "example_vi": "Quy trình tuyển dụng của chúng ta đã trở thành sự sùng bái mức trung bình, chỉ thưởng cho người giống mọi người khác."
+  },
+  {
+   "t": 445,
+   "phrase": "leave knowing",
+   "quote": "we want to make sure you leave knowing you have 10,",
+   "meaning_vi": "rời đi với nhận thức rằng",
+   "usage_vi": "Cấu trúc 'leave + V-ing' diễn tả trạng thái khi kết thúc điều gì đó.",
+   "example_en": "I want you to leave the meeting knowing exactly what your next steps are.",
+   "example_vi": "Tôi muốn bạn rời cuộc họp với sự hiểu rõ các bước tiếp theo của mình."
+  },
+  {
+   "t": 447,
+   "phrase": "over and over again",
+   "quote": "so you'll keep coming back over and over again.",
+   "meaning_vi": "lặp đi lặp lại nhiều lần",
+   "usage_vi": "Dùng để nhấn mạnh hành động lặp lại; có thể dùng trong văn nói hằng ngày.",
+   "example_en": "I explained the same rule over and over again, but they still forgot it.",
+   "example_vi": "Tôi đã giải thích cùng một quy tắc hết lần này đến lần khác, nhưng họ vẫn quên."
+  },
+  {
+   "t": 541,
+   "phrase": "medical school syndrome",
+   "quote": "What that's doing is creating something called 'medical school syndrome,'",
+   "meaning_vi": "hội chứng sinh viên y khoa (tự nghi mắc bệnh)",
+   "usage_vi": "Dùng để chỉ việc tự cho rằng mình mắc các triệu chứng vừa đọc được.",
+   "example_en": "After one night of reading about heart disease, he had medical school syndrome.",
+   "example_vi": "Sau một đêm đọc về bệnh tim, anh ấy tự cho mình mắc đủ mọi triệu chứng."
+  },
+  {
+   "t": 749,
+   "phrase": "predictive of",
+   "quote": "Because what that question assumes is that our external world is predictive of our happiness levels,",
+   "meaning_vi": "có khả năng dự đoán",
+   "usage_vi": "Dùng trong văn phong học thuật hoặc báo cáo để nói điều gì dự báo kết quả.",
+   "example_en": "Past sales data is predictive of future demand in this market.",
+   "example_vi": "Dữ liệu doanh số quá khứ có khả năng dự đoán nhu cầu tương lai trên thị trường này."
+  },
+  {
+   "t": 826,
+   "phrase": "up in New England",
+   "quote": "I talked to a boarding school up in New England, probably the most prestigious boarding school,",
+   "meaning_vi": "ở phía bắc (vùng New England)",
+   "usage_vi": "Cách nói thân mật chỉ vị trí địa lý; 'up in' thường dùng cho miền bắc.",
+   "example_en": "Our branch office is up in Hanoi, so the time difference is small.",
+   "example_vi": "Văn phòng chi nhánh của chúng tôi ở tận Hà Nội phía bắc, nên chênh lệch múi giờ không lớn."
+  },
+  {
+   "t": 903,
+   "phrase": "I'd be happy to",
+   "quote": "'I'd be happy to speak at your school,",
+   "meaning_vi": "rất sẵn lòng làm gì",
+   "usage_vi": "Cách nói lịch sự để đồng ý hoặc đề nghị giúp đỡ trong công việc.",
+   "example_en": "I'd be happy to review the proposal before Friday.",
+   "example_vi": "Tôi rất sẵn lòng xem qua đề xuất trước thứ Sáu."
+  },
+  {
+   "t": 937,
+   "phrase": "scientifically broken and backwards",
+   "quote": "And the problem is that it's scientifically broken and backwards for two reasons.",
+   "meaning_vi": "sai lệch và đi ngược lại",
+   "usage_vi": "Dùng để phê phán một ý tưởng, cách làm một cách mạnh mẽ nhưng có lập luận.",
+   "example_en": "The old reporting system is outdated and backwards, so we need to replace it.",
+   "example_vi": "Hệ thống báo cáo cũ đã lỗi thời và đi ngược lại, nên chúng ta cần thay thế."
+  }
+ ]
 }

@@ -1,12 +1,140 @@
 {
  "id": "eIho2S0ZahI",
  "created": "2026-11-01",
+ "attempts": 2,
  "models": {
   "transcript": "gemini-3.6-flash",
   "phrases": "claude-haiku-5-5"
  },
- "error": "Expecting ',' delimiter: line 85 column 6 (char 5188)",
- "summary_vi": "",
- "level": "",
- "phrases": []
+ "source": "full",
+ "summary_vi": "Diễn giả chia sẻ bảy \"tội lỗi\" khi nói khiến người khác không muốn lắng nghe (buôn chuyện, phán xét, tiêu cực, than phiền, viện cớ, phóng đại, giáo điều) và đề xuất bốn nền tảng HAIL: trung thực, chân thực, chính trực và yêu thương. Video cũng hướng dẫn cách dùng giọng nói hiệu quả (cao độ, âm sắc, ngữ điệu, tốc độ, âm lượng) và các bài khởi động giọng trước khi nói.",
+ "level": "C1",
+ "phrases": [
+  {
+   "t": 52,
+   "phrase": "speak ill of somebody",
+   "quote": "Speaking ill of somebody who's not present.",
+   "meaning_vi": "nói xấu ai đó",
+   "usage_vi": "Dùng khi nói về việc bàn tán tiêu cực về người vắng mặt.",
+   "example_en": "I hate it when colleagues speak ill of people behind their backs.",
+   "example_vi": "Tôi ghét khi đồng nghiệp nói xấu người khác sau lưng."
+  },
+  {
+   "t": 103,
+   "phrase": "found wanting",
+   "quote": "you're being judged and found wanting at the same time.",
+   "meaning_vi": "bị đánh giá là thiếu sót, không đạt yêu cầu",
+   "usage_vi": "Văn phong trang trọng, dùng khi ai đó bị coi là chưa đủ tốt.",
+   "example_en": "The proposal was found wanting in several key areas.",
+   "example_vi": "Đề xuất bị đánh giá là thiếu sót ở nhiều mặt quan trọng."
+  },
+  {
+   "t": 142,
+   "phrase": "viral misery",
+   "quote": "complaining is viral misery.",
+   "meaning_vi": "nỗi bất hạnh lan truyền",
+   "usage_vi": "Cách ví von sinh động để nói về sự than phiền lây lan.",
+   "example_en": "A bad mood in the team can spread like viral misery.",
+   "example_vi": "Tâm trạng xấu trong nhóm có thể lan ra như một nỗi bất hạnh lây nhiễm."
+  },
+  {
+   "t": 155,
+   "phrase": "pass the buck",
+   "quote": "They just pass it on to everybody else and don't take responsibility for their actions,",
+   "meaning_vi": "đổ trách nhiệm cho người khác",
+   "usage_vi": "Dùng khi ai đó né tránh trách nhiệm bằng cách đổ lỗi.",
+   "example_en": "Instead of passing the buck, he owned up to his mistake in the meeting.",
+   "example_vi": "Thay vì đổ trách nhiệm, anh ấy đã nhận lỗi về sai sót của mình trong cuộc họp."
+  },
+  {
+   "t": 208,
+   "phrase": "demean",
+   "quote": "It demeans our language, actually, sometimes.",
+   "meaning_vi": "làm giảm giá trị, hạ thấp",
+   "usage_vi": "Động từ trang trọng, dùng khi nói việc làm mất đi giá trị của điều gì.",
+   "example_en": "Constant jargon can demean the value of a good idea.",
+   "example_vi": "Việc lạm dụng thuật ngữ có thể làm giảm giá trị của một ý tưởng tốt."
+  },
+  {
+   "t": 228,
+   "phrase": "conflate A with B",
+   "quote": "The confusion of facts with opinions.",
+   "meaning_vi": "nhầm lẫn, gộp chung A với B",
+   "usage_vi": "Dùng khi hai khái niệm bị coi là một cách sai lệch.",
+   "example_en": "Don't conflate speed with quality when you evaluate the team.",
+   "example_vi": "Đừng nhầm lẫn tốc độ với chất lượng khi đánh giá nhóm."
+  },
+  {
+   "t": 332,
+   "phrase": "stand in your own truth",
+   "quote": "A friend of mine described it as standing in your own truth,",
+   "meaning_vi": "sống đúng với con người thật của mình",
+   "usage_vi": "Cách diễn đạt về việc tự tin là chính mình.",
+   "example_en": "She finally started standing in her own truth at work.",
+   "example_vi": "Cuối cùng cô ấy cũng bắt đầu sống thật với chính mình ở nơi làm việc."
+  },
+  {
+   "t": 337,
+   "phrase": "be somebody people can trust",
+   "quote": "being somebody people can trust.",
+   "meaning_vi": "là người mà mọi người có thể tin cậy",
+   "usage_vi": "Dùng để nói về phẩm chất đáng tin của một người.",
+   "example_en": "Over the years, he became someone the clients can trust.",
+   "example_vi": "Qua nhiều năm, anh ấy trở thành người mà khách hàng có thể tin cậy."
+  },
+  {
+   "t": 402,
+   "phrase": "tempered with",
+   "quote": "Tempered with love, of course, honesty is a great thing.",
+   "meaning_vi": "được điều hòa, làm dịu bớt bởi",
+   "usage_vi": "Dùng khi một phẩm chất được điều chỉnh bằng một phẩm chất khác.",
+   "example_en": "His criticism was tempered with genuine encouragement.",
+   "example_vi": "Lời phê bình của anh ấy được làm dịu bằng sự động viên chân thành."
+  },
+  {
+   "t": 440,
+   "phrase": "may not be very useful most of the time",
+   "quote": "Now falsetto register may not be very useful most of the time,",
+   "meaning_vi": "hầu hết thời gian không hữu ích lắm",
+   "usage_vi": "Cách nói nhẹ nhàng để đánh giá điều gì đó ít ứng dụng.",
+   "example_en": "That software may not be very useful most of the time, but it helps in emergencies.",
+   "example_vi": "Phần mềm đó hầu như không hữu ích lắm, nhưng vẫn giúp ích trong trường hợp khẩn cấp."
+  },
+  {
+   "t": 541,
+   "phrase": "impart meaning",
+   "quote": "This is the sing-song, the meta-language that we use in order to impart meaning.",
+   "meaning_vi": "truyền đạt ý nghĩa",
+   "usage_vi": "Dùng trong ngữ cảnh trang trọng khi nói về việc truyền tải thông tin.",
+   "example_en": "Good managers impart meaning to everyday tasks.",
+   "example_vi": "Những quản lý giỏi truyền đạt ý nghĩa cho các công việc thường ngày."
+  },
+  {
+   "t": 716,
+   "phrase": "imposing your sound on people",
+   "quote": "imposing your sound on people around you carelessly and inconsiderately.",
+   "meaning_vi": "áp đặt âm thanh lên người khác",
+   "usage_vi": "Dùng khi nói về hành vi làm phiền người xung quanh.",
+   "example_en": "Playing music loudly on the train is imposing your sound on people.",
+   "example_vi": "Bật nhạc to trên tàu là áp đặt âm thanh lên người xung quanh."
+  },
+  {
+   "t": 735,
+   "phrase": "owe it to yourself",
+   "quote": "you owe it to yourself to look at this toolbox",
+   "meaning_vi": "bạn nên làm điều đó vì chính mình",
+   "usage_vi": "Cách khuyên nhủ lịch sự, nhấn mạnh lợi ích cho bản thân.",
+   "example_en": "You owe it to yourself to practise before the interview.",
+   "example_vi": "Bạn nên luyện tập trước buổi phỏng vấn vì chính bản thân mình."
+  },
+  {
+   "t": 742,
+   "phrase": "warm up",
+   "quote": "And no engine works well without being warmed up.",
+   "meaning_vi": "khởi động, làm nóng máy/giọng",
+   "usage_vi": "Dùng cho cả thể chất, giọng nói hoặc công việc trước khi bắt đầu.",
+   "example_en": "Let's warm up with a quick discussion before the main meeting.",
+   "example_vi": "Hãy khởi động bằng một cuộc thảo luận ngắn trước cuộc họp chính."
+  }
+ ]
 }
