@@ -1,0 +1,140 @@
+{
+ "id": "H14bBuluwB8",
+ "created": "2026-11-01",
+ "attempts": 1,
+ "models": {
+  "transcript": "gemini-3.6-flash",
+  "phrases": "claude-haiku-5-5"
+ },
+ "source": "full",
+ "summary_vi": "Angela Duckworth chia sẻ về hành trình từ làm tư vấn quản lý sang giảng dạy toán, rồi nghiên cứu vì sao một số người thành công hơn. Bà cho rằng \"grit\" (sự kiên trì bền bỉ theo đuổi mục tiêu dài hạn) quan trọng hơn năng lực thiên bẩm, và cần thêm nghiên cứu để hiểu cách xây dựng nó.",
+ "level": "C1",
+ "phrases": [
+  {
+   "t": 13,
+   "phrase": "leave a demanding job",
+   "quote": "When I was 27 years old, I left a very demanding job",
+   "meaning_vi": "rời bỏ một công việc đòi hỏi cao",
+   "usage_vi": "Dùng khi nói về việc bỏ một công việc áp lực lớn để chuyển hướng.",
+   "example_en": "She decided to leave a demanding job in finance to start her own bakery.",
+   "example_vi": "Cô ấy quyết định rời bỏ công việc tài chính áp lực để mở tiệm bánh riêng."
+  },
+  {
+   "t": 28,
+   "phrase": "like any",
+   "quote": "And like any teacher, I made quizzes and tests.",
+   "meaning_vi": "giống như bất kỳ... nào khác",
+   "usage_vi": "Dùng để so sánh điều gì đó là chuyện thông thường với mọi người trong cùng nhóm.",
+   "example_en": "Like any manager, he has to balance budgets and deadlines.",
+   "example_vi": "Giống như bất kỳ quản lý nào, anh ấy phải cân đối ngân sách và thời hạn."
+  },
+  {
+   "t": 36,
+   "phrase": "strike someone",
+   "quote": "What struck me was that IQ was not the only difference",
+   "meaning_vi": "gây ấn tượng mạnh, khiến ai đó chú ý",
+   "usage_vi": "Dùng khi điều gì đó bất ngờ hoặc gây ấn tượng với bạn.",
+   "example_en": "What struck me most was how calm the team stayed under pressure.",
+   "example_vi": "Điều khiến tôi ấn tượng nhất là cả đội vẫn bình tĩnh dưới áp lực."
+  },
+  {
+   "t": 54,
+   "phrase": "get someone thinking",
+   "quote": "And that got me thinking.",
+   "meaning_vi": "khiến ai đó bắt đầu suy nghĩ về điều gì",
+   "usage_vi": "Dùng khi một sự việc khiến bạn bắt đầu suy ngẫm sâu hơn.",
+   "example_en": "Your question really got me thinking about my career goals.",
+   "example_vi": "Câu hỏi của bạn thực sự khiến tôi suy nghĩ lại về mục tiêu nghề nghiệp."
+  },
+  {
+   "t": 67,
+   "phrase": "firmly convinced",
+   "quote": "I was firmly convinced that every one of my students could learn",
+   "meaning_vi": "hoàn toàn tin chắc",
+   "usage_vi": "Dùng để nhấn mạnh niềm tin vững chắc, thường trong ngữ cảnh trang trọng.",
+   "example_en": "I am firmly convinced that good communication solves most team conflicts.",
+   "example_vi": "Tôi hoàn toàn tin rằng giao tiếp tốt giải quyết được hầu hết xung đột trong nhóm."
+  },
+  {
+   "t": 79,
+   "phrase": "come to the conclusion",
+   "quote": "I came to the conclusion that what we need in education",
+   "meaning_vi": "đi đến kết luận rằng",
+   "usage_vi": "Dùng khi bạn đã suy xét và rút ra kết luận sau một quá trình.",
+   "example_en": "After months of analysis, we came to the conclusion that the product needed a redesign.",
+   "example_vi": "Sau nhiều tháng phân tích, chúng tôi đi đến kết luận sản phẩm cần thiết kế lại."
+  },
+  {
+   "t": 119,
+   "phrase": "in every study",
+   "quote": "and in every study my question was, who is successful here and why?",
+   "meaning_vi": "trong mọi nghiên cứu / mọi trường hợp",
+   "usage_vi": "Dùng để nhấn mạnh điều gì lặp lại nhất quán ở mọi trường hợp.",
+   "example_en": "In every project, the most successful teams communicated early and often.",
+   "example_vi": "Trong mọi dự án, các nhóm thành công nhất đều trao đổi sớm và thường xuyên."
+  },
+  {
+   "t": 164,
+   "phrase": "emerge as a significant predictor",
+   "quote": "one characteristic emerged as a significant predictor of success.",
+   "meaning_vi": "nổi lên như một yếu tố dự báo quan trọng",
+   "usage_vi": "Dùng trong văn phong phân tích, báo cáo khi một yếu tố nổi bật qua dữ liệu.",
+   "example_en": "Customer engagement emerged as a strong predictor of renewal rates.",
+   "example_vi": "Mức độ tương tác của khách hàng nổi lên như một yếu tố dự báo mạnh cho tỷ lệ gia hạn."
+  },
+  {
+   "t": 189,
+   "phrase": "day in, day out",
+   "quote": "Grit is sticking with your future, day in, day out,",
+   "meaning_vi": "ngày này qua ngày khác, đều đặn",
+   "usage_vi": "Dùng để nhấn mạnh sự bền bỉ, lặp lại đều đều trong thời gian dài.",
+   "example_en": "Nurses show real dedication, working day in, day out through long shifts.",
+   "example_vi": "Các y tá thể hiện sự tận tâm thực sự, làm việc ngày này qua ngày khác trong những ca dài."
+  },
+  {
+   "t": 202,
+   "phrase": "like a marathon, not a sprint",
+   "quote": "Grit is living life like it's a marathon, not a sprint.",
+   "meaning_vi": "coi là cuộc chạy marathon chứ không phải chạy nước rút",
+   "usage_vi": "Dùng để nhắc rằng một việc cần kiên nhẫn và sức bền lâu dài.",
+   "example_en": "Learning a new language is like a marathon, not a sprint.",
+   "example_vi": "Học một ngôn ngữ mới giống chạy marathon hơn là chạy nước rút."
+  },
+  {
+   "t": 226,
+   "phrase": "match someone on something",
+   "quote": "even when I matched them on every characteristic I could measure,",
+   "meaning_vi": "ghép cặp/đối chiếu ai đó theo một tiêu chí để so sánh công bằng",
+   "usage_vi": "Thuật ngữ nghiên cứu hoặc khi muốn so sánh các đối tượng có điều kiện tương đương.",
+   "example_en": "We matched the two groups on age and experience before comparing results.",
+   "example_vi": "Chúng tôi ghép hai nhóm theo tuổi và kinh nghiệm trước khi so sánh kết quả."
+  },
+  {
+   "t": 276,
+   "phrase": "follow through on",
+   "quote": "many talented individuals who simply do not follow through on their commitments.",
+   "meaning_vi": "thực hiện đến cùng, giữ lời cam kết",
+   "usage_vi": "Dùng khi nói ai đó hoàn thành điều đã hứa hoặc đã bắt đầu.",
+   "example_en": "He is great at brainstorming but rarely follows through on his ideas.",
+   "example_vi": "Anh ấy rất giỏi nghĩ ý tưởng nhưng hiếm khi thực hiện đến cùng."
+  },
+  {
+   "t": 319,
+   "phrase": "persevere when they fail",
+   "quote": "they're much more likely to persevere when they fail,",
+   "meaning_vi": "kiên trì khi thất bại",
+   "usage_vi": "Dùng khi nói về việc tiếp tục nỗ lực dù gặp khó khăn hay thất bại.",
+   "example_en": "Good managers encourage teams to persevere when projects hit setbacks.",
+   "example_vi": "Quản lý giỏi khuyến khích đội ngũ kiên trì khi dự án gặp trở ngại."
+  },
+  {
+   "t": 346,
+   "phrase": "start over again",
+   "quote": "to start over again with lessons learned.",
+   "meaning_vi": "bắt đầu lại từ đầu",
+   "usage_vi": "Dùng khi phải làm lại một việc sau khi rút kinh nghiệm.",
+   "example_en": "After the prototype failed, we had to start over again with a new design.",
+   "example_vi": "Sau khi nguyên mẫu thất bại, chúng tôi phải bắt đầu lại từ đầu với thiết kế mới."
+  }
+ ]
+}

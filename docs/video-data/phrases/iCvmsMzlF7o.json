@@ -1,12 +1,140 @@
 {
  "id": "iCvmsMzlF7o",
  "created": "2026-11-01",
+ "attempts": 2,
  "models": {
   "transcript": "gemini-3.6-flash",
   "phrases": "claude-haiku-5-5"
  },
- "error": "Gemini HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n",
- "summary_vi": "",
- "level": "",
- "phrases": []
+ "source": "full",
+ "summary_vi": "Brené Brown kể về việc mình trở thành \"researcher-storyteller\" và hành trình nghiên cứu về sự xấu hổ, lòng dũng cảm và sự dễ tổn thương. Bà cho rằng việc chai lì cảm xúc và kiểm soát mọi thứ chỉ khiến con người bất hạnh, và muốn chúng ta tin rằng mình \"đủ tốt\" để được yêu thương.",
+ "level": "C1",
+ "phrases": [
+  {
+   "t": 17,
+   "phrase": "call someone something",
+   "quote": "So, I'll start with this. A couple of years ago, an event planner called me because",
+   "meaning_vi": "gọi ai đó/đặt cho ai danh xưng gì",
+   "usage_vi": "Dùng khi nói ai đó được gọi/mô tả bằng một cái tên hoặc vai trò cụ thể.",
+   "example_en": "Our manager calls this approach 'smart flexibility', but the team just calls it chaos.",
+   "example_vi": "Quản lý của chúng tôi gọi cách làm này là 'linh hoạt thông minh', nhưng cả nhóm chỉ gọi nó là hỗn loạn."
+  },
+  {
+   "t": 23,
+   "phrase": "struggle with",
+   "quote": "\"I'm really struggling with how to write about you on the little flyer.\"",
+   "meaning_vi": "vật lộn với, gặp khó khăn với",
+   "usage_vi": "Dùng khi bạn đang gặp khó khăn trong việc làm/hiểu điều gì đó.",
+   "example_en": "I've been struggling with my presentation slides all week.",
+   "example_vi": "Cả tuần nay tôi cứ vật lộn với mấy slide thuyết trình."
+  },
+  {
+   "t": 204,
+   "phrase": "sweet-talk",
+   "quote": "and I thought he was just sweet-talking me.",
+   "meaning_vi": "tán tỉnh, nói lời ngọt ngào để dỗ dành",
+   "usage_vi": "Dùng khi ai đó nói lời khen hoặc dễ nghe để lấy lòng hoặc thuyết phục bạn.",
+   "example_en": "Don't try to sweet-talk me into approving the extra budget.",
+   "example_vi": "Đừng cố nịnh nọt để tôi duyệt thêm ngân sách."
+  },
+  {
+   "t": 228,
+   "phrase": "clean up",
+   "quote": "clean it up,",
+   "meaning_vi": "dọn dẹp, làm gọn gàng, sắp xếp lại",
+   "usage_vi": "Dùng nghĩa bóng khi nói việc làm cho một thứ lộn xộn trở nên trật tự, rõ ràng.",
+   "example_en": "Can you clean up the data before we send the report?",
+   "example_vi": "Bạn có thể làm sạch dữ liệu trước khi chúng ta gửi báo cáo không?"
+  },
+  {
+   "t": 246,
+   "phrase": "knock something upside the head",
+   "quote": "And I'm like, you know, knock discomfort upside the head and move it over and get all A's.",
+   "meaning_vi": "đánh gục, xử lý dứt khoát điều khó chịu (cách nói thân mật, hài hước)",
+   "usage_vi": "Dùng khi muốn nói thẳng thừng, quyết liệt đối mặt với một vấn đề, mang tính đùa vui.",
+   "example_en": "I'm going to knock this problem upside the head before the deadline.",
+   "example_vi": "Tôi sẽ xử lý dứt điểm vấn đề này trước hạn chót."
+  },
+  {
+   "t": 305,
+   "phrase": "hack into",
+   "quote": "I want to hack into these things I know are important",
+   "meaning_vi": "tìm hiểu sâu, thâm nhập để hiểu rõ (nghĩa bóng)",
+   "usage_vi": "Dùng khi muốn nói bạn đang tìm cách hiểu sâu một vấn đề phức tạp.",
+   "example_en": "Our team is trying to hack into the customer behavior data.",
+   "example_vi": "Nhóm chúng tôi đang cố gắng khai thác sâu dữ liệu hành vi khách hàng."
+  },
+  {
+   "t": 429,
+   "phrase": "unravel",
+   "quote": "that absolutely unraveled connection",
+   "meaning_vi": "làm tan rã, làm sụp đổ dần",
+   "usage_vi": "Dùng khi một thứ gì đó vốn ổn định bị tách rời hoặc sụp đổ từng phần.",
+   "example_en": "The whole project began to unravel after the main sponsor pulled out.",
+   "example_vi": "Cả dự án bắt đầu đổ vỡ sau khi nhà tài trợ chính rút lui."
+  },
+  {
+   "t": 548,
+   "phrase": "outsmart",
+   "quote": "and I'm going to outsmart it.",
+   "meaning_vi": "đánh lừa, thông minh hơn để qua mặt",
+   "usage_vi": "Dùng khi muốn nói bạn vượt trội hơn đối thủ hoặc một khó khăn bằng trí tuệ.",
+   "example_en": "Competitors keep trying to outsmart our pricing model.",
+   "example_vi": "Các đối thủ liên tục cố qua mặt mô hình giá của chúng tôi."
+  },
+  {
+   "t": 1126,
+   "phrase": "breakdown",
+   "quote": "I called it a breakdown; my therapist calls it a spiritual awakening.",
+   "meaning_vi": "suy sụp tinh thần, khủng hoảng",
+   "usage_vi": "Dùng để nói về giai đoạn suy sụp về cảm xúc hoặc tinh thần.",
+   "example_en": "He had a breakdown after years of working nonstop.",
+   "example_vi": "Anh ấy suy sụp tinh thần sau nhiều năm làm việc không nghỉ."
+  },
+  {
+   "t": 1215,
+   "phrase": "Here's the thing",
+   "quote": "And I said, \"Here's the thing. I'm struggling.\"",
+   "meaning_vi": "chuyện là thế này, điều quan trọng là",
+   "usage_vi": "Cụm dẫn nhập tự nhiên trước khi nói điều quan trọng hoặc thừa nhận điều gì đó.",
+   "example_en": "Here's the thing: I like the idea, but the timeline is unrealistic.",
+   "example_vi": "Chuyện là thế này: tôi thích ý tưởng đó, nhưng thời hạn thì không thực tế."
+  },
+  {
+   "t": 1405,
+   "phrase": "a street fight",
+   "quote": "For me, it was a yearlong street fight.",
+   "meaning_vi": "cuộc đấu tranh gay gắt, vật lộn dai dẳng",
+   "usage_vi": "Dùng ẩn dụ để nói về một quá trình khó khăn, căng thẳng phải đối đầu.",
+   "example_en": "Getting this budget approved was a street fight from start to finish.",
+   "example_vi": "Việc được duyệt ngân sách này là một cuộc đấu tranh gay gắt từ đầu đến cuối."
+  },
+  {
+   "t": 1441,
+   "phrase": "numb",
+   "quote": "We numb vulnerability.",
+   "meaning_vi": "làm tê liệt, làm chai lì cảm xúc",
+   "usage_vi": "Dùng khi nói ai đó cố né tránh hoặc làm dịu cảm xúc khó chịu.",
+   "example_en": "Some people numb stress with endless scrolling on their phones.",
+   "example_vi": "Một số người làm chai lì căng thẳng bằng việc lướt điện thoại không ngừng."
+  },
+  {
+   "t": 1700,
+   "phrase": "make something certain",
+   "quote": "The other thing we do is we make everything that's uncertain certain.",
+   "meaning_vi": "biến điều không chắc chắn thành chắc chắn (ép cho rõ ràng)",
+   "usage_vi": "Dùng khi ai đó cố gắng loại bỏ sự mơ hồ bằng cách khẳng định quá mức.",
+   "example_en": "Instead of making the forecast certain, we should plan for different scenarios.",
+   "example_vi": "Thay vì coi dự báo là chắc chắn, chúng ta nên lên kế hoạch cho nhiều kịch bản khác nhau."
+  },
+  {
+   "t": 1951,
+   "phrase": "believe that we're enough",
+   "quote": "is to believe that we're enough.",
+   "meaning_vi": "tin rằng bản thân đã đủ tốt/đủ giá trị",
+   "usage_vi": "Dùng khi nói về sự tự tin và chấp nhận bản thân mà không so sánh với người khác.",
+   "example_en": "You don't have to prove anything; you need to believe that you're enough.",
+   "example_vi": "Bạn không cần chứng minh điều gì; điều bạn cần là tin rằng mình đã đủ tốt."
+  }
+ ]
 }
