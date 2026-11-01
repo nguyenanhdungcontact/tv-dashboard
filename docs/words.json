@@ -878,5 +878,135 @@
       "tends to rub colleagues the wrong way"
     ],
     "added": "2026-11-01"
+  },
+  {
+    "w": "allocate",
+    "ipa": "/ˈæl.ə.keɪt/",
+    "pos": "verb",
+    "vi": "phân bổ (ngân sách, nguồn lực)",
+    "ex": "We need to allocate more budget to mobile campaigns this quarter.",
+    "col": [
+      "allocate a budget",
+      "allocate resources",
+      "allocate funds to"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "w": "underperform",
+    "ipa": "/ˌʌn.də.pəˈfɔːm/",
+    "pos": "verb",
+    "vi": "hoạt động kém hơn kỳ vọng",
+    "ex": "The display ads have underperformed since we changed the targeting.",
+    "col": [
+      "underperform expectations",
+      "significantly underperform",
+      "consistently underperform"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "w": "ad fatigue",
+    "ipa": "/æd fəˈtiːɡ/",
+    "pos": "noun",
+    "vi": "hiện tượng người xem chán quảng cáo vì thấy lặp lại quá nhiều",
+    "ex": "Click rates dropped because of ad fatigue after two months.",
+    "col": [
+      "suffer from ad fatigue",
+      "cause ad fatigue",
+      "reduce ad fatigue"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "w": "key performance indicator",
+    "ipa": "/kiː pəˈfɔː.məns ˈɪn.dɪ.keɪ.tər/",
+    "pos": "noun phrase",
+    "vi": "chỉ số đo lường hiệu quả chính (KPI)",
+    "ex": "Cost per lead is our main key performance indicator this year.",
+    "col": [
+      "track a key performance indicator",
+      "define key performance indicators",
+      "hit a key performance indicator"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "w": "lead generation",
+    "ipa": "/liːd ˌdʒen.əˈreɪ.ʃn/",
+    "pos": "noun",
+    "vi": "tạo khách hàng tiềm năng",
+    "ex": "Our landing page is built specifically for lead generation.",
+    "col": [
+      "lead generation campaign",
+      "focus on lead generation",
+      "improve lead generation"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "w": "a/b test",
+    "ipa": "/eɪ biː test/",
+    "pos": "noun phrase",
+    "vi": "thử nghiệm A/B so sánh hai phiên bản",
+    "ex": "Let’s run an A/B test on the headline before scaling it.",
+    "col": [
+      "run an A/B test",
+      "set up an A/B test",
+      "results of an A/B test"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "w": "gloss over",
+    "ipa": "/ɡlɒs ˈəʊ.vər/",
+    "pos": "phrasal verb",
+    "vi": "lướt qua, làm nhẹ đi (vấn đề khó)",
+    "ex": "He tried to gloss over the mistake during the client meeting.",
+    "col": [
+      "gloss over problems",
+      "gloss over the details",
+      "gloss over the facts"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "w": "hold a grudge",
+    "ipa": "/həʊld ə ɡrʌdʒ/",
+    "pos": "idiom",
+    "vi": "ôm giận, để bụng chuyện cũ",
+    "ex": "She doesn’t hold a grudge, even after we argued last year.",
+    "col": [
+      "hold a grudge against someone",
+      "bear no grudge",
+      "hold a grudge for years"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "w": "come to terms with",
+    "ipa": "/kʌm tə tɜːmz wɪð/",
+    "pos": "phrasal verb",
+    "vi": "chấp nhận, nguôi ngoai với điều gì khó khăn",
+    "ex": "It took me months to come to terms with losing that job.",
+    "col": [
+      "come to terms with loss",
+      "come to terms with reality",
+      "slowly come to terms with"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "w": "bond with someone",
+    "ipa": "/bɒnd wɪð ˈsʌm.wʌn/",
+    "pos": "phrasal verb",
+    "vi": "gắn kết, thân thiết với ai đó",
+    "ex": "I bonded with my new colleagues over a shared love of coffee.",
+    "col": [
+      "bond with colleagues",
+      "bond with family",
+      "bond over something"
+    ],
+    "added": "2026-11-02"
   }
 ]
