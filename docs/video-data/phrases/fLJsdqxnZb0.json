@@ -1,0 +1,12 @@
+{
+ "id": "fLJsdqxnZb0",
+ "created": "2026-11-01",
+ "models": {
+  "transcript": "gemini-3.6-flash",
+  "phrases": "claude-haiku-5-5"
+ },
+ "error": "Gemini không trả nội dung: {\"candidates\": [{\"content\": {}, \"finishReason\": \"RECITATION\", \"index\": 0, \"finishMessage\": \"The generated content was filtered because it may contain material that resembles existing copyrighted works. Try rephrasing the prompt. If you think this was an error, [send feedba",
+ "summary_vi": "",
+ "level": "",
+ "phrases": []
+}

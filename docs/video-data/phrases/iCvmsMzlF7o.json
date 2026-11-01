@@ -1,0 +1,12 @@
+{
+ "id": "iCvmsMzlF7o",
+ "created": "2026-11-01",
+ "models": {
+  "transcript": "gemini-3.6-flash",
+  "phrases": "claude-haiku-5-5"
+ },
+ "error": "Gemini HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n",
+ "summary_vi": "",
+ "level": "",
+ "phrases": []
+}
