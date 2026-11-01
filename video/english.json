@@ -1,0 +1,11 @@
+{
+  "_ghi_chu": "Danh sách video để Gemini soạn cụm từ. Thêm ID video YouTube vào mảng videos. Video đã soạn rồi sẽ được bỏ qua.",
+  "videos": [
+    "eIho2S0ZahI",
+    "UNP03fDSj1U",
+    "iCvmsMzlF7o",
+    "fLJsdqxnZb0",
+    "H14bBuluwB8",
+    "86x-u-tz0MA"
+  ]
+}

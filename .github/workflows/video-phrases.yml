@@ -1,0 +1,51 @@
+name: Video phrases (Gemini + Claude)
+
+on:
+  schedule:
+    - cron: "0 21 * * *"   # 4:00 sáng giờ Việt Nam, tránh trùng lịch Daily content update
+  workflow_dispatch:        # cho phép bấm chạy tay trong tab Actions
+
+permissions:
+  contents: write
+
+concurrency:
+  group: repo-commit
+  cancel-in-progress: false
+
+jobs:
+  phrases:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Cài thư viện
+        run: pip install requests
+
+      - name: Gemini lấy lời thoại, Claude soạn cụm từ
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}   # đổi tên cho khớp secret Claude bạn đang dùng
+          GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
+          CLAUDE_MODEL: ${{ vars.CLAUDE_MODEL }}
+        run: python scripts/video_phrases.py
+
+      - name: Lưu kết quả vào repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/video-data
+          if git diff --cached --quiet; then
+            echo "Không có gì mới."
+            exit 0
+          fi
+          git commit -m "Cập nhật cụm từ video $(date -u +%Y-%m-%d)"
+          for i in 1 2 3; do
+            git pull --rebase && git push && exit 0
+            sleep 10
+          done
+          exit 1
