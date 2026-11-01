@@ -1008,3 +1008,13 @@ Chỉ dựa trên thông tin ở trên và kiến thức chung. Không bịa th�
 </script>
 </body>
 </html>
+
+<script>
+(() => { let n = 0, t = 0;
+  window.addEventListener('keydown', e => {
+    if (e.key !== 'ArrowUp' && e.keyCode !== 38) return;
+    const now = Date.now(); n = (now - t < 600) ? n + 1 : 1; t = now;
+    if (n >= 3) location.href = 'video.html';
+  }, true);
+})();
+</script>
