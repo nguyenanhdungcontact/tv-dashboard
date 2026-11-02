@@ -1008,5 +1008,135 @@
       "bond over something"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "w": "data-driven",
+    "ipa": "/ˈdeɪ.tə ˌdrɪv.ən/",
+    "pos": "adj",
+    "vi": "dựa trên dữ liệu",
+    "ex": "Our team makes every decision in a data-driven way.",
+    "col": [
+      "data-driven decision",
+      "data-driven approach",
+      "become more data-driven"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "w": "move the needle",
+    "ipa": "/muːv ðə ˈniːdl/",
+    "pos": "idiom",
+    "vi": "tạo ra thay đổi rõ rệt về kết quả",
+    "ex": "Honestly, this small tweak won’t move the needle on sales.",
+    "col": [
+      "move the needle on revenue",
+      "barely move the needle",
+      "something that moves the needle"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "w": "low-hanging fruit",
+    "ipa": "/ˌləʊ ˌhæŋ.ɪŋ ˈfruːt/",
+    "pos": "noun phrase",
+    "vi": "việc dễ làm, dễ đạt kết quả nhanh",
+    "ex": "Let’s grab the low-hanging fruit first, then tackle harder tests.",
+    "col": [
+      "grab the low-hanging fruit",
+      "pick the low-hanging fruit",
+      "low-hanging fruit opportunities"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "w": "buy-in",
+    "ipa": "/ˈbaɪ.ɪn/",
+    "pos": "noun",
+    "vi": "sự đồng thuận, ủng hộ (từ cấp trên hoặc đội nhóm)",
+    "ex": "We need leadership buy-in before we increase the budget.",
+    "col": [
+      "get buy-in",
+      "secure buy-in",
+      "gain buy-in from stakeholders"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "w": "sunset",
+    "ipa": "/ˈsʌn.set/",
+    "pos": "verb",
+    "vi": "ngừng hỗ trợ, loại bỏ dần (sản phẩm, tính năng, chiến dịch)",
+    "ex": "We’ll sunset the old tracking setup once the new one is live.",
+    "col": [
+      "sunset a feature",
+      "sunset a product",
+      "sunset an old campaign"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "w": "deprioritize",
+    "ipa": "/ˌdiː.prɪˈɒr.ɪ.taɪz/",
+    "pos": "verb",
+    "vi": "giảm mức ưu tiên",
+    "ex": "We decided to deprioritize brand campaigns until the fourth quarter.",
+    "col": [
+      "deprioritize a project",
+      "deprioritize low-impact tasks",
+      "deprioritize non-essential work"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "w": "see eye to eye",
+    "ipa": "/siː aɪ tə aɪ/",
+    "pos": "idiom",
+    "vi": "đồng quan điểm, hiểu và đồng ý với nhau",
+    "ex": "My manager and I don’t always see eye to eye on budgets.",
+    "col": [
+      "see eye to eye with someone",
+      "not see eye to eye",
+      "finally see eye to eye"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "w": "water under the bridge",
+    "ipa": "/ˈwɔː.tər ˈʌn.dər ðə ˈbrɪdʒ/",
+    "pos": "idiom",
+    "vi": "chuyện đã qua, không cần nhắc lại nữa",
+    "ex": "Forget the argument from last month; it’s water under the bridge.",
+    "col": [
+      "it’s water under the bridge",
+      "let bygones be water under the bridge",
+      "consider it water under the bridge"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "w": "bottle up",
+    "ipa": "/ˈbɒt.l ʌp/",
+    "pos": "phrasal verb",
+    "vi": "kìm nén, giữ cảm xúc trong lòng",
+    "ex": "Don’t bottle up your frustration; talk to someone you trust.",
+    "col": [
+      "bottle up emotions",
+      "bottle up frustration",
+      "bottle up stress"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "w": "cheer someone up",
+    "ipa": "/tʃɪər ˈsʌm.wʌn ʌp/",
+    "pos": "phrasal verb",
+    "vi": "làm ai đó vui lên, động viên tinh thần",
+    "ex": "A cup of coffee and a funny video always cheers me up.",
+    "col": [
+      "cheer yourself up",
+      "cheer up a colleague",
+      "try to cheer someone up"
+    ],
+    "added": "2026-11-03"
   }
 ]
