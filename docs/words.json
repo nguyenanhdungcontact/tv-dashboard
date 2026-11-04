@@ -1138,5 +1138,135 @@
       "try to cheer someone up"
     ],
     "added": "2026-11-03"
+  },
+  {
+    "w": "circle back",
+    "ipa": "/ˌsɜːkl ˈbæk/",
+    "pos": "phrasal verb",
+    "vi": "quay lại bàn tiếp sau, đề cập lại sau",
+    "ex": "Let’s circle back on this after we’ve checked the data.",
+    "col": [
+      "circle back on something",
+      "circle back later",
+      "circle back with the team"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "w": "deep dive",
+    "ipa": "/ˈdiːp ˌdaɪv/",
+    "pos": "noun",
+    "vi": "phân tích chuyên sâu, nghiên cứu kỹ",
+    "ex": "We need a deep dive into why checkout conversions dropped.",
+    "col": [
+      "do a deep dive",
+      "deep dive analysis",
+      "deep dive into the data"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "w": "on the same page",
+    "ipa": "/ɒn ðə seɪm peɪdʒ/",
+    "pos": "idiom",
+    "vi": "có cùng quan điểm, hiểu giống nhau",
+    "ex": "Before launch, let’s make sure everyone is on the same page.",
+    "col": [
+      "get everyone on the same page",
+      "be on the same page",
+      "make sure we’re on the same page"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "w": "prioritize",
+    "ipa": "/praɪˈɒr.ɪ.taɪz/",
+    "pos": "verb",
+    "vi": "ưu tiên, sắp xếp theo thứ tự quan trọng",
+    "ex": "We should prioritize campaigns with the highest return on ad spend.",
+    "col": [
+      "prioritize tasks",
+      "prioritize high-impact campaigns",
+      "prioritize based on data"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "w": "action item",
+    "ipa": "/ˈæk.ʃən ˌaɪ.təm/",
+    "pos": "noun",
+    "vi": "việc cần làm sau cuộc họp",
+    "ex": "Each person leaves the meeting with clear action items.",
+    "col": [
+      "assign action items",
+      "follow up on action items",
+      "list of action items"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "w": "impression",
+    "ipa": "/ɪmˈpreʃ.ən/",
+    "pos": "noun",
+    "vi": "lượt hiển thị quảng cáo; ấn tượng",
+    "ex": "This ad generated fifty thousand impressions but only a few clicks.",
+    "col": [
+      "ad impressions",
+      "make a good impression",
+      "impression share"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "w": "get on someone’s nerves",
+    "ipa": "/ɡet ɒn ˈsʌm.wʌnz nɜːvz/",
+    "pos": "idiom",
+    "vi": "làm ai đó bực mình, khó chịu",
+    "ex": "His constant jokes about my accent really get on my nerves.",
+    "col": [
+      "really get on my nerves",
+      "start to get on your nerves",
+      "get on someone’s nerves all day"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "w": "make amends",
+    "ipa": "/meɪk əˈmendz/",
+    "pos": "idiom",
+    "vi": "chuộc lỗi, bù đắp cho sai lầm đã gây ra",
+    "ex": "I owe my sister an apology, and I want to make amends.",
+    "col": [
+      "make amends with someone",
+      "try to make amends",
+      "make amends for a mistake"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "w": "empathize with",
+    "ipa": "/ˈem.pə.θaɪz wɪð/",
+    "pos": "phrasal verb",
+    "vi": "thấu hiểu, đồng cảm với ai",
+    "ex": "Good managers try to empathize with what their team members feel.",
+    "col": [
+      "empathize with someone",
+      "find it hard to empathize with",
+      "genuinely empathize with customers"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "w": "fed up with",
+    "ipa": "/fed ʌp wɪð/",
+    "pos": "adj",
+    "vi": "chán ngán, mệt mỏi vì điều gì đó",
+    "ex": "I’m fed up with waiting for approvals that never arrive.",
+    "col": [
+      "fed up with something",
+      "completely fed up",
+      "be fed up with waiting"
+    ],
+    "added": "2026-11-05"
   }
 ]
