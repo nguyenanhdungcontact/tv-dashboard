@@ -2,24 +2,28 @@ name: Daily content update
 
 on:
   schedule:
-    - cron: "0 23 * * *"   # 06:00 Vietnam time – news + 10 new words
-    - cron: "0 10 * * *"   # 17:00 Vietnam time – news only
+    - cron: "0 23 * * *"   # once a day, 06:00 Vietnam time – news + 10 new words
   workflow_dispatch:
     inputs:
       tasks:
         description: "What to update"
         default: "news words"
+      force:
+        description: "Run again even if today's content already exists"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
 
 concurrency:
-  group: daily-content
+  group: repo-commit          # same group as the video workflow, so pushes never collide
   cancel-in-progress: false
 
 jobs:
   update:
     runs-on: ubuntu-latest
+    timeout-minutes: 120       # batch results usually arrive within minutes
     steps:
       - uses: actions/checkout@v4
 
@@ -27,30 +31,30 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Pick tasks
-        id: pick
-        run: |
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            echo "tasks=${{ github.event.inputs.tasks }}" >> "$GITHUB_OUTPUT"
-          elif [ "${{ github.event.schedule }}" = "0 23 * * *" ]; then
-            echo "tasks=news words" >> "$GITHUB_OUTPUT"
-          else
-            echo "tasks=news" >> "$GITHUB_OUTPUT"
-          fi
-
       - name: Update content with Claude
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-        run: python scripts/daily_update.py ${{ steps.pick.outputs.tasks }}
+        run: |
+          TASKS="${{ inputs.tasks }}"
+          [ -z "$TASKS" ] && TASKS="news words"
+          FLAGS=""
+          [ "${{ inputs.force }}" = "true" ] && FLAGS="--force"
+          python scripts/daily_update.py $TASKS $FLAGS
 
       - name: Commit changes
         run: |
           git config user.name "tv-dashboard-bot"
           git config user.email "tv-dashboard-bot@users.noreply.github.com"
-          git add docs/brief.json docs/words.json
+          for f in docs/brief.json docs/words.json scripts/state.json; do
+            [ -e "$f" ] && git add "$f"
+          done
           if git diff --cached --quiet; then
             echo "Nothing changed."
-          else
-            git commit -m "Daily update $(TZ=Asia/Ho_Chi_Minh date '+%d/%m %H:%M')"
-            git push
+            exit 0
           fi
+          git commit -m "Daily update $(TZ=Asia/Ho_Chi_Minh date '+%d/%m %H:%M')"
+          for i in 1 2 3; do
+            git pull --rebase && git push && exit 0
+            sleep 10
+          done
+          exit 1
