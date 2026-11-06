@@ -1268,5 +1268,135 @@
       "be fed up with waiting"
     ],
     "added": "2026-11-05"
+  },
+  {
+    "w": "audience segment",
+    "ipa": "/ˈɔː.di.əns ˈseɡ.mənt/",
+    "pos": "noun",
+    "vi": "phân khúc đối tượng khán giả",
+    "ex": "We’ll split the audience segment by age and location before launching.",
+    "col": [
+      "target an audience segment",
+      "define an audience segment",
+      "high-value audience segment"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "w": "forecast",
+    "ipa": "/ˈfɔː.kɑːst/",
+    "pos": "verb",
+    "vi": "dự báo",
+    "ex": "The team forecasts a 20% rise in leads next quarter.",
+    "col": [
+      "forecast demand",
+      "revenue forecast",
+      "sales forecast"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "w": "pivot",
+    "ipa": "/ˈpɪv.ət/",
+    "pos": "verb",
+    "vi": "chuyển hướng, xoay trục chiến lược",
+    "ex": "If the new creative flops, we’ll pivot to video ads.",
+    "col": [
+      "pivot the strategy",
+      "pivot to something",
+      "make a pivot"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "w": "cut through the noise",
+    "ipa": "/kʌt θruː ðə nɔɪz/",
+    "pos": "idiom",
+    "vi": "nổi bật giữa đống thông tin nhiễu",
+    "ex": "Our ad needs a bold hook to cut through the noise.",
+    "col": [
+      "cut through the noise online",
+      "help cut through the noise",
+      "cut through the clutter"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "w": "wrap up",
+    "ipa": "/ˌræp ˈʌp/",
+    "pos": "phrasal verb",
+    "vi": "kết thúc, chốt lại",
+    "ex": "Let’s wrap up the meeting by confirming next steps.",
+    "col": [
+      "wrap up a meeting",
+      "wrap up a campaign",
+      "wrap up with a summary"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "w": "brand awareness",
+    "ipa": "/brænd əˈweə.nəs/",
+    "pos": "noun",
+    "vi": "mức độ nhận biết thương hiệu",
+    "ex": "This campaign aims to boost brand awareness among young shoppers.",
+    "col": [
+      "build brand awareness",
+      "raise brand awareness",
+      "increase brand awareness"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "w": "hit a rough patch",
+    "ipa": "/hɪt ə rʌf pætʃ/",
+    "pos": "idiom",
+    "vi": "gặp giai đoạn khó khăn",
+    "ex": "My sister’s hit a rough patch since she lost her job.",
+    "col": [
+      "go through a rough patch",
+      "hit a rough patch financially",
+      "rough patch in a relationship"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "w": "stand up for someone",
+    "ipa": "/stænd ʌp fɔː ˈsʌm.wʌn/",
+    "pos": "phrasal verb",
+    "vi": "bênh vực ai đó",
+    "ex": "My manager always stands up for her team in meetings.",
+    "col": [
+      "stand up for yourself",
+      "stand up for a friend",
+      "stand up for what’s right"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "w": "take something personally",
+    "ipa": "/teɪk ˈsʌm.θɪŋ ˈpɜː.sən.əl.i/",
+    "pos": "idiom",
+    "vi": "để bụng, coi điều gì đó là nhắm vào mình",
+    "ex": "Don’t take it personally; he’s just stressed about deadlines.",
+    "col": [
+      "don’t take it personally",
+      "take criticism personally",
+      "take feedback personally"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "w": "get cold feet",
+    "ipa": "/ɡet kəʊld fiːt/",
+    "pos": "idiom",
+    "vi": "chùn bước, mất tự tin vào phút chót",
+    "ex": "She got cold feet before signing the big client contract.",
+    "col": [
+      "get cold feet about something",
+      "start to get cold feet",
+      "cold feet before the launch"
+    ],
+    "added": "2026-11-06"
   }
 ]
