@@ -1398,5 +1398,135 @@
       "cold feet before the launch"
     ],
     "added": "2026-11-06"
+  },
+  {
+    "w": "anomaly",
+    "ipa": "/əˈnɒməli/",
+    "pos": "noun",
+    "vi": "điểm bất thường, dữ liệu lệch khỏi quy luật",
+    "ex": "The sudden spike in clicks looks like an anomaly we should investigate.",
+    "col": [
+      "spot an anomaly",
+      "flag an anomaly",
+      "statistical anomaly"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "w": "outlier",
+    "ipa": "/ˈaʊtlaɪə/",
+    "pos": "noun",
+    "vi": "giá trị ngoại lai, dữ liệu lệch hẳn so với phần còn lại",
+    "ex": "Remove the outliers before we calculate the average cost per conversion.",
+    "col": [
+      "remove outliers",
+      "statistical outlier",
+      "outlier data points"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "w": "delegate",
+    "ipa": "/ˈdelɪɡeɪt/",
+    "pos": "verb",
+    "vi": "giao việc, ủy quyền cho người khác",
+    "ex": "I’d rather delegate the reporting to Minh so I can focus on strategy.",
+    "col": [
+      "delegate tasks",
+      "delegate responsibility to",
+      "learn to delegate"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "w": "brief",
+    "ipa": "/briːf/",
+    "pos": "noun",
+    "vi": "bản tóm tắt yêu cầu công việc gửi đội thực hiện",
+    "ex": "The client’s brief was vague, so we asked for clearer goals.",
+    "col": [
+      "creative brief",
+      "client brief",
+      "write a brief"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "w": "reach",
+    "ipa": "/riːtʃ/",
+    "pos": "noun",
+    "vi": "phạm vi tiếp cận, số người được tiếp cận",
+    "ex": "Our video campaign expanded reach by forty percent among younger users.",
+    "col": [
+      "organic reach",
+      "expand reach",
+      "maximum reach"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "w": "align",
+    "ipa": "/əˈlaɪn/",
+    "pos": "verb",
+    "vi": "đồng bộ, điều chỉnh cho khớp nhau",
+    "ex": "Let’s align the ad copy with the landing page messaging before launch.",
+    "col": [
+      "align with",
+      "align goals",
+      "closely aligned"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "w": "confide in",
+    "ipa": "/kənˈfaɪd ɪn/",
+    "pos": "phrasal verb",
+    "vi": "tâm sự, thổ lộ điều riêng tư với ai",
+    "ex": "She finally confided in me about the pressure she felt at work.",
+    "col": [
+      "confide in a friend",
+      "confide a secret",
+      "confide in someone"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "w": "lose one’s temper",
+    "ipa": "/luːz wʌnz ˈtempə/",
+    "pos": "phrase",
+    "vi": "mất bình tĩnh, nổi nóng",
+    "ex": "He lost his temper during the meeting when the budget was cut again.",
+    "col": [
+      "lose one’s temper with",
+      "keep one’s temper",
+      "quick to lose one’s temper"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "w": "resentful",
+    "ipa": "/rɪˈzentfl/",
+    "pos": "adjective",
+    "vi": "bực bội, oán giận vì bị đối xử không công bằng",
+    "ex": "I felt resentful when my idea was credited to someone else.",
+    "col": [
+      "feel resentful",
+      "resentful of",
+      "resentful towards"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "w": "reluctant",
+    "ipa": "/rɪˈlʌktənt/",
+    "pos": "adjective",
+    "vi": "miễn cưỡng, không muốn làm điều gì",
+    "ex": "Many clients are reluctant to share first-party data with agencies.",
+    "col": [
+      "reluctant to commit",
+      "reluctant to admit",
+      "reluctantly agreed"
+    ],
+    "added": "2026-11-06"
   }
 ]
