@@ -1528,5 +1528,135 @@
       "reluctantly agreed"
     ],
     "added": "2026-11-06"
+  },
+  {
+    "w": "pacing",
+    "ipa": "/ˈpeɪsɪŋ/",
+    "pos": "noun",
+    "vi": "tốc độ phân bổ ngân sách quảng cáo",
+    "ex": "Google’s ad pacing is too aggressive, so we’ll run out early.",
+    "col": [
+      "ad pacing",
+      "standard pacing",
+      "accelerated pacing"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "w": "audit",
+    "ipa": "/ˈɔːdɪt/",
+    "pos": "verb",
+    "vi": "kiểm tra, rà soát có hệ thống",
+    "ex": "We should audit the tracking tags before scaling the campaign next month.",
+    "col": [
+      "run an audit",
+      "conduct an audit",
+      "audit trail"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "w": "escalate",
+    "ipa": "/ˈeskəleɪt/",
+    "pos": "verb",
+    "vi": "leo thang; đẩy lên cấp trên xử lý",
+    "ex": "If the issue isn’t fixed by Friday, we’ll escalate it to management.",
+    "col": [
+      "escalate an issue",
+      "escalate to management",
+      "escalate quickly"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "w": "streamline",
+    "ipa": "/ˈstriːmlaɪn/",
+    "pos": "verb",
+    "vi": "tinh gọn, đơn giản hóa quy trình",
+    "ex": "We streamlined the reporting process, so the weekly dashboard now updates automatically.",
+    "col": [
+      "streamline the process",
+      "streamline workflows",
+      "streamline operations"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "w": "mitigate",
+    "ipa": "/ˈmɪtɪɡeɪt/",
+    "pos": "verb",
+    "vi": "giảm thiểu (rủi ro, thiệt hại)",
+    "ex": "We can mitigate the risk by diversifying spend across three platforms.",
+    "col": [
+      "mitigate risk",
+      "mitigate the impact",
+      "mitigate losses"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "w": "loop someone in",
+    "ipa": "/luːp ˈsʌmwʌn ɪn/",
+    "pos": "phrasal verb",
+    "vi": "thông báo, đưa ai vào cuộc",
+    "ex": "Please loop in the client’s legal team before we change the landing page.",
+    "col": [
+      "loop someone in",
+      "keep someone looped in",
+      "loop in the team"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "w": "reconcile",
+    "ipa": "/ˈrekənsaɪl/",
+    "pos": "verb",
+    "vi": "hòa giải; đối chiếu cho khớp (số liệu)",
+    "ex": "After months of silence, they finally reconciled and started talking again.",
+    "col": [
+      "reconcile with someone",
+      "reconcile differences",
+      "reconcile the figures"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "w": "resilient",
+    "ipa": "/rɪˈzɪliənt/",
+    "pos": "adjective",
+    "vi": "kiên cường, bền bỉ, phục hồi nhanh",
+    "ex": "She stayed resilient through a difficult year and came out stronger.",
+    "col": [
+      "emotionally resilient",
+      "remain resilient",
+      "resilient to stress"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "w": "heartbroken",
+    "ipa": "/ˈhɑːtbrəʊkən/",
+    "pos": "adjective",
+    "vi": "đau lòng, tan nát cõi lòng",
+    "ex": "I was heartbroken when my best friend moved abroad last summer.",
+    "col": [
+      "left heartbroken",
+      "heartbroken over",
+      "completely heartbroken"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "w": "nostalgic",
+    "ipa": "/nɒˈstældʒɪk/",
+    "pos": "adjective",
+    "vi": "hoài niệm, bồi hồi nhớ về quá khứ",
+    "ex": "Looking at old photos always makes me feel nostalgic for university days.",
+    "col": [
+      "feel nostalgic",
+      "nostalgic about",
+      "a nostalgic mood"
+    ],
+    "added": "2026-11-07"
   }
 ]
