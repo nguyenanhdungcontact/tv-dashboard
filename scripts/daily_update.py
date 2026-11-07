@@ -325,9 +325,24 @@ def step_a_select(articles):
     today = today_vn()
     user = f"Hôm nay là {WEEKDAYS[today.weekday()]}, {today:%d/%m/%Y}. Danh sách bài:\n" + \
            "\n".join(article_line(a) for a in articles)
-    msg = api("/messages", message_params(SELECT_MODEL, SELECT_SYSTEM, user, 900))
+    msg = api("/messages", message_params(SELECT_MODEL, SELECT_SYSTEM, user, 2500))
     log_usage("A select", msg, batch=False)
-    data = extract_json(text_of(msg), "{", "}")
+    reply = text_of(msg)
+    try:
+        data = extract_json(reply, "{", "}")
+    except ValueError:
+        # Reply cut off or wrapped in text: keep every complete {...} object that has an id and a group.
+        items = []
+        for chunk in re.findall(r"\{[^{}]*\}", reply):
+            try:
+                obj = json.loads(chunk)
+            except ValueError:
+                continue
+            if isinstance(obj, dict) and "id" in obj and "group" in obj:
+                items.append(obj)
+        found = items
+        data = {"items": items}
+        print(f"  step A reply was not clean JSON, salvaged {len(found)} items. Start of reply: {reply[:200]!r}")
     by_id = {a["id"]: a for a in articles}
     ranked = {g: [] for g in SECTION_META}
     seen = set()
