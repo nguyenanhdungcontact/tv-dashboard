@@ -1658,5 +1658,135 @@
       "a nostalgic mood"
     ],
     "added": "2026-11-07"
+  },
+  {
+    "w": "return on ad spend",
+    "ipa": "/rɪˈtɜːn ɒn æd spend/",
+    "pos": "noun phrase",
+    "vi": "lợi nhuận trên chi phí quảng cáo (ROAS)",
+    "ex": "We’re tracking return on ad spend weekly to cut underperforming campaigns.",
+    "col": [
+      "maximize return on ad spend",
+      "improve return on ad spend",
+      "track return on ad spend"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "w": "pipeline",
+    "ipa": "/ˈpaɪplaɪn/",
+    "pos": "noun",
+    "vi": "nguồn khách hàng tiềm năng đang theo đuổi trong quy trình bán hàng",
+    "ex": "The sales team says the pipeline looks healthy for next quarter.",
+    "col": [
+      "sales pipeline",
+      "fill the pipeline",
+      "pipeline review"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "w": "dashboard",
+    "ipa": "/ˈdæʃbɔːd/",
+    "pos": "noun",
+    "vi": "bảng điều khiển, bảng theo dõi số liệu",
+    "ex": "Can you add conversion costs to the dashboard before Monday’s meeting?",
+    "col": [
+      "real-time dashboard",
+      "build a dashboard",
+      "dashboard metrics"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "w": "touchpoint",
+    "ipa": "/ˈtʌtʃpɔɪnt/",
+    "pos": "noun",
+    "vi": "điểm tiếp xúc giữa thương hiệu và khách hàng",
+    "ex": "Every touchpoint in the customer journey should feel consistent and helpful.",
+    "col": [
+      "key touchpoint",
+      "customer touchpoint",
+      "touchpoint in the journey"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "w": "scrutinize",
+    "ipa": "/ˈskruːtɪnaɪz/",
+    "pos": "verb",
+    "vi": "xem xét kỹ lưỡng, soi xét",
+    "ex": "The client will scrutinize every line item in this proposal.",
+    "col": [
+      "scrutinize the data",
+      "scrutinize every detail",
+      "closely scrutinize"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "w": "ramp up",
+    "ipa": "/ræmp ʌp/",
+    "pos": "phrasal verb",
+    "vi": "tăng tốc, đẩy mạnh (quy mô, hoạt động)",
+    "ex": "We need to ramp up spending before the holiday season starts.",
+    "col": [
+      "ramp up production",
+      "ramp up hiring",
+      "ramp up campaign spending"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "w": "put up with",
+    "ipa": "/pʊt ʌp wɪð/",
+    "pos": "phrasal verb",
+    "vi": "chịu đựng, chấp nhận điều khó chịu",
+    "ex": "I can’t put up with vague feedback that doesn’t come with data.",
+    "col": [
+      "put up with delays",
+      "can’t put up with something",
+      "put up with criticism"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "w": "shrug off",
+    "ipa": "/ʃrʌɡ ɒf/",
+    "pos": "phrasal verb",
+    "vi": "gạt bỏ, không để tâm đến (lời chê, thất bại)",
+    "ex": "She shrugged off the criticism and focused on the next step.",
+    "col": [
+      "shrug off criticism",
+      "shrug off a setback",
+      "shrug off the comments"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "w": "vulnerable",
+    "ipa": "/ˈvʌlnərəbl/",
+    "pos": "adjective",
+    "vi": "dễ tổn thương, yếu lòng",
+    "ex": "It’s hard to admit you feel vulnerable, but it helps people trust you.",
+    "col": [
+      "feel vulnerable",
+      "vulnerable to change",
+      "emotionally vulnerable"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "w": "nurture",
+    "ipa": "/ˈnɜːtʃə/",
+    "pos": "verb",
+    "vi": "nuôi dưỡng, vun đắp (mối quan hệ, tài năng, khách hàng tiềm năng)",
+    "ex": "Good friendships need time and effort to nurture over the years.",
+    "col": [
+      "nurture relationships",
+      "nurture talent",
+      "nurture leads"
+    ],
+    "added": "2026-11-07"
   }
 ]
