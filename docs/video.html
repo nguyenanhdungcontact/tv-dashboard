@@ -583,7 +583,10 @@ function play(r, c){
 function createOrLoad(id){
   if (player && player.loadVideoById){ player.loadVideoById(id); return; }
   $('#ytWrap').innerHTML = '<div id="yt"></div>';
-  const vars = { autoplay:1, rel:0, playsinline:1, iv_load_policy:3, fs:0, cc_load_policy:0, hl:'vi' };
+  // Phụ đề bật sẵn ngay từ đầu (tiếng Anh, hoặc tiếng Việt cho hồ sơ Bố mẹ); tắt được trong menu ▼
+  const m = ccGet();
+  const vars = { autoplay:1, rel:0, playsinline:1, iv_load_policy:3, fs:0, hl:'vi',
+                 cc_load_policy: m === 'off' ? 0 : 1, cc_lang_pref: m === 'off' ? 'en' : m };
   // Không ép 1080p nữa: YouTube tự chọn chất lượng theo cỡ khung, khung học nhỏ → tải và tua nhanh hơn
   if (location.protocol.startsWith('http')) vars.origin = location.origin;
   player = new YT.Player('yt', {
@@ -591,6 +594,7 @@ function createOrLoad(id){
     events:{
       onReady: e => { e.target.playVideo(); refocus(); },
       onStateChange: onState,
+      onApiChange: () => { if (S.ccWant) applyCC(S.ccWant, false); },   // danh sách phụ đề vừa nạp xong
       onError: onErr
     }
   });
@@ -676,13 +680,18 @@ function seek(d){
 const CC_MODES = ['off','en','vi'];
 const CC_LABEL = { off:'Tắt phụ đề', en:'Phụ đề tiếng Anh', vi:'Phụ đề tiếng Việt' };
 function ccGet(){
-  return store.get('tvv.cc.' + S.profile) || (PROFILES[S.profile].simple ? 'vi' : 'off');
+  // Khóa mới (cc2): mặc định bật phụ đề tiếng Anh, bỏ qua lựa chọn "Tắt" cũ
+  return store.get('tvv.cc2.' + S.profile) || (PROFILES[S.profile].simple ? 'vi' : 'en');
 }
 function ccTracks(){
   try { return player.getOption('captions','tracklist') || []; } catch(e){ return []; }
 }
-function applyCC(mode, announce){
+/* YouTube nạp danh sách phụ đề chậm và khác nhau theo máy: thử lại vài lần, và thử lại khi onApiChange báo */
+let ccTimer = null;
+function applyCC(mode, announce, tries = 0){
   if (!player || !player.loadModule) return;
+  clearTimeout(ccTimer);
+  S.ccWant = mode === 'off' ? null : mode;
   try {
     if (mode === 'off'){
       player.unloadModule('captions'); player.unloadModule('cc');
@@ -690,33 +699,32 @@ function applyCC(mode, announce){
       return;
     }
     player.loadModule('captions');
-    // Chờ trình phát nạp danh sách phụ đề rồi mới chọn
-    setTimeout(() => {
-      const tracks = ccTracks();
-      if (!tracks.length){
-        if (announce) osd('Video này không có phụ đề', '', 2200, false);
-        return;
-      }
-      const exact = tracks.find(t => (t.languageCode || '').startsWith(mode));
-      const english = tracks.find(t => (t.languageCode || '').startsWith('en'));
-      if (exact){
-        player.setOption('captions','track',{ languageCode: exact.languageCode });
-      } else if (mode === 'vi'){
-        // Không có phụ đề tiếng Việt: dịch tự động từ phụ đề có sẵn
-        const base = english || tracks[0];
-        player.setOption('captions','track',{ languageCode: base.languageCode, translationLanguage:{ languageCode:'vi', languageName:'Tiếng Việt' } });
-      } else {
-        player.setOption('captions','track',{ languageCode: tracks[0].languageCode });
-      }
-      if (announce) osd(CC_LABEL[mode], exact || mode !== 'vi' ? '' : 'Dịch tự động', 1800, false);
-    }, 700);
+    const tracks = ccTracks();
+    if (!tracks.length){
+      if (tries < 8){ ccTimer = setTimeout(() => applyCC(mode, announce, tries + 1), 600); return; }
+      if (announce) osd('Video này không có phụ đề', '', 2200, false);
+      return;
+    }
+    const exact = tracks.find(t => (t.languageCode || '').startsWith(mode) && !t.kind) || tracks.find(t => (t.languageCode || '').startsWith(mode));
+    const english = tracks.find(t => (t.languageCode || '').startsWith('en'));
+    if (exact){
+      player.setOption('captions','track',{ languageCode: exact.languageCode });
+    } else if (mode === 'vi'){
+      // Không có phụ đề tiếng Việt: dịch tự động từ phụ đề có sẵn
+      const base = english || tracks[0];
+      player.setOption('captions','track',{ languageCode: base.languageCode, translationLanguage:{ languageCode:'vi', languageName:'Tiếng Việt' } });
+    } else {
+      player.setOption('captions','track',{ languageCode: (english || tracks[0]).languageCode });
+    }
+    S.ccWant = null;   // đã chọn xong, không áp lại nữa
+    if (announce) osd(CC_LABEL[mode], exact || mode !== 'vi' ? '' : 'Dịch tự động', 1800, false);
   } catch(e){
     if (announce) osd('Không đổi được phụ đề cho video này', '', 2200, false);
   }
 }
 function cycleCC(){
   const next = CC_MODES[(CC_MODES.indexOf(ccGet()) + 1) % CC_MODES.length];
-  store.set('tvv.cc.' + S.profile, next);
+  store.set('tvv.cc2.' + S.profile, next);
   applyCC(next, true);
 }
 
