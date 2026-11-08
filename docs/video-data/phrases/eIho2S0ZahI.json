@@ -1,140 +1,141 @@
 {
  "id": "eIho2S0ZahI",
- "created": "2026-11-01",
- "attempts": 2,
- "models": {
-  "transcript": "gemini-3.6-flash",
-  "phrases": "claude-haiku-5-5"
- },
- "source": "full",
- "summary_vi": "Diễn giả chia sẻ bảy \"tội lỗi\" khi nói khiến người khác không muốn lắng nghe (buôn chuyện, phán xét, tiêu cực, than phiền, viện cớ, phóng đại, giáo điều) và đề xuất bốn nền tảng HAIL: trung thực, chân thực, chính trực và yêu thương. Video cũng hướng dẫn cách dùng giọng nói hiệu quả (cao độ, âm sắc, ngữ điệu, tốc độ, âm lượng) và các bài khởi động giọng trước khi nói.",
- "level": "C1",
+ "created": "2026-11-09",
+ "source": "youtube-manual",
+ "language": "en",
+ "ai": "gemini-3.6-flash",
+ "summary_vi": "Bài diễn thuyết giới thiệu 7 thói quen xấu cần tránh trong giao tiếp cùng 4 nguyên tắc vàng giúp lời nói thuyết phục hơn. Diễn giả cũng hướng dẫn cách sử dụng công cụ giọng nói và bài tập khởi động vocal trước khi phát biểu.",
+ "level": "B2",
  "phrases": [
   {
-   "t": 52,
-   "phrase": "speak ill of somebody",
-   "quote": "Speaking ill of somebody who's not present.",
-   "meaning_vi": "nói xấu ai đó",
-   "usage_vi": "Dùng khi nói về việc bàn tán tiêu cực về người vắng mặt.",
-   "example_en": "I hate it when colleagues speak ill of people behind their backs.",
-   "example_vi": "Tôi ghét khi đồng nghiệp nói xấu người khác sau lưng."
+   "t": 34.82,
+   "d": 2.85,
+   "phrase": "move away from",
+   "quote": "there are a number of habits that we need to move away from.",
+   "meaning_vi": "từ bỏ, dịch chuyển khỏi (thói quen, phương pháp)",
+   "usage_vi": "Dùng khi khuyên bảo hoặc thảo luận về việc ngừng áp dụng một thói quen hay phương pháp cũ.",
+   "example_en": "Our company needs to move away from traditional marketing strategies to reach younger audiences.",
+   "example_vi": "Công ty chúng ta cần từ bỏ các chiến lược tiếp thị truyền thống để tiếp cận khán giả trẻ hơn."
   },
   {
-   "t": 103,
-   "phrase": "found wanting",
-   "quote": "you're being judged and found wanting at the same time.",
+   "t": 43.88,
+   "d": 5.23,
+   "phrase": "fall into a habit",
+   "quote": "but these seven, I think, are pretty large habits that we can all fall into.",
+   "meaning_vi": "vướng vào/nhiễm phải một thói quen",
+   "usage_vi": "Dùng khi nói về việc ai đó vô tình hình thành một thói quen (thường là thói quen xấu).",
+   "example_en": "It is easy to fall into the habit of checking your phone right after waking up.",
+   "example_vi": "Thật dễ bị vướng vào thói quen kiểm tra điện thoại ngay sau khi thức dậy."
+  },
+  {
+   "t": 67.88,
+   "d": 4.13,
+   "phrase": "be found wanting",
+   "quote": "if you know that you're being judged and found wanting at the same time.",
    "meaning_vi": "bị đánh giá là thiếu sót, không đạt yêu cầu",
-   "usage_vi": "Văn phong trang trọng, dùng khi ai đó bị coi là chưa đủ tốt.",
-   "example_en": "The proposal was found wanting in several key areas.",
-   "example_vi": "Đề xuất bị đánh giá là thiếu sót ở nhiều mặt quan trọng."
+   "usage_vi": "Dùng trong bối cảnh trang trọng khi đánh giá năng lực, chất lượng của ai đó hoặc cái gì đó.",
+   "example_en": "When put to the test under pressure, his leadership skills were found wanting.",
+   "example_vi": "Khi bị thử thách dưới áp lực, kỹ năng lãnh đạo của anh ấy bị đánh giá là còn thiếu sót."
   },
   {
-   "t": 142,
-   "phrase": "viral misery",
-   "quote": "complaining is viral misery.",
-   "meaning_vi": "nỗi bất hạnh lan truyền",
-   "usage_vi": "Cách ví von sinh động để nói về sự than phiền lây lan.",
-   "example_en": "A bad mood in the team can spread like viral misery.",
-   "example_vi": "Tâm trạng xấu trong nhóm có thể lan ra như một nỗi bất hạnh lây nhiễm."
+   "t": 117.72,
+   "d": 2.3,
+   "phrase": "take responsibility for",
+   "quote": "and don't take responsibility for their actions,",
+   "meaning_vi": "chịu trách nhiệm về",
+   "usage_vi": "Dùng phổ biến trong môi trường làm việc khi nhận trách nhiệm về hành động hay công việc.",
+   "example_en": "A good manager is always willing to take responsibility for the team's mistakes.",
+   "example_vi": "Một người quản lý giỏi luôn sẵn sàng chịu trách nhiệm về những sai lầm của đội ngũ."
   },
   {
-   "t": 155,
-   "phrase": "pass the buck",
-   "quote": "They just pass it on to everybody else and don't take responsibility for their actions,",
-   "meaning_vi": "đổ trách nhiệm cho người khác",
-   "usage_vi": "Dùng khi ai đó né tránh trách nhiệm bằng cách đổ lỗi.",
-   "example_en": "Instead of passing the buck, he owned up to his mistake in the meeting.",
-   "example_vi": "Thay vì đổ trách nhiệm, anh ấy đã nhận lỗi về sai sót của mình trong cuộc họp."
+   "t": 147.69,
+   "d": 3.61,
+   "phrase": "conflate facts with opinions",
+   "quote": "The confusion of facts with opinions. When those two things get conflated,",
+   "meaning_vi": "lẫn lộn/đánh đồng sự thật với ý kiến cá nhân",
+   "usage_vi": "Dùng để chỉ trích việc ai đó biến ý kiến chủ quan thành thực tế khách quan.",
+   "example_en": "You should not conflate facts with opinions when writing a research report.",
+   "example_vi": "Bạn không nên lẫn lộn giữa sự thật và ý kiến cá nhân khi viết báo cáo nghiên cứu."
   },
   {
-   "t": 208,
-   "phrase": "demean",
-   "quote": "It demeans our language, actually, sometimes.",
-   "meaning_vi": "làm giảm giá trị, hạ thấp",
-   "usage_vi": "Động từ trang trọng, dùng khi nói việc làm mất đi giá trị của điều gì.",
-   "example_en": "Constant jargon can demean the value of a good idea.",
-   "example_vi": "Việc lạm dụng thuật ngữ có thể làm giảm giá trị của một ý tưởng tốt."
+   "t": 198.9,
+   "d": 1.5,
+   "phrase": "stand for",
+   "quote": "So what do they stand for?",
+   "meaning_vi": "viết tắt của / đại diện cho",
+   "usage_vi": "Dùng khi giải thích ý nghĩa chữ viết tắt hoặc giá trị cốt lõi mà một tổ chức đại diện.",
+   "example_en": "Do you know what the acronym ROI stands for in business economics?",
+   "example_vi": "Bạn có biết từ viết tắt ROI đại diện cho điều gì trong kinh tế doanh nghiệp không?"
   },
   {
-   "t": 228,
-   "phrase": "conflate A with B",
-   "quote": "The confusion of facts with opinions.",
-   "meaning_vi": "nhầm lẫn, gộp chung A với B",
-   "usage_vi": "Dùng khi hai khái niệm bị coi là một cách sai lệch.",
-   "example_en": "Don't conflate speed with quality when you evaluate the team.",
-   "example_vi": "Đừng nhầm lẫn tốc độ với chất lượng khi đánh giá nhóm."
-  },
-  {
-   "t": 332,
-   "phrase": "stand in your own truth",
-   "quote": "A friend of mine described it as standing in your own truth,",
-   "meaning_vi": "sống đúng với con người thật của mình",
-   "usage_vi": "Cách diễn đạt về việc tự tin là chính mình.",
-   "example_en": "She finally started standing in her own truth at work.",
-   "example_vi": "Cuối cùng cô ấy cũng bắt đầu sống thật với chính mình ở nơi làm việc."
-  },
-  {
-   "t": 337,
-   "phrase": "be somebody people can trust",
-   "quote": "being somebody people can trust.",
-   "meaning_vi": "là người mà mọi người có thể tin cậy",
-   "usage_vi": "Dùng để nói về phẩm chất đáng tin của một người.",
-   "example_en": "Over the years, he became someone the clients can trust.",
-   "example_vi": "Qua nhiều năm, anh ấy trở thành người mà khách hàng có thể tin cậy."
-  },
-  {
-   "t": 402,
-   "phrase": "tempered with",
+   "t": 242.02,
+   "d": 3.33,
+   "phrase": "temper something with something",
    "quote": "Tempered with love, of course, honesty is a great thing.",
-   "meaning_vi": "được điều hòa, làm dịu bớt bởi",
-   "usage_vi": "Dùng khi một phẩm chất được điều chỉnh bằng một phẩm chất khác.",
-   "example_en": "His criticism was tempered with genuine encouragement.",
-   "example_vi": "Lời phê bình của anh ấy được làm dịu bằng sự động viên chân thành."
+   "meaning_vi": "tiết chế/kết hợp cái gì với cái gì để bớt gay gắt",
+   "usage_vi": "Dùng khi muốn khuyên ai đó làm dịu đi sự thẳng thắn hoặc cứng rắn bằng sự khéo léo.",
+   "example_en": "Constructive feedback should always be tempered with praise and encouragement.",
+   "example_vi": "Lời góp ý mang tính xây dựng nên luôn được tiết chế bằng sự khen ngợi và động viên."
   },
   {
-   "t": 440,
-   "phrase": "may not be very useful most of the time",
-   "quote": "Now falsetto register may not be very useful most of the time,",
-   "meaning_vi": "hầu hết thời gian không hữu ích lắm",
-   "usage_vi": "Cách nói nhẹ nhàng để đánh giá điều gì đó ít ứng dụng.",
-   "example_en": "That software may not be very useful most of the time, but it helps in emergencies.",
-   "example_vi": "Phần mềm đó hầu như không hữu ích lắm, nhưng vẫn giúp ích trong trường hợp khẩn cấp."
+   "t": 308.77,
+   "d": 2.94,
+   "phrase": "associate A with B",
+   "quote": "because we associate depth with power",
+   "meaning_vi": "liên tưởng/gắn kết A với B",
+   "usage_vi": "Dùng khi mô tả mối liên hệ tâm lý hoặc nhận thức giữa hai đặc điểm, khái niệm.",
+   "example_en": "Consumers often associate high prices with superior product quality.",
+   "example_vi": "Người tiêu dùng thường liên tưởng giá cao với chất lượng sản phẩm vượt trội."
   },
   {
-   "t": 541,
+   "t": 343.4,
+   "d": 2.05,
    "phrase": "impart meaning",
-   "quote": "This is the sing-song, the meta-language that we use in order to impart meaning.",
-   "meaning_vi": "truyền đạt ý nghĩa",
-   "usage_vi": "Dùng trong ngữ cảnh trang trọng khi nói về việc truyền tải thông tin.",
-   "example_en": "Good managers impart meaning to everyday tasks.",
-   "example_vi": "Những quản lý giỏi truyền đạt ý nghĩa cho các công việc thường ngày."
+   "quote": "that we use in order to impart meaning.",
+   "meaning_vi": "truyền tải ý nghĩa",
+   "usage_vi": "Dùng trong giao tiếp, bài nói hay giảng dạy khi đề cập đến việc làm rõ thông điệp.",
+   "example_en": "Tone of voice plays a key role in helping speaker to impart meaning clearly.",
+   "example_vi": "Tông giọng đóng vai trò cốt lõi giúp diễn giả truyền tải ý nghĩa một cách rõ ràng."
   },
   {
-   "t": 716,
-   "phrase": "imposing your sound on people",
-   "quote": "imposing your sound on people around you carelessly and inconsiderately.",
-   "meaning_vi": "áp đặt âm thanh lên người khác",
-   "usage_vi": "Dùng khi nói về hành vi làm phiền người xung quanh.",
-   "example_en": "Playing music loudly on the train is imposing your sound on people.",
-   "example_vi": "Bật nhạc to trên tàu là áp đặt âm thanh lên người xung quanh."
+   "t": 441.12,
+   "d": 2.53,
+   "phrase": "come into play",
+   "quote": "Of course, where this all comes into play most of all",
+   "meaning_vi": "bắt đầu phát huy tác dụng / có ảnh hưởng",
+   "usage_vi": "Dùng khi một yếu tố, kỹ năng hoặc công cụ bắt đầu tham gia và ảnh hưởng đến kết quả.",
+   "example_en": "That is the exact moment where your negotiation skills come into play.",
+   "example_vi": "Đó chính là thời điểm kỹ năng thương lượng của bạn phát huy tác dụng."
   },
   {
-   "t": 735,
-   "phrase": "owe it to yourself",
+   "t": 456.7,
+   "d": 3.75,
+   "phrase": "owe it to oneself to do something",
    "quote": "you owe it to yourself to look at this toolbox",
-   "meaning_vi": "bạn nên làm điều đó vì chính mình",
-   "usage_vi": "Cách khuyên nhủ lịch sự, nhấn mạnh lợi ích cho bản thân.",
-   "example_en": "You owe it to yourself to practise before the interview.",
-   "example_vi": "Bạn nên luyện tập trước buổi phỏng vấn vì chính bản thân mình."
+   "meaning_vi": "nên làm gì vì quyền lợi của chính mình",
+   "usage_vi": "Dùng khi khuyến khích ai đó dành sự chăm sóc hoặc quyết định đúng đắn cho bản thân.",
+   "example_en": "After working hard all year, you owe it to yourself to take a long vacation.",
+   "example_vi": "Sau một năm làm việc chăm chỉ, bạn nên dành cho bản thân một kỳ nghỉ dài."
   },
   {
-   "t": 742,
-   "phrase": "warm up",
-   "quote": "And no engine works well without being warmed up.",
-   "meaning_vi": "khởi động, làm nóng máy/giọng",
-   "usage_vi": "Dùng cho cả thể chất, giọng nói hoặc công việc trước khi bắt đầu.",
-   "example_en": "Let's warm up with a quick discussion before the main meeting.",
-   "example_vi": "Hãy khởi động bằng một cuộc thảo luận ngắn trước cuộc họp chính."
+   "t": 542.34,
+   "d": 2.62,
+   "phrase": "put something in context",
+   "quote": "Now let me just put this in context to close.",
+   "meaning_vi": "đặt cái gì vào đúng ngữ cảnh",
+   "usage_vi": "Dùng khi muốn giải thích một thông tin trong bức tranh toàn cảnh để người nghe hiểu đúng.",
+   "example_en": "To put these sales numbers in context, let's compare them with last quarter.",
+   "example_vi": "Để đặt các số liệu doanh số này vào đúng ngữ cảnh, hãy so sánh chúng với quý trước."
+  },
+  {
+   "t": 564.21,
+   "d": 3.37,
+   "phrase": "fit for purpose",
+   "quote": "in environments which were actually fit for purpose?",
+   "meaning_vi": "phù hợp với mục đích sử dụng",
+   "usage_vi": "Dùng để đánh giá thiết bị, môi trường hoặc quy trình có đủ chất lượng để đáp ứng nhu cầu hay không.",
+   "example_en": "We must ensure that the new equipment is completely fit for purpose before deployment.",
+   "example_vi": "Chúng ta phải đảm bảo thiết bị mới hoàn toàn phù hợp với mục đích sử dụng trước khi triển khai."
   }
  ]
 }

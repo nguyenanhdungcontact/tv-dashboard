@@ -1,140 +1,131 @@
 {
  "id": "iCvmsMzlF7o",
- "created": "2026-11-01",
- "attempts": 2,
- "models": {
-  "transcript": "gemini-3.6-flash",
-  "phrases": "claude-haiku-5-5"
- },
- "source": "full",
- "summary_vi": "Brené Brown kể về việc mình trở thành \"researcher-storyteller\" và hành trình nghiên cứu về sự xấu hổ, lòng dũng cảm và sự dễ tổn thương. Bà cho rằng việc chai lì cảm xúc và kiểm soát mọi thứ chỉ khiến con người bất hạnh, và muốn chúng ta tin rằng mình \"đủ tốt\" để được yêu thương.",
- "level": "C1",
+ "created": "2026-11-09",
+ "source": "youtube-manual",
+ "language": "en",
+ "ai": "gemini-3.6-flash",
+ "summary_vi": "Diễn giả Brené Brown chia sẻ về hành trình nghiên cứu tâm lý về sự kết nối, cảm giác xấu hổ và lòng dũng cảm khi đối mặt với sự tổn thương. Cô rút ra rằng việc chấp nhận sự không hoàn hảo và tin rằng mình đủ tốt chính là chìa khóa để sống một cuộc đời trọn vẹn và kết nối chân thành.",
+ "level": "B2",
  "phrases": [
   {
-   "t": 17,
-   "phrase": "call someone something",
-   "quote": "So, I'll start with this. A couple of years ago, an event planner called me because",
-   "meaning_vi": "gọi ai đó/đặt cho ai danh xưng gì",
-   "usage_vi": "Dùng khi nói ai đó được gọi/mô tả bằng một cái tên hoặc vai trò cụ thể.",
-   "example_en": "Our manager calls this approach 'smart flexibility', but the team just calls it chaos.",
-   "example_vi": "Quản lý của chúng tôi gọi cách làm này là 'linh hoạt thông minh', nhưng cả nhóm chỉ gọi nó là hỗn loạn."
-  },
-  {
-   "t": 23,
+   "t": 24.13,
+   "d": 3.57,
    "phrase": "struggle with",
    "quote": "\"I'm really struggling with how to write about you on the little flyer.\"",
-   "meaning_vi": "vật lộn với, gặp khó khăn với",
-   "usage_vi": "Dùng khi bạn đang gặp khó khăn trong việc làm/hiểu điều gì đó.",
-   "example_en": "I've been struggling with my presentation slides all week.",
-   "example_vi": "Cả tuần nay tôi cứ vật lộn với mấy slide thuyết trình."
+   "meaning_vi": "gặp khó khăn, trăn trở với việc gì",
+   "usage_vi": "Dùng khi nói về việc ai đó đang vật lộn hoặc khó khăn khi xử lý một công việc, vấn đề hay cảm xúc.",
+   "example_en": "Our team is currently struggling with meeting the tight deadline for the new project.",
+   "example_vi": "Đội của chúng tôi hiện đang gặp khó khăn trong việc đáp ứng thời hạn gấp rút của dự án mới."
   },
   {
-   "t": 204,
-   "phrase": "sweet-talk",
-   "quote": "and I thought he was just sweet-talking me.",
-   "meaning_vi": "tán tỉnh, nói lời ngọt ngào để dỗ dành",
-   "usage_vi": "Dùng khi ai đó nói lời khen hoặc dễ nghe để lấy lòng hoặc thuyết phục bạn.",
-   "example_en": "Don't try to sweet-talk me into approving the extra budget.",
-   "example_vi": "Đừng cố nịnh nọt để tôi duyệt thêm ngân sách."
+   "t": 163.71,
+   "d": 2.1,
+   "phrase": "lean into",
+   "quote": "\"Lean into the discomfort of the work.\"",
+   "meaning_vi": "đón nhận, dấn thân vào (thử thách, cảm xúc khó khăn)",
+   "usage_vi": "Dùng trong giao tiếp công việc và cuộc sống để khuyến khích ai đó chủ động đối mặt chứ không né tránh khó khăn.",
+   "example_en": "Instead of avoiding customer feedback, we should lean into the challenges and improve our service.",
+   "example_vi": "Thay vì né tránh phản hồi của khách hàng, chúng ta nên sẵn sàng dấn thân vào khó khăn để cải thiện dịch vụ."
   },
   {
-   "t": 228,
-   "phrase": "clean up",
-   "quote": "clean it up,",
-   "meaning_vi": "dọn dẹp, làm gọn gàng, sắp xếp lại",
-   "usage_vi": "Dùng nghĩa bóng khi nói việc làm cho một thứ lộn xộn trở nên trật tự, rõ ràng.",
-   "example_en": "Can you clean up the data before we send the report?",
-   "example_vi": "Bạn có thể làm sạch dữ liệu trước khi chúng ta gửi báo cáo không?"
-  },
-  {
-   "t": 246,
-   "phrase": "knock something upside the head",
-   "quote": "And I'm like, you know, knock discomfort upside the head and move it over and get all A's.",
-   "meaning_vi": "đánh gục, xử lý dứt khoát điều khó chịu (cách nói thân mật, hài hước)",
-   "usage_vi": "Dùng khi muốn nói thẳng thừng, quyết liệt đối mặt với một vấn đề, mang tính đùa vui.",
-   "example_en": "I'm going to knock this problem upside the head before the deadline.",
-   "example_vi": "Tôi sẽ xử lý dứt điểm vấn đề này trước hạn chót."
-  },
-  {
-   "t": 305,
+   "t": 186.73,
+   "d": 3.58,
    "phrase": "hack into",
-   "quote": "I want to hack into these things I know are important",
-   "meaning_vi": "tìm hiểu sâu, thâm nhập để hiểu rõ (nghĩa bóng)",
-   "usage_vi": "Dùng khi muốn nói bạn đang tìm cách hiểu sâu một vấn đề phức tạp.",
-   "example_en": "Our team is trying to hack into the customer behavior data.",
-   "example_vi": "Nhóm chúng tôi đang cố gắng khai thác sâu dữ liệu hành vi khách hàng."
+   "quote": "I want to hack into these things that I know are important",
+   "meaning_vi": "thấu hiểu sâu sắc, giải mã (một chủ đề/hệ thống phức tạp)",
+   "usage_vi": "Thường dùng trong văn phong hiện đại nghĩa là thâm nhập, thấu hiểu hoặc tìm cách giải quyết vấn đề rắc rối.",
+   "example_en": "She spent weeks trying to hack into the core cause of the drop in sales.",
+   "example_vi": "Cô ấy đã dành nhiều tuần cố gắng giải mã nguyên nhân cốt lõi khiến doanh số giảm."
   },
   {
-   "t": 429,
-   "phrase": "unravel",
-   "quote": "that absolutely unraveled connection",
-   "meaning_vi": "làm tan rã, làm sụp đổ dần",
-   "usage_vi": "Dùng khi một thứ gì đó vốn ổn định bị tách rời hoặc sụp đổ từng phần.",
-   "example_en": "The whole project began to unravel after the main sponsor pulled out.",
-   "example_vi": "Cả dự án bắt đầu đổ vỡ sau khi nhà tài trợ chính rút lui."
+   "t": 370.6,
+   "d": 2.86,
+   "phrase": "boil down to",
+   "quote": "But here's what I can tell you that it boils down to --",
+   "meaning_vi": "chung quy lại là, rốt cuộc là",
+   "usage_vi": "Dùng để tóm tắt yếu tố quan trọng nhất hoặc nguyên nhân cốt lõi của một vấn đề.",
+   "example_en": "The success of any business negotiation usually boils down to clear communication.",
+   "example_vi": "Thành công của bất kỳ cuộc đàm phán kinh doanh nào rốt cuộc cũng quy về sự giao tiếp rõ ràng."
   },
   {
-   "t": 548,
-   "phrase": "outsmart",
-   "quote": "and I'm going to outsmart it.",
-   "meaning_vi": "đánh lừa, thông minh hơn để qua mặt",
-   "usage_vi": "Dùng khi muốn nói bạn vượt trội hơn đối thủ hoặc một khó khăn bằng trí tuệ.",
-   "example_en": "Competitors keep trying to outsmart our pricing model.",
-   "example_vi": "Các đối thủ liên tục cố qua mặt mô hình giá của chúng tôi."
+   "t": 397.27,
+   "d": 1.69,
+   "phrase": "get a handle on",
+   "quote": "And I kind of got a handle on it.",
+   "meaning_vi": "nắm bắt được, kiểm soát được",
+   "usage_vi": "Dùng khi bạn bắt đầu hiểu rõ hoặc kiểm soát thành công một tình huống hay công việc rắc rối.",
+   "example_en": "It took the manager a few days to get a handle on the new workflow.",
+   "example_vi": "Quản lý đã mất vài ngày để nắm bắt được quy trình làm việc mới."
   },
   {
-   "t": 1126,
-   "phrase": "breakdown",
-   "quote": "I called it a breakdown; my therapist calls it a spiritual awakening.",
-   "meaning_vi": "suy sụp tinh thần, khủng hoảng",
-   "usage_vi": "Dùng để nói về giai đoạn suy sụp về cảm xúc hoặc tinh thần.",
-   "example_en": "He had a breakdown after years of working nonstop.",
-   "example_vi": "Anh ấy suy sụp tinh thần sau nhiều năm làm việc không nghỉ."
+   "t": 571.68,
+   "d": 3.29,
+   "phrase": "let go of",
+   "quote": "they were willing to let go of who they thought they should be",
+   "meaning_vi": "buông bỏ, từ bỏ",
+   "usage_vi": "Dùng khi khuyên ai đó từ bỏ thói quen, suy nghĩ tiêu cực hoặc kỳ vọng không thực tế.",
+   "example_en": "You need to let go of perfectionism if you want to delegate tasks effectively.",
+   "example_vi": "Bạn cần buông bỏ chủ nghĩa hoàn hảo nếu muốn giao việc một cách hiệu quả."
   },
   {
-   "t": 1215,
-   "phrase": "Here's the thing",
-   "quote": "And I said, \"Here's the thing. I'm struggling.\"",
-   "meaning_vi": "chuyện là thế này, điều quan trọng là",
-   "usage_vi": "Cụm dẫn nhập tự nhiên trước khi nói điều quan trọng hoặc thừa nhận điều gì đó.",
-   "example_en": "Here's the thing: I like the idea, but the timeline is unrealistic.",
-   "example_vi": "Chuyện là thế này: tôi thích ý tưởng đó, nhưng thời hạn thì không thực tế."
+   "t": 641.92,
+   "d": 1.45,
+   "phrase": "work out",
+   "quote": "that may or may not work out.",
+   "meaning_vi": "tiến triển tốt đẹp, thành công",
+   "usage_vi": "Dùng để nói về kế hoạch hay mối quan hệ có kết quả thuận lợi như mong đợi.",
+   "example_en": "Don't worry too much about the proposal; I'm sure everything will work out fine.",
+   "example_vi": "Đừng quá lo lắng về bản đề xuất; tôi tin chắc mọi chuyện sẽ tiến triển tốt đẹp thôi."
   },
   {
-   "t": 1405,
-   "phrase": "a street fight",
-   "quote": "For me, it was a yearlong street fight.",
-   "meaning_vi": "cuộc đấu tranh gay gắt, vật lộn dai dẳng",
-   "usage_vi": "Dùng ẩn dụ để nói về một quá trình khó khăn, căng thẳng phải đối đầu.",
-   "example_en": "Getting this budget approved was a street fight from start to finish.",
-   "example_vi": "Việc được duyệt ngân sách này là một cuộc đấu tranh gay gắt từ đầu đến cuối."
+   "t": 769.73,
+   "d": 5.68,
+   "phrase": "birthplace of",
+   "quote": "but it appears that it's also the birthplace of joy, of creativity,",
+   "meaning_vi": "nơi khởi nguồn của",
+   "usage_vi": "Dùng cả theo nghĩa đen (nơi sinh) lẫn nghĩa bóng (nguồn gốc phát sinh ra cảm xúc, ý tưởng lớn).",
+   "example_en": "Psychologists believe that failure is often the birthplace of true innovation.",
+   "example_vi": "Các nhà tâm lý học tin rằng thất bại thường là nơi khởi nguồn của sự đổi mới sáng tạo thực sự."
   },
   {
-   "t": 1441,
+   "t": 881.96,
+   "d": 1.67,
    "phrase": "numb",
-   "quote": "We numb vulnerability.",
-   "meaning_vi": "làm tê liệt, làm chai lì cảm xúc",
-   "usage_vi": "Dùng khi nói ai đó cố né tránh hoặc làm dịu cảm xúc khó chịu.",
-   "example_en": "Some people numb stress with endless scrolling on their phones.",
-   "example_vi": "Một số người làm chai lì căng thẳng bằng việc lướt điện thoại không ngừng."
+   "quote": "We numb vulnerability --",
+   "meaning_vi": "làm tê liệt, kìm hãm (cảm xúc)",
+   "usage_vi": "Dùng khi miêu tả hành vi cố tình làm lơ hoặc đè nén các cảm xúc tiêu cực bằng thói quen khác.",
+   "example_en": "Many people use social media to numb their stress after a long day at work.",
+   "example_vi": "Nhiều người dùng mạng xã hội để làm xoa dịu đi căng thẳng sau một ngày dài làm việc."
   },
   {
-   "t": 1700,
-   "phrase": "make something certain",
-   "quote": "The other thing we do is we make everything that's uncertain certain.",
-   "meaning_vi": "biến điều không chắc chắn thành chắc chắn (ép cho rõ ràng)",
-   "usage_vi": "Dùng khi ai đó cố gắng loại bỏ sự mơ hồ bằng cách khẳng định quá mức.",
-   "example_en": "Instead of making the forecast certain, we should plan for different scenarios.",
-   "example_vi": "Thay vì coi dự báo là chắc chắn, chúng ta nên lên kế hoạch cho nhiều kịch bản khác nhau."
+   "t": 916.09,
+   "d": 2.34,
+   "phrase": "lay off",
+   "quote": "getting laid off; laying off people.",
+   "meaning_vi": "sa thải (do giảm biên chế/khó khăn tài chính)",
+   "usage_vi": "Thuật ngữ nhân sự phổ biến khi công ty phải cắt giảm nhân sự vì lý do tái cơ cấu.",
+   "example_en": "The company had to lay off twenty percent of its staff during the economic downturn.",
+   "example_vi": "Công ty đã phải sa thải 20% nhân viên trong đợt suy thoái kinh tế."
   },
   {
-   "t": 1951,
-   "phrase": "believe that we're enough",
-   "quote": "is to believe that we're enough.",
-   "meaning_vi": "tin rằng bản thân đã đủ tốt/đủ giá trị",
-   "usage_vi": "Dùng khi nói về sự tự tin và chấp nhận bản thân mà không so sánh với người khác.",
-   "example_en": "You don't have to prove anything; you need to believe that you're enough.",
-   "example_vi": "Bạn không cần chứng minh điều gì; điều bạn cần là tin rằng mình đã đủ tốt."
+   "t": 1131.43,
+   "d": 3.27,
+   "phrase": "not one's first rodeo",
+   "quote": "I would say to companies, this is not our first rodeo, people.",
+   "meaning_vi": "không phải lần đầu trải qua chuyện này (đã có kinh nghiệm)",
+   "usage_vi": "Thành ngữ thân mật, dùng để khẳng định bản thân hoặc tổ chức đã từng trải và quen thuộc với rủi ro/khó khăn đó.",
+   "example_en": "Don't worry about handling this tough client; this is not my first rodeo.",
+   "example_vi": "Đừng lo về việc xử lý vị khách hàng khó tính này; đây không phải là lần đầu tôi đối mặt với chuyện này đâu."
+  },
+  {
+   "t": 1179.2,
+   "d": 3.58,
+   "phrase": "catastrophize",
+   "quote": "just to be able to stop and, instead of catastrophizing what might happen,",
+   "meaning_vi": "trầm trọng hóa vấn đề, suy diễn kịch bản tồi tệ nhất",
+   "usage_vi": "Dùng khi ai đó có xu hướng thổi phồng một sự việc nhỏ thành thảm họa.",
+   "example_en": "Try to stay calm and not catastrophize before we receive the official test results.",
+   "example_vi": "Hãy cố giữ bình tĩnh và đừng trầm trọng hóa vấn đề trước khi nhận được kết quả kiểm tra chính thức."
   }
  ]
 }

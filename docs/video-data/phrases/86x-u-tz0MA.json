@@ -1,149 +1,131 @@
 {
  "id": "86x-u-tz0MA",
- "created": "2026-11-01",
- "attempts": 1,
- "models": {
-  "transcript": "gemini-3.6-flash",
-  "phrases": "claude-haiku-5-5"
- },
- "source": "full",
- "summary_vi": "Nhà văn Elizabeth Gilbert kể về nỗi sợ hãi đi kèm với sáng tạo và việc áp lực thành công sau cuốn \"Eat, Pray, Love\" khiến bà lo lắng. Bà đề xuất coi sáng tạo là một món quà từ nguồn cảm hứng bên ngoài, giúp nghệ sĩ giảm áp lực và tiếp tục \"làm tròn phần việc của mình\".",
- "level": "C1",
+ "created": "2026-11-09",
+ "source": "youtube-manual",
+ "language": "en",
+ "ai": "gemini-3.6-flash",
+ "summary_vi": "Trong diễn văn này, tác giả chia sẻ về áp lực tâm lý nặng nề mà các nghệ sĩ phải gánh chịu khi đối mặt với sự kỳ vọng sau thành công vang dội. Cô đề xuất thay đổi cách nhìn nhận bằng cách tách biệt cái tôi cá nhân khỏi quá trình sáng tạo để giữ vững tâm lý làm việc bền vững.",
+ "level": "B2",
  "phrases": [
   {
-   "t": 22,
-   "phrase": "I don't expect that that's ever going to change",
-   "quote": "And I don't expect that that's ever going to change.",
-   "meaning_vi": "Tôi không nghĩ điều đó sẽ thay đổi",
-   "usage_vi": "Dùng khi nói về kỳ vọng tương lai một cách tự nhiên, lịch sự.",
-   "example_en": "I don't expect that the schedule is going to change anytime soon.",
-   "example_vi": "Tôi không nghĩ lịch trình sẽ thay đổi sớm đâu."
+   "t": 25.31,
+   "d": 5.01,
+   "phrase": "that said",
+   "quote": "But, that said, something kind of peculiar has happened recently",
+   "meaning_vi": "dù nói như vậy, tuy nhiên",
+   "usage_vi": "Dùng để chuyển ý khi bạn muốn đưa ra một thực tế hoặc ngoại lệ trái ngược với nhận định vừa đưa ra trước đó.",
+   "example_en": "The project deadline is tight; that said, we have a very experienced team to handle it.",
+   "example_vi": "Thời hạn dự án khá gấp; dù nói như vậy, chúng tôi có một đội ngũ rất giàu kinh nghiệm để xử lý."
   },
   {
-   "t": 25,
+   "t": 32.59,
+   "d": 4.74,
    "phrase": "recalibrate",
-   "quote": "which has caused me to have to sort of recalibrate my whole relationship with this work.",
-   "meaning_vi": "điều chỉnh lại, hiệu chỉnh lại",
-   "usage_vi": "Dùng khi cần điều chỉnh cách mình nhìn nhận hoặc làm việc gì đó.",
-   "example_en": "After the restructuring, I had to recalibrate my expectations for the team.",
-   "example_vi": "Sau đợt tái cơ cấu, tôi phải điều chỉnh lại kỳ vọng với nhóm."
+   "quote": "which has caused me to have to recalibrate my whole relationship with this work.",
+   "meaning_vi": "điều chỉnh lại, đánh giá lại",
+   "usage_vi": "Dùng trong công việc khi cần thay đổi cách tiếp cận, mục tiêu hoặc mối quan hệ cho phù hợp với tình hình mới.",
+   "example_en": "After the market shift, the company had to recalibrate its sales strategy.",
+   "example_vi": "Sau sự thay đổi của thị trường, công ty đã phải điều chỉnh lại chiến lược bán hàng."
   },
   {
-   "t": 54,
-   "phrase": "treat someone like they're doomed",
-   "quote": "everywhere I go now, people treat me like I'm doomed.",
-   "meaning_vi": "đối xử với ai như thể họ sắp gặp họa",
-   "usage_vi": "Dùng để diễn tả thái độ lo lắng, bi quan của người khác đối với mình.",
-   "example_en": "Ever since the layoffs, my colleagues treat me like I'm about to get fired.",
-   "example_vi": "Từ sau đợt cắt giảm nhân sự, đồng nghiệp đối xử với tôi như thể tôi sắp bị sa thải."
+   "t": 104.28,
+   "d": 1.86,
+   "phrase": "come of something",
+   "quote": "and nothing's ever going to come of it",
+   "meaning_vi": "mang lại kết quả từ điều gì",
+   "usage_vi": "Thường dùng trong câu phủ định hoặc nghi vấn để nói về thành quả thu được từ một nỗ lực hay sự kiện.",
+   "example_en": "We put a lot of effort into the proposal, but nothing came of it.",
+   "example_vi": "Chúng tôi đã dành nhiều công sức cho đề xuất đó, nhưng chẳng thu được kết quả gì."
   },
   {
-   "t": 122,
-   "phrase": "be met with",
-   "quote": "I was met with this same kind of sort of fear-based reaction.",
-   "meaning_vi": "nhận được (phản ứng nào đó)",
-   "usage_vi": "Dùng trang trọng để nói ai/cái gì nhận được một phản ứng.",
-   "example_en": "Our proposal was met with strong resistance from the board.",
-   "example_vi": "Đề xuất của chúng tôi vấp phải sự phản đối mạnh mẽ từ hội đồng quản trị."
+   "t": 131.46,
+   "d": 2.23,
+   "phrase": "when it comes to",
+   "quote": "But, when it comes to writing,",
+   "meaning_vi": "khi đề cập đến, khi xét đến",
+   "usage_vi": "Dùng để dẫn nhập một chủ đề cụ thể mà bạn muốn tập trung thảo luận hoặc đưa ra ý kiến chuyên môn.",
+   "example_en": "When it comes to financial planning, she is the most reliable person in our office.",
+   "example_vi": "Khi đề cập đến lập kế hoạch tài chính, cô ấy là người đáng tin cậy nhất trong văn phòng chúng tôi."
   },
   {
-   "t": 217,
-   "phrase": "put on this earth to do",
-   "quote": "the work that they feel they were put on this earth to do?",
-   "meaning_vi": "được sinh ra để làm (việc gì đó)",
-   "usage_vi": "Dùng khi nói về mục đích sống hoặc thiên hướng sâu sắc.",
-   "example_en": "Teaching is what I feel I was put on this earth to do.",
-   "example_vi": "Dạy học là điều tôi cảm thấy mình sinh ra để làm."
+   "t": 236.39,
+   "d": 4.64,
+   "phrase": "inherently linked",
+   "quote": "this notion that creativity and suffering are somehow inherently linked",
+   "meaning_vi": "gắn liền bản chất với nhau",
+   "usage_vi": "Dùng trong văn phong báo cáo hoặc thuyết trình để miêu tả hai khái niệm có mối liên hệ nội tại không thể tách rời.",
+   "example_en": "Employee productivity and workplace satisfaction are inherently linked.",
+   "example_vi": "Năng suất lao động của nhân viên và sự hài lòng tại nơi làm việc gắn liền bản chất với nhau."
   },
   {
-   "t": 347,
-   "phrase": "internalize",
-   "quote": "we've completely internalized and accepted collectively this notion",
-   "meaning_vi": "tiếp thu, nội tâm hóa (niềm tin, giá trị)",
-   "usage_vi": "Dùng khi một ý tưởng đã trở thành suy nghĩ tự nhiên, khó thay đổi.",
-   "example_en": "Many people have internalized the idea that failure is shameful.",
-   "example_vi": "Nhiều người đã tiếp thu ý niệm rằng thất bại là đáng xấu hổ."
+   "t": 294.29,
+   "d": 4.49,
+   "phrase": "exceedingly likely",
+   "quote": "And it's exceedingly likely that anything I write from this point forward",
+   "meaning_vi": "cực kỳ có khả năng xảy ra",
+   "usage_vi": "Dùng khi bạn muốn đưa ra nhận định mang tính dự báo với độ tin cậy hoặc xác suất rất cao.",
+   "example_en": "It is exceedingly likely that interest rates will rise next quarter.",
+   "example_vi": "Cực kỳ có khả năng là lãi suất sẽ tăng trong quý tới."
   },
   {
-   "t": 414,
-   "phrase": "from an inch away",
-   "quote": "Because you look at it even from an inch away",
-   "meaning_vi": "nhìn kỹ từ rất gần (để soi xét)",
-   "usage_vi": "Dùng hài hước để nói khi xem xét kỹ một ý tưởng thì thấy nó có vấn đề.",
-   "example_en": "The plan looks fine on paper, but from an inch away, it has serious flaws.",
-   "example_vi": "Kế hoạch trông ổn trên giấy, nhưng xem kỹ thì có nhiều lỗ hổng nghiêm trọng."
-  },
-  {
-   "t": 506,
+   "t": 305.11,
+   "d": 3.94,
    "phrase": "put it bluntly",
-   "quote": "I should just put it bluntly, because we're all sort of friends here now",
-   "meaning_vi": "nói thẳng ra",
-   "usage_vi": "Dùng để mở đầu khi sắp nói điều khó nghe một cách thẳng thắn.",
-   "example_en": "Let me put it bluntly: the project is behind schedule and over budget.",
-   "example_vi": "Để tôi nói thẳng: dự án đang chậm tiến độ và vượt ngân sách."
+   "quote": "I should just put it bluntly, because we're all sort of friends here now --",
+   "meaning_vi": "nói một cách thẳng thắn",
+   "usage_vi": "Dùng trước khi đưa ra nhận xét bộc trực, không né tránh sự thật để người nghe nắm bắt ngay vấn đề.",
+   "example_en": "To put it bluntly, the current business model is no longer sustainable.",
+   "example_vi": "Nói một cách thẳng thắn thì mô hình kinh doanh hiện tại không còn bền vững nữa."
   },
   {
-   "t": 530,
-   "phrase": "upon a lot of reflection",
-   "quote": "and it seems to me, upon a lot of reflection, that the way that I have to work now",
-   "meaning_vi": "sau nhiều suy ngẫm",
-   "usage_vi": "Cụm trang trọng dùng khi đưa ra kết luận sau khi suy nghĩ kỹ.",
-   "example_en": "Upon a lot of reflection, I've decided to change careers.",
-   "example_vi": "Sau nhiều suy nghĩ, tôi quyết định đổi nghề."
+   "t": 454.32,
+   "d": 3.19,
+   "phrase": "take credit for",
+   "quote": "If your work was brilliant, you couldn't take all the credit for it,",
+   "meaning_vi": "nhận công trạng về điều gì",
+   "usage_vi": "Dùng trong môi trường công sở khi nói về việc ai đó công nhận hoặc đứng ra nhận thành quả của một dự án.",
+   "example_en": "He tried to take credit for the successful campaign even though the team did most of the work.",
+   "example_vi": "Anh ấy đã cố gắng nhận công trạng cho chiến dịch thành công dù toàn đội mới là bên làm phần lớn công việc."
   },
   {
-   "t": 1145,
-   "phrase": "that's uncanny",
-   "quote": "So when I heard that, I was like, that's, you know, that's uncanny",
-   "meaning_vi": "kỳ lạ, trùng hợp đến rợn người",
-   "usage_vi": "Dùng khi thấy điều gì đó giống hệt trải nghiệm của mình một cách kỳ lạ.",
-   "example_en": "She guessed my password on the first try. That's uncanny.",
-   "example_vi": "Cô ấy đoán đúng mật khẩu của tôi ngay lần đầu. Thật kỳ lạ."
+   "t": 728.78,
+   "d": 3.84,
+   "phrase": "brush up against",
+   "quote": "even I have brushed up against that thing, at times.",
+   "meaning_vi": "chạm trán, trải nghiệm thoáng qua",
+   "usage_vi": "Dùng khi miêu tả việc bạn vô tình tiếp xúc hoặc có trải nghiệm ngắn hạn với một hiện tượng hay cảm xúc nào đó.",
+   "example_en": "During my career, I have brushed up against many different corporate cultures.",
+   "example_vi": "Trong suốt sự nghiệp của mình, tôi đã từng trải nghiệm qua nhiều văn hóa doanh nghiệp khác nhau."
   },
   {
-   "t": 1317,
-   "phrase": "start to rise",
-   "quote": "So he starts to feel all that old anxiety start to rise in him",
-   "meaning_vi": "bắt đầu trỗi dậy (cảm xúc)",
-   "usage_vi": "Dùng để mô tả cảm xúc âm thầm dâng lên.",
-   "example_en": "I felt my frustration start to rise during the long meeting.",
-   "example_vi": "Tôi cảm thấy sự bực bội dâng lên trong cuộc họp kéo dài."
+   "t": 824.93,
+   "d": 3.82,
+   "phrase": "at a more opportune moment",
+   "quote": "If you really want to exist, come back at a more opportune moment",
+   "meaning_vi": "vào một thời điểm thích hợp hơn",
+   "usage_vi": "Dùng khi đề xuất hoãn một cuộc thảo luận hoặc quyết định sang lúc khác thuận lợi hơn.",
+   "example_en": "Let us discuss the budget expansion at a more opportune moment.",
+   "example_vi": "Chúng ta hãy thảo luận về việc mở rộng ngân sách vào một thời điểm thích hợp hơn."
   },
   {
-   "t": 1432,
-   "phrase": "fall into a pit of despair",
-   "quote": "and I fell into one of those sort of pits of despair that we all fall into",
-   "meaning_vi": "rơi vào vực tuyệt vọng",
-   "usage_vi": "Dùng ẩn dụ để nói trạng thái chán nản, bế tắc sâu sắc.",
-   "example_en": "After the failed launch, the whole team fell into a pit of despair.",
-   "example_vi": "Sau khi ra mắt thất bại, cả đội rơi vào trạng thái tuyệt vọng."
+   "t": 927.31,
+   "d": 2.0,
+   "phrase": "show up",
+   "quote": "that I showed up for my part of the job.\"",
+   "meaning_vi": "có mặt và sẵn sàng làm việc",
+   "usage_vi": "Dùng để nhấn mạnh thái độ kiên trì, có mặt đúng giờ và tận tụy thực hiện trách nhiệm mỗi ngày.",
+   "example_en": "Success is not just about talent; it is about showing up every day and working hard.",
+   "example_vi": "Thành công không chỉ nằm ở tài năng; đó là việc có mặt mỗi ngày và làm việc chăm chỉ."
   },
   {
-   "t": 1524,
-   "phrase": "show up for your part of the job",
-   "quote": "I would please like the record to reflect today that I showed up for my part of the job.",
-   "meaning_vi": "có mặt và làm tròn phần việc của mình",
-   "usage_vi": "Dùng để nói về trách nhiệm cá nhân trong công việc, nhấn mạnh sự hiện diện và nỗ lực.",
-   "example_en": "Whatever happens in the meeting, I just want to show up for my part of the job.",
-   "example_vi": "Dù cuộc họp có diễn ra thế nào, tôi chỉ muốn làm tròn phần việc của mình."
-  },
-  {
-   "t": 1830,
-   "phrase": "do your job",
-   "quote": "Don't be daunted. Just do your job.",
-   "meaning_vi": "làm tròn nhiệm vụ của bạn",
-   "usage_vi": "Lời nhắc ngắn gọn về trách nhiệm, không phụ thuộc kết quả.",
-   "example_en": "Don't worry about the reviews; just do your job and the results will follow.",
-   "example_vi": "Đừng lo về đánh giá; cứ làm tròn việc của bạn thì kết quả sẽ đến."
-  },
-  {
-   "t": 1850,
-   "phrase": "do your dance anyhow",
-   "quote": "And if not, do your dance anyhow.",
-   "meaning_vi": "cứ làm việc của mình dù sao đi nữa",
-   "usage_vi": "Ẩn dụ: tiếp tục làm việc dù kết quả không như ý.",
-   "example_en": "The market may not reward us, but we'll keep doing our dance anyhow.",
-   "example_vi": "Thị trường có thể không đền đáp chúng ta, nhưng chúng ta vẫn cứ làm việc của mình."
+   "t": 1105.03,
+   "d": 4.18,
+   "phrase": "get psyched out",
+   "quote": "when I get really psyched out about that is don't be afraid.",
+   "meaning_vi": "bị mất tinh thần, áp lực tâm lý",
+   "usage_vi": "Dùng khi nói về việc bị lo âu hoặc áp lực tinh thần làm ảnh hưởng đến sự tự tin trước một thử thách lớn.",
+   "example_en": "Don't get psyched out by the huge audience; just focus on your presentation.",
+   "example_vi": "Đừng để bị mất tinh thần bởi khán giả quá đông; hãy chỉ tập trung vào bài thuyết trình của bạn."
   }
  ]
 }

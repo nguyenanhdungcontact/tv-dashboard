@@ -1,140 +1,131 @@
 {
  "id": "UNP03fDSj1U",
- "created": "2026-11-01",
- "attempts": 2,
- "models": {
-  "transcript": "gemini-3.6-flash",
-  "phrases": "claude-haiku-5-5"
- },
- "source": "full",
- "summary_vi": "Diễn giả kể về việc thử một thói quen hoặc thử thách mới trong 30 ngày để thoát khỏi lối sống nhàm chán. Ông chia sẻ rằng các thay đổi nhỏ, bền vững dễ duy trì hơn những thử thách lớn, và thử thách 30 ngày giúp ông tự tin và phiêu lưu hơn.",
+ "created": "2026-11-09",
+ "source": "youtube-auto",
+ "language": "en",
+ "ai": "gemini-3.6-flash",
+ "summary_vi": "Tác giả chia sẻ về trải nghiệm thực hiện các thử thách 30 ngày nhằm tạo dựng thói quen mới và làm cho cuộc sống trở nên đáng nhớ hơn. Bài nói khuyến khích mọi người bắt đầu những thay đổi nhỏ, bền vững để hiện thực hóa những mục tiêu mong muốn.",
  "level": "B2",
  "phrases": [
   {
-   "t": 16,
-   "phrase": "stuck in a rut",
-   "quote": "I felt like I was stuck in a rut,",
-   "meaning_vi": "bị mắc kẹt trong lối sống nhàm chán, lặp lại",
-   "usage_vi": "Dùng khi nói bạn cảm thấy công việc hoặc cuộc sống không có gì mới mẻ.",
-   "example_en": "I've been stuck in a rut at work for months, so I asked for a new project.",
-   "example_vi": "Tôi đã bị nhàm chán với công việc suốt nhiều tháng, nên tôi xin một dự án mới."
+   "t": 16.12,
+   "d": 5.6,
+   "phrase": "be stuck in a rut",
+   "quote": "a few years ago I felt like I was stuck in a rut so I decided to follow in the",
+   "meaning_vi": "bị mắc kẹt trong lối mòn",
+   "usage_vi": "Dùng khi cảm thấy cuộc sống hoặc công việc lặp đi lặp lại nhàm chán, thiếu sự tiến bộ hay cảm hứng.",
+   "example_en": "I felt like I was stuck in a rut at work, so I requested a transfer to a new department.",
+   "example_vi": "Tôi cảm thấy mình đang bị mắc kẹt trong lối mòn ở công ty, vì vậy tôi đã xin chuyển sang một phòng ban mới."
   },
   {
-   "t": 21,
-   "phrase": "follow in the footsteps of",
-   "quote": "so I decided to follow in the footsteps of the great American philosopher, Morgan Spurlock,",
-   "meaning_vi": "noi theo bước chân, làm theo gương ai đó",
-   "usage_vi": "Dùng khi bạn làm theo cách người khác đã làm thành công; thường mang nghĩa trang trọng hoặc hơi hài hước.",
-   "example_en": "She decided to follow in the footsteps of her mother and become a doctor.",
-   "example_vi": "Cô ấy quyết định noi theo mẹ và trở thành bác sĩ."
+   "t": 19.0,
+   "d": 4.56,
+   "phrase": "follow in the footsteps of someone",
+   "quote": "in a rut so I decided to follow in the footsteps of the Great American",
+   "meaning_vi": "nối nghiệp hoặc làm theo gương ai đó",
+   "usage_vi": "Dùng khi bạn học tập, làm theo hành trình hoặc sự nghiệp của người đi trước mà bạn ngưỡng mộ.",
+   "example_en": "She decided to follow in the footsteps of her mentor and start her own consulting firm.",
+   "example_vi": "Cô ấy quyết định nối nghiệp người thầy của mình và thành lập công ty tư vấn riêng."
   },
   {
-   "t": 31,
-   "phrase": "something you've always wanted to add to your life",
-   "quote": "Think about something you've always wanted to add to your life",
-   "meaning_vi": "điều bạn luôn muốn đưa vào cuộc sống",
-   "usage_vi": "Dùng khi nói về mục tiêu cá nhân hoặc thói quen muốn thêm vào.",
-   "example_en": "I want to add more exercise to my life this year.",
-   "example_vi": "Năm nay tôi muốn đưa thêm việc tập thể dục vào cuộc sống."
+   "t": 36.2,
+   "d": 4.92,
+   "phrase": "turn out",
+   "quote": "days it turns out 30 days is just about",
+   "meaning_vi": "hóa ra là",
+   "usage_vi": "Dùng để diễn tả một thực tế hoặc kết quả bất ngờ được nhận ra sau một thời gian.",
+   "example_en": "The new software strategy turned out to be much more effective than we initially thought.",
+   "example_vi": "Chiến lược phần mềm mới hóa ra lại hiệu quả hơn nhiều so với những gì chúng tôi nghĩ ban đầu."
   },
   {
-   "t": 37,
-   "phrase": "add a new habit",
-   "quote": "30 days is just about the right amount of time to add a new habit",
-   "meaning_vi": "hình thành một thói quen mới",
-   "usage_vi": "Collocation phổ biến khi nói về việc xây dựng thói quen; đối lập là 'break a habit'.",
-   "example_en": "Reading ten pages before bed is an easy way to add a new habit.",
-   "example_vi": "Đọc mười trang sách trước khi ngủ là cách dễ để hình thành một thói quen mới."
-  },
-  {
-   "t": 50,
+   "t": 51.6,
+   "d": 6.48,
    "phrase": "fly by",
-   "quote": "instead of the months flying by, forgotten,",
-   "meaning_vi": "trôi qua nhanh chóng",
-   "usage_vi": "Dùng để nói thời gian trôi nhanh, thường với 'the weeks/months/years fly by'.",
-   "example_en": "Time really flies by when you're busy with a big project.",
-   "example_vi": "Thời gian trôi thật nhanh khi bạn bận với một dự án lớn."
+   "quote": "months flying by forgotten the time was",
+   "meaning_vi": "trôi qua rất nhanh",
+   "usage_vi": "Dùng để nói về thời gian trôi đi mau lẹ mà ta không kịp nhận ra.",
+   "example_en": "Time really flies by when you are working on a project you are passionate about.",
+   "example_vi": "Thời gian thực sự trôi qua rất nhanh khi bạn làm việc cho một dự án mà bạn đam mê."
   },
   {
-   "t": 106,
-   "phrase": "self-confidence grew",
-   "quote": "my self-confidence grew.",
-   "meaning_vi": "sự tự tin tăng lên",
-   "usage_vi": "Dùng khi mô tả sự tự tin phát triển dần theo thời gian.",
-   "example_en": "Her self-confidence grew after she started speaking at team meetings.",
-   "example_vi": "Sự tự tin của cô ấy tăng lên sau khi cô bắt đầu phát biểu trong các cuộc họp nhóm."
+   "t": 79.56,
+   "d": 4.72,
+   "phrase": "end up",
+   "quote": "fun even last year I ended up hiking up",
+   "meaning_vi": "rốt cuộc là, kết cục là",
+   "usage_vi": "Dùng khi nói về một kết quả ngoài dự kiến hoặc vị thế cuối cùng của một chuỗi hành động.",
+   "example_en": "We intended to stay for an hour but ended up discussing the proposal all night.",
+   "example_vi": "Chúng tôi dự định ở lại một giờ nhưng rốt cuộc lại thảo luận về đề xuất đó suốt cả đêm."
   },
   {
-   "t": 113,
-   "phrase": "went from ... to ...",
-   "quote": "I went from desk-dwelling computer nerd to the kind of guy who bikes to work",
-   "meaning_vi": "từ trạng thái này chuyển sang trạng thái khác",
-   "usage_vi": "Cấu trúc dùng để so sánh sự thay đổi rõ rệt của bản thân hoặc sự việc.",
-   "example_en": "I went from a nervous beginner to a confident presenter in just one year.",
-   "example_vi": "Tôi đã từ một người mới đầy lo lắng trở thành người thuyết trình tự tin chỉ trong một năm."
+   "t": 91.44,
+   "d": 5.2,
+   "phrase": "figure out",
+   "quote": "I also figured out that if you really",
+   "meaning_vi": "tìm ra, hiểu ra",
+   "usage_vi": "Dùng trong công việc và đời sống khi giải quyết xong một vấn đề hoặc hiểu ra cách thức hoạt động.",
+   "example_en": "It took the engineering team three days to figure out what caused the system error.",
+   "example_vi": "Đội ngũ kỹ sư mất ba ngày mới tìm ra nguyên nhân gây ra lỗi hệ thống."
   },
   {
-   "t": 121,
-   "phrase": "end up doing something",
-   "quote": "Even last year, I ended up hiking up Mt. Kilimanjaro,",
-   "meaning_vi": "cuối cùng lại làm việc gì đó (thường ngoài dự kiến)",
-   "usage_vi": "Dùng khi kết quả đến một cách tình cờ hoặc không ngờ tới.",
-   "example_en": "We planned a short walk, but we ended up cooking dinner together.",
-   "example_vi": "Chúng tôi định đi bộ ngắn, nhưng cuối cùng lại cùng nhau nấu bữa tối."
+   "t": 106.0,
+   "d": 7.32,
+   "phrase": "from scratch",
+   "quote": "50,000-word novel from scratch in 30",
+   "meaning_vi": "từ con số không, làm lại từ đầu",
+   "usage_vi": "Dùng khi bạn bắt đầu một công việc hay kế hoạch mà không sử dụng lại thứ gì có sẵn.",
+   "example_en": "Due to technical issues, we had to rebuild the mobile application from scratch.",
+   "example_vi": "Do sự cố kỹ thuật, chúng tôi đã phải xây dựng lại ứng dụng di động từ con số không."
   },
   {
-   "t": 131,
-   "phrase": "want something badly enough",
-   "quote": "if you really want something badly enough, you can do anything for 30 days.",
-   "meaning_vi": "khao khát điều gì đó đủ mạnh",
-   "usage_vi": "Dùng để nói rằng động lực mạnh giúp bạn vượt qua khó khăn.",
-   "example_en": "If you want a promotion badly enough, you will find the time to prepare for it.",
-   "example_vi": "Nếu bạn thực sự khao khát được thăng chức, bạn sẽ tìm được thời gian để chuẩn bị."
+   "t": 123.0,
+   "d": 5.24,
+   "phrase": "sleep-deprived",
+   "quote": "words for the day you might be sleep deprived but you'll finish your",
+   "meaning_vi": "thiếu ngủ",
+   "usage_vi": "Dùng để mô tả trạng thái kiệt sức do không ngủ đủ giấc, thường xảy ra khi tăng ca hoặc chạy tiến độ.",
+   "example_en": "Being sleep-deprived can significantly reduce your productivity and decision-making ability.",
+   "example_vi": "Việc bị thiếu ngủ có thể làm giảm đáng kể năng suất làm việc và khả năng đưa ra quyết định của bạn."
   },
   {
-   "t": 159,
-   "phrase": "by the way",
-   "quote": "By the way, the secret is not to go to sleep until you've written your words for the day.",
-   "meaning_vi": "nhân tiện, à mà",
-   "usage_vi": "Cụm từ chuyển ý tự nhiên trong giao tiếp nói và viết.",
-   "example_en": "By the way, did you send the report to the client?",
-   "example_vi": "À mà, bạn đã gửi báo cáo cho khách hàng chưa?"
+   "t": 157.68,
+   "d": 4.8,
+   "phrase": "sustainable change",
+   "quote": "sustainable changes things I could keep",
+   "meaning_vi": "sự thay đổi bền vững",
+   "usage_vi": "Dùng trong quản trị hoặc phát triển bản thân để chỉ những cải tiến có thể duy trì dài lâu.",
+   "example_en": "Small daily improvements lead to sustainable change in your professional career.",
+   "example_vi": "Những cải thiện nhỏ hàng ngày sẽ dẫn đến sự thay đổi bền vững trong sự nghiệp chuyên môn của bạn."
   },
   {
-   "t": 215,
-   "phrase": "it's awful",
-   "quote": "It's awful.",
-   "meaning_vi": "rất tệ",
-   "usage_vi": "Dùng để nói tự chê hoặc đánh giá tiêu cực một cách thẳng thắn, thân mật.",
-   "example_en": "The first draft of my presentation was awful, but I fixed it the next day.",
-   "example_vi": "Bản nháp đầu tiên của bài thuyết trình của tôi rất tệ, nhưng hôm sau tôi đã sửa lại."
-  },
-  {
-   "t": 235,
+   "t": 159.6,
+   "d": 5.0,
    "phrase": "stick",
-   "quote": "they were more likely to stick.",
-   "meaning_vi": "được duy trì lâu dài, không bị bỏ",
-   "usage_vi": "Dùng khi thói quen hoặc thay đổi được duy trì thành công.",
-   "example_en": "The new workflow didn't stick because it was too complicated.",
-   "example_vi": "Quy trình làm việc mới không được duy trì vì quá phức tạp."
+   "quote": "doing they were more likely to stick",
+   "meaning_vi": "gắn bó lâu dài, trở thành thói quen",
+   "usage_vi": "Dùng khi nói về một ý tưởng, kế hoạch hay thói quen được duy trì thành công mà không bị bỏ dở.",
+   "example_en": "If you make your new routine too complicated, it is unlikely to stick.",
+   "example_vi": "Nếu bạn làm cho quy trình mới quá phức tạp, nó khó có thể duy trì lâu dài được."
   },
   {
-   "t": 301,
-   "phrase": "whether you like it or not",
-   "quote": "I guarantee you the next 30 days are going to pass whether you like it or not,",
-   "meaning_vi": "dù bạn có thích hay không",
-   "usage_vi": "Dùng để nhấn mạnh điều gì đó sẽ xảy ra bất kể ý muốn của người khác.",
-   "example_en": "Deadlines are coming whether you like it or not, so let's plan.",
-   "example_vi": "Hạn chót vẫn đến dù bạn có thích hay không, nên hãy lên kế hoạch đi."
+   "t": 164.6,
+   "d": 6.2,
+   "phrase": "a ton of",
+   "quote": "challenges in fact they're a ton of fun",
+   "meaning_vi": "rất nhiều",
+   "usage_vi": "Cụm từ thân mật tự nhiên dùng trong văn nói hoặc giao tiếp công sở hằng ngày để chỉ lượng lớn.",
+   "example_en": "We gained a ton of valuable feedback from our first group of test users.",
+   "example_vi": "Chúng tôi đã thu nhận được rất nhiều phản hồi có giá trị từ nhóm người dùng thử nghiệm đầu tiên."
   },
   {
-   "t": 307,
+   "t": 190.76,
+   "d": 7.69,
    "phrase": "give it a shot",
-   "quote": "and give it a shot",
+   "quote": "to try and give it a shot for the next",
    "meaning_vi": "thử làm xem sao",
-   "usage_vi": "Cách nói thân mật, nghĩa là thử một lần để xem kết quả thế nào.",
-   "example_en": "The software is hard to use at first, but give it a shot.",
-   "example_vi": "Phần mềm lúc đầu khó dùng, nhưng cứ thử xem sao."
+   "usage_vi": "Dùng khi khuyến khích ai đó hoặc tự mình thử sức với một cơ hội hay thử thách mới.",
+   "example_en": "Even though I lacked experience in marketing, I decided to give it a shot.",
+   "example_vi": "Dù thiếu kinh nghiệm về tiếp thị, tôi vẫn quyết định thử sức xem sao."
   }
  ]
 }
