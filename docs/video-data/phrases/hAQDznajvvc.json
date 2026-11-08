@@ -1,0 +1,132 @@
+{
+ "id": "hAQDznajvvc",
+ "created": "2026-11-09",
+ "source": "youtube-auto",
+ "language": "en",
+ "ai": "gemini-3.6-flash",
+ "summary_vi": "Video chia sẻ hành trình và suy ngẫm của tác giả khi quyết định bán ngôi nhà lớn đầy áp lực tài chính để chuyển sang sống tối giản trong một căn hộ nhỏ cạnh khu rừng ở Paris. Tác giả khuyến khích người xem lắng nghe tiếng nói bên trong, dám rũ bỏ áp lực định kiến xã hội để lựa chọn lối sống thực sự mang lại hạnh phúc cho bản thân.",
+ "level": "C1",
+ "phrases": [
+  {
+   "t": 31.4,
+   "d": 3.68,
+   "phrase": "go without saying",
+   "ipa": "/ɡoʊ wɪˈðaʊt ˈseɪ.ɪŋ/",
+   "quote": "like. And I think it goes without saying, but I'm going to say it anyway.",
+   "meaning_vi": "hiển nhiên, không cần nói cũng biết",
+   "usage_vi": "Dùng để khẳng định một sự thật quá rõ ràng, rất hữu ích trong IELTS Speaking Part 3 hoặc Writing Task 2.",
+   "example_en": "It goes without saying that maintaining a work-life balance is crucial for mental health.",
+   "example_vi": "Hiển nhiên là việc duy trì sự cân bằng giữa công việc và cuộc sống rất quan trọng cho sức khỏe tinh thần."
+  },
+  {
+   "t": 64.24,
+   "d": 4.4,
+   "phrase": "fly in the face of",
+   "ipa": "/flaɪ ɪn ðə feɪs ʌv/",
+   "quote": "fly in the face of established and",
+   "meaning_vi": "đi ngược lại, chống lại (quy chuẩn, niềm tin)",
+   "usage_vi": "Dùng khi mô tả hành động hoặc ý tưởng trái ngược hoàn toàn với số đông hoặc quy chuẩn truyền thống.",
+   "example_en": "His decision to drop out of university flew in the face of his family's expectations.",
+   "example_vi": "Quyết định bỏ học đại học của anh ấy đã đi ngược lại kỳ vọng của gia đình."
+  },
+  {
+   "t": 130.88,
+   "d": 4.48,
+   "phrase": "make out to be",
+   "ipa": "/meɪk aʊt tuː biː/",
+   "quote": "it was not what I had made it out to be.",
+   "meaning_vi": "thổi phồng, làm cho thứ gì đó trông như (tốt hơn/tệ hơn thực tế)",
+   "usage_vi": "Thường dùng ở dạng phủ định hoặc nghi vấn để nói rằng điều gì đó không tuyệt vời như lời đồn.",
+   "example_en": "The film wasn't as exciting as critics made it out to be.",
+   "example_vi": "Bộ phim không hay đến mức như các nhà bình luận đã thổi phồng."
+  },
+  {
+   "t": 190.0,
+   "d": 4.96,
+   "phrase": "a weight lifting off one's back",
+   "ipa": "/ə weɪt ˈlɪftɪŋ ɔːf wʌnz bæk/",
+   "quote": "feel a giant weight lifting off my back,",
+   "meaning_vi": "trút bỏ được gánh nặng",
+   "usage_vi": "Dùng khi miêu tả cảm giác nhẹ nhõm cực kỳ sau khi giải quyết xong một áp lực lớn.",
+   "example_en": "Submitting her final thesis felt like a huge weight lifting off her back.",
+   "example_vi": "Nộp xong bài khóa luận tốt nghiệp cảm giác như trút bỏ được một gánh nặng khổng lồ."
+  },
+  {
+   "t": 215.44,
+   "d": 5.8,
+   "phrase": "strip back to the basics",
+   "ipa": "/strɪp bæk tuː ðə ˈbeɪsɪks/",
+   "quote": "space to strip various elements of my life back to the basics while I engage",
+   "meaning_vi": "lược bỏ tất cả để trở về những điều cơ bản nhất",
+   "usage_vi": "Dùng khi nói về việc đơn giản hóa cuộc sống, quy trình làm việc hoặc tư duy.",
+   "example_en": "When overwhelmed with work, sometimes you need to strip everything back to the basics.",
+   "example_vi": "Khi bị quá tải với công việc, đôi khi bạn cần lược bỏ mọi thứ phức tạp để trở về những điều cơ bản nhất."
+  },
+  {
+   "t": 235.8,
+   "d": 5.24,
+   "phrase": "preconceived notions",
+   "ipa": "/ˌpriːkənˈsiːvd ˈnoʊʃənz/",
+   "quote": "in the past with all of my preconceived notions. So, having said that, here are",
+   "meaning_vi": "những định kiến, quan niệm có sẵn từ trước",
+   "usage_vi": "Cụm từ C1 rất tốt trong IELTS để thảo luận về văn hóa, giáo dục hoặc sự thay đổi tư duy.",
+   "example_en": "Traveling widely helps people challenge their preconceived notions about other cultures.",
+   "example_vi": "Đi du lịch nhiều nơi giúp con người xóa bỏ những định kiến có sẵn về các nền văn hóa khác."
+  },
+  {
+   "t": 374.72,
+   "d": 3.92,
+   "phrase": "be spread thin",
+   "ipa": "/bi sprɛd θɪn/",
+   "quote": "could feel myself being spread so thin",
+   "meaning_vi": "bị phân tán nguồn lực, quá tải vì ôm ôm nhiều việc",
+   "usage_vi": "Dùng khi giải thích lý do tại sao mệt mỏi hoặc không thể tập trung làm tốt một việc cụ thể.",
+   "example_en": "Taking on three side projects at once left him feeling spread thin.",
+   "example_vi": "Nhận cùng lúc ba dự án phụ khiến anh ấy cảm thấy bị quá tải và phân tán sức lực."
+  },
+  {
+   "t": 415.48,
+   "d": 4.12,
+   "phrase": "sparks of inspiration",
+   "ipa": "/spɑːrks ʌv ˌɪnspəˈreɪʃən/",
+   "quote": "and wandering emerges the sparks of inspiration to make things. This, I",
+   "meaning_vi": "những tia sáng/nguồn cảm hứng bất chợt",
+   "usage_vi": "Dùng trong chủ đề nghệ thuật, công việc sáng tạo hoặc giải quyết vấn đề.",
+   "example_en": "Quiet walks in nature often bring unexpected sparks of inspiration.",
+   "example_vi": "Những chuyến đi dạo yên tĩnh giữa thiên nhiên thường mang lại những nguồn cảm hứng bất ngờ."
+  },
+  {
+   "t": 638.36,
+   "d": 2.68,
+   "phrase": "spellbound",
+   "ipa": "/ˈspɛlbaʊnd/",
+   "quote": "spellbound.",
+   "meaning_vi": "say đắm, bị mê hoặc hoàn toàn",
+   "usage_vi": "Tính từ nâng cao diễn tả sự chú ý bị cuốn hút hoàn toàn bởi âm nhạc, nghệ thuật hoặc phong cảnh.",
+   "example_en": "The audience sat spellbound as the violinist played the final movement.",
+   "example_vi": "Khán giả ngồi say đắm lắng nghe khi nghệ sĩ vĩ cầm chơi chương cuối."
+  },
+  {
+   "t": 731.2,
+   "d": 2.52,
+   "phrase": "make trade-offs",
+   "ipa": "/meɪk ˈtreɪdˌɔːfs/",
+   "quote": "making trade-offs.",
+   "meaning_vi": "đánh đổi, chấp nhận hy sinh cái này để lấy cái khác",
+   "usage_vi": "Rất hay dùng trong IELTS Writing/Speaking khi thảo luận về sự lựa chọn nghề nghiệp hoặc lối sống.",
+   "example_en": "Career success often requires making trade-offs between personal life and work hours.",
+   "example_vi": "Thành công trong sự nghiệp thường đòi hỏi sự đánh đổi giữa cuộc sống cá nhân và thời gian làm việc."
+  },
+  {
+   "t": 782.2,
+   "d": 4.2,
+   "phrase": "look back longingly",
+   "ipa": "/lʊk bæk ˈlɔːŋɪŋli/",
+   "quote": "looked back longingly. I've never",
+   "meaning_vi": "nhìn lại quá khứ với sự nuối tiếc, hoài niệm",
+   "usage_vi": "Dùng khi miêu tả cảm xúc hoài niệm hoặc nuối tiếc về một khoảng thời gian đã qua.",
+   "example_en": "Although she enjoys her new city, she sometimes looks back longingly at her childhood home.",
+   "example_vi": "Dù rất thích thành phố mới, đôi khi cô ấy vẫn nhìn lại căn nhà thời thơ ấu với sự hoài niệm."
+  }
+ ]
+}

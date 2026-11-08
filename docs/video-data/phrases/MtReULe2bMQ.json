@@ -1,0 +1,132 @@
+{
+ "id": "MtReULe2bMQ",
+ "created": "2026-11-09",
+ "source": "youtube-auto",
+ "language": "en",
+ "ai": "gemini-3.6-flash",
+ "summary_vi": "Người dẫn chương trình Geography Now thực hiện buổi livestream ngắn để cảm ơn người hâm mộ và giải thích về sự cố Wi-Fi khách sạn liên tục chập chờn. Anh vui vẻ giao lưu, nhắc nhở người xem không spam và khuyến khích mọi người kết bạn với nhau trên khắp thế giới.",
+ "level": "B2",
+ "phrases": [
+  {
+   "t": 74.24,
+   "d": 3.52,
+   "phrase": "on someone's end",
+   "ipa": "/ɑn ˈsʌmwʌnz ɛnd/",
+   "quote": "I think it's something on my end. I have",
+   "meaning_vi": "từ phía ai đó (kỹ thuật, trách nhiệm)",
+   "usage_vi": "Dùng khi giải thích sự cố kỹ thuật hoặc công việc xuất phát từ phía mình hay phía đối tác.",
+   "example_en": "The connection issue seems to be on your end, as my internet is working fine.",
+   "example_vi": "Vấn đề kết nối có vẻ là do phía bạn, vì mạng internet của tôi vẫn hoạt động tốt."
+  },
+  {
+   "t": 135.2,
+   "d": 5.44,
+   "phrase": "get frustrated with",
+   "ipa": "/ɡɛt ˈfrʌˌstreɪtəd wɪð/",
+   "quote": "really getting frustrated with this. The",
+   "meaning_vi": "trở nên bực bội, nản lòng với",
+   "usage_vi": "Dùng để miêu tả cảm xúc bực bội khi gặp phải trở ngại hoặc rắc rối lặp đi lặp lại.",
+   "example_en": "Candidates often get frustrated with the complex registration process for the exam.",
+   "example_vi": "Thí sinh thường cảm thấy bực bội với quy trình đăng ký thi phức tạp."
+  },
+  {
+   "t": 214.64,
+   "d": 5.84,
+   "phrase": "head out",
+   "ipa": "/hɛd aʊt/",
+   "quote": "I'm doing a project and I have to head out in 3 minutes. So, yeah. But I'll say",
+   "meaning_vi": "rời đi, đi ra ngoài",
+   "usage_vi": "Cụm động từ tự nhiên trong giao tiếp hằng ngày dùng thay cho 'leave' hoặc 'go out'.",
+   "example_en": "We need to head out early tomorrow morning to avoid the heavy traffic.",
+   "example_vi": "Chúng ta cần phải rời đi sớm vào sáng mai để tránh kẹt xe nghiêm trọng."
+  },
+  {
+   "t": 265.44,
+   "d": 4.16,
+   "phrase": "use something as inspiration",
+   "ipa": "/juːz ˈsʌmθɪŋ æz ˌɪnspəˈreɪʃən/",
+   "quote": "can go out and see the world. Use my episodes as inspiration to go out and",
+   "meaning_vi": "dùng cái gì làm nguồn cảm hứng",
+   "usage_vi": "Cụm từ rất tốt cho IELTS Speaking khi nói về động lực, sở thích hoặc trải nghiệm du lịch.",
+   "example_en": "Many young artists use nature as inspiration for their abstract paintings.",
+   "example_vi": "Nhiều nghệ sĩ trẻ dùng thiên nhiên làm nguồn cảm hứng cho các bức tranh trừu tượng của họ."
+  },
+  {
+   "t": 299.92,
+   "d": 5.04,
+   "phrase": "battle it out",
+   "ipa": "/ˈbætəl ɪt aʊt/",
+   "quote": "you were battling it out and you were",
+   "meaning_vi": "tranh đấu, thi đấu quyết liệt",
+   "usage_vi": "Dùng để mô tả cuộc cạnh tranh gay gắt giữa các đối thủ trong cuộc thi hay cuộc tranh luận.",
+   "example_en": "The top two teams will battle it out for the championship title this weekend.",
+   "example_vi": "Hai đội đứng đầu sẽ tranh đấu quyết liệt để giành chức vô địch vào cuối tuần này."
+  },
+  {
+   "t": 316.64,
+   "d": 3.84,
+   "phrase": "be long overdue for",
+   "ipa": "/bi lɔŋ ˌoʊvərˈdu fɔr/",
+   "quote": "yeah, I'm I'm long overdue for an",
+   "meaning_vi": "đã quá đến lúc/trễ hạn phải làm gì",
+   "usage_vi": "Dùng khi muốn diễn tả một hành động hoặc chuyến đi lẽ ra phải xảy ra từ lâu nhưng chưa thực hiện.",
+   "example_en": "After working non-stop for six months, she is long overdue for a relaxing vacation.",
+   "example_vi": "Sau sáu tháng làm việc liên tục, cô ấy đã quá đến lúc cần một kỳ nghỉ thư giãn."
+  },
+  {
+   "t": 335.52,
+   "d": 4.16,
+   "phrase": "beef with someone",
+   "ipa": "/biːf wɪð ˈsʌmwʌn/",
+   "quote": "watching you guys beef with each other.",
+   "meaning_vi": "tranh cãi, gây hấn với ai",
+   "usage_vi": "Thành ngữ thân mật/khẩu ngữ chỉ sự bất hòa hoặc cãi vã giữa các cá nhân.",
+   "example_en": "The two players used to beef with each other on social media before becoming teammates.",
+   "example_vi": "Hai cầu thủ từng tranh cãi với nhau trên mạng xã hội trước khi trở thành đồng đội."
+  },
+  {
+   "t": 403.68,
+   "d": 4.4,
+   "phrase": "scare someone into doing something",
+   "ipa": "/skɛr ˈsʌmwʌn ˈɪntu ˈduːɪŋ ˈsʌmθɪŋ/",
+   "quote": "he's not doing it. [laughter] I just scared Jacob into not spamming",
+   "meaning_vi": "dọa ai làm (hoặc thôi làm) việc gì",
+   "usage_vi": "Dùng khi ai đó tạo tâm lý sợ hãi để buộc người khác phải tuân theo hoặc ngừng hành vi xấu.",
+   "example_en": "Warning signs can scare people into driving more carefully on icy roads.",
+   "example_vi": "Các biển cảnh báo có thể làm người ta sợ mà lái xe cẩn thận hơn trên đường đóng băng."
+  },
+  {
+   "t": 441.92,
+   "d": 3.04,
+   "phrase": "get sidetracked",
+   "ipa": "/ɡɛt ˈsaɪdˌtrækt/",
+   "quote": "don't know, guys. I'm getting sidetracked. Yeah, I really have to head",
+   "meaning_vi": "bị xao nhãng, lạc đề",
+   "usage_vi": "Dùng khi đang nói hoặc làm việc chính mà bị ảnh hưởng bởi một yếu tố phụ làm lệch hướng.",
+   "example_en": "It is easy to get sidetracked when studying if your phone keeps buzzing with notifications.",
+   "example_vi": "Rất dễ bị xao nhãng khi đang học nếu điện thoại của bạn liên tục báo thông báo."
+  },
+  {
+   "t": 586.24,
+   "d": 6.24,
+   "phrase": "bleep out",
+   "ipa": "/bliːp aʊt/",
+   "quote": "lot on the show. Well, I beep. I I bleep out all my cusses, but yeah. Um, on the",
+   "meaning_vi": "chèn tiếng bíp che từ thô tục",
+   "usage_vi": "Dùng trong ngữ cảnh chỉnh sửa video, phát thanh hoặc truyền hình khi xử lý ngôn từ nhạy cảm.",
+   "example_en": "The producer decided to bleep out offensive words before broadcasting the show.",
+   "example_vi": "Nhà sản xuất đã quyết định chèn tiếng bíp che các từ ngữ xúc phạm trước khi phát sóng."
+  },
+  {
+   "t": 656.72,
+   "d": 4.56,
+   "phrase": "stay tuned",
+   "ipa": "/steɪ tuːnd/",
+   "quote": "one. I'll see you soon. Stay cool. Stay tuned.",
+   "meaning_vi": "đón chờ, tiếp tục theo dõi",
+   "usage_vi": "Thành ngữ truyền thông dùng để nhắc khán giả đón xem các nội dung hoặc tin tức tiếp theo.",
+   "example_en": "Stay tuned for more updates on our upcoming product release next week.",
+   "example_vi": "Hãy tiếp tục theo dõi để biết thêm cập nhật về việc ra mắt sản phẩm sắp tới vào tuần tới."
+  }
+ ]
+}

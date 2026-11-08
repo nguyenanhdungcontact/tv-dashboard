@@ -1,0 +1,132 @@
+{
+ "id": "Pybe5h1DB5w",
+ "created": "2026-11-09",
+ "source": "youtube-manual",
+ "language": "en-GB",
+ "ai": "gemini-3.6-flash",
+ "summary_vi": "Video giải thích về những thách thức kiến trúc và quy hoạch đô thị tại thành phố London khi dỡ bỏ tòa tháp St. Helens để xây dựng tòa nhà kỷ lục One London. Qua đó, nội dung cũng minh họa cách nền tảng lưu trữ Dropbox giúp các đội ngũ thi công kết nối thông tin và làm việc hiệu quả trong các dự án quy mô lớn.",
+ "level": "C1",
+ "phrases": [
+  {
+   "t": 55.28,
+   "d": 6.16,
+   "phrase": "let something slide",
+   "ipa": "/lɛt ˈsʌmθɪŋ slaɪd/",
+   "quote": "It's actually 1.12 square miles, but we're going to let that slide. The square mile has its own",
+   "meaning_vi": "bỏ qua, không bắt bẻ lỗi nhỏ",
+   "usage_vi": "Dùng khi bạn quyết định lờ đi một sai sót nhẹ hoặc thông số không hoàn toàn chính xác để công việc tiến triển mượt mà.",
+   "example_en": "My supervisor usually lets minor typos slide as long as the content is clear.",
+   "example_vi": "Giám sát của tôi thường bỏ qua mấy lỗi đánh máy nhỏ miễn là nội dung rõ ràng."
+  },
+  {
+   "t": 69.36,
+   "d": 8.24,
+   "phrase": "raze to the ground",
+   "ipa": "/reɪz tu ðə graʊnd/",
+   "quote": "established Londinium here back in 43 AD. And then Queen Buudaca raised the city to the ground,",
+   "meaning_vi": "san bằng hoàn toàn thành bình địa",
+   "usage_vi": "Dùng để miêu tả việc phá hủy triệt để một công trình, ngôi làng hoặc thành phố do hỏa hoạn, thiên tai hay chiến tranh.",
+   "example_en": "The ancient fortress was razed to the ground during the conflict centuries ago.",
+   "example_vi": "Tòa pháo đài cổ kính đã bị san bằng hoàn toàn thành bình địa trong cuộc xung đột hàng thế kỷ trước."
+  },
+  {
+   "t": 137.84,
+   "d": 5.12,
+   "phrase": "fast forward to",
+   "ipa": "/fæst ˈfɔrwərd tu/",
+   "quote": "the first proper skyscraper in the city. Fast forward to today and it's eclipsed",
+   "meaning_vi": "tua nhanh đến (thời điểm tương lai/hiện tại)",
+   "usage_vi": "Cụm từ nối tuyệt vời trong thuyết trình hoặc bài thi nói IELTS khi muốn chuyển cảnh sang mốc thời gian sau đó.",
+   "example_en": "Fast forward to 2024, the small family business has become a international brand.",
+   "example_vi": "Tua nhanh đến năm 2024, doanh nghiệp gia đình nhỏ ngày nào đã trở thành một thương hiệu quốc tế."
+  },
+  {
+   "t": 268.48,
+   "d": 4.4,
+   "phrase": "easier said than done",
+   "ipa": "/ˈiziər sɛd ðæn dʌn/",
+   "quote": "on new information and act on it really quickly. But that's easier said than done when you're",
+   "meaning_vi": "nói thì dễ làm mới khó",
+   "usage_vi": "Thành ngữ rất tự nhiên dùng khi đánh giá một kế hoạch nghe có vẻ đơn giản nhưng thực tế lại gặp nhiều trở ngại.",
+   "example_en": "Cutting down on sugar is definitely easier said than done when you work in a bakery.",
+   "example_vi": "Cắt giảm đường chắc chắn là nói thì dễ làm mới khó khi bạn làm việc ở một cửa hàng bánh."
+  },
+  {
+   "t": 278.4,
+   "d": 5.04,
+   "phrase": "sing off the same hymn sheet",
+   "ipa": "/sɪŋ ɒf ðə seɪm hɪm ʃit/",
+   "quote": "and extreme pressures, it's pretty crucial that everyone's singing off the same hymn sheets. Most",
+   "meaning_vi": "thống nhất ý kiến, cùng chung tiếng nói",
+   "usage_vi": "Thường dùng trong môi trường doanh nghiệp để nhấn mạnh sự phối hợp và đồng thuận giữa các bộ phận.",
+   "example_en": "Before going into the negotiations, we must ensure every member is singing off the same hymn sheet.",
+   "example_vi": "Trước khi bước vào đàm phán, chúng ta phải đảm bảo mọi thành viên đều thống nhất quan điểm."
+  },
+  {
+   "t": 312.56,
+   "d": 5.2,
+   "phrase": "get up to speed",
+   "ipa": "/ɡɛt ʌp tu spid/",
+   "quote": "platform and definitely doesn't have a spare day to get up to speed on your personalized database.",
+   "meaning_vi": "cập nhật tình hình, bắt kịp tiến độ",
+   "usage_vi": "Dùng khi ai đó cần nắm bắt đầy đủ thông tin mới nhất về một dự án hoặc công việc vừa tiếp nhận.",
+   "example_en": "Give me a day or two to read the report and get up to speed with the project status.",
+   "example_vi": "Cho tôi một hai ngày để đọc báo cáo và bắt kịp tình hình dự án."
+  },
+  {
+   "t": 346.4,
+   "d": 6.64,
+   "phrase": "snowball into",
+   "ipa": "/ˈsnoʊbɔl ˈɪntu/",
+   "quote": "and matte is in. It's the kind of small change that can snowball quickly into a costly error if",
+   "meaning_vi": "tích tụ và bùng nổ thành (vấn đề nghiêm trọng)",
+   "usage_vi": "Diễn tả một sự cố hay sai sót nhỏ ban đầu dần phát triển thành hậu quả rất lớn vượt tầm kiểm soát.",
+   "example_en": "If left unaddressed, minor miscommunications can snowball into costly lawsuits.",
+   "example_vi": "Nếu không được xử lý, những bất đồng nhỏ có thể tích tụ thành các vụ kiện tụng tốn kém."
+  },
+  {
+   "t": 517.36,
+   "d": 5.68,
+   "phrase": "prove a nightmare",
+   "ipa": "/pruv ə ˈnaɪtˌmɛr/",
+   "quote": "that was great for owners and office workers back then, but today it's proving a bit of a nightmare",
+   "meaning_vi": "hóa ra là một ác mộng / cực kỳ khó khăn",
+   "usage_vi": "Dùng để diễn tả một trải nghiệm, thủ tục hoặc nhiệm vụ gây ra vô vàn rắc rối ngoài dự tính.",
+   "example_en": "Finding affordable housing in the city center proved a nightmare for young graduates.",
+   "example_vi": "Việc tìm nhà ở giá rẻ tại trung tâm thành phố hóa ra là một ác mộng đối với sinh viên mới ra trường."
+  },
+  {
+   "t": 630.8,
+   "d": 6.88,
+   "phrase": "to the nth degree",
+   "ipa": "/tu ðə ɛnθ dɪˈɡri/",
+   "quote": "important. But here, it's being taken to the nth degree. All around me are historic",
+   "meaning_vi": "đến mức tối đa, vô cùng tỉ mỉ",
+   "usage_vi": "Thành ngữ C1 chỉ mức độ hoàn hảo, cẩn thận hoặc chi tiết ở tiêu chuẩn cao nhất.",
+   "example_en": "The event organizers planned every single detail to the nth degree to avoid any mishaps.",
+   "example_vi": "Ban tổ chức sự kiện đã lên kế hoạch cho từng chi tiết nhỏ vô cùng tỉ mỉ để tránh bất kỳ sự cố nào."
+  },
+  {
+   "t": 861.52,
+   "d": 9.76,
+   "phrase": "a no-brainer",
+   "ipa": "/ə noʊ-ˈbreɪnər/",
+   "quote": "building here is a no-brainer, actually getting this thing built is anything but straightforward.",
+   "meaning_vi": "lựa chọn hiển nhiên, không cần suy nghĩ",
+   "usage_vi": "Dùng khi nói về một quyết định quá rõ ràng và mang lại lợi ích vượt trội khiến ai cũng dễ dàng đồng ý.",
+   "example_en": "Switching to renewable energy was a no-brainer for the eco-conscious company.",
+   "example_vi": "Chuyển sang năng lượng tái tạo là một quyết định hiển nhiên đối với công ty đề cao ý thức môi trường."
+  },
+  {
+   "t": 883.04,
+   "d": 7.2,
+   "phrase": "stumble across",
+   "ipa": "/ˈstʌmbəl əˈkrɔs/",
+   "quote": "It's almost unheard of for excavations in London not to stumble across ancient ruins.",
+   "meaning_vi": "tình cờ phát hiện, vô tình bắt gặp",
+   "usage_vi": "Cụm động từ tự nhiên rất hay dùng khi kể về việc vô tình tìm thấy nơi chốn, vật quý hoặc thông tin hay.",
+   "example_en": "During our trip to Italy, we stumbled across a hidden bakery with the best pastries.",
+   "example_vi": "Trong chuyến đi đến Ý, chúng tôi vô tình phát hiện ra một tiệm bánh ẩn mình có những món bánh ngon tuyệt."
+  }
+ ]
+}

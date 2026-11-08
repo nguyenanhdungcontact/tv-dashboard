@@ -1,0 +1,132 @@
+{
+ "id": "XrZ4Vozni3o",
+ "created": "2026-11-09",
+ "source": "youtube-auto",
+ "language": "en",
+ "ai": "gemini-3.6-flash",
+ "summary_vi": "Video phân tích lý do phong trào sống xanh bị giảm sức hút và vạch trần các chiến dịch truyền thông của các tập đoàn nhằm đẩy trách nhiệm môi trường sang người tiêu dùng. Qua đó, tác giả chỉ ra rằng việc thay đổi chính sách quản lý mới là giải pháp cốt lõi để giải quyết khủng hoảng biến đổi khí hậu.",
+ "level": "C1",
+ "phrases": [
+  {
+   "t": 79.48,
+   "d": 3.96,
+   "phrase": "asleep at the wheel",
+   "ipa": "/əˈsliːp æt ðə wiːl/",
+   "quote": "somehow it's like we're asleep at the wheel. We don't know what to do. We're",
+   "meaning_vi": "xao nhãng, lơ là trách nhiệm",
+   "usage_vi": "Dùng khi chỉ trích một cá nhân hoặc tổ chức không chú ý đến nghĩa vụ quan trọng trong lúc lẽ ra phải cảnh giác.",
+   "example_en": "The management was asleep at the wheel when the company started losing millions.",
+   "example_vi": "Ban quản lý đã lơ là trách nhiệm khi công ty bắt đầu thua lỗ hàng triệu đô la."
+  },
+  {
+   "t": 213.93,
+   "d": 4.18,
+   "phrase": "lose steam",
+   "ipa": "/luːz stiːm/",
+   "quote": "like sustainability has lost steam. She",
+   "meaning_vi": "mất dần động lực, giảm sức hút",
+   "usage_vi": "Dùng để mô tả một dự án, trào lưu hoặc nỗ lực dần suy yếu và không giữ được đà phát triển ban đầu.",
+   "example_en": "After months of continuous marketing, our promotional campaign began to lose steam.",
+   "example_vi": "Sau nhiều tháng quảng bá liên tục, chiến dịch khuyến mãi của chúng tôi đã bắt đầu mất nhiệt."
+  },
+  {
+   "t": 296.69,
+   "d": 3.92,
+   "phrase": "to say the least",
+   "ipa": "/tu seɪ ðə liːst/",
+   "quote": "daunting, to say the least. Like, yeah,",
+   "meaning_vi": "nói một cách nhẹ nhàng nhất",
+   "usage_vi": "Thường đặt ở cuối câu để nhấn mạnh rằng thực tế tình hình còn nghiêm trọng hoặc ấn tượng hơn từ ngữ vừa dùng.",
+   "example_en": "Preparing for the IELTS exam while working full-time is challenging, to say the least.",
+   "example_vi": "Vừa làm việc toàn thời gian vừa chuẩn bị cho kỳ thi IELTS là một thử thách, nói một cách nhẹ nhàng nhất."
+  },
+  {
+   "t": 332.25,
+   "d": 3.04,
+   "phrase": "set up to fail",
+   "ipa": "/sɛt ʌp tu feɪl/",
+   "quote": "but ultimately we were set up to fail.",
+   "meaning_vi": "đặt vào thế chắc chắn thất bại",
+   "usage_vi": "Dùng khi ai đó bị giao công việc mà không được cung cấp đủ nguồn lực hay điều kiện để hoàn thành.",
+   "example_en": "Without proper training, the new employees felt like they were set up to fail.",
+   "example_vi": "Nếu không được đào tạo bài bản, các nhân viên mới cảm thấy như họ bị đẩy vào thế cầm chắc thất bại."
+  },
+  {
+   "t": 455.69,
+   "d": 6.12,
+   "phrase": "full stop",
+   "ipa": "/fʊl stɑːp/",
+   "quote": "rid of straws, full stop.\" In their",
+   "meaning_vi": "dứt khoát, không tranh cãi thêm",
+   "usage_vi": "Dùng ở cuối câu phát biểu để khẳng định một quyết định tuyệt đối và bác bỏ tranh luận.",
+   "example_en": "Safety must be our top priority at the workplace, full stop.",
+   "example_vi": "An toàn phải là ưu tiên hàng đầu của chúng ta tại nơi làm việc, chấm hết."
+  },
+  {
+   "t": 639.94,
+   "d": 3.4,
+   "phrase": "get your head around",
+   "ipa": "/ɡɛt jʊər hɛd əˈraʊnd/",
+   "quote": "get your head around the scale of the",
+   "meaning_vi": "thấu hiểu một điều phức tạp",
+   "usage_vi": "Rất hữu ích trong IELTS Speaking khi thảo luận về một khái niệm khó, công nghệ mới hoặc thông tin quy mô lớn.",
+   "example_en": "It took me a while to get my head around the new software architecture.",
+   "example_vi": "Tôi mất một thời gian mới có thể thấu hiểu được kiến trúc phần mềm mới."
+  },
+  {
+   "t": 774.58,
+   "d": 5.12,
+   "phrase": "muddy the waters",
+   "ipa": "/ˈmʌdi ðə ˈwɔːtərz/",
+   "quote": "they could do was to muddy the waters by",
+   "meaning_vi": "làm rối rắm, mờ đục vấn đề",
+   "usage_vi": "Dùng khi ai đó cố tình đưa thông tin nhiễu để làm công chúng mơ hồ, khó đưa ra phán đoán đúng đắn.",
+   "example_en": "The politician tried to muddy the waters by bringing up irrelevant historical statistics.",
+   "example_vi": "Vị chính khách tìm cách làm rối rắm vấn đề bằng cách đưa ra các số liệu thống kê lịch sử không liên quan."
+  },
+  {
+   "t": 858.42,
+   "d": 3.28,
+   "phrase": "get goosebumps",
+   "ipa": "/ɡɛt ˈɡuːsbʌmps/",
+   "quote": "like I you start to kind of get goosebumps. You're like, this is like",
+   "meaning_vi": "nổi da gà",
+   "usage_vi": "Dùng khi trải qua cảm xúc mạnh mẽ như xúc động, ngạc nhiên, rùng mình hoặc kinh sợ.",
+   "example_en": "I still get goosebumps every time I hear that powerful symphony live.",
+   "example_vi": "Tôi vẫn nổi da gà mỗi khi nghe bản giao hưởng đầy uy lực đó được trình diễn trực tiếp."
+  },
+  {
+   "t": 949.86,
+   "d": 4.52,
+   "phrase": "carbon footprint",
+   "ipa": "/ˈkɑːrbən ˈfʊtprɪnt/",
+   "quote": "carbon footprint, something that was",
+   "meaning_vi": "dấu chân carbon (lượng khí thải carbon)",
+   "usage_vi": "Thuật ngữ quan trọng thuộc chủ đề Environment trong IELTS, chỉ tác động môi trường từ hoạt động của con người.",
+   "example_en": "Taking public transit instead of driving daily helps reduce your individual carbon footprint.",
+   "example_vi": "Đi phương tiện công cộng thay vì lái xe hằng ngày giúp giảm dấu chân carbon cá nhân của bạn."
+  },
+  {
+   "t": 967.62,
+   "d": 4.68,
+   "phrase": "bottom line",
+   "ipa": "/ˈbɑːtəm laɪn/",
+   "quote": "will impact their bottom line. And the",
+   "meaning_vi": "lợi nhuận tài chính, điểm cốt lõi",
+   "usage_vi": "Dùng phổ biến trong môi trường doanh nghiệp để nói về lợi nhuận sau cùng hoặc yếu tố quan trọng nhất của vấn đề.",
+   "example_en": "Adopting sustainable packaging might cost more initially, but it will protect the company's bottom line in the long run.",
+   "example_vi": "Việc áp dụng bao bì bền vững có thể tốn kém hơn lúc đầu, nhưng nó sẽ bảo vệ lợi nhuận của công ty về lâu dài."
+  },
+  {
+   "t": 1129.26,
+   "d": 4.56,
+   "phrase": "a diversion from",
+   "ipa": "/ə daɪˈvɜːrʒn frəm/",
+   "quote": ">> It's really a diversion from the",
+   "meaning_vi": "sự đánh lạc hướng khỏi cái gì",
+   "usage_vi": "Dùng khi một hành động hay thông tin được tạo ra để xao nhãng công chúng khỏi bản chất thực sự của sự việc.",
+   "example_en": "The sudden PR campaign was merely a diversion from the product safety recall.",
+   "example_vi": "Chiến dịch truyền thông đột ngột chỉ là một sự đánh lạc hướng khỏi vụ thu hồi sản phẩm vì lý do an toàn."
+  }
+ ]
+}

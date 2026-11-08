@@ -1,0 +1,143 @@
+{
+ "id": "FmykXVUsPdw",
+ "created": "2026-11-09",
+ "source": "youtube-manual",
+ "language": "en",
+ "ai": "gemini-3.6-flash",
+ "summary_vi": "Video theo chân Drew Binsky khám phá Bilang-Bilangan, hòn đảo hẹp nhất thế giới tại Philippines, nơi người dân sinh sống giản dị, thiếu thốn cơ sở y tế nhưng rất giàu tình cảm và lòng hiếu khách. Qua trải nghiệm đời sống thường nhật và sự cố bị dị ứng bãi biển bất ngờ, vlogger cảm nhận sâu sắc sự ấm áp, tinh thần lạc quan của người dân địa phương.",
+ "level": "B2",
+ "phrases": [
+  {
+   "t": 30.83,
+   "d": 3.74,
+   "phrase": "life-threatening",
+   "ipa": "/ˈlaɪfˌθret.n̩.ɪŋ/",
+   "quote": "how will I find help when I get a life-threatening allergic reaction?",
+   "meaning_vi": "đe dọa tính mạng",
+   "usage_vi": "Dùng làm tính từ để mô tả một căn bệnh, chấn thương hoặc tình huống nguy hiểm cực kỳ nghiêm trọng. Rất hữu ích trong IELTS Speaking/Writing chủ đề Health.",
+   "example_en": "Prompt medical intervention is crucial when dealing with life-threatening allergic reactions.",
+   "example_vi": "Can thiệp y tế kịp thời là rất quan trọng khi xử lý các phản ứng dị ứng đe dọa tính mạng."
+  },
+  {
+   "t": 179.28,
+   "d": 2.42,
+   "phrase": "settle down",
+   "ipa": "/ˈset.l̩ daʊn/",
+   "quote": "And then if you're older, it's a nice place to settle down.",
+   "meaning_vi": "an cư, ổn định cuộc sống",
+   "usage_vi": "Cụm động từ phổ biến mô tả việc bắt đầu sống ổn định lâu dài ở một nơi, thường đi kèm với việc lập gia đình hoặc mua nhà.",
+   "example_en": "After years of traveling the world, she decided to settle down in a quiet coastal town.",
+   "example_vi": "Sau nhiều năm du ngoạn khắp thế giới, cô quyết định an cư tại một thị trấn ven biển yên bình."
+  },
+  {
+   "t": 237.21,
+   "d": 0.89,
+   "phrase": "economical",
+   "ipa": "/ˌek.əˈnɑː.mɪ.kəl/",
+   "quote": "and it's economical.",
+   "meaning_vi": "tiết kiệm, hợp lý về mặt chi phí",
+   "usage_vi": "Tính từ mô tả việc sử dụng tiền bạc, thời gian hoặc tài nguyên một cách hiệu quả, tránh lãng phí. Phân biệt với 'economic' (thuộc về kinh tế).",
+   "example_en": "Drying fish in the sun is an economical way to preserve food without electricity.",
+   "example_vi": "Phơi khô cá dưới ánh nắng mặt trời là một cách tiết kiệm để bảo quản thực phẩm mà không cần điện."
+  },
+  {
+   "t": 303.1,
+   "d": 1.93,
+   "phrase": "quintessential",
+   "ipa": "/ˌkwɪn.təˈsen.ʃəl/",
+   "quote": "this is the quintessential Philippine life.",
+   "meaning_vi": "điển hình nhất, tinh túy nhất",
+   "usage_vi": "Tính từ cấp độ C1/C2 dùng để chỉ ví dụ hoàn hảo, đặc trưng nhất cho một phong cách, lối sống hay phẩm chất nào đó.",
+   "example_en": "Street food markets are a quintessential part of Asian culture.",
+   "example_vi": "Các khu chợ ẩm thực đường phố là một phần điển hình nhất của văn hóa châu Á."
+  },
+  {
+   "t": 696.36,
+   "d": 3.13,
+   "phrase": "consolidate",
+   "ipa": "/kənˈsɑː.lə.deɪt/",
+   "quote": "You can consolidate multiple high-interest credit card balances",
+   "meaning_vi": "gộp lại, củng cố",
+   "usage_vi": "Động từ C1 dùng trong tài chính hoặc quản lý để nói về việc kết hợp nhiều phần nhỏ/khoản nợ thành một khối thống nhất.",
+   "example_en": "The bank helped him consolidate several high-interest loans into one manageable payment.",
+   "example_vi": "Ngân hàng đã giúp anh ấy gộp nhiều khoản vay lãi suất cao thành một khoản thanh toán dễ quản lý hơn."
+  },
+  {
+   "t": 852.16,
+   "d": 3.42,
+   "phrase": "reliance on",
+   "ipa": "/rɪˈlaɪ.əns ɑːn/",
+   "quote": "the reliance on single-use plastics in the Philippines has led",
+   "meaning_vi": "sự phụ thuộc vào",
+   "usage_vi": "Cụm danh từ đi kèm giới từ 'on' (hoặc 'upon'), rất hay dùng trong IELTS Writing Task 2 chủ đề môi trường và công nghệ.",
+   "example_en": "Reducing our reliance on single-use plastics requires effort from both consumers and manufacturers.",
+   "example_vi": "Giảm bớt sự phụ thuộc vào nhựa dùng một lần đòi hỏi sự nỗ lực từ cả người tiêu dùng lẫn nhà sản xuất."
+  },
+  {
+   "t": 920.24,
+   "d": 2.56,
+   "phrase": "keep everything together",
+   "ipa": "/kiːp ˈev.ri.θɪŋ təˈɡeð.ɚ/",
+   "quote": "you know that they're the ones who keep everything together.",
+   "meaning_vi": "gánh vác, duy trì sự ổn định",
+   "usage_vi": "Thành ngữ tự nhiên mô tả việc quản lý, lo liệu tốt mọi thứ để gia đình hoặc tập thể không bị lộn xộn, đổ vỡ trong lúc khó khăn.",
+   "example_en": "During tough times, mothers often play a vital role in keeping everything together.",
+   "example_vi": "Trong những thời điểm khó khăn, các bà mẹ thường đóng vai trò quan trọng trong việc gánh vác và giữ cho mọi thứ ổn định."
+  },
+  {
+   "t": 994.67,
+   "d": 0.83,
+   "phrase": "elevation",
+   "ipa": "/ˌel.əˈveɪ.ʃən/",
+   "quote": "elevation anywhere.",
+   "meaning_vi": "độ cao (so với mực nước biển)",
+   "usage_vi": "Danh từ C1 chỉ chiều cao của vùng đất so với mực nước biển, hay dùng trong các bài nói/viết về địa lý, biến đổi khí hậu và lũ lụt.",
+   "example_en": "Because the island lacks elevation, it is highly vulnerable to storm surges.",
+   "example_vi": "Vì hòn đảo thiếu độ cao địa hình, nó rất dễ bị tổn thương trước các đợt triều cường do bão."
+  },
+  {
+   "t": 1077.03,
+   "d": 2.04,
+   "phrase": "enriching",
+   "ipa": "/ɪnˈrɪtʃ.ɪŋ/",
+   "quote": "And it's, it's so enriching to travel here,",
+   "meaning_vi": "bổ ích, làm giàu vốn sống",
+   "usage_vi": "Tính từ nâng cao mô tả trải nghiệm du lịch, học tập hay văn hóa mang lại giá trị tri thức và tinh thần lớn. Thích hợp cho IELTS Speaking Part 2.",
+   "example_en": "Interacting with local residents made his backpacking trip truly enriching.",
+   "example_vi": "Tương tác với cư dân địa phương đã làm cho chuyến du lịch ba lô của anh ấy trở nên cực kỳ bổ ích."
+  },
+  {
+   "t": 1238.05,
+   "d": 2.86,
+   "phrase": "a variety of",
+   "ipa": "/ə vəˈraɪ.ə.t̬i əv/",
+   "quote": "Okay, we got a variety of things. Keep going.",
+   "meaning_vi": "nhiều loại, đa dạng",
+   "usage_vi": "Cụm định lượng từ dùng trước danh từ số nhiều đếm được để nâng cấp cho 'many' hoặc 'different types of'.",
+   "example_en": "The sea provides a variety of seafood options for the islanders.",
+   "example_vi": "Biển cả cung cấp đa dạng các loại hải sản cho cư dân trên đảo."
+  },
+  {
+   "t": 1405.49,
+   "d": 1.73,
+   "phrase": "turn of events",
+   "ipa": "/tɝːn əv ɪˈvents/",
+   "quote": "Crazy, crazy turn of events here.",
+   "meaning_vi": "diễn biến bất ngờ, bước ngoặt",
+   "usage_vi": "Thành ngữ mô tả sự thay đổi đột ngột ngoài dự kiến trong chuỗi sự kiện. Rất tốt khi kể chuyện (IELTS Speaking Part 2 Storytelling).",
+   "example_en": "An unexpected turn of events forced the travelers to seek shelter in a local village.",
+   "example_vi": "Một diễn biến bất ngờ đã buộc những người du khách phải tìm nơi trú ẩn trong một ngôi làng địa phương."
+  },
+  {
+   "t": 1455.15,
+   "d": 4.43,
+   "phrase": "home away from home",
+   "ipa": "/hoʊm əˈweɪ frəm hoʊm/",
+   "quote": "and everyone else on this tiny strip of land have given me a home away from home.",
+   "meaning_vi": "nơi thân thương như ở nhà",
+   "usage_vi": "Thành ngữ mô tả một địa điểm (khách sạn, thành phố, nhà người quen) đem lại cảm giác ấm cúng, thoải mái như chính ngôi nhà của mình.",
+   "example_en": "The warm hospitality of the hosts turned the small cottage into a home away from home.",
+   "example_vi": "Sự hiếu khách ấm áp của chủ nhà đã biến ngôi nhà nhỏ thành một nơi thân thương như ở nhà."
+  }
+ ]
+}

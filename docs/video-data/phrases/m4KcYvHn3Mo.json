@@ -1,0 +1,143 @@
+{
+ "id": "m4KcYvHn3Mo",
+ "created": "2026-11-09",
+ "source": "youtube-auto",
+ "language": "en",
+ "ai": "gemini-3.6-flash",
+ "summary_vi": "Đoạn video ghi lại chuyến hành trình khám phá TP. Hồ Chí Minh của hai người bạn Mỹ với những trải nghiệm như mua sắm streetwear, ăn cơm tấm Michelin và thưởng thức bia thủ công. Đồng thời, vlogger chia sẻ những suy ngẫm sâu sắc về quyết định nghỉ việc kỹ sư phần mềm để theo đuổi đam mê sáng tạo nội dung.",
+ "level": "B2",
+ "phrases": [
+  {
+   "t": 43.16,
+   "d": 3.08,
+   "phrase": "shop till you drop",
+   "ipa": "/ʃɑːp tɪl juː drɑːp/",
+   "quote": "what we can buy. We're going to shop till we drop and get a massage, so woo,",
+   "meaning_vi": "mua sắm thả ga, mua sắm đến khi kiệt sức",
+   "usage_vi": "Thành ngữ giao tiếp dùng khi nói về việc mua sắm rất nhiều đồ đạc trong một khoảng thời gian dài.",
+   "example_en": "During the holiday sale, my sister and I decided to shop till we drop.",
+   "example_vi": "Trong đợt giảm giá lễ hội, chị tôi và tôi đã quyết định đi mua sắm thả ga."
+  },
+  {
+   "t": 138.32,
+   "d": 3.84,
+   "phrase": "straight up",
+   "ipa": "/ˈstreɪt ʌp/",
+   "quote": "she just straight up asked us and we're",
+   "meaning_vi": "thẳng thắn, trực tiếp",
+   "usage_vi": "Từ lóng tự nhiên trong tiếng Anh Mỹ, dùng để nhấn mạnh ai đó làm điều gì một cách hoàn toàn trực tiếp, không bẻ cong hay giấu giếm.",
+   "example_en": "He straight up asked me why I hadn't replied to his email.",
+   "example_vi": "Anh ấy hỏi thẳng tôi lý do tại sao tôi chưa trả lời email của anh ấy."
+  },
+  {
+   "t": 280.28,
+   "d": 4.04,
+   "phrase": "be real with (someone)",
+   "ipa": "/biː ˈriːəl wɪð/",
+   "quote": "like that's how it feels just to be real",
+   "meaning_vi": "nói thật lòng, thành thật với ai đó",
+   "usage_vi": "Cụm từ giao tiếp dùng khi bạn muốn bộc bạch suy nghĩ chân thành, không che giấu cảm xúc thật.",
+   "example_en": "To be real with you, I was quite nervous before the interview.",
+   "example_vi": "Nói thật lòng với bạn, tớ đã khá lo lắng trước buổi phỏng vấn."
+  },
+  {
+   "t": 398.6,
+   "d": 3.28,
+   "phrase": "smack it out of the park",
+   "ipa": "/smæk ɪt aʊt əv ðə pɑːrk/",
+   "quote": "Smack out the park.",
+   "meaning_vi": "làm vô cùng xuất sắc, vượt ngoài kỳ vọng",
+   "usage_vi": "Biến thể của 'knock it out of the park' (thành ngữ bóng chày), dùng để khen ngợi món ăn, màn trình diễn hoặc công việc làm rất giỏi.",
+   "example_en": "The chef really smacked it out of the park with this new seafood dish.",
+   "example_vi": "Vị đầu bếp thực sự đã làm xuất sắc tuyệt vời với món hải sản mới này."
+  },
+  {
+   "t": 438.48,
+   "d": 4.64,
+   "phrase": "start off with (something)",
+   "ipa": "/stɑːrt ɔːf wɪð/",
+   "quote": "I'm sad. We're starting off with another",
+   "meaning_vi": "bắt đầu bằng cái gì",
+   "usage_vi": "Phrasal verb rất phổ biến khi kể về lịch trình, thứ tự các món ăn hoặc hoạt động trong ngày.",
+   "example_en": "We usually start off our morning with a hot cup of black coffee.",
+   "example_vi": "Chúng tôi thường bắt đầu buổi sáng bằng một cốc cà phê đen nóng."
+  },
+  {
+   "t": 496.36,
+   "d": 3.96,
+   "phrase": "be (absolutely) beat",
+   "ipa": "/biː ˌæbsəˈluːtli biːt/",
+   "quote": "Last night we were just absolutely beat,",
+   "meaning_vi": "kiệt sức, vô cùng mệt mỏi",
+   "usage_vi": "Cách nói thân mật (informal) để mô tả trạng thái cạn kiệt năng lượng sau một ngày làm việc hay đi lại nhiều.",
+   "example_en": "After walking around the city all day, we were absolutely beat.",
+   "example_vi": "Sau khi đi bộ quanh thành phố cả ngày, chúng tôi đã hoàn toàn kiệt sức."
+  },
+  {
+   "t": 602.32,
+   "d": 4.52,
+   "phrase": "fade out",
+   "ipa": "/feɪd aʊt/",
+   "quote": "fade out like from signs and buildings",
+   "meaning_vi": "mờ dần, biến mất dần",
+   "usage_vi": "Dùng để mô tả thói quen, tên gọi, âm thanh hoặc hình ảnh giảm bớt dần và biến mất theo thời gian.",
+   "example_en": "Old traditional practices are beginning to fade out in big modern cities.",
+   "example_vi": "Các phong tục truyền thống cũ đang bắt đầu mờ dần ở các thành phố hiện đại lớn."
+  },
+  {
+   "t": 1164.6,
+   "d": 3.88,
+   "phrase": "pursue",
+   "ipa": "/pərˈsuː/",
+   "quote": "job as a software engineer to pursue",
+   "meaning_vi": "theo đuổi (sự nghiệp, đam mê, mục tiêu)",
+   "usage_vi": "Động từ C1 rất tốt cho IELTS Speaking Part 1 và Part 3 khi thảo luận về công việc và định hướng tương lai.",
+   "example_en": "She decided to quit her office job to pursue her passion for photography.",
+   "example_vi": "Cô ấy quyết định nghỉ công việc văn phòng để theo đuổi đam mê nhiếp ảnh."
+  },
+  {
+   "t": 1186.4,
+   "d": 4.12,
+   "phrase": "quick turnaround",
+   "ipa": "/kwɪk ˈtɜːrnəraʊnd/",
+   "quote": "was like a really quick turnaround.",
+   "meaning_vi": "sự chuyển đổi/hoàn thành nhanh chóng",
+   "usage_vi": "Danh từ ghép thường dùng trong công việc hoặc cuộc sống để nói về việc chuyển từ việc này sang việc khác trong thời gian ngắn.",
+   "example_en": "It was a quick turnaround from finishing university to starting my first job.",
+   "example_vi": "Đó là một khoảng thời gian chuyển tiếp rất nhanh từ khi tốt nghiệp đại học đến lúc bắt đầu công việc đầu tiên."
+  },
+  {
+   "t": 1246.84,
+   "d": 3.88,
+   "phrase": "be present",
+   "ipa": "/biː ˈpreznt/",
+   "quote": "myself and being present in person.",
+   "meaning_vi": "sống trọn vẹn trong hiện tại, tập trung vào khoảnh khắc thực tại",
+   "usage_vi": "Cụm từ C1 hay dùng trong các bài nói IELTS bàn về lối sống, du lịch và sức khỏe tâm lý (mindfulness).",
+   "example_en": "Putting away your phone during dinner helps you be present with your family.",
+   "example_vi": "Cất điện thoại đi trong bữa tối giúp bạn sống trọn vẹn từng khoảnh khắc bên gia đình."
+  },
+  {
+   "t": 1278.2,
+   "d": 3.92,
+   "phrase": "culture shock",
+   "ipa": "/ˈkʌltʃər ʃɑːk/",
+   "quote": "like this is this is a complete culture shock from the United States",
+   "meaning_vi": "sự sốc văn hóa",
+   "usage_vi": "Danh từ cố định (collocation) thường dùng khi đi du lịch hoặc sống ở nước ngoài và gặp phải sự khác biệt lớn về môi trường sống.",
+   "example_en": "Experiencing the busy traffic in Vietnam was a bit of a culture shock for him.",
+   "example_vi": "Trải nghiệm giao thông đông đúc ở Việt Nam là một chút sốc văn hóa đối với anh ấy."
+  },
+  {
+   "t": 1341.16,
+   "d": 2.64,
+   "phrase": "wrestle (something) to death",
+   "ipa": "/ˈresl tə deθ/",
+   "quote": "didn't wrestle it to death. I just",
+   "meaning_vi": "vật lộn/trăn trở giải quyết triệt để một vấn đề",
+   "usage_vi": "Cách nói hình ảnh diễn tả việc cố gắng phân tích hay giải quyết một thắc mắc, nỗi lo sợ đến cùng.",
+   "example_en": "Instead of wrestling her anxiety to death, she learned to accept it.",
+   "example_vi": "Thay vì vật lộn giải quyết sự lo âu đến cùng, cô ấy học cách chấp nhận nó."
+  }
+ ]
+}

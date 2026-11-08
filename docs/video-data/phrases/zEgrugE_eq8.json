@@ -1,0 +1,143 @@
+{
+ "id": "zEgrugE_eq8",
+ "created": "2026-11-09",
+ "source": "youtube-manual",
+ "language": "en-GB",
+ "ai": "gemini-3.6-flash",
+ "summary_vi": "Video phân tích cuộc khủng hoảng biến đổi khí hậu và lún đất tại New Orleans, nơi hệ thống đê điều đắt giá trị giá 14 tỷ USD đang chìm dần trước mực nước biển dâng. Chính quyền địa phương đứng trước quyết định lịch sử: tiếp tục đổ tiền gia cố công trình bảo vệ hay chuẩn bị di dời hàng triệu dân cư tới nơi an toàn.",
+ "level": "C1",
+ "phrases": [
+  {
+   "t": 16.4,
+   "d": 8.08,
+   "phrase": "beyond the point of no return",
+   "ipa": "/bɪˈjɑːnd ðə pɔɪnt əv noʊ rɪˈtɜːrn/",
+   "quote": "but there could be far worse still to come. New Orleans is 'beyond the point of no return'.",
+   "meaning_vi": "quá giới hạn không thể quay đầu",
+   "usage_vi": "Dùng để miêu tả một tình huống đã diễn biến quá xa và không thể đảo ngược kết quả.",
+   "example_en": "Environmental scientists warn that global warming may soon reach a point of no return.",
+   "example_vi": "Các nhà khoa học môi trường cảnh báo rằng sự nóng lên toàn cầu có thể sớm đạt đến điểm không thể quay đầu."
+  },
+  {
+   "t": 31.12,
+   "d": 6.72,
+   "phrase": "on borrowed time",
+   "ipa": "/ɑːn ˈbɔːroʊd taɪm/",
+   "quote": "seen after Hurricane Katrina. But even with that, it's on borrowed time. A new report",
+   "meaning_vi": "tồn tại tạm bợ / không còn kéo dài được lâu",
+   "usage_vi": "Dùng khi nói về một tổ chức, hệ thống hoặc công trình sắp sửa sụp đổ hoặc hết thời hạn sử dụng.",
+   "example_en": "Without major structural repairs, the old bridge is living on borrowed time.",
+   "example_vi": "Nếu không được sửa chữa cấu trúc lớn, cây cầu cũ chỉ đang tồn tại nhờ thời gian vay mượn."
+  },
+  {
+   "t": 95.68,
+   "d": 5.44,
+   "phrase": "punch well above one's weight",
+   "ipa": "/pʌntʃ wel əˈbʌv wʌnz weɪt/",
+   "quote": "New Orleans is a city that punches well above its weight when it comes to impact on American",
+   "meaning_vi": "gặt hái thành công vượt xa tầm vóc thực tế",
+   "usage_vi": "Rất hay trong IELTS Speaking/Writing khi khen ngợi một quốc gia, thành phố hay tổ chức nhỏ nhưng có sức ảnh hưởng cực kỳ lớn.",
+   "example_en": "Despite being a small nation, Singapore punches well above its weight in global economics.",
+   "example_vi": "Dù là một quốc gia nhỏ, Singapore vẫn tạo ra tầm ảnh hưởng vượt xa quy mô của mình trong nền kinh tế toàn cầu."
+  },
+  {
+   "t": 125.52,
+   "d": 5.76,
+   "phrase": "inseparably associated with",
+   "ipa": "/ɪnˈsepərəbli əˈsoʊsieɪtɪd wɪð/",
+   "quote": "all the positive connotations of New Orleans, the place is also inseparably associated with",
+   "meaning_vi": "gắn liền không thể tách rời với",
+   "usage_vi": "Dùng để thể hiện mối liên kết chặt chẽ về mặt hình ảnh, lịch sử hoặc thương hiệu giữa hai đối tượng.",
+   "example_en": "The city of Paris is inseparably associated with romance and fashion.",
+   "example_vi": "Thành phố Paris gắn liền không thể tách rời với sự lãng mạn và thời trang."
+  },
+  {
+   "t": 430.08,
+   "d": 7.84,
+   "phrase": "in tandem with",
+   "ipa": "/ɪn ˈtændəm wɪð/",
+   "quote": "all works in tandem with the Seabrook Floodgate Complex 10 miles away. That one may only be 16 feet",
+   "meaning_vi": "phối hợp song song cùng với",
+   "usage_vi": "Thường dùng trong văn viết học thuật (IELTS Task 2) để miêu tả hai giải pháp hoặc chính sách cùng hoạt động song hành.",
+   "example_en": "The government is implementing tax cuts in tandem with public spending increases.",
+   "example_vi": "Chính phủ đang thực hiện việc cắt giảm thuế song song với việc tăng chi tiêu công."
+  },
+  {
+   "t": 511.6,
+   "d": 6.16,
+   "phrase": "not mince one's words",
+   "ipa": "/nɑːt mɪns wʌnz wɜːrdz/",
+   "quote": "notably defending the New Orleans area from more severe flooding when Hurricane Ida hit in 2021. But even with all of this, the report isn't…",
+   "meaning_vi": "nói thẳng nói thật / không hề bọc lót",
+   "usage_vi": "Dùng để nhấn mạnh thái độ bộc trực, đưa ra đánh giá trực tiếp mà không sợ làm mất lòng ai.",
+   "example_en": "The auditor did not mince his words when describing the company's financial mismanagements.",
+   "example_vi": "Kế toán viên kiểm toán đã không hề ngần ngại khi mô tả sự quản lý yếu kém về tài chính của công ty."
+  },
+  {
+   "t": 531.12,
+   "d": 6.88,
+   "phrase": "to say the least",
+   "ipa": "/tə seɪ ðə liːst/",
+   "quote": "safety. But local officials have been skeptical to say the least. The mayor of New Orleans called",
+   "meaning_vi": "mới chỉ là nói giảm nói tránh",
+   "usage_vi": "Đặt ở cuối mệnh đề để nhấn mạnh rằng mức độ thực tế của sự việc còn nghiêm trọng hoặc ấn tượng hơn thế nhiều.",
+   "example_en": "Adapting to a completely new culture can be challenging, to say the least.",
+   "example_vi": "Thích nghi với một văn hóa hoàn toàn mới có thể rất khó khăn, nói như vậy vẫn còn là nhẹ nhàng."
+  },
+  {
+   "t": 620.32,
+   "d": 5.6,
+   "phrase": "easier said than done",
+   "ipa": "/ˈiːziər sed ðən dʌn/",
+   "quote": "even that is easier said than done. When the defence network was being designed and built",
+   "meaning_vi": "nói thì dễ hơn làm",
+   "usage_vi": "Dùng khi nhận xét về một ý tưởng hay giải pháp nghe có vẻ hay trên lý thuyết nhưng rất khó thực thi.",
+   "example_en": "Balancing a full-time job with IELTS preparation is easier said than done.",
+   "example_vi": "Cân bằng công việc toàn thời gian với việc luyện thi IELTS nói thì dễ hơn làm."
+  },
+  {
+   "t": 812.4,
+   "d": 5.6,
+   "phrase": "trial and error",
+   "ipa": "/ˈtraɪəl ənd ˈerər/",
+   "quote": "where you have a relatively isolated population, really quite small, and indeed that was a trial and error process. That was an experiment. It didn't…",
+   "meaning_vi": "phương pháp thử và sai / vừa làm vừa rút kinh nghiệm",
+   "usage_vi": "Dùng để miêu tả quá trình học hỏi hoặc tìm giải pháp bằng cách thử nghiệm nhiều lần cho đến khi thành công.",
+   "example_en": "Learning how to cook delicious dishes often involves a lot of trial and error.",
+   "example_vi": "Học cách nấu các món ăn ngon thường đòi hỏi rất nhiều lần làm thử và rút kinh nghiệm."
+  },
+  {
+   "t": 875.44,
+   "d": 5.52,
+   "phrase": "at the end of the day",
+   "ipa": "/æt ðə end əv ðə deɪ/",
+   "quote": "But at the end of the day, convincing people to leave their homes and their communities and head",
+   "meaning_vi": "suy cho cùng / xét cho cùng",
+   "usage_vi": "Discourse marker rất phổ biến trong IELTS Speaking để đưa ra kết luận hoặc nhấn mạnh yếu tố quan trọng nhất.",
+   "example_en": "At the end of the day, you have to decide what brings you true happiness.",
+   "example_vi": "Suy cho cùng, bạn phải tự quyết định điều gì mang lại cho mình hạnh phúc thực sự."
+  },
+  {
+   "t": 917.6,
+   "d": 4.88,
+   "phrase": "take it upon oneself to",
+   "ipa": "/teɪk ɪt əˈpɑːn wʌnˈself tuː/",
+   "quote": "Some people have already taken it upon themselves to move out. And there's always a spike in the",
+   "meaning_vi": "tự mình chủ động đứng ra làm",
+   "usage_vi": "Diễn tả hành động tự giác nhận trách nhiệm hoặc tự làm một việc khó khăn mà không chờ người khác yêu cầu.",
+   "example_en": "She took it upon herself to organize the entire charity campaign.",
+   "example_vi": "Cô ấy đã tự mình đứng ra tổ chức toàn bộ chiến dịch từ thiện."
+  },
+  {
+   "t": 995.76,
+   "d": 5.2,
+   "phrase": "the bottom line is that",
+   "ipa": "/ðə ˈbɑːtəm laɪn ɪz ðæt/",
+   "quote": "culture which has been through so much already. The bottom line is that whatever the government",
+   "meaning_vi": "điểm cốt lõi / mấu chốt là",
+   "usage_vi": "Dùng để tóm tắt thông điệp hoặc lý do quan trọng nhất sau khi phân tích một vấn đề phức tạp.",
+   "example_en": "The bottom line is that we need more investment to upgrade our urban infrastructure.",
+   "example_vi": "Mấu chốt vấn đề là chúng ta cần thêm đầu tư để nâng cấp hạ tầng đô thị."
+  }
+ ]
+}
