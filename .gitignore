@@ -6,3 +6,7 @@ local.properties
 *.iml
 app/src/main/assets/
 .DS_Store
+
+# Bộ nhớ đệm transcript và môi trường Python (không đưa lên repo công khai)
+.cache/
+.venv/

@@ -1,9 +1,9 @@
-name: Video phrases (Gemini + Claude)
+name: Video phrases (YouTube captions)
 
 on:
   schedule:
-    - cron: "0 21 * * *"   # 4:00 sáng giờ Việt Nam, tránh trùng lịch Daily content update
-  workflow_dispatch:        # cho phép bấm chạy tay trong tab Actions
+    - cron: "0 21 * * *"   # 4:00 sáng giờ Việt Nam
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -24,17 +24,27 @@ jobs:
           python-version: "3.12"
 
       - name: Cài thư viện
-        run: pip install requests
+        run: pip install "youtube-transcript-api>=1.2,<2" requests
 
-      - name: Gemini lấy lời thoại, Claude soạn cụm từ
+      # Transcript gốc giữ trong bộ nhớ đệm của Actions, không commit vào repo công khai
+      - name: Bộ nhớ đệm transcript
+        uses: actions/cache@v4
+        with:
+          path: .cache/transcripts
+          key: transcripts-${{ github.run_id }}
+          restore-keys: transcripts-
+
+      - name: Lấy phụ đề YouTube, AI soạn cụm từ
         env:
+          AI_PROVIDER: ${{ vars.AI_PROVIDER }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}   # đổi tên cho khớp secret Claude bạn đang dùng
           GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           CLAUDE_MODEL: ${{ vars.CLAUDE_MODEL }}
-        run: python scripts/video_phrases.py
+        run: python -u scripts/video_phrases.py
 
       - name: Lưu kết quả vào repo
+        if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

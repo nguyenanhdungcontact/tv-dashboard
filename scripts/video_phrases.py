@@ -1,315 +1,315 @@
 """
-Soạn cụm từ tiếng Anh hay cho từng video YouTube.
+Soạn cụm từ tiếng Anh cho từng video, dùng phụ đề có sẵn trên YouTube.
 
-Bước 1 - Gemini: nghe video qua link YouTube, trả về lời thoại kèm mốc thời gian.
-Bước 2 - Claude: đọc lời thoại, chọn cụm từ hay, viết nghĩa tiếng Việt, cách dùng, ví dụ.
-
-- Đọc danh sách ID trong video/english.json
-- Video nào chưa có docs/video-data/phrases/<id>.json thì xử lý
-- Lời thoại đầy đủ chỉ dùng tạm trong lúc chạy, KHÔNG lưu vào repo công khai.
-  Repo chỉ lưu các cụm từ và câu ngắn chứa chúng.
+1. Lấy transcript bằng youtube-transcript-api: ưu tiên phụ đề tiếng Anh do kênh làm (manual),
+   không có thì dùng phụ đề tự động. Không có phụ đề tiếng Anh thì bỏ qua video.
+   Giữ nguyên text, start, duration của từng đoạn, không sửa thời gian.
+2. Lưu transcript gốc vào .cache/transcripts/ (KHÔNG commit, không công khai) để khỏi tải lại.
+3. AI chỉ xử lý chữ: chọn cụm từ, nghĩa, ví dụ, cấp độ CEFR. AI trả về SỐ THỨ TỰ đoạn chứa cụm từ,
+   script lấy start của đoạn đó từ transcript gốc. AI không bao giờ tạo ra mốc thời gian.
+4. Repo chỉ lưu docs/video-data/phrases/<id>.json: cụm từ, câu ngắn chứa nó, start, duration.
 
 Biến môi trường:
-  GEMINI_API_KEY     bắt buộc
-  ANTHROPIC_API_KEY  bắt buộc
-  GEMINI_MODEL       tùy chọn, mặc định gemini-3.6-flash
-  CLAUDE_MODEL       tùy chọn, mặc định claude-haiku-5-5
-  MAX_PER_RUN        tùy chọn, mặc định 4
+  AI_PROVIDER        gemini (mặc định) hoặc claude
+  GEMINI_API_KEY     cần khi AI_PROVIDER=gemini
+  GEMINI_MODEL       mặc định gemini-3.6-flash (có thể đổi sang bản Flash-Lite)
+  ANTHROPIC_API_KEY  cần khi AI_PROVIDER=claude
+  CLAUDE_MODEL       mặc định claude-haiku-5-5
+  MAX_PER_RUN        số video tối đa mỗi lần chạy, mặc định 10
 """
 import json
 import os
 import pathlib
+import re
 import sys
 import time
 
 import requests
+from youtube_transcript_api import (
+    YouTubeTranscriptApi, NoTranscriptFound, TranscriptsDisabled, VideoUnavailable,
+    RequestBlocked, CouldNotRetrieveTranscript,
+)
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 LIST_FILE = ROOT / "video" / "english.json"
 OUT_DIR = ROOT / "docs" / "video-data" / "phrases"
+CACHE_DIR = ROOT / ".cache" / "transcripts"
 
+PROVIDER = (os.environ.get("AI_PROVIDER") or "gemini").strip().lower()
 GEMINI_KEY = os.environ.get("GEMINI_API_KEY", "").strip()
-CLAUDE_KEY = os.environ.get("ANTHROPIC_API_KEY", "").strip()
 GEMINI_MODEL = (os.environ.get("GEMINI_MODEL") or "gemini-3.6-flash").strip()
+CLAUDE_KEY = os.environ.get("ANTHROPIC_API_KEY", "").strip()
 CLAUDE_MODEL = (os.environ.get("CLAUDE_MODEL") or "claude-haiku-5-5").strip()
-MAX_PER_RUN = int(os.environ.get("MAX_PER_RUN") or 4)
+MAX_PER_RUN = int(os.environ.get("MAX_PER_RUN") or 10)
+EN_CODES = ["en", "en-US", "en-GB", "en-AU", "en-CA", "en-IN", "en-IE", "en-NZ"]
 
 
-class RateLimited(Exception):
-    pass
+class Blocked(Exception):
+    """YouTube chặn IP (thường gặp trên máy chủ cloud). Dừng cả lượt chạy."""
+
+
+class NoEnglish(Exception):
+    """Video không có phụ đề tiếng Anh."""
 
 
 class Temporary(Exception):
-    """Lỗi tạm thời (máy chủ quá tải...): không lưu file, lần chạy sau tự thử lại."""
-    pass
+    """Lỗi tạm thời của dịch vụ AI: không lưu file, lần sau thử lại."""
 
 
-class Recitation(Exception):
-    pass
+# ------------------------------------------------------------------ 1-2. Transcript
+def get_transcript(video_id: str) -> dict:
+    cache = CACHE_DIR / f"{video_id}.json"
+    if cache.exists():
+        return json.loads(cache.read_text(encoding="utf-8"))
+
+    api = YouTubeTranscriptApi()
+    try:
+        tlist = api.list(video_id)
+        try:
+            tr = tlist.find_manually_created_transcript(EN_CODES)
+        except NoTranscriptFound:
+            tr = tlist.find_generated_transcript(EN_CODES)
+        fetched = tr.fetch()
+    except RequestBlocked as e:          # gồm cả IpBlocked
+        raise Blocked(str(e).splitlines()[0] if str(e) else "RequestBlocked")
+    except (NoTranscriptFound, TranscriptsDisabled):
+        raise NoEnglish()
+    except VideoUnavailable:
+        raise NoEnglish()
+
+    segments = []
+    for s in fetched.to_raw_data():
+        text = re.sub(r"\s+", " ", (s.get("text") or "").replace("\n", " ")).strip()
+        if text:
+            segments.append({"text": text, "start": s["start"], "duration": s.get("duration", 0)})
+    data = {
+        "id": video_id,
+        "language": tr.language_code,
+        "kind": "auto" if tr.is_generated else "manual",
+        "segments": segments,
+    }
+    CACHE_DIR.mkdir(parents=True, exist_ok=True)
+    cache.write_text(json.dumps(data, ensure_ascii=False), encoding="utf-8")
+    return data
 
 
-# ---------------------------------------------------------------- Bước 1: Gemini lấy lời thoại
-TRANSCRIPT_PROMPT = """Transcribe the spoken English in this video verbatim.
-Split it into segments of one sentence (or one short clause for long sentences).
-For each segment give t = the second (integer, from the start of the video) when it begins, and text = the exact words.
-Do not summarize, do not skip parts, do not add descriptions of visuals or music."""
+# ------------------------------------------------------------------ 3. AI chỉ xử lý chữ
+PROMPT = """You are an English teacher helping a Vietnamese professional (upper-intermediate level) learn natural English from a video.
 
-TRANSCRIPT_SCHEMA = {
-    "type": "OBJECT",
-    "properties": {
-        "segments": {
-            "type": "ARRAY",
-            "items": {
-                "type": "OBJECT",
-                "properties": {"t": {"type": "INTEGER"}, "text": {"type": "STRING"}},
-                "required": ["t", "text"],
-            },
-        }
-    },
-    "required": ["segments"],
+Below is the video's subtitle text. Each line starts with [n] = the line number.{note}
+
+<subtitles>
+{lines}
+</subtitles>
+
+Choose 10 to 14 useful, natural expressions that appear in these lines: idioms, collocations, phrasal verbs, discourse markers, and phrases a learner would want to reuse at work or in daily life. Skip very basic words. Spread them across the whole video.
+
+For each expression give:
+- n: the line number where the expression appears (if it spans two lines, the first of them)
+- phrase: the expression in base form
+- meaning_vi: short Vietnamese meaning
+- usage_vi: one short Vietnamese note on when and how to use it
+- example_en: one NEW English example sentence, not from the video
+- example_vi: Vietnamese translation of example_en
+Also give summary_vi (2-sentence Vietnamese summary of the video) and level (CEFR level of the language: B1, B2, C1 or C2).
+Do not invent times. Only refer to line numbers."""
+
+PHRASE_PROPS = {
+    "n": "integer", "phrase": "string", "meaning_vi": "string", "usage_vi": "string",
+    "example_en": "string", "example_vi": "string",
 }
 
 
-# Dùng khi Gemini từ chối chép nguyên văn (RECITATION): chỉ trích các câu ngắn chứa cách diễn đạt đáng học
-EXCERPT_PROMPT = """Listen to this video. List 25 to 35 short excerpts where the speaker uses a useful or natural English expression
-(idioms, collocations, phrasal verbs, discourse markers). Spread them across the whole video.
-For each excerpt give t = the second (integer) when it begins, and text = the speaker's words, at most 12 words.
-Do not output a full transcript."""
+def _schema(upper: bool) -> dict:
+    T = (lambda t: t.upper()) if upper else (lambda t: t)
+    return {
+        "type": T("object"),
+        "properties": {
+            "summary_vi": {"type": T("string")},
+            "level": {"type": T("string")},
+            "phrases": {"type": T("array"), "items": {
+                "type": T("object"),
+                "properties": {k: {"type": T(v)} for k, v in PHRASE_PROPS.items()},
+                "required": list(PHRASE_PROPS),
+            }},
+        },
+        "required": ["summary_vi", "level", "phrases"],
+    }
 
 
-def _gemini_call(video_id: str, prompt: str, low_res: bool = True) -> str:
+def ask_gemini(prompt: str) -> dict:
     url = f"https://generativelanguage.googleapis.com/v1beta/models/{GEMINI_MODEL}:generateContent"
     body = {
-        "contents": [{"parts": [
-            {"file_data": {"file_uri": f"https://www.youtube.com/watch?v={video_id}"}},
-            {"text": prompt},
-        ]}],
-        "generationConfig": {
-            "responseMimeType": "application/json",
-            "responseSchema": TRANSCRIPT_SCHEMA,
-        },
+        "contents": [{"parts": [{"text": prompt}]}],
+        "generationConfig": {"responseMimeType": "application/json", "responseSchema": _schema(True)},
     }
-    if low_res:
-        # Hình độ phân giải thấp để tốn ít token, âm thanh vẫn đầy đủ
-        body["generationConfig"]["mediaResolution"] = "MEDIA_RESOLUTION_LOW"
-
     for attempt in range(3):
-        r = requests.post(url, headers={"x-goog-api-key": GEMINI_KEY}, json=body, timeout=600)
-        if r.status_code in (500, 502, 503, 504):
-            wait = 30 * (attempt + 1)
-            print(f"  Gemini đang bận ({r.status_code}), thử lại sau {wait} giây…")
-            time.sleep(wait)
+        r = requests.post(url, headers={"x-goog-api-key": GEMINI_KEY}, json=body, timeout=300)
+        if r.status_code in (429, 500, 502, 503, 504):
+            time.sleep(20 * (attempt + 1))
             continue
         break
     else:
-        raise Temporary(f"Gemini quá tải ({r.status_code})")
-
-    if r.status_code == 429:
-        raise RateLimited("Gemini: " + r.text[:300])
-    if r.status_code == 400 and low_res and "mediaResolution" in r.text:
-        return _gemini_call(video_id, prompt, low_res=False)
+        raise Temporary(f"Gemini bận ({r.status_code})")
     if r.status_code != 200:
-        raise RuntimeError(f"Gemini HTTP {r.status_code}: {r.text[:500]}")
-
-    data = r.json()
-    cand = (data.get("candidates") or [{}])[0]
-    if cand.get("finishReason") == "RECITATION":
-        raise Recitation()
+        raise RuntimeError(f"Gemini HTTP {r.status_code}: {r.text[:400]}")
+    cand = (r.json().get("candidates") or [{}])[0]
     try:
-        return cand["content"]["parts"][0]["text"]
-    except (KeyError, IndexError):
-        raise RuntimeError(f"Gemini không trả nội dung: {json.dumps(data)[:500]}")
+        return json.loads(cand["content"]["parts"][0]["text"])
+    except (KeyError, IndexError, json.JSONDecodeError):
+        raise RuntimeError(f"Gemini trả kết quả lạ: finishReason={cand.get('finishReason')}")
 
 
-def gemini_transcript(video_id: str):
-    """Trả về (danh sách câu, chế độ). Chế độ 'full' = lời thoại đầy đủ, 'excerpts' = trích đoạn ngắn."""
-    mode = "full"
-    try:
-        text = _gemini_call(video_id, TRANSCRIPT_PROMPT)
-    except Recitation:
-        print("  Gemini không chép nguyên văn được (bản quyền), chuyển sang trích đoạn ngắn")
-        mode = "excerpts"
-        try:
-            text = _gemini_call(video_id, EXCERPT_PROMPT)
-        except Recitation:
-            raise RuntimeError("Gemini từ chối cả trích đoạn ngắn vì bản quyền")
-
-    segs = []
-    for s in json.loads(text).get("segments", []):
-        try:
-            t = max(0, int(s.get("t", 0)))
-        except (TypeError, ValueError):
-            continue
-        txt = (s.get("text") or "").strip()
-        if txt:
-            segs.append({"t": t, "text": txt})
-    segs.sort(key=lambda s: s["t"])
-    if len(segs) < 5:
-        raise RuntimeError("Lời thoại quá ngắn hoặc rỗng")
-    return segs, mode
-
-
-# ---------------------------------------------------------------- Bước 2: Claude chọn cụm từ
-PHRASE_PROMPT = """You are an English teacher helping a Vietnamese professional (upper-intermediate level) learn natural English from a video.
-
-Below is the video transcript. Each line starts with [t] = the second when that sentence begins.
-
-<transcript>
-{transcript}
-</transcript>
-
-Choose 10 to 14 useful, natural expressions that appear in the transcript: idioms, collocations, phrasal verbs, discourse markers, and phrases a learner would want to reuse at work or in daily life. Skip very basic words. Spread them across the whole video.
-
-{note}
-Save the result with the save_phrases tool. For each phrase, t must be the [t] of the line containing it, and quote must be copied exactly from that line (at most 20 words). Keep Vietnamese notes short. Order phrases by t."""
-
-PHRASE_TOOL = {
-    "name": "save_phrases",
-    "description": "Save the selected expressions for this video.",
-    "input_schema": {
-        "type": "object",
-        "properties": {
-            "summary_vi": {"type": "string", "description": "2-sentence Vietnamese summary of the video"},
-            "level": {"type": "string", "enum": ["B1", "B2", "C1", "C2"]},
-            "phrases": {
-                "type": "array",
-                "items": {
-                    "type": "object",
-                    "properties": {
-                        "t": {"type": "integer"},
-                        "phrase": {"type": "string", "description": "expression in base form"},
-                        "quote": {"type": "string"},
-                        "meaning_vi": {"type": "string", "description": "short Vietnamese meaning"},
-                        "usage_vi": {"type": "string", "description": "one short Vietnamese note on when/how to use it"},
-                        "example_en": {"type": "string", "description": "a NEW English example, not from the video"},
-                        "example_vi": {"type": "string", "description": "Vietnamese translation of example_en"},
-                    },
-                    "required": ["t", "phrase", "quote", "meaning_vi", "usage_vi", "example_en", "example_vi"],
-                },
-            },
-        },
-        "required": ["summary_vi", "level", "phrases"],
-    },
-}
-
-
-def claude_phrases(segments: list, mode: str = "full") -> dict:
-    transcript = "\n".join(f"[{s['t']}] {s['text']}" for s in segments)
-    note = ("" if mode == "full" else
-            "Note: these are only short excerpts from the video, not the full transcript. "
-            "Base the summary on what the excerpts suggest and keep it general.\n")
+def ask_claude(prompt: str) -> dict:
+    tool = {"name": "save_phrases", "description": "Save the selected expressions.", "input_schema": _schema(False)}
     r = requests.post(
         "https://api.anthropic.com/v1/messages",
-        headers={
-            "x-api-key": CLAUDE_KEY,
-            "anthropic-version": "2023-06-01",
-            "content-type": "application/json",
-        },
-        json={
-            "model": CLAUDE_MODEL,
-            "max_tokens": 12000,
-            "tools": [PHRASE_TOOL],
-            "tool_choice": {"type": "tool", "name": "save_phrases"},
-            "messages": [{"role": "user", "content": PHRASE_PROMPT.format(transcript=transcript, note=note)}],
-        },
+        headers={"x-api-key": CLAUDE_KEY, "anthropic-version": "2023-06-01", "content-type": "application/json"},
+        json={"model": CLAUDE_MODEL, "max_tokens": 12000, "tools": [tool],
+              "tool_choice": {"type": "tool", "name": "save_phrases"},
+              "messages": [{"role": "user", "content": prompt}]},
         timeout=300,
     )
-    if r.status_code == 429:
-        raise RateLimited("Claude: " + r.text[:300])
-    if r.status_code in (500, 529):
-        raise Temporary(f"Claude quá tải ({r.status_code})")
+    if r.status_code in (429, 500, 529):
+        raise Temporary(f"Claude bận ({r.status_code})")
     if r.status_code != 200:
-        raise RuntimeError(f"Claude HTTP {r.status_code}: {r.text[:500]}")
-
-    data = r.json()
-    if data.get("stop_reason") == "max_tokens":
-        raise RuntimeError("Câu trả lời của Claude quá dài, bị cắt")
-    for block in data.get("content", []):
-        if block.get("type") == "tool_use" and block.get("name") == "save_phrases":
-            return block.get("input", {})
-    raise RuntimeError("Claude không trả kết quả qua save_phrases")
+        raise RuntimeError(f"Claude HTTP {r.status_code}: {r.text[:400]}")
+    for b in r.json().get("content", []):
+        if b.get("type") == "tool_use":
+            return b.get("input", {})
+    raise RuntimeError("Claude không trả kết quả")
 
 
-def snap_times(result: dict, segments: list) -> dict:
-    """Đối chiếu mốc thời gian Claude chọn với lời thoại thật, sửa về câu gần nhất chứa cụm từ."""
-    starts = [s["t"] for s in segments]
-    phrases = []
+# ------------------------------------------------------------------ Gắn cụm từ với đoạn phụ đề gốc
+STOP = {"the", "and", "for", "your", "one", "one's", "someone", "somebody", "something",
+        "sth", "sb", "with", "from", "into", "onto", "their", "his", "her", "its", "our"}
+
+
+def _words(s: str) -> list:
+    return re.findall(r"[a-z0-9']+", s.lower())
+
+
+def _score(phrase: str, text: str) -> float:
+    keys = [w for w in _words(phrase) if len(w) > 2 and w not in STOP] or _words(phrase)
+    if not keys:
+        return 0.0
+    tw = _words(text)
+    hit = sum(1 for k in keys if any(t.startswith(k[:max(3, len(k) - 2)]) for t in tw))
+    return hit / len(keys)
+
+
+def locate(phrase: str, n: int, segs: list):
+    """Tìm đoạn thật sự chứa cụm từ quanh dòng AI chỉ ra. Trả về (chỉ số đoạn, câu trích) hoặc None."""
+    best = None
+    for j in range(max(0, n - 5), min(len(segs), n + 6)):
+        one = segs[j]["text"]
+        two = one + " " + segs[j + 1]["text"] if j + 1 < len(segs) else one
+        s1, s2 = _score(phrase, one), _score(phrase, two)
+        cand = (s1, j, one) if s1 >= s2 else (s2 - 0.01, j, two)
+        # Ưu tiên điểm cao, rồi gần dòng AI chỉ ra
+        key = (round(cand[0], 2), -abs(j - n))
+        if best is None or key > best[0]:
+            best = (key, cand)
+    if not best or best[1][0] < 0.5:
+        return None
+    _, j, quote = best[1]
+    words = quote.split()
+    return j, " ".join(words[:25]) + ("…" if len(words) > 25 else "")
+
+
+def build(video_id: str, tr: dict) -> dict:
+    segs = tr["segments"]
+    lines = "\n".join(f"[{i}] {s['text']}" for i, s in enumerate(segs))
+    note = ("" if tr["kind"] == "manual" else
+            "\nThese are auto-generated subtitles: punctuation may be missing and lines may cut sentences.")
+    prompt = PROMPT.format(lines=lines, note=note)
+    result = ask_gemini(prompt) if PROVIDER == "gemini" else ask_claude(prompt)
+
+    phrases, seen = [], set()
     for p in result.get("phrases", []):
-        if not p.get("phrase"):
-            continue
         try:
-            t = int(p.get("t", 0))
+            n = int(p.get("n"))
         except (TypeError, ValueError):
-            t = 0
-        quote = (p.get("quote") or "").lower()[:40]
-        match = next((s["t"] for s in segments if quote and quote in s["text"].lower()), None)
-        if match is None:
-            match = min(starts, key=lambda x: abs(x - t))
-        p["t"] = match
-        phrases.append({k: p.get(k, "") for k in
-                        ["t", "phrase", "quote", "meaning_vi", "usage_vi", "example_en", "example_vi"]})
-    phrases.sort(key=lambda p: p["t"])
-    return {"summary_vi": result.get("summary_vi", ""), "level": result.get("level", ""), "phrases": phrases}
+            continue
+        hit = locate(p.get("phrase", ""), n, segs)
+        if not hit or hit[0] in seen and p.get("phrase") in [x["phrase"] for x in phrases]:
+            continue
+        j, quote = hit
+        seen.add(j)
+        phrases.append({
+            "t": round(segs[j]["start"], 2),          # lấy nguyên từ phụ đề YouTube
+            "d": round(segs[j]["duration"], 2),
+            "phrase": p.get("phrase", ""), "quote": quote,
+            "meaning_vi": p.get("meaning_vi", ""), "usage_vi": p.get("usage_vi", ""),
+            "example_en": p.get("example_en", ""), "example_vi": p.get("example_vi", ""),
+        })
+    phrases.sort(key=lambda x: x["t"])
+    return {
+        "id": video_id, "created": time.strftime("%Y-%m-%d"),
+        "source": f"youtube-{tr['kind']}", "language": tr["language"],
+        "ai": GEMINI_MODEL if PROVIDER == "gemini" else CLAUDE_MODEL,
+        "summary_vi": result.get("summary_vi", ""), "level": result.get("level", ""),
+        "phrases": phrases,
+    }
 
 
-# ---------------------------------------------------------------- Chạy
+# ------------------------------------------------------------------ Chạy
+def needs_work(vid: str) -> bool:
+    f = OUT_DIR / f"{vid}.json"
+    if not f.exists():
+        return True
+    try:
+        old = json.loads(f.read_text(encoding="utf-8"))
+    except Exception:
+        return True
+    if old.get("error") == "no_english_captions":
+        return False
+    # File cũ do Gemini nghe video (mốc thời gian ước lượng) hoặc file lỗi: làm lại
+    return not str(old.get("source", "")).startswith("youtube") or bool(old.get("error"))
+
+
 def main() -> int:
-    missing = [n for n, v in [("GEMINI_API_KEY", GEMINI_KEY), ("ANTHROPIC_API_KEY", CLAUDE_KEY)] if not v]
-    if missing:
-        print("Thiếu khóa: " + ", ".join(missing) + ". Hãy kiểm tra GitHub Secrets.")
+    key_ok = GEMINI_KEY if PROVIDER == "gemini" else CLAUDE_KEY
+    if not key_ok:
+        print(f"Thiếu khóa cho AI_PROVIDER={PROVIDER}. Hãy đặt GEMINI_API_KEY hoặc ANTHROPIC_API_KEY.")
         return 1
 
     ids = json.loads(LIST_FILE.read_text(encoding="utf-8")).get("videos", [])
     OUT_DIR.mkdir(parents=True, exist_ok=True)
-    def needs_work(vid):
-        f = OUT_DIR / f"{vid}.json"
-        if not f.exists():
-            return True
-        try:
-            old = json.loads(f.read_text(encoding="utf-8"))
-        except Exception:
-            return True
-        return bool(old.get("error")) and old.get("attempts", 1) < 3
-
     todo = [v for v in ids if needs_work(v)]
-    print(f"Gemini: {GEMINI_MODEL}, Claude: {CLAUDE_MODEL}. "
-          f"Có {len(ids)} video, cần soạn {len(todo)}, lần này tối đa {MAX_PER_RUN}.")
+    print(f"AI: {PROVIDER}. Có {len(ids)} video, cần soạn {len(todo)}, lần này tối đa {MAX_PER_RUN}.", flush=True)
 
-    done = 0
+    done, blocked = 0, False
     for vid in todo[:MAX_PER_RUN]:
-        print(f"→ {vid}")
-        f = OUT_DIR / f"{vid}.json"
-        attempts = 1
-        if f.exists():
-            try:
-                attempts = json.loads(f.read_text(encoding="utf-8")).get("attempts", 1) + 1
-            except Exception:
-                pass
-        meta = {"id": vid, "created": time.strftime("%Y-%m-%d"), "attempts": attempts,
-                "models": {"transcript": GEMINI_MODEL, "phrases": CLAUDE_MODEL}}
+        print(f"→ {vid}", flush=True)
         try:
-            segments, mode = gemini_transcript(vid)
-            print(f"  {'Lời thoại' if mode == 'full' else 'Trích đoạn'}: {len(segments)} câu")
-            result = snap_times(claude_phrases(segments, mode), segments)
-            print(f"  Cụm từ: {len(result['phrases'])}")
-            out = {**meta, "source": mode, **result}
-        except RateLimited as e:
-            print(f"  Hết hạn mức tạm thời, dừng và để lần sau làm tiếp. {e}")
+            tr = get_transcript(vid)
+            print(f"  Phụ đề {tr['kind']} ({tr['language']}): {len(tr['segments'])} đoạn", flush=True)
+            out = build(vid, tr)
+            print(f"  Cụm từ: {len(out['phrases'])}", flush=True)
+        except Blocked as e:
+            print(f"  YouTube đang chặn IP của máy này: {e}")
+            print("  Hãy chạy script trên máy Mac (xem scripts/run_local.sh) rồi commit kết quả.")
+            blocked = True
             break
+        except NoEnglish:
+            print("  Không có phụ đề tiếng Anh, bỏ qua.")
+            out = {"id": vid, "created": time.strftime("%Y-%m-%d"), "error": "no_english_captions", "phrases": []}
         except Temporary as e:
-            print(f"  {e}. Bỏ qua, lần chạy sau sẽ thử lại.")
-            time.sleep(15)
+            print(f"  {e}. Lần chạy sau sẽ thử lại.")
+            continue
+        except CouldNotRetrieveTranscript as e:
+            print(f"  Không lấy được phụ đề: {type(e).__name__}. Lần chạy sau sẽ thử lại.")
             continue
         except Exception as e:
-            # Lưu lỗi để không thử lại mãi một video hỏng
             print(f"  Lỗi: {e}")
-            out = {**meta, "error": str(e)[:300], "summary_vi": "", "level": "", "phrases": []}
+            out = {"id": vid, "created": time.strftime("%Y-%m-%d"), "error": str(e)[:300], "phrases": []}
         (OUT_DIR / f"{vid}.json").write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
         done += 1
-        time.sleep(15)
+        time.sleep(3)
 
     print(f"Xong {done} video.")
-    return 0
+    return 2 if blocked and done == 0 else 0
 
 
 if __name__ == "__main__":

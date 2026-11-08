@@ -753,7 +753,7 @@ function closePanel(resume = true){
 function playPhrase(i){
   if (!S.phr || !player || !player.seekTo) return;
   const p = S.phr.phrases[i];
-  player.seekTo(Math.max(0, p.t - 1), true);
+  player.seekTo(Math.max(0, p.t - 0.3), true);   // start lấy nguyên từ phụ đề YouTube
   player.playVideo();
   S.pausedByPanel = false;
   S.navHold = 0;
