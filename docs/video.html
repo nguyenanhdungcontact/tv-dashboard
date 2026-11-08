@@ -6,7 +6,18 @@
 <title>Kênh nhà mình</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&display=swap" rel="stylesheet">
+<script>
+/* Ngày 6:00–18:00 dùng giao diện khu vườn sáng, tối dùng trời sao. Thử: thêm ?theme=day hoặc ?theme=night */
+(function dayNight(){
+  const force = new URLSearchParams(location.search).get('theme');
+  const h = new Date().getHours();
+  const day = force ? force === 'day' : (h >= 6 && h < 18);
+  document.documentElement.classList.toggle('day', day);
+  document.documentElement.classList.toggle('night', !day);
+  if (!force) setTimeout(dayNight, 60000);
+})();
+</script>
 <style>
 :root{
   --bg0:#060920; --bg1:#0e1340; --bg2:#231b5e;
@@ -208,6 +219,74 @@ body.simple .qi{font-size:1.6rem}
 #toast.show{opacity:1;transform:translate(-50%,0)}
 body.simple #toast{font-size:1.6rem}
 
+/* ================= Ban ngày (6:00–18:00): khu vườn sáng, mộc mạc =================
+   Ban đêm giữ nền trời sao ở trên. Lớp .day do đoạn script đầu trang bật theo giờ. */
+:root.day{
+  --bg0:#efe8d6; --bg1:#f7f2e4; --bg2:#e3ecd6;
+  --ink:#2c3a2b; --ink2:#5a6852; --ink3:#8a927c;
+  --accent:#4f7d45;
+  --ring:#3f6b37; --glow:rgba(111,160,92,.35);
+  --warm:#c8742a;
+  --head:'Fraunces','Be Vietnam Pro',Georgia,serif;
+}
+:root.day body{
+  background:
+    radial-gradient(ellipse 60% 50% at 85% -5%, rgba(255,226,160,.55) 0%, transparent 60%),
+    radial-gradient(ellipse 55% 45% at -5% 105%, rgba(176,206,150,.5) 0%, transparent 62%),
+    linear-gradient(180deg,#f8f4e8,#efe8d6);
+}
+/* Cành lá ở hai góc thay cho sao */
+:root.day body::before{
+  opacity:.9;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 260'%3E%3Cpath d='M320 6C250 30 190 70 140 130S70 230 40 258' fill='none' stroke='%23889e72' stroke-width='3' stroke-linecap='round'/%3E%3Cg fill='%2399b783'%3E%3Cellipse cx='282' cy='40' rx='30' ry='11' transform='rotate(-28 282 40)'/%3E%3Cellipse cx='250' cy='20' rx='24' ry='9' transform='rotate(-62 250 20)'/%3E%3Cellipse cx='222' cy='80' rx='32' ry='12' transform='rotate(-10 222 80)'/%3E%3Cellipse cx='190' cy='58' rx='26' ry='10' transform='rotate(-58 190 58)'/%3E%3Cellipse cx='166' cy='130' rx='30' ry='11' transform='rotate(8 166 130)'/%3E%3Cellipse cx='132' cy='104' rx='24' ry='9' transform='rotate(-50 132 104)'/%3E%3Cellipse cx='104' cy='186' rx='26' ry='10' transform='rotate(20 104 186)'/%3E%3C/g%3E%3Cg fill='%23b9cfa3'%3E%3Cellipse cx='300' cy='70' rx='18' ry='7' transform='rotate(20 300 70)'/%3E%3Cellipse cx='72' cy='214' rx='20' ry='8' transform='rotate(-40 72 214)'/%3E%3C/g%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 260 220'%3E%3Cpath d='M0 214C60 196 110 160 150 110S210 30 230 4' fill='none' stroke='%23889e72' stroke-width='3' stroke-linecap='round'/%3E%3Cg fill='%2399b783'%3E%3Cellipse cx='40' cy='196' rx='26' ry='10' transform='rotate(-18 40 196)'/%3E%3Cellipse cx='76' cy='166' rx='24' ry='9' transform='rotate(-62 76 166)'/%3E%3Cellipse cx='110' cy='170' rx='28' ry='11' transform='rotate(-2 110 170)'/%3E%3Cellipse cx='150' cy='96' rx='26' ry='10' transform='rotate(-70 150 96)'/%3E%3Cellipse cx='184' cy='92' rx='24' ry='9' transform='rotate(-20 184 92)'/%3E%3C/g%3E%3Cg fill='%23e7b97a'%3E%3Ccircle cx='208' cy='40' r='6'/%3E%3Ccircle cx='222' cy='54' r='4'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat:no-repeat;
+  background-size:26rem auto, 20rem auto;
+  background-position:right -1rem top -1rem, left -1rem bottom -1rem;
+}
+:root.day body[data-screen="player"]::before{opacity:.2}
+:root.day .moon{background:#f2b84b;box-shadow:0 0 1.4rem rgba(242,184,75,.6)}
+:root.day .moon::after{display:none}
+:root.day .me{background:linear-gradient(140deg,#7fa86b,#4f7d45)}
+:root.day .par{background:linear-gradient(140deg,#f0b46e,#d9805a)}
+:root.day .pcard.focused .pav{box-shadow:0 0 0 .4rem #fff,0 0 0 1.1rem rgba(111,160,92,.4),0 1.4rem 3rem rgba(60,70,40,.25)}
+:root.day .pav{box-shadow:0 1rem 2.4rem rgba(60,70,40,.2)}
+:root.day .chip{background:rgba(255,255,255,.65);border-color:rgba(60,80,50,.15)}
+:root.day .chip.focused{background:var(--accent);color:#fff;box-shadow:0 0 0 .4rem var(--glow)}
+:root.day .chip.focused em{color:#e4f0da}
+:root.day .thumb{background:linear-gradient(135deg,#d7e2c6,#c4d3b0);box-shadow:0 .4rem 1.1rem rgba(60,70,40,.18)}
+:root.day .card.focused .thumb{box-shadow:0 0 0 var(--ringw) var(--ring),0 0 0 calc(var(--ringw) + .5rem) var(--glow),0 1.2rem 2.4rem rgba(60,70,40,.28)}
+:root.day .t{color:var(--ink)}
+:root.day .card.focused .t{color:#1d2a1c}
+:root.day .card.blocked .thumb::after{background:rgba(247,242,228,.85)}
+:root.day .hint{background:linear-gradient(transparent,rgba(244,239,225,.97) 55%)}
+:root.day .k{background:rgba(60,80,50,.1);color:var(--ink)}
+:root.day #osd{background:rgba(255,252,243,.95);box-shadow:0 1rem 2.6rem rgba(60,70,40,.25)}
+:root.day #osd .bar{background:rgba(60,80,50,.15)}
+:root.day #pBack{background:rgba(255,252,243,.8);color:var(--ink)}
+:root.day #endcard{background:rgba(246,241,228,.97)}
+:root.day .endthumb .thumb{box-shadow:0 0 0 .3rem var(--ring),0 1.4rem 3rem rgba(60,70,40,.25)}
+:root.day .btn{background:rgba(60,80,50,.1);color:var(--ink)}
+:root.day .btn.primary{background:var(--accent);color:#fff}
+:root.day .ph{background:rgba(255,255,255,.55)}
+:root.day .ph.sel{background:#fff}
+:root.day .ph-foot .okl{color:var(--ink)}
+:root.day #learn{background:rgba(255,253,246,.8);border-color:rgba(60,80,50,.12);box-shadow:0 .6rem 2rem rgba(60,70,40,.12)}
+:root.day #player.panel #ytWrap{box-shadow:0 1rem 2.6rem rgba(60,70,40,.28)}
+:root.day .lw-p .ipa{color:#3f7a8c}
+:root.day .lw-m,:root.day .lw-ex{color:var(--ink)}
+:root.day .lw-q{color:#3d4a3a}
+:root.day .lw-q mark,:root.day .ph .q mark{color:var(--warm)}
+:root.day .ph-head h3 span{border-color:rgba(200,116,42,.45)}
+:root.day #qmenu{background:rgba(255,252,243,.96);box-shadow:0 1rem 2.6rem rgba(60,70,40,.25)}
+:root.day .qi{background:rgba(60,80,50,.08);color:var(--ink)}
+:root.day .qi.sel{background:var(--accent);color:#fff}
+:root.day .qi.sel small{color:#e4f0da}
+:root.day #toast{background:rgba(255,252,243,.97);border-color:rgba(60,80,50,.15);color:var(--ink);box-shadow:0 .8rem 2rem rgba(60,70,40,.2)}
+:root.day .badge{background:#4f7d45;color:#fff}
+:root.day body.simple{--ring:var(--warm);--glow:rgba(200,116,42,.35)}
+
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 </head>
@@ -358,6 +437,7 @@ const rows = () => PROFILES[S.profile].rows;
 function show(id){
   document.querySelectorAll('.screen').forEach(el => el.classList.toggle('active', el.id === id));
   S.screen = id;
+  document.body.dataset.screen = id;
 }
 
 /* ===== Màn hình chọn hồ sơ ===== */

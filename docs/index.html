@@ -7,6 +7,17 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<script>
+/* Ngày 6:00–18:00 dùng giao diện khu vườn sáng, tối dùng trời sao. Thử: thêm ?theme=day hoặc ?theme=night */
+(function dayNight(){
+  const force = new URLSearchParams(location.search).get('theme');
+  const h = new Date().getHours();
+  const day = force ? force === 'day' : (h >= 6 && h < 18);
+  document.documentElement.classList.toggle('day', day);
+  document.documentElement.classList.toggle('night', !day);
+  if (!force) setTimeout(dayNight, 60000);
+})();
+</script>
 <style>
   :root {
     --space-deep: #141d4a;
@@ -318,6 +329,53 @@
     #card { left: 12px; right: 12px; max-width: none; bottom: calc(55% + 12px); }
     #paused { left: 50%; top: 22%; }
   }
+
+  /* ================= Ban ngày (6:00–18:00): khu vườn sáng, mộc mạc =================
+     Ban đêm giữ trời sao như cũ. Lớp .day do đoạn script đầu trang bật theo giờ. */
+  :root.day {
+    --space-deep: #efe8d6;
+    --space-mid: #f8f4e8;
+    --nebula: rgba(255, 222, 150, 0.5);
+    --nebula-2: rgba(170, 204, 140, 0.45);
+    --head: #6f9a5c;
+    --glow: rgba(120, 170, 95, 0.45);
+    --tail: #9cbf84;
+    --text: #2c3a2b;
+    --muted: #66735e;
+    --panel: rgba(255, 253, 246, 0.9);
+    --panel-edge: rgba(60, 80, 50, 0.16);
+    --rail: rgba(250, 246, 235, 0.86);
+    --card: rgba(60, 80, 50, 0.05);
+    --card-hover: rgba(60, 80, 50, 0.1);
+    --c-hot: #c46a1c;
+    --c-work: #2f6a9a;
+    --c-life: #2f8158;
+    --c-heart: #c0466a;
+    --dust: #b9a26a;
+    color-scheme: light;
+  }
+  :root.day #sky {
+    background:
+      radial-gradient(ellipse 50% 45% at 80% 12%, var(--nebula), transparent 70%),
+      radial-gradient(ellipse 45% 40% at 40% 100%, var(--nebula-2), transparent 70%),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 260'%3E%3Cpath d='M320 6C250 30 190 70 140 130S70 230 40 258' fill='none' stroke='%23889e72' stroke-width='3' stroke-linecap='round'/%3E%3Cg fill='%2399b783'%3E%3Cellipse cx='282' cy='40' rx='30' ry='11' transform='rotate(-28 282 40)'/%3E%3Cellipse cx='250' cy='20' rx='24' ry='9' transform='rotate(-62 250 20)'/%3E%3Cellipse cx='222' cy='80' rx='32' ry='12' transform='rotate(-10 222 80)'/%3E%3Cellipse cx='190' cy='58' rx='26' ry='10' transform='rotate(-58 190 58)'/%3E%3Cellipse cx='166' cy='130' rx='30' ry='11' transform='rotate(8 166 130)'/%3E%3Cellipse cx='132' cy='104' rx='24' ry='9' transform='rotate(-50 132 104)'/%3E%3Cellipse cx='104' cy='186' rx='26' ry='10' transform='rotate(20 104 186)'/%3E%3C/g%3E%3C/svg%3E") right -1vw top -1vw / 24vw auto no-repeat,
+      linear-gradient(170deg, var(--space-mid), var(--space-deep) 70%);
+  }
+  :root.day #stars { opacity: 0.5; }
+  /* Sao băng thành hạt lá bay */
+  :root.day .meteor .head { border-radius: 0 60% 0 60%; box-shadow: 0 0 0.6em 0.1em var(--glow); }
+  :root.day .meteor .tail { background: linear-gradient(90deg, var(--tail), rgba(156, 191, 132, 0.3) 30%, transparent); }
+  :root.day .meteor .w { text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7); color: var(--text); }
+  :root.day .meteor.lit .w { color: #1f2d1e; text-shadow: 0 0 18px rgba(255, 236, 190, 0.95), 0 1px 0 #fff; }
+  :root.day #card .ex, :root.day #answer { color: #3d4a3a; }
+  :root.day #card .col span { border-color: rgba(200, 116, 42, 0.45); color: #8a4a12; background: rgba(200, 116, 42, 0.08); }
+  :root.day button.ask, :root.day .actions .primary { color: #fff; }
+  :root.day dialog { background: #fbf8ef; }
+  :root.day dialog::backdrop { background: rgba(60, 70, 40, 0.35); }
+  :root.day textarea { background: #fff; }
+  :root.day #err { color: #b03a2a; }
+  :root.day #bar { background: rgba(60, 80, 50, 0.12); }
+  :root.day #feature, :root.day #queue { scrollbar-color: rgba(60, 80, 50, 0.25) transparent; }
 </style>
 </head>
 <body>
@@ -739,7 +797,7 @@ Chỉ dựa trên thông tin ở trên và kiến thức chung. Không bịa th�
   }
   function drawStars(t) {
     ctx.clearRect(0, 0, W, H);
-    ctx.fillStyle = "#fff";
+    ctx.fillStyle = document.documentElement.classList.contains("day") ? "#b9a26a" : "#fff";
     for (const s of stars) {
       ctx.globalAlpha = reduceMotion ? s.a : s.a * (0.65 + 0.35 * Math.sin(t * 0.001 * s.sp + s.tw));
       ctx.beginPath();
