@@ -1788,5 +1788,135 @@
       "nurture leads"
     ],
     "added": "2026-11-07"
+  },
+  {
+    "w": "hypothesis",
+    "ipa": "/haɪˈpɒθəsɪs/",
+    "pos": "noun",
+    "vi": "giả thuyết cần kiểm chứng",
+    "ex": "We’ll test the hypothesis that video ads lift conversions among mobile users.",
+    "col": [
+      "test a hypothesis",
+      "form a hypothesis",
+      "support a hypothesis"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "w": "statistically significant",
+    "ipa": "/ˌstætɪˈstɪkli sɪɡˈnɪfɪkənt/",
+    "pos": "adjective",
+    "vi": "có ý nghĩa thống kê",
+    "ex": "The uplift isn’t statistically significant yet, so let’s wait another week.",
+    "col": [
+      "statistically significant result",
+      "reach statistical significance",
+      "not statistically significant"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "w": "value proposition",
+    "ipa": "/ˈvæljuː ˌprɒpəˈzɪʃn/",
+    "pos": "noun",
+    "vi": "giá trị cốt lõi mà sản phẩm mang lại cho khách hàng",
+    "ex": "Our value proposition needs to be clearer on the landing page.",
+    "col": [
+      "clear value proposition",
+      "unique value proposition",
+      "sharpen the value proposition"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "w": "scope creep",
+    "ipa": "/skəʊp kriːp/",
+    "pos": "noun",
+    "vi": "phạm vi công việc tự phình ra ngoài kế hoạch ban đầu",
+    "ex": "Adding three new channels mid-campaign is classic scope creep, honestly.",
+    "col": [
+      "prevent scope creep",
+      "avoid scope creep",
+      "cause scope creep"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "w": "retention",
+    "ipa": "/rɪˈtenʃn/",
+    "pos": "noun",
+    "vi": "việc giữ chân khách hàng hoặc nhân sự",
+    "ex": "Customer retention matters more than acquisition once the budget is tight.",
+    "col": [
+      "customer retention",
+      "improve retention",
+      "retention rate"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "w": "pain point",
+    "ipa": "/peɪn pɔɪnt/",
+    "pos": "noun",
+    "vi": "điểm khó chịu, vấn đề lớn mà khách hàng gặp phải",
+    "ex": "Clients keep mentioning slow reporting as their biggest pain point.",
+    "col": [
+      "address a pain point",
+      "key pain point",
+      "customer pain points"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "w": "look forward to",
+    "ipa": "/lʊk ˈfɔːwəd tuː/",
+    "pos": "phrasal verb",
+    "vi": "mong chờ điều gì đó",
+    "ex": "I’m looking forward to seeing the Q3 results next month.",
+    "col": [
+      "look forward to meeting you",
+      "really look forward to it",
+      "look forward to hearing from you"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "w": "overthink",
+    "ipa": "/ˌəʊvəˈθɪŋk/",
+    "pos": "verb",
+    "vi": "nghĩ quá nhiều, suy nghĩ quá mức",
+    "ex": "Don’t overthink the headline; a simple one often performs better.",
+    "col": [
+      "overthink things",
+      "tend to overthink",
+      "stop overthinking"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "w": "hurt someone’s feelings",
+    "ipa": "/hɜːt ˈsʌmwʌnz ˈfiːlɪŋz/",
+    "pos": "idiom",
+    "vi": "làm ai đó tổn thương, buồn lòng",
+    "ex": "I didn’t mean to hurt her feelings during the review.",
+    "col": [
+      "hurt someone’s feelings badly",
+      "without meaning to hurt",
+      "don’t want to hurt feelings"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "w": "lighten up",
+    "ipa": "/ˈlaɪtn ʌp/",
+    "pos": "phrasal verb",
+    "vi": "bớt căng thẳng, thoải mái hơn",
+    "ex": "Lighten up a bit; one bad day doesn’t ruin the whole quarter.",
+    "col": [
+      "lighten up a little",
+      "tell someone to lighten up",
+      "lighten up and relax"
+    ],
+    "added": "2026-11-08"
   }
 ]

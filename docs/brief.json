@@ -1,6 +1,6 @@
 {
-  "date": "2026-11-07",
-  "updated": "Cập nhật 10:12 thứ Bảy, 07/11/2026",
+  "date": "2026-11-08",
+  "updated": "Cập nhật 09:22 Chủ nhật, 08/11/2026",
   "sections": [
     {
       "id": "hot",
@@ -8,17 +8,8 @@
       "color": "--c-hot",
       "items": [
         {
-          "title": "Quốc hội đặt mục tiêu tăng trưởng GDP 2027 từ 10% trở lên",
-          "summary": "Quốc hội giao chỉ tiêu tăng trưởng kinh tế năm 2027 đạt tối thiểu 10%. GDP bình quân đầu người được đặt ở mức khoảng 6.100 USD.",
-          "points": [],
-          "why": "",
-          "source": "VnExpress",
-          "date": "07/11",
-          "link": "https://vnexpress.net/quoc-hoi-giao-muc-tieu-gdp-2027-tang-tu-10-5141797.html"
-        },
-        {
-          "title": "Iran tố Mỹ bắn tên lửa vào đảo Qeshm gần Hormuz",
-          "summary": "Iran cho biết đảo Qeshm ở cửa ngõ eo biển Hormuz bị tấn công bằng hai tên lửa. Về phía Mỹ, ông Trump nói quân đội nước này đã phá hủy thiết bị phòng không của đối phương.",
+          "title": "Iran tố Mỹ phóng tên lửa vào đảo Qeshm gần Hormuz",
+          "summary": "Iran thông báo đảo Qeshm ở cửa ngõ eo biển Hormuz bị hai tên lửa tấn công. Về phía Mỹ, ông Trump nói quân đội nước này đã phá hủy thiết bị phòng không của đối phương.",
           "points": [],
           "why": "",
           "source": "VnExpress",
@@ -26,13 +17,22 @@
           "link": "https://vnexpress.net/iran-noi-my-phong-ten-lua-vao-dao-an-ngu-hormuz-5141788.html"
         },
         {
-          "title": "Ông Trump gặp phái viên Nga, nói sắp có thỏa thuận lớn",
-          "summary": "Tổng thống Mỹ bất ngờ gặp phái viên Nga và khẳng định sẽ đạt được một thỏa thuận rất lớn. Theo ông, thỏa thuận này không chỉ liên quan xung đột Ukraine mà còn có thể bao trùm cả châu Âu.",
+          "title": "Quốc hội đặt mục tiêu GDP năm 2027 tăng từ 10% trở lên",
+          "summary": "Quốc hội giao chỉ tiêu tăng trưởng kinh tế năm 2027 đạt tối thiểu 10%. GDP bình quân đầu người được kỳ vọng vào khoảng 6.100 USD.",
           "points": [],
           "why": "",
           "source": "VnExpress",
-          "date": "06/11",
-          "link": "https://vnexpress.net/tong-thong-my-bat-ngo-gap-phai-vien-nga-tuyen-bo-sap-dat-thoa-thuan-lon-5141378.html"
+          "date": "07/11",
+          "link": "https://vnexpress.net/quoc-hoi-giao-muc-tieu-gdp-2027-tang-tu-10-5141797.html"
+        },
+        {
+          "title": "Fed cân nhắc tăng lãi suất sau báo cáo việc làm tích cực",
+          "summary": "Báo cáo việc làm tháng 10 tốt hơn dự báo, nhưng tiền lương vẫn tăng chậm hơn lạm phát. Điều này tạo thêm dư địa để các quan chức Fed tính đến việc tăng lãi suất.",
+          "points": [],
+          "why": "",
+          "source": "VnExpress",
+          "date": "07/11",
+          "link": "https://vnexpress.net/quan-chuc-fed-can-nhac-tang-lai-sau-bao-cao-viec-lam-kha-quan-5141851.html"
         }
       ]
     },
@@ -42,17 +42,8 @@
       "color": "--c-work",
       "items": [
         {
-          "title": "ChatGPT Ads đổi tùy chọn đặt giá thầu Max Bid và Max CPC",
-          "summary": "OpenAI vừa gửi email cho các nhà quảng cáo trên ChatGPT Ads về thay đổi trong tùy chọn đặt giá thầu, có hiệu lực từ thứ Hai 9/11. Thay đổi này ảnh hưởng đến những ai đang dùng Max Bid hoặc Max CPC.",
-          "points": [],
-          "why": "",
-          "source": "Search Engine Roundtable",
-          "date": "06/11",
-          "link": "https://www.seroundtable.com/openai-updates-chatgpt-ads-bidding-options-42470.html"
-        },
-        {
-          "title": "OpenAI phát triển công cụ quản lý doanh nghiệp trên ChatGPT",
-          "summary": "OpenAI đang làm một công cụ giống Search Console hay Webmaster Tools để doanh nghiệp quản lý và theo dõi hiệu quả trên ChatGPT. Công cụ cho phép doanh nghiệp tự nhận quyền sở hữu thông tin của mình trên nền tảng này.",
+          "title": "OpenAI phát triển công cụ phân tích và trích dẫn cho doanh nghiệp trên ChatGPT",
+          "summary": "OpenAI đang xây dựng một công cụ giống Search Console hoặc Webmaster Tools để doanh nghiệp quản lý và theo dõi hiệu quả hiện diện trên ChatGPT. Công cụ này cho phép doanh nghiệp xác nhận quyền sở hữu thương hiệu của mình trong ChatGPT.",
           "points": [],
           "why": "",
           "source": "Search Engine Roundtable",
@@ -60,13 +51,13 @@
           "link": "https://www.seroundtable.com/chatgpt-tools-for-business-42476.html"
         },
         {
-          "title": "Google xác nhận lỗi Merchant Center, API và nguồn dữ liệu",
-          "summary": "Google xác nhận hiện đang có sự cố với Merchant Center, trong đó ảnh hưởng đến Merchant API và các feed sản phẩm. Thông báo được đăng trên trang trạng thái của Google Merchant Center.",
+          "title": "CocoaPods sắp chuyển sang chỉ đọc, ứng dụng iOS cần dùng Swift Package Manager",
+          "summary": "Kho Specs của CocoaPods sẽ chuyển vĩnh viễn sang chế độ chỉ đọc vào ngày 2/12/2026. Sau mốc này, Google sẽ không phát hành thêm phiên bản mới của Google Mobile Ads SDK hay các adapter mediation cho iOS trên CocoaPods, nên các nhà phát triển cần chuyển sang Swift Package Manager.",
           "points": [],
           "why": "",
-          "source": "Search Engine Roundtable",
-          "date": "06/11",
-          "link": "https://www.seroundtable.com/google-confirms-issues-with-merchant-center-42473.html"
+          "source": "Google Ads Developer Blog",
+          "date": "07/11",
+          "link": "http://ads-developers.googleblog.com/2026/11/prepare-for-cocoapods-read-only-mode.html"
         }
       ]
     },
@@ -76,31 +67,31 @@
       "color": "--c-life",
       "items": [
         {
-          "title": "Lương tối thiểu vùng tăng kéo theo những khoản nào",
-          "summary": "Từ 1/1/2027, lương tối thiểu vùng tăng thêm 310.000–390.000 đồng mỗi tháng. Mức tăng này kéo theo điều chỉnh lương hưu, trợ cấp thất nghiệp, thai sản và tiền lương ngừng việc.",
-          "points": [],
-          "why": "",
-          "source": "VnExpress",
-          "date": "06/11",
-          "link": "https://vnexpress.net/luong-toi-thieu-vung-tang-khoan-nao-se-tang-theo-5141372.html"
-        },
-        {
-          "title": "13 tuyến xe buýt TP.HCM đổi lộ trình tránh công trường",
-          "summary": "13 tuyến buýt thay đổi đường đi từ ngày 6–7/11 để tránh công trường Đại lộ Đại học và tuyến metro Bến Thành – Tham Lương. Trong số này có 11 tuyến đi qua Đại học Quốc gia.",
-          "points": [],
-          "why": "",
-          "source": "VnExpress",
-          "date": "06/11",
-          "link": "https://vnexpress.net/13-tuyen-xe-buyt-tp-hcm-doi-lo-trinh-5141501.html"
-        },
-        {
-          "title": "Trả lương dưới mức tối thiểu vùng có thể bị phạt đến 150 triệu",
-          "summary": "Từ 1/1/2027, lương tối thiểu tháng dao động từ 4,04 đến 5,7 triệu đồng tùy vùng. Doanh nghiệp trả thấp hơn có thể bị phạt đến 150 triệu đồng, tùy số lao động bị vi phạm.",
+          "title": "Trả lương thấp hơn mức tối thiểu vùng có thể bị phạt đến 150 triệu đồng",
+          "summary": "Từ đầu năm 2027, lương tối thiểu tháng nằm trong khoảng 4,04-5,7 triệu đồng tùy vùng. Doanh nghiệp trả thấp hơn mức này có thể bị phạt tới 150 triệu đồng, tùy số lao động bị vi phạm.",
           "points": [],
           "why": "",
           "source": "VnExpress",
           "date": "07/11",
           "link": "https://vnexpress.net/tra-luong-thap-hon-muc-toi-thieu-vung-bi-phat-den-150-trieu-dong-5141635.html"
+        },
+        {
+          "title": "TP.HCM đề xuất hỗ trợ toàn bộ bảo hiểm y tế cho người 60 đến dưới 65 tuổi",
+          "summary": "Thành phố dự kiến hỗ trợ 100% mức đóng bảo hiểm y tế cho gần 196.000 người từ đủ 60 đến dưới 65 tuổi. Kinh phí cần có là 267,6 tỉ đồng mỗi năm.",
+          "points": [],
+          "why": "",
+          "source": "Thanh Niên",
+          "date": "08/11",
+          "link": "https://thanhnien.vn/tphcm-se-ho-tro-100-bao-hiem-y-te-cho-nguoi-tu-60-den-duoi-65-tuoi-185261108083854816.htm"
+        },
+        {
+          "title": "Lãi suất tăng, ngân hàng nào hút được nhiều tiền gửi nhất?",
+          "summary": "Trong 9 tháng, VPBank và Sacombank có lượng tiền gửi tăng vượt cả các ngân hàng quốc doanh. Một số ngân hàng nhỏ cũng bứt tốc nhờ chính sách ưu đãi lãi suất.",
+          "points": [],
+          "why": "",
+          "source": "VnExpress",
+          "date": "07/11",
+          "link": "https://vnexpress.net/lai-suat-tang-ngan-hang-nao-hut-nhieu-tien-gui-nhat-5137948.html"
         }
       ]
     },
@@ -110,31 +101,31 @@
       "color": "--c-heart",
       "items": [
         {
-          "title": "Bếp ăn 0 đồng trong Bệnh viện Lê Văn Thịnh",
-          "summary": "Tại nhà ăn Hạnh phúc của Bệnh viện Lê Văn Thịnh, nhân viên y tế cùng tình nguyện viên mỗi ngày nấu 350 suất cơm miễn phí. Những suất ăn này dành cho bệnh nhân.",
+          "title": "Tình thương không biên giới trên đất Phật ở Bihar",
+          "summary": "Bài viết khắc họa vùng quê Bihar của Ấn Độ bên lưu vực sông Hằng, nơi từng phồn hoa nhưng nay thuộc nhóm bang nghèo nhất Nam Á. Giữa nắng sớm và sương đêm, tiếng trẻ con theo gió vọng lại cả vùng đất.",
+          "points": [],
+          "why": "",
+          "source": "Thanh Niên",
+          "date": "08/11",
+          "link": "https://thanhnien.vn/tinh-thuong-khong-bien-gioi-tren-dat-phat-185261024154608723.htm"
+        },
+        {
+          "title": "Nuôi bò, nuôi ong giúp người Khmer vùng Bảy Núi tăng thu nhập",
+          "summary": "Nhiều hộ dân tộc thiểu số ở An Giang được hỗ trợ bò giống, thùng ong và kỹ thuật chăn nuôi. Nhờ vậy họ có thêm sinh kế và dần cải thiện cuộc sống.",
           "points": [],
           "why": "",
           "source": "VnExpress",
-          "date": "06/11",
-          "link": "https://vnexpress.net/bep-an-0-dong-trong-benh-vien-o-tp-hcm-5140777.html"
+          "date": "08/11",
+          "link": "https://vnexpress.net/nuoi-bo-ong-du-giup-nguoi-khmer-vung-bay-nui-tang-thu-nhap-5140548.html"
         },
         {
-          "title": "Trại nấm Thiện Giao: mầm sống từ nỗi đau dioxin",
-          "summary": "Gần 30 năm qua, Trại nấm Thiện Giao ở Hải Phòng cưu mang các nạn nhân chất độc da cam/dioxin. Nơi này cũng là di sản lớn nhất mà người sáng lập, được gọi là mẹ Hương, để lại.",
+          "title": "Nông sản miền Tây vào sợi bún, mang về hàng tỉ đồng mỗi năm",
+          "summary": "Chị Lê Thị Mỹ Ngọc, 36 tuổi, ở xã đảo Long Phú Thuận, Đồng Tháp, từ nghề làm bún gia truyền đã cơ giới hóa sản xuất. Chị đưa hạt sen, lá hẹ, bí đỏ, gấc, khoai môn vào sợi bánh, tạo ra sản phẩm tiện lợi đậm hương vị miền Tây.",
           "points": [],
           "why": "",
           "source": "Thanh Niên",
-          "date": "07/11",
-          "link": "https://thanhnien.vn/trai-nam-thien-giao-noi-mam-song-nay-no-tu-tro-tan-dioxin-185261016204213864.htm"
-        },
-        {
-          "title": "Thần tài gõ cửa: 16 năm tiếp sức người khuyết tật",
-          "summary": "Sau 16 năm phát sóng, chương trình Thần tài gõ cửa không chỉ trao vốn mưu sinh mà còn giúp nhiều người khuyết tật có cơ hội việc làm, tự nuôi sống bản thân và lo cho gia đình. Đằng sau mỗi khoản hỗ trợ là hành trình vượt lên nghịch cảnh của họ.",
-          "points": [],
-          "why": "",
-          "source": "Thanh Niên",
-          "date": "07/11",
-          "link": "https://thanhnien.vn/than-tai-go-cua-16-nam-mo-loi-sinh-ke-tiep-suc-nguoi-khuyet-tat-185261106222224528.htm"
+          "date": "08/11",
+          "link": "https://thanhnien.vn/dua-nong-san-mien-tay-vao-tung-soi-banh-thu-hang-ti-dong-moi-nam-18526102610543438.htm"
         }
       ]
     }
