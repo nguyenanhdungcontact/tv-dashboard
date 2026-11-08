@@ -22,6 +22,9 @@ fi
 export AI_PROVIDER="$PROVIDER"
 
 git pull --quiet
+echo "== Cập nhật danh sách video theo chủ đề =="
+python -u scripts/video_catalog.py || true
+echo "== Soạn cụm từ =="
 python -u scripts/video_phrases.py || true
 
 git add docs/video-data

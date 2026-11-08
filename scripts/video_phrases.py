@@ -94,7 +94,7 @@ def get_transcript(video_id: str) -> dict:
 
 
 # ------------------------------------------------------------------ 3. AI chỉ xử lý chữ
-PROMPT = """You are an English teacher helping a Vietnamese professional (upper-intermediate level) learn natural English from a video.
+PROMPT = """You are an English teacher helping a Vietnamese couple (upper-intermediate, one of them preparing for IELTS) learn natural English from a video.
 
 Below is the video's subtitle text. Each line starts with [n] = the line number.{note}
 
@@ -102,11 +102,12 @@ Below is the video's subtitle text. Each line starts with [n] = the line number.
 {lines}
 </subtitles>
 
-Choose 10 to 14 useful, natural expressions that appear in these lines: idioms, collocations, phrasal verbs, discourse markers, and phrases a learner would want to reuse at work or in daily life. Skip very basic words. Spread them across the whole video.
+Choose 10 to 14 useful, natural expressions that appear in these lines: idioms, collocations, phrasal verbs, discourse markers, and topic vocabulary. Prefer expressions that would raise an IELTS Speaking or Writing score (lexical resource) and that a learner would want to reuse when talking about travel, culture, technology, work or daily life. Skip very basic words. Spread them across the whole video.
 
 For each expression give:
 - n: the line number where the expression appears (if it spans two lines, the first of them)
 - phrase: the expression in base form
+- ipa: IPA pronunciation of the phrase (General American), between slashes
 - meaning_vi: short Vietnamese meaning
 - usage_vi: one short Vietnamese note on when and how to use it
 - example_en: one NEW English example sentence, not from the video
@@ -115,7 +116,7 @@ Also give summary_vi (2-sentence Vietnamese summary of the video) and level (CEF
 Do not invent times. Only refer to line numbers."""
 
 PHRASE_PROPS = {
-    "n": "integer", "phrase": "string", "meaning_vi": "string", "usage_vi": "string",
+    "n": "integer", "phrase": "string", "ipa": "string", "meaning_vi": "string", "usage_vi": "string",
     "example_en": "string", "example_vi": "string",
 }
 
@@ -239,7 +240,7 @@ def build(video_id: str, tr: dict) -> dict:
         phrases.append({
             "t": round(segs[j]["start"], 2),          # lấy nguyên từ phụ đề YouTube
             "d": round(segs[j]["duration"], 2),
-            "phrase": p.get("phrase", ""), "quote": quote,
+            "phrase": p.get("phrase", ""), "ipa": p.get("ipa", ""), "quote": quote,
             "meaning_vi": p.get("meaning_vi", ""), "usage_vi": p.get("usage_vi", ""),
             "example_en": p.get("example_en", ""), "example_vi": p.get("example_vi", ""),
         })
@@ -268,13 +269,44 @@ def needs_work(vid: str) -> bool:
     return not str(old.get("source", "")).startswith("youtube") or bool(old.get("error"))
 
 
+def video_ids() -> list:
+    """Video chọn tay trước, rồi video trong catalog xen kẽ giữa các hàng (mỗi hàng sớm có cụm từ)."""
+    ids = list(json.loads(LIST_FILE.read_text(encoding="utf-8")).get("videos", []))
+    cat = ROOT / "docs" / "video-data" / "catalog.json"
+    if cat.exists():
+        try:
+            rows = [r.get("items", []) for r in json.loads(cat.read_text(encoding="utf-8")).get("rows", [])]
+        except Exception:
+            rows = []
+        for i in range(max((len(r) for r in rows), default=0)):
+            for r in rows:
+                if i < len(r) and r[i]["id"] not in ids:
+                    ids.append(r[i]["id"])
+    return ids
+
+
+def write_index():
+    """docs/video-data/phrases/index.json: video nào đã có cụm từ, để trang hiện huy hiệu trên thẻ video."""
+    idx = {}
+    for f in sorted(OUT_DIR.glob("*.json")):
+        if f.name == "index.json":
+            continue
+        try:
+            d = json.loads(f.read_text(encoding="utf-8"))
+        except Exception:
+            continue
+        if d.get("phrases"):
+            idx[d.get("id", f.stem)] = {"n": len(d["phrases"]), "level": d.get("level", "")}
+    (OUT_DIR / "index.json").write_text(json.dumps(idx, ensure_ascii=False), encoding="utf-8")
+
+
 def main() -> int:
     key_ok = GEMINI_KEY if PROVIDER == "gemini" else CLAUDE_KEY
     if not key_ok:
         print(f"Thiếu khóa cho AI_PROVIDER={PROVIDER}. Hãy đặt GEMINI_API_KEY hoặc ANTHROPIC_API_KEY.")
         return 1
 
-    ids = json.loads(LIST_FILE.read_text(encoding="utf-8")).get("videos", [])
+    ids = video_ids()
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     todo = [v for v in ids if needs_work(v)]
     print(f"AI: {PROVIDER}. Có {len(ids)} video, cần soạn {len(todo)}, lần này tối đa {MAX_PER_RUN}.", flush=True)
@@ -308,6 +340,7 @@ def main() -> int:
         done += 1
         time.sleep(3)
 
+    write_index()
     print(f"Xong {done} video.")
     return 2 if blocked and done == 0 else 0
 
