@@ -8,15 +8,22 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&display=swap" rel="stylesheet">
 <script>
-/* Ngày 6:00–18:00 dùng giao diện khu vườn sáng, tối dùng trời sao. Thử: thêm ?theme=day hoặc ?theme=night */
-(function dayNight(){
-  const force = new URLSearchParams(location.search).get('theme');
-  const h = new Date().getHours();
-  const day = force ? force === 'day' : (h >= 6 && h < 18);
+/* Ngày 6:00–18:00 dùng giao diện khu vườn sáng, tối dùng trời sao (chế độ Tự động); có thể chọn cố định Sáng/Tối */
+/* Chế độ sáng/tối: 'auto' (theo giờ), 'day' hoặc 'night'. Lưu chung cho dashboard và trang video. */
+window.themePref = function(){
+  const q = new URLSearchParams(location.search).get('theme');
+  if (q === 'day' || q === 'night') return q;
+  try { const v = localStorage.getItem('tvv.theme'); if (v === 'day' || v === 'night') return v; } catch(e){}
+  return 'auto';
+};
+window.applyTheme = function(){
+  const pref = themePref(), h = new Date().getHours();
+  const day = pref === 'auto' ? (h >= 6 && h < 18) : pref === 'day';
   document.documentElement.classList.toggle('day', day);
   document.documentElement.classList.toggle('night', !day);
-  if (!force) setTimeout(dayNight, 60000);
-})();
+};
+window.setThemePref = function(v){ try { localStorage.setItem('tvv.theme', v); } catch(e){} applyTheme(); };
+applyTheme(); setInterval(applyTheme, 60000);
 </script>
 <style>
 :root{

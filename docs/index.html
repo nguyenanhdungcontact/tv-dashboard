@@ -8,15 +8,22 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <script>
-/* Ngày 6:00–18:00 dùng giao diện khu vườn sáng, tối dùng trời sao. Thử: thêm ?theme=day hoặc ?theme=night */
-(function dayNight(){
-  const force = new URLSearchParams(location.search).get('theme');
-  const h = new Date().getHours();
-  const day = force ? force === 'day' : (h >= 6 && h < 18);
+/* Ngày 6:00–18:00 dùng giao diện khu vườn sáng, tối dùng trời sao (chế độ Tự động); có thể chọn cố định Sáng/Tối */
+/* Chế độ sáng/tối: 'auto' (theo giờ), 'day' hoặc 'night'. Lưu chung cho dashboard và trang video. */
+window.themePref = function(){
+  const q = new URLSearchParams(location.search).get('theme');
+  if (q === 'day' || q === 'night') return q;
+  try { const v = localStorage.getItem('tvv.theme'); if (v === 'day' || v === 'night') return v; } catch(e){}
+  return 'auto';
+};
+window.applyTheme = function(){
+  const pref = themePref(), h = new Date().getHours();
+  const day = pref === 'auto' ? (h >= 6 && h < 18) : pref === 'day';
   document.documentElement.classList.toggle('day', day);
   document.documentElement.classList.toggle('night', !day);
-  if (!force) setTimeout(dayNight, 60000);
-})();
+};
+window.setThemePref = function(v){ try { localStorage.setItem('tvv.theme', v); } catch(e){} applyTheme(); };
+applyTheme(); setInterval(applyTheme, 60000);
 </script>
 <style>
   :root {
@@ -282,6 +289,14 @@
   button.ask { background: var(--cat); color: #141030; border-color: var(--cat); font-weight: 600; }
   button.ask[hidden] { display: none; }
 
+  #themeNote {
+    position: fixed; left: 66.666vw; top: 42%; transform: translate(-50%, -50%) scale(.96);
+    padding: 0.8em 1.6em; border-radius: 999px; z-index: 30; pointer-events: none;
+    background: var(--panel); border: 1px solid var(--panel-edge); color: var(--text);
+    font-family: "Bricolage Grotesque", "Segoe UI", Roboto, Arial, sans-serif; font-weight: 600;
+    font-size: clamp(1.1rem, 1.8vw, 1.9rem); opacity: 0; transition: opacity .3s ease, transform .3s ease;
+  }
+  #themeNote.show { opacity: 1; transform: translate(-50%, -50%) scale(1); }
   #paused {
     position: fixed; top: 50%; left: 66.666vw;
     transform: translate(-50%, -50%);
@@ -413,9 +428,12 @@
     <span><kbd>→</kbd>từ vựng</span>
     <span><kbd>← →</kbd>đổi từ</span>
     <span><kbd>Back</kbd>quay lại</span>
+    <span><kbd>←</kbd>sáng/tối</span>
   </div>
+  <button class="pill" id="themeBtn" type="button"></button>
   <button class="pill" id="editBtn" type="button">Sửa danh sách từ</button>
 </div>
+<div id="themeNote" aria-live="polite"></div>
 
 <div id="paused">Đang tạm dừng</div>
 
@@ -998,6 +1016,7 @@ Chỉ dựa trên thông tin ở trên và kiến thức chung. Không bịa th�
       if (k === "ArrowDown") { e.preventDefault(); showStory(idx + 1); holdUntil = performance.now() + 25000; }
       else if (k === "ArrowUp") { e.preventDefault(); showStory(idx - 1); holdUntil = performance.now() + 25000; }
       else if (k === "ArrowRight") { e.preventDefault(); enterVocab(); }
+      else if (k === "ArrowLeft") { e.preventDefault(); cycleTheme(); }
       else if (k === "Enter") {
         e.preventDefault();
         if (sample) askClaude();
@@ -1028,6 +1047,27 @@ Chỉ dựa trên thông tin ở trên và kiến thức chung. Không bịa th�
   }
   window.addEventListener("pointermove", wakeHud);
   window.addEventListener("keydown", (e) => { if (e.key === "ContextMenu" || e.key === "m" || e.key === "M") wakeHud(); });
+
+  /* =================== SÁNG / TỐI =================== */
+  const THEMES = ["auto", "day", "night"];
+  const THEME_LABEL = { auto: "◐ Tự động (sáng ban ngày, tối ban đêm)", day: "☀ Luôn sáng", night: "☾ Luôn tối" };
+  const THEME_BTN = { auto: "◐ Tự động", day: "☀ Sáng", night: "☾ Tối" };
+  const themeBtn = $("themeBtn"), themeNote = $("themeNote");
+  let themeNoteT;
+  function paintThemeBtn() { themeBtn.textContent = THEME_BTN[themePref()]; }
+  function cycleTheme() {
+    const next = THEMES[(THEMES.indexOf(themePref()) + 1) % THEMES.length];
+    if (new URLSearchParams(location.search).has("theme")) history.replaceState(null, "", location.pathname);
+    setThemePref(next);
+    paintThemeBtn();
+    themeNote.textContent = THEME_LABEL[next];
+    themeNote.classList.add("show");
+    clearTimeout(themeNoteT);
+    themeNoteT = setTimeout(() => themeNote.classList.remove("show"), 1800);
+    wakeHud();
+  }
+  themeBtn.addEventListener("click", cycleTheme);
+  paintThemeBtn();
 
   /* =================== WORD LIST EDITOR =================== */
   const txt = $("txt"), err = $("err");
