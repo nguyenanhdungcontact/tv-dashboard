@@ -91,8 +91,16 @@ main{padding:8px 0 40px}
 .stage{position:sticky;top:84px}
 .vbox{position:relative;aspect-ratio:16/9;border-radius:var(--r);overflow:hidden;background:#000;box-shadow:var(--shadow)}
 .vbox iframe,.vbox #yt{position:absolute;inset:0;width:100%;height:100%;border:0}
-.cap{min-height:58px;margin-top:12px;padding:10px 16px;border-radius:12px;background:var(--surface);border:1px solid var(--line);
-  font-size:19px;line-height:1.45;text-align:center;display:flex;align-items:center;justify-content:center}
+/* Kéo khung YouTube cao hơn rồi cắt trên/dưới: ẩn tiêu đề, nút, thanh thời gian của YouTube.
+   Hình vẫn đầy khung vì YouTube giữ tỉ lệ 16:9 ở giữa. Lớp .tap nhận chạm để phát/dừng. */
+#vbox #yt{top:-40%;bottom:auto;height:180%}
+.vbox .tap{position:absolute;inset:0;z-index:2;display:none}
+.vbox.started .tap{display:block}
+.vbox.started iframe{pointer-events:none}
+.side-tools{display:none}
+.detail > *{flex-shrink:0}
+.cap{margin-top:12px;padding:9px 14px;border-radius:12px;background:var(--surface);border:1px solid var(--line);
+  font-size:17px;line-height:1.4;text-align:center;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-height:44px}
 .cap:empty::before{content:"Phụ đề sẽ hiện ở đây";color:var(--ink3);font-size:15px}
 .cap mark,.quote mark{background:none;color:var(--warm);font-weight:700}
 .cap.off{display:none}
@@ -153,24 +161,42 @@ main{padding:8px 0 40px}
 /* iPad ngang (như TV): trái = video + phụ đề + nút + thẻ chi tiết; phải = danh sách cụm từ cuộn riêng */
 @media (min-width:901px) and (orientation:landscape){
   html,body{height:100%;overflow:hidden}
-  body.watching .top{position:relative}
-  .watch{height:calc(100dvh - 73px - env(safe-area-inset-top) - env(safe-area-inset-bottom));grid-template-columns:minmax(0,1fr) clamp(300px,31vw,380px);
+  body.watching .top{display:none}
+  body.watching .side-tools{display:flex;align-items:center;gap:8px;position:sticky;top:0;z-index:3;background:var(--bg);padding:2px 0 8px}
+  .side-tools .icon-btn{min-height:40px;min-width:40px;font-size:14px}
+  .side-tools .back{font-size:20px}
+  .st-title{flex:1;min-width:0;font-size:13px;color:var(--ink3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .watch{height:calc(100dvh - env(safe-area-inset-top) - env(safe-area-inset-bottom));grid-template-columns:minmax(0,1fr) clamp(300px,31vw,380px);
     gap:18px;padding:14px 18px 14px 20px;align-items:stretch}
   .stage{position:static;display:flex;flex-direction:column;min-height:0}
-  .vbox{flex:none;width:100%;max-height:52%;aspect-ratio:16/9;align-self:center}
-  .cap{flex:none;min-height:50px;margin-top:10px;font-size:18px;padding:8px 14px}
-  .ctrls{flex:none;margin-top:10px}
-  .ctrls button{min-height:44px}
+  .vbox{flex:none;width:100%;max-height:55%;aspect-ratio:16/9;align-self:center}
+  .cap{flex:none;min-height:38px;margin-top:8px;font-size:15px;padding:7px 12px}
+  .ctrls{flex:none;margin-top:8px;gap:6px}
+  .ctrls button{min-height:40px;font-size:14px;padding:0 13px}
+  .ctrls button.main{min-width:96px}
   #detail{flex:1;min-height:0;margin-top:10px;overflow:auto;-webkit-overflow-scrolling:touch;border-radius:var(--r)}
-  .detail{padding:14px 18px;box-shadow:none}
+  .detail{padding:12px 16px;box-shadow:none}
   .d-top{font-size:12px}
-  .d-row{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
-  .d-p{font-size:26px}
-  .d-ipa{margin-top:0}
+  .d-row{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+  .d-p{font-size:21px;margin-top:2px}
+  .d-ipa{margin-top:0;font-size:14px}
+  .d-m{font-size:15px;margin-top:3px}
+  .quote{font-size:14px;margin-top:8px;padding:7px 10px}
+  .d-u{font-size:13px;margin-top:7px}
+  .d-ex{font-size:13.5px;margin-top:7px}
+  .d-ex small{font-size:12.5px}
+  .d-act button{font-size:14px}
+  .sum{font-size:13px;margin:4px 2px 10px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+  .lhead{margin:4px 2px 6px}
+  .lhead h3{font-size:17px}
+  .ph{padding:9px 10px 9px 12px;margin-bottom:6px}
+  .ph .p{font-size:14.5px}
+  .ph .m{font-size:12.5px}
+  .ph .tm{font-size:12px}
   .detail{min-height:100%;display:flex;flex-direction:column}
   .d-act{grid-template-columns:repeat(3,auto);justify-content:start;margin-top:auto;padding-top:12px;
-    position:sticky;bottom:-14px;background:var(--surface);padding-bottom:14px;margin-bottom:-14px}
-  .d-act button{padding:0 18px;min-height:44px}
+    position:sticky;bottom:-12px;background:var(--surface);padding-bottom:12px;margin-bottom:-12px}
+  .d-act button{padding:0 16px;min-height:40px}
   .vtitle,.vsub{display:none}
   .side{overflow:auto;-webkit-overflow-scrolling:touch;min-height:0;padding-right:2px}
   .side .lhead{margin-top:2px}
@@ -211,7 +237,7 @@ main{padding:8px 0 40px}
 
 <section id="watch" class="watch hide">
   <div class="stage">
-    <div class="vbox"><div id="yt"></div></div>
+    <div class="vbox" id="vbox"><div id="yt"></div><button class="tap" id="tapLayer" aria-label="Phát / dừng"></button></div>
     <div class="cap" id="cap"></div>
     <div class="ctrls">
       <button id="bBack">⟲ 5s</button>
@@ -338,15 +364,21 @@ window.onYouTubeIframeAPIReady = () => { ytReady = true; if (pending){ const p =
 
 function makePlayer(id, t){
   if (player && player.loadVideoById){ player.loadVideoById({ videoId:id, startSeconds:t || 0 }); return; }
-  player = new YT.Player('yt', { videoId:id, playerVars:{ playsinline:1, rel:0, iv_load_policy:3, cc_load_policy:0, autoplay:1, start:Math.floor(t || 0), hl:'vi' },
-    events:{ onReady: e => { try { e.target.setPlaybackRate(S.speed); e.target.playVideo(); } catch(x){} }, onStateChange: paintPlay } });
+  player = new YT.Player('yt', { videoId:id, playerVars:{ playsinline:1, rel:0, iv_load_policy:3, cc_load_policy:0, controls:0, disablekb:1, fs:0, autoplay:1, start:Math.floor(t || 0), hl:'vi' },
+    events:{ onReady: e => { try { e.target.setPlaybackRate(S.speed); e.target.playVideo(); } catch(x){} },
+      onStateChange: e => { if (e.data === 1){ $('#vbox').classList.add('started'); ytCaptionsOff(); } paintPlay(); },
+      onApiChange: () => { try { player.unloadModule('captions'); player.unloadModule('cc'); } catch(x){} } } });   // chỉ dùng phụ đề của trang
 }
 const playing = () => { try { return player.getPlayerState() === YT.PlayerState.PLAYING; } catch(e){ return false; } };
 const now = () => { try { return player.getCurrentTime() || 0; } catch(e){ return 0; } };
+/* Tắt phụ đề của YouTube (dù tài khoản có bật), trang chỉ dùng dòng phụ đề riêng có tô từ */
+function ytCaptionsOff(){ try { player.setOption('captions','track',{}); player.unloadModule('captions'); player.unloadModule('cc'); } catch(e){} }
+$('#tapLayer').onclick = () => { if (!player || !player.getPlayerState) return; playing() ? player.pauseVideo() : player.playVideo(); setTimeout(paintPlay, 150); };
 function paintPlay(){ $('#bPlay').textContent = playing() ? '❚❚ Dừng' : '▶ Phát'; }
 
 async function openVideo(id, t = 0){
   const v = S.rows.flatMap(r => r.items).find(x => x.id === id) || { id, title:'', channel:'' };
+  $('#vbox').classList.remove('started');
   S.v = v; S.phr = null; S.cap = null; S.sel = 0; S.now = -1; S.capIdx = -1;
   $('#title').textContent = v.title || 'Video';
   $('#vTitle').textContent = v.title; $('#vSub').textContent = v.channel;
@@ -393,11 +425,12 @@ function renderDetail(){
 function renderList(){
   const el = $('#side'), d = S.phr;
   if (!d){
-    el.innerHTML = `<div class="empty">${S.v && S.index[S.v.id] ? 'Đang tải cụm từ…' : 'Video này chưa có cụm từ. Bạn vẫn xem bình thường; cụm từ sẽ có sau khi chạy <b>run_local.sh</b>.'}</div>`;
+    el.innerHTML = sideTools() + `<div class="empty">${S.v && S.index[S.v.id] ? 'Đang tải cụm từ…' : 'Video này chưa có cụm từ. Bạn vẫn xem bình thường; cụm từ sẽ có sau khi chạy <b>run_local.sh</b>.'}</div>`;
     return;
   }
   const keep = el.scrollTop;
   el.innerHTML = `
+    ${sideTools()}
     <div class="lhead"><h3>Cụm từ hay</h3>${d.level ? `<span class="lvl">${esc(d.level)}</span>` : ''}<span>${d.phrases.length} cụm · chạm để nghe</span></div>
     ${d.summary_vi ? `<p class="sum">${esc(d.summary_vi)}</p>` : ''}
     <div id="plist">${d.phrases.map((x, i) => `
@@ -407,6 +440,11 @@ function renderList(){
         <span class="tm">${fmt(x.t)}</span>
       </button>`).join('')}</div>`;
   el.scrollTop = keep;
+}
+function sideTools(){
+  return `<div class="side-tools"><button class="icon-btn back" data-tool="back" aria-label="Quay lại">←</button>
+    <span class="st-title">${esc(S.v ? S.v.title : '')}</span>
+    <button class="icon-btn" data-tool="theme">${THEME_BTN[themePref()]}</button></div>`;
 }
 /* Danh sách tự cuộn tới cụm đang chọn (khi không vừa chạm tay) */
 function followSel(){
@@ -430,6 +468,8 @@ $('#detail').addEventListener('click', e => {
   }
 });
 $('#side').addEventListener('click', e => {
+  const tool = e.target.closest('[data-tool]');
+  if (tool){ if (tool.dataset.tool === 'back') $('#backBtn').click(); else { $('#themeBtn').click(); renderList(); } return; }
   const row = e.target.closest('.ph'); if (!row || !S.phr) return;
   S.sel = +row.dataset.i; S.touchHold = Date.now() + 10000; playPhrase(S.sel); renderSide(); scrollDetailIntoView();
 });
@@ -482,7 +522,10 @@ setInterval(() => {
       S.capIdx = k;
       const seg = k >= 0 ? S.cap[k] : null;
       const ph = seg && S.phr && S.phr.phrases.find(p => Math.abs(p.t - seg[0]) < 0.05);
-      $('#cap').innerHTML = !seg ? '' : ph ? markQuote(seg[2], ph.phrase) : esc(seg[2]);
+      const c = $('#cap');
+      c.innerHTML = !seg ? '' : ph ? markQuote(seg[2], ph.phrase) : esc(seg[2]);
+      c.style.fontSize = '';
+      for (let f = parseFloat(getComputedStyle(c).fontSize); c.scrollWidth > c.clientWidth + 1 && f > 12; f -= 1) c.style.fontSize = f - 1 + 'px';
     }
   }
   if (S.phr && playing()){
