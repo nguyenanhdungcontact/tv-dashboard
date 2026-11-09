@@ -1,0 +1,143 @@
+{
+ "id": "h0VepbvDyV0",
+ "created": "2026-11-09",
+ "source": "youtube-auto",
+ "language": "en",
+ "ai": "gemini-3.6-flash",
+ "summary_vi": "Video chia sẻ góc nhìn chân thành về việc đối mặt với tâm lý lo âu trước sự phát triển thần tốc của công nghệ AI và biến động thế giới. Tác giả khuyến khích người xem chủ động chọn lựa góc nhìn tích cực, học cách dung hòa với sự thay đổi thay vì chìm đắm trong sự bi quan tồi tệ.",
+ "level": "C1",
+ "phrases": [
+  {
+   "t": 14.4,
+   "d": 5.84,
+   "phrase": "a never-ending stream of",
+   "ipa": "/ə ˌnevər ˈendɪŋ striːm əv/",
+   "quote": "there's a never-ending stream of",
+   "meaning_vi": "chuỗi liên tục không hồi kết",
+   "usage_vi": "Dùng khi mô tả một lượng lớn sự kiện, thông tin hoặc vấn đề dồn dập kéo đến không ngừng.",
+   "example_en": "Modern workers often face a never-ending stream of emails every morning.",
+   "example_vi": "Người làm việc thời nay thường phải đối mặt với một chuỗi email liên tục không hồi kết mỗi sáng."
+  },
+  {
+   "t": 65.92,
+   "d": 5.48,
+   "phrase": "and whatnot",
+   "ipa": "/ənd ˈwʌtˌnɑːt/",
+   "quote": "it in different industries and whatnot,",
+   "meaning_vi": "và những thứ tương tự",
+   "usage_vi": "Dùng ở cuối câu trong giao tiếp tự nhiên để liệt kê nhanh những thứ cùng loại mà không cần kể chi tiết.",
+   "example_en": "The store sells office supplies like pens, notebooks, sticky notes, and whatnot.",
+   "example_vi": "Cửa hàng bán các văn phòng phẩm như bút, sổ tay, giấy ghi chú và những thứ tương tự."
+  },
+  {
+   "t": 178.44,
+   "d": 3.96,
+   "phrase": "worry spiral",
+   "ipa": "/ˈwɜːri ˈspaɪrəl/",
+   "quote": "that that worry spiral,",
+   "meaning_vi": "vòng xoáy lo âu",
+   "usage_vi": "Dùng để mô tả trạng thái suy nghĩ tiêu cực nối tiếp suy nghĩ tiêu cực khác khiến tâm trí bị ám ảnh.",
+   "example_en": "Practicing mindfulness helps me break free from a worry spiral before an exam.",
+   "example_vi": "Luyện tập chánh niệm giúp tôi thoát khỏi vòng xoáy lo âu trước mỗi kỳ thi."
+  },
+  {
+   "t": 182.4,
+   "d": 2.88,
+   "phrase": "doom and gloom",
+   "ipa": "/duːm ənd ɡluːm/",
+   "quote": "want to do the doom and gloom thing.",
+   "meaning_vi": "sự bi quan, không khí ảm đạm",
+   "usage_vi": "Dùng khi nói về góc nhìn hoặc tin tức luôn dự đoán tương lai u tối và tồi tệ.",
+   "example_en": "Despite all the doom and gloom in the news, the local economy shows signs of recovery.",
+   "example_vi": "Dù tin tức tràn ngập sự bi quan, nền kinh tế địa phương vẫn có dấu hiệu phục hồi."
+  },
+  {
+   "t": 195.16,
+   "d": 4.32,
+   "phrase": "indulge in",
+   "ipa": "/ɪnˈdʌldʒ ɪn/",
+   "quote": "indulging",
+   "meaning_vi": "chìm đắm vào, nuông chiều bản thân",
+   "usage_vi": "Dùng khi cho phép bản thân làm điều gì đó ưa thích hoặc bị cuốn vào một trạng thái cảm xúc.",
+   "example_en": "On weekends, I like to indulge in reading novels for hours.",
+   "example_vi": "Vào cuối tuần, tôi thích chìm đắm trong việc đọc tiểu thuyết suốt nhiều giờ liền."
+  },
+  {
+   "t": 367.04,
+   "d": 5.48,
+   "phrase": "have a sneaking suspicion",
+   "ipa": "/hæv ə ˈsniːkɪŋ səˈspɪʃn̩/",
+   "quote": "But I have this sneaking suspicion",
+   "meaning_vi": "có linh cảm mơ hồ",
+   "usage_vi": "Dùng khi bạn cảm thấy một điều gì đó đúng dù chưa có bằng chứng rõ ràng (rất ghi điểm trong IELTS Speaking Part 3).",
+   "example_en": "I have a sneaking suspicion that artificial intelligence will fundamentally change education.",
+   "example_vi": "Tôi có một linh cảm mơ hồ rằng trí tuệ nhân tạo sẽ thay đổi căn bản ngành giáo dục."
+  },
+  {
+   "t": 393.96,
+   "d": 7.84,
+   "phrase": "yearn for",
+   "ipa": "/jɜːrn fɔːr/",
+   "quote": "things that we all deep down yearn for.\"",
+   "meaning_vi": "khao khát, mong mỏi",
+   "usage_vi": "Dùng khi muốn diễn tả sự khao khát sâu sắc về một điều gì đó thiêng liêng hoặc xa vời.",
+   "example_en": "Many people living in busy cities yearn for a peaceful life in the countryside.",
+   "example_vi": "Nhiều người sống ở thành phố bận rộn luôn khao khát một cuộc sống bình yên nơi vùng quê."
+  },
+  {
+   "t": 442.48,
+   "d": 2.56,
+   "phrase": "keep something at arm's length",
+   "ipa": "/kiːp ˈsʌmθɪŋ æt ɑːrmz leŋkθ/",
+   "quote": "It's almost like you're trying to keep it at arm's length. It's It's a very",
+   "meaning_vi": "giữ khoảng cách, tránh tiếp xúc quá gần",
+   "usage_vi": "Dùng khi muốn giữ khoảng cách về cảm xúc hoặc mối quan hệ để bảo vệ bản thân.",
+   "example_en": "He prefers to keep negative emotions at arm's length to focus on his career.",
+   "example_vi": "Anh ấy ưu tiên giữ khoảng cách với những cảm xúc tiêu cực để tập trung vào sự nghiệp."
+  },
+  {
+   "t": 558.6,
+   "d": 3.88,
+   "phrase": "bum out",
+   "ipa": "/bʌm aʊt/",
+   "quote": "that stuff if especially if it's bumming you out and try learning something new.",
+   "meaning_vi": "làm ai đó buồn chán, nản lòng",
+   "usage_vi": "Cụm động từ thân mật dùng khi một sự việc khiến ai đó cảm thấy tụt năng lượng hoặc mất hứng.",
+   "example_en": "Rainy weather always bums me out when I plan to go hiking.",
+   "example_vi": "Thời tiết mưa gió luôn làm tôi nản lòng mỗi khi có kế hoạch đi leo núi."
+  },
+  {
+   "t": 794.24,
+   "d": 6.28,
+   "phrase": "reconcile with",
+   "ipa": "/ˈrekənsaɪl wɪð/",
+   "quote": "And we're being forced to reconcile with",
+   "meaning_vi": "dung hòa, chấp nhận sự thật",
+   "usage_vi": "Dùng khi phải tìm cách chấp nhận một thực tế khó khăn hoặc một quan điểm trái ngược.",
+   "example_en": "It took her months to reconcile with the fact that her company was closing down.",
+   "example_vi": "Cô ấy mất nhiều tháng để chấp nhận thực tế rằng công ty của mình sắp đóng cửa."
+  },
+  {
+   "t": 835.84,
+   "d": 5.64,
+   "phrase": "liberating",
+   "ipa": "/ˈlɪbəreɪtɪŋ/",
+   "quote": "liberating and challenging truths about",
+   "meaning_vi": "mang lại cảm giác tự do, giải thoát",
+   "usage_vi": "Tính từ C1 dùng để mô tả cảm giác trút bỏ được gánh nặng hoặc tư duy gò bó.",
+   "example_en": "Leaving a toxic working environment was a truly liberating experience for him.",
+   "example_vi": "Rời bỏ một môi trường làm việc độc hại là một trải nghiệm thực sự mang lại sự tự do cho anh ấy."
+  },
+  {
+   "t": 873.12,
+   "d": 6.28,
+   "phrase": "flow with things",
+   "ipa": "/floʊ wɪð θɪŋz/",
+   "quote": "Can I flow with things? Can I sink a",
+   "meaning_vi": "nương theo hoàn cảnh, linh hoạt thích ứng",
+   "usage_vi": "Dùng khi chấp nhận những thay đổi tự nhiên mà không cố gắng kiểm soát gượng ép.",
+   "example_en": "Instead of worrying about unexpected changes, it is better to just flow with things.",
+   "example_vi": "Thay vì lo lắng về những thay đổi bất ngờ, tốt hơn là hãy cứ nương theo hoàn cảnh."
+  }
+ ]
+}

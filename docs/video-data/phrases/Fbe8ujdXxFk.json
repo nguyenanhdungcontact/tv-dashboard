@@ -1,0 +1,121 @@
+{
+ "id": "Fbe8ujdXxFk",
+ "created": "2026-11-09",
+ "source": "youtube-manual",
+ "language": "en",
+ "ai": "gemini-3.6-flash",
+ "summary_vi": "Video chia sẻ những đánh giá đầu tiên về chiếc MacBook Pro mới sở hữu màn hình OLED cảm ứng, thiết kế nhẹ hơn đáng kể và logo phát sáng trở lại. Dù rất ấn tượng với trải nghiệm thực tế và hiệu năng của máy, tác giả cho rằng mức giá cao là rào cản lớn nhất đối với người dùng.",
+ "level": "C1",
+ "phrases": [
+  {
+   "t": 40.08,
+   "d": 5.84,
+   "phrase": "right off the bat",
+   "ipa": "/raɪt ɑːf ðə bæt/",
+   "quote": "This is the first Mac with a touch screen kind of a big deal but i'm just gonna say right off the bat",
+   "meaning_vi": "ngay lập tức, ngay từ đầu",
+   "usage_vi": "Dùng trong văn nói tự nhiên khi muốn nêu thẳng quan điểm hoặc sự thật ngay từ đầu bài nói.",
+   "example_en": "Right off the bat, I knew this project was going to be a huge challenge for our team.",
+   "example_vi": "Ngay từ đầu, tôi đã biết dự án này sẽ là một thử thách rất lớn cho đội của chúng tôi."
+  },
+  {
+   "t": 82.4,
+   "d": 3.44,
+   "phrase": "put into context",
+   "ipa": "/pʊt ˈɪntə ˈkɑːntekst/",
+   "quote": "But I want to put that clip and this device into context.",
+   "meaning_vi": "đặt vào bối cảnh cụ thể",
+   "usage_vi": "Dùng khi muốn giải thích một thông tin hoặc phát biểu dựa trên hoàn cảnh xung quanh để hiểu đúng bản chất.",
+   "example_en": "To truly evaluate these statistics, we need to put them into context of the post-pandemic economy.",
+   "example_vi": "Để đánh giá đúng những số liệu thống kê này, chúng ta cần đặt chúng vào bối cảnh của nền kinh tế sau đại dịch."
+  },
+  {
+   "t": 387.52,
+   "d": 4.64,
+   "phrase": "follow up on",
+   "ipa": "/ˈfɑːloʊ ʌp ɑːn/",
+   "quote": "whole life of the machine, that's something that long-term reviews will have to follow up on.",
+   "meaning_vi": "theo dõi tiếp, kiểm tra lại sau",
+   "usage_vi": "Dùng trong công việc hoặc đời sống khi muốn tiếp tục kiểm tra hoặc xử lý một vấn đề đã bắt đầu từ trước.",
+   "example_en": "I will send an email to follow up on our discussion from last week's meeting.",
+   "example_vi": "Tôi sẽ gửi email để theo dõi tiếp nội dung thảo luận từ cuộc họp tuần trước."
+  },
+  {
+   "t": 469.68,
+   "d": 6.4,
+   "phrase": "take it up a notch",
+   "ipa": "/teɪk ɪt ʌp ə nɑːtʃ/",
+   "quote": "It's also in the M5 iPad Pro, which is two OLED screens smacked together. And they took it up a notch.",
+   "meaning_vi": "nâng lên một tầm cao mới, tăng mức độ",
+   "usage_vi": "Cụm thành ngữ tuyệt vời cho IELTS Speaking để diễn tả việc cải tiến, tăng cường độ hoặc làm cái gì đó xuất sắc hơn.",
+   "example_en": "The chef took traditional Vietnamese pho up a notch by adding truffle oil and wagyu beef.",
+   "example_vi": "Vị đầu bếp đã nâng tầm món phở truyền thống Việt Nam lên một tầm cao mới bằng cách thêm dầu nấm truffle và thịt bò wagyu."
+  },
+  {
+   "t": 650.72,
+   "d": 6.4,
+   "phrase": "lean into",
+   "ipa": "/liːn ˈɪntə/",
+   "quote": "completely black so it would hide the notch. This I actually don't mind. In fact, I'm kind of leaning into it.",
+   "meaning_vi": "chủ động đón nhận, tận dụng điều gì đó",
+   "usage_vi": "Dùng khi nói về việc không né tránh mà tận dụng một tính năng, đặc điểm hoặc tình huống để biến nó thành lợi thế.",
+   "example_en": "Instead of hiding her unique accent, she leaned into it and made it her personal branding.",
+   "example_vi": "Thay vì giấu đi chất giọng lạ của mình, cô ấy đã chủ động đón nhận nó và biến nó thành thương hiệu cá nhân."
+  },
+  {
+   "t": 669.12,
+   "d": 7.2,
+   "phrase": "sleeper hit",
+   "ipa": "/ˈsliːpər hɪt/",
+   "quote": "I think this is actually, the sleeper hit of these MacBooks that just something everyone can appreciate.",
+   "meaning_vi": "thành công bất ngờ ngoài dự đoán",
+   "usage_vi": "Dùng để chỉ sản phẩm, tác phẩm nghệ thuật hoặc tính năng ban đầu không được chú ý nhưng sau đó lại cực kỳ thành công.",
+   "example_en": "The low-budget indie film turned out to be a sleeper hit at the box office this summer.",
+   "example_vi": "Bộ phim độc lập kinh phí thấp đã trở thành một thành công bất ngờ tại phòng vé mùa hè này."
+  },
+  {
+   "t": 801.04,
+   "d": 4.72,
+   "phrase": "out of one's price range",
+   "ipa": "/aʊt əv wʌnz praɪs reɪndʒ/",
+   "quote": "I am that's way out of my price range, but hey, if you need it, it's there.",
+   "meaning_vi": "vượt quá khả năng tài chính",
+   "usage_vi": "Cụm từ tự nhiên rất hay dùng trong chủ đề mua sắm, công nghệ, nhà ở trong IELTS Speaking.",
+   "example_en": "Buying an apartment in the city center is currently out of our price range.",
+   "example_vi": "Việc mua một căn hộ ở trung tâm thành phố hiện vượt quá khả năng tài chính của chúng tôi."
+  },
+  {
+   "t": 828.64,
+   "d": 4.4,
+   "phrase": "suffice it to say",
+   "ipa": "/səˈfaɪs ɪt tə seɪ/",
+   "quote": "But suffice to say, I'm very impressed with the performance of this machine.",
+   "meaning_vi": "chỉ cần nói là, tóm lại là",
+   "usage_vi": "Cụm từ liên kết nâng cao (C1-C2) dùng để tóm gọn một kết luận mà không cần trình bày dài dòng thêm.",
+   "example_en": "Suffice it to say, the new marketing strategy completely transformed our sales numbers.",
+   "example_vi": "Chỉ cần nói là chiến lược marketing mới đã thay đổi hoàn toàn doanh số của chúng tôi."
+  },
+  {
+   "t": 917.92,
+   "d": 5.36,
+   "phrase": "yellow flag",
+   "ipa": "/ˈjeloʊ flæɡ/",
+   "quote": "but it's one of those things that I it's kind of it's it's a yellow flag for me.",
+   "meaning_vi": "dấu hiệu cảnh báo nhẹ, cần chú ý",
+   "usage_vi": "Dùng để nói về một điểm nghi vấn hay rủi ro tiềm ẩn cần theo dõi thêm (chưa đến mức nguy hiểm như red flag).",
+   "example_en": "His lack of punctuality during the interview was a yellow flag for the hiring manager.",
+   "example_vi": "Việc anh ấy thiếu đúng giờ trong buổi phỏng vấn là một dấu hiệu cảnh báo nhẹ đối với quản lý tuyển dụng."
+  },
+  {
+   "t": 1049.04,
+   "d": 2.4,
+   "phrase": "be no exception",
+   "ipa": "/bi noʊ ɪkˈsepʃn/",
+   "quote": "and the MacBook Pro is no exception.",
+   "meaning_vi": "không phải là ngoại lệ",
+   "usage_vi": "Cụm cấu trúc cực kỳ hữu ích cho IELTS Writing Task 2 và Speaking khi muốn đưa ra ví dụ hoặc minh họa cho một quy luật chung.",
+   "example_en": "Most tech companies faced severe layoffs last year, and giant firms were no exception.",
+   "example_vi": "Hầu hết các công ty công nghệ đều đối mặt với làn sóng sa thải nghiêm trọng vào năm ngoái, và các tập đoàn lớn cũng không ngoại lệ."
+  }
+ ]
+}

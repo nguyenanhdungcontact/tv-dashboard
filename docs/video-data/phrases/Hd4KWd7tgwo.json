@@ -1,0 +1,143 @@
+{
+ "id": "Hd4KWd7tgwo",
+ "created": "2026-11-09",
+ "source": "youtube-auto",
+ "language": "en",
+ "ai": "gemini-3.6-flash",
+ "summary_vi": "Tác giả chia sẻ về cuốn sách triết học mới sắp xuất bản của mình, tập trung vào việc khôi phục giá trị của sự suy ngẫm và thưởng thức tri thức cho chính nó. Anh cũng giải thích quy trình xuất bản, tầm quan trọng của việc đặt trước sách và những cảm xúc chân thành trong suốt 2 năm viết tác phẩm.",
+ "level": "B2",
+ "phrases": [
+  {
+   "t": 8.08,
+   "d": 3.6,
+   "phrase": "come out",
+   "ipa": "/kʌm aʊt/",
+   "quote": "it is going to come out. It's going to",
+   "meaning_vi": "ra mắt, xuất bản",
+   "usage_vi": "Dùng khi nói về một cuốn sách, bộ phim hoặc sản phẩm vừa được phát hành chính thức.",
+   "example_en": "Her new novel is scheduled to come out early next month.",
+   "example_vi": "Cuốn tiểu thuyết mới của cô ấy dự kiến sẽ ra mắt vào đầu tháng sau."
+  },
+  {
+   "t": 54.32,
+   "d": 3.32,
+   "phrase": "negative connotation",
+   "ipa": "/ˈnɛɡətɪv ˌkɑːnəˈteɪʃən/",
+   "quote": "doesn't have the negative connotation in",
+   "meaning_vi": "sắc thái nghĩa tiêu cực",
+   "usage_vi": "Rất hữu ích cho IELTS Speaking/Writing khi phân tích ý nghĩa từ ngữ hoặc thái độ.",
+   "example_en": "The word 'cheap' often carries a negative connotation compared to 'affordable'.",
+   "example_vi": "Từ 'cheap' thường mang sắc thái nghĩa tiêu cực so với từ 'affordable'."
+  },
+  {
+   "t": 84.84,
+   "d": 3.8,
+   "phrase": "make a distinction between",
+   "ipa": "/meɪk ə dɪˈstɪŋkʃən bɪˈtwiːn/",
+   "quote": "can look like. Eventually, we would make a distinction between something called",
+   "meaning_vi": "phân biệt giữa hai điều",
+   "usage_vi": "Dùng trong văn viết hoặc thảo luận trang trọng để chỉ rõ sự khác biệt giữa hai khái niệm.",
+   "example_en": "It is important to make a distinction between short-term success and long-term viability.",
+   "example_vi": "Điều quan trọng là phải phân biệt giữa thành công ngắn hạn và khả năng duy trì lâu dài."
+  },
+  {
+   "t": 161.8,
+   "d": 3.6,
+   "phrase": "for its own sake",
+   "ipa": "/fɔːr ɪts oʊn seɪk/",
+   "quote": "It is about enjoying ideas for their own sake,",
+   "meaning_vi": "vì chính bản thân nó",
+   "usage_vi": "Dùng khi diễn tả việc làm điều gì đó chỉ vì niềm vui nội tại chứ không nhằm mục đích vụ lợi.",
+   "example_en": "He enjoys learning languages for its own sake rather than for career advancement.",
+   "example_vi": "Anh ấy thích học ngôn ngữ vì chính niềm vui của nó thay vì để thăng tiến sự nghiệp."
+  },
+  {
+   "t": 235.0,
+   "d": 3.44,
+   "phrase": "make an inference",
+   "ipa": "/meɪk æn ˈɪnfərəns/",
+   "quote": "make some inferences. They take a guess,",
+   "meaning_vi": "rút ra suy luận",
+   "usage_vi": "Dùng khi nói về việc suy đoán hoặc đưa ra kết luận dựa trên dữ liệu/bằng chứng có sẵn.",
+   "example_en": "Researchers can make inferences about customer preferences from their browsing history.",
+   "example_vi": "Các nhà nghiên cứu có thể rút ra suy luận về sở thích khách hàng từ lịch sử truy cập của họ."
+  },
+  {
+   "t": 262.84,
+   "d": 2.6,
+   "phrase": "let someone in on a secret",
+   "ipa": "/lɛt ˈsʌmwʌn ɪn ɑːn ə ˈsiːkrət/",
+   "quote": "I'm going to let you in on a little bit of a secret here.",
+   "meaning_vi": "bật mí bí mật cho ai đó",
+   "usage_vi": "Dùng trong giao tiếp tự nhiên để bắt đầu chia sẻ một tin tức nội bộ hoặc bí mật nhỏ.",
+   "example_en": "If you keep this to yourself, I'll let you in on a secret about the upcoming project.",
+   "example_vi": "Nếu bạn giữ kín chuyện này, tôi sẽ bật mí cho bạn một bí mật về dự án sắp tới."
+  },
+  {
+   "t": 366.28,
+   "d": 2.96,
+   "phrase": "unequivocally",
+   "ipa": "/ˌʌnɪˈkwɪvəkli/",
+   "quote": "unequivocally every single word in this",
+   "meaning_vi": "dứt khoát, một cách rõ ràng không thể chối cãi",
+   "usage_vi": "Từ vựng C1/C2 thích hợp để nâng điểm Lexical Resource trong IELTS khi cần khẳng định mạnh mẽ.",
+   "example_en": "The CEO unequivocally denied all allegations of fraud during the press conference.",
+   "example_vi": "Giám đốc điều hành đã kiên quyết phủ nhận mọi cáo buộc gian lận trong cuộc họp báo."
+  },
+  {
+   "t": 417.4,
+   "d": 3.72,
+   "phrase": "speak from the heart",
+   "ipa": "/spiːk frəm ðə hɑːrt/",
+   "quote": "speak from the heart a little bit.",
+   "meaning_vi": "nói từ đáy lòng, nói chân thành",
+   "usage_vi": "Thường dùng để chỉ việc phát biểu tự nhiên, bộc lộ cảm xúc thật mà không dựa vào kịch bản.",
+   "example_en": "Rather than reading from a script, she chose to speak from the heart about her journey.",
+   "example_vi": "Thay vì đọc theo kịch bản, cô ấy chọn nói từ đáy lòng về hành trình của mình."
+  },
+  {
+   "t": 711.04,
+   "d": 4.56,
+   "phrase": "get in the way of",
+   "ipa": "/ɡɛt ɪn ðə weɪ ʌv/",
+   "quote": "for reading, any of this stuff just gets in the way of of actually doing what",
+   "meaning_vi": "cản trở, cản đường",
+   "usage_vi": "Dùng khi nói về một yếu tố gây trở ngại cho mục tiêu hoặc quá trình thực hiện công việc.",
+   "example_en": "Don't let your fear of failure get in the way of pursuing your dreams.",
+   "example_vi": "Đừng để nỗi sợ thất bại cản trở bạn theo đuổi ước mơ."
+  },
+  {
+   "t": 777.2,
+   "d": 3.72,
+   "phrase": "come up with",
+   "ipa": "/kʌm ʌp wɪð/",
+   "quote": "come up with what they call comps.",
+   "meaning_vi": "nghĩ ra, nảy ra (ý tưởng/giải pháp)",
+   "usage_vi": "Cụm động từ rất tự nhiên và phổ biến trong cả giao tiếp đời sống lẫn môi trường làm việc.",
+   "example_en": "Our marketing team managed to come up with a brilliant campaign strategy.",
+   "example_vi": "Đội ngũ tiếp thị của chúng tôi đã nghĩ ra một chiến lược chiến dịch tuyệt vời."
+  },
+  {
+   "t": 801.52,
+   "d": 2.72,
+   "phrase": "wrap up",
+   "ipa": "/ræp ʌp/",
+   "quote": "should wrap up because I don't want to",
+   "meaning_vi": "kết thúc, tóm gọn lại",
+   "usage_vi": "Dùng khi muốn thông báo kết thúc cuộc họp, bài thuyết trình hoặc video.",
+   "example_en": "Let's wrap up today's meeting by assigning task deadlines for next week.",
+   "example_vi": "Hãy kết thúc cuộc họp hôm nay bằng cách phân công thời hạn công việc cho tuần tới."
+  },
+  {
+   "t": 824.8,
+   "d": 3.52,
+   "phrase": "as opposed to",
+   "ipa": "/æz əˈpoʊzd tuː/",
+   "quote": "opposed to saying how do we get this in",
+   "meaning_vi": "trái ngược với, thay vì",
+   "usage_vi": "Cụm từ nối cao cấp giúp đối chiếu hai sự vật/ý tưởng trong IELTS Writing và Speaking.",
+   "example_en": "The course focuses on practical hands-on experience, as opposed to pure theory.",
+   "example_vi": "Khóa học tập trung vào trải nghiệm thực hành thực tế, thay vì thuần lý thuyết."
+  }
+ ]
+}

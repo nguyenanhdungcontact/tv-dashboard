@@ -1,0 +1,132 @@
+{
+ "id": "0y9CyrU2o3M",
+ "created": "2026-11-09",
+ "source": "youtube-auto",
+ "language": "en",
+ "ai": "gemini-3.6-flash",
+ "summary_vi": "Video kể về hành trình YouTuber Matt D'Avella thuê một chuyên gia định hình phong cách cá nhân và đi săn đồ cũ để làm mới tủ đồ tối giản vốn đã trở nên nhàm chán của mình. Mục đích lớn nhất của anh là tạo sự bất ngờ và hâm nóng lại tình cảm với vợ sau nhiều năm bận rộn chăm sóc con nhỏ.",
+ "level": "B2",
+ "phrases": [
+  {
+   "t": 29.68,
+   "d": 2.24,
+   "phrase": "get it together",
+   "ipa": "/ɡɛt ɪt təˈɡɛðər/",
+   "quote": ">> You need to get it together. You're",
+   "meaning_vi": "xốc lại bản thân, chấn chỉnh lại lối sống",
+   "usage_vi": "Dùng trong giao tiếp thân mật khi khuyên ai đó nên ngừng lộn xộn, tổ chức lại cuộc sống hoặc cảm xúc của mình.",
+   "example_en": "You need to get it together if you want to pass the IELTS exam next month.",
+   "example_vi": "Cậu cần xốc lại bản thân nếu muốn vượt qua kỳ thi IELTS vào tháng tới."
+  },
+  {
+   "t": 30.84,
+   "d": 2.6,
+   "phrase": "pushing 40",
+   "ipa": "/ˈpʊʃɪŋ ˈfɔːrti/",
+   "quote": "pushing 40.",
+   "meaning_vi": "sắp sửa bước sang tuổi 40",
+   "usage_vi": "Cấu trúc 'pushing + [số tuổi]' dùng trong nói chuyện tự nhiên để chỉ ai đó sắp chạm mốc độ tuổi nào đó.",
+   "example_en": "He is pushing 40, but he still looks and acts like he is in his late twenties.",
+   "example_vi": "Anh ấy gần chạm ngưỡng 40 rồi nhưng trông và sống vẫn như thời U30."
+  },
+  {
+   "t": 61.08,
+   "d": 3.92,
+   "phrase": "sought-after",
+   "ipa": "/ˈsɔːt ˌæftər/",
+   "quote": "most sought-after stylists in Australia.",
+   "meaning_vi": "được săn đón, được ưa chuộng",
+   "usage_vi": "Tính từ ghép dùng trước danh từ để miêu tả người, dịch vụ hoặc sản phẩm có nhu cầu cao và được nhiều người tìm kiếm.",
+   "example_en": "High-end minimalist stylists are highly sought-after in major cities.",
+   "example_vi": "Các chuyên gia tạo mẫu tối giản cao cấp rất được săn đón ở các thành phố lớn."
+  },
+  {
+   "t": 69.76,
+   "d": 3.44,
+   "phrase": "push back against",
+   "ipa": "/pʊʃ bæk əˈɡɛnst/",
+   "quote": "approach is that she pushes back against",
+   "meaning_vi": "chống lại, phản đối một xu hướng hay ý kiến",
+   "usage_vi": "Phrasal verb nâng cao thích hợp cho IELTS Speaking Part 3 / Writing Task 2 khi thảo luận về trào lưu xã hội hoặc chính sách.",
+   "example_en": "Environmentalists are pushing back against the fast fashion industry.",
+   "example_vi": "Các nhà hoạt động môi trường đang phản đối ngành công nghiệp thời trang nhanh."
+  },
+  {
+   "t": 108.56,
+   "d": 3.6,
+   "phrase": "push out of one's comfort zone",
+   "ipa": "/pʊʃ aʊt əv wʌnz ˈkʌmfərt zoʊn/",
+   "quote": "how how how much can I push out of my comfort zone? I want to explore that",
+   "meaning_vi": "bước ra khỏi vùng an toàn",
+   "usage_vi": "Cụm từ rất phổ biến khi nói về sự phát triển cá nhân, thử thách bản thân với những trải nghiệm mới.",
+   "example_en": "Traveling alone really pushed me out of my comfort zone and taught me independence.",
+   "example_vi": "Đi du lịch một mình thực sự đã đẩy tôi ra khỏi vùng an toàn và dạy tôi tính tự lập."
+  },
+  {
+   "t": 225.28,
+   "d": 2.4,
+   "phrase": "repurpose",
+   "ipa": "/riːˈpɜːrpəs/",
+   "quote": "repurpose.",
+   "meaning_vi": "tái sử dụng vào mục đích khác",
+   "usage_vi": "Động từ C1 dùng nhiều trong chủ đề lối sống xanh, tái chế hoặc sáng tạo nội dung.",
+   "example_en": "They managed to repurpose old wooden crates into stylish bookshelves.",
+   "example_vi": "Họ đã tái sử dụng những thùng gỗ cũ thành kệ sách rất phong cách."
+  },
+  {
+   "t": 413.96,
+   "d": 4.56,
+   "phrase": "capsule wardrobe",
+   "ipa": "/ˈkæpsjuːl ˈwɔːrdroʊb/",
+   "quote": "of capsule wardrobe, they want minimal",
+   "meaning_vi": "tủ đồ tối giản (gồm các món đồ dễ phối)",
+   "usage_vi": "Thuật ngữ thời trang chỉ bộ sưu tập quần áo ít món nhưng chất lượng, dễ dàng kết hợp linh hoạt với nhau.",
+   "example_en": "Building a capsule wardrobe can save you a lot of time getting dressed every morning.",
+   "example_vi": "Xây dựng một tủ đồ tối giản có thể tiết kiệm cho bạn rất nhiều thời gian chọn đồ mỗi sáng."
+  },
+  {
+   "t": 527.16,
+   "d": 6.4,
+   "phrase": "a distant memory",
+   "ipa": "/ə ˈdɪstənt ˈmɛməri/",
+   "quote": "like a distant memory. Oh, it doesn't",
+   "meaning_vi": "ký ức xa xôi, điều thuộc về quá khứ xa xưa",
+   "usage_vi": "Collocation tuyệt vời trong IELTS Speaking Part 2 khi miêu tả về thời thơ ấu hoặc quá khứ.",
+   "example_en": "The days when we could sleep in until noon are now just a distant memory.",
+   "example_vi": "Những ngày chúng tôi có thể ngủ nướng đến tận trưa giờ chỉ còn là một ký ức xa xôi."
+  },
+  {
+   "t": 554.0,
+   "d": 5.64,
+   "phrase": "light the spark",
+   "ipa": "/laɪt ðə spɑːrk/",
+   "quote": "me trying to court Nat again. To light the spark, to reintroduce a bit of",
+   "meaning_vi": "nhen nhóm lại ngọn lửa (cảm xúc, cảm hứng)",
+   "usage_vi": "Ẩn dụ dùng khi muốn khơi gợi lại tình yêu, niềm đam mê hoặc cảm hứng làm việc đã phai nhạt.",
+   "example_en": "A surprise weekend trip helped light the spark in their relationship after years of routine.",
+   "example_vi": "Một chuyến đi cuối tuần bất ngờ đã giúp nhen nhóm lại ngọn lửa tình yêu của họ sau nhiều năm quen thuộc."
+  },
+  {
+   "t": 841.16,
+   "d": 3.96,
+   "phrase": "short king",
+   "ipa": "/ʃɔːrt kɪŋ/",
+   "quote": ">> A short king, thank you. It accentuates",
+   "meaning_vi": "anh chàng chiều cao khiêm tốn nhưng tự tin, cuốn hút",
+   "usage_vi": "Từ lóng hiện đại trên mạng xã hội dùng để khen ngợi và trân trọng nam giới có chiều cao dưới trung bình.",
+   "example_en": "He embraces his height and proudly calls himself a short king.",
+   "example_vi": "Anh ấy thoải mái với chiều cao của mình và tự hào nhận mình là một short king."
+  },
+  {
+   "t": 1085.4,
+   "d": 3.04,
+   "phrase": "third wheel",
+   "ipa": "/θɜːrd wiːl/",
+   "quote": ">> I FEEL LIKE A THIRD WHEEL.",
+   "meaning_vi": "người thừa (khi đi cùng một cặp đôi)",
+   "usage_vi": "Thành ngữ đời thường miêu tả cảm giác lạc lỏng của một cá nhân khi đi chung với hai người đang yêu nhau.",
+   "example_en": "I decided not to join their dinner because I didn't want to be a third wheel.",
+   "example_vi": "Tôi quyết định không tham gia bữa tối của họ vì không muốn làm người thừa."
+  }
+ ]
+}

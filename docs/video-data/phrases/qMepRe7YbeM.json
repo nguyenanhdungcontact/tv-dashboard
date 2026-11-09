@@ -1,0 +1,143 @@
+{
+ "id": "qMepRe7YbeM",
+ "created": "2026-11-09",
+ "source": "youtube-manual",
+ "language": "en",
+ "ai": "gemini-3.6-flash",
+ "summary_vi": "Video đánh giá chi tiết dòng MacBook Pro màn hình cảm ứng OLED mới và chiếc iPad Mini 8 thế hệ mới của Apple. Thông qua các bài kiểm tra hiệu năng, thiết kế và trải nghiệm thực tế, video chỉ ra những nâng cấp đáng giá cũng như sự thiếu hụt đột phá lớn trong chiến lược sản phẩm hiện tại.",
+ "level": "C1",
+ "phrases": [
+  {
+   "t": 23.52,
+   "d": 1.87,
+   "phrase": "run out of ideas",
+   "ipa": "/rʌn aʊt ʌv aɪˈdiːəz/",
+   "quote": "Are they just ran out of ideas?",
+   "meaning_vi": "cạn kiệt ý tưởng",
+   "usage_vi": "Dùng khi diễn tả một cá nhân, đội ngũ hoặc công ty không còn suy nghĩ ra được giải pháp hay sáng kiến mới nào nữa.",
+   "example_en": "After hours of continuous brainstorming, the creative team completely ran out of ideas.",
+   "example_vi": "Sau nhiều giờ động não liên tục, đội ngũ sáng tạo đã hoàn toàn cạn kiệt ý tưởng."
+  },
+  {
+   "t": 126.46,
+   "d": 1.57,
+   "phrase": "controversial",
+   "ipa": "/ˌkɑːntrəˈvɜːrʃl/",
+   "quote": "This change has been pretty controversial",
+   "meaning_vi": "gây tranh cãi",
+   "usage_vi": "Dùng để miêu tả một quyết định, chính sách hoặc chủ đề tạo ra nhiều luồng ý kiến bất đồng mạnh mẽ (rất thích hợp cho IELTS Speaking & Writing Task 2).",
+   "example_en": "The government's new policy on remote work remains highly controversial among employees.",
+   "example_vi": "Chính sách mới của chính phủ về làm việc từ xa vẫn gây ra nhiều tranh cãi trong lực lượng lao động."
+  },
+  {
+   "t": 146.25,
+   "d": 1.64,
+   "phrase": "have a good point",
+   "ipa": "/hæv ə ɡʊd pɔɪnt/",
+   "quote": "he had a pretty good point",
+   "meaning_vi": "có lý, đưa ra quan điểm thuyết phục",
+   "usage_vi": "Dùng trong giao tiếp để thừa nhận lập luận của người đối thoại là hợp lý và đáng cân nhắc.",
+   "example_en": "You have a good point, but we still need to calculate the long-term financial risks.",
+   "example_vi": "Bạn nói rất có lý, nhưng chúng ta vẫn cần tính toán các rủi ro tài chính dài hạn."
+  },
+  {
+   "t": 167.63,
+   "d": 2.23,
+   "phrase": "get in the way",
+   "ipa": "/ɡet ɪn ðə weɪ/",
+   "quote": "which gets in the way and looks pretty awkward",
+   "meaning_vi": "cản trở, gây vướng víu",
+   "usage_vi": "Dùng khi nói về một chướng ngại vật hoặc thói quen làm ngắt quãng, ảnh hưởng xấu tới tiến trình của công việc.",
+   "example_en": "Fear of failure should never get in the way of pursuing your professional ambitions.",
+   "example_vi": "Nỗi sợ thất bại không bao giờ được phép cản trở bạn theo đuổi những hoài bão sự nghiệp."
+  },
+  {
+   "t": 234.03,
+   "d": 1.64,
+   "phrase": "intuitive",
+   "ipa": "/ɪnˈtuːɪtɪv/",
+   "quote": "\"Gestures on the screen feel as intuitive as",
+   "meaning_vi": "trực quan, dễ sử dụng theo bản năng",
+   "usage_vi": "Thường dùng để đánh giá thiết kế phần mềm, thiết bị công nghệ hoặc phương pháp đào tạo dễ hiểu mà không cần hướng dẫn phức tạp.",
+   "example_en": "The application has a remarkably intuitive interface that allows beginners to learn quickly.",
+   "example_vi": "Ứng dụng này có giao diện vô cùng trực quan giúp người mới bắt đầu có thể học sử dụng nhanh chóng."
+  },
+  {
+   "t": 318.42,
+   "d": 0.67,
+   "phrase": "come down to",
+   "ipa": "/kʌm daʊn tuː/",
+   "quote": "It comes down",
+   "meaning_vi": "chung quy lại là, cốt lõi phụ thuộc vào",
+   "usage_vi": "Dùng để tóm tắt nguyên nhân quan trọng nhất hoặc yếu tố quyết định của một vấn đề phức tạp.",
+   "example_en": "Mastering a foreign language ultimate comes down to daily practice and consistent effort.",
+   "example_vi": "Bản chất của việc thành thạo một ngoại ngữ chung quy lại là ở việc luyện tập hằng ngày và nỗ lực kiên trì."
+  },
+  {
+   "t": 577.94,
+   "d": 1.64,
+   "phrase": "fall far behind",
+   "ipa": "/fɔːl fɑːr bɪˈhaɪnd/",
+   "quote": "it still falls far behind",
+   "meaning_vi": "tụt hậu xa, bị bỏ lại phía sau",
+   "usage_vi": "Dùng trong so sánh khi một cá nhân, công ty hoặc sản phẩm không theo kịp trình độ hoặc hiệu suất của đối thủ.",
+   "example_en": "Companies that refuse to adopt modern AI technology will soon fall far behind their rivals.",
+   "example_vi": "Những công ty từ chối áp dụng công nghệ AI hiện đại sẽ sớm bị tụt hậu xa so với các đối thủ."
+  },
+  {
+   "t": 680.58,
+   "d": 2.5,
+   "phrase": "take or leave",
+   "ipa": "/teɪk ɔːr liːv/",
+   "quote": "is basically a free extra you can take or leave",
+   "meaning_vi": "có thì tốt không có cũng không sao",
+   "usage_vi": "Dùng để chỉ một tính năng bổ sung hoặc một yếu tố không quá quan trọng, người dùng nhận hay bỏ qua đều được.",
+   "example_en": "The extra camera filters are nice, but most casual users can take them or leave them.",
+   "example_vi": "Các bộ lọc máy ảnh bổ sung thì tốt đấy, nhưng hầu hết người dùng phổ thông có hay không cũng chẳng sao."
+  },
+  {
+   "t": 692.92,
+   "d": 1.7,
+   "phrase": "top-tier",
+   "ipa": "/tɑːp tɪr/",
+   "quote": "a top-tier productivity machine",
+   "meaning_vi": "hàng đầu, phân khúc cao cấp nhất",
+   "usage_vi": "Dùng để mô tả các sản phẩm, trường đại học, chuyên gia hoặc dịch vụ có chất lượng vượt trội nhất.",
+   "example_en": "Graduating from a top-tier university often provides candidates with a significant competitive advantage.",
+   "example_vi": "Tốt nghiệp từ một trường đại học hàng đầu thường mang lại cho ứng viên lợi thế cạnh tranh đáng kể."
+  },
+  {
+   "t": 850.52,
+   "d": 2.8,
+   "phrase": "standout feature",
+   "ipa": "/ˈstænd.aʊt ˈfiː.tʃər/",
+   "quote": "ProMotion is the Pro’s last standout screen feature",
+   "meaning_vi": "tính năng nổi bật nhất",
+   "usage_vi": "Dùng khi điểm qua ưu điểm vượt trội nhất của một sản phẩm, dự án hoặc dịch vụ so với phần còn lại.",
+   "example_en": "The active noise cancellation is undoubtedly the standout feature of these new headphones.",
+   "example_vi": "Tính năng chống ồn chủ động chắc chắn là điểm nổi bật nhất của chiếc tai nghe mới này."
+  },
+  {
+   "t": 973.07,
+   "d": 2.13,
+   "phrase": "bound to",
+   "ipa": "/baʊnd tuː/",
+   "quote": "That’s bound to leave people a little let down",
+   "meaning_vi": "chắc chắn sẽ xảy ra",
+   "usage_vi": "Dùng để đưa ra dự đoán về một kết quả gần như tất yếu theo quy luật logic (rất hữu ích trong IELTS Speaking Part 3).",
+   "example_en": "If you overwork without resting, you are bound to experience severe burnout eventually.",
+   "example_vi": "Nếu bạn làm việc quá sức mà không nghỉ ngơi, bạn chắc chắn sẽ bị kiệt sức nghiêm trọng cuối cùng."
+  },
+  {
+   "t": 979.54,
+   "d": 1.47,
+   "phrase": "go from zero to one",
+   "ipa": "/ɡoʊ frəm ˈzɪroʊ tuː wʌn/",
+   "quote": "Apple went from zero to one",
+   "meaning_vi": "sáng tạo ra cái mới hoàn toàn (từ không đến có)",
+   "usage_vi": "Thuật ngữ kinh doanh/công nghệ chỉ việc tạo ra một loại sản phẩm hoặc thị trường đột phá chưa từng tồn tại trước đó.",
+   "example_en": "True innovators are willing to risk failure in order to go from zero to one in their industry.",
+   "example_vi": "Những nhà đổi mới thực sự sẵn sàng mạo hiểm thất bại để tạo ra bước đột phá từ không đến có trong ngành của họ."
+  }
+ ]
+}

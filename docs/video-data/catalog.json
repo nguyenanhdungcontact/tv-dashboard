@@ -6,6 +6,14 @@
    "title": "Du lịch, văn hoá & kiến trúc",
    "items": [
     {
+     "id": "cZhn_FwFpnI",
+     "title": "Places That Exist Outside Their Own Governments",
+     "channel": "Geography Now",
+     "dur": "24:52",
+     "published": "2026-11-09",
+     "captions": "auto"
+    },
+    {
      "id": "zEgrugE_eq8",
      "title": "This US City May Need to be Completely Evacuated",
      "channel": "The B1M",
@@ -27,6 +35,14 @@
      "channel": "The B1M",
      "dur": "10:32",
      "published": "2026-10-30",
+     "captions": "manual"
+    },
+    {
+     "id": "Ws-YNxTdZJQ",
+     "title": "Turkey's $25BN Nuclear Megaproject Built By Russia",
+     "channel": "The B1M",
+     "dur": "14:06",
+     "published": "2026-10-26",
      "captions": "manual"
     },
     {
@@ -68,22 +84,6 @@
      "dur": "24:36",
      "published": "2026-09-19",
      "captions": "manual"
-    },
-    {
-     "id": "zbkq2na9fHY",
-     "title": "solo travel will change your life",
-     "channel": "Joshua Paine",
-     "dur": "21:53",
-     "published": "2026-09-07",
-     "captions": "auto"
-    },
-    {
-     "id": "DUMqxcXfeXs",
-     "title": "the art of being a beginner",
-     "channel": "Joshua Paine",
-     "dur": "20:32",
-     "published": "2026-08-09",
-     "captions": "auto"
     }
    ]
   },
@@ -91,6 +91,22 @@
    "key": "life",
    "title": "Vlog & sống chậm",
    "items": [
+    {
+     "id": "iMmhGfFiXEM",
+     "title": "i had a quarter life crisis and went freelance",
+     "channel": "tatsuki",
+     "dur": "20:51",
+     "published": "2026-11-08",
+     "captions": "auto"
+    },
+    {
+     "id": "0q50D19lHuQ",
+     "title": "How to learn creative writing and heal your brain rot",
+     "channel": "Josh Czuba",
+     "dur": "17:35",
+     "published": "2026-11-05",
+     "captions": "auto"
+    },
     {
      "id": "XrZ4Vozni3o",
      "title": "They sold us a lie (and it’s still working)",
@@ -100,11 +116,73 @@
      "captions": "auto"
     },
     {
+     "id": "h0VepbvDyV0",
+     "title": "no, I'm sorry, I refuse.",
+     "channel": "No Backup Plan – Nathaniel Drew",
+     "dur": "17:02",
+     "published": "2026-10-27",
+     "captions": "auto"
+    },
+    {
+     "id": "Hd4KWd7tgwo",
+     "title": "I wrote a book, and I can finally talk about it.",
+     "channel": "Jared Henderson",
+     "dur": "14:11",
+     "published": "2026-10-23",
+     "captions": "auto"
+    },
+    {
+     "id": "0y9CyrU2o3M",
+     "title": "A professional stylist rebuilt my minimalist wardrobe",
+     "channel": "Matt D'Avella",
+     "dur": "18:08",
+     "published": "2026-09-27",
+     "captions": "auto"
+    },
+    {
      "id": "hAQDznajvvc",
      "title": "I moved into a tiny flat (seriously).",
      "channel": "Nathaniel Drew",
      "dur": "13:33",
      "published": "2026-08-22",
+     "captions": "auto"
+    },
+    {
+     "id": "XVLNqM4-0-U",
+     "title": "I'm selling my house.",
+     "channel": "Nathaniel Drew",
+     "dur": "22:12",
+     "published": "2026-07-31",
+     "captions": "auto"
+    }
+   ]
+  },
+  {
+   "key": "tech",
+   "title": "Công nghệ, Apple & AI",
+   "items": [
+    {
+     "id": "Fbe8ujdXxFk",
+     "title": "I Can't Go Back to a MacBook Without Touch",
+     "channel": "Christopher Lawley",
+     "dur": "18:53",
+     "published": "2026-11-05",
+     "captions": "manual"
+    },
+    {
+     "id": "qMepRe7YbeM",
+     "title": "A Touchscreen… But Why? New MacBook Review",
+     "channel": "HTX Studio",
+     "dur": "17:11",
+     "published": "2026-11-05",
+     "captions": "manual"
+    },
+    {
+     "id": "2jF3i4fuznY",
+     "title": "iPhone Duo after a week.. one of us is returning it",
+     "channel": "Samuel Nam",
+     "dur": "16:42",
+     "published": "2026-11-03",
      "captions": "auto"
     }
    ]

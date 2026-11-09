@@ -1,0 +1,132 @@
+{
+ "id": "2jF3i4fuznY",
+ "created": "2026-11-09",
+ "source": "youtube-auto",
+ "language": "en",
+ "ai": "gemini-3.6-flash",
+ "summary_vi": "Video kể về trải nghiệm dùng thử chiếc điện thoại gập iPhone Duo của hai vợ chồng vlogger trong chuyến du lịch Thái Lan. Dù người vợ quyết định trả máy vì camera chưa đáp ứng kỳ vọng, người chồng lại bị thuyết phục bởi tính năng đa nhiệm, màn hình nhám và sự hỗ trợ của bút Apple Pencil.",
+ "level": "C1",
+ "phrases": [
+  {
+   "t": 64.72,
+   "d": 2.72,
+   "phrase": "miss out on",
+   "ipa": "/mɪs aʊt ɑːn/",
+   "quote": ">> You don't feel like you're missing out",
+   "meaning_vi": "bỏ lỡ cơ hội hoặc trải nghiệm thú vị",
+   "usage_vi": "Dùng khi nói về việc không kịp tham gia hoặc đánh mất lợi ích, trải nghiệm mà người khác có.",
+   "example_en": "If you don't book the tickets early, you might miss out on the best seats.",
+   "example_vi": "Nếu bạn không đặt vé sớm, bạn có thể sẽ bỏ lỡ những chỗ ngồi tốt nhất."
+  },
+  {
+   "t": 106.04,
+   "d": 4.12,
+   "phrase": "get told off",
+   "ipa": "/ɡɛt toʊld ɒf/",
+   "quote": "Husbands will now never get told off",
+   "meaning_vi": "bị mắng, bị quở trách",
+   "usage_vi": "Cụm từ thân mật, dùng trong đời sống hàng ngày khi ai đó bị người thân, sếp hoặc giáo viên la mắng.",
+   "example_en": "He got told off by his boss for being late to the morning meeting.",
+   "example_vi": "Anh ấy bị sếp mắng vì đi trễ cuộc họp buổi sáng."
+  },
+  {
+   "t": 171.61,
+   "d": 4.84,
+   "phrase": "at a glance",
+   "ipa": "/æt ə ɡlæns/",
+   "quote": "glance. Just brilliant. I sat there for",
+   "meaning_vi": "chỉ qua một ánh nhìn, ngay lập tức",
+   "usage_vi": "Dùng khi bạn có thể hiểu hoặc nắm bắt thông tin nhanh chóng mà không cần tốn nhiều thời gian đọc kỹ.",
+   "example_en": "The dashboard allows managers to check sales figures at a glance.",
+   "example_vi": "Bảng điều khiển cho phép các quản lý kiểm tra số liệu doanh số chỉ trong một ánh nhìn."
+  },
+  {
+   "t": 288.65,
+   "d": 3.8,
+   "phrase": "teething issues",
+   "ipa": "/ˈtiːðɪŋ ˈɪʃuːz/",
+   "quote": "had teething issues at launch, too. And",
+   "meaning_vi": "những khó khăn ban đầu (của dự án, sản phẩm mới)",
+   "usage_vi": "Thành ngữ rất hay dùng trong công việc và IELTS Speaking/Writing khi nói về trục trặc giai đoạn đầu phát triển.",
+   "example_en": "Every new software product goes through some teething issues in its first month.",
+   "example_vi": "Mọi sản phẩm phần mềm mới đều trải qua một số khó khăn ban đầu trong tháng đầu tiên."
+  },
+  {
+   "t": 310.13,
+   "d": 5.12,
+   "phrase": "slowly but surely",
+   "ipa": "/ˈsloʊli bʌt ˈʃʊrli/",
+   "quote": "should actually get AppleCare. Slowly but surely, the Duo was getting to me.",
+   "meaning_vi": "chậm mà chắc, từng bước một",
+   "usage_vi": "Dùng để diễn tả một quá trình tiến triển chậm rãi nhưng chắc chắn sẽ đạt được kết quả.",
+   "example_en": "Slowly but surely, her English fluency improved with daily practice.",
+   "example_vi": "Chậm mà chắc, khả năng nói tiếng Anh trôi chảy của cô ấy đã cải thiện nhờ luyện tập hàng ngày."
+  },
+  {
+   "t": 362.17,
+   "d": 6.44,
+   "phrase": "on paper",
+   "ipa": "/ɑːn ˈpeɪpər/",
+   "quote": "on paper 1,000% worse than any Android",
+   "meaning_vi": "trên lý thuyết, trên giấy tờ",
+   "usage_vi": "Dùng để đối lập giữa lý thuyết/kế hoạch ban đầu với thực tế trải nghiệm.",
+   "example_en": "On paper, the business strategy looked flawless, but the implementation was difficult.",
+   "example_vi": "Trên lý thuyết, chiến lược kinh doanh trông hoàn hảo, nhưng việc triển khai lại khó khăn."
+  },
+  {
+   "t": 594.7,
+   "d": 2.6,
+   "phrase": "a matter of time",
+   "ipa": "/ə ˈmætər əv taɪm/",
+   "quote": "screen at least. It's only a matter of time before all these apps get",
+   "meaning_vi": "chuyện sớm muộn, vấn đề thời gian",
+   "usage_vi": "Dùng khi chắc chắn điều gì đó sẽ xảy ra trong tương lai, chỉ là chưa biết thời điểm cụ thể.",
+   "example_en": "It is only a matter of time before electric vehicles replace traditional cars.",
+   "example_vi": "Chỉ là vấn đề thời gian trước khi xe điện thay thế xe hơi truyền thống."
+  },
+  {
+   "t": 615.54,
+   "d": 2.96,
+   "phrase": "in terms of",
+   "ipa": "/ɪn tɜːrmz əv/",
+   "quote": "fixed. In terms of the hardware, other",
+   "meaning_vi": "xét về mặt, về phương diện",
+   "usage_vi": "Cụm từ nối cực kỳ hữu ích trong IELTS để giới thiệu khía cạnh hoặc phạm vi đang bàn tới.",
+   "example_en": "In terms of career growth, working for an international company offers more options.",
+   "example_vi": "Xét về mặt phát triển sự nghiệp, làm việc cho công ty quốc tế mang lại nhiều lựa chọn hơn."
+  },
+  {
+   "t": 736.38,
+   "d": 5.16,
+   "phrase": "change the game",
+   "ipa": "/tʃeɪndʒ ðə ɡeɪm/",
+   "quote": ">> This actually changed the game. Because",
+   "meaning_vi": "tạo ra bước ngoặt, thay đổi cục diện",
+   "usage_vi": "Dùng khi một tính năng, sản phẩm hoặc sự kiện làm thay đổi hoàn toàn cách thức hoạt động của một lĩnh vực.",
+   "example_en": "The introduction of smartphones completely changed the game for online shopping.",
+   "example_vi": "Sự ra đời của điện thoại thông minh đã thay đổi hoàn toàn cục diện mua sắm trực tuyến."
+  },
+  {
+   "t": 874.5,
+   "d": 3.56,
+   "phrase": "peace of mind",
+   "ipa": "/piːs əv maɪnd/",
+   "quote": "having that peace of mind is nice if it",
+   "meaning_vi": "sự an tâm, thảnh thơi trong tâm trí",
+   "usage_vi": "Dùng khi nói về việc có được cảm giác an toàn, không phải lo lắng.",
+   "example_en": "Buying travel insurance gives us complete peace of mind during our overseas trips.",
+   "example_vi": "Mua bảo hiểm du lịch mang lại cho chúng tôi sự an tâm tuyệt đối trong các chuyến đi nước ngoài."
+  },
+  {
+   "t": 909.06,
+   "d": 3.16,
+   "phrase": "on the fence",
+   "ipa": "/ɑːn ðə fɛns/",
+   "quote": "fence, I reckon wait for the second",
+   "meaning_vi": "lưỡng lự, chưa quyết định",
+   "usage_vi": "Thành ngữ rất phổ biến trong giao tiếp và IELTS khi phân vân đứng giữa hai sự lựa chọn.",
+   "example_en": "I'm still on the fence about whether to buy a foldable phone or a regular tablet.",
+   "example_vi": "Tôi vẫn đang lưỡng lự chưa biết nên mua điện thoại gập hay một chiếc máy tính bảng thông thường."
+  }
+ ]
+}

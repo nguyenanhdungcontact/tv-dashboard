@@ -1,0 +1,143 @@
+{
+ "id": "cZhn_FwFpnI",
+ "created": "2026-11-09",
+ "source": "youtube-auto",
+ "language": "en",
+ "ai": "gemini-3.6-flash",
+ "summary_vi": "Video giải thích khái niệm về các khu vực kiểm soát thực tế (de facto run areas), tức những vùng đất nằm trong lãnh thổ của một quốc gia nhưng chính phủ không có hoặc có rất ít quyền kiểm soát. Tác giả điểm qua các vùng xung đột và khu vực tự trị tiêu biểu tại châu Mỹ, châu Âu, châu Phi, Trung Đông và châu Á dựa trên dữ liệu bản đồ cập nhật.",
+ "level": "C1",
+ "phrases": [
+  {
+   "t": 24.48,
+   "d": 3.6,
+   "phrase": "impetus",
+   "ipa": "/ˈɪmpətəs/",
+   "quote": "basically the impetus that started that",
+   "meaning_vi": "động lực, lực đẩy (thúc đẩy sự kiện xảy ra)",
+   "usage_vi": "Dùng trong IELTS Writing Task 2 hoặc Speaking Part 3 để nói về sự kiện châm ngòi hoặc động lực chính tạo nên sự thay đổi lớn.",
+   "example_en": "The financial crisis served as an impetus for major reforms in the banking sector.",
+   "example_vi": "Cuộc khủng hoảng tài chính đã đóng vai trò là động lực thúc đẩy những cải cách lớn trong ngành ngân hàng."
+  },
+  {
+   "t": 29.52,
+   "d": 4.0,
+   "phrase": "pertain to",
+   "ipa": "/pərˈteɪn tuː/",
+   "quote": "does pertain to something that's",
+   "meaning_vi": "liên quan đến, gắn liền với",
+   "usage_vi": "Cụm động từ trang trọng thay thế cho 'related to', rất thích hợp dùng trong bài viết và bài nói học thuật.",
+   "example_en": "These newly updated guidelines directly pertain to international students applying for visas.",
+   "example_vi": "Những hướng dẫn mới cập nhật này liên quan trực tiếp đến các sinh viên quốc tế đang xin thị thực."
+  },
+  {
+   "t": 48.4,
+   "d": 4.88,
+   "phrase": "jurisdiction",
+   "ipa": "/ˌdʒʊrɪsˈdɪkʃən/",
+   "quote": "either no or little jurisdiction or",
+   "meaning_vi": "quyền tài phán, phạm vi thẩm quyền pháp lý",
+   "usage_vi": "Danh từ chuyên ngành chính trị - pháp lý, dùng khi thảo luận về vùng hoặc lĩnh vực mà một cơ quan/chính phủ có thẩm quyền quản lý.",
+   "example_en": "The local police have no jurisdiction over crimes committed on federal land.",
+   "example_vi": "Cảnh sát địa phương không có thẩm quyền đối với các tội phạm xảy ra trên đất thuộc liên bang."
+  },
+  {
+   "t": 125.2,
+   "d": 2.88,
+   "phrase": "make a distinction",
+   "ipa": "/meɪk ə dɪˈstɪŋkʃən/",
+   "quote": "make a very clear distinction. Okay,",
+   "meaning_vi": "phân biệt rõ ràng, rạch ròi",
+   "usage_vi": "Cụm từ cố định đắt giá trong IELTS khi người nói/viết muốn rạch ròi giữa hai khái niệm dễ gây nhầm lẫn.",
+   "example_en": "It is important to make a distinction between short-term career goals and long-term ambition.",
+   "example_vi": "Việc phân biệt rõ ràng giữa mục tiêu sự nghiệp ngắn hạn và hoài hoài dài hạn là rất quan trọng."
+  },
+  {
+   "t": 160.0,
+   "d": 3.2,
+   "phrase": "reach out to",
+   "ipa": "/riːtʃ aʊt tuː/",
+   "quote": "inspired by it, I actually reached out",
+   "meaning_vi": "chủ động liên hệ, kết nối với ai",
+   "usage_vi": "Dùng phổ biến trong môi trường làm việc lẫn giao tiếp hàng ngày khi chủ động liên lạc để hợp tác, hỏi thông tin hoặc xin trợ giúp.",
+   "example_en": "Feel free to reach out to our customer support team if you encounter any technical issues.",
+   "example_vi": "Đừng ngần ngại liên hệ với đội ngũ hỗ trợ khách hàng của chúng tôi nếu bạn gặp bất kỳ sự cố kỹ thuật nào."
+  },
+  {
+   "t": 173.12,
+   "d": 2.56,
+   "phrase": "give someone a shout-out",
+   "ipa": "/ɡɪv ˈsʌmwʌn ə ˈʃaʊtaʊt/",
+   "quote": "give him a shout out. I would love to",
+   "meaning_vi": "gửi lời cảm ơn / vinh danh ai công khai",
+   "usage_vi": "Thành ngữ tự nhiên trong giao tiếp, thuyết trình hoặc sáng tạo nội dung khi muốn dành lời khen hay sự ghi nhận cho ai đó.",
+   "example_en": "Before starting the presentation, I would like to give a shout-out to my research team for their hard work.",
+   "example_vi": "Trước khi bắt đầu bài thuyết trình, tôi muốn gửi lời cảm ơn tới đội ngũ nghiên cứu của mình vì sự chăm chỉ của họ."
+  },
+  {
+   "t": 187.04,
+   "d": 6.96,
+   "phrase": "in real time",
+   "ipa": "/ɪn ˈriːəl taɪm/",
+   "quote": "page what they do is they in real time",
+   "meaning_vi": "theo thời gian thực, ngay lập tức",
+   "usage_vi": "Dùng khi nói về dữ liệu, thông tin hoặc công nghệ được cập nhật song song ngay tại thời điểm sự việc đang diễn ra.",
+   "example_en": "The app allows users to track traffic conditions in real time to avoid congestion.",
+   "example_vi": "Ứng dụng cho phép người dùng theo dõi tình trạng giao thông theo thời gian thực để tránh ùn tắc."
+  },
+  {
+   "t": 221.84,
+   "d": 3.68,
+   "phrase": "encroach upon",
+   "ipa": "/ɪnˈkroʊtʃ əˈpɑːn/",
+   "quote": "encroach upon land and gain more",
+   "meaning_vi": "lấn chiếm, xâm phạm (lãnh thổ, quyền lợi)",
+   "usage_vi": "Động từ C1 dùng để diễn tả việc một bên vượt quá ranh giới cho phép và xâm phạm vào đất đai hoặc không gian riêng tư của người khác.",
+   "example_en": "Urban expansion continues to encroach upon the natural habitats of endangered species.",
+   "example_vi": "Sự mở rộng đô thị tiếp tục xâm phạm vào môi trường sống tự nhiên của các loài có nguy cơ tuyệt chủng."
+  },
+  {
+   "t": 251.44,
+   "d": 3.04,
+   "phrase": "hone in on",
+   "ipa": "/hoʊn ɪn ɑːn/",
+   "quote": "them, I'm going to try to hone in with a",
+   "meaning_vi": "tập trung vào, nhắm trúng trọng tâm",
+   "usage_vi": "Dùng khi bạn thu hẹp phạm vi chú ý để tập trung giải quyết hoặc phân tích một điểm quan trọng nhất.",
+   "example_en": "The investigator managed to hone in on the key evidence that solved the mystery.",
+   "example_vi": "Nhà điều tra đã tập trung được vào bằng chứng then chốt giúp phá giải ẩn số."
+  },
+  {
+   "t": 300.16,
+   "d": 4.4,
+   "phrase": "exist alongside",
+   "ipa": "/ɪɡˈzɪst əˌlɔːŋˈsaɪd/",
+   "quote": "exists alongside government institutions",
+   "meaning_vi": "tồn tại song song, cùng hiện diện",
+   "usage_vi": "Collocation tự nhiên dùng khi thảo luận về sự chung sống của các hệ thống, nền văn hóa hoặc hiện tượng khác biệt.",
+   "example_en": "In modern cities, traditional heritage often exists alongside cutting-edge technology.",
+   "example_vi": "Tại các thành phố hiện đại, di sản truyền thống thường tồn tại song song với công nghệ tiên tiến."
+  },
+  {
+   "t": 1126.88,
+   "d": 5.28,
+   "phrase": "pledge allegiance to",
+   "ipa": "/pledʒ əˈliːdʒəns tuː/",
+   "quote": "pledged allegiance to ISIS in 2019. On",
+   "meaning_vi": "tuyên bố trung thành với",
+   "usage_vi": "Cụm từ trang trọng thuộc chủ đề lịch sử, chính trị hoặc tổ chức, thể hiện sự thề nguyện trung thành với một quốc gia hay lý tưởng.",
+   "example_en": "New citizens are required to pledge allegiance to the country during the official ceremony.",
+   "example_vi": "Các công dân mới phải tuyên bố trung thành với quốc gia trong buổi lễ chính thức."
+  },
+  {
+   "t": 1462.48,
+   "d": 3.68,
+   "phrase": "in the blink of an eye",
+   "ipa": "/ɪn ðə blɪŋk əv ən aɪ/",
+   "quote": "change within a blink of an eye because",
+   "meaning_vi": "trong chớp mắt, rất nhanh chóng",
+   "usage_vi": "Thành ngữ sinh động rất hay dùng trong IELTS Speaking để diễn tả sự thay đổi cực kỳ nhanh chóng của hoàn cảnh hay cuộc sống.",
+   "example_en": "Technological advancements have changed the way we communicate in the blink of an eye.",
+   "example_vi": "Những tiến bộ công nghệ đã thay đổi cách chúng ta giao tiếp chỉ trong chớp mắt."
+  }
+ ]
+}
