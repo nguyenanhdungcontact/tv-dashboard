@@ -739,15 +739,28 @@ Chỉ dựa trên thông tin ở trên và kiến thức chung. Không bịa th�
   const hud = $("hud");
   const card = $("card");
 
+  /* Từ lưu từ trang video (★ trong chế độ học). Cùng địa chỉ trang nên dùng chung localStorage trên TV */
+  const SAVED_KEY = "meteor-saved-v1";
+  function savedWords() {
+    try {
+      const lst = JSON.parse(localStorage.getItem(SAVED_KEY) || "[]");
+      return Array.isArray(lst) ? lst.filter(o => o && o.w) : [];
+    } catch (e) { return []; }
+  }
+  function withSaved(base) {
+    const saved = savedWords();
+    const have = new Set(saved.map(o => o.w.toLowerCase()));
+    return saved.concat(base.filter(o => o && o.w && !have.has(String(o.w).toLowerCase())));
+  }
   function loadWords() {
     try {
       const raw = localStorage.getItem(STORE_KEY);
       if (raw) {
         const parsed = JSON.parse(raw);
-        if (Array.isArray(parsed) && parsed.length) return parsed;
+        if (Array.isArray(parsed) && parsed.length) return withSaved(parsed);
       }
     } catch (e) {}
-    return DEFAULT_WORDS.slice();
+    return withSaved(DEFAULT_WORDS.slice());
   }
   let hasCustomWords = false;
   try { hasCustomWords = !!localStorage.getItem(STORE_KEY); } catch (e) {}
@@ -760,15 +773,15 @@ Chỉ dựa trên thông tin ở trên và kiến thức chung. Không bịa th�
       const list = await r.json();
       if (!Array.isArray(list) || !list.length) return;
       remoteWords = list.filter(o => o && o.w);
-      if (!hasCustomWords) { words = remoteWords.slice(); bag = []; }
+      if (!hasCustomWords) { words = withSaved(remoteWords); bag = []; }
     } catch (e) { /* offline or not hosted: keep current list */ }
   }
   let bag = [];
   function nextWord() {
     if (!bag.length) {
       const cutoff = Date.now() - 3 * 86400000;           // words added in the last 3 days
-      const recent = words.filter(o => o.added && Date.parse(o.added) >= cutoff);
-      bag = words.concat(recent);                          // ...appear twice as often
+      const recent = words.filter(o => o.saved || (o.added && Date.parse(o.added) >= cutoff));
+      bag = words.concat(recent);                          // ...and words saved from videos appear twice as often
       for (let i = bag.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [bag[i], bag[j]] = [bag[j], bag[i]];

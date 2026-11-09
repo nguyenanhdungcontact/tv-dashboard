@@ -285,6 +285,31 @@ def video_ids() -> list:
     return ids
 
 
+CAP_DIR = ROOT / "docs" / "video-data" / "captions"
+
+
+def write_captions():
+    """docs/video-data/captions/<id>.json: phụ đề tiếng Anh để trang tự hiện 1 dòng dưới video
+    (khung nhúng YouTube không hiện phụ đề ổn định). Chỉ tạo cho video đã có cụm từ."""
+    CAP_DIR.mkdir(parents=True, exist_ok=True)
+    n = 0
+    for f in OUT_DIR.glob("*.json"):
+        if f.name == "index.json":
+            continue
+        vid = f.stem
+        cache = CACHE_DIR / f"{vid}.json"
+        out = CAP_DIR / f"{vid}.json"
+        if not cache.exists() or out.exists():
+            continue
+        tr = json.loads(cache.read_text(encoding="utf-8"))
+        segs = [[round(x["start"], 2), round(x.get("duration") or 0, 2), x["text"]] for x in tr["segments"]]
+        out.write_text(json.dumps({"id": vid, "kind": tr.get("kind", ""), "s": segs}, ensure_ascii=False,
+                                  separators=(",", ":")), encoding="utf-8")
+        n += 1
+    if n:
+        print(f"Tạo phụ đề cho {n} video.")
+
+
 def write_index():
     """docs/video-data/phrases/index.json: video nào đã có cụm từ, để trang hiện huy hiệu trên thẻ video."""
     idx = {}
@@ -341,6 +366,7 @@ def main() -> int:
         time.sleep(3)
 
     write_index()
+    write_captions()
     print(f"Xong {done} video.")
     return 2 if blocked and done == 0 else 0
 

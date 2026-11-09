@@ -201,6 +201,25 @@ body.simple .lw-p{font-size:2.5rem}
 body.simple .lw-m,body.simple .lw-q,body.simple .lw-ex{font-size:1.2rem}
 body.simple .lw-u{display:none}
 
+/* Chế độ học: kéo khung YouTube cao hơn rồi cắt bớt trên/dưới → ẩn tiêu đề, nút bấm, thanh thời gian.
+   Hình video vẫn đầy khung vì YouTube tự giữ tỉ lệ 16:9 ở giữa. Toàn màn hình thì giữ nguyên giao diện YouTube. */
+#player.panel #ytWrap iframe{top:-40%;bottom:auto;height:180%;pointer-events:none}
+
+/* Dòng phụ đề riêng (từ file captions), không phụ thuộc phụ đề của YouTube */
+#cap{position:absolute;z-index:6;left:50%;bottom:9%;transform:translateX(-50%);max-width:80%;text-align:center;pointer-events:none;
+  font-size:1.7rem;line-height:1.35;font-weight:500;color:#fff;padding:.25rem .9rem;border-radius:.5rem;background:rgba(0,0,0,.62);
+  transition:opacity .2s}
+#cap:empty{opacity:0;padding:0}
+#cap mark{background:none;color:#ffd36e;font-weight:700}
+#player.panel #cap{left:calc(var(--pad) + var(--vw) / 2);bottom:auto;top:calc(var(--pad) + var(--vh) - .6rem);transform:translate(-50%,-100%);
+  max-width:calc(var(--vw) - 3rem);font-size:1.25rem}
+body.simple #cap{font-size:2.1rem}
+body.simple #player.panel #cap{font-size:1.5rem}
+
+/* Từ đã lưu */
+.ph .p .star,.lw-p .star{color:#ffd36e;margin-left:.4rem;font-size:.85em}
+:root.day .ph .p .star,:root.day .lw-p .star{color:#c8742a}
+
 /* Huy hiệu "có cụm từ" trên thẻ video */
 .badge{position:absolute;left:.5rem;top:.5rem;background:rgba(255,211,110,.95);color:#2a1e00;font-size:.8rem;font-weight:700;padding:.12rem .5rem;border-radius:.35rem}
 body.simple .badge{font-size:1.05rem}
@@ -322,6 +341,7 @@ body.simple #toast{font-size:1.6rem}
   <div id="osd" class="nobar"><div class="l1"></div><div class="l2"></div><div class="bar"><i></i></div></div>
   <aside id="panel"></aside>
   <div id="learn"></div>
+  <div id="cap"></div>
   <div id="qmenu"></div>
   <div id="endcard"></div>
 </section>
@@ -566,7 +586,8 @@ function play(r, c){
   if (v.blocked){ toast('Video này không phát được trên TV, hãy chọn video khác'); return; }
   clearEnd();
   S.play = { r, c }; S.row = r; S.cols[r] = c; S.ccApplied = false;
-  S.phr = null; S.sel = 0; S.nowIdx = -1; closeMenu();
+  S.phr = null; S.sel = 0; S.nowIdx = -1; S.cap = null; S.capIdx = -1; $('#cap').textContent = ''; closeMenu();
+  loadCaptions(v.id).then(c => { const now = cur(); if (now && now.id === v.id) S.cap = c; });
   show('player');
   osd(v.title, v.channel, 3500, false);
   renderPanel();
@@ -583,10 +604,11 @@ function play(r, c){
 function createOrLoad(id){
   if (player && player.loadVideoById){ player.loadVideoById(id); return; }
   $('#ytWrap').innerHTML = '<div id="yt"></div>';
-  // Phụ đề bật sẵn ngay từ đầu (tiếng Anh, hoặc tiếng Việt cho hồ sơ Bố mẹ); tắt được trong menu ▼
+  // Phụ đề tiếng Việt (hồ sơ Bố mẹ) dùng bản dịch của YouTube; tắt/đổi trong menu ▼
   const m = ccGet();
   const vars = { autoplay:1, rel:0, playsinline:1, iv_load_policy:3, fs:0, hl:'vi',
-                 cc_load_policy: m === 'off' ? 0 : 1, cc_lang_pref: m === 'off' ? 'en' : m };
+                 cc_load_policy: m === 'vi' ? 1 : 0, cc_lang_pref: m === 'vi' ? 'vi' : 'en' };
+  // Tiếng Anh: trang tự vẽ dòng phụ đề (#cap) vì khung nhúng YouTube không hiện phụ đề ổn định
   // Không ép 1080p nữa: YouTube tự chọn chất lượng theo cỡ khung, khung học nhỏ → tải và tua nhanh hơn
   if (location.protocol.startsWith('http')) vars.origin = location.origin;
   player = new YT.Player('yt', {
@@ -605,7 +627,7 @@ function onState(e){
     S.errors = 0;
     if (!S.ccApplied){
       S.ccApplied = true;
-      const m = ccGet(); if (m !== 'off') applyCC(m, false);
+      const m = ccGet(); if (m === 'vi') applyCC(m, false);
       applySpeed(speedGet());
     }
   }
@@ -722,10 +744,47 @@ function applyCC(mode, announce, tries = 0){
     if (announce) osd('Không đổi được phụ đề cho video này', '', 2200, false);
   }
 }
+/* Phụ đề tiếng Anh tự vẽ: file captions/<id>.json, mỗi đoạn [start, duration, text] */
+const capCache = {};
+async function loadCaptions(id){
+  if (id in capCache) return capCache[id];
+  let c = null;
+  try { const r = await fetch(`video-data/captions/${id}.json`, { cache:'no-store' }); if (r.ok) c = (await r.json()).s || null; } catch(e){}
+  return capCache[id] = c;
+}
+function capAt(t){
+  const s = S.cap; if (!s || !s.length) return -1;
+  let lo = 0, hi = s.length - 1, k = -1;
+  while (lo <= hi){ const mid = (lo + hi) >> 1; if (s[mid][0] <= t){ k = mid; lo = mid + 1; } else hi = mid - 1; }
+  if (k < 0) return -1;
+  const end = s[k][0] + Math.max(s[k][1], 1.2);
+  return (t <= end + 0.4 || (s[k + 1] && t < s[k + 1][0])) ? k : -1;
+}
+function tickCaption(){
+  const el = $('#cap'); if (!el) return;
+  if (S.screen !== 'player' || ccGet() !== 'en' || !S.cap || !player || !player.getCurrentTime){
+    if (el.textContent) el.textContent = ''; S.capIdx = -1; return;
+  }
+  const k = capAt(player.getCurrentTime() || 0);
+  if (k === S.capIdx) return;
+  S.capIdx = k;
+  if (k < 0){ el.textContent = ''; return; }
+  const seg = S.cap[k];
+  // Tô vàng cụm từ đang học nếu nằm trong câu này
+  const ph = S.phr && S.phr.phrases.find(p => Math.abs(p.t - seg[0]) < 0.05);
+  el.innerHTML = ph ? markQuote(seg[2], ph.phrase) : esc(seg[2]);
+}
+setInterval(tickCaption, 200);
+
 function cycleCC(){
   const next = CC_MODES[(CC_MODES.indexOf(ccGet()) + 1) % CC_MODES.length];
   store.set('tvv.cc2.' + S.profile, next);
-  applyCC(next, true);
+  S.capIdx = -2;
+  if (next === 'vi') applyCC('vi', true);
+  else {
+    try { player.unloadModule('captions'); player.unloadModule('cc'); } catch(e){}
+    osd(CC_LABEL[next], next === 'en' && !S.cap ? 'Video này chưa có file phụ đề' : '', 1800, false);
+  }
 }
 
 function toggleFullscreen(){
@@ -819,10 +878,10 @@ function renderPanel(){
       ${d.summary_vi ? `<div class="ph-sum">${esc(d.summary_vi)}</div>` : ''}</div>
     <div class="ph-list"><div class="ph-inner">${d.phrases.map((p, i) => `
       <div class="ph" data-i="${i}">
-        <div class="row1"><div class="p">${esc(p.phrase)}</div><div class="tm">${fmt(p.t)}</div></div>
+        <div class="row1"><div class="p">${esc(p.phrase)}${isSaved(p.phrase) ? '<span class="star">★</span>' : ''}</div><div class="tm">${fmt(p.t)}</div></div>
         <div class="m">${esc(p.meaning_vi)}</div>
       </div>`).join('')}</div></div>
-    <div class="ph-foot"><span><b class="k">▲▼</b>Chọn</span><span><b class="k">OK</b><span class="okl"></span></span><span><b class="k">◀</b>Nghe lại câu</span><span><b class="k">▶</b>Tua 10 giây</span><span><b class="k">Back</b>Toàn màn hình</span></div>`;
+    <div class="ph-foot"><span><b class="k">▲▼</b>Chọn</span><span><b class="k">OK</b><span class="okl"></span></span><span><b class="k">◀</b>Nghe lại câu</span><span><b class="k">▶</b><span class="savel">Lưu từ ★</span></span><span><b class="k">Back</b>Toàn màn hình</span></div>`;
   selectPhrase(Math.min(S.sel, d.phrases.length - 1), false);
   markNow(S.nowIdx);
 }
@@ -841,7 +900,7 @@ function renderLearn(){
   }
   const p = d.phrases[S.sel]; if (!p) return;
   el.innerHTML = `<div class="lw-top"><span>Cụm từ ${S.sel + 1}/${d.phrases.length} · ${fmt(p.t)}</span><span class="st"></span></div>
-    <div class="lw-p">${esc(p.phrase)}${p.ipa ? `<span class="ipa">${esc(p.ipa)}</span>` : ''}</div>
+    <div class="lw-p">${esc(p.phrase)}${isSaved(p.phrase) ? '<span class="star">★ đã lưu</span>' : ''}${p.ipa ? `<span class="ipa">${esc(p.ipa)}</span>` : ''}</div>
     <div class="lw-m">${esc(p.meaning_vi)}</div>
     <div class="lw-q">“${markQuote(p.quote, p.phrase)}”</div>
     ${p.usage_vi ? `<div class="lw-u">${esc(p.usage_vi)}</div>` : ''}
@@ -921,6 +980,28 @@ function closePanel(remember = true){
   if (remember) store.set('tvv.learn.' + S.profile, '0');
   $('#player').classList.remove('panel');
 }
+/* Lưu cụm từ vào kho chung: dashboard sao băng đọc cùng localStorage (cùng địa chỉ trang) */
+const SAVED_KEY = 'meteor-saved-v1';
+function savedList(){ try { const l = JSON.parse(localStorage.getItem(SAVED_KEY) || '[]'); return Array.isArray(l) ? l : []; } catch(e){ return []; } }
+const isSaved = w => savedList().some(o => (o.w || '').toLowerCase() === String(w).toLowerCase());
+function toggleSave(i){
+  const p = S.phr && S.phr.phrases[i]; if (!p) return;
+  let l = savedList();
+  const key = p.phrase.toLowerCase();
+  if (l.some(o => (o.w || '').toLowerCase() === key)){
+    l = l.filter(o => (o.w || '').toLowerCase() !== key);
+    toast(`Đã bỏ lưu “${p.phrase}”`);
+  } else {
+    const v = cur();
+    l.unshift({ w: p.phrase, ipa: p.ipa || '', pos: 'từ video', vi: p.meaning_vi || '', ex: p.example_en || p.quote || '',
+                col: p.quote ? [p.quote.length > 60 ? p.quote.slice(0, 57) + '…' : p.quote] : [],
+                saved: true, added: new Date().toISOString().slice(0, 10), src: { id: v && v.id, t: p.t, title: v && v.title } });
+    toast(`★ Đã lưu “${p.phrase}”. Từ này sẽ bay trên màn hình sao băng.`, 3200);
+  }
+  try { localStorage.setItem(SAVED_KEY, JSON.stringify(l)); } catch(e){ toast('Không lưu được trên thiết bị này'); }
+  const keep = S.sel; renderPanel(); selectPhrase(keep, false);
+}
+
 function playPhrase(i){
   if (!S.phr || !player || !player.seekTo) return;
   const p = S.phr.phrases[i];
@@ -945,7 +1026,7 @@ function panelKey(k){
     }
     case 'playpause': togglePlay(); break;
     case 'left': if (n) playPhrase(S.sel); else seek(-10); break;
-    case 'right': seek(10); break;
+    case 'right': if (n) toggleSave(S.sel); else seek(10); break;
   }
 }
 // Khi video đang chạy: đánh dấu cụm từ vừa được nói và cho danh sách chạy theo
