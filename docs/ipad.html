@@ -150,9 +150,41 @@ main{padding:8px 0 40px}
   background:var(--ink);color:var(--bg);padding:12px 18px;border-radius:12px;font-size:15px;font-weight:500;max-width:90vw;transition:opacity .25s,transform .25s}
 #toast.show{opacity:1;transform:translate(-50%,0)}
 
+/* iPad ngang (như TV): trái = video + phụ đề + nút + thẻ chi tiết; phải = danh sách cụm từ cuộn riêng */
+@media (min-width:901px) and (orientation:landscape){
+  html,body{height:100%;overflow:hidden}
+  body.watching .top{position:relative}
+  .watch{height:calc(100dvh - 73px - env(safe-area-inset-top) - env(safe-area-inset-bottom));grid-template-columns:minmax(0,1fr) clamp(300px,31vw,380px);
+    gap:18px;padding:14px 18px 14px 20px;align-items:stretch}
+  .stage{position:static;display:flex;flex-direction:column;min-height:0}
+  .vbox{flex:none;width:100%;max-height:52%;aspect-ratio:16/9;align-self:center}
+  .cap{flex:none;min-height:50px;margin-top:10px;font-size:18px;padding:8px 14px}
+  .ctrls{flex:none;margin-top:10px}
+  .ctrls button{min-height:44px}
+  #detail{flex:1;min-height:0;margin-top:10px;overflow:auto;-webkit-overflow-scrolling:touch;border-radius:var(--r)}
+  .detail{padding:14px 18px;box-shadow:none}
+  .d-top{font-size:12px}
+  .d-row{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+  .d-p{font-size:26px}
+  .d-ipa{margin-top:0}
+  .detail{min-height:100%;display:flex;flex-direction:column}
+  .d-act{grid-template-columns:repeat(3,auto);justify-content:start;margin-top:auto;padding-top:12px;
+    position:sticky;bottom:-14px;background:var(--surface);padding-bottom:14px;margin-bottom:-14px}
+  .d-act button{padding:0 18px;min-height:44px}
+  .vtitle,.vsub{display:none}
+  .side{overflow:auto;-webkit-overflow-scrolling:touch;min-height:0;padding-right:2px}
+  .side .lhead{margin-top:2px}
+  #home,#savedView{height:calc(100dvh - 73px);overflow:auto;-webkit-overflow-scrolling:touch}
+}
+@media (min-width:901px) and (orientation:landscape) and (max-height:700px){
+  .vbox{max-height:50%}
+  .d-u{display:none}
+}
+
 /* iPad dọc / màn hẹp: video trên, cụm từ dưới */
 @media (max-width:900px), (orientation:portrait){
   .watch{grid-template-columns:1fr}
+  #detail{margin-top:4px}
   .stage{position:sticky;top:72px;z-index:5;background:var(--bg);padding-bottom:10px;margin:0 -20px;padding-left:20px;padding-right:20px}
   .vtitle,.vsub{display:none}
   .cap{font-size:17px;min-height:50px}
@@ -187,7 +219,9 @@ main{padding:8px 0 40px}
       <button id="bFwd">10s ⟳</button>
       <button id="bSpeed">1×</button>
       <button id="bCC" class="on">CC</button>
+      <button id="bYT" title="Mở trong app YouTube (Premium không quảng cáo)">YouTube ↗</button>
     </div>
+    <div id="detail"></div>
     <div class="vtitle" id="vTitle"></div>
     <div class="vsub" id="vSub"></div>
   </div>
@@ -288,6 +322,7 @@ function setView(view){
   $('#savedView').classList.toggle('hide', view !== 'saved');
   $('#backBtn').classList.toggle('hide', view !== 'watch');
   $('#tabs').classList.toggle('hide', view === 'watch');
+  document.body.classList.toggle('watching', view === 'watch');
   document.querySelectorAll('#tabs button').forEach(b => b.classList.toggle('on', b.dataset.tab === view));
   if (view !== 'watch'){ $('#title').textContent = 'Học qua video'; if (player && player.pauseVideo) try { player.pauseVideo(); } catch(e){} }
   if (view === 'saved') renderSaved();
@@ -335,18 +370,15 @@ function markQuote(q, phrase){
   if (!words.length) return qs;
   return qs.replace(/[A-Za-zÀ-ỹ'’-]+/g, w => words.some(x => w.toLowerCase().startsWith(x.slice(0, Math.max(3, x.length - 2)))) ? `<mark>${w}</mark>` : w);
 }
-function renderSide(){
-  const el = $('#side'), d = S.phr;
-  if (!d){
-    el.innerHTML = `<div class="empty">${S.v && S.index[S.v.id] ? 'Đang tải cụm từ…' : 'Video này chưa có cụm từ. Bạn vẫn xem bình thường; cụm từ sẽ có sau khi chạy <b>run_local.sh</b>.'}</div>`;
-    return;
-  }
+function renderSide(){ renderDetail(); renderList(); }
+function renderDetail(){
+  const el = $('#detail'), d = S.phr;
+  if (!d){ el.innerHTML = ''; return; }
   const p = d.phrases[S.sel];
   el.innerHTML = `
     <div class="detail">
       <div class="d-top"><span>Cụm từ ${S.sel + 1}/${d.phrases.length} · ${fmt(p.t)}</span><span class="live">${S.sel === S.now && playing() ? '● Đang nói câu này' : ''}</span></div>
-      <div class="d-p">${esc(p.phrase)}</div>
-      ${p.ipa ? `<div class="d-ipa">${esc(p.ipa)}</div>` : ''}
+      <div class="d-row"><div class="d-p">${esc(p.phrase)}</div>${p.ipa ? `<div class="d-ipa">${esc(p.ipa)}</div>` : ''}</div>
       <div class="d-m">${esc(p.meaning_vi)}</div>
       <div class="quote">“${markQuote(p.quote, p.phrase)}”</div>
       ${p.usage_vi ? `<div class="d-u">${esc(p.usage_vi)}</div>` : ''}
@@ -356,28 +388,52 @@ function renderSide(){
         <button data-act="speak">🔊 Đọc từ</button>
         <button data-act="save" class="${isSaved(p.phrase) ? 'saved' : ''}">${isSaved(p.phrase) ? '★ Đã lưu' : '☆ Lưu từ'}</button>
       </div>
-    </div>
-    ${d.summary_vi ? `<p class="sum">${esc(d.summary_vi)}</p>` : ''}
+    </div>`;
+}
+function renderList(){
+  const el = $('#side'), d = S.phr;
+  if (!d){
+    el.innerHTML = `<div class="empty">${S.v && S.index[S.v.id] ? 'Đang tải cụm từ…' : 'Video này chưa có cụm từ. Bạn vẫn xem bình thường; cụm từ sẽ có sau khi chạy <b>run_local.sh</b>.'}</div>`;
+    return;
+  }
+  const keep = el.scrollTop;
+  el.innerHTML = `
     <div class="lhead"><h3>Cụm từ hay</h3>${d.level ? `<span class="lvl">${esc(d.level)}</span>` : ''}<span>${d.phrases.length} cụm · chạm để nghe</span></div>
+    ${d.summary_vi ? `<p class="sum">${esc(d.summary_vi)}</p>` : ''}
     <div id="plist">${d.phrases.map((x, i) => `
       <button class="ph${i === S.sel ? ' sel' : ''}${i === S.now ? ' now' : ''}" data-i="${i}">
         <span class="st">${isSaved(x.phrase) ? '★' : ''}</span>
         <span class="tx"><div class="p">${esc(x.phrase)}</div><div class="m">${esc(x.meaning_vi)}</div></span>
         <span class="tm">${fmt(x.t)}</span>
       </button>`).join('')}</div>`;
+  el.scrollTop = keep;
 }
-$('#side').addEventListener('click', e => {
+/* Danh sách tự cuộn tới cụm đang chọn (khi không vừa chạm tay) */
+function followSel(){
+  const el = $('#side'), row = el.querySelector('.ph.sel');
+  if (!row || Date.now() < S.touchHold) return;
+  if (el.scrollHeight > el.clientHeight + 4){
+    const top = row.offsetTop - el.clientHeight * 0.3;
+    el.scrollTo({ top: Math.max(0, top), behavior:'smooth' });
+  } else if (matchMedia('(max-width:900px), (orientation:portrait)').matches){
+    /* dọc: trang cuộn, không cần theo */
+  }
+}
+$('#detail').addEventListener('click', e => {
   if (!S.phr) return;
-  const a = e.target.closest('[data-act]'), row = e.target.closest('.ph');
+  const a = e.target.closest('[data-act]'); if (!a) return;
   const p = S.phr.phrases[S.sel];
-  if (a){
+  {
     if (a.dataset.act === 'play') playPhrase(S.sel);
     else if (a.dataset.act === 'speak') speak(p.phrase.replace(/\b(someone|something|sb|sth|one's|oneself)\b/gi, '').replace(/\s+/g,' ').trim() || p.phrase);
     else if (a.dataset.act === 'save'){ toggleSave(p); renderSide(); }
-    return;
   }
-  if (row){ S.sel = +row.dataset.i; S.touchHold = Date.now() + 10000; playPhrase(S.sel); renderSide(); scrollDetailIntoView(); }
 });
+$('#side').addEventListener('click', e => {
+  const row = e.target.closest('.ph'); if (!row || !S.phr) return;
+  S.sel = +row.dataset.i; S.touchHold = Date.now() + 10000; playPhrase(S.sel); renderSide(); scrollDetailIntoView();
+});
+$('#side').addEventListener('touchstart', () => { S.touchHold = Date.now() + 8000; }, { passive:true });
 function scrollDetailIntoView(){
   if (matchMedia('(max-width:900px), (orientation:portrait)').matches){
     const d = $('.detail'); if (d){ const y = d.getBoundingClientRect().top + scrollY - $('.stage').offsetHeight - 80; scrollTo({ top:Math.max(0, y), behavior:'smooth' }); }
@@ -401,6 +457,8 @@ $('#bSpeed').onclick = () => {
   $('#bSpeed').textContent = `${String(S.speed).replace('.', ',')}×`;
   try { player.setPlaybackRate(S.speed); } catch(e){}
 };
+/* Mở đúng đoạn đang xem trong app YouTube: tài khoản Premium ở đó không có quảng cáo */
+$('#bYT').onclick = () => { if (!S.v) return; try { player.pauseVideo(); } catch(e){} location.href = `https://www.youtube.com/watch?v=${encodeURIComponent(S.v.id)}&t=${Math.floor(now())}s`; };
 let ccOn = store.get('ipad.cc') !== '0';
 function paintCC(){ $('#bCC').classList.toggle('on', ccOn); $('#cap').classList.toggle('off', !ccOn); }
 $('#bCC').onclick = () => { ccOn = !ccOn; store.set('ipad.cc', ccOn ? '1' : '0'); paintCC(); };
@@ -432,7 +490,7 @@ setInterval(() => {
     if (idx !== S.now){
       S.now = idx;
       if (idx >= 0 && Date.now() > S.touchHold) S.sel = idx;
-      renderSide();
+      renderSide(); followSel();
     }
   }
 }, 250);
