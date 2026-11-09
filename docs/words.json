@@ -1918,5 +1918,135 @@
       "lighten up and relax"
     ],
     "added": "2026-11-08"
+  },
+  {
+    "w": "scalable",
+    "ipa": "/ˈskeɪləbl/",
+    "pos": "adjective",
+    "vi": "có thể mở rộng quy mô, nhân rộng được",
+    "ex": "The campaign worked well, so we need a scalable approach.",
+    "col": [
+      "scalable solution",
+      "highly scalable",
+      "scalable growth"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "w": "roadmap",
+    "ipa": "/ˈrəʊdmæp/",
+    "pos": "noun",
+    "vi": "lộ trình, kế hoạch triển khai",
+    "ex": "Let’s review the product roadmap before we finalize next quarter’s budget.",
+    "col": [
+      "product roadmap",
+      "roadmap for",
+      "on the roadmap"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "w": "prospect",
+    "ipa": "/ˈprɒspekt/",
+    "pos": "noun",
+    "vi": "khách hàng tiềm năng",
+    "ex": "The sales team has twenty warm prospects from last week’s webinar.",
+    "col": [
+      "warm prospect",
+      "potential prospect",
+      "qualified prospect"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "w": "outreach",
+    "ipa": "/ˈaʊtriːtʃ/",
+    "pos": "noun",
+    "vi": "hoạt động tiếp cận, truyền thông ra bên ngoài",
+    "ex": "Our outreach to small business owners doubled the response rate this month.",
+    "col": [
+      "email outreach",
+      "community outreach",
+      "outreach campaign"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "w": "headline",
+    "ipa": "/ˈhedlaɪn/",
+    "pos": "noun",
+    "vi": "tiêu đề quảng cáo, tiêu đề nổi bật",
+    "ex": "A stronger headline could lift click-through rates without raising our budget.",
+    "col": [
+      "catchy headline",
+      "headline copy",
+      "write a headline"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "w": "pilot",
+    "ipa": "/ˈpaɪlət/",
+    "pos": "noun",
+    "vi": "chương trình thử nghiệm quy mô nhỏ",
+    "ex": "We’ll run a two-week pilot before committing the full quarterly budget.",
+    "col": [
+      "run a pilot",
+      "pilot program",
+      "pilot test"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "w": "drained",
+    "ipa": "/dreɪnd/",
+    "pos": "adjective",
+    "vi": "kiệt sức, cạn năng lượng",
+    "ex": "After three back-to-back client calls, I felt completely drained.",
+    "col": [
+      "emotionally drained",
+      "completely drained",
+      "feel drained"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "w": "snap at someone",
+    "ipa": "/snæp æt ˈsʌmwʌn/",
+    "pos": "phrasal verb",
+    "vi": "cáu gắt, nói xẵng với ai",
+    "ex": "I’m sorry I snapped at you; I was stressed about the deadline.",
+    "col": [
+      "snap at a colleague",
+      "snap at someone over",
+      "stop snapping at"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "w": "reconnect with someone",
+    "ipa": "/ˌriːkəˈnekt wɪð ˈsʌmwʌn/",
+    "pos": "phrasal verb",
+    "vi": "liên lạc lại, kết nối lại với ai",
+    "ex": "It was lovely to reconnect with an old classmate at the reunion.",
+    "col": [
+      "reconnect with an old friend",
+      "reconnect with family",
+      "reconnect after years"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "w": "come across as",
+    "ipa": "/kʌm əˈkrɒs æz/",
+    "pos": "phrasal verb",
+    "vi": "tạo ấn tượng là, bị người khác thấy là",
+    "ex": "Your email came across as a bit defensive, so let’s rephrase it.",
+    "col": [
+      "come across as friendly",
+      "come across as arrogant",
+      "come across well"
+    ],
+    "added": "2026-11-09"
   }
 ]
