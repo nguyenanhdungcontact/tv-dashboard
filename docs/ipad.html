@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Học qua video">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>Học qua video</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&display=swap" rel="stylesheet">
+<script>
+/* Sáng/tối dùng chung với dashboard và trang TV: 'auto' theo giờ (6:00–18:00 sáng), 'day', 'night' */
+window.themePref = function(){
+  const q = new URLSearchParams(location.search).get('theme');
+  if (q === 'day' || q === 'night') return q;
+  try { const v = localStorage.getItem('tvv.theme'); if (v === 'day' || v === 'night') return v; } catch(e){}
+  return 'auto';
+};
+window.applyTheme = function(){
+  const pref = themePref(), h = new Date().getHours();
+  const day = pref === 'auto' ? (h >= 6 && h < 18) : pref === 'day';
+  document.documentElement.classList.toggle('day', day);
+  document.documentElement.classList.toggle('night', !day);
+};
+window.setThemePref = function(v){ try { localStorage.setItem('tvv.theme', v); } catch(e){} applyTheme(); };
+applyTheme(); setInterval(applyTheme, 60000);
+</script>
+<style>
+:root{
+  --bg:#f6f1e4; --bg2:#ece5d2; --surface:#fffdf7; --surface2:#f3eee1; --line:rgba(52,70,42,.13);
+  --ink:#26331f; --ink2:#5b6852; --ink3:#8b927e;
+  --accent:#4f7d45; --accent-ink:#fff; --accent-soft:rgba(79,125,69,.12);
+  --warm:#c06a1f; --warm-soft:rgba(192,106,31,.12); --ipa:#3c7486;
+  --shadow:0 .5rem 1.6rem rgba(52,62,36,.12);
+  --head:'Fraunces',Georgia,serif; --body:'Be Vietnam Pro',system-ui,-apple-system,sans-serif;
+  --r:16px;
+  color-scheme:light;
+}
+:root.night{
+  --bg:#0b0f2a; --bg2:#141a45; --surface:#151b44; --surface2:#1c2354; --line:rgba(200,208,255,.12);
+  --ink:#eef0ff; --ink2:#a9b0de; --ink3:#727ab0;
+  --accent:#8fa2ff; --accent-ink:#0b0f2a; --accent-soft:rgba(143,162,255,.16);
+  --warm:#ffd36e; --warm-soft:rgba(255,211,110,.14); --ipa:#8fd0e0;
+  --shadow:0 .6rem 2rem rgba(0,0,0,.35);
+  color-scheme:dark;
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html,body{background:var(--bg);color:var(--ink);font-family:var(--body);-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%}
+body{min-height:100vh;min-height:100dvh;
+  background:
+    radial-gradient(ellipse 70% 40% at 100% 0%, var(--warm-soft), transparent 60%),
+    radial-gradient(ellipse 60% 40% at 0% 100%, var(--accent-soft), transparent 60%),
+    var(--bg);
+  background-attachment:fixed;
+  padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;touch-action:manipulation}
+.hide{display:none!important}
+
+/* ---------- Thanh trên ---------- */
+.top{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:12px;padding:14px 20px;
+  background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.top h1{font-family:var(--head);font-weight:800;font-size:24px;letter-spacing:-.01em;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.seg{display:flex;background:var(--surface2);border-radius:999px;padding:4px;gap:2px}
+.seg button{padding:9px 16px;border-radius:999px;font-weight:600;font-size:15px;color:var(--ink2);min-height:40px}
+.seg button.on{background:var(--surface);color:var(--ink);box-shadow:0 1px 4px rgba(0,0,0,.12)}
+.icon-btn{min-width:44px;min-height:44px;border-radius:999px;display:grid;place-items:center;font-size:18px;background:var(--surface2);padding:0 14px;font-weight:600;font-size:15px}
+.back{font-size:22px;padding:0;width:44px}
+
+/* ---------- Danh sách video ---------- */
+main{padding:8px 0 40px}
+.row{margin:22px 0 4px}
+.row h2{font-family:var(--head);font-weight:700;font-size:22px;padding:0 20px;display:flex;align-items:baseline;gap:10px}
+.row h2 small{font-family:var(--body);font-weight:500;font-size:14px;color:var(--ink3)}
+.track{display:flex;gap:16px;overflow-x:auto;padding:12px 20px 8px;scroll-snap-type:x mandatory;scrollbar-width:none}
+.track::-webkit-scrollbar{display:none}
+.card{flex:0 0 clamp(220px,30vw,300px);scroll-snap-align:start;text-align:left}
+.thumb{position:relative;aspect-ratio:16/9;border-radius:14px;overflow:hidden;background:var(--surface2);box-shadow:var(--shadow)}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.dur{position:absolute;right:8px;bottom:8px;background:rgba(10,12,20,.78);color:#fff;font-size:12px;font-weight:600;padding:2px 7px;border-radius:6px}
+.badge{position:absolute;left:8px;top:8px;background:var(--accent);color:var(--accent-ink);font-size:12px;font-weight:700;padding:3px 8px;border-radius:7px}
+.card .t{margin-top:10px;font-weight:600;font-size:15px;line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.card .c{margin-top:3px;font-size:13px;color:var(--ink3)}
+.card:active .thumb{transform:scale(.98)}
+.note{margin:18px 20px 0;color:var(--ink3);font-size:14px;line-height:1.5}
+
+/* ---------- Màn xem ---------- */
+.watch{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(300px,1fr);gap:20px;padding:16px 20px 24px;align-items:start}
+.stage{position:sticky;top:84px}
+.vbox{position:relative;aspect-ratio:16/9;border-radius:var(--r);overflow:hidden;background:#000;box-shadow:var(--shadow)}
+.vbox iframe,.vbox #yt{position:absolute;inset:0;width:100%;height:100%;border:0}
+.cap{min-height:58px;margin-top:12px;padding:10px 16px;border-radius:12px;background:var(--surface);border:1px solid var(--line);
+  font-size:19px;line-height:1.45;text-align:center;display:flex;align-items:center;justify-content:center}
+.cap:empty::before{content:"Phụ đề sẽ hiện ở đây";color:var(--ink3);font-size:15px}
+.cap mark,.quote mark{background:none;color:var(--warm);font-weight:700}
+.cap.off{display:none}
+.ctrls{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.ctrls button{min-height:46px;padding:0 16px;border-radius:12px;background:var(--surface);border:1px solid var(--line);font-weight:600;font-size:15px;display:flex;align-items:center;gap:6px}
+.ctrls button.main{background:var(--accent);color:var(--accent-ink);border-color:transparent;min-width:110px;justify-content:center}
+.ctrls button.on{background:var(--accent-soft);border-color:var(--accent)}
+.vtitle{margin-top:14px;font-family:var(--head);font-weight:700;font-size:20px;line-height:1.3}
+.vsub{margin-top:4px;color:var(--ink3);font-size:14px}
+
+.side{min-width:0}
+.detail{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:18px 18px 16px;box-shadow:var(--shadow)}
+.d-top{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--ink3);font-weight:600}
+.d-top .live{color:var(--warm)}
+.d-p{font-family:var(--head);font-weight:800;font-size:28px;line-height:1.15;margin-top:6px}
+.d-ipa{color:var(--ipa);font-size:16px;margin-top:4px}
+.d-m{font-size:17px;margin-top:6px;font-weight:500}
+.quote{margin-top:12px;padding:10px 12px;border-left:3px solid var(--warm);background:var(--warm-soft);border-radius:4px 10px 10px 4px;font-style:italic;font-size:16px;line-height:1.5}
+.d-u{margin-top:10px;font-size:15px;line-height:1.5;color:var(--ink2)}
+.d-ex{margin-top:10px;font-size:15px;line-height:1.5}
+.d-ex small{display:block;color:var(--ink2);font-size:14px;margin-top:2px}
+.d-act{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px}
+.d-act button{min-height:48px;border-radius:12px;background:var(--surface2);font-weight:600;font-size:15px}
+.d-act button.primary{background:var(--accent);color:var(--accent-ink)}
+.d-act button.saved{background:var(--warm-soft);color:var(--warm)}
+.sum{margin:16px 2px 8px;font-size:14px;line-height:1.55;color:var(--ink2)}
+.lhead{display:flex;align-items:baseline;gap:10px;margin:18px 2px 8px}
+.lhead h3{font-family:var(--head);font-size:19px}
+.lhead span{font-size:13px;color:var(--ink3)}
+.lvl{font-size:12px;font-weight:700;color:var(--warm);border:1px solid var(--warm);border-radius:6px;padding:1px 6px}
+.ph{display:flex;align-items:center;gap:10px;width:100%;text-align:left;padding:12px 12px 12px 14px;border-radius:12px;margin-bottom:8px;background:var(--surface);border:1px solid var(--line)}
+.ph .tx{flex:1;min-width:0}
+.ph .p{font-weight:700;font-size:16px}
+.ph .m{font-size:14px;color:var(--ink2);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ph .tm{font-size:13px;color:var(--ink3);font-weight:600;font-variant-numeric:tabular-nums}
+.ph .st{font-size:16px;color:var(--warm);width:18px;text-align:center}
+.ph.sel{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent)}
+.ph.now .tm{color:var(--warm)}
+.ph.now .tm::before{content:"● "}
+.empty{padding:22px;border-radius:var(--r);background:var(--surface);border:1px dashed var(--line);color:var(--ink2);line-height:1.55}
+
+/* ---------- Từ đã lưu ---------- */
+.saved-wrap{max-width:860px;margin:0 auto;padding:16px 20px 40px}
+.sw{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:16px 18px;margin-bottom:12px;box-shadow:var(--shadow)}
+.sw .h{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.sw .w{font-family:var(--head);font-weight:800;font-size:22px}
+.sw .i{color:var(--ipa);font-size:15px}
+.sw .v{margin-top:4px;font-size:16px}
+.sw .e{margin-top:6px;font-size:15px;color:var(--ink2);font-style:italic}
+.sw .src{margin-top:8px;font-size:13px;color:var(--ink3)}
+.sw .a{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
+.sw .a button{min-height:42px;padding:0 14px;border-radius:10px;background:var(--surface2);font-weight:600;font-size:14px}
+
+#toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom));transform:translate(-50%,20px);opacity:0;pointer-events:none;z-index:50;
+  background:var(--ink);color:var(--bg);padding:12px 18px;border-radius:12px;font-size:15px;font-weight:500;max-width:90vw;transition:opacity .25s,transform .25s}
+#toast.show{opacity:1;transform:translate(-50%,0)}
+
+/* iPad dọc / màn hẹp: video trên, cụm từ dưới */
+@media (max-width:900px), (orientation:portrait){
+  .watch{grid-template-columns:1fr}
+  .stage{position:sticky;top:72px;z-index:5;background:var(--bg);padding-bottom:10px;margin:0 -20px;padding-left:20px;padding-right:20px}
+  .vtitle,.vsub{display:none}
+  .cap{font-size:17px;min-height:50px}
+}
+@media (max-width:560px){
+  .top h1{font-size:19px}
+  .seg button{padding:8px 11px;font-size:14px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<header class="top">
+  <button class="icon-btn back hide" id="backBtn" aria-label="Quay lại">←</button>
+  <h1 id="title">Học qua video</h1>
+  <div class="seg" id="tabs">
+    <button data-tab="videos" class="on">Video</button>
+    <button data-tab="saved">Từ đã lưu <span id="savedCount"></span></button>
+  </div>
+  <button class="icon-btn" id="themeBtn" aria-label="Đổi sáng/tối"></button>
+</header>
+
+<main id="home"></main>
+
+<section id="watch" class="watch hide">
+  <div class="stage">
+    <div class="vbox"><div id="yt"></div></div>
+    <div class="cap" id="cap"></div>
+    <div class="ctrls">
+      <button id="bBack">⟲ 5s</button>
+      <button class="main" id="bPlay">▶ Phát</button>
+      <button id="bFwd">10s ⟳</button>
+      <button id="bSpeed">1×</button>
+      <button id="bCC" class="on">CC</button>
+    </div>
+    <div class="vtitle" id="vTitle"></div>
+    <div class="vsub" id="vSub"></div>
+  </div>
+  <div class="side" id="side"></div>
+</section>
+
+<section id="savedView" class="saved-wrap hide"></section>
+
+<div id="toast"></div>
+
+<script>
+/* ===== Dữ liệu: dùng chung với trang TV (catalog, cụm từ, phụ đề trong video-data/) ===== */
+const TED = [
+  ['eIho2S0ZahI','How to speak so that people want to listen','TED','9:58'],
+  ['UNP03fDSj1U','Try something new for 30 days','TED','3:27'],
+  ['iCvmsMzlF7o','The power of vulnerability','TED','20:49'],
+  ['fLJsdqxnZb0','The happy secret to better work','TED','12:20'],
+  ['H14bBuluwB8','Grit: the power of passion and perseverance','TED','6:12'],
+  ['86x-u-tz0MA','Your elusive creative genius','TED','19:28'],
+].map(([id,title,channel,dur]) => ({ id, title, channel, dur }));
+
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const fmt = s => { s = Math.max(0, Math.floor(s||0)); const m = Math.floor(s/60), x = String(s%60).padStart(2,'0'); return m >= 60 ? `${Math.floor(m/60)}:${String(m%60).padStart(2,'0')}:${x}` : `${m}:${x}`; };
+const getJSON = u => fetch(u, { cache:'no-store' }).then(r => r.ok ? r.json() : null).catch(() => null);
+const store = { get(k){ try { return localStorage.getItem(k); } catch(e){ return null; } }, set(k,v){ try { localStorage.setItem(k,v); } catch(e){} } };
+let toastT;
+function toast(m, ms = 2400){ const el = $('#toast'); el.textContent = m; el.classList.add('show'); clearTimeout(toastT); toastT = setTimeout(() => el.classList.remove('show'), ms); }
+
+const S = { rows:[], index:{}, view:'videos', v:null, phr:null, cap:null, sel:0, now:-1, capIdx:-1, touchHold:0 };
+
+/* ===== Sáng / tối ===== */
+const THEMES = ['auto','day','night'], THEME_BTN = { auto:'◐ Tự động', day:'☀ Sáng', night:'☾ Tối' };
+function paintTheme(){ $('#themeBtn').textContent = THEME_BTN[themePref()]; }
+$('#themeBtn').onclick = () => { if (location.search.includes('theme=')) history.replaceState(null,'',location.pathname); const n = THEMES[(THEMES.indexOf(themePref()) + 1) % 3]; setThemePref(n); paintTheme(); toast(THEME_BTN[n]); };
+paintTheme();
+
+/* ===== Từ đã lưu (cùng key với dashboard sao băng; trên iPad lưu riêng trong Safari) ===== */
+const SAVED_KEY = 'meteor-saved-v1';
+const savedList = () => { try { const l = JSON.parse(store.get(SAVED_KEY) || '[]'); return Array.isArray(l) ? l : []; } catch(e){ return []; } };
+const isSaved = w => savedList().some(o => (o.w || '').toLowerCase() === String(w).toLowerCase());
+function setSaved(l){ store.set(SAVED_KEY, JSON.stringify(l)); paintSavedCount(); }
+function paintSavedCount(){ const n = savedList().length; $('#savedCount').textContent = n ? `(${n})` : ''; }
+function toggleSave(p){
+  let l = savedList(); const k = p.phrase.toLowerCase();
+  if (l.some(o => (o.w || '').toLowerCase() === k)){ setSaved(l.filter(o => (o.w || '').toLowerCase() !== k)); toast(`Đã bỏ lưu “${p.phrase}”`); }
+  else {
+    l.unshift({ w:p.phrase, ipa:p.ipa || '', pos:'từ video', vi:p.meaning_vi || '', ex:p.example_en || p.quote || '',
+      col: p.quote ? [p.quote.length > 60 ? p.quote.slice(0,57) + '…' : p.quote] : [], saved:true,
+      added:new Date().toISOString().slice(0,10), src:{ id:S.v && S.v.id, t:p.t, title:S.v && S.v.title } });
+    setSaved(l); toast(`★ Đã lưu “${p.phrase}”`);
+  }
+}
+
+/* ===== Phát âm bằng giọng đọc của iPad ===== */
+function speak(text){
+  if (!('speechSynthesis' in window)) { toast('Thiết bị không hỗ trợ đọc'); return; }
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text); u.lang = 'en-US'; u.rate = 0.9;
+  const v = speechSynthesis.getVoices().find(x => /en-US/i.test(x.lang) && /Samantha|Ava|Allison|Google US/i.test(x.name)) || speechSynthesis.getVoices().find(x => /^en/i.test(x.lang));
+  if (v) u.voice = v;
+  speechSynthesis.speak(u);
+}
+
+/* ===== Trang chủ ===== */
+function cardHTML(v){
+  const b = S.index[v.id];
+  return `<button class="card" data-id="${esc(v.id)}">
+    <div class="thumb"><img loading="lazy" src="https://i.ytimg.com/vi/${esc(v.id)}/hqdefault.jpg" alt="">
+      ${v.dur ? `<span class="dur">${esc(v.dur)}</span>` : ''}${b ? `<span class="badge">Aa ${b.n}</span>` : ''}</div>
+    <div class="t">${esc(v.title)}</div><div class="c">${esc(v.channel)}</div></button>`;
+}
+function renderHome(){
+  $('#home').innerHTML = S.rows.map(r => `<section class="row"><h2>${esc(r.title)}<small>${r.items.length} video</small></h2>
+      <div class="track">${r.items.map(cardHTML).join('')}</div></section>`).join('')
+    + `<p class="note">Video có huy hiệu <b>Aa</b> đã có cụm từ và phụ đề. Chạm vào video để xem và học.</p>`;
+}
+$('#home').addEventListener('click', e => { const c = e.target.closest('.card'); if (c) openVideo(c.dataset.id); });
+
+async function load(){
+  const [cat, idx] = await Promise.all([getJSON('video-data/catalog.json'), getJSON('video-data/phrases/index.json')]);
+  S.index = idx || {};
+  S.rows = [...((cat && cat.rows) || []).filter(r => r.items && r.items.length), { title:'TED: luyện nghe', items:TED }];
+  // Hàng đầu: tất cả video đã có cụm từ, để học ngay
+  const all = S.rows.flatMap(r => r.items), seen = new Set();
+  const ready = all.filter(v => S.index[v.id] && !seen.has(v.id) && seen.add(v.id));
+  if (ready.length && ready.length < new Set(all.map(v => v.id)).size) S.rows.unshift({ title:'Sẵn sàng học', items:ready });
+  renderHome(); paintSavedCount();
+  const id = new URLSearchParams(location.search).get('v');
+  if (id) openVideo(id, parseFloat(new URLSearchParams(location.search).get('t')) || 0);
+}
+
+/* ===== Chuyển màn ===== */
+function setView(view){
+  S.view = view;
+  $('#home').classList.toggle('hide', view !== 'videos');
+  $('#watch').classList.toggle('hide', view !== 'watch');
+  $('#savedView').classList.toggle('hide', view !== 'saved');
+  $('#backBtn').classList.toggle('hide', view !== 'watch');
+  $('#tabs').classList.toggle('hide', view === 'watch');
+  document.querySelectorAll('#tabs button').forEach(b => b.classList.toggle('on', b.dataset.tab === view));
+  if (view !== 'watch'){ $('#title').textContent = 'Học qua video'; if (player && player.pauseVideo) try { player.pauseVideo(); } catch(e){} }
+  if (view === 'saved') renderSaved();
+  window.scrollTo(0, 0);
+}
+$('#tabs').addEventListener('click', e => { const b = e.target.closest('button'); if (b) setView(b.dataset.tab); });
+$('#backBtn').onclick = () => { history.replaceState(null, '', location.pathname); setView('videos'); };
+
+/* ===== Trình phát ===== */
+let player = null, ytReady = false, pending = null;
+window.onYouTubeIframeAPIReady = () => { ytReady = true; if (pending){ const p = pending; pending = null; makePlayer(p.id, p.t); } };
+(() => { const s = document.createElement('script'); s.src = 'https://www.youtube.com/iframe_api'; document.head.appendChild(s); })();
+
+function makePlayer(id, t){
+  if (player && player.loadVideoById){ player.loadVideoById({ videoId:id, startSeconds:t || 0 }); return; }
+  player = new YT.Player('yt', { videoId:id, playerVars:{ playsinline:1, rel:0, iv_load_policy:3, cc_load_policy:0, autoplay:1, start:Math.floor(t || 0), hl:'vi' },
+    events:{ onReady: e => { try { e.target.setPlaybackRate(S.speed); e.target.playVideo(); } catch(x){} }, onStateChange: paintPlay } });
+}
+const playing = () => { try { return player.getPlayerState() === YT.PlayerState.PLAYING; } catch(e){ return false; } };
+const now = () => { try { return player.getCurrentTime() || 0; } catch(e){ return 0; } };
+function paintPlay(){ $('#bPlay').textContent = playing() ? '❚❚ Dừng' : '▶ Phát'; }
+
+async function openVideo(id, t = 0){
+  const v = S.rows.flatMap(r => r.items).find(x => x.id === id) || { id, title:'', channel:'' };
+  S.v = v; S.phr = null; S.cap = null; S.sel = 0; S.now = -1; S.capIdx = -1;
+  $('#title').textContent = v.title || 'Video';
+  $('#vTitle').textContent = v.title; $('#vSub').textContent = v.channel;
+  $('#cap').textContent = '';
+  history.replaceState(null, '', `?v=${encodeURIComponent(id)}`);
+  setView('watch');
+  renderSide();
+  if (ytReady) makePlayer(id, t); else pending = { id, t };
+  const [phr, cap] = await Promise.all([getJSON(`video-data/phrases/${id}.json`), getJSON(`video-data/captions/${id}.json`)]);
+  if (S.v !== v) return;
+  S.phr = phr && phr.phrases && phr.phrases.length ? phr : null;
+  S.cap = cap && cap.s ? cap.s : null;
+  if (S.phr && t){ const i = S.phr.phrases.findIndex(p => Math.abs(p.t - t) < 1); if (i >= 0) S.sel = i; }
+  renderSide();
+}
+
+/* ===== Cột cụm từ ===== */
+function markQuote(q, phrase){
+  const words = String(phrase || '').toLowerCase().split(/\s+/).filter(w => w.length > 2 && !['one','one\'s','someone','something','sth','sb','the','and','for','your','with','from','oneself'].includes(w));
+  const qs = esc(q || '');
+  if (!words.length) return qs;
+  return qs.replace(/[A-Za-zÀ-ỹ'’-]+/g, w => words.some(x => w.toLowerCase().startsWith(x.slice(0, Math.max(3, x.length - 2)))) ? `<mark>${w}</mark>` : w);
+}
+function renderSide(){
+  const el = $('#side'), d = S.phr;
+  if (!d){
+    el.innerHTML = `<div class="empty">${S.v && S.index[S.v.id] ? 'Đang tải cụm từ…' : 'Video này chưa có cụm từ. Bạn vẫn xem bình thường; cụm từ sẽ có sau khi chạy <b>run_local.sh</b>.'}</div>`;
+    return;
+  }
+  const p = d.phrases[S.sel];
+  el.innerHTML = `
+    <div class="detail">
+      <div class="d-top"><span>Cụm từ ${S.sel + 1}/${d.phrases.length} · ${fmt(p.t)}</span><span class="live">${S.sel === S.now && playing() ? '● Đang nói câu này' : ''}</span></div>
+      <div class="d-p">${esc(p.phrase)}</div>
+      ${p.ipa ? `<div class="d-ipa">${esc(p.ipa)}</div>` : ''}
+      <div class="d-m">${esc(p.meaning_vi)}</div>
+      <div class="quote">“${markQuote(p.quote, p.phrase)}”</div>
+      ${p.usage_vi ? `<div class="d-u">${esc(p.usage_vi)}</div>` : ''}
+      ${p.example_en ? `<div class="d-ex">${esc(p.example_en)}<small>${esc(p.example_vi)}</small></div>` : ''}
+      <div class="d-act">
+        <button class="primary" data-act="play">▶ Nghe câu</button>
+        <button data-act="speak">🔊 Đọc từ</button>
+        <button data-act="save" class="${isSaved(p.phrase) ? 'saved' : ''}">${isSaved(p.phrase) ? '★ Đã lưu' : '☆ Lưu từ'}</button>
+      </div>
+    </div>
+    ${d.summary_vi ? `<p class="sum">${esc(d.summary_vi)}</p>` : ''}
+    <div class="lhead"><h3>Cụm từ hay</h3>${d.level ? `<span class="lvl">${esc(d.level)}</span>` : ''}<span>${d.phrases.length} cụm · chạm để nghe</span></div>
+    <div id="plist">${d.phrases.map((x, i) => `
+      <button class="ph${i === S.sel ? ' sel' : ''}${i === S.now ? ' now' : ''}" data-i="${i}">
+        <span class="st">${isSaved(x.phrase) ? '★' : ''}</span>
+        <span class="tx"><div class="p">${esc(x.phrase)}</div><div class="m">${esc(x.meaning_vi)}</div></span>
+        <span class="tm">${fmt(x.t)}</span>
+      </button>`).join('')}</div>`;
+}
+$('#side').addEventListener('click', e => {
+  if (!S.phr) return;
+  const a = e.target.closest('[data-act]'), row = e.target.closest('.ph');
+  const p = S.phr.phrases[S.sel];
+  if (a){
+    if (a.dataset.act === 'play') playPhrase(S.sel);
+    else if (a.dataset.act === 'speak') speak(p.phrase.replace(/\b(someone|something|sb|sth|one's|oneself)\b/gi, '').replace(/\s+/g,' ').trim() || p.phrase);
+    else if (a.dataset.act === 'save'){ toggleSave(p); renderSide(); }
+    return;
+  }
+  if (row){ S.sel = +row.dataset.i; S.touchHold = Date.now() + 10000; playPhrase(S.sel); renderSide(); scrollDetailIntoView(); }
+});
+function scrollDetailIntoView(){
+  if (matchMedia('(max-width:900px), (orientation:portrait)').matches){
+    const d = $('.detail'); if (d){ const y = d.getBoundingClientRect().top + scrollY - $('.stage').offsetHeight - 80; scrollTo({ top:Math.max(0, y), behavior:'smooth' }); }
+  }
+}
+function playPhrase(i){
+  if (!player || !player.seekTo || !S.phr) return;
+  player.seekTo(Math.max(0, S.phr.phrases[i].t - 0.3), true); player.playVideo();
+  S.now = i;
+}
+
+/* ===== Nút điều khiển ===== */
+S.speed = parseFloat(store.get('ipad.speed')) || 1;
+const SPEEDS = [0.75, 1, 1.25];
+$('#bSpeed').textContent = `${String(S.speed).replace('.', ',')}×`;
+$('#bPlay').onclick = () => { if (!player || !player.getPlayerState) return; playing() ? player.pauseVideo() : player.playVideo(); setTimeout(paintPlay, 150); };
+$('#bBack').onclick = () => { if (player && player.seekTo) player.seekTo(Math.max(0, now() - 5), true); };
+$('#bFwd').onclick = () => { if (player && player.seekTo) player.seekTo(now() + 10, true); };
+$('#bSpeed').onclick = () => {
+  S.speed = SPEEDS[(SPEEDS.indexOf(S.speed) + 1) % SPEEDS.length]; store.set('ipad.speed', S.speed);
+  $('#bSpeed').textContent = `${String(S.speed).replace('.', ',')}×`;
+  try { player.setPlaybackRate(S.speed); } catch(e){}
+};
+let ccOn = store.get('ipad.cc') !== '0';
+function paintCC(){ $('#bCC').classList.toggle('on', ccOn); $('#cap').classList.toggle('off', !ccOn); }
+$('#bCC').onclick = () => { ccOn = !ccOn; store.set('ipad.cc', ccOn ? '1' : '0'); paintCC(); };
+paintCC();
+
+/* ===== Phụ đề tự vẽ + theo dõi cụm từ đang nói ===== */
+function capAt(t){
+  const s = S.cap; if (!s || !s.length) return -1;
+  let lo = 0, hi = s.length - 1, k = -1;
+  while (lo <= hi){ const m = (lo + hi) >> 1; if (s[m][0] <= t){ k = m; lo = m + 1; } else hi = m - 1; }
+  if (k < 0) return -1;
+  return (t <= s[k][0] + Math.max(s[k][1], 1.2) + 0.4 || (s[k + 1] && t < s[k + 1][0])) ? k : -1;
+}
+setInterval(() => {
+  if (S.view !== 'watch' || !player || !player.getCurrentTime) return;
+  paintPlay();
+  const t = now();
+  if (S.cap && ccOn){
+    const k = capAt(t);
+    if (k !== S.capIdx){
+      S.capIdx = k;
+      const seg = k >= 0 ? S.cap[k] : null;
+      const ph = seg && S.phr && S.phr.phrases.find(p => Math.abs(p.t - seg[0]) < 0.05);
+      $('#cap').innerHTML = !seg ? '' : ph ? markQuote(seg[2], ph.phrase) : esc(seg[2]);
+    }
+  }
+  if (S.phr && playing()){
+    let idx = -1; S.phr.phrases.forEach((p, i) => { if (p.t <= t + 0.5) idx = i; });
+    if (idx !== S.now){
+      S.now = idx;
+      if (idx >= 0 && Date.now() > S.touchHold) S.sel = idx;
+      renderSide();
+    }
+  }
+}, 250);
+
+/* ===== Màn từ đã lưu ===== */
+function renderSaved(){
+  const l = savedList();
+  $('#savedView').innerHTML = !l.length
+    ? `<div class="empty">Chưa có từ nào. Khi xem video, chạm <b>☆ Lưu từ</b> để thêm vào đây.<br><br>Từ lưu trên iPad nằm riêng trong Safari, không đồng bộ với TV.</div>`
+    : `<div class="lhead"><h3>Từ đã lưu</h3><span>${l.length} từ · mới nhất ở trên</span></div>` + l.map((o, i) => `
+      <div class="sw">
+        <div class="h"><span class="w">${esc(o.w)}</span>${o.ipa ? `<span class="i">${esc(o.ipa)}</span>` : ''}</div>
+        <div class="v">${esc(o.vi)}</div>
+        ${o.ex ? `<div class="e">${esc(o.ex)}</div>` : ''}
+        ${o.src && o.src.title ? `<div class="src">Từ video: ${esc(o.src.title)} · ${fmt(o.src.t)}${o.added ? ` · lưu ${esc(o.added)}` : ''}</div>` : ''}
+        <div class="a">
+          ${o.src && o.src.id ? `<button data-go="${i}">▶ Xem lại câu này</button>` : ''}
+          <button data-say="${i}">🔊 Đọc</button>
+          <button data-del="${i}">Bỏ lưu</button>
+        </div>
+      </div>`).join('');
+}
+$('#savedView').addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b) return;
+  const l = savedList();
+  if (b.dataset.go){ const o = l[+b.dataset.go]; openVideo(o.src.id, o.src.t); }
+  else if (b.dataset.say){ speak(l[+b.dataset.say].w); }
+  else if (b.dataset.del){ const o = l[+b.dataset.del]; setSaved(l.filter((_, j) => j !== +b.dataset.del)); toast(`Đã bỏ lưu “${o.w}”`); renderSaved(); }
+});
+
+load();
+</script>
+</body>
+</html>
