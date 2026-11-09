@@ -1,0 +1,132 @@
+{
+ "id": "ZHBB8Go0e_k",
+ "created": "2026-11-09",
+ "source": "youtube-auto",
+ "language": "en",
+ "ai": "gemini-3.6-flash",
+ "summary_vi": "Video chia sẻ hành trình đáng nhớ của tác giả trong 3 tháng mùa hè tại California, từ việc lái xe dọc bờ biển đến khám phá dãy núi Yosemite hùng vĩ. Qua trải nghiệm này, người nói đã thay đổi tư duy để sống hết mình cho hiện tại và tìm thấy ý nghĩa sâu sắc trong cuộc sống.",
+ "level": "C1",
+ "phrases": [
+  {
+   "t": 1.52,
+   "d": 5.04,
+   "phrase": "a stretch to say",
+   "ipa": "/ə strɛʧ tuː seɪ/",
+   "quote": "much of a stretch to say that at some",
+   "meaning_vi": "nói quá, gượng ép khi nhận định điều gì",
+   "usage_vi": "Dùng khi muốn nhận xét một phán đoán hoặc tuyên bố là hơi quá đà hoặc chưa hoàn toàn chính xác.",
+   "example_en": "It is a bit of a stretch to say that artificial intelligence will replace all human jobs by next year.",
+   "example_vi": "Thật hơi quá lời khi nói rằng trí tuệ nhân tạo sẽ thay thế toàn bộ công việc của con người vào năm tới."
+  },
+  {
+   "t": 12.16,
+   "d": 4.8,
+   "phrase": "along those lines",
+   "ipa": "/əˈlɔŋ ðoʊz laɪnz/",
+   "quote": "moving to California, something along those lines. I did about 9 years ago, I",
+   "meaning_vi": "đại loại như vậy, tương tự như thế",
+   "usage_vi": "Dùng ở cuối câu hoặc cụm từ để gợi ý các ý tưởng có tính chất tương tự mà không cần liệt kê chi tiết.",
+   "example_en": "I am thinking of pursuing a career in graphic design or something along those lines.",
+   "example_vi": "Tôi đang cân nhắc theo đuổi sự nghiệp thiết kế đồ họa hoặc đại loại như vậy."
+  },
+  {
+   "t": 25.12,
+   "d": 5.44,
+   "phrase": "sit dormant",
+   "ipa": "/sɪt ˈdɔrmənt/",
+   "quote": "sitting pretty dormant in me as a dream",
+   "meaning_vi": "nằm ngủ yên, bị nén lại (ước mơ, tiềm năng)",
+   "usage_vi": "Dùng để mô tả ước mơ, tài năng hoặc kế hoạch đã bị hoãn lại hoặc không được kích hoạt trong thời gian dài.",
+   "example_en": "Her passion for painting sat dormant for over a decade while she focused on raising her children.",
+   "example_vi": "Đam mê hội họa của cô ấy đã ngủ yên hơn một thập kỷ trong khi cô tập trung nuôi dạy con cái."
+  },
+  {
+   "t": 110.72,
+   "d": 5.04,
+   "phrase": "in the same boat",
+   "ipa": "/ɪn ðə seɪm boʊt/",
+   "quote": "boat, the same understanding just how",
+   "meaning_vi": "cùng chung hoàn cảnh",
+   "usage_vi": "Thành ngữ tự nhiên trong IELTS Speaking Part 1 và 2 khi thảo luận về các khó khăn hoặc trải nghiệm chung với người khác.",
+   "example_en": "During the pandemic, small business owners and freelancers were all in the same boat.",
+   "example_vi": "Trong thời kỳ đại dịch, các chủ doanh nghiệp nhỏ và người làm nghề tự do đều cùng chung hoàn cảnh."
+  },
+  {
+   "t": 144.32,
+   "d": 3.71,
+   "phrase": "flip the script",
+   "ipa": "/flɪp ðə skrɪpt/",
+   "quote": "and kind of flip the script and say,",
+   "meaning_vi": "đảo ngược tình thế, thay đổi góc nhìn",
+   "usage_vi": "Dùng khi bạn chủ động thay đổi cách tiếp cận từ tiêu cực/bị động sang tích cực/chủ động.",
+   "example_en": "Instead of viewing the rejection as a failure, she flipped the script and used it as motivation to improve.",
+   "example_vi": "Thay vì coi sự từ chối là thất bại, cô ấy đã đảo ngược tình thế và dùng nó làm động lực để cải thiện."
+  },
+  {
+   "t": 327.76,
+   "d": 5.44,
+   "phrase": "in solitude",
+   "ipa": "/ɪn ˈsɑləˌtud/",
+   "quote": "your future and adventure in solitude",
+   "meaning_vi": "trong sự tĩnh lặng một mình",
+   "usage_vi": "Từ vựng C1 diễn tả việc ở một mình để suy ngẫm, nghỉ ngơi hoặc nạp lại năng lượng chứ không phải cô đơn tiêu cực.",
+   "example_en": "He prefers spending his weekends in solitude reading books away from the noisy city center.",
+   "example_vi": "Anh ấy thích dành những ngày cuối tuần một mình đọc sách tránh xa trung tâm thành phố ồn ào."
+  },
+  {
+   "t": 340.4,
+   "d": 5.2,
+   "phrase": "sense of adventure",
+   "ipa": "/ə sɛns ʌv ædˈvɛnʧər/",
+   "quote": "sense of adventure, a smile, good",
+   "meaning_vi": "tinh thần phiêu lưu, khao khát khám phá",
+   "usage_vi": "Cụm danh từ tuyệt vời cho chủ đề Travel/Lifestyle trong IELTS Speaking.",
+   "example_en": "Moving to a foreign country requires courage and a strong sense of adventure.",
+   "example_vi": "Chuyển đến một quốc gia xa lạ đòi hỏi sự dũng cảm và một tinh thần phiêu lưu mạnh mẽ."
+  },
+  {
+   "t": 372.8,
+   "d": 5.68,
+   "phrase": "unbiased opinion",
+   "ipa": "/ənˈbaɪəst əˈpɪnjən/",
+   "quote": "Now, in my completely unbiased opinion,",
+   "meaning_vi": "ý kiến khách quan",
+   "usage_vi": "Thường dùng trong văn viết (Task 2) hoặc phát biểu công việc khi nhấn mạnh tính trung lập, không thiên vị.",
+   "example_en": "To ensure an unbiased opinion, the company hired an independent audit firm.",
+   "example_vi": "Để đảm bảo một ý kiến khách quan, công ty đã thuê một công ty kiểm toán độc lập."
+  },
+  {
+   "t": 485.2,
+   "d": 6.48,
+   "phrase": "have someone's heart",
+   "ipa": "/hæv ˈsʌmwʌnz hɑrt/",
+   "quote": "personally define as having my heart and",
+   "meaning_vi": "chiếm trọn trái tim của ai",
+   "usage_vi": "Cách nói ẩn dụ thể hiện tình cảm đặc biệt sâu sắc dành cho một vùng đất, con người hay trải nghiệm.",
+   "example_en": "No matter how many places I visit around the world, Paris will always have my heart.",
+   "example_vi": "Dù tôi có ghé thăm bao nhiêu nơi trên thế giới, Paris vẫn luôn chiếm trọn trái tim tôi."
+  },
+  {
+   "t": 603.2,
+   "d": 5.12,
+   "phrase": "fleeting moments",
+   "ipa": "/ˈflitɪŋ ˈmoʊmənts/",
+   "quote": "gives it meaning. Fleeting moments force",
+   "meaning_vi": "những khoảnh khắc thoáng qua",
+   "usage_vi": "Cụm từ giàu hình ảnh, điểm lexical resource cao trong IELTS Writing/Speaking khi tả ký ức hoặc thời gian.",
+   "example_en": "Travel reminds us to treasure fleeting moments of joy rather than focusing solely on long-term goals.",
+   "example_vi": "Du lịch nhắc nhở chúng ta trân trọng những khoảnh khắc hạnh phúc thoáng qua thay vì chỉ tập trung vào mục tiêu dài hạn."
+  },
+  {
+   "t": 749.12,
+   "d": 4.19,
+   "phrase": "with open arms",
+   "ipa": "/wɪð ˈoʊpən ɑrmz/",
+   "quote": "faces and open arms. [snorts]",
+   "meaning_vi": "với vòng tay rộng mở, đón tiếp nồng hậu",
+   "usage_vi": "Thành ngữ thông dụng miêu tả sự tiếp đón nồng nhiệt của con người hoặc cộng đồng dành cho ai đó.",
+   "example_en": "When we arrived at the village, the locals welcomed us with open arms.",
+   "example_vi": "Khi chúng tôi đến ngôi làng, người dân địa phương đã chào đón chúng tôi với vòng tay rộng mở."
+  }
+ ]
+}
