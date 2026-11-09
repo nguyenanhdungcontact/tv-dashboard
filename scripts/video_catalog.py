@@ -14,6 +14,7 @@ Không cần khóa API. Chạy trên máy Mac (YouTube hay chặn IP của GitHu
 """
 import json
 import pathlib
+import re
 import sys
 import time
 import xml.etree.ElementTree as ET
@@ -38,6 +39,52 @@ def fmt_dur(sec: float) -> str:
     return f"{h}:{m:02d}:{x:02d}" if h else f"{m}:{x:02d}"
 
 
+AGO = {"second": 1 / 86400, "minute": 1 / 1440, "hour": 1 / 24, "day": 1, "week": 7, "month": 30, "year": 365}
+
+
+def read_channel_page(handle: str, channel_id: str) -> list:
+    """Dự phòng khi RSS của YouTube lỗi: đọc tab Videos của kênh (không gồm Shorts)."""
+    url = f"https://www.youtube.com/channel/{channel_id}/videos"
+    try:
+        r = requests.get(url, headers=UA, timeout=20)
+        r.raise_for_status()
+        m = re.search(r"var ytInitialData = (\{.*?\});</script>", r.text, re.S)
+        data = json.loads(m.group(1)) if m else {}
+    except Exception as e:
+        print(f"  ! Không đọc được trang kênh @{handle}: {type(e).__name__}")
+        return []
+    lockups = []
+
+    def walk(o):
+        if isinstance(o, dict):
+            if "lockupViewModel" in o:
+                lockups.append(o["lockupViewModel"])
+            for x in o.values():
+                walk(x)
+        elif isinstance(o, list):
+            for x in o:
+                walk(x)
+    walk(data)
+    name = (((data.get("metadata") or {}).get("channelMetadataRenderer") or {}).get("title") or handle).strip()
+
+    now = datetime.now(timezone.utc)
+    out = []
+    for L in lockups:
+        if L.get("contentType") != "LOCKUP_CONTENT_TYPE_VIDEO" or not L.get("contentId"):
+            continue
+        meta = (L.get("metadata") or {}).get("lockupMetadataViewModel") or {}
+        title = ((meta.get("title") or {}).get("content") or "").strip()
+        days = None
+        for row in (((meta.get("metadata") or {}).get("contentMetadataViewModel") or {}).get("metadataRows") or []):
+            for part in row.get("metadataParts") or []:
+                mm = re.match(r"(\d+)\s+(second|minute|hour|day|week|month|year)s?\s+ago", part.get("accessibilityLabel") or "")
+                if mm:
+                    days = int(mm.group(1)) * AGO[mm.group(2)]
+        published = (now - timedelta(days=days)).isoformat() if days is not None else now.isoformat()
+        out.append({"id": L["contentId"], "title": title, "channel": name, "published": published})
+    return out
+
+
 def read_feed(handle: str, channel_id: str) -> list:
     url = f"https://www.youtube.com/feeds/videos.xml?channel_id={channel_id}"
     try:
@@ -45,8 +92,8 @@ def read_feed(handle: str, channel_id: str) -> list:
         r.raise_for_status()
         root = ET.fromstring(r.content)
     except Exception as e:
-        print(f"  ! Không đọc được RSS của @{handle}: {e}")
-        return []
+        print(f"  ! RSS của @{handle} lỗi ({type(e).__name__}), đọc trang kênh thay thế")
+        return read_channel_page(handle, channel_id)
     out = []
     for e in root.findall("a:entry", NS):
         vid = e.findtext("yt:videoId", default="", namespaces=NS)
