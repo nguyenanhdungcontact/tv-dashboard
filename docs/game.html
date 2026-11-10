@@ -37,19 +37,21 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .lives{font-size:17px;letter-spacing:2px;color:var(--bad);text-shadow:0 2px 8px rgba(0,0,0,.6)}
 .pbtn{pointer-events:auto;width:40px;height:40px;border-radius:50%;background:rgba(10,14,46,.6);border:1px solid rgba(255,255,255,.15);font-size:15px;font-weight:800}
 
-/* ---------- Nút bắn (trái) + vòng điều khiển (phải) ---------- */
+/* ---------- Vòng điều khiển (trái) + nút bắn (phải); body.swap đổi hai bên ---------- */
 .ctrl{position:fixed;z-index:6;touch-action:none}
-#fire{left:calc(var(--sal) + 22px);bottom:calc(var(--sab) + 22px);width:112px;height:112px;border-radius:50%;
+#fire{right:calc(var(--sar) + 22px);bottom:calc(var(--sab) + 22px);width:112px;height:112px;border-radius:50%;
   background:radial-gradient(circle at 50% 40%,rgba(255,122,138,.55),rgba(255,80,110,.25) 60%,rgba(255,80,110,.12));
   border:2px solid rgba(255,160,175,.55);display:grid;place-items:center;font-family:var(--head);font-weight:800;font-size:18px;letter-spacing:.06em;color:#fff;
   box-shadow:0 0 0 6px rgba(255,90,120,.08),0 8px 30px rgba(0,0,0,.4);transition:transform .06s}
 #fire.on{transform:scale(.93);background:radial-gradient(circle at 50% 40%,rgba(255,140,155,.85),rgba(255,80,110,.5) 60%,rgba(255,80,110,.25))}
-#stick{right:calc(var(--sar) + 22px);bottom:calc(var(--sab) + 22px);width:136px;height:136px;border-radius:50%;
+#stick{left:calc(var(--sal) + 22px);bottom:calc(var(--sab) + 22px);width:136px;height:136px;border-radius:50%;
   background:radial-gradient(circle,rgba(127,231,255,.10),rgba(127,231,255,.04) 70%);border:2px solid rgba(127,231,255,.35);
   box-shadow:0 8px 30px rgba(0,0,0,.35)}
 #stick::before{content:"";position:absolute;inset:26%;border-radius:50%;border:1px dashed rgba(127,231,255,.18)}
 #knob{position:absolute;left:50%;top:50%;width:58px;height:58px;margin:-29px 0 0 -29px;border-radius:50%;
   background:radial-gradient(circle at 40% 35%,#c9f6ff,#5fd3f0 55%,#2a8fb3);box-shadow:0 4px 16px rgba(0,0,0,.45),0 0 18px rgba(127,231,255,.4)}
+body.swap #fire{right:auto;left:calc(var(--sal) + 22px)}
+body.swap #stick{left:auto;right:calc(var(--sar) + 22px)}
 body:not(.playing) .ctrl{opacity:.35}
 
 /* ---------- Màn bắt đầu / tạm dừng / kết thúc ---------- */
@@ -114,21 +116,21 @@ body:not(.playing) .ctrl{opacity:.35}
   <h1>Thiên thạch <span>từ vựng</span></h1>
   <p>Mỗi thiên thạch là một từ tiếng Anh. Bắn vỡ nó để thấy nghĩa. Thiên thạch to cần nhiều phát hơn.</p>
   <div class="legend">
-    <div><b>Ngón cái trái</b><br>giữ nút BẮN</div>
-    <div><b>Ngón cái phải</b><br>kéo vòng tròn để bay</div>
+    <div><b id="lgL">Ngón cái trái</b><br><span id="lgLt">kéo vòng tròn để bay</span></div>
+    <div><b id="lgR">Ngón cái phải</b><br><span id="lgRt">giữ nút BẮN</span></div>
     <div><b style="color:var(--gold)">★ Vàng</b><br>từ bạn đã lưu → đạn tia laser</div>
     <div><b style="color:var(--violet)">◆ Tím</b><br>từ khó → đạn chùm 3 tia</div>
   </div>
   <p id="wordInfo">Đang tải từ vựng…</p>
   <button class="big" id="startBtn">Bắt đầu</button>
-  <div class="row2"><button id="muteBtn">🔊 Âm thanh: bật</button><a href="iphone.html">← Trang học</a></div>
+  <div class="row2"><button id="handBtn">⇄ Đổi tay</button><button id="muteBtn">🔊 Âm thanh: bật</button><a href="iphone.html">← Trang học</a></div>
   <div class="rot">Mẹo: xoay ngang iPhone để có nhiều chỗ bay hơn.</div>
 </div></div>
 
 <div class="ov" id="pauseOv"><div class="card">
   <h1>Tạm dừng</h1>
   <button class="big" id="resumeBtn">Chơi tiếp</button>
-  <div class="row2"><button id="muteBtn2">🔊 Âm thanh</button><button id="quitBtn">Kết thúc lượt</button></div>
+  <div class="row2"><button id="handBtn2">⇄ Đổi tay</button><button id="muteBtn2">🔊 Âm thanh</button><button id="quitBtn">Kết thúc lượt</button></div>
 </div></div>
 
 <div class="ov" id="overOv"><div class="card">
@@ -249,6 +251,16 @@ const sfx = {
 function paintMute() { ['#muteBtn', '#muteBtn2'].forEach(s => $(s).textContent = muted ? '🔇 Âm thanh: tắt' : '🔊 Âm thanh: bật'); }
 function toggleMute() { muted = !muted; store.set('game.mute', muted ? '1' : '0'); paintMute(); }
 $('#muteBtn').onclick = toggleMute; $('#muteBtn2').onclick = toggleMute; paintMute();
+
+/* Đổi tay: mặc định tay trái lái, tay phải bắn; bấm "⇄ Đổi tay" để đảo lại (máy nhớ lựa chọn) */
+function paintHands() {
+  const swap = store.get('game.swap') === '1';
+  document.body.classList.toggle('swap', swap);
+  $('#lgLt').textContent = swap ? 'giữ nút BẮN' : 'kéo vòng tròn để bay';
+  $('#lgRt').textContent = swap ? 'kéo vòng tròn để bay' : 'giữ nút BẮN';
+}
+function toggleHands() { store.set('game.swap', store.get('game.swap') === '1' ? '0' : '1'); paintHands(); }
+$('#handBtn').onclick = toggleHands; $('#handBtn2').onclick = toggleHands; paintHands();
 
 /* ---------- Điều khiển: giữ BẮN (trái), kéo vòng tròn (phải); dùng được cả hai ngón cùng lúc ---------- */
 const input = { fire: false, jx: 0, jy: 0, firePid: null, stickPid: null };
