@@ -396,8 +396,9 @@ function wrapText(text, maxW) {
 }
 /* Từ to + nghĩa gọn: hiện ở chỗ viên gạch vỡ, trôi nhẹ xuống và dừng ngay trên thanh đỡ (chỗ mắt đang nhìn),
    giữ một lúc rồi mờ dần. Nhiều từ cùng lúc thì xếp thành các hàng phía trên thanh, không đè nhau. */
-const WORD_PX = 22, MEAN_PX = 13, DRIFT = 1.3, POP_LIFE = 3.8;
-const easeOut = t => 1 - Math.pow(1 - t, 3);
+/* Rơi như chiếc lá: chậm (DRIFT giây), bắt đầu và dừng đều nhẹ nhàng, hơi đung đưa rồi đứng yên */
+const WORD_PX = 22, MEAN_PX = 13, DRIFT = 3.1, POP_LIFE = 6.2;
+const easeInOut = t => 0.5 - 0.5 * Math.cos(Math.PI * t);
 function popMeaning(b) {
   ctx.font = `800 ${WORD_PX * U}px ${HEAD}`;
   const ww = ctx.measureText(b.item.w).width;
@@ -419,7 +420,8 @@ function popMeaning(b) {
     if (x !== undefined) best = { x, y };
   }
   if (!best) { G.pops.shift(); best = { x: sx, y: yBottom }; }
-  G.pops.push({ sx, sy, ex: best.x, ey: best.y, x: sx, y: sy, w: b.item.w, lines, bw, bh, t: 0, life: POP_LIFE, kind: b.kind });
+  G.pops.push({ sx, sy, ex: best.x, ey: best.y, x: sx, y: sy, w: b.item.w, lines, bw, bh, t: 0, life: POP_LIFE, kind: b.kind,
+                sway: (Math.random() < 0.5 ? -1 : 1) * rand(5, 9) * U, ph: rand(0, 6.3) });
   if (G.pops.length > 6) G.pops.shift();
 }
 
@@ -542,7 +544,12 @@ function tickFx(dt) {
   G.bricks.forEach(k => { if (k.flash > 0) k.flash -= dt; });
   G.sparks.forEach(s => { s.t += dt; s.x += s.vx * dt; s.y += s.vy * dt; s.vy += 220 * U * dt; });
   G.sparks = G.sparks.filter(s => s.t < s.life);
-  G.pops.forEach(q => { q.t += dt; const f = easeOut(Math.min(1, q.t / DRIFT)); q.x = q.sx + (q.ex - q.sx) * f; q.y = q.sy + (q.ey - q.sy) * f; });
+  G.pops.forEach(q => {
+    q.t += dt;
+    const k = Math.min(1, q.t / DRIFT), f = easeInOut(k);
+    q.x = q.sx + (q.ex - q.sx) * f + q.sway * Math.sin(q.ph + q.t * 2.2) * (1 - k);   // đung đưa nhỏ dần rồi đứng yên
+    q.y = q.sy + (q.ey - q.sy) * f;
+  });
   G.pops = G.pops.filter(q => q.t < q.life);
   G.banners.forEach(q => q.t += dt); G.banners = G.banners.filter(q => q.t < q.life);
 }
@@ -668,7 +675,7 @@ function draw(dt) {
   G.bricks.forEach(drawBrick);
   // Từ + nghĩa vừa vỡ (vẽ trước thanh đỡ và bóng để bóng luôn nổi lên trên)
   G.pops.forEach(q => {
-    const a = q.t < 0.15 ? q.t / 0.15 : 1 - Math.max(0, q.t - q.life + 0.8) / 0.8, sc = q.t < 0.2 ? 0.8 + q.t : 1;
+    const a = q.t < 0.6 ? easeInOut(q.t / 0.6) : 1 - easeInOut(Math.min(1, Math.max(0, q.t - q.life + 1.2) / 1.2)), sc = 1;
     ctx.save(); ctx.globalAlpha = clamp(a, 0, 1) * 0.95; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
     const top = q.y - q.bh / 2;
     ctx.font = `800 ${WORD_PX * U * sc}px ${HEAD}`;
