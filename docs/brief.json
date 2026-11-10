@@ -1,6 +1,6 @@
 {
-  "date": "2026-11-09",
-  "updated": "Cập nhật 10:16 thứ Hai, 09/11/2026",
+  "date": "2026-11-10",
+  "updated": "Cập nhật 11:39 thứ Ba, 10/11/2026",
   "sections": [
     {
       "id": "hot",
@@ -8,31 +8,31 @@
       "color": "--c-hot",
       "items": [
         {
-          "title": "Mỹ siết phong tỏa Iran, Tehran ra tối hậu thư đàm phán",
-          "summary": "Bộ Tư lệnh trung tâm Mỹ lập một lực lượng đặc nhiệm mới để tăng cường phong tỏa Iran, trong đó có việc chặn các tuyến vận chuyển đường bộ vào nước này. Về phía mình, Tehran đưa ra tối hậu thư liên quan đến đàm phán.",
-          "points": [],
-          "why": "",
-          "source": "Thanh Niên",
-          "date": "09/11",
-          "link": "https://thanhnien.vn/my-chan-cac-tuyen-van-chuyen-duong-bo-vao-iran-tehran-ra-toi-hau-thu-185261109090105481.htm"
-        },
-        {
-          "title": "Ông Trump: Mỹ khó nối lại tấn công Iran",
-          "summary": "Tổng thống Trump cho biết Mỹ ít có khả năng tiếp tục tấn công Iran. Điều kiện là đàm phán về hạt nhân và việc mở lại eo biển Hormuz đạt được tiến triển.",
+          "title": "Dự toán thu ngân sách 2027 vượt 3,33 triệu tỷ đồng",
+          "summary": "Ngân sách năm 2027 dự kiến thu hơn 3,33 triệu tỷ đồng, trong đó nguồn thu từ nhà đất có thể chiếm gần một phần tư, tương đương hơn 775.000 tỷ đồng. Nguồn tích lũy cải cách tiền lương sẽ được dùng để điều chỉnh lương hưu và phụ cấp.",
           "points": [],
           "why": "",
           "source": "VnExpress",
           "date": "09/11",
-          "link": "https://vnexpress.net/ong-trump-kho-co-kha-nang-my-noi-lai-tan-cong-iran-5142248.html"
+          "link": "https://vnexpress.net/ngan-sach-du-thu-hon-775-000-ty-dong-tu-nha-dat-nam-sau-5142350.html"
         },
         {
-          "title": "Iran cảnh báo Mỹ phải chấp nhận đề xuất hòa bình",
-          "summary": "Iran yêu cầu Mỹ chấp thuận đề xuất mới nhất nhằm chấm dứt chiến sự. Tehran cảnh báo nếu không, nguy cơ xung đột leo thang sẽ xuất hiện.",
+          "title": "Ông Trump thấy tín hiệu tích cực trong xung đột với Iran",
+          "summary": "Sau cuộc gặp Thủ tướng Qatar tại Nhà Trắng, Tổng thống Trump cho biết đã xuất hiện động lực tích cực hướng tới việc chấm dứt xung đột với Iran.",
           "points": [],
           "why": "",
           "source": "VnExpress",
-          "date": "09/11",
-          "link": "https://vnexpress.net/iran-ra-canh-bao-yeu-cau-my-chap-nhan-de-xuat-hoa-binh-5142249.html"
+          "date": "10/11",
+          "link": "https://vnexpress.net/ong-trump-thay-tin-hieu-tich-cuc-trong-xung-dot-voi-iran-5142700.html"
+        },
+        {
+          "title": "Vàng thế giới tăng mạnh, giá dầu giảm sâu",
+          "summary": "Giá vàng thế giới tăng gần 70 USD mỗi ounce nhờ đồng đôla Mỹ suy yếu. Cùng lúc, giá dầu Brent giảm gần 6 USD mỗi thùng.",
+          "points": [],
+          "why": "",
+          "source": "VnExpress",
+          "date": "10/11",
+          "link": "https://vnexpress.net/gia-vang-the-gioi-tang-manh-gia-dau-lao-doc-5142686.html"
         }
       ]
     },
@@ -42,31 +42,31 @@
       "color": "--c-work",
       "items": [
         {
-          "title": "Nhà đầu tư nghi ngờ mức định giá 2.000 tỷ USD của Anthropic",
-          "summary": "Sau đợt bán tháo cổ phiếu công nghệ tại Wall Street trong tuần, một số nhà đầu tư đã hạ bớt kỳ vọng đối với Anthropic, công ty mẹ của Claude. Mức định giá 2.000 tỷ USD của công ty vì thế bị đặt dấu hỏi.",
+          "title": "Demand Gen đổi cách nhắm mục tiêu Display từ tuần 1/12/2026",
+          "summary": "Từ tuần đầu tiên của tháng 12 năm 2026, chiến dịch Demand Gen tạo mới sẽ mặc định bật nhắm mục tiêu Display ở cấp chiến dịch. Việc nhắm mạng Display sẽ được quản lý trực tiếp ở cấp nhóm quảng cáo thông qua các tùy chọn kiểm soát kênh.",
           "points": [],
           "why": "",
-          "source": "VnExpress",
-          "date": "08/11",
-          "link": "https://vnexpress.net/nha-dau-tu-ngo-vuc-muc-dinh-gia-2-000-ty-usd-cua-anthropic-5142087.html"
+          "source": "Google Ads Developer Blog",
+          "date": "10/11",
+          "link": "http://ads-developers.googleblog.com/2026/11/display-targeting-changes-in-demand-gen.html"
         },
         {
-          "title": "AI tạo ra làn sóng nhân viên boomerang quay lại làm việc",
-          "summary": "Nhiều người từng bị sa thải hoặc bị AI thay thế nay được doanh nghiệp mời quay lại. Lý do là các công ty nhận ra mình đã quyết định quá vội vàng.",
+          "title": "Google thử nghiệm tóm tắt AI phía trên và trong quảng cáo",
+          "summary": "Google đang thử thêm nhiều bản tóm tắt do AI tạo ra trong quảng cáo tìm kiếm. Một bản tóm tắt nằm phía trên nhóm kết quả được tài trợ, gộp nội dung quảng cáo của mọi nhà quảng cáo, và có thêm tóm tắt AI bên dưới phần mô tả của từng quảng cáo.",
           "points": [],
           "why": "",
-          "source": "VnExpress",
+          "source": "Search Engine Roundtable",
           "date": "09/11",
-          "link": "https://vnexpress.net/ai-tao-ra-the-he-nhan-vien-boomerang-moi-5142122.html"
+          "link": "https://www.seroundtable.com/google-ads-ai-generated-summaries-42482.html"
         },
         {
-          "title": "Binance yêu cầu người dùng châu Âu rút tài sản sớm",
-          "summary": "Cuối năm nay, Binance sẽ đóng một số tài khoản khách hàng châu Âu. Những ai không rút tài sản đúng hạn sẽ bị thu phí hàng tháng trên số dư.",
+          "title": "Quảng cáo Multiturn trong AI Mode đã xuất hiện",
+          "summary": "Vài tuần sau khi Google công bố, quảng cáo Multiturn, tức quảng cáo hiện ở phản hồi cho các câu hỏi tiếp theo của người dùng, dường như đã chạy thật. Tác giả thử AI Mode vào chiều thứ Sáu và chia sẻ ảnh chụp cùng video minh họa.",
           "points": [],
           "why": "",
-          "source": "VnExpress",
+          "source": "Search Engine Roundtable",
           "date": "09/11",
-          "link": "https://vnexpress.net/binance-yeu-cau-nguoi-dung-chau-au-rut-tai-san-truoc-khi-bi-thu-phi-5142152.html"
+          "link": "https://www.seroundtable.com/google-ai-mode-multiturn-ads-42478.html"
         }
       ]
     },
@@ -76,31 +76,31 @@
       "color": "--c-life",
       "items": [
         {
-          "title": "Thời tiết 9-11: Bắc Bộ rét, Nam Bộ oi và mưa chiều",
-          "summary": "Bắc Bộ hôm nay có rét kèm mưa, nhiệt độ xuống khoảng 13 độ C. Nam Bộ ngày oi và chiều có mưa ở một vài nơi, còn Trung Bộ có mưa to.",
-          "points": [],
-          "why": "",
-          "source": "Tuổi Trẻ",
-          "date": "09/11",
-          "link": "https://tuoitre.vn/thoi-tiet-hom-nay-9-11-bac-bo-ret-13-do-c-nam-bo-ngay-oi-chieu-mua-vai-noi-10026110816050979.htm"
-        },
-        {
-          "title": "TP.HCM lần đầu cắt điện cơ sở gây ô nhiễm theo luật mới",
-          "summary": "Một công ty nhựa ở xã Tân Vĩnh Lộc, thuộc huyện Bình Chánh cũ, bị chính quyền cắt điện và thu hồi trạm biến áp vì gây ô nhiễm môi trường. Đây là trường hợp đầu tiên tại TP.HCM áp dụng theo quy định mới.",
+          "title": "Khởi công cải tạo rạch Văn Thánh, vốn hơn 8.500 tỷ đồng",
+          "summary": "Dự án cải tạo rạch Văn Thánh dài 2,2 km đã khởi công gói thầu đầu tiên vào sáng 9/11. Tổng vốn hơn 8.500 tỷ đồng, nhằm giảm ô nhiễm và chỉnh trang đô thị khu trung tâm TP HCM.",
           "points": [],
           "why": "",
           "source": "VnExpress",
-          "date": "08/11",
-          "link": "https://vnexpress.net/tp-hcm-lan-dau-cat-dien-co-so-gay-o-nhiem-sau-khi-co-luat-moi-5142139.html"
+          "date": "09/11",
+          "link": "https://vnexpress.net/khoi-cong-cai-tao-rach-van-thanh-o-trung-tam-tp-hcm-5142379.html"
         },
         {
-          "title": "Đường Cây Cám xuống cấp, mặt đường lồi lõm nguy hiểm",
-          "summary": "Đường Cây Cám ở phường Bình Tân, TP.HCM đang hư hỏng nghiêm trọng với mặt đường bong tróc, nhiều đoạn lún sâu và hình thành các ổ trâu. Đá sỏi lởm chởm khiến người dân lo ngại mỗi lần đi qua.",
+          "title": "Cao tốc TP HCM đi Cần Thơ hạn chế làn trong 20 ngày",
+          "summary": "Cao tốc TP HCM - Trung Lương - Mỹ Thuận tạm dừng khai thác làn số 1 theo hướng về miền Tây, đoạn qua xã Thủ Thừa. Việc hạn chế diễn ra từ 22h đến 6h trong 20 ngày để lắp dầm cầu.",
+          "points": [],
+          "why": "",
+          "source": "VnExpress",
+          "date": "10/11",
+          "link": "https://vnexpress.net/cao-toc-tu-tp-hcm-di-can-tho-dieu-chinh-giao-thong-20-ngay-5142724.html"
+        },
+        {
+          "title": "TP.HCM bắt đầu cắt điện, nước công trình và cơ sở vi phạm",
+          "summary": "UBND TP.HCM yêu cầu các địa phương thực hiện quy định cắt điện, nước với công trình vi phạm xây dựng và cơ sở gây ô nhiễm môi trường mà không chịu khắc phục.",
           "points": [],
           "why": "",
           "source": "Thanh Niên",
-          "date": "09/11",
-          "link": "https://thanhnien.vn/mat-duong-loi-lom-gay-nguy-hiem-185261108183907997.htm"
+          "date": "10/11",
+          "link": "https://thanhnien.vn/tphcm-bat-dau-cat-dien-nuoc-co-so-gay-o-nhiem-cong-trinh-vi-pham-xay-dung-185261110101345208.htm"
         }
       ]
     },
@@ -110,31 +110,31 @@
       "color": "--c-heart",
       "items": [
         {
-          "title": "Người đàn ông Cà Mau vận động xây 28 cây cầu nông thôn",
-          "summary": "Anh Trịnh Minh Tuấn, 44 tuổi, ở phường Giá Rai, Cà Mau, muốn góp phần kết nối những nhịp cầu yêu thương. Trong 3 năm qua, anh đã vận động xây dựng 28 cây cầu giao thông nông thôn.",
+          "title": "Hai chị em Đắk Lắk có 6 thân nhân là liệt sĩ đi lấy mẫu ADN",
+          "summary": "Hai chị em ở Đắk Lắk có 6 người thân hy sinh trong kháng chiến. Họ đến buổi lấy mẫu ADN để giúp xác định danh tính cho 4 liệt sĩ là cậu ruột của mình.",
           "points": [],
           "why": "",
-          "source": "Thanh Niên",
-          "date": "09/11",
-          "link": "https://thanhnien.vn/miet-mai-noi-nhung-bo-vui-18526110818313201.htm"
+          "source": "Tuổi Trẻ",
+          "date": "10/11",
+          "link": "https://tuoitre.vn/tam-su-xuc-dong-cua-nguoi-co-6-than-nhan-la-liet-si-tai-buoi-lay-mau-adn-100261110095657537.htm"
         },
         {
-          "title": "Chị Huỳnh Thị Xậm dùng bốn ngón chân vẽ nên cuộc đời",
-          "summary": "Chào đời với tứ chi khuyết tật, chị Huỳnh Thị Xậm, 49 tuổi, ở Cần Thơ đã tự học cách vẽ bằng 4 ngón chân. Qua những bức tranh, chị vẽ nên cuộc sống của chính mình.",
+          "title": "Người đàn ông ngồi xe lăn đi du lịch khắp 7 châu lục",
+          "summary": "Ở tuổi 36, dù bị khuyết tật, Cory Lee đã đặt chân đến 56 quốc gia và vùng lãnh thổ trên cả 7 châu lục, kể cả Nam Cực.",
           "points": [],
           "why": "",
-          "source": "Thanh Niên",
-          "date": "09/11",
-          "link": "https://thanhnien.vn/ve-doi-them-xanh-18526110714284999.htm"
+          "source": "Tuổi Trẻ",
+          "date": "10/11",
+          "link": "https://tuoitre.vn/ngoi-xe-lan-du-lich-hang-chuc-quoc-gia-7-chau-luc-100261109164029698.htm"
         },
         {
-          "title": "34 thầy cô được trao sổ tiết kiệm trong chương trình chia sẻ",
-          "summary": "Chương trình ‘Chia sẻ cùng thầy cô’ năm nay tuyên dương 34 thầy cô giáo. Nhiều người trong số họ xa quê để đến dạy học sinh ở vùng sâu, vùng xa, biên giới và hải đảo.",
+          "title": "Bác sĩ trẻ ban ngày thực hành, tối chạy xe ôm công nghệ",
+          "summary": "Hoàng Đức Hùng kết thúc ca thực hành tại Bệnh viện Châm cứu Trung ương lúc 17h. Sau đó anh cởi áo blouse, khoác đồng phục xe ôm công nghệ để bắt đầu ca làm buổi tối.",
           "points": [],
           "why": "",
-          "source": "Thanh Niên",
-          "date": "09/11",
-          "link": "https://thanhnien.vn/34-thay-co-giao-duoc-trao-so-tiet-kiem-trong-chuong-trinh-chia-se-cung-thay-co-185261109075458689.htm"
+          "source": "VnExpress",
+          "date": "10/11",
+          "link": "https://vnexpress.net/bac-si-tre-ngay-khoac-blouse-toi-chay-xe-om-cong-nghe-5142151.html"
         }
       ]
     }

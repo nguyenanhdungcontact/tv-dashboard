@@ -2048,5 +2048,135 @@
       "come across well"
     ],
     "added": "2026-11-09"
+  },
+  {
+    "w": "landing page",
+    "ipa": "/ˈlændɪŋ peɪdʒ/",
+    "pos": "noun",
+    "vi": "trang đích, trang người dùng đến sau khi nhấp quảng cáo",
+    "ex": "Our conversion rate jumped after we redesigned the landing page’s headline.",
+    "col": [
+      "landing page optimization",
+      "mobile landing page",
+      "bounce from the landing page"
+    ],
+    "added": "2026-11-10"
+  },
+  {
+    "w": "cost per acquisition",
+    "ipa": "/kɒst pɜːr ˌækwɪˈzɪʃn/",
+    "pos": "noun phrase",
+    "vi": "chi phí để có được một khách hàng hoặc đơn hàng",
+    "ex": "Can we bring the cost per acquisition down before the end of Q3?",
+    "col": [
+      "lower the cost per acquisition",
+      "target cost per acquisition",
+      "track cost per acquisition weekly"
+    ],
+    "added": "2026-11-10"
+  },
+  {
+    "w": "frequency cap",
+    "ipa": "/ˈfriːkwənsi kæp/",
+    "pos": "noun phrase",
+    "vi": "giới hạn số lần một người xem cùng một quảng cáo",
+    "ex": "We set a frequency cap so users don’t see the same ad daily.",
+    "col": [
+      "set a frequency cap",
+      "raise the frequency cap",
+      "frequency cap per user"
+    ],
+    "added": "2026-11-10"
+  },
+  {
+    "w": "quality score",
+    "ipa": "/ˈkwɒləti skɔːr/",
+    "pos": "noun phrase",
+    "vi": "điểm chất lượng của quảng cáo và từ khóa do Google đánh giá",
+    "ex": "Improving our quality score lowered the cost of every click.",
+    "col": [
+      "keyword quality score",
+      "check the quality score",
+      "low quality score"
+    ],
+    "added": "2026-11-10"
+  },
+  {
+    "w": "push back",
+    "ipa": "/ˌpʊʃ ˈbæk/",
+    "pos": "phrasal verb",
+    "vi": "phản đối, không đồng ý hoặc yêu cầu thay đổi",
+    "ex": "The client pushed back on the budget, so we revised the plan.",
+    "col": [
+      "push back on a deadline",
+      "push back against changes",
+      "push back politely"
+    ],
+    "added": "2026-11-10"
+  },
+  {
+    "w": "sign off on",
+    "ipa": "/ˌsaɪn ˈɒf ɒn/",
+    "pos": "phrasal verb",
+    "vi": "phê duyệt, chính thức đồng ý",
+    "ex": "Legal still needs to sign off on the new ad copy.",
+    "col": [
+      "sign off on the budget",
+      "get approval to sign off",
+      "sign off on the final design"
+    ],
+    "added": "2026-11-10"
+  },
+  {
+    "w": "let go of",
+    "ipa": "/let ɡəʊ əv/",
+    "pos": "phrasal verb",
+    "vi": "buông bỏ, không còn giữ điều gì trong lòng",
+    "ex": "It’s hard to let go of a campaign we’ve worked on for months.",
+    "col": [
+      "let go of the past",
+      "let go of control",
+      "learn to let go of resentment"
+    ],
+    "added": "2026-11-10"
+  },
+  {
+    "w": "bear with someone",
+    "ipa": "/beə wɪð ˈsʌmwʌn/",
+    "pos": "phrasal verb",
+    "vi": "kiên nhẫn chờ đợi ai đó, thông cảm với họ",
+    "ex": "Thanks for bearing with me while I sort out these numbers.",
+    "col": [
+      "bear with me a moment",
+      "ask someone to bear with you",
+      "bear with the process"
+    ],
+    "added": "2026-11-10"
+  },
+  {
+    "w": "get over something",
+    "ipa": "/ɡet ˈəʊvər ˈsʌmθɪŋ/",
+    "pos": "phrasal verb",
+    "vi": "vượt qua, quên đi một chuyện buồn hoặc thất vọng",
+    "ex": "It took me weeks to get over that failed product launch.",
+    "col": [
+      "get over a breakup",
+      "get over the disappointment",
+      "never really get over it"
+    ],
+    "added": "2026-11-10"
+  },
+  {
+    "w": "fret about",
+    "ipa": "/fret əˈbaʊt/",
+    "pos": "phrasal verb",
+    "vi": "lo lắng, băn khoăn quá mức về điều gì",
+    "ex": "Don’t fret about the dip; it’s normal after a holiday sale.",
+    "col": [
+      "fret about the future",
+      "fret over small details",
+      "stop fretting about it"
+    ],
+    "added": "2026-11-10"
   }
 ]
