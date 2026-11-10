@@ -304,15 +304,35 @@ applyTheme(); setInterval(applyTheme, 60000);
   #wcount { position: fixed; right: calc(14px + env(safe-area-inset-right, 0px)); bottom: calc(10px + env(safe-area-inset-bottom, 0px));
     z-index: 9; font-size: clamp(0.7rem, 0.8vw, 0.9rem); color: var(--muted); opacity: .55; pointer-events: none; font-variant-numeric: tabular-nums; }
   /* Danh sách từ: vuốt sang trái/phải để hiện nút xoá */
-  #wlist { width: min(640px, calc(100vw - 24px)); padding: 18px 0 0; }
-  #wlist h3, #wlist > p { padding: 0 20px; }
-  #wlist .wl-search { margin: 4px 20px 10px; width: calc(100% - 40px); min-height: 42px; border-radius: 10px; border: 1px solid var(--panel-edge);
-    background: transparent; color: var(--text); padding: 0 12px; font: inherit; font-size: 16px; }
-  #wlBody { max-height: min(60vh, 560px); overflow-y: auto; border-top: 1px solid var(--panel-edge); -webkit-overflow-scrolling: touch; }
+  /* Khung danh sách từ: nằm bên phải, từ vẫn bay bên cạnh. Màn hẹp (iPhone dọc): phủ cả màn hình */
+  :root { --wpw: min(360px, 30vw); }
+  #wpanel { position: fixed; top: 0; right: 0; bottom: 0; width: var(--wpw); z-index: 25; display: flex; flex-direction: column;
+    background: var(--rail); border-left: 1px solid var(--panel-edge); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+    padding-top: env(safe-area-inset-top, 0px); transform: translateX(100%); visibility: hidden; transition: transform .3s ease, visibility .3s; }
+  body.wl-open #wpanel { transform: none; visibility: visible; }
+  body.wl-open #field { right: var(--wpw); }
+  body.wl-open #hud { right: calc(var(--wpw) + 16px); }
+  body.wl-open #hint { display: none; }
+  #hud button.pill { white-space: nowrap; }
+  body.wl-open #card { max-width: min(480px, calc(66.666vw - var(--wpw) - 48px)); }
+  .wp-head { display: flex; gap: 8px; align-items: center; padding: 12px 12px 8px; }
+  .wl-search, .wp-add input { flex: 1; min-width: 0; min-height: 40px; border-radius: 10px; border: 1px solid var(--panel-edge);
+    background: var(--card); color: var(--text); padding: 0 12px; font: inherit; font-size: 16px; }
+  .wp-head .pill, .wp-add .pill { padding: .45em .9em; flex: none; }
+  .wp-add { display: flex; gap: 8px; padding: 0 12px 8px; }
+  #wlInfo { margin: 0; padding: 0 14px 8px; color: var(--muted); font-size: .82rem; line-height: 1.45; }
+  #wlBody { flex: 1; min-height: 0; overflow-y: auto; border-top: 1px solid var(--panel-edge); -webkit-overflow-scrolling: touch;
+    padding-bottom: env(safe-area-inset-bottom, 0px); }
+  #wlBody .empty { padding: 18px 14px; color: var(--muted); }
+  @media (max-width: 760px) {
+    #wpanel { width: 100%; left: 0; z-index: 40; background: var(--space-deep); }
+    body.wl-open #field { right: 0; }
+    body.wl-open #hud { right: 16px; }
+  }
   .wrow { position: relative; overflow: hidden; border-bottom: 1px solid var(--panel-edge); }
   .wrow .del { position: absolute; inset: 0 0 0 auto; width: 120px; border: 0; background: #d9534f; color: #fff; font: inherit; font-weight: 600; cursor: pointer; }
   .wrow.left .del { inset: 0 auto 0 0; }
-  .wrow .in { position: relative; display: flex; gap: 10px; align-items: baseline; padding: 12px 20px; background: #10143a; touch-action: pan-y;
+  .wrow .in { position: relative; display: flex; gap: 10px; align-items: baseline; padding: 11px 14px; background: #10143a; touch-action: pan-y;
     transition: transform .2s ease; user-select: none; -webkit-user-select: none; cursor: grab; }
   :root.day .wrow .in { background: #fbf8ef; }
   .wrow.armed .in { transform: translateX(-120px); }
@@ -320,9 +340,8 @@ applyTheme(); setInterval(applyTheme, 60000);
   .wrow .w { font-weight: 700; }
   .wrow .v { color: var(--muted); font-size: .92em; flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .wrow .s { color: var(--tail); }
-  #wlUndo { display: none; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 20px; background: var(--card-hover); font-size: .95rem; }
+  #wlUndo { display: none; align-items: center; justify-content: space-between; gap: 12px; padding: 8px 14px; background: var(--card-hover); font-size: .9rem; }
   #wlUndo.show { display: flex; }
-  #wlist .actions { padding: 0 20px 18px; }
   #paused {
     position: fixed; top: 50%; left: 66.666vw;
     transform: translate(-50%, -50%);
@@ -474,14 +493,16 @@ applyTheme(); setInterval(applyTheme, 60000);
   <p class="nav" id="cNav"></p>
 </section>
 
-<dialog id="wlist">
-  <h3>Từ đang bay</h3>
-  <p id="wlInfo">Vuốt một từ sang trái hoặc phải rồi bấm <b>Xoá</b> để bỏ từ đó ở mọi thiết bị.</p>
-  <input class="wl-search" id="wlSearch" type="search" placeholder="Tìm từ…" autocomplete="off" autocapitalize="off" spellcheck="false">
+<aside id="wpanel" aria-label="Danh sách từ">
+  <div class="wp-head">
+    <input class="wl-search" id="wlSearch" type="search" placeholder="Tìm từ…" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search">
+    <button class="pill" type="button" id="wlClose" aria-label="Đóng danh sách">✕</button>
+  </div>
+  <form class="wp-add" id="wlAdd"><input id="wlAddIn" placeholder="Thêm từ:  từ | nghĩa" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="done"><button class="pill" type="submit">Thêm</button></form>
+  <p id="wlInfo"></p>
   <div id="wlUndo"><span id="wlUndoTxt"></span><button class="pill" id="wlUndoBtn" type="button">Hoàn tác</button></div>
   <div id="wlBody"></div>
-  <div class="actions"><button class="pill primary" type="button" id="wlClose">Xong</button></div>
-</dialog>
+</aside>
 <dialog id="editor">
   <h3>Danh sách từ vựng</h3>
   <p>Mỗi dòng một từ, các phần cách nhau bằng dấu <code>|</code>:<br>
@@ -835,6 +856,8 @@ Chỉ dựa trên thông tin ở trên và kiến thức chung. Không bịa th�
       if (!Array.isArray(list) || !list.length) return;
       remoteWords = list.filter(o => o && o.w);
       if (!hasCustomWords) { words = withSaved(remoteWords); bag = []; }
+      paintCount();
+      if (panelOpen()) renderWordList();
     } catch (e) { /* offline or not hosted: keep current list */ }
   }
   /* Từ lưu ở TV/iPad/iPhone được đồng bộ qua learn-core.js: khi có thay đổi thì nạp lại danh sách */
@@ -844,7 +867,7 @@ Chỉ dựa trên thông tin ở trên và kiến thức chung. Không bịa th�
       words = (!hasCustomWords && remoteWords) ? withSaved(remoteWords) : loadWords();
       bag = [];
       paintCount();
-      if (wlist.open) renderWordList();
+      if (panelOpen()) renderWordList();
     });
     LearnCore.Sync.start();
   }
@@ -1045,7 +1068,8 @@ Chỉ dựa trên thông tin ở trên và kiến thức chung. Không bịa th�
   // News: ↑ ↓ change story, → go to vocabulary, OK holds/releases the current story.
   // Vocabulary: ← → previous/next word, ↑ ↓ meteor speed, Back returns to the news.
   window.addEventListener("keydown", (e) => {
-    if (editor.open || wlist.open) return;
+    if (editor.open) return;
+    if (e.target && /^(INPUT|TEXTAREA)$/.test(e.target.tagName)) return;   // đang gõ trong ô tìm / thêm từ
     const k = e.key;
     if (k === " " || k === "MediaPlayPause") { e.preventDefault(); setPaused(!paused); return; }
 
@@ -1089,7 +1113,7 @@ Chỉ dựa trên thông tin ở trên và kiến thức chung. Không bịa th�
   // Called by the Android app when the remote's Back button is pressed (hold Back to quit).
   window.tvBack = function () {
     if (editor.open) { editor.close(); return; }
-    if (wlist.open) { wlist.close(); return; }
+    if (panelOpen()) { setPanel(false); return; }
     if (mode === "news" && reading) { setReading(false); return; }
     if (mode === "vocab") exitVocab();
     else clearSpotlight();
@@ -1126,7 +1150,13 @@ Chỉ dựa trên thông tin ở trên và kiến thức chung. Không bịa th�
   paintThemeBtn();
 
   /* =================== SỐ TỪ + DANH SÁCH TỪ =================== */
-  const wlist = $("wlist");
+  const panelOpen = () => document.body.classList.contains("wl-open");
+  function setPanel(open) {
+    document.body.classList.toggle("wl-open", open);
+    try { localStorage.setItem("dash.wpanel", open ? "1" : "0"); } catch (e) {}
+    if (open) { $("wlSearch").value = ""; renderWordList(); }
+    setTimeout(resize, 320);                                    // vùng sao băng hẹp lại / rộng ra
+  }
   function paintCount() {
     const saved = window.LearnCore ? LearnCore.Sync.words().length : savedWords().length;
     $("wcount").textContent = `${words.length} từ${saved ? ` · ★ ${saved} đã lưu` : ""}`;
@@ -1136,9 +1166,15 @@ Chỉ dựa trên thông tin ở trên và kiến thức chung. Không bịa th�
   let undoT = null, lastDel = null;
   function renderWordList() {
     const q = $("wlSearch").value.trim().toLowerCase();
-    const list = words.slice().sort((a, b) => (b.saved ? 1 : 0) - (a.saved ? 1 : 0) || String(a.w).localeCompare(String(b.w)))
-      .filter(o => !q || String(o.w).toLowerCase().includes(q) || String(o.vi || "").toLowerCase().includes(q));
-    $("wlInfo").innerHTML = `${words.length} từ đang bay. Vuốt một từ sang trái hoặc phải rồi bấm <b>Xoá</b> để bỏ từ đó ở mọi thiết bị.`;
+    // Đang tìm: chỉ hiện từ khớp, từ bắt đầu bằng chữ đang gõ lên đầu. Không tìm: từ đã lưu lên đầu rồi theo ABC
+    const rank = o => { const w = String(o.w).toLowerCase(); return w.startsWith(q) ? 0 : w.includes(q) ? 1 : 2; };
+    const list = (q
+      ? words.filter(o => String(o.w).toLowerCase().includes(q) || String(o.vi || "").toLowerCase().includes(q))
+             .sort((a, b) => rank(a) - rank(b) || String(a.w).localeCompare(String(b.w)))
+      : words.slice().sort((a, b) => (b.saved ? 1 : 0) - (a.saved ? 1 : 0) || String(a.w).localeCompare(String(b.w))));
+    $("wlInfo").innerHTML = q ? `${list.length} kết quả cho “${escH(q)}”` :
+      `${words.length} từ đang bay, đồng bộ mọi thiết bị. Vuốt một từ sang trái/phải rồi bấm <b>Xoá</b>.`;
+    if (!list.length) { $("wlBody").innerHTML = `<div class="empty">Không thấy từ nào. Có thể thêm ở ô “Thêm từ” phía trên.</div>`; return; }
     $("wlBody").innerHTML = list.map(o => `<div class="wrow" data-w="${encodeURIComponent(o.w)}">
         <button class="del" type="button">Xoá</button>
         <div class="in"><span class="w">${o.saved ? '<span class="s">★ </span>' : ""}${escH(o.w)}</span><span class="v">${escH(o.vi || "")}</span></div></div>`).join("");
@@ -1181,14 +1217,36 @@ Chỉ dựa trên thông tin ở trên và kiến thức chung. Không bịa th�
     clearTimeout(undoT); undoT = setTimeout(() => $("wlUndo").classList.remove("show"), 6000);
   });
   $("wlUndoBtn").addEventListener("click", () => {
-    if (!lastDel || !window.LearnCore) return;
+    if (!lastDel || !window.LearnCore) { $("wlUndo").classList.remove("show"); return; }
     LearnCore.Sync.unhideWord(lastDel.w, lastDel.saved);
     $("wlUndo").classList.remove("show"); lastDel = null;
   });
   $("wlSearch").addEventListener("input", renderWordList);
-  $("listBtn").addEventListener("click", () => { $("wlSearch").value = ""; renderWordList(); setPaused(true); wlist.showModal(); });
-  $("wlClose").addEventListener("click", () => wlist.close());
-  wlist.addEventListener("close", () => setPaused(false));
+  $("listBtn").addEventListener("click", () => setPanel(!panelOpen()));
+  $("wlClose").addEventListener("click", () => setPanel(false));
+  $("wlSearch").addEventListener("focus", () => { $("wlBody").scrollTop = 0; });
+  /* Thêm từ nhanh: "từ | nghĩa" (hoặc "từ - nghĩa", "từ: nghĩa"). Từ thêm được lưu vào kho chung, mọi máy cùng thấy */
+  function addWord(w, vi, extra = {}) {
+    if (!w) return false;
+    if (window.LearnCore) LearnCore.Sync.saveWord(Object.assign({ w, vi: vi || "", pos: extra.pos || "tự thêm" }, extra));
+    return true;
+  }
+  $("wlAdd").addEventListener("submit", e => {
+    e.preventDefault();
+    const raw = $("wlAddIn").value.trim(); if (!raw) return;
+    const m = raw.split(/\s*(?:\||\s-\s|:)\s*/);
+    if (addWord(m[0], m.slice(1).join(" - "))) {
+      $("wlAddIn").value = "";
+      $("wlUndoTxt").textContent = `Đã thêm “${m[0]}”`; lastDel = null;
+      $("wlUndo").classList.add("show"); clearTimeout(undoT); undoT = setTimeout(() => $("wlUndo").classList.remove("show"), 3000);
+    }
+  });
+  // iPad (màn rộng, cảm ứng): mở sẵn danh sách bên phải; nhớ lựa chọn đóng/mở của từng máy
+  (() => {
+    let pref = null; try { pref = localStorage.getItem("dash.wpanel"); } catch (e) {}
+    const wideTouch = matchMedia("(pointer: coarse) and (min-width: 900px)").matches;
+    if (pref === "1" || (pref === null && wideTouch)) setPanel(true);
+  })();
 
   /* =================== WORD LIST EDITOR =================== */
   const txt = $("txt"), err = $("err");
@@ -1218,8 +1276,22 @@ Chỉ dựa trên thông tin ở trên và kiến thức chung. Không bịa th�
   $("saveBtn").addEventListener("click", () => {
     const lst = parse(txt.value);
     if (!lst.length) { err.textContent = "Danh sách đang trống. Thêm ít nhất một dòng có từ vựng."; return; }
-    words = lst; bag = []; hasCustomWords = true;
-    try { localStorage.setItem(STORE_KEY, JSON.stringify(lst)); } catch (e) {}
+    if (window.LearnCore) {
+      const key = w => String(w).trim().toLowerCase();
+      const before = new Map(words.map(o => [key(o.w), o]));
+      const after = new Set(lst.map(o => key(o.w)));
+      lst.forEach(o => {
+        const old = before.get(key(o.w));
+        if (!old || (o.vi || "") !== (old.vi || "") || (o.ipa || "") !== (old.ipa || "") || (o.ex || "") !== (old.ex || ""))
+          addWord(o.w, o.vi, { ipa: o.ipa || "", ex: o.ex || "", pos: o.pos || "tự thêm" });
+      });
+      words.forEach(o => { if (!after.has(key(o.w))) LearnCore.Sync.hideWord(o.w); });
+      hasCustomWords = false;
+      try { localStorage.removeItem(STORE_KEY); } catch (e) {}
+    } else {
+      words = lst; bag = []; hasCustomWords = true;
+      try { localStorage.setItem(STORE_KEY, JSON.stringify(lst)); } catch (e) {}
+    }
     editor.close();
   });
 

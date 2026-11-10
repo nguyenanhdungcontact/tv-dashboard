@@ -274,11 +274,11 @@
     }
     const keep = el.scrollTop;
     el.innerHTML = `${sideTools()}
-      <div class="lhead"><h3>Cụm từ hay</h3>${d.level ? `<span class="lvl">${esc(d.level)}</span>` : ''}<span>${d.phrases.length} cụm · chạm để nghe</span></div>
+      <div class="lhead"><h3>Cụm từ hay</h3>${d.level ? `<span class="lvl">${esc(d.level)}</span>` : ''}<span>${d.phrases.length} cụm · ${PHONE ? 'chạm: nghe · ☆/giữ: lưu' : 'chạm để nghe · ☆, vuốt phải hoặc giữ để lưu'}</span></div>
       ${d.summary_vi ? `<p class="sum">${esc(d.summary_vi)}</p>` : ''}
       <div id="plist">${d.phrases.map((x, i) => `
         <div class="ph-wrap${i === S.sel ? ' open' : ''}"><button class="ph${i === S.sel ? ' sel' : ''}${i === S.now ? ' now' : ''}" data-i="${i}">
-          <span class="st">${SYNC.isSaved(x.phrase) ? '★' : ''}</span>
+          <span class="st${SYNC.isSaved(x.phrase) ? ' on' : ''}" data-star="${i}" role="button" aria-label="Lưu từ">${SYNC.isSaved(x.phrase) ? '★' : '☆'}</span>
           <span class="tx"><div class="p">${esc(x.phrase)}</div><div class="m">${esc(x.meaning_vi)}</div></span>
           <span class="tm">${fmt(x.t)}</span>
         </button>${PHONE && i === S.sel ? detailHTML(x, d) : ''}</div>`).join('')}</div>`;
@@ -307,12 +307,41 @@
   $('#side').addEventListener('click', e => {
     const tool = e.target.closest('[data-tool]');
     if (tool) { const k = tool.dataset.tool; if (k === 'back') requestBack(); else if (k === 'sync') openSync(); else cycleTheme(); return; }
+    if (S.noClick && Date.now() < S.noClick) return;            // vừa vuốt / giữ để lưu: không nhảy video
+    const star = e.target.closest('[data-star]');
+    if (star && S.phr) { saveFromList(+star.dataset.star); return; }
     const row = e.target.closest('.ph'); if (!row || !S.phr) return;
     S.sel = +row.dataset.i; S.touchHold = Date.now() + 10000; playPhrase(S.sel); renderSide();
     if (PHONE) { S.touchHold = 0; followSel(); S.touchHold = Date.now() + 10000; }
     else if (matchMedia('(orientation:portrait)').matches) { const dt = $('.detail'); if (dt) window.scrollTo({ top: Math.max(0, dt.getBoundingClientRect().top + scrollY - $('.stage').offsetHeight - 80), behavior: 'smooth' }); }
   });
   $('#side').addEventListener('touchstart', () => { S.touchHold = Date.now() + 8000; }, { passive: true });
+
+  /* Lưu cụm từ ngay trong danh sách, video vẫn chạy: bấm ☆, vuốt dòng sang phải, hoặc nhấn giữ */
+  function saveFromList(i) {
+    const p = S.phr && S.phr.phrases[i]; if (!p) return;
+    toggleSave(p);
+    try { navigator.vibrate && navigator.vibrate(12); } catch (e) {}
+    renderSide();
+  }
+  let g = null;
+  $('#side').addEventListener('pointerdown', e => {
+    const row = e.target.closest('.ph'); if (!row || e.target.closest('[data-star]')) return;
+    const i = +row.dataset.i;
+    g = { row, i, x: e.clientX, y: e.clientY, done: false,
+          timer: setTimeout(() => { if (g && !g.done) { g.done = true; S.noClick = Date.now() + 600; saveFromList(i); } }, 550) };
+  });
+  window.addEventListener('pointermove', e => {
+    if (!g || g.done) return;
+    const dx = e.clientX - g.x, dy = e.clientY - g.y;
+    if (Math.abs(dy) > 12 && Math.abs(dy) > Math.abs(dx)) { clearTimeout(g.timer); g = null; return; }   // đang cuộn
+    if (Math.abs(dx) > 10) clearTimeout(g.timer);
+    if (dx > 0) g.row.style.transform = `translateX(${Math.min(dx, 90)}px)`;
+    if (dx > 70) { g.done = true; S.noClick = Date.now() + 600; g.row.style.transform = ''; saveFromList(g.i); }
+  });
+  ['pointerup', 'pointercancel'].forEach(t => window.addEventListener(t, () => {
+    if (!g) return; clearTimeout(g.timer); g.row.style.transform = ''; g = null;
+  }));
   window.addEventListener('touchmove', () => { if (S.view === 'watch') S.touchHold = Date.now() + 8000; }, { passive: true });
   function playPhrase(i) {
     if (!player || !player.seekTo || !S.phr) return;

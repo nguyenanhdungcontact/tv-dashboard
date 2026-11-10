@@ -136,7 +136,9 @@ main{padding:8px 0 40px}
 .ph .p{font-weight:700;font-size:16px}
 .ph .m{font-size:14px;color:var(--ink2);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .ph .tm{font-size:13px;color:var(--ink3);font-weight:600;font-variant-numeric:tabular-nums}
-.ph .st{font-size:16px;color:var(--warm);width:18px;text-align:center}
+.ph{touch-action:pan-y;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;transition:transform .15s}
+.ph .st{flex:none;width:30px;height:30px;margin:-6px 0 -6px -6px;display:grid;place-items:center;border-radius:50%;font-size:18px;color:var(--ink3)}
+.ph .st.on{color:var(--warm)}
 .ph.sel{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent)}
 .ph.now .tm{color:var(--warm)}
 .ph.now .tm::before{content:"● "}
