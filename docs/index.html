@@ -333,7 +333,9 @@ applyTheme(); setInterval(applyTheme, 60000);
   .wrow .del { position: absolute; inset: 0 0 0 auto; width: 120px; border: 0; background: #d9534f; color: #fff; font: inherit; font-weight: 600; cursor: pointer; }
   .wrow.left .del { inset: 0 auto 0 0; }
   .wrow .in { position: relative; display: flex; gap: 10px; align-items: baseline; padding: 11px 14px; background: #10143a; touch-action: pan-y;
-    transition: transform .2s ease; user-select: none; -webkit-user-select: none; cursor: grab; }
+    transition: transform .2s ease; user-select: none; -webkit-user-select: none; cursor: pointer; }
+  .wrow.on .in { box-shadow: inset 3px 0 0 var(--tail); background: #1d2358; }
+  :root.day .wrow.on .in { background: #f1ead6; }
   :root.day .wrow .in { background: #fbf8ef; }
   .wrow.armed .in { transform: translateX(-120px); }
   .wrow.armed.left .in { transform: translateX(120px); }
@@ -1173,7 +1175,7 @@ Chỉ dựa trên thông tin ở trên và kiến thức chung. Không bịa th�
              .sort((a, b) => rank(a) - rank(b) || String(a.w).localeCompare(String(b.w)))
       : words.slice().sort((a, b) => (b.saved ? 1 : 0) - (a.saved ? 1 : 0) || String(a.w).localeCompare(String(b.w))));
     $("wlInfo").innerHTML = q ? `${list.length} kết quả cho “${escH(q)}”` :
-      `${words.length} từ đang bay, đồng bộ mọi thiết bị. Vuốt một từ sang trái/phải rồi bấm <b>Xoá</b>.`;
+      `${words.length} từ đang bay, đồng bộ mọi thiết bị. Chạm một từ để xem nghĩa; vuốt sang trái/phải rồi bấm <b>Xoá</b> để bỏ.`;
     if (!list.length) { $("wlBody").innerHTML = `<div class="empty">Không thấy từ nào. Có thể thêm ở ô “Thêm từ” phía trên.</div>`; return; }
     $("wlBody").innerHTML = list.map(o => `<div class="wrow" data-w="${encodeURIComponent(o.w)}">
         <button class="del" type="button">Xoá</button>
@@ -1181,7 +1183,15 @@ Chỉ dựa trên thông tin ở trên và kiến thức chung. Không bịa th�
   }
   const escH = t => String(t).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
   function disarm(except) { document.querySelectorAll("#wlBody .wrow.armed").forEach(r => { if (r !== except) r.classList.remove("armed", "left"); }); }
-  // Vuốt: kéo hàng sang trái → nút Xoá bên phải; sang phải → nút Xoá bên trái. Chuột: bấm vào hàng cũng hiện nút.
+  // Chạm vào một từ: hiện thẻ nghĩa của từ đó (và cho nó bay ngang trời). Vuốt sang trái/phải: hiện nút Xoá.
+  function openWordCard(w) {
+    const i = words.findIndex(o => o.w === w); if (i < 0) return;
+    document.querySelectorAll("#wlBody .wrow.on").forEach(r => r.classList.remove("on"));
+    const row = [...document.querySelectorAll("#wlBody .wrow")].find(r => decodeURIComponent(r.dataset.w) === w);
+    if (row) row.classList.add("on");
+    if (matchMedia("(max-width: 760px)").matches) setPanel(false);   // iPhone dọc: danh sách phủ màn hình, đóng lại để thấy thẻ
+    showWordAt(i);
+  }
   let drag = null;
   $("wlBody").addEventListener("pointerdown", e => {
     const row = e.target.closest(".wrow"); if (!row || e.target.closest(".del")) return;
@@ -1204,7 +1214,8 @@ Chỉ dựa trên thông tin ở trên và kiến thức chung. Không bịa th�
     const inner = row.querySelector(".in"); inner.style.transition = ""; inner.style.transform = "";
     if (moved && Math.abs(dx) > 60) { disarm(row); row.classList.add("armed"); row.classList.toggle("left", dx > 0); }
     else if (moved) row.classList.remove("armed", "left");
-    else { const was = row.classList.contains("armed"); disarm(); if (!was) row.classList.add("armed"); }
+    else if (row.classList.contains("armed")) row.classList.remove("armed", "left");
+    else { disarm(); openWordCard(decodeURIComponent(row.dataset.w)); }
   });
   $("wlBody").addEventListener("click", e => {
     const b = e.target.closest(".del"); if (!b || !window.LearnCore) return;

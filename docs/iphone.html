@@ -152,7 +152,7 @@ body.watching .tabbar{display:none}
 .d-u{margin-top:6px;font-size:12.5px;line-height:1.45;color:var(--ink2)}
 .d-ex{margin-top:6px;font-size:12.5px;line-height:1.4}
 .d-ex small{display:block;color:var(--ink2);font-size:12px;margin-top:2px}
-.d-act{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:6px;margin-top:10px}
+.d-act{display:grid;grid-template-columns:1.3fr 1fr;gap:6px;margin-top:10px}
 .d-act button{height:40px;border-radius:11px;background:var(--surface2);font-weight:600;font-size:13.5px}
 .d-act button.primary{background:var(--accent);color:var(--accent-ink)}
 .d-act button.saved{background:var(--warm-soft);color:var(--warm)}
@@ -195,6 +195,8 @@ body.watching .tabbar{display:none}
 @keyframes up{from{transform:translateY(40px);opacity:0}to{transform:none;opacity:1}}
 @keyframes fade{from{opacity:0}to{opacity:1}}
 
+/* Khoảng trống cuối danh sách: cụm cuối cùng vẫn được cuộn lên sát đầu (ngay dưới video) */
+#plist::after{content:"";display:block;height:88vh}
 #toast{position:fixed;left:50%;bottom:calc(var(--tabbar) + 14px);transform:translate(-50%,16px);opacity:0;pointer-events:none;z-index:70;
   background:var(--ink);color:var(--bg);padding:11px 16px;border-radius:12px;font-size:14px;font-weight:500;width:max-content;max-width:calc(100vw - 32px);transition:opacity .25s,transform .25s}
 body.watching #toast{bottom:calc(20px + env(safe-area-inset-bottom))}

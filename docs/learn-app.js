@@ -14,7 +14,7 @@
   let toastT;
   function toast(m, ms = 2400) { const el = $('#toast'); el.textContent = m; el.classList.add('show'); clearTimeout(toastT); toastT = setTimeout(() => el.classList.remove('show'), ms); }
 
-  const S = { catalog: null, index: {}, rows: [], history: [], histOpen: false, view: 'videos', v: null, phr: null, cap: null, sel: 0, now: -1, capIdx: -1, touchHold: 0, sheet: null };
+  const S = { catalog: null, index: {}, rows: [], history: [], histOpen: false, view: 'videos', v: null, phr: null, cap: null, sel: 0, now: -1, capIdx: -1, pickHold: 0, scrollHold: 0, sheet: null };
   const allVideos = () => (S.catalog && S.catalog.videos) || [];
   const thumb = id => `https://i.ytimg.com/vi/${encodeURIComponent(id)}/hqdefault.jpg`;
 
@@ -36,7 +36,6 @@
       col: p.quote ? [p.quote.length > 60 ? p.quote.slice(0, 57) + '…' : p.quote] : [], src: { id: S.v && S.v.id, t: p.t, title: S.v && S.v.title } });
     toast(`★ Đã lưu “${p.phrase}”`);
   }
-  function speak(t) { if (!LC.speak(t)) toast('Thiết bị không hỗ trợ đọc'); }
 
   /* ===== Trang chủ ===== */
   function cardHTML(v) {
@@ -251,7 +250,6 @@
       ${p.example_en ? `<div class="d-ex">${esc(p.example_en)}<small>${esc(p.example_vi)}</small></div>` : ''}
       <div class="d-act">
         <button class="primary" data-act="play">▶ Nghe câu</button>
-        <button data-act="speak">🔊 Đọc từ</button>
         <button data-act="save" class="${saved ? 'saved' : ''}">${saved ? '★ Đã lưu' : '☆ Lưu từ'}</button>
       </div></div>`;
   }
@@ -285,15 +283,19 @@
     el.scrollTop = keep;
     paintTheme();
   }
-  /* Danh sách tự theo câu đang nói (trừ khi vừa chạm tay) */
-  function followSel() {
-    if (Date.now() < S.touchHold) return;
-    const el = $('#side'), row = el.querySelector('.ph.sel'); if (!row) return;
+  /* Đưa cụm từ đang chọn lên sát mép trên danh sách (ngay dưới video trên iPhone / iPad dọc),
+     các cụm cũ trôi lên và khuất sau khung video. Không cuộn nếu người xem vừa tự cuộn tay. */
+  function followSel(force) {
+    if (!force && Date.now() < S.scrollHold) return;
+    const el = $('#side'), row = el.querySelector('.ph-wrap.open') || el.querySelector('.ph.sel'); if (!row) return;
+    const r = row.getBoundingClientRect();
     if (el.scrollHeight > el.clientHeight + 4 && getComputedStyle(el).overflowY !== 'visible') {
-      el.scrollTo({ top: Math.max(0, row.offsetTop - el.clientHeight * 0.3), behavior: 'smooth' });
+      const tools = el.querySelector('.side-tools');
+      const top = el.getBoundingClientRect().top + (tools ? tools.offsetHeight + 4 : 6);
+      el.scrollTo({ top: Math.max(0, el.scrollTop + r.top - top), behavior: 'smooth' });
     } else {
-      const top = $('.stage').getBoundingClientRect().bottom + 8, r = row.getBoundingClientRect();
-      if (r.top < top || r.bottom > innerHeight - 80) window.scrollBy({ top: r.top - top - 12, behavior: 'smooth' });
+      const top = $('.stage').getBoundingClientRect().bottom + 6;
+      if (Math.abs(r.top - top) > 4) window.scrollBy({ top: r.top - top, behavior: 'smooth' });
     }
   }
   document.addEventListener('click', e => {
@@ -301,7 +303,6 @@
     if (!a || !S.phr) return;
     const p = S.phr.phrases[S.sel];
     if (a.dataset.act === 'play') playPhrase(S.sel);
-    else if (a.dataset.act === 'speak') speak(p.phrase);
     else if (a.dataset.act === 'save') { toggleSave(p); renderSide(); }
   });
   $('#side').addEventListener('click', e => {
@@ -311,11 +312,10 @@
     const star = e.target.closest('[data-star]');
     if (star && S.phr) { saveFromList(+star.dataset.star); return; }
     const row = e.target.closest('.ph'); if (!row || !S.phr) return;
-    S.sel = +row.dataset.i; S.touchHold = Date.now() + 10000; playPhrase(S.sel); renderSide();
-    if (PHONE) { S.touchHold = 0; followSel(); S.touchHold = Date.now() + 10000; }
-    else if (matchMedia('(orientation:portrait)').matches) { const dt = $('.detail'); if (dt) window.scrollTo({ top: Math.max(0, dt.getBoundingClientRect().top + scrollY - $('.stage').offsetHeight - 80), behavior: 'smooth' }); }
+    S.sel = +row.dataset.i; S.pickHold = Date.now() + 3000; playPhrase(S.sel); renderSide();
+    followSel(true);
   });
-  $('#side').addEventListener('touchstart', () => { S.touchHold = Date.now() + 8000; }, { passive: true });
+  // Người xem tự cuộn danh sách: tạm ngưng tự cuộn 4 giây (vẫn tự chọn cụm đang nói)
 
   /* Lưu cụm từ ngay trong danh sách, video vẫn chạy: bấm ☆, vuốt dòng sang phải, hoặc nhấn giữ */
   function saveFromList(i) {
@@ -342,7 +342,8 @@
   ['pointerup', 'pointercancel'].forEach(t => window.addEventListener(t, () => {
     if (!g) return; clearTimeout(g.timer); g.row.style.transform = ''; g = null;
   }));
-  window.addEventListener('touchmove', () => { if (S.view === 'watch') S.touchHold = Date.now() + 8000; }, { passive: true });
+  window.addEventListener('touchmove', () => { if (S.view === 'watch') S.scrollHold = Date.now() + 4000; }, { passive: true });
+  $('#side').addEventListener('wheel', () => { S.scrollHold = Date.now() + 4000; }, { passive: true });
   function playPhrase(i) {
     if (!player || !player.seekTo || !S.phr) return;
     player.seekTo(Math.max(0, S.phr.phrases[i].t - 0.3), true); player.playVideo();
@@ -389,7 +390,7 @@
       let idx = -1; S.phr.phrases.forEach((p, i) => { if (p.t <= t + 0.5) idx = i; });
       if (idx !== S.now) {
         S.now = idx;
-        if (idx >= 0 && Date.now() > S.touchHold) S.sel = idx;
+        if (idx >= 0 && Date.now() > S.pickHold) S.sel = idx;   // video tới cụm mới → chọn cụm đó (trừ khi vừa chạm chọn)
         renderSide(); followSel();
       }
     }
@@ -408,7 +409,6 @@
           ${o.src && o.src.title ? `<div class="src">Từ video: ${esc(o.src.title)} · ${fmt(o.src.t)}${o.added ? ` · lưu ${esc(o.added)}` : ''}</div>` : ''}
           <div class="a">
             ${o.src && o.src.id ? `<button data-go="${i}">▶ Xem lại câu này</button>` : ''}
-            <button data-say="${i}">🔊 Đọc</button>
             <button data-del="${i}">Bỏ lưu</button>
           </div>
         </div>`).join('');
@@ -417,7 +417,6 @@
     const b = e.target.closest('button'); if (!b) return;
     const l = SYNC.words();
     if (b.dataset.go) { const o = l[+b.dataset.go]; openVideo(o.src.id, o.src.t); }
-    else if (b.dataset.say) speak(l[+b.dataset.say].w);
     else if (b.dataset.del) { const o = l[+b.dataset.del]; SYNC.removeWord(o.w); toast(`Đã bỏ lưu “${o.w}”`); }
   });
 

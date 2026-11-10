@@ -256,6 +256,32 @@ body.simple #player.panel #cap{font-size:1.5rem}
 :root.day .opt.sel{background:var(--accent);color:#fff}
 body.simple .opt{font-size:1.6rem}
 
+/* Màn Từ đã lưu: danh sách bên trái, thẻ chi tiết bên phải */
+#wordsbox{position:fixed;inset:0;z-index:40;display:none;align-items:center;justify-content:center;background:rgba(6,9,32,.9)}
+#wordsbox.show{display:flex}
+.wbox{display:flex;gap:2.4rem;width:min(88rem,92vw);height:78vh;padding:2.2rem 2.4rem;border-radius:1.6rem;background:var(--bg1);box-shadow:0 1.4rem 4rem rgba(0,0,0,.5)}
+.wcol{flex:0 0 30rem;display:flex;flex-direction:column;min-height:0}
+.wcol h3{font-family:var(--head);font-weight:800;font-size:2rem;letter-spacing:-.02em}
+.wcol h3 span{font-family:var(--body);font-weight:500;font-size:1rem;color:var(--ink3);margin-left:.6rem}
+.wlist{flex:1;min-height:0;overflow:hidden;margin-top:1rem;position:relative}
+.wlist-in{transition:transform .2s ease}
+.wi{padding:.7rem 1rem;border-radius:.7rem;margin-bottom:.3rem;font-size:1.2rem;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.wi small{display:block;font-size:.9rem;font-weight:400;color:var(--ink2);overflow:hidden;text-overflow:ellipsis}
+.wi.sel{background:#fff;color:#141846}
+.wi.sel small{color:#4b5190}
+.wdet{flex:1;min-width:0;display:flex;flex-direction:column;justify-content:center}
+.wdet .w{font-family:var(--head);font-weight:800;font-size:3rem;letter-spacing:-.02em;line-height:1.1}
+.wdet .ipa{color:var(--accent);font-size:1.35rem;margin-top:.4rem}
+.wdet .vi{font-size:1.6rem;margin-top:.8rem}
+.wdet .ex{font-size:1.25rem;margin-top:1rem;line-height:1.5;color:var(--ink2);font-style:italic}
+.wdet .src{font-size:1.05rem;margin-top:1.2rem;color:var(--ink3)}
+.wdet .keys{margin-top:2rem;font-size:1.05rem;color:var(--ink2);display:flex;flex-wrap:wrap;gap:.5rem 1.6rem}
+.wdet .warn{color:#ffb4a8}
+.wempty{font-size:1.3rem;line-height:1.6;color:var(--ink2);margin:auto}
+:root.day #wordsbox{background:rgba(240,234,218,.92)}
+:root.day .wi.sel{background:var(--accent);color:#fff}
+:root.day .wi.sel small{color:#e4f0da}
+body.simple .wi{font-size:1.5rem}
 #syncbox{position:fixed;inset:0;z-index:40;display:none;align-items:center;justify-content:center;background:rgba(6,9,32,.86)}
 #syncbox.show{display:flex}
 .sbox{display:flex;gap:3rem;align-items:center;max-width:80rem;padding:2.6rem 3rem;border-radius:1.6rem;background:var(--bg1);box-shadow:0 1.4rem 4rem rgba(0,0,0,.5)}
@@ -373,6 +399,7 @@ body.simple #toast{font-size:1.6rem}
     <div class="brand"><span class="moon"></span>Kênh nhà mình</div>
     <div class="hright">
       <div class="clock" id="clock"></div>
+      <button class="chip" id="wordsChip">★ Từ đã lưu</button>
       <button class="chip" id="syncChip">⇅ Đồng bộ</button>
       <button class="chip" id="chip"></button>
     </div>
@@ -397,6 +424,7 @@ body.simple #toast{font-size:1.6rem}
   <div id="ask"></div>
 </section>
 <div id="syncbox"></div>
+<div id="wordsbox"></div>
 
 <div id="toast"></div>
 
@@ -550,6 +578,9 @@ function renderHome(keep = false){
   if (S.profile === 'me') buildMeRows();
   $('#chip').innerHTML = `<span class="av ${p.cls}">${p.initial}</span><span>${p.label}<em>Đổi hồ sơ</em></span>`;
   $('#syncChip').style.display = S.profile === 'me' ? '' : 'none';
+  $('#wordsChip').style.display = S.profile === 'me' ? '' : 'none';
+  const nw = SYNC.words().length;
+  $('#wordsChip').textContent = nw ? `★ Từ đã lưu (${nw})` : '★ Từ đã lưu';
   $('#rowsInner').innerHTML = p.rows.map((row,r) =>
     `<section class="row${row.history ? ' history' : ''}"><h2>${esc(row.title)}<span>${row.history ? `${S.history.length} video` : `${row.items.length} video`}</span></h2>
      <div class="track-wrap"><div class="track">${row.items.map((v,c) => cardHTML(v,r,c)).join('')}</div></div></section>`
@@ -580,7 +611,7 @@ function updateFocus(scroll = true){
   document.querySelectorAll('#home .focused').forEach(e => e.classList.remove('focused'));
   const inner = $('#rowsInner');
   if (S.header){
-    const hb = S.profile === 'me' ? ['#syncChip','#chip'] : ['#chip'];
+    const hb = S.profile === 'me' ? ['#wordsChip','#syncChip','#chip'] : ['#chip'];
     $(hb[Math.min(S.hIdx, hb.length - 1)]).classList.add('focused');
     if (scroll) inner.style.transform = 'translateY(0)';
     return;
@@ -611,15 +642,18 @@ function updateFocus(scroll = true){
 function homeKey(k){
   const rs = rows();
   if (S.header){
-    const two = S.profile === 'me';
+    const n = S.profile === 'me' ? 3 : 1;
+    S.hIdx = Math.min(S.hIdx, n - 1);
     if (k === 'down') S.header = false;
-    else if ((k === 'left' || k === 'right') && two) S.hIdx = k === 'left' ? 0 : 1;
-    else if (k === 'ok' && two && S.hIdx === 0){ openSync(); return; }
+    else if (k === 'left') S.hIdx = Math.max(0, S.hIdx - 1);
+    else if (k === 'right') S.hIdx = Math.min(n - 1, S.hIdx + 1);
+    else if (k === 'ok' && n === 3 && S.hIdx === 0){ openWords(); return; }
+    else if (k === 'ok' && n === 3 && S.hIdx === 1){ openSync(); return; }
     else if (k === 'ok' || k === 'back'){ goProfiles(); return; }
     updateFocus(); return;
   }
   const c = S.cols[S.row];
-  if (k === 'up'){ if (S.row === 0){ S.header = true; S.hIdx = 1; } else S.row--; }
+  if (k === 'up'){ if (S.row === 0){ S.header = true; S.hIdx = S.profile === 'me' ? 2 : 0; } else S.row--; }
   else if (k === 'down'){ if (S.row < rs.length - 1) S.row++; }
   else if (k === 'left'){ if (c > 0) S.cols[S.row]--; }
   else if (k === 'right'){ if (c < rs[S.row].items.length - 1) S.cols[S.row]++; }
@@ -665,7 +699,8 @@ function play(r, c){
   S.cols[r] = c;
   playV(r, v);
 }
-function playV(r, v){
+function playV(r, v, at){
+  S.startAt = at || 0;
   if (v.blocked){ toast('Video này không phát được trên TV, hãy chọn video khác'); return; }
   clearEnd(); closeAsk();
   S.play = { r, v, rowKey: rowKey(rows()[r]) }; S.row = r; S.ccApplied = false;
@@ -708,6 +743,7 @@ function createOrLoad(id){
 function onState(e){
   if (e.data === YT.PlayerState.PLAYING){
     S.errors = 0;
+    if (S.startAt){ const t = S.startAt; S.startAt = 0; try { player.seekTo(Math.max(0, t - 0.3), true); } catch(e){} }
     if (!S.ccApplied){
       S.ccApplied = true;
       const m = ccGet(); if (m === 'vi') applyCC(m, false);
@@ -803,6 +839,57 @@ function openSync(){
   SYNC.pull();
 }
 function closeSync(){ S.sync = false; $('#syncbox').classList.remove('show'); }
+
+/* ===== Màn Từ đã lưu (đồng bộ mọi thiết bị). ▲▼ chọn · OK xem lại câu trong video · ◀ hai lần: bỏ lưu ===== */
+function openWords(){ S.words = { sel: 0, arm: null }; renderWords(); $('#wordsbox').classList.add('show'); }
+function closeWords(){ S.words = null; $('#wordsbox').classList.remove('show'); renderHome(true); updateFocus(false); }
+function renderWords(){
+  const W = S.words; if (!W) return;
+  const l = SYNC.words();
+  W.sel = Math.max(0, Math.min(W.sel, l.length - 1));
+  if (!l.length){
+    $('#wordsbox').innerHTML = `<div class="wbox"><div class="wempty">Chưa có từ nào.<br>Khi xem video, bấm ▲ để học, rồi bấm ▶ để lưu cụm từ.<br>Từ lưu ở iPad, iPhone cũng hiện ở đây.<br><br>Back để đóng</div></div>`;
+    return;
+  }
+  const o = l[W.sel], src = o.src && o.src.id ? o.src : null;
+  $('#wordsbox').innerHTML = `<div class="wbox">
+    <div class="wcol"><h3>★ Từ đã lưu<span>${l.length} từ</span></h3>
+      <div class="wlist"><div class="wlist-in">${l.map((x, i) => `<div class="wi${i === W.sel ? ' sel' : ''}">${esc(x.w)}<small>${esc(x.vi || '')}</small></div>`).join('')}</div></div></div>
+    <div class="wdet">
+      <div class="w">${esc(o.w)}</div>${o.ipa ? `<div class="ipa">${esc(o.ipa)}</div>` : ''}
+      <div class="vi">${esc(o.vi || '')}</div>
+      ${o.ex ? `<div class="ex">${esc(o.ex)}</div>` : ''}
+      ${src && src.title ? `<div class="src">Từ video: ${esc(src.title)} · ${fmt(src.t)}</div>` : ''}
+      <div class="keys"><span><b class="k">▲▼</b>Chọn</span>${src ? '<span><b class="k">OK</b>Xem lại câu này</span>' : ''}
+        <span class="${W.arm === o.w ? 'warn' : ''}"><b class="k">◀</b>${W.arm === o.w ? 'Bấm lần nữa để bỏ lưu' : 'Bỏ lưu'}</span><span><b class="k">Back</b>Đóng</span></div>
+    </div></div>`;
+  const list = $('#wordsbox .wlist'), sel = $('#wordsbox .wi.sel');
+  if (list && sel){
+    const y = Math.max(0, Math.min(sel.offsetTop - list.clientHeight * 0.35, list.firstElementChild.offsetHeight - list.clientHeight));
+    list.firstElementChild.style.transform = `translateY(${-y}px)`;
+  }
+}
+function wordsKey(k){
+  const W = S.words, l = SYNC.words(), o = l[W.sel];
+  if (k === 'back'){ closeWords(); return; }
+  if (k === 'up'){ W.sel--; W.arm = null; }
+  else if (k === 'down'){ W.sel++; W.arm = null; }
+  else if (k === 'left' && o){
+    if (W.arm === o.w){ SYNC.removeWord(o.w); W.arm = null; toast(`Đã bỏ lưu “${o.w}”`); }
+    else W.arm = o.w;
+  }
+  else if (k === 'ok' && o && o.src && o.src.id){
+    const v = CATALOG && CATALOG.videos.find(x => x.id === o.src.id);
+    if (!v){ toast('Video của từ này không còn trong danh sách'); return; }
+    const t = o.src.t || 0;
+    closeWords();
+    const r = Math.max(0, rows().findIndex(row => row.items.some(x => x.id === v.id)));
+    const item = rows()[r] ? rows()[r].items.find(x => x.id === v.id) || v : v;
+    playV(r, item, t);
+    return;
+  }
+  renderWords();
+}
 
 function progress(){
   try { return { t: player.getCurrentTime() || 0, d: player.getDuration() || 0 }; }
@@ -1268,6 +1355,7 @@ let lastBack = 0;
 function dispatch(k){
   if (k === 'back'){ const now = Date.now(); if (now - lastBack < 300) return; lastBack = now; }
   if (S.sync){ if (k === 'back' || k === 'ok') closeSync(); return; }
+  if (S.words){ wordsKey(k); return; }
   if (S.screen === 'profile') profileKey(k);
   else if (S.screen === 'home') homeKey(k);
   else if (S.screen === 'player') playerKey(k);
@@ -1283,6 +1371,11 @@ $('#profiles').addEventListener('click', e => { const p = e.target.closest('.pca
 $('#profiles').addEventListener('mouseover', e => { const p = e.target.closest('.pcard'); if (p){ S.pIdx = +p.dataset.i; focusProfile(); } });
 $('#chip').addEventListener('click', goProfiles);
 $('#syncChip').addEventListener('click', openSync);
+$('#wordsChip').addEventListener('click', openWords);
+$('#wordsbox').addEventListener('click', e => {
+  const items = [...document.querySelectorAll('#wordsbox .wi')], i = items.indexOf(e.target.closest('.wi'));
+  if (i >= 0){ S.words.sel = i; renderWords(); } else if (!e.target.closest('.wbox')) closeWords();
+});
 $('#syncbox').addEventListener('click', closeSync);
 $('#ask').addEventListener('click', e => { const b = e.target.closest('.opt'); if (b && S.ask){ S.ask.sel = +b.dataset.i; askKey('ok'); } });
 $('#rowsInner').addEventListener('click', e => { const c = e.target.closest('.card'); if (c) play(+c.dataset.r, +c.dataset.c); });
@@ -1323,7 +1416,8 @@ renderProfiles(); show('profile');
 /* Đồng bộ: kéo cờ + từ đã lưu từ máy chủ mỗi ~45 giây; danh sách tự sắp xếp lại khi có thay đổi */
 SYNC.consumeParam().then(ok => { if (ok) toast('Đã nối đồng bộ với các thiết bị khác'); });
 SYNC.on(what => {
-  if (what === 'data' && S.screen === 'home' && S.profile === 'me' && !S.sync){ renderHome(true); updateFocus(false); }
+  if (what === 'data' && S.words) renderWords();
+  if (what === 'data' && S.screen === 'home' && S.profile === 'me' && !S.sync && !S.words){ renderHome(true); updateFocus(false); }
 });
 SYNC.start();
 </script>
