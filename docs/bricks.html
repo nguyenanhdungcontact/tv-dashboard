@@ -109,6 +109,7 @@ body:not(.playing) .mv{opacity:.35}
     <div><b style="color:var(--violet)">◆ Gạch tím</b><br>từ khó → bóng lửa xuyên gạch</div>
     <div><b style="color:var(--cyan)">⇔ Xanh ngọc</b><br>thanh đỡ dài ra</div>
     <div><b style="color:var(--green)">◎ Xanh lá</b><br>bóng chạy chậm lại</div>
+    <div style="grid-column:1/-1"><b style="color:#c9d2df">▩ Gạch thép</b>: không vỡ, chỉ chắn bóng. Màn càng cao gạch càng nhỏ, càng nhiều, thép chắn càng khó.</div>
   </div>
   <p id="wordInfo">Đang tải từ vựng…</p>
   <button class="big" id="startBtn">Bắt đầu</button>
@@ -226,6 +227,7 @@ const sfx = {
   paddle: () => tone(330, 0.07, 'triangle', 0.05, 440),
   wall: () => tone(220, 0.04, 'triangle', 0.03),
   hit: () => tone(520, 0.05, 'square', 0.025, 380),
+  steel: () => tone(1250, 0.05, 'triangle', 0.03, 1100),
   brk: hard => { tone(hard ? 660 : 880, 0.09, 'square', 0.03, hard ? 1320 : 1760); },
   power: () => { tone(520, 0.12, 'triangle', 0.05, 1040); setTimeout(() => tone(780, 0.16, 'triangle', 0.05, 1560), 90); },
   lose: () => tone(300, 0.4, 'sawtooth', 0.04, 80),
@@ -283,21 +285,48 @@ function launch() {
   });
 }
 
-/* ---------- Xếp gạch: mỗi viên một từ, rộng theo chữ, căn đều từng hàng ---------- */
-function brickFont() { return `700 ${13 * U}px ${FONT}`; }
+/* ---------- Xếp gạch: mỗi viên một từ, rộng theo chữ, căn đều từng hàng ----------
+   Màn càng cao: gạch nhỏ hơn (chữ nhỏ, hàng thấp), nhiều hàng hơn, và gạch thép ▩ (không vỡ) chắn đường. */
+function levelSize(lv) {
+  return { fs: Math.max(10, 13 - (lv - 1) * 0.5) * U, rowH: Math.max(21, 30 - (lv - 1) * 1.6) * U,
+           gap: Math.max(3.5, 6 - (lv - 1) * 0.4) * U, pad: Math.max(12, 22 - (lv - 1) * 1.6) * U };
+}
+function brickFont() { return `700 ${G && G.sz ? G.sz.fs : 13 * U}px ${FONT}`; }
+/* Bố cục gạch thép, lặp lại sau màn 6 (từ màn 7 dày hơn):
+   1 trống · 2 vài viên rải rác · 3 tường chắn dưới có 3 khe · 4 cột hai bên mọi hàng
+   5 xen kẽ giữa các hàng · 6 tường chắn 2 khe + cột hai bên ở trên */
+function steelPlan(lv, rows) {
+  const P = ((lv - 1) % 6) + 1, tough = lv > 6;
+  const plan = Array.from({ length: rows }, () => ({ start: false, end: false, mid: 0 }));
+  let shield = 0;
+  if (P === 1 && tough) plan.forEach((q, i) => { if (i % 2 === 0) q.mid = 1; });
+  if (P === 2) { plan[rows - 1].mid = 1; plan[Math.floor(rows / 2)].mid = 1; }
+  if (P === 3) shield = 3;
+  if (P === 4) { plan.forEach(q => { q.start = q.end = true; }); plan[Math.floor(rows / 2)].mid = 1; }
+  if (P === 5) plan.forEach((q, i) => { if (i % 2 === 1) q.mid = 2; });
+  if (P === 6) { shield = 2; plan.slice(0, 2).forEach(q => { q.start = q.end = true; }); }
+  if (tough) { plan.forEach((q, i) => { if (i % 3 === 0) q.mid = Math.max(q.mid, 1); }); if (shield) shield = Math.max(2, shield - 1); }
+  return { plan, shield };
+}
 function buildLevel(keepRemaining) {
-  const fieldW = F.x1 - F.x0, gap = 6 * U, rowH = 30 * U;
-  const maxRows = Math.max(3, Math.floor(((F.padY - F.y0) * (land ? 0.5 : 0.46)) / (rowH + gap)));
-  const rows = Math.min(maxRows, 4 + G.level);
+  G.sz = levelSize(G.level);
+  const { rowH, gap, pad } = G.sz, fieldW = F.x1 - F.x0;
+  const share = Math.min(0.62, (land ? 0.5 : 0.46) + (G.level - 1) * 0.025);
+  const maxRows = Math.max(3, Math.floor(((F.padY - F.y0) * share) / (rowH + gap)));
+  const rows = Math.min(maxRows, 3 + G.level + (G.level > 3 ? 1 : 0));
+  const { plan, shield } = steelPlan(G.level, rows);
+  const wordRows = shield ? rows - 1 : rows;
+  const steelW = Math.max(24 * U, rowH * 1.15);
+  const steel = () => ({ kind: 'steel', item: null, hp: Infinity, maxHp: Infinity, w: steelW, flash: 0 });
   ctx.font = brickFont();
-  const fits = o => ctx.measureText(o.w).width + 22 * U <= fieldW - 4;
+  const fits = o => ctx.measureText(o.w).width + pad <= fieldW - 2 * (steelW + gap) - 4;
   let items;
-  if (keepRemaining) items = G.bricks.map(b => b.src);
+  if (keepRemaining) items = G.bricks.filter(b => b.kind !== 'steel').map(b => b.src);
   else {
     // Nhiều gạch đặc biệt hơn ở màn sau
     const pHard = Math.min(0.06 + G.level * 0.04, 0.3), pGold = POOL.saved.length ? Math.min(0.06 + G.level * 0.02, 0.18) : 0, pRare = 0.08;
     items = [];
-    const target = rows * (land ? 5 : 3) + 2;
+    const target = wordRows * (land ? 9 : 6) + 4;
     for (let i = 0; i < target * 3 && items.length < target; i++) {
       const r = Math.random(); let o, kind;
       if (r < pGold) { o = pick(POOL.saved); kind = 'gold'; }
@@ -307,27 +336,43 @@ function buildLevel(keepRemaining) {
       items.push({ item: o, kind });
     }
   }
-  // Xếp vào hàng
+  // Xếp vào hàng: chừa chỗ cho thép của hàng đó, phần dư chia đều cho các viên từ
   const out = []; let row = [], rowW = 0, r = 0;
+  const reserve = i => i < plan.length ? (plan[i].start ? steelW + gap : 0) + (plan[i].end ? steelW + gap : 0) + plan[i].mid * (steelW + gap) : 0;
   const flush = () => {
-    if (!row.length) return;
-    const extra = (fieldW - rowW + gap) / row.length;   // giãn đều cho kín hàng
+    if (!row.length || r >= wordRows) return;
+    const q = plan[r], seq = [];
+    if (q.start) seq.push(steel());
+    const at = new Set(Array.from({ length: q.mid }, (_, m) => Math.round(row.length * (m + 1) / (q.mid + 1))));
+    row.forEach((b, i) => { if (i > 0 && at.has(i)) seq.push(steel()); seq.push(b); });
+    if (row.length < 2) for (let m = 0; m < q.mid; m++) seq.push(steel());
+    if (q.end) seq.push(steel());
+    const used = seq.reduce((a, b) => a + b.w + gap, -gap), nWords = seq.filter(b => b.kind !== 'steel').length;
+    const extra = Math.max(0, fieldW - used) / Math.max(1, nWords);
     let x = F.x0;
-    row.forEach(s => { const w = s.w + extra; out.push(Object.assign(s, { x, y: F.y0 + r * (rowH + gap), w: w - gap, h: rowH })); x += w; });
+    seq.forEach(b => { const w = b.w + (b.kind === 'steel' ? 0 : extra); out.push(Object.assign(b, { x, y: F.y0 + r * (rowH + gap), w, h: rowH })); x += w + gap; });
     row = []; rowW = 0; r++;
   };
   for (const it of items) {
-    const w = ctx.measureText(it.item.w).width + 22 * U;
-    if (rowW + w > fieldW && row.length) flush();
-    if (r >= rows) break;
+    if (r >= wordRows) break;
+    const w = ctx.measureText(it.item.w).width + pad;
+    if (rowW + w + reserve(r) > fieldW && row.length) { flush(); if (r >= wordRows) break; }
     const hp = it.kind === 'violet' ? (G.level >= 4 ? 3 : 2) : it.kind === 'gold' ? 2 : 1;
     const old = keepRemaining ? G.bricks.find(b => b.src === it) : null;
     row.push({ src: it, item: it.item, kind: it.kind, hp: old ? old.hp : hp, maxHp: old ? old.maxHp : hp, w, flash: 0 });
     rowW += w + gap;
   }
-  if (r < rows) flush();
+  flush();
+  // Tường thép chắn bên dưới: kín, chừa vài khe đủ rộng cho bóng lọt qua
+  if (shield) {
+    const y = F.y0 + r * (rowH + gap) + gap * 3, hole = Math.max(46 * U, (F.x1 - F.x0) * 0.1);   // khe vừa đủ cho bóng (đường kính 16) lọt qua
+    const segs = shield + 1, segW = (fieldW - shield * hole) / segs;
+    let x = F.x0;
+    for (let i = 0; i < segs; i++) { out.push(Object.assign(steel(), { x, y, w: segW, h: rowH * 0.65 })); x += segW + hole; }
+  }
   G.bricks = out;
 }
+const wordBricksLeft = () => G.bricks.some(b => b.kind !== 'steel');
 
 /* ---------- Hiệu ứng ---------- */
 function burst(x, y, n, color, speed = 160, life = 0.6) {
@@ -385,7 +430,7 @@ function breakBrick(b) {
   if (!G.learned.some(x => x.w === b.item.w)) G.learned.push(b.item);
   const power = { gold: 'multi', violet: 'fire', cyan: 'wide', green: 'slow' }[b.kind];
   if (power) givePower(power);
-  if (!G.bricks.length) levelClear();
+  if (!wordBricksLeft()) levelClear();
 }
 function givePower(p) {
   sfx.power(); banner(POWERS[p].name + (POWERS[p].time ? ` · ${POWERS[p].time} giây` : ''), POWERS[p].color);
@@ -431,11 +476,17 @@ function stepBall(b, dt) {
   // Gạch
   for (const k of G.bricks) {
     const c = circleRect(b, k); if (!c) continue;
-    if (G.pw.fire > 0) { k.hp = 0; breakBrick(k); return; }          // bóng lửa: xuyên, không nảy
+    if (G.pw.fire > 0 && k.kind !== 'steel') { k.hp = 0; breakBrick(k); return; }   // bóng lửa: xuyên gạch từ, gặp thép vẫn nảy
     let nx = c.dx, ny = c.dy;
     if (!nx && !ny) { ny = -Math.sign(b.vy) || -1; }
     if (Math.abs(nx) > Math.abs(ny)) { b.vx = Math.sign(nx) * Math.abs(b.vx); b.x = c.cx + Math.sign(nx) * b.r; }
     else { b.vy = Math.sign(ny) * Math.abs(b.vy); b.y = c.cy + Math.sign(ny) * b.r; }
+    if (k.kind === 'steel') {                                       // thép: không vỡ; lệch góc nhẹ để bóng không kẹt
+      k.flash = 0.08; sfx.steel(); burst(c.cx, c.cy, 4, '#cfd8e6', 110, 0.25);
+      const a = rand(-0.09, 0.09), vx = b.vx, vy = b.vy;
+      b.vx = vx * Math.cos(a) - vy * Math.sin(a); b.vy = vx * Math.sin(a) + vy * Math.cos(a);
+      return;
+    }
     k.hp--; k.flash = 0.1;
     if (k.hp <= 0) breakBrick(k); else { sfx.hit(); burst(c.cx, c.cy, 5, '#fff', 120, 0.3); }
     return;
@@ -504,13 +555,31 @@ function rrect(x, y, w, h, r) {
   ctx.beginPath(); ctx.moveTo(x + r, y); ctx.arcTo(x + w, y, x + w, y + h, r); ctx.arcTo(x + w, y + h, x, y + h, r);
   ctx.arcTo(x, y + h, x, y, r); ctx.arcTo(x, y, x + w, y, r); ctx.closePath();
 }
+function drawSteel(k) {
+  const g = ctx.createLinearGradient(k.x, k.y, k.x, k.y + k.h);
+  g.addColorStop(0, '#c9d2df'); g.addColorStop(0.45, '#7f8a9c'); g.addColorStop(1, '#4b5466');
+  rrect(k.x, k.y, k.w, k.h, 4 * U); ctx.fillStyle = g; ctx.fill();
+  ctx.lineWidth = 1.2 * U; ctx.strokeStyle = 'rgba(230,238,255,.55)'; ctx.stroke();
+  // Vạch chéo + đinh tán
+  ctx.save(); rrect(k.x, k.y, k.w, k.h, 4 * U); ctx.clip();
+  ctx.strokeStyle = 'rgba(40,46,60,.28)'; ctx.lineWidth = 2 * U;
+  for (let x = k.x - k.h; x < k.x + k.w; x += 9 * U) { ctx.beginPath(); ctx.moveTo(x, k.y + k.h); ctx.lineTo(x + k.h, k.y); ctx.stroke(); }
+  ctx.restore();
+  ctx.fillStyle = 'rgba(30,34,46,.6)';
+  const rv = Math.min(2.2 * U, k.h * 0.12);
+  [[k.x + 5 * U, k.y + 5 * U], [k.x + k.w - 5 * U, k.y + 5 * U], [k.x + 5 * U, k.y + k.h - 5 * U], [k.x + k.w - 5 * U, k.y + k.h - 5 * U]]
+    .forEach(([x, y]) => { ctx.beginPath(); ctx.arc(x, y, rv, 0, 6.3); ctx.fill(); });
+  if (k.flash > 0) { rrect(k.x, k.y, k.w, k.h, 4 * U); ctx.fillStyle = `rgba(255,255,255,${k.flash * 6})`; ctx.fill(); }
+}
 function drawBrick(k, i) {
+  if (k.kind === 'steel') { drawSteel(k); return; }
   const c = KCOL[k.kind];
   const g = ctx.createLinearGradient(0, k.y, 0, k.y + k.h);
-  if (k.kind === 'normal') { const t = ROWTINT[Math.round((k.y - F.y0) / (36 * U)) % ROWTINT.length]; g.addColorStop(0, t); g.addColorStop(1, '#1f2a5a'); }
+  if (k.kind === 'normal') { const t = ROWTINT[Math.round((k.y - F.y0) / (G.sz.rowH + G.sz.gap)) % ROWTINT.length]; g.addColorStop(0, t); g.addColorStop(1, '#1f2a5a'); }
   else { g.addColorStop(0, c.c1); g.addColorStop(1, c.c2); }
   if (c.glow) { ctx.shadowColor = c.glow; ctx.shadowBlur = 12 * U; }
-  rrect(k.x, k.y, k.w, k.h, 7 * U); ctx.fillStyle = g; ctx.fill();
+  const rad = Math.min(7 * U, k.h * 0.3);
+  rrect(k.x, k.y, k.w, k.h, rad); ctx.fillStyle = g; ctx.fill();
   ctx.shadowBlur = 0;
   ctx.lineWidth = 1.2 * U; ctx.strokeStyle = c.edge; ctx.stroke();
   // Vạch sáng trên mép + vết nứt khi đã trúng
@@ -522,7 +591,7 @@ function drawBrick(k, i) {
     if (k.maxHp - k.hp > 1) { ctx.moveTo(k.x + k.w * 0.2, k.y + k.h); ctx.lineTo(k.x + k.w * 0.3, k.y + k.h * 0.4); }
     ctx.stroke();
   }
-  if (k.flash > 0) { rrect(k.x, k.y, k.w, k.h, 7 * U); ctx.fillStyle = `rgba(255,255,255,${k.flash * 6})`; ctx.fill(); }
+  if (k.flash > 0) { rrect(k.x, k.y, k.w, k.h, rad); ctx.fillStyle = `rgba(255,255,255,${k.flash * 6})`; ctx.fill(); }
   ctx.font = brickFont(); ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
   ctx.fillStyle = c.text;
   const label = c.icon ? `${c.icon} ${k.item.w}` : k.item.w;
@@ -687,7 +756,7 @@ resize();
 loadWords();
 if (SYNC) { SYNC.start(); SYNC.on(w => { if (w === 'data' && (!G || G.state === 'over')) loadWords(); }); }
 requestAnimationFrame(frame);
-window.__bricks = { get G() { return G; }, input, start, launch, givePower };   // để kiểm thử
+window.__bricks = { get G() { return G; }, input, start, launch, givePower, buildLevel, resetBall };   // để kiểm thử
 })();
 </script>
 </body>
