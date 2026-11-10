@@ -72,6 +72,8 @@ main,#savedView{padding-top:calc(var(--top) + 6px);padding-bottom:calc(var(--tab
   background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(1.4) blur(18px);-webkit-backdrop-filter:saturate(1.4) blur(18px);border-top:.5px solid var(--line)}
 .tabbar button{flex:1;border-radius:14px;font-size:12px;font-weight:600;color:var(--ink3);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px}
 .tabbar button b{font-size:20px;line-height:1}
+.tabbar a.tablink{flex:1;border-radius:14px;font-size:12px;font-weight:600;color:var(--ink3);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;text-decoration:none}
+.tabbar a.tablink b{font-size:20px;line-height:1}
 .tabbar button.on{color:var(--accent);background:var(--accent-soft)}
 .savedCount:not(:empty){margin-left:4px;padding:0 6px;border-radius:9px;background:var(--warm);color:#fff;font-size:11px}
 body.watching .tabbar{display:none}
@@ -262,6 +264,7 @@ body.watching #toast{bottom:calc(20px + env(safe-area-inset-bottom))}
 <nav class="tabbar" id="tabs">
   <button data-tab="videos" class="on"><b>▶︎</b>Video</button>
   <button data-tab="saved"><b>★</b><span>Từ đã lưu<span class="savedCount"></span></span></button>
+  <a class="tablink" href="game.html"><b>☄︎</b>Game</a>
 </nav>
 
 <div id="sheet"></div>
