@@ -45,6 +45,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 #right{right:calc(var(--sar) + 20px);bottom:calc(var(--sab) + 18px)}
 /* Màn ngang: hai nút nằm hai bên sân, sân chơi ở giữa */
 @media (orientation:landscape){ .mv{bottom:calc(var(--sab) + 26px)} }
+@media (orientation:portrait){ .mv{width:78px;height:78px;font-size:28px;opacity:.9} }
 body:not(.playing) .mv{opacity:.35}
 
 /* ---------- Màn bắt đầu / tạm dừng / kết thúc ---------- */
@@ -158,9 +159,9 @@ function readSafe() {
 }
 let stars = [];
 function layoutField() {
-  const btn = land ? 84 : 96;
+  const btn = land ? 84 : 78;
   if (land) { F.x0 = safe.l + btn + 34; F.x1 = W - safe.r - btn - 34; F.padY = H - safe.b - 34 * U; }
-  else { F.x0 = safe.l + 8; F.x1 = W - safe.r - 8; F.padY = H - safe.b - btn - 40; }
+  else { F.x0 = safe.l + 8; F.x1 = W - safe.r - 8; F.padY = H - safe.b - 18 - btn - 58; }   // chừa khoảng trống trên nút
   F.y0 = safe.t + 68;
 }
 function resize() {
@@ -393,30 +394,33 @@ function wrapText(text, maxW) {
   if (cur) lines.push(cur);
   return lines.slice(0, 2);
 }
-/* Từ to + nghĩa gọn, đặt vào chỗ trống giữa vùng gạch và thanh đỡ, không đè nhau */
-const WORD_PX = 22, MEAN_PX = 13;
+/* Từ to + nghĩa gọn: hiện ở chỗ viên gạch vỡ, trôi nhẹ xuống và dừng ngay trên thanh đỡ (chỗ mắt đang nhìn),
+   giữ một lúc rồi mờ dần. Nhiều từ cùng lúc thì xếp thành các hàng phía trên thanh, không đè nhau. */
+const WORD_PX = 22, MEAN_PX = 13, DRIFT = 1.3, POP_LIFE = 3.8;
+const easeOut = t => 1 - Math.pow(1 - t, 3);
 function popMeaning(b) {
   ctx.font = `800 ${WORD_PX * U}px ${HEAD}`;
   const ww = ctx.measureText(b.item.w).width;
   ctx.font = `600 ${MEAN_PX * U}px ${FONT}`;
   const lines = wrapText(b.item.vi || '', Math.max(ww, Math.min(W * 0.6, 230 * U)));
   const bw = Math.max(ww, ...lines.map(l => ctx.measureText(l).width), 60 * U) + 16 * U;
-  const bh = (WORD_PX + 6 + lines.length * (MEAN_PX + 4)) * U + 8 * U;
-  const bricksBottom = G.bricks.reduce((m, q) => Math.max(m, q.y + q.h), F.y0);
-  const x0 = Math.max(F.x0, safe.l + 8) + bw / 2, x1 = Math.min(F.x1, W - safe.r - 8) - bw / 2;
-  const y0 = Math.max(bricksBottom + 8, F.y0) + bh / 2, y1 = F.padY - 24 * U - bh / 2;
-  const cx = b.x + b.w / 2, cy = b.y + b.h / 2;
-  const hits = (x, y) => G.pops.some(p => Math.abs(p.x - x) < (p.bw + bw) / 2 && Math.abs(p.y - y) < (p.bh + bh) / 2);
-  const cands = [];
-  if (x1 >= x0 && y1 >= y0) {
-    for (let y = y0; y <= y1 + 0.1; y += Math.max(bh * 0.6, 20)) for (let x = x0; x <= x1 + 0.1; x += Math.max(bw * 0.4, 30)) cands.push({ x, y });
+  const bh = (WORD_PX + 6 + lines.length * (MEAN_PX + 4)) * U + 6 * U;
+  const x0 = Math.max(F.x0, safe.l + 8) + bw / 2, x1 = Math.max(x0, Math.min(F.x1, W - safe.r - 8) - bw / 2);
+  const sx = clamp(b.x + b.w / 2, x0, x1), sy = b.y + b.h / 2;
+  // Ô đích: hàng sát trên thanh đỡ trước, đầy thì lên hàng trên; trong hàng chọn chỗ gần viên gạch nhất
+  const yBottom = F.padY - 28 * U - bh / 2;
+  const hits = (x, y) => G.pops.some(p => Math.abs(p.ex - x) < (p.bw + bw) / 2 + 4 && Math.abs(p.ey - y) < (p.bh + bh) / 2 + 2);
+  let best = null;
+  for (let k = 0; k < 4 && !best; k++) {
+    const y = yBottom - k * (bh + 6 * U);
+    const xs = []; for (let x = x0; x <= x1 + 0.1; x += Math.max(bw * 0.25, 16)) xs.push(x);
+    xs.sort((a, c) => Math.abs(a - sx) - Math.abs(c - sx));
+    const x = xs.find(x => !hits(x, y));
+    if (x !== undefined) best = { x, y };
   }
-  cands.push({ x: clamp(cx, x0, Math.max(x0, x1)), y: clamp(cy + 40 * U, F.y0 + bh / 2, F.padY - bh / 2) });
-  cands.sort((a, c) => Math.hypot(a.x - cx, a.y - cy) - Math.hypot(c.x - cx, c.y - cy));
-  let best = cands.find(c => !hits(c.x, c.y));
-  if (!best) { G.pops.shift(); best = cands.find(c => !hits(c.x, c.y)) || cands[0]; }
-  G.pops.push({ x: best.x, y: best.y, w: b.item.w, lines, bw, bh, t: 0, life: 2.8, kind: b.kind });
-  if (G.pops.length > 5) G.pops.shift();
+  if (!best) { G.pops.shift(); best = { x: sx, y: yBottom }; }
+  G.pops.push({ sx, sy, ex: best.x, ey: best.y, x: sx, y: sy, w: b.item.w, lines, bw, bh, t: 0, life: POP_LIFE, kind: b.kind });
+  if (G.pops.length > 6) G.pops.shift();
 }
 
 /* ---------- Va chạm ---------- */
@@ -538,7 +542,8 @@ function tickFx(dt) {
   G.bricks.forEach(k => { if (k.flash > 0) k.flash -= dt; });
   G.sparks.forEach(s => { s.t += dt; s.x += s.vx * dt; s.y += s.vy * dt; s.vy += 220 * U * dt; });
   G.sparks = G.sparks.filter(s => s.t < s.life);
-  G.pops.forEach(q => q.t += dt); G.pops = G.pops.filter(q => q.t < q.life);
+  G.pops.forEach(q => { q.t += dt; const f = easeOut(Math.min(1, q.t / DRIFT)); q.x = q.sx + (q.ex - q.sx) * f; q.y = q.sy + (q.ey - q.sy) * f; });
+  G.pops = G.pops.filter(q => q.t < q.life);
   G.banners.forEach(q => q.t += dt); G.banners = G.banners.filter(q => q.t < q.life);
 }
 
@@ -661,6 +666,23 @@ function draw(dt) {
   ctx.strokeStyle = 'rgba(160,180,220,.13)'; ctx.lineWidth = 1.5;
   ctx.beginPath(); ctx.moveTo(F.x0 - 2, H); ctx.lineTo(F.x0 - 2, F.y0 - 8 * U); ctx.lineTo(F.x1 + 2, F.y0 - 8 * U); ctx.lineTo(F.x1 + 2, H); ctx.stroke();
   G.bricks.forEach(drawBrick);
+  // Từ + nghĩa vừa vỡ (vẽ trước thanh đỡ và bóng để bóng luôn nổi lên trên)
+  G.pops.forEach(q => {
+    const a = q.t < 0.15 ? q.t / 0.15 : 1 - Math.max(0, q.t - q.life + 0.8) / 0.8, sc = q.t < 0.2 ? 0.8 + q.t : 1;
+    ctx.save(); ctx.globalAlpha = clamp(a, 0, 1) * 0.95; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+    const top = q.y - q.bh / 2;
+    ctx.font = `800 ${WORD_PX * U * sc}px ${HEAD}`;
+    const wy = top + (WORD_PX / 2 + 3) * U;
+    ctx.lineWidth = 6 * U; ctx.strokeStyle = 'rgba(5,6,26,.9)'; ctx.strokeText(q.w, q.x, wy);
+    const kc = KCOL[q.kind]; ctx.fillStyle = q.kind === 'normal' ? '#ffffff' : kc.accent; ctx.fillText(q.w, q.x, wy);
+    ctx.font = `600 ${MEAN_PX * U}px ${FONT}`;
+    q.lines.forEach((l, i) => {
+      const y = top + (WORD_PX + 5 + MEAN_PX / 2 + 2 + i * (MEAN_PX + 4)) * U;
+      ctx.lineWidth = 4 * U; ctx.strokeStyle = 'rgba(5,6,26,.85)'; ctx.strokeText(l, q.x, y);
+      ctx.fillStyle = 'rgba(214,222,255,.92)'; ctx.fillText(l, q.x, y);
+    });
+    ctx.restore();
+  });
   // Thanh đỡ
   const p = G.pad;
   const pg = ctx.createLinearGradient(0, p.y, 0, p.y + p.h); pg.addColorStop(0, '#eef2f8'); pg.addColorStop(1, '#8ea3bf');
@@ -681,29 +703,13 @@ function draw(dt) {
   // Tia lửa
   G.sparks.forEach(s => { ctx.globalAlpha = 1 - s.t / s.life; ctx.fillStyle = s.color; ctx.fillRect(s.x, s.y, s.s, s.s); });
   ctx.globalAlpha = 1;
-  // Từ + nghĩa vừa vỡ
-  G.pops.forEach(q => {
-    const a = q.t < 0.2 ? q.t / 0.2 : 1 - Math.max(0, q.t - q.life + 0.8) / 0.8, sc = q.t < 0.2 ? 0.75 + q.t * 1.25 : 1;
-    ctx.save(); ctx.globalAlpha = clamp(a, 0, 1); ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-    const top = q.y - q.t * 10 * U - q.bh / 2;
-    ctx.font = `800 ${WORD_PX * U * sc}px ${HEAD}`;
-    const wy = top + (WORD_PX / 2 + 4) * U;
-    ctx.lineWidth = 6 * U; ctx.strokeStyle = 'rgba(5,6,26,.9)'; ctx.strokeText(q.w, q.x, wy);
-    const kc = KCOL[q.kind]; ctx.fillStyle = q.kind === 'normal' ? '#ffffff' : kc.accent; ctx.fillText(q.w, q.x, wy);
-    ctx.font = `600 ${MEAN_PX * U}px ${FONT}`;
-    q.lines.forEach((l, i) => {
-      const y = top + (WORD_PX + 6 + MEAN_PX / 2 + 2 + i * (MEAN_PX + 4)) * U;
-      ctx.lineWidth = 4 * U; ctx.strokeStyle = 'rgba(5,6,26,.85)'; ctx.strokeText(l, q.x, y);
-      ctx.fillStyle = 'rgba(214,222,255,.92)'; ctx.fillText(l, q.x, y);
-    });
-    ctx.restore();
-  });
   // Thông báo (ngay trên thanh đỡ)
   G.banners.forEach((bn, i) => {
     const a = bn.t < 0.2 ? bn.t / 0.2 : 1 - Math.max(0, bn.t - bn.life + 0.5) / 0.5;
     ctx.globalAlpha = clamp(a, 0, 1); ctx.textAlign = 'center';
     ctx.font = `800 ${15 * U}px ${FONT}`; ctx.lineWidth = 4 * U; ctx.strokeStyle = 'rgba(5,6,26,.85)';
-    const y = F.padY - 40 * U - i * 22 * U, x = (F.x0 + F.x1) / 2;
+    const bb = G.bricks.reduce((m, q) => Math.max(m, q.y + q.h), F.y0);
+    const y = bb + (F.padY - bb) * 0.28 + i * 22 * U, x = (F.x0 + F.x1) / 2;
     ctx.strokeText(bn.text, x, y); ctx.fillStyle = bn.color; ctx.fillText(bn.text, x, y);
   });
   ctx.globalAlpha = 1;
