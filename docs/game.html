@@ -72,12 +72,18 @@ body:not(.playing) .ctrl{opacity:.35}
 .stats b{display:block;font-family:var(--head);font-size:26px;color:var(--ink)}
 .learned{margin-top:14px;text-align:left;border-top:1px solid rgba(255,255,255,.1)}
 .learned h3{font-size:13px;color:var(--ink2);font-weight:600;margin:12px 0 6px}
-.lw{display:flex;align-items:center;gap:10px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+.learned .hint{font-size:12px;color:var(--ink2);margin:-2px 0 6px;line-height:1.45}
+.lw{position:relative;overflow:hidden;border-bottom:1px solid rgba(255,255,255,.06)}
+.lw .del{position:absolute;left:0;top:0;bottom:0;width:96px;border-radius:0;background:#d9534f;color:#fff;font-weight:700;font-size:14px}
+.lw .in{position:relative;display:flex;align-items:center;gap:10px;padding:7px 2px;background:#111641;transition:transform .2s ease;touch-action:pan-y}
+.lw.armed .in{transform:translateX(96px)}
 .lw .t{flex:1;min-width:0}
 .lw .w{font-weight:700;font-size:15px}
 .lw .v{font-size:13px;color:var(--ink2)}
-.lw button{flex:none;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.07);font-size:17px;color:var(--ink2)}
-.lw button.on{color:var(--gold)}
+.lw .star{flex:none;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.07);font-size:17px;color:var(--ink2)}
+.lw .star.on{color:var(--gold)}
+.lw.gone .in{justify-content:space-between;color:var(--ink2);font-size:13px;min-height:50px}
+.lw.gone .undo{flex:none;padding:6px 12px;border-radius:99px;background:rgba(255,255,255,.08);font-weight:700;font-size:13px;color:var(--ink)}
 .rot{display:none;margin-top:10px;font-size:13px;color:var(--cyan)}
 @media (orientation:portrait){ .rot{display:block} }
 /* Màn ngang thấp (iPhone ngang): thẻ gọn hơn */
@@ -676,24 +682,70 @@ function gameOver() {
   const best = Math.max(+store.get('game.best') || 0, G.score); store.set('game.best', best);
   $('#oScore').textContent = G.score; $('#oWords').textContent = G.learned.length; $('#oBest').textContent = best;
   $('#overTitle').textContent = G.score >= best && G.score > 0 ? 'Kỷ lục mới!' : 'Hết lượt!';
-  const l = G.learned.slice(-40).reverse();
-  $('#learned').innerHTML = l.length ? `<h3>Từ bạn đã phá trong lượt này (chạm ☆ để lưu)</h3>` + l.map((o, i) => {
-    const on = SYNC && SYNC.isSaved(o.w);
-    return `<div class="lw"><div class="t"><div class="w">${esc(o.w)}</div><div class="v">${esc(o.vi || '')}</div></div>
-      <button class="${on ? 'on' : ''}" data-i="${i}" aria-label="Lưu từ">${on ? '★' : '☆'}</button></div>`;
-  }).join('') : '';
-  $('#learned').onclick = e => {
-    const b = e.target.closest('button'); if (!b || !SYNC) return;
-    const o = l[+b.dataset.i];
-    if (SYNC.isSaved(o.w)) SYNC.removeWord(o.w);
-    else SYNC.saveWord({ w: o.w, ipa: o.ipa || '', pos: o.pos || '', vi: o.vi || '', ex: o.ex || '', col: o.col || [] });
-    b.classList.toggle('on', SYNC.isSaved(o.w)); b.textContent = SYNC.isSaved(o.w) ? '★' : '☆';
-  };
+  renderLearned(G.learned.slice(-40).reverse());
   setTimeout(() => show('#overOv', true), 700);
 }
+/* Danh sách từ vừa phá (màn hết lượt).
+   ☆ → ★: đánh dấu "cần ôn" (thành thiên thạch vàng, bay gấp đôi trên dashboard, vào mục Từ đã lưu).
+   Vuốt một từ sang phải → nút Xoá: bỏ từ đó khỏi game, dashboard và mọi thiết bị (có Hoàn tác). */
+let LL = [];
+function rowHTML(o, i) {
+  if (o._gone) return `<div class="lw gone" data-i="${i}"><div class="in"><span>Đã xoá “${esc(o.w)}”</span><button class="undo" data-undo="${i}">Hoàn tác</button></div></div>`;
+  const on = SYNC && SYNC.isSaved(o.w);
+  return `<div class="lw" data-i="${i}"><button class="del" data-del="${i}">Xoá</button><div class="in">
+    <div class="t"><div class="w">${esc(o.w)}</div><div class="v">${esc(o.vi || '')}</div></div>
+    <button class="star${on ? ' on' : ''}" data-star="${i}" aria-label="Đánh dấu cần ôn">${on ? '★' : '☆'}</button></div></div>`;
+}
+function renderLearned(list) {
+  if (list) LL = list.map(o => Object.assign({}, o));
+  $('#learned').innerHTML = LL.length ? `<h3>Từ bạn đã phá trong lượt này</h3>
+    <p class="hint">☆ đánh dấu từ cần ôn (thành thiên thạch vàng, bay nhiều hơn trên dashboard). Vuốt một từ sang phải để xoá khỏi game và dashboard ở mọi thiết bị.</p>`
+    + LL.map(rowHTML).join('') : '';
+}
+const lwBox = $('#learned');
+lwBox.addEventListener('click', e => {
+  if (!SYNC) return;
+  const star = e.target.closest('[data-star]'), del = e.target.closest('[data-del]'), undo = e.target.closest('[data-undo]');
+  if (star) {
+    const o = LL[+star.dataset.star];
+    if (SYNC.isSaved(o.w)) SYNC.removeWord(o.w);
+    else SYNC.saveWord({ w: o.w, ipa: o.ipa || '', pos: o.pos || '', vi: o.vi || '', ex: o.ex || '', col: o.col || [] });
+    renderLearned();
+  } else if (del) {
+    const o = LL[+del.dataset.del];
+    o._was = SYNC.isSaved(o.w) ? SYNC.words().find(x => x.w.toLowerCase() === o.w.toLowerCase()) : null;
+    SYNC.hideWord(o.w); o._gone = true; renderLearned();
+  } else if (undo) {
+    const o = LL[+undo.dataset.undo];
+    SYNC.unhideWord(o.w, o._was || null); o._gone = false; renderLearned();
+  } else if (!e.target.closest('.lw.armed')) lwBox.querySelectorAll('.lw.armed').forEach(r => r.classList.remove('armed'));
+});
+// Vuốt sang phải: kéo hàng theo ngón tay, thả quá 60px thì hiện nút Xoá bên trái
+let sw = null;
+lwBox.addEventListener('pointerdown', e => {
+  const row = e.target.closest('.lw'); if (!row || row.classList.contains('gone') || e.target.closest('button')) return;
+  sw = { row, x: e.clientX, y: e.clientY, dx: 0, on: row.classList.contains('armed') };
+});
+lwBox.addEventListener('pointermove', e => {
+  if (!sw) return;
+  const dx = e.clientX - sw.x, dy = e.clientY - sw.y;
+  if (Math.abs(dy) > 12 && Math.abs(dy) > Math.abs(dx)) { sw.row.querySelector('.in').style.transform = ''; sw = null; return; }
+  sw.dx = dx;
+  const base = sw.on ? 96 : 0, x = clamp(base + dx, 0, 120);
+  const inn = sw.row.querySelector('.in'); inn.style.transition = 'none'; inn.style.transform = `translateX(${x}px)`;
+});
+const swEnd = () => {
+  if (!sw) return;
+  const { row, dx, on } = sw; sw = null;
+  const inn = row.querySelector('.in'); inn.style.transition = ''; inn.style.transform = '';
+  const open = on ? dx > -40 : dx > 60;
+  lwBox.querySelectorAll('.lw.armed').forEach(r => { if (r !== row) r.classList.remove('armed'); });
+  row.classList.toggle('armed', open);
+};
+lwBox.addEventListener('pointerup', swEnd); lwBox.addEventListener('pointercancel', swEnd);
 const esc = t => String(t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 $('#startBtn').onclick = start;
-$('#againBtn').onclick = () => { loadWords(); start(); };
+$('#againBtn').onclick = async () => { await loadWords(); start(); };   // nạp lại để bỏ các từ vừa xoá
 $('#pauseBtn').onclick = () => (G && G.state === 'pause') ? resume() : pause();
 $('#resumeBtn').onclick = resume;
 $('#quitBtn').onclick = () => { show('#pauseOv', false); G.state = 'play'; gameOver(); };
