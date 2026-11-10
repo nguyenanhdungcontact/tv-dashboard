@@ -31,7 +31,8 @@
         "Southeast Asia travel culture food explained",
         "famous building architecture explained",
         "country geography explained"
-      ]
+      ],
+      "max_minutes": 35
     },
     {
       "id": "tech",
@@ -129,7 +130,8 @@
       "queries": [
         "economy explained",
         "megaproject explained"
-      ]
+      ],
+      "min_minutes": 5
     },
     {
       "id": "biz",

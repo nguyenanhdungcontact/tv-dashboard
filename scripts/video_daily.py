@@ -102,7 +102,10 @@ def clock(sec):
     return f"{h}:{m:02d}:{s:02d}" if h else f"{m}:{s:02d}"
 
 
-def reject_reason(item, cfg):
+def reject_reason(item, cfg, row=None):
+    """row có thể đặt min_minutes / max_minutes riêng (ví dụ vlog du lịch thường dài hơn)."""
+    if row:
+        cfg = dict(cfg, **{k: row[k] for k in ("min_minutes", "max_minutes") if k in row})
     sn, st, cd = item.get("snippet", {}), item.get("status", {}), item.get("contentDetails", {})
     dur = seconds(cd.get("duration"))
     if not st.get("embeddable", False):
@@ -186,6 +189,9 @@ def find_candidates(cfg, skip):
 # ------------------------------------------------------------------ Một video
 def make_phrases(vid):
     """Lấy phụ đề + soạn cụm từ, lưu file. Trả về kết quả. Ném lỗi của video_phrases nếu không được."""
+    old = load(vp.OUT_DIR / f"{vid}.json", {})
+    if old.get("phrases") and len(old["phrases"]) >= 5 and str(old.get("source", "")).startswith("youtube"):
+        return old                    # đã soạn ở lần chạy trước (bị ngắt giữa chừng): dùng lại, không gọi AI nữa
     tr = vp.get_transcript(vid)
     if len(tr["segments"]) < 30:
         raise vp.NoEnglish()
@@ -273,16 +279,28 @@ def main() -> int:
             print(f"Tìm video mới (cần thêm {target} video hôm nay)…", flush=True)
             cands = find_candidates(cfg, set(by_id) | set(rejected))
             info = details([c[0] for c in cands][:300])
-            ok = []
+            rows_by_id = {r["id"]: r for r in cfg["rows"]}
+            per = {}
             for vid, row_id in cands:
                 item = info.get(vid)
                 if not item:
                     continue
-                why = reject_reason(item, cfg)
+                why = reject_reason(item, cfg, rows_by_id.get(row_id))
                 if why:
                     rejected[vid] = why
                     continue
-                ok.append((vid, row_id, item))
+                per.setdefault(row_id, []).append((vid, row_id, item))
+            # Xen kẽ các hàng (theo weight) SAU khi lọc, để chủ đề nào cũng có video mới
+            ok, queues = [], [[max(1, int(rows_by_id[r].get("weight", 1))), q] for r, q in per.items()]
+            while queues:
+                for entry in list(queues):
+                    for _ in range(entry[0]):
+                        if entry[1]:
+                            ok.append(entry[1].pop(0))
+                    if not entry[1]:
+                        queues.remove(entry)
+            print("Qua vòng lọc theo hàng: " + ", ".join(f"{r} {len(q)}" for r, q in
+                  ((r, [x for x in ok if x[1] == r]) for r in per)), flush=True)
             print(f"Có {len(cands)} ứng viên, {len(ok)} qua vòng lọc. Bắt đầu lấy phụ đề…", flush=True)
             tried = 0
             for vid, row_id, item in ok:
@@ -306,6 +324,9 @@ def main() -> int:
                     catalog["videos"].append(entry)
                     by_id[vid] = entry
                     added += 1
+                    days[TODAY] = added_today + added
+                    save(CATALOG, catalog)            # lưu ngay: lỡ bị ngắt cũng không mất video đã làm
+                    save(STATE, state)
                 time.sleep(PAUSE)
     except vp.Blocked as e:
         stop = f"YouTube đang chặn IP khi lấy phụ đề ({e})"

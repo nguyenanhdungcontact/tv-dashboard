@@ -57,12 +57,25 @@ class Temporary(Exception):
 
 
 # ------------------------------------------------------------------ 1-2. Transcript
+class _TimeoutSession(requests.Session):
+    """Mỗi yêu cầu tới YouTube chờ tối đa 30 giây (tránh treo cả buổi khi mạng bị cắt giữa chừng)."""
+    def request(self, *args, **kwargs):
+        kwargs.setdefault("timeout", 30)
+        return super().request(*args, **kwargs)
+
+
+def _http():
+    s = _TimeoutSession()
+    s.headers.update({"Accept-Language": "en-US,en;q=0.9"})
+    return s
+
+
 def get_transcript(video_id: str) -> dict:
     cache = CACHE_DIR / f"{video_id}.json"
     if cache.exists():
         return json.loads(cache.read_text(encoding="utf-8"))
 
-    api = YouTubeTranscriptApi()
+    api = YouTubeTranscriptApi(http_client=_http())
     try:
         tlist = api.list(video_id)
         try:
