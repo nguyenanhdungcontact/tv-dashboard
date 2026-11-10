@@ -230,8 +230,8 @@
    "dur": "22:12",
    "added": "2026-11-08",
    "published": "2026-07-31",
-   "n": 0,
-   "level": ""
+   "n": 10,
+   "level": "C1"
   },
   {
    "id": "Fbe8ujdXxFk",
@@ -340,8 +340,8 @@
    "dur": "18:04",
    "added": "2026-11-01",
    "published": "",
-   "n": 0,
-   "level": ""
+   "n": 12,
+   "level": "C1"
   },
   {
    "id": "xBIVlM435Zg",
@@ -351,8 +351,8 @@
    "dur": "17:01",
    "added": "2026-11-01",
    "published": "",
-   "n": 0,
-   "level": ""
+   "n": 11,
+   "level": "C1"
   },
   {
    "id": "rrkrvAUbU9Y",
@@ -463,6 +463,127 @@
    "published": "",
    "n": 0,
    "level": ""
+  },
+  {
+   "id": "BcLlAZu7Q-k",
+   "row": "tech",
+   "title": "Apple Explains Its Biggest iPad mini Update",
+   "channel": "Christopher Lawley",
+   "dur": "8:29",
+   "added": "2026-11-10",
+   "published": "2026-10-29",
+   "level": "C1",
+   "n": 10
+  },
+  {
+   "id": "uxb8OjkiZBY",
+   "row": "life",
+   "title": "What happened to Nathaniel Drew?",
+   "channel": "Nathaniel Drew",
+   "dur": "19:59",
+   "added": "2026-11-10",
+   "published": "2026-07-13",
+   "level": "C1",
+   "n": 12
+  },
+  {
+   "id": "g3_TqjSLyLk",
+   "row": "ted",
+   "title": "AI Brain Fry Is Real. Here’s What Leaders Can Do | Julie Bedard | TED",
+   "channel": "TED",
+   "dur": "9:03",
+   "added": "2026-11-10",
+   "published": "2026-11-09",
+   "level": "C1",
+   "n": 10
+  },
+  {
+   "id": "xwrevjR9nRo",
+   "row": "biz",
+   "title": "How to Plan Your Day in 5 Minutes (Step by Step)",
+   "channel": "Ross Harkness",
+   "dur": "9:42",
+   "added": "2026-11-10",
+   "published": "2026-11-08",
+   "level": "B2",
+   "n": 11
+  },
+  {
+   "id": "yemarhfhVA0",
+   "row": "life",
+   "title": "Epic transformation of my 1850s house in France (start to finish)",
+   "channel": "Nathaniel Drew",
+   "dur": "16:55",
+   "added": "2026-11-10",
+   "published": "2026-04-22",
+   "level": "C1",
+   "n": 12
+  },
+  {
+   "id": "rY4ventbuys",
+   "row": "biz",
+   "title": "this is boring but it makes business easy",
+   "channel": "Ross Harkness",
+   "dur": "9:01",
+   "added": "2026-11-10",
+   "published": "2026-11-01",
+   "level": "C1",
+   "n": 11
+  },
+  {
+   "id": "9gjYeG8fB0s",
+   "row": "tech",
+   "title": "How I Run My Business From an iPad",
+   "channel": "Christopher Lawley",
+   "dur": "23:08",
+   "added": "2026-11-10",
+   "published": "2026-08-31",
+   "level": "C1",
+   "n": 11
+  },
+  {
+   "id": "Q5tk5DWqWHc",
+   "row": "biz",
+   "title": "You’re Wasting 80% of Your Time (here’s how to fix it)",
+   "channel": "Ross Harkness",
+   "dur": "15:17",
+   "added": "2026-11-10",
+   "published": "2026-10-25",
+   "level": "C1",
+   "n": 11
+  },
+  {
+   "id": "nzm77GMSNwU",
+   "row": "life",
+   "title": "What if Nothing is Actually Going Wrong?",
+   "channel": "Nathaniel Drew",
+   "dur": "11:59",
+   "added": "2026-11-10",
+   "published": "2026-03-01",
+   "level": "C1",
+   "n": 11
+  },
+  {
+   "id": "84wVmiEl7Dg",
+   "row": "ted",
+   "title": "I Can’t Speak. Here’s How I Get People to Listen | Jessica Irwin | TED",
+   "channel": "TED",
+   "dur": "6:23",
+   "added": "2026-11-10",
+   "published": "2026-11-06",
+   "level": "C1",
+   "n": 10
+  },
+  {
+   "id": "cgG9abre3wM",
+   "row": "tech",
+   "title": "This Didn’t Exist, So I Built It",
+   "channel": "Christopher Lawley",
+   "dur": "17:07",
+   "added": "2026-11-10",
+   "published": "2026-07-16",
+   "level": "B2",
+   "n": 13
   }
  ]
 }

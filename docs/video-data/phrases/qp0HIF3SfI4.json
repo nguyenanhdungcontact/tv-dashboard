@@ -1,0 +1,143 @@
+{
+ "id": "qp0HIF3SfI4",
+ "created": "2026-11-10",
+ "source": "youtube-manual",
+ "language": "en",
+ "ai": "gemini-3.6-flash",
+ "summary_vi": "Bài diễn thuyết giới thiệu mô hình Vòng tròn Vàng (Golden Circle) nhằm giải thích lý do tại sao các nhà lãnh đạo và tổ chức truyền cảm hứng như Apple hay Martin Luther King lại đạt được thành công vượt trội. Điểm cốt lõi nằm ở việc truyền thông từ trong ra ngoài — xuất phát từ niềm tin và lý do tồn tại (Why) thay vì chỉ tập trung vào sản phẩm hay cách thức hoạt động (What, How).",
+ "level": "C1",
+ "phrases": [
+  {
+   "t": 23.26,
+   "d": 3.97,
+   "phrase": "defy assumptions",
+   "ipa": "/dɪˈfaɪ əˈsʌmpʃənz/",
+   "quote": "when others are able to achieve things that seem to defy all of the assumptions?",
+   "meaning_vi": "đi ngược lại mọi giả định",
+   "usage_vi": "Dùng khi mô tả một kết quả thành công vượt ngoài dự đoán hoặc logic thông thường.",
+   "example_en": "The team managed to defy all assumptions by completing the complex project ahead of schedule.",
+   "example_vi": "Đội ngũ đã đi ngược lại mọi giả định khi hoàn thành dự án phức tạp trước thời hạn."
+  },
+  {
+   "t": 78.26,
+   "d": 1.9,
+   "phrase": "at play",
+   "ipa": "/æt pleɪ/",
+   "quote": "There's something else at play here.",
+   "meaning_vi": "đang tác động, đang diễn ra",
+   "usage_vi": "Dùng khi giải thích các yếu tố hoặc nguyên nhân ẩn đằng sau một tình huống.",
+   "example_en": "There are several economic factors at play behind the recent rise in housing prices.",
+   "example_vi": "Có một số yếu tố kinh tế đang tác động đằng sau sự gia tăng giá nhà gần đây."
+  },
+  {
+   "t": 97.26,
+   "d": 2.97,
+   "phrase": "as it turns out",
+   "ipa": "/æz ɪt tɜːrnz aʊt/",
+   "quote": "As it turns out, there's a pattern.",
+   "meaning_vi": "hóa ra là",
+   "usage_vi": "Dùng làm từ nối khi trình bày một kết quả hoặc sự thật bất ngờ sau khi đã được kiểm chứng.",
+   "example_en": "As it turns out, the simplest strategy was also the most effective one.",
+   "example_vi": "Hóa ra, chiến lược đơn giản nhất lại là chiến lược hiệu quả nhất."
+  },
+  {
+   "t": 248.26,
+   "d": 4.97,
+   "phrase": "challenge the status quo",
+   "ipa": "/ˈtʃælɪndʒ ðə ˌsteɪtəs ˈkwoʊ/",
+   "quote": "\"Everything we do, we believe in challenging the status quo.",
+   "meaning_vi": "thách thức hiện trạng, phá vỡ lối mòn",
+   "usage_vi": "Rất hữu ích trong IELTS Speaking/Writing khi bàn về đổi mới sáng tạo, lãnh đạo hoặc công nghệ.",
+   "example_en": "Innovative companies constantly challenge the status quo to create better products.",
+   "example_vi": "Các công ty đổi mới sáng tạo liên tục thách thức hiện trạng để tạo ra các sản phẩm tốt hơn."
+  },
+  {
+   "t": 355.26,
+   "d": 2.97,
+   "phrase": "be grounded in",
+   "ipa": "/bi ˈɡraʊndɪd ɪn/",
+   "quote": "It's all grounded in the tenets of biology.",
+   "meaning_vi": "dựa trên nền tảng, có cơ sở vững chắc từ",
+   "usage_vi": "Dùng trong văn phong trang trọng để chỉ lập luận, lý thuyết hoặc hành động dựa trên thực tế hay nguyên lý rõ ràng.",
+   "example_en": "Effective educational policies should be grounded in solid research.",
+   "example_vi": "Các chính sách giáo dục hiệu quả nên dựa trên nền tảng nghiên cứu vững chắc."
+  },
+  {
+   "t": 420.26,
+   "d": 2.57,
+   "phrase": "gut decision",
+   "ipa": "/ɡʌt dɪˈsɪʒən/",
+   "quote": "This is where gut decisions come from.",
+   "meaning_vi": "quuyết định theo trực giác/linh tính",
+   "usage_vi": "Dùng để nói về việc đưa ra quyết định dựa vào cảm xúc nội tại thay vì phân tích dữ liệu thuần túy.",
+   "example_en": "Relying purely on a gut decision can be risky in business, but sometimes it pays off.",
+   "example_vi": "Chỉ dựa vào quyết định theo trực giác có thể rủi ro trong kinh doanh, nhưng đôi khi lại mang lại thành công."
+  },
+  {
+   "t": 492.06,
+   "d": 2.47,
+   "phrase": "blood, sweat and tears",
+   "ipa": "/blʌd swet ænd tɪərz/",
+   "quote": "they'll work for you with blood and sweat and tears.",
+   "meaning_vi": "mồ hôi, công sức và nước mắt",
+   "usage_vi": "Thành ngữ nhấn mạnh sự nỗ lực vô cùng gian khổ và tâm huyết dốc vào một việc gì đó.",
+   "example_en": "She poured her blood, sweat, and tears into building her own business from scratch.",
+   "example_vi": "Cô ấy đã dốc hết mồ hôi, công sức và nước mắt để xây dựng doanh nghiệp riêng từ con số không."
+  },
+  {
+   "t": 540.26,
+   "d": 3.0,
+   "phrase": "well-connected",
+   "ipa": "/ˌwel kəˈnektɪd/",
+   "quote": "and worked at the Smithsonian and was extremely well-connected;",
+   "meaning_vi": "có nhiều mối quan hệ rộng rãi và chất lượng",
+   "usage_vi": "Tính từ dùng khi nói về lợi thế mạng lưới xã hội trong công việc hay đời sống.",
+   "example_en": "Being well-connected helped him secure interviews with leading tech firms.",
+   "example_vi": "Việc có mối quan hệ rộng đã giúp anh ấy có được các buổi phỏng vấn với những công ty công nghệ hàng đầu."
+  },
+  {
+   "t": 705.26,
+   "d": 3.97,
+   "phrase": "tipping point",
+   "ipa": "/ˈtɪpɪŋ pɔɪnt/",
+   "quote": "you cannot have it until you achieve this tipping point",
+   "meaning_vi": "điểm bùng phát, bước ngoặt",
+   "usage_vi": "Dùng khi một chuỗi thay đổi nhỏ tích tụ đủ để tạo ra một chuyển biến lớn không thể đảo ngược.",
+   "example_en": "The campaign reached a tipping point after several key influencers endorsed it.",
+   "example_vi": "Chiến dịch đã đạt đến điểm bùng phát sau khi một số người có ảnh hưởng lớn ủng hộ nó."
+  },
+  {
+   "t": 837.92,
+   "d": 1.87,
+   "phrase": "hands down",
+   "ipa": "/hændz daʊn/",
+   "quote": "hands down, there is no dispute.",
+   "meaning_vi": "chắc chắn, không thể bàn cãi",
+   "usage_vi": "Dùng làm trạng từ để khẳng định một sự thật vượt trội hoàn toàn so với phần còn lại.",
+   "example_en": "That was hands down the most inspiring lecture I have ever attended.",
+   "example_vi": "Đó chắc chắn là bài diễn thuyết truyền cảm hứng nhất mà tôi từng tham dự."
+  },
+  {
+   "t": 1020.46,
+   "d": 3.77,
+   "phrase": "bring something to life",
+   "ipa": "/brɪŋ ˈsʌmθɪŋ tu laɪf/",
+   "quote": "was the perfect thing to help him bring his cause to life.",
+   "meaning_vi": "hiện thực hóa, thổi hồn vào cái gì",
+   "usage_vi": "Dùng khi biến ý tưởng, tầm nhìn hoặc câu chuyện thành hiện thực sinh động.",
+   "example_en": "The director used stunning visual effects to bring the fantasy world to life.",
+   "example_vi": "Đạo diễn đã sử dụng các hiệu ứng hình ảnh tuyệt đẹp để thổi hồn vào thế giới thần thoại."
+  },
+  {
+   "t": 1043.26,
+   "d": 3.97,
+   "phrase": "hold a position of power",
+   "ipa": "/hoʊld ə pəˈzɪʃən əv ˈpaʊər/",
+   "quote": "Leaders hold a position of power or authority,",
+   "meaning_vi": "nắm giữ vị trí quyền lực",
+   "usage_vi": "Cụm từ hay dùng trong IELTS bài viết hoặc nói về chủ đề lãnh đạo, quản lý và xã hội.",
+   "example_en": "Individuals who hold a position of power should always act with high ethical standards.",
+   "example_vi": "Những cá nhân nắm giữ vị trí quyền lực nên luôn hành động với chuẩn mực đạo đức cao."
+  }
+ ]
+}

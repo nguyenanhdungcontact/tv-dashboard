@@ -1,0 +1,121 @@
+{
+ "id": "84wVmiEl7Dg",
+ "created": "2026-11-10",
+ "source": "youtube-manual",
+ "language": "en",
+ "ai": "gemini-3.6-flash",
+ "summary_vi": "Jessica Irwin chia sẻ trải nghiệm sống của một người không thể nói do bại não và những rào cản giao tiếp đầy khó khăn cô từng gặp phải. Cô đề xuất một giải pháp đơn giản giúp nhân viên y tế và xã hội giao tiếp hiệu quả, tôn trọng hơn với những người không có khả năng phát âm.",
+ "level": "C1",
+ "phrases": [
+  {
+   "t": 14.01,
+   "d": 3.1,
+   "phrase": "witty comeback",
+   "ipa": "/ˈwɪti ˈkʌmbæk/",
+   "quote": "many witty comebacks rolling around inside my head.",
+   "meaning_vi": "câu đáp trả nhanh trí, dí dỏm",
+   "usage_vi": "Dùng khi nói về giao tiếp, sự hài hước hoặc khả năng phản ứng linh hoạt trong trò chuyện.",
+   "example_en": "She always has a witty comeback ready whenever her friends try to tease her.",
+   "example_vi": "Cô ấy luôn có sẵn một câu đáp trả dí dỏm mỗi khi bạn bè cố tình trêu chọc cô."
+  },
+  {
+   "t": 44.67,
+   "d": 4.4,
+   "phrase": "sound something out",
+   "ipa": "/saʊnd ˈsʌmθɪŋ aʊt/",
+   "quote": "Let's focus on slowly sounding out the letter J.",
+   "meaning_vi": "đọc/phát âm từng âm tiết",
+   "usage_vi": "Dùng khi hướng dẫn ai đó phát âm rõ từng chữ cái hoặc từng âm của một từ.",
+   "example_en": "The teacher asked the young student to sound out the unfamiliar word slowly.",
+   "example_vi": "Giáo viên yêu cầu học sinh nhỏ tuổi phát âm chậm từng âm của từ mới lạ đó."
+  },
+  {
+   "t": 131.46,
+   "d": 4.27,
+   "phrase": "come one's way",
+   "ipa": "/kʌm wʌnz weɪ/",
+   "quote": "What can you do to prevent the extreme pain that you know is coming your way?",
+   "meaning_vi": "xảy đến với ai",
+   "usage_vi": "Dùng để nói về cơ hội, thử thách hoặc sự kiện sắp sửa tìm đến hoặc xảy ra với một người.",
+   "example_en": "You need to be prepared to handle any challenges that come your way in this career.",
+   "example_vi": "Bạn cần chuẩn bị sẵn sàng để xử lý bất kỳ thách thức nào xảy đến với mình trong sự nghiệp này."
+  },
+  {
+   "t": 148.98,
+   "d": 4.1,
+   "phrase": "misinterpret something as something",
+   "ipa": "/ˌmɪsɪnˈtɜːrprət ˈsʌmθɪŋ æz ˈsʌmθɪŋ/",
+   "quote": "This is misinterpreted by the nurse as the patient is just fussing",
+   "meaning_vi": "hiểu lầm/diễn giải sai cái gì thành cái gì",
+   "usage_vi": "Rất hữu ích trong IELTS Writing và Speaking khi phân tích sự hiểu lầm trong giao tiếp hoặc hành vi.",
+   "example_en": "His silence was completely misinterpreted as approval by the rest of the board.",
+   "example_vi": "Sự im lặng của anh ấy đã bị các thành viên còn lại trong hội đồng hiểu lầm hoàn toàn thành sự chấp thuận."
+  },
+  {
+   "t": 155.62,
+   "d": 4.04,
+   "phrase": "brace for something",
+   "ipa": "/breɪs fər ˈsʌmθɪŋ/",
+   "quote": "And your only option is to brace for the extreme pain and",
+   "meaning_vi": "gồng mình chuẩn bị đối mặt với",
+   "usage_vi": "Dùng khi ai đó phải chuẩn bị tinh thần hoặc thể chất để gánh chịu điều gì khó khăn, đau đớn.",
+   "example_en": "Coastal residents are bracing for the severe storm expected to hit tonight.",
+   "example_vi": "Cư dân ven biển đang gồng mình chuẩn bị đối mặt với trận bão lớn dự kiến sẽ đổ bộ tối nay."
+  },
+  {
+   "t": 162.83,
+   "d": 1.74,
+   "phrase": "hypothetical scenario",
+   "ipa": "/ˌhaɪpəˈθetɪkl səˈnærioʊ/",
+   "quote": "This is not hypothetical.",
+   "meaning_vi": "kịch bản/tình huống giả định",
+   "usage_vi": "Cụm từ C1/C2 xuất sắc cho IELTS Speaking Part 3 và Writing Task 2 khi đưa ra lý thuyết để lập luận.",
+   "example_en": "Let us consider a hypothetical scenario where artificial intelligence handles all administrative tasks.",
+   "example_vi": "Hãy cùng xem xét một tình huống giả định nơi trí tuệ nhân tạo đảm nhận toàn bộ các công việc hành chính."
+  },
+  {
+   "t": 268.43,
+   "d": 3.54,
+   "phrase": "jump to conclusions",
+   "ipa": "/dʒʌmp tuː kənˈkluːʒnz/",
+   "quote": "they automatically jump to intellectual impairment.",
+   "meaning_vi": "vội vàng đưa ra kết luận",
+   "usage_vi": "Dùng khi phê phán việc phán xét quá nhanh khi chưa có đủ bằng chứng hoặc thông tin.",
+   "example_en": "It is dangerous to jump to conclusions before analyzing all the available data.",
+   "example_vi": "Rất nguy hiểm nếu vội vàng đưa ra kết luận trước khi phân tích toàn bộ dữ liệu hiện có."
+  },
+  {
+   "t": 274.14,
+   "d": 3.74,
+   "phrase": "disregard something",
+   "ipa": "/ˌdɪsrɪˈɡɑːrd ˈsʌmθɪŋ/",
+   "quote": "it should not mean their entire brain should be disregarded.",
+   "meaning_vi": "coi thường, phớt lờ cái gì",
+   "usage_vi": "Từ vựng trang trọng dùng trong văn viết hoặc phát biểu khi ai đó bỏ qua quy tắc, ý kiến hoặc thông tin.",
+   "example_en": "You should never disregard the advice of experienced mentors when starting a business.",
+   "example_vi": "Bạn không bao giờ nên phớt lờ lời khuyên của những người cố vấn giàu kinh nghiệm khi khởi nghiệp."
+  },
+  {
+   "t": 287.18,
+   "d": 3.5,
+   "phrase": "speak down to someone",
+   "ipa": "/spiːk daʊn tuː ˈsʌmbədi/",
+   "quote": "We often get loudly spoken down to and patted on the head,",
+   "meaning_vi": "nói chuyện kiểu bề trên / hạ thấp ai",
+   "usage_vi": "Dùng để diễn tả thái độ giao tiếp thiếu tôn trọng, coi thường năng lực của người đối diện.",
+   "example_en": "A effective manager never speaks down to employees regardless of their background.",
+   "example_vi": "Một người quản lý hiệu quả không bao giờ nói chuyện kiểu bề trên với nhân viên bất kể xuất thân của họ."
+  },
+  {
+   "t": 340.6,
+   "d": 3.4,
+   "phrase": "hold the power to",
+   "ipa": "/hoʊld ðə ˈpaʊər tuː/",
+   "quote": "You hold the power to give someone back their voice.",
+   "meaning_vi": "nắm giữ khả năng/quyền lực để làm gì",
+   "usage_vi": "Dùng trong văn phong truyền cảm hứng hoặc lập luận để nhấn mạnh tầm ảnh hưởng lớn của ai đó.",
+   "example_en": "Ordinary citizens hold the power to shape public policy through active civic participation.",
+   "example_vi": "Những công dân bình thường nắm giữ khả năng định hình chính sách công thông qua việc tham gia tích cực vào đời sống xã hội."
+  }
+ ]
+}

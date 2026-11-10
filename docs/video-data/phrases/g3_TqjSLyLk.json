@@ -1,0 +1,121 @@
+{
+ "id": "g3_TqjSLyLk",
+ "created": "2026-11-10",
+ "source": "youtube-manual",
+ "language": "en",
+ "ai": "gemini-3.6-flash",
+ "summary_vi": "Bài nói chuyện làm rõ tác động của AI đến môi trường làm việc, giải thích lý do vì sao công nghệ này gây ra cảm giác quá tải và lo âu cho cả người quản lý lẫn nhân viên. Tác giả đề xuất ba khía cạnh lãnh đạo cần tập trung tái thiết kế bao gồm sự chú ý, trách nhiệm giải trình và quá trình đào tạo thế hệ kế thừa.",
+ "level": "C1",
+ "phrases": [
+  {
+   "t": 13.01,
+   "d": 1.79,
+   "phrase": "cut corners",
+   "ipa": "/kʌt ˈkɔrnərz/",
+   "quote": "you're afraid you're cutting corners.",
+   "meaning_vi": "đi tắt, làm dối, bỏ qua công đoạn",
+   "usage_vi": "Dùng khi nói về việc làm việc thiếu chỉn chu hoặc qua sơ để hoàn thành nhanh chóng.",
+   "example_en": "When companies cut corners on safety checks, accidents are much more likely to happen.",
+   "example_vi": "Khi các công ty làm dối ở các khâu kiểm tra an toàn, tai nạn rất dễ xảy ra."
+  },
+  {
+   "t": 16.51,
+   "d": 1.83,
+   "phrase": "miss out",
+   "ipa": "/mɪs aʊt/",
+   "quote": "and you feel you're missing out.",
+   "meaning_vi": "bỏ lỡ cơ hội hoặc trải nghiệm hay",
+   "usage_vi": "Thường dùng trong cấu trúc miss out on something để thể hiện cảm giác tiếc nuối.",
+   "example_en": "If you don't take part in campus activities, you might miss out on making great friends.",
+   "example_vi": "Nếu bạn không tham gia các hoạt động ở trường, bạn có thể bỏ lỡ cơ hội kết bạn tốt."
+  },
+  {
+   "t": 51.76,
+   "d": 5.09,
+   "phrase": "spin up",
+   "ipa": "/spɪn ʌp/",
+   "quote": "spinning up too much change all at once in an uncoordinated way,",
+   "meaning_vi": "khởi động hoặc triển khai nhanh",
+   "usage_vi": "Phổ biến trong môi trường làm việc công nghệ và quản trị doanh nghiệp khi bắt đầu dự án mới.",
+   "example_en": "The team managed to spin up a new marketing campaign within just three days.",
+   "example_vi": "Đội ngũ đã triển khai thành công một chiến dịch tiếp thị mới chỉ trong vòng ba ngày."
+  },
+  {
+   "t": 155.36,
+   "d": 1.54,
+   "phrase": "brain fry",
+   "ipa": "/breɪn fraɪ/",
+   "quote": "This is brain fry.",
+   "meaning_vi": "kiệt quệ đầu óc, quá tải trí não",
+   "usage_vi": "Dùng để tả tình trạng mệt mỏi tinh thần do phải xử lý quá nhiều thông tin hoặc công cụ cùng lúc.",
+   "example_en": "After five consecutive hours of online meetings, I experienced severe brain fry.",
+   "example_vi": "Sau năm giờ họp trực tuyến liên tục, tôi bị kiệt quệ đầu óc nghiêm trọng."
+  },
+  {
+   "t": 211.62,
+   "d": 3.17,
+   "phrase": "have a lot on one's plate",
+   "ipa": "/hæv ə lɑːt ɑːn wʌnz pleɪt/",
+   "quote": "I know managers already have a lot on their plate,",
+   "meaning_vi": "có quá nhiều việc phải gánh vác",
+   "usage_vi": "Thành ngữ quen thuộc dùng khi giải thích lý do một ai đó đang rất bận rộn.",
+   "example_en": "She couldn't take on another project because she already had a lot on her plate.",
+   "example_vi": "Cô ấy không thể nhận thêm dự án nào vì hiện tại cô ấy đã có quá nhiều việc phải làm."
+  },
+  {
+   "t": 237.32,
+   "d": 2.38,
+   "phrase": "in concert",
+   "ipa": "/ɪn ˈkɑːnsərt/",
+   "quote": "All of this was done in concert --",
+   "meaning_vi": "phối hợp nhịp nhàng, đồng bộ",
+   "usage_vi": "Cụm từ mang phong cách trang trọng, diễn tả sự hợp tác ăn ý giữa các nhóm hoặc giải pháp.",
+   "example_en": "The government and private companies must work in concert to tackle climate change.",
+   "example_vi": "Chính phủ và các công ty tư nhân phải làm việc phối hợp nhịp nhàng để giải quyết biến đổi khí hậu."
+  },
+  {
+   "t": 293.87,
+   "d": 2.63,
+   "phrase": "scrutinize",
+   "ipa": "/ˈskruːtənaɪz/",
+   "quote": "Effectively, they scrutinized the work less,",
+   "meaning_vi": "xem xét tỉ mỉ, kiểm tra kỹ lưỡng",
+   "usage_vi": "Động từ cao cấp C1/C2 thích hợp dùng trong bài thi IELTS Writing và Speaking khi nói về đánh giá, kiểm tra.",
+   "example_en": "Inspectors thoroughly scrutinized the financial reports for any signs of fraud.",
+   "example_vi": "Các thanh tra đã xem xét kỹ lưỡng các báo cáo tài chính để tìm bất kỳ dấu hiệu gian lận nào."
+  },
+  {
+   "t": 378.92,
+   "d": 5.3,
+   "phrase": "stretch assignment",
+   "ipa": "/strɛtʃ əˈsaɪnmənt/",
+   "quote": "Our research shows when juniors use AI for stretch assignments,",
+   "meaning_vi": "nhiệm vụ thử thách nâng cao năng lực",
+   "usage_vi": "Thuật ngữ trong quản trị nhân sự chỉ việc giao bài tập khó hơn mức bình thường để nhân viên phát triển.",
+   "example_en": "Taking on a stretch assignment helped him gain leadership skills much faster.",
+   "example_vi": "Đảm nhận một nhiệm vụ thử thách đã giúp anh ấy phát triển kỹ năng lãnh đạo nhanh hơn nhiều."
+  },
+  {
+   "t": 418.75,
+   "d": 4.67,
+   "phrase": "lean on",
+   "ipa": "/liːn ɑːn/",
+   "quote": "They're even leaning on the natural AI fluency of more junior talent",
+   "meaning_vi": "dựa vào, tận dụng sự hỗ trợ",
+   "usage_vi": "Dùng khi nói về việc cậy nhờ vào kinh nghiệm, sức mạnh hoặc chuyên môn của người khác.",
+   "example_en": "Young entrepreneurs often lean on experienced mentors for strategic guidance.",
+   "example_vi": "Các doanh nhân trẻ thường dựa vào các cố vấn giàu kinh nghiệm để có định hướng chiến lược."
+  },
+  {
+   "t": 465.63,
+   "d": 3.54,
+   "phrase": "with outcomes in mind",
+   "ipa": "/wɪð ˈaʊtkʌmz ɪn maɪnd/",
+   "quote": "is to optimize this work with good outcomes in mind",
+   "meaning_vi": "hướng tới kết quả đầu ra",
+   "usage_vi": "Cụm trạng từ dùng để nhấn mạnh tầm quan trọng của mục tiêu cuối cùng khi thực hiện kế hoạch.",
+   "example_en": "We should design our educational programs with real-world outcomes in mind.",
+   "example_vi": "Chúng ta nên thiết kế các chương trình giáo dục với mục tiêu hướng tới kết quả thực tế."
+  }
+ ]
+}

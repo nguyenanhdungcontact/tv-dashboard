@@ -1,0 +1,132 @@
+{
+ "id": "rY4ventbuys",
+ "created": "2026-11-10",
+ "source": "youtube-auto",
+ "language": "en",
+ "ai": "gemini-3.6-flash",
+ "summary_vi": "Video giải thích cách áp dụng Thuyết hạn chế (Theory of Constraints) để phát triển doanh nghiệp bằng cách theo dõi dữ liệu và xác định đúng điểm nghẽn duy nhất. Thay vì ôm đồm giải quyết mọi vấn đề cùng lúc, chủ doanh nghiệp chỉ cần tập trung thử nghiệm giải pháp cho từng điểm nghẽn theo thứ tự để tăng trưởng nhanh chóng.",
+ "level": "C1",
+ "phrases": [
+  {
+   "t": 3.32,
+   "d": 3.44,
+   "phrase": "be pulled in too many directions",
+   "ipa": "/biː pʊld ɪn tuː mɛni dɪˈrɛkʃənz/",
+   "quote": "being pulled in too many different directions, under overwhelmed trying to",
+   "meaning_vi": "bị phân tâm bởi quá nhiều công việc cùng lúc",
+   "usage_vi": "Dùng khi mô tả ai đó gặp khó khăn hoặc kiệt sức vì phải gánh vác quá nhiều trách nhiệm khác nhau.",
+   "example_en": "As a project manager, she often feels pulled in too many directions during product launches.",
+   "example_vi": "Là một quản lý dự án, cô ấy thường cảm thấy bị xao nhấp bởi quá nhiều việc cùng lúc trong các đợt ra mắt sản phẩm."
+  },
+  {
+   "t": 30.84,
+   "d": 4.6,
+   "phrase": "remove guesswork",
+   "ipa": "/rɪˈmuːv ˈɡɛswɜːrk/",
+   "quote": "removes all the guesswork from business",
+   "meaning_vi": "loại bỏ sự đoán mò / tính cảm tính",
+   "usage_vi": "Dùng khi nói về việc sử dụng dữ liệu, quy trình rõ ràng để đưa ra quyết định chính xác thay vì đoán mò.",
+   "example_en": "Using data analytics helps company executives remove guesswork from their marketing strategies.",
+   "example_vi": "Việc sử dụng phân tích dữ liệu giúp các lãnh đạo công ty loại bỏ sự đoán mò khỏi các chiến lược tiếp thị của họ."
+  },
+  {
+   "t": 91.4,
+   "d": 4.44,
+   "phrase": "bottleneck",
+   "ipa": "/ˈbɑːtlnek/",
+   "quote": "limiting factor, one bottleneck, one",
+   "meaning_vi": "điểm nghẽn, nút thắt cổ chai",
+   "usage_vi": "Dùng trong công việc hoặc quản lý để chỉ khâu chậm nhất cản trở toàn bộ quy trình vận hành.",
+   "example_en": "The delay in custom clearance became a major bottleneck for the supply chain.",
+   "example_vi": "Sự chậm trễ trong khâu thông quan đã trở thành điểm nghẽn chính cho chuỗi cung ứng."
+  },
+  {
+   "t": 136.33,
+   "d": 3.04,
+   "phrase": "hold something back",
+   "ipa": "/hoʊld ˈsʌmθɪŋ bæk/",
+   "quote": "those things is holding the business back more than everything else, which",
+   "meaning_vi": "kìm hãm, cản trở sự phát triển của cái gì",
+   "usage_vi": "Cụm động từ dùng để chỉ các yếu tố ngăn cản bản thân, công ty hoặc dự án tiến lên phía trước.",
+   "example_en": "A lack of fluency in English is holding him back from getting an international promotion.",
+   "example_vi": "Việc thiếu lưu quát tiếng Anh đang kìm hãm anh ấy nhận được sự thăng tiến ở quy mô quốc tế."
+  },
+  {
+   "t": 332.33,
+   "d": 3.68,
+   "phrase": "natural fluctuation",
+   "ipa": "/ˈnætʃərəl flʌktʃuˈeɪʃən/",
+   "quote": "because data has natural fluctuations.",
+   "meaning_vi": "sự biến động tự nhiên",
+   "usage_vi": "Dùng để mô tả những đợt tăng giảm bình thường của số liệu, thị trường hoặc thời tiết theo thời gian.",
+   "example_en": " do not worry about daily sales figures because natural fluctuations are expected in retail.",
+   "example_vi": "Đừng lo lắng về doanh số hàng ngày vì sự biến động tự nhiên là điều bình thường trong ngành bán lẻ."
+  },
+  {
+   "t": 338.29,
+   "d": 2.96,
+   "phrase": "sample size",
+   "ipa": "/ˈsæmpəl saɪz/",
+   "quote": "your sample size there is going to be",
+   "meaning_vi": "kích thước mẫu (trong khảo sát/thống kê)",
+   "usage_vi": "Từ vựng trang trọng rất hữu ích cho IELTS Writing Task 2 và Speaking Part 3 khi bàn về nghiên cứu khoa học.",
+   "example_en": "The survey results might be unreliable due to a small sample size of only twenty participants.",
+   "example_vi": "Kết quả khảo sát có thể không đáng tin cậy do kích thước mẫu quá nhỏ chỉ gồm 20 người tham gia."
+  },
+  {
+   "t": 378.62,
+   "d": 4.0,
+   "phrase": "rule of thumb",
+   "ipa": "/ruːl əv θʌm/",
+   "quote": "data. But, a great rule of thumb is that",
+   "meaning_vi": "quy tắc kinh nghiệm, nguyên tắc thực tế",
+   "usage_vi": "Dùng để chỉ một chỉ dẫn chung hữu ích dựa trên kinh nghiệm thực tế hơn là lý thuyết chính xác.",
+   "example_en": "As a good rule of thumb, save at least twenty percent of your monthly income for emergencies.",
+   "example_vi": "Theo quy tắc kinh nghiệm tốt, hãy tiết kiệm ít nhất 20% thu nhập hàng tháng cho các trường hợp khẩn cấp."
+  },
+  {
+   "t": 397.54,
+   "d": 3.8,
+   "phrase": "minuscule",
+   "ipa": "/ˈmɪnəskjuːl/",
+   "quote": "be minuscule. Whereas, if you fix the",
+   "meaning_vi": "rất nhỏ, không đáng kể",
+   "usage_vi": "Tính từ nâng cao (C1/C2) dùng để thay thế cho cụm 'very small', nâng điểm Lexical Resource trong IELTS.",
+   "example_en": "The difference in test scores between the two candidates was minuscule.",
+   "example_vi": "Sự khác biệt về điểm thi giữa hai ứng viên là cực kỳ nhỏ."
+  },
+  {
+   "t": 427.69,
+   "d": 3.28,
+   "phrase": "do forecasting",
+   "ipa": "/duː ˈfɔːrkæstɪŋ/",
+   "quote": "forecasting, play around with numbers,",
+   "meaning_vi": "thực hiện việc dự báo (tài chính, kinh tế)",
+   "usage_vi": "Dùng trong môi trường làm việc khi tính toán, dự đoán xu hướng doanh thu hay ngân sách tương lai.",
+   "example_en": "Financial analysts must do rigorous forecasting before the company allocates funds for new projects.",
+   "example_vi": "Các chuyên viên phân tích tài chính phải dự báo nghiêm ngặt trước khi công ty phân bổ vốn cho các dự án mới."
+  },
+  {
+   "t": 481.1,
+   "d": 2.88,
+   "phrase": "spread oneself thin",
+   "ipa": "/sprɛd wʌnˈsɛlf θɪn/",
+   "quote": "you'll spread yourself thin, you'll fix",
+   "meaning_vi": "ôm đồm quá nhiều việc cùng lúc",
+   "usage_vi": "Thành ngữ tự nhiên mô tả việc phân tán nguồn lực/thời gian vào quá nhiều hoạt động khiến hiệu quả bị giảm.",
+   "example_en": "If you try to prepare for IELTS, work full-time, and learn coding at once, you will spread yourself thin.",
+   "example_vi": "Nếu bạn vừa luyện thi IELTS, vừa làm việc toàn thời gian, vừa học lập trình cùng lúc, bạn sẽ bị ôm đồm quá sức."
+  },
+  {
+   "t": 536.34,
+   "d": 3.88,
+   "phrase": "at a glance",
+   "ipa": "/æt ə ɡlæns/",
+   "quote": "glance on one sheet, click the video on",
+   "meaning_vi": "nhìn lướt qua là thấy / hiểu ngay",
+   "usage_vi": "Cụm trạng từ dùng khi thông tin được sắp xếp trực quan, giúp người xem hiểu ngay lập tức.",
+   "example_en": "The dashboard displays all current sales metrics so managers can assess progress at a glance.",
+   "example_vi": "Bảng điều khiển hiển thị tất cả số liệu bán hàng hiện tại để người quản lý có thể đánh giá tiến độ chỉ qua một ánh nhìn."
+  }
+ ]
+}

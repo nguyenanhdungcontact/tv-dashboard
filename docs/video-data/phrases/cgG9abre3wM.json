@@ -1,0 +1,154 @@
+{
+ "id": "cgG9abre3wM",
+ "created": "2026-11-10",
+ "source": "youtube-manual",
+ "language": "en",
+ "ai": "gemini-3.6-flash",
+ "summary_vi": "Tác giả chia sẻ về việc tự phát triển Parchment, ứng dụng giúp quản lý lịch trình và nhật ký công việc hằng ngày nhằm duy trì sự tập trung. Ứng dụng kết hợp thông minh giữa Lịch, Lời nhắc và Nhật ký số, hỗ trợ đồng bộ mượt mà trên các thiết bị trong hệ sinh thái Apple.",
+ "level": "B2",
+ "phrases": [
+  {
+   "t": 24.24,
+   "d": 7.12,
+   "phrase": "flip something on its head",
+   "ipa": "/flɪp ˈsʌmθɪŋ ɑn ɪts hɛd/",
+   "quote": "So we got a puppy two months ago, and that kind of flipped my work life on its head.",
+   "meaning_vi": "đảo lộn hoàn toàn cái gì",
+   "usage_vi": "Dùng khi một sự kiện bất ngờ làm thay đổi toàn bộ thói quen, góc nhìn hoặc cuộc sống.",
+   "example_en": "Adopting a new pet really flipped our daily routine on its head.",
+   "example_vi": "Việc nhận nuôi một chú cún mới thực sự đã đảo lộn hoàn toàn sinh hoạt hằng ngày của chúng tôi."
+  },
+  {
+   "t": 54.0,
+   "d": 5.36,
+   "phrase": "keep track of",
+   "ipa": "/kip træk ʌv/",
+   "quote": "I have the widget on all of my home screens and I just use the app to keep track of whatever I'm work ing on.",
+   "meaning_vi": "theo dõi, ghi chép tiến độ/thông tin",
+   "usage_vi": "Cực kỳ phổ biến trong IELTS Speaking Part 1 & 2 khi nói về thói quen quản lý thời gian hay tài chính.",
+   "example_en": "I use a digital planner to keep track of my upcoming IELTS practice tests.",
+   "example_vi": "Tôi dùng một sổ kế hoạch điện tử để theo dõi các bài thi thử IELTS sắp tới."
+  },
+  {
+   "t": 71.04,
+   "d": 4.08,
+   "phrase": "bring something together",
+   "ipa": "/brɪŋ ˈsʌmθɪŋ təˈɡɛðər/",
+   "quote": "the reminders app. For me, it's a way to bring these different streams together.",
+   "meaning_vi": "tổng hợp, kết nối các yếu tố lại với nhau",
+   "usage_vi": "Dùng khi nói về việc hợp nhất dữ liệu, ý tưởng hoặc các nguồn lực rải rác.",
+   "example_en": "This dashboard brings together all project updates in one clean interface.",
+   "example_vi": "Bảng điều khiển này tổng hợp tất cả cập nhật dự án vào một giao diện gọn gàng."
+  },
+  {
+   "t": 233.28,
+   "d": 5.92,
+   "phrase": "feel overwhelmed",
+   "ipa": "/fil ˌoʊvərˈwɛlmd/",
+   "quote": "Now if, you have an especially busy day and that agenda section is just really long and you're feeling overwhelmed, there is a collapse button…",
+   "meaning_vi": "cảm thấy quá tải, ngợp",
+   "usage_vi": "Dùng miêu tả trạng thái tâm lý khi đối mặt với quá nhiều áp lực, công việc hoặc thông tin.",
+   "example_en": "It is easy to feel overwhelmed when balancing a full-time job with test preparation.",
+   "example_vi": "Rất dễ cảm thấy quá tải khi phải cân bằng giữa công việc toàn thời gian và việc ôn thi."
+  },
+  {
+   "t": 348.48,
+   "d": 6.32,
+   "phrase": "set the tone for",
+   "ipa": "/sɛt ðə toʊn fɔr/",
+   "quote": "It's I built it for me, so I probably should, but it really just helps me set the tone for my day.",
+   "meaning_vi": "tạo nhịp điệu / định hình tinh thần cho cái gì",
+   "usage_vi": "Thường dùng để nói về thói quen buổi sáng hoặc lời phát biểu mở đầu tạo cảm hứng cho cả ngày/cuộc họp.",
+   "example_en": "Starting the morning with a quick workout sets a positive tone for the rest of the day.",
+   "example_vi": "Bắt đầu buổi sáng bằng bài tập thể dục nhanh giúp tạo tinh thần tích cực cho cả ngày còn lại."
+  },
+  {
+   "t": 656.48,
+   "d": 4.0,
+   "phrase": "locked into",
+   "ipa": "/lɑkt ˈɪntu/",
+   "quote": "Okay, fine. I don't want you locked into the app. You can do whatever you want.",
+   "meaning_vi": "bị ràng buộc, trói buộc vào một hệ thống",
+   "usage_vi": "Dùng trong chủ đề công nghệ hoặc kinh doanh khi khách hàng bị phụ thuộc vào một phần mềm/dịch vụ.",
+   "example_en": "Users dislike being locked into a subscription model with no option for a flat fee.",
+   "example_vi": "Người dùng không thích bị ràng buộc vào mô hình đăng ký gói mà không có lựa chọn mua một lần."
+  },
+  {
+   "t": 691.36,
+   "d": 5.36,
+   "phrase": "keep a running log",
+   "ipa": "/kip ə ˈrʌnɪŋ lɔɡ/",
+   "quote": "So for me, I use the daily notes section to kind of keep a running log of what I'm doing throughout my day.",
+   "meaning_vi": "duy trì nhật ký theo dõi liên tục",
+   "usage_vi": "Thích hợp dùng trong công việc kỹ thuật, nghiên cứu hoặc quản lý dự án để ghi lại các mốc hoạt động.",
+   "example_en": "Developers keep a running log of system updates to spot bugs quickly.",
+   "example_vi": "Các lập trình viên duy trì nhật ký theo dõi liên tục các bản cập nhật hệ thống để phát hiện lỗi nhanh chóng."
+  },
+  {
+   "t": 711.04,
+   "d": 5.76,
+   "phrase": "leave off",
+   "ipa": "/liv ɔf/",
+   "quote": "So that way when I come back in, sit down, I can be like, okay, that's where I left off. Let's jump right back into…",
+   "meaning_vi": "tạm dừng ở một vị trí nào đó",
+   "usage_vi": "Thường kết hợp thành cấu trúc 'pick up where I left off' (tiếp tục từ chỗ tôi vừa dừng lại).",
+   "example_en": "After lunch, I opened my notes to pick up right where I left off.",
+   "example_vi": "Sau giờ ăn trưa, tôi mở ghi chú ra để tiếp tục ngay từ chỗ tôi vừa tạm dừng."
+  },
+  {
+   "t": 783.84,
+   "d": 6.0,
+   "phrase": "wrap up",
+   "ipa": "/ræp ʌp/",
+   "quote": "So what I will do is kind of towards the end of my workday, if I'm wrapping up my day and I didn't fin",
+   "meaning_vi": "hoàn tất, khép lại (công việc, ngày làm việc)",
+   "usage_vi": "Cụm phrasal verb rất tự nhiên trong tiếng Anh giao tiếp và công sở.",
+   "example_en": "Let us wrap up this meeting so everyone can get back to their tasks.",
+   "example_vi": "Hãy kết thúc cuộc họp này để mọi người có thể quay lại với công việc của mình."
+  },
+  {
+   "t": 809.52,
+   "d": 7.84,
+   "phrase": "bang one's head against something",
+   "ipa": "/bæŋ wʌnz hɛd əˈɡɛnst ˈsʌmθɪŋ/",
+   "quote": "I was working on a sync bug in this app, and I just was banging my head against it. It was late, I needed to…",
+   "meaning_vi": "bế tắc, vò đầu bứt tóc vì một vấn đề",
+   "usage_vi": "Thành ngữ sinh động nói về việc nỗ lực giải quyết một bài toán khó nhưng chưa ra kết quả.",
+   "example_en": "I spent hours banging my head against that coding bug before realizing it was a simple typo.",
+   "example_vi": "Tôi đã mất nhiều giờ vò đầu bứt tóc với lỗi lập trình đó trước khi nhận ra đó chỉ là một lỗi đánh máy đơn giản."
+  },
+  {
+   "t": 826.64,
+   "d": 4.0,
+   "phrase": "sleep on something",
+   "ipa": "/slip ɑn ˈsʌmθɪŋ/",
+   "quote": "It came to me right away because I was able to sleep on it, and I figured out how to fix it right away .",
+   "meaning_vi": "gác lại suy nghĩ qua đêm rồi mới quyết định",
+   "usage_vi": "Dùng khi bạn không muốn vội vã đưa ra quyết định mà cần nghỉ ngơi để suy nghĩ sáng suốt hơn.",
+   "example_en": "Do not decide right away; sleep on it and we will talk again tomorrow.",
+   "example_vi": "Đừng quyết định ngay lập tức; hãy ngủ một giấc suy nghĩ thêm rồi sáng mai chúng ta nói chuyện tiếp."
+  },
+  {
+   "t": 940.0,
+   "d": 5.92,
+   "phrase": "stay on task",
+   "ipa": "/steɪ ɑn tæsk/",
+   "quote": "It's really helped me with my focus issues and just staying on tasks throughout my day. The app is available right now.",
+   "meaning_vi": "giữ tập trung vào nhiệm vụ",
+   "usage_vi": "Rất hay dùng khi thảo luận về kỹ năng quản lý bản thân, năng suất làm việc (Productivity).",
+   "example_en": "Turning off phone notifications helps me stay on task while studying.",
+   "example_vi": "Tắt thông báo điện thoại giúp tôi giữ tập trung vào nhiệm vụ trong lúc học bài."
+  },
+  {
+   "t": 1000.64,
+   "d": 2.96,
+   "phrase": "get the bug",
+   "ipa": "/ɡɛt ðə bʌɡ/",
+   "quote": "I kind of got the bug. I've got the development bug.",
+   "meaning_vi": "trở nên say mê một hoạt động nào đó",
+   "usage_vi": "Thành ngữ thân mật dùng khi ai đó vừa bắt đầu một sở thích/lĩnh vực mới và bị cuốn hút mạnh mẽ.",
+   "example_en": "Once he built his first app, he really got the development bug.",
+   "example_vi": "Ngay khi tạo xong ứng dụng đầu tiên, anh ấy thực sự đã phát cuồng vì niềm đam mê lập trình."
+  }
+ ]
+}

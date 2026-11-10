@@ -1,0 +1,132 @@
+{
+ "id": "xBIVlM435Zg",
+ "created": "2026-11-10",
+ "source": "youtube-manual",
+ "language": "en",
+ "ai": "gemini-3.6-flash",
+ "summary_vi": "Video giải thích lý do tại sao phương pháp tiếp thị truyền thống qua truyền thông đại chúng không còn hiệu quả và làm thế nào các ý tưởng độc đáo có thể lan truyền. Tác giả nhấn mạnh rằng để thành công trong thời đại hiện nay, sản phẩm hoặc ý tưởng cần phải khác biệt, vượt khỏi vùng an toàn và thu hút những người thực sự đam mê.",
+ "level": "C1",
+ "phrases": [
+  {
+   "t": 32.93,
+   "d": 3.04,
+   "phrase": "go from being a nobody",
+   "ipa": "/ɡoʊ frəm ˈbiːɪŋ ə ˈnoʊbədi/",
+   "quote": "how an artist named Jeff Koons went from being a nobody",
+   "meaning_vi": "từ một người vô danh trở nên nổi tiếng",
+   "usage_vi": "Dùng khi mô tả hành trình vượt khó và vươn lên thành công từ con số không.",
+   "example_en": "With hard work and determination, the young musician went from being a nobody to performing in front of thousands.",
+   "example_vi": "Nhờ sự chăm chỉ và quyết tâm, người nhạc sĩ trẻ từ một kẻ vô danh đã vươn lên biểu diễn trước hàng ngàn khán giả."
+  },
+  {
+   "t": 156.34,
+   "d": 4.44,
+   "phrase": "at the heart of",
+   "ipa": "/æt ðə hɑːrt əv/",
+   "quote": "At the heart of spreading ideas is TV and stuff like TV.",
+   "meaning_vi": "là trung tâm / cốt lõi của cái gì",
+   "usage_vi": "Rất hữu ích trong IELTS Speaking Part 3 và Writing Task 2 để nhấn mạnh yếu tố quan trọng nhất.",
+   "example_en": "Effective communication is at the heart of any successful relationship.",
+   "example_vi": "Giao tiếp hiệu quả là cốt lõi của bất kỳ mối quan hệ thành công nào."
+  },
+  {
+   "t": 240.11,
+   "d": 3.5,
+   "phrase": "poster child",
+   "ipa": "/ˈpoʊstər tʃaɪld/",
+   "quote": "But the product in the blue box in the center is my poster child.",
+   "meaning_vi": "hình mẫu tiêu biểu",
+   "usage_vi": "Dùng để chỉ một người hoặc vật làm hình ảnh đại diện điển hình cho một trào lưu hoặc tính chất nào đó.",
+   "example_en": "The city has become the poster child for sustainable urban development.",
+   "example_vi": "Thành phố này đã trở thành hình mẫu tiêu biểu cho sự phát triển đô thị bền vững."
+  },
+  {
+   "t": 455.34,
+   "d": 2.94,
+   "phrase": "have in common",
+   "ipa": "/hæv ɪn ˈkɑːmən/",
+   "quote": "is that they don't have anything in common.",
+   "meaning_vi": "có điểm chung",
+   "usage_vi": "Dùng khi so sánh các đặc điểm tương đồng giữa hai hoặc nhiều đối tượng.",
+   "example_en": "Despite coming from different cultures, the two teams have a lot of goals in common.",
+   "example_vi": "Dù đến từ các nền văn hóa khác nhau, hai đội có rất nhiều mục tiêu chung."
+  },
+  {
+   "t": 610.5,
+   "d": 3.67,
+   "phrase": "be obsessed with",
+   "ipa": "/bi əbˈsɛst wɪð/",
+   "quote": "These are the people who are obsessed with something.",
+   "meaning_vi": "đam mê cuồng nhiệt / bị ám ảnh bởi cái gì",
+   "usage_vi": "Dùng để diễn tả sự quan tâm đặc biệt sâu sắc đối với một sở thích hoặc lĩnh vực.",
+   "example_en": "Many young tech enthusiasts are obsessed with artificial intelligence nowadays.",
+   "example_vi": "Nhiều người trẻ yêu công nghệ ngày nay rất cuồng nhiệt với trí tuệ nhân tạo."
+  },
+  {
+   "t": 641.26,
+   "d": 2.1,
+   "phrase": "come up with",
+   "ipa": "/kʌm ʌp wɪð/",
+   "quote": "to come up with any problem you want to solve",
+   "meaning_vi": "nảy ra, nghĩ ra (ý tưởng, giải pháp)",
+   "usage_vi": "Cụm động từ tự nhiên và phổ biến khi bàn về giải quyết vấn đề hay sáng tạo.",
+   "example_en": "The marketing team needs to come up with an innovative campaign before Friday.",
+   "example_vi": "Đội ngũ tiếp thị cần phải nghĩ ra một chiến dịch đổi mới trước thứ Sáu."
+  },
+  {
+   "t": 725.74,
+   "d": 2.62,
+   "phrase": "be tuned in",
+   "ipa": "/bi tuːnd ɪn/",
+   "quote": "who are all tuned in from 130 countries",
+   "meaning_vi": "theo dõi, chú ý lắng nghe",
+   "usage_vi": "Dùng để chỉ việc khán giả đang bật kênh theo dõi hoặc chú ý đến thông tin nào đó.",
+   "example_en": "Millions of viewers were tuned in to watch the live debate online.",
+   "example_vi": "Hàng triệu khán giả đã theo dõi để xem buổi tranh luận trực tiếp trên mạng."
+  },
+  {
+   "t": 853.32,
+   "d": 3.72,
+   "phrase": "get to scale",
+   "ipa": "/ɡɛt tu skeɪl/",
+   "quote": "The first one is: Design is free when you get to scale.",
+   "meaning_vi": "đạt đến quy mô lớn",
+   "usage_vi": "Thường dùng trong kinh doanh khi một mô hình sản xuất/dịch vụ mở rộng quy mô hiệu quả.",
+   "example_en": "Once the startup gets to scale, its production costs will drop significantly.",
+   "example_vi": "Khi công ty khởi nghiệp đạt đến quy mô lớn, chi phí sản xuất sẽ giảm đáng kể."
+  },
+  {
+   "t": 875.52,
+   "d": 2.85,
+   "phrase": "at the fringes",
+   "ipa": "/æt ðə ˈfrɪndʒɪz/",
+   "quote": "The safe thing to do now is to be at the fringes,",
+   "meaning_vi": "ở vùng rìa / khác biệt với số đông",
+   "usage_vi": "Dùng để mô tả các vị trí, ý tưởng độc lạ nằm ngoài xu hướng chủ đạo.",
+   "example_en": "True innovation often starts at the fringes before moving into the mainstream.",
+   "example_vi": "Sự đổi mới thực sự thường bắt đầu ở ngoài lề trước khi tiến vào xu hướng chủ đạo."
+  },
+  {
+   "t": 937.82,
+   "d": 1.91,
+   "phrase": "countless",
+   "ipa": "/ˈkaʊntləs/",
+   "quote": "Now, at countless meetings at, you know,",
+   "meaning_vi": "vô số, không đếm xẻng",
+   "usage_vi": "Từ vựng tốt nâng điểm Lexical Resource trong IELTS thay vì lặp lại từ 'many'.",
+   "example_en": "She has spent countless hours refining her research paper for the conference.",
+   "example_vi": "Cô ấy đã dành vô số giờ để hoàn thiện bài nghiên cứu của mình cho hội thảo."
+  },
+  {
+   "t": 1019.65,
+   "d": 3.28,
+   "phrase": "worth noticing",
+   "ipa": "/wɜːrθ ˈnoʊtɪsɪŋ/",
+   "quote": "That's a purple cow; that's something worth noticing.",
+   "meaning_vi": "đáng chú ý",
+   "usage_vi": "Dùng khi muốn nhấn mạnh một điểm nổi bật, thu hút sự quan tâm của người đọc/nghe.",
+   "example_en": "The rapid growth of green energy solutions is a trend worth noticing.",
+   "example_vi": "Sự phát triển nhanh chóng của các giải pháp năng lượng xanh là một xu hướng đáng chú ý."
+  }
+ ]
+}

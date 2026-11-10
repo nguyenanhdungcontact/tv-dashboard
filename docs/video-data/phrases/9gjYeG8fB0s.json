@@ -1,0 +1,132 @@
+{
+ "id": "9gjYeG8fB0s",
+ "created": "2026-11-10",
+ "source": "youtube-manual",
+ "language": "en",
+ "ai": "gemini-3.6-flash",
+ "summary_vi": "Video chia sẻ chi tiết cách tác giả vận hành toàn bộ doanh nghiệp và quy trình sáng tạo nội dung hàng ngày chỉ với chiếc iPad kết hợp cùng các công cụ tự động hóa AI. Qua đó, người xem có thêm nhiều gợi ý hữu ích để nâng cao hiệu suất làm việc linh hoạt và sắp xếp công việc khoa học hơn.",
+ "level": "C1",
+ "phrases": [
+  {
+   "t": 15.04,
+   "d": 6.0,
+   "phrase": "on the side",
+   "ipa": "/ɑːn ðə saɪd/",
+   "quote": "I'm not just making YouTube videos anymore, along with some like consulting stuff on the side.",
+   "meaning_vi": "làm thêm, phụ ngoài công việc chính",
+   "usage_vi": "Dùng khi nói về một công việc, dự án hoặc thu nhập phụ bên cạnh công việc toàn thời gian.",
+   "example_en": "She works as a graphic designer for a firm, but she takes on freelance painting projects on the side.",
+   "example_vi": "Cô ấy làm thiết kế đồ họa cho một công ty, nhưng vẫn nhận các dự án vẽ tranh tự do ở bên ngoài."
+  },
+  {
+   "t": 81.12,
+   "d": 3.76,
+   "phrase": "have a handle on",
+   "ipa": "/hæv ə ˈhændl ɑːn/",
+   "quote": "After I kind of have a handle on my day, I go through the app Reader.",
+   "meaning_vi": "nắm rõ, kiểm soát tốt tình hình",
+   "usage_vi": "Rất hay dùng trong IELTS Speaking để thể hiện khả năng quản lý công việc hoặc thấu hiểu một vấn đề phức tạp.",
+   "example_en": "It took me a few weeks to have a complete handle on the new software, but now I can use it effortlessly.",
+   "example_vi": "Tôi phải mất vài tuần mới nắm rõ phần mềm mới, nhưng giờ tôi có thể dùng nó một cách dễ dàng."
+  },
+  {
+   "t": 98.0,
+   "d": 1.36,
+   "phrase": "be up on something",
+   "ipa": "/bi ʌp ɑːn ˈsʌmθɪŋ/",
+   "quote": "'m up on what's happening.",
+   "meaning_vi": "cập nhật tin tức/thông tin mới nhất",
+   "usage_vi": "Dùng để diễn tả việc bạn hiểu biết rõ và liên tục cập nhật xu hướng hoặc tin tức trong một lĩnh vực cụ thể.",
+   "example_en": "As a journalist, it is crucial to be up on current affairs and global market trends.",
+   "example_vi": "Là một nhà báo, điều quan trọng là phải luôn cập nhật thời sự và xu hướng thị trường toàn cầu."
+  },
+  {
+   "t": 264.32,
+   "d": 5.76,
+   "phrase": "defeat the purpose",
+   "ipa": "/dɪˈfiːt ðə ˈpɜːrpəs/",
+   "quote": "Even if they wanted to, they couldn't keep those logs. And keeping logs using a VPN just defeats the purpose.",
+   "meaning_vi": "làm mất đi mục đích/tác dụng ban đầu",
+   "usage_vi": "Thích hợp dùng trong thảo luận IELTS Writing Task 2 hoặc Speaking Part 3 khi giải thích tại sao một giải pháp không hiệu quả.",
+   "example_en": "Buying an expensive smartwatch to save time, only to spend hours configuring it, completely defeats the purpose.",
+   "example_vi": "Mua một chiếc đồng hồ thông minh đắt tiền để tiết kiệm thời gian, nhưng lại tốn hàng giờ thiết lập nó thì hoàn toàn làm phản tác dụng."
+  },
+  {
+   "t": 519.84,
+   "d": 6.48,
+   "phrase": "a safe bet",
+   "ipa": "/ə seɪf bet/",
+   "quote": "I use my iPad plugged into an external monitor a lot. I would say it's probably a safe bet that I am in the top…",
+   "meaning_vi": "một sự lựa chọn an toàn / khả năng rất chắc chắn",
+   "usage_vi": "Dùng khi đưa ra dự đoán hoặc đề xuất một phương án có rủi ro thấp và khả năng thành công cao.",
+   "example_en": "If you are unsure where to travel in autumn, Japan is always a safe bet for beautiful scenery.",
+   "example_vi": "Nếu bạn không chắc nên đi du lịch đâu vào mùa thu, Nhật Bản luôn là một lựa chọn an toàn để ngắm cảnh đẹp."
+  },
+  {
+   "t": 636.8,
+   "d": 5.04,
+   "phrase": "be obsessed with",
+   "ipa": "/bi əbˈsest wɪð/",
+   "quote": "Now any longtime viewer of the channel will know I'm obsessed with mechanical keyboards.",
+   "meaning_vi": "đam mê cuồng nhiệt, bị cuốn hút bởi cái gì",
+   "usage_vi": "Rất tự nhiên khi trả lời IELTS Speaking Part 1 về sở thích cá nhân hoặc thói quen hàng ngày.",
+   "example_en": "Lately, my brother has been obsessed with learning how to make artisanal sourdough bread.",
+   "example_vi": "Dạo gần đây, anh trai tôi rất đam mê học cách làm bánh mì men tự nhiên thủ công."
+  },
+  {
+   "t": 858.96,
+   "d": 5.2,
+   "phrase": "that is still the case",
+   "ipa": "/ðæt ɪz stɪl ðə keɪs/",
+   "quote": "I've been using Apple Notes as the place where I write pretty much everything and that's still the case .",
+   "meaning_vi": "điều đó vẫn đúng, thực tế vẫn như vậy",
+   "usage_vi": "Dùng trong giao tiếp trang trọng hoặc viết luận để xác nhận một sự thật/tình trạng vẫn chưa thay đổi.",
+   "example_en": "Many people thought remote work would disappear after the pandemic, but that is still the case for millions of tech employees.",
+   "example_vi": "Nhiều người nghĩ rằng làm việc từ xa sẽ biến mất sau đại dịch, nhưng điều đó vẫn đang đúng với hàng triệu nhân viên công nghệ."
+  },
+  {
+   "t": 1010.56,
+   "d": 4.88,
+   "phrase": "a one-off",
+   "ipa": "/ə ˈwʌn ɔːf/",
+   "quote": "Something I'm going to just kind of use as a one-off that I'm not going to need to reference later.",
+   "meaning_vi": "thứ/sự việc chỉ xảy ra hoặc dùng một lần",
+   "usage_vi": "Dùng như danh từ hoặc tính từ để chỉ điều gì đó mang tính tạm thời, không lặp lại.",
+   "example_en": "Don't worry about the minor error in the report; it was just a one-off mistake.",
+   "example_vi": "Đừng lo lắng về lỗi nhỏ trong bản báo cáo; đó chỉ là một sai sót hy hữu nhất thời thôi."
+  },
+  {
+   "t": 1026.24,
+   "d": 4.88,
+   "phrase": "cluttered with",
+   "ipa": "/ˈklʌtərd wɪð/",
+   "quote": "But if you're somebody that has a notes app and you feel it being really cluttered with stuff that you",
+   "meaning_vi": "bừa bộn, lộn xộn bởi quá nhiều thứ",
+   "usage_vi": "Miêu tả không gian sống, bàn làm việc hoặc giao diện màn hình máy tính bị lấp đầy bởi các vật dụng không cần thiết.",
+   "example_en": "His desk was cluttered with old coffee cups, scattered documents, and random cables.",
+   "example_vi": "Bàn làm việc của anh ấy lộn xộn với ly cà phê cũ, tài liệu rải rác và dây cáp linh tinh."
+  },
+  {
+   "t": 1298.08,
+   "d": 5.52,
+   "phrase": "a whole different beast",
+   "ipa": "/ə hoʊl ˈdɪfrənt biːst/",
+   "quote": "But Resolve is just a whole different beast that it would, it's gonna take me a little while to get up",
+   "meaning_vi": "một khía cạnh/đối tượng hoàn toàn khác và phức tạp hơn",
+   "usage_vi": "Thành ngữ ấn tượng giúp nâng điểm Lexical Resource khi so sánh hai việc có mức độ khó khác xa nhau.",
+   "example_en": "Editing simple home videos is easy, but color grading a feature film is a whole different beast.",
+   "example_vi": "Chỉnh sửa video gia đình đơn giản thì dễ, nhưng chỉnh màu cho một bộ phim điện ảnh lại là một việc hoàn toàn khác và phức tạp hơn nhiều."
+  },
+  {
+   "t": 1303.6,
+   "d": 5.04,
+   "phrase": "get up to speed with",
+   "ipa": "/ɡet ʌp tə spiːd wɪð/",
+   "quote": "to speed with it and every year I say I'm gonna do it and I just never get around to it because a big",
+   "meaning_vi": "bắt kịp, làm quen và nắm rõ quy trình/kiến thức mới",
+   "usage_vi": "Rất phổ biến trong môi trường công sở khi nói về việc cập nhật tiến độ công việc hoặc học kỹ năng mới.",
+   "example_en": "The new manager spent her first week reading documentation to get up to speed with ongoing projects.",
+   "example_vi": "Nữ quản lý mới đã dành tuần đầu tiên đọc tài liệu để bắt kịp tiến độ các dự án đang diễn ra."
+  }
+ ]
+}

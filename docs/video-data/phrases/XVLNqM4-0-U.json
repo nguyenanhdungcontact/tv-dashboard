@@ -1,6 +1,121 @@
 {
  "id": "XVLNqM4-0-U",
- "created": "2026-11-09",
- "error": "HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=300)",
- "phrases": []
+ "created": "2026-11-10",
+ "source": "youtube-auto",
+ "language": "en",
+ "ai": "gemini-3.6-flash",
+ "summary_vi": "Video là lời chia sẻ chân thành của tác giả về quyết định bán ngôi nhà ở vùng quê sau hai năm trải nghiệm và cải tạo. Qua hành trình này, anh nhận ra việc giải mã các ảo tưởng cá nhân và dũng cảm buông bỏ mới chính là chìa khóa mang lại sự tự do và trưởng thành trong cuộc sống.",
+ "level": "C1",
+ "phrases": [
+  {
+   "t": 11.72,
+   "d": 3.56,
+   "phrase": "bear with someone",
+   "ipa": "/bɛr wɪð ˈsʌmwʌn/",
+   "quote": "but if you'll bear with me for a second,",
+   "meaning_vi": "kiên nhẫn chờ ai đó một chút",
+   "usage_vi": "Dùng trong giao tiếp lịch sự khi muốn người nghe kiên nhẫn lắng nghe trước khi bạn giải thích hoặc làm xong việc gì đó.",
+   "example_en": "Please bear with me while I find the relevant documents for our discussion.",
+   "example_vi": "Xin hãy kiên nhẫn chờ tôi một chút trong khi tôi tìm các tài liệu liên quan cho buổi thảo luận."
+  },
+  {
+   "t": 147.72,
+   "d": 4.0,
+   "phrase": "the bigger picture",
+   "ipa": "/ðə bɪɡər pɪktʃər/",
+   "quote": "about the bigger picture.",
+   "meaning_vi": "bức tranh toàn cảnh / mục đích tổng thể",
+   "usage_vi": "Thường dùng khi khuyên ai đó tập trung vào mục tiêu dài hạn thay vì sa đà vào các chi tiết nhỏ nhặt.",
+   "example_en": "When making career choices, it is crucial to look at the bigger picture rather than focusing solely on starting salary.",
+   "example_vi": "Khi đưa ra lựa chọn nghề nghiệp, điều quan trọng là phải nhìn vào bức tranh toàn cảnh thay vì chỉ tập trung vào lương khởi điểm."
+  },
+  {
+   "t": 155.36,
+   "d": 5.68,
+   "phrase": "demystify",
+   "ipa": "/diːˈmɪstɪfaɪ/",
+   "quote": "demystifying a fantasy and then",
+   "meaning_vi": "giải mã / làm sáng tỏ điều gì đó phức tạp",
+   "usage_vi": "Dùng trong ngữ cảnh giáo dục, khoa học hoặc lối sống để giúp một khái niệm trở nên dễ hiểu và bớt thần thánh hóa.",
+   "example_en": "The documentary aims to demystify the complex world of artificial intelligence for the general public.",
+   "example_vi": "Bộ phim tài liệu nhằm mục đích giải mã thế giới trí tuệ nhân tạo phức tạp cho công chúng."
+  },
+  {
+   "t": 292.72,
+   "d": 3.72,
+   "phrase": "ethos",
+   "ipa": "/ˈiːθɑːs/",
+   "quote": "has been a journey. The whole ethos of",
+   "meaning_vi": "triết lý / tinh thần cốt lõi",
+   "usage_vi": "Dùng để miêu tả giá trị hoặc tư tưởng nền tảng của một tổ chức, cộng đồng hoặc dự án cá nhân.",
+   "example_en": "Environmental sustainability is at the core of the company's business ethos.",
+   "example_vi": "Sự bền vững môi trường là trung tâm trong triết lý kinh doanh của công ty."
+  },
+  {
+   "t": 409.84,
+   "d": 5.64,
+   "phrase": "counterintuitively",
+   "ipa": "/ˌkaʊntərɪnˈtuːɪtɪvli/",
+   "quote": "counterintuitively, drink deeply from",
+   "meaning_vi": "một cách trái ngược với suy nghĩ thông thường",
+   "usage_vi": "Dùng làm trạng từ khi trình bày một phát hiện hoặc thực tế có vẻ phi lý nhưng lại đúng sự thật.",
+   "example_en": "Counterintuitively, taking regular breaks during work can significantly boost overall productivity.",
+   "example_vi": "Trái với suy nghĩ thông thường, việc nghỉ ngơi đều đặn trong lúc làm việc có thể gia tăng đáng kể hiệu suất tổng thể."
+  },
+  {
+   "t": 513.32,
+   "d": 3.28,
+   "phrase": "take a leap into the unknown",
+   "ipa": "/teɪk ə liːp ˈɪntuː ðə ˌʌnˈnoʊn/",
+   "quote": "have to take a leap into the unknown.",
+   "meaning_vi": "dũng cảm dấn thân vào điều chưa biết trước",
+   "usage_vi": "Dùng khi nói về quyết định mạo hiểm như thay đổi sự nghiệp, chuyển chỗ ở hoặc bắt đầu một chặng đường mới.",
+   "example_en": "Leaving a stable corporate job to start her own business was a frightening leap into the unknown.",
+   "example_vi": "Rời bỏ công việc văn phòng ổn định để tự khởi nghiệp là một bước nhảy mạo hiểm vào điều chưa biết trước."
+  },
+  {
+   "t": 814.44,
+   "d": 3.88,
+   "phrase": "loaded with",
+   "ipa": "/ˈloʊdɪd wɪð/",
+   "quote": "ownership in general is loaded with",
+   "meaning_vi": "chứa đầy / tiềm ẩn nhiều (rủi ro, bất ngờ)",
+   "usage_vi": "Dùng để miêu tả một tình huống hoặc quyết định tiềm ẩn rất nhiều yếu tố phức tạp hoặc nguy cơ ngoài dự tính.",
+   "example_en": "Buying an old house can be loaded with unexpected financial risks.",
+   "example_vi": "Mua một ngôi nhà cũ có thể đi kèm với rất nhiều rủi ro tài chính bất ngờ."
+  },
+  {
+   "t": 939.04,
+   "d": 3.72,
+   "phrase": "dawn on someone",
+   "ipa": "/dɔːn ɑːn ˈsʌmwʌn/",
+   "quote": "realizations sort of dawned on me. I",
+   "meaning_vi": "đột nhiên nhận ra / chợt hiểu ra",
+   "usage_vi": "Dùng khi một sự thật hoặc giải pháp bất ngờ vỡ lẽ trong tâm trí sau một thời gian dài trăn trở.",
+   "example_en": "It suddenly dawned on him that he had been spending money on things he did not actually need.",
+   "example_vi": "Anh ấy đột ngột chợt nhận ra rằng mình đã chi tiền cho những thứ bản thân không thực sự cần."
+  },
+  {
+   "t": 1040.2,
+   "d": 3.84,
+   "phrase": "see something through",
+   "ipa": "/siː ˈsʌmθɪŋ θruː/",
+   "quote": ">> I knew that I had to see this all the way through. I needed to complete it, no",
+   "meaning_vi": "kiên trì hoàn thành điều gì đến cùng",
+   "usage_vi": "Dùng khi thể hiện quyết tâm không bỏ cuộc giữa chừng dù gặp khó khăn hay chán nản.",
+   "example_en": "Despite the technical difficulties, the team was determined to see the project through.",
+   "example_vi": "Dù gặp nhiều khó khăn kỹ thuật, đội ngũ vẫn quyết tâm hoàn thành dự án đến cùng."
+  },
+  {
+   "t": 1290.28,
+   "d": 3.04,
+   "phrase": "transitional phase",
+   "ipa": "/trænˈzɪʃənl feɪz/",
+   "quote": "transitional phase. So, as always,",
+   "meaning_vi": "giai đoạn chuyển giao / thời kỳ quá độ",
+   "usage_vi": "Dùng để miêu tả chặng đường thay đổi giữa hai giai đoạn lớn trong cuộc sống, sự nghiệp hoặc mối quan hệ.",
+   "example_en": "Moving to a new country often involves an uncomfortable transitional phase before one feels completely settled.",
+   "example_vi": "Chuyển sang một quốc gia mới thường đi kèm với một giai đoạn chuyển giao không mấy dễ chịu trước khi hoàn toàn ổn định."
+  }
+ ]
 }

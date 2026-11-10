@@ -1,0 +1,132 @@
+{
+ "id": "nzm77GMSNwU",
+ "created": "2026-11-10",
+ "source": "youtube-auto",
+ "language": "en",
+ "ai": "gemini-3.6-flash",
+ "summary_vi": "Video phân tích hai góc nhìn cuộc sống trái ngược nhau: tư duy nạn nhân (paranoia) khiến con người bế tắc và tư duy tích cực (pronoia) coi mọi thử thách là cơ hội để phát triển. Qua đó, người nói khuyến khích chúng ta chủ động chịu trách nhiệm cho cảm xúc, hành động và tự kiến tạo cuộc đời mình.",
+ "level": "C1",
+ "phrases": [
+  {
+   "t": 35.2,
+   "d": 4.64,
+   "phrase": "cost of living crisis",
+   "ipa": "/kɑːst əv ˈlɪv.ɪŋ ˈkraɪ.sɪs/",
+   "quote": "podcast about the cost of living crisis.",
+   "meaning_vi": "cuộc khủng hoảng chi phí sinh hoạt",
+   "usage_vi": "Dùng trong các bài thảo luận về kinh tế, xã hội hoặc đời sống hàng ngày (rất tốt cho IELTS Speaking/Writing Task 2).",
+   "example_en": "Many young couples are delaying home ownership due to the ongoing cost of living crisis.",
+   "example_vi": "Nhiều cặp vợ chồng trẻ đang hoãn việc mua nhà do cuộc khủng hoảng chi phí sinh hoạt kéo dài."
+  },
+  {
+   "t": 159.36,
+   "d": 5.6,
+   "phrase": "conspire against",
+   "ipa": "/kənˈspaɪər əˈɡenst/",
+   "quote": "in a world that is conspiring against",
+   "meaning_vi": "mưu tính chống lại / cản trở ai đó",
+   "usage_vi": "Dùng khi cảm thấy hoàn cảnh hay mọi thứ xung quanh như đang cố tình gây khó khăn cho mình.",
+   "example_en": "Bad weather and heavy traffic conspired against us, making us miss the flight.",
+   "example_vi": "Thời tiết xấu và tắc đường dường như đã cản trở chúng tôi, khiến chúng tôi bị trễ chuyến bay."
+  },
+  {
+   "t": 174.16,
+   "d": 4.72,
+   "phrase": "victim narrative",
+   "ipa": "/ˈvɪk.tɪm ˈnær.ə.tɪv/",
+   "quote": "victim narrative is just how seductive",
+   "meaning_vi": "tư duy / tâm lý coi mình là nạn nhân",
+   "usage_vi": "Dùng để mô tả lối suy nghĩ luôn đổ lỗi cho hoàn cảnh hoặc người khác thay vì nhận trách nhiệm.",
+   "example_en": "Holding onto a victim narrative prevents people from making constructive changes in their lives.",
+   "example_vi": "Giữ tâm lý nạn nhân khiến con người ta không thể tạo ra những thay đổi tích cực trong cuộc sống."
+  },
+  {
+   "t": 215.84,
+   "d": 4.88,
+   "phrase": "grow tired of",
+   "ipa": "/ɡroʊ taɪərd əv/",
+   "quote": "grow tired of this way of operating?",
+   "meaning_vi": "trở nên mệt mỏi / chán ngấy điều gì",
+   "usage_vi": "Diễn tả sự mất kiên nhẫn hoặc không còn muốn chịu đựng một tình huống lặp đi lặp lại.",
+   "example_en": "She eventually grew tired of her routine job and decided to start her own business.",
+   "example_vi": "Cuối cùng cô ấy đã chán ngấy công việc lặp đi lặp lại và quyết định tự khởi nghiệp."
+  },
+  {
+   "t": 289.2,
+   "d": 4.72,
+   "phrase": "fall apart",
+   "ipa": "/fɔːl əˈpɑːrt/",
+   "quote": "When things are falling apart, when it",
+   "meaning_vi": "sụp đổ / tan vỡ",
+   "usage_vi": "Cụm động từ phổ biến dùng cho mối quan hệ, kế hoạch, hoặc trạng thái tinh thần bị vỡ vụn.",
+   "example_en": "Their plans fell apart when the main investor unexpectedly withdrew funding.",
+   "example_vi": "Kế hoạch của họ sụp đổ khi nhà đầu tư chính bất ngờ rút vốn."
+  },
+  {
+   "t": 323.28,
+   "d": 5.04,
+   "phrase": "step into the unknown",
+   "ipa": "/step ˈɪn.tuː ðə ʌnˈnoʊn/",
+   "quote": "of who you used to be requires stepping into the unknown.",
+   "meaning_vi": "dấn thân vào điều chưa biết",
+   "usage_vi": "Dùng khi bắt đầu một hành trình mới đầy thử thách nhưng thiếu sự chắc chắn (như đổi nghề, đi du học).",
+   "example_en": "Leaving a stable career to move abroad was a scary step into the unknown.",
+   "example_vi": "Rời bỏ một công việc ổn định để sang nước ngoài sống là một bước dấn thân đầy sợ hãi vào điều chưa biết."
+  },
+  {
+   "t": 492.88,
+   "d": 4.48,
+   "phrase": "conspire in someone's favor",
+   "ipa": "/kənˈspaɪər ɪn ˈsʌm.wʌnz ˈfeɪ.vər/",
+   "quote": "conspiring in your favor? Not to get you",
+   "meaning_vi": "hậu thuẫn / ủng hộ cho ai đó",
+   "usage_vi": "Diễn tả niềm tin rằng hoàn cảnh hay cuộc sống đang sắp đặt để giúp mình thành công hay trưởng thành.",
+   "example_en": "Even during tough times, he believed that everything was conspiring in his favor.",
+   "example_vi": "Ngay cả trong những lúc khó khăn, anh ấy vẫn tin rằng mọi thứ đang hậu thuẫn cho mình."
+  },
+  {
+   "t": 522.56,
+   "d": 4.4,
+   "phrase": "magical thinking",
+   "ipa": "/ˈmædʒ.ɪ.kəl ˈθɪŋ.kɪŋ/",
+   "quote": "magical thinking. Just because you think",
+   "meaning_vi": "tư duy ảo tưởng / hão huyền",
+   "usage_vi": "Chỉ kiểu tin tưởng thiếu thực tế rằng chỉ cần nghĩ tốt thì kết quả sẽ tự động tốt mà không cần hành động.",
+   "example_en": "Relying on magical thinking without taking practical action will rarely solve real problems.",
+   "example_vi": "Dựa vào tư duy ảo tưởng mà không hành động thực tế thì hiếm khi giải quyết được các vấn đề thực sự."
+  },
+  {
+   "t": 587.6,
+   "d": 4.24,
+   "phrase": "creep into",
+   "ipa": "/kriːp ˈɪn.tuː/",
+   "quote": "whenever it starts to creep into your",
+   "meaning_vi": "len lỏi / âm thầm xâm nhập vào",
+   "usage_vi": "Thường dùng khi các suy nghĩ, cảm xúc tiêu cực hoặc thói quen xấu xuất hiện một cách lặng lẽ.",
+   "example_en": "Doubt began to creep into her mind right before the final presentation.",
+   "example_vi": "Sự nghi ngờ bắt đầu len lỏi vào tâm trí cô ấy ngay trước buổi thuyết trình cuối cùng."
+  },
+  {
+   "t": 607.68,
+   "d": 6.8,
+   "phrase": "take ownership of",
+   "ipa": "/teɪk ˈoʊ.nɚ.ʃɪp əv/",
+   "quote": "you are supposed to go and also taking ownership of your actions and reactions.",
+   "meaning_vi": "chịu trách nhiệm về / làm chủ",
+   "usage_vi": "Cụm từ C1 rất hay dùng trong môi trường công việc hoặc phát triển bản thân khi nói về việc làm chủ hành động/kết quả.",
+   "example_en": "Good leaders always take ownership of their mistakes instead of blaming their team.",
+   "example_vi": "Những người lãnh đạo tốt luôn chịu trách nhiệm về sai lầm của mình thay vì đổ lỗi cho nhóm."
+  },
+  {
+   "t": 671.76,
+   "d": 2.88,
+   "phrase": "break the ice",
+   "ipa": "/breɪk ðə aɪs/",
+   "quote": "it and everyone laughs, breaking the ice.",
+   "meaning_vi": "phá tan bầu không khí gượng gạo",
+   "usage_vi": "Thành ngữ quen thuộc dùng khi làm điều gì đó giúp mọi người dễ chịu hơn khi mới gặp mặt hoặc khi họp căng thẳng.",
+   "example_en": "He told a humorous story to break the ice at the beginning of the workshop.",
+   "example_vi": "Anh ấy đã kể một câu chuyện hài hước để phá tan không khí gượng gạo lúc bắt đầu buổi hội thảo."
+  }
+ ]
+}

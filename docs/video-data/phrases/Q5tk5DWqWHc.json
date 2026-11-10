@@ -1,0 +1,132 @@
+{
+ "id": "Q5tk5DWqWHc",
+ "created": "2026-11-10",
+ "source": "youtube-auto",
+ "language": "en",
+ "ai": "gemini-3.6-flash",
+ "summary_vi": "Video hướng dẫn các phương pháp quản lý thời gian hiệu quả cho người làm kinh doanh bằng cách lập kế hoạch chi tiết, tối ưu môi trường làm việc và loại bỏ xao nhãng. Tác giả cũng nhấn mạnh việc tận dụng trạng thái tập trung sâu (flow state) và xây dựng hệ thống quy trình để nhân đôi hiệu suất làm việc.",
+ "level": "C1",
+ "phrases": [
+  {
+   "t": 6.2,
+   "d": 4.2,
+   "phrase": "upward of",
+   "ipa": "/ˈʌpwərd əv/",
+   "quote": "business owners, you're wasting upward",
+   "meaning_vi": "trên, vượt mức (chỉ số lượng)",
+   "usage_vi": "Dùng trước số tiền, thời gian hoặc tỷ lệ để nhấn mạnh quy mô lớn của con số đó.",
+   "example_en": "He spends upward of four hours every day preparing for his IELTS exam.",
+   "example_vi": "Anh ấy dành hơn bốn tiếng mỗi ngày để chuẩn bị cho kỳ thi IELTS."
+  },
+  {
+   "t": 92.88,
+   "d": 3.36,
+   "phrase": "wing it",
+   "ipa": "/wɪŋ ɪt/",
+   "quote": "Because that means you're winging it.",
+   "meaning_vi": "làm đại, xử lý ngẫu hứng không chuẩn bị",
+   "usage_vi": "Thường dùng trong văn nói thân mật khi bạn thực hiện một bài thuyết trình, cuộc họp hoặc công việc mà không chuẩn bị trước.",
+   "example_en": "Instead of writing an outline for her presentation, she decided to just wing it.",
+   "example_vi": "Thay vì viết dàn ý cho bài thuyết trình, cô ấy quyết định cứ làm đại theo ngẫu hứng."
+  },
+  {
+   "t": 329.12,
+   "d": 3.52,
+   "phrase": "wear many hats",
+   "ipa": "/wɛr ˈmɛni hæts/",
+   "quote": "hat, even when you hire people to wear",
+   "meaning_vi": "đảm nhiệm nhiều vai trò/trách nhiệm khác nhau",
+   "usage_vi": "Rất hay dùng trong môi trường khởi nghiệp hoặc công sở để tả việc một người phải gánh vác nhiều vị trí công việc.",
+   "example_en": "As a founder of a small tech startup, she has to wear many hats every day.",
+   "example_vi": "Là nhà sáng lập của một công ty khởi nghiệp công nghệ nhỏ, cô ấy phải đảm nhiệm nhiều vai trò mỗi ngày."
+  },
+  {
+   "t": 401.68,
+   "d": 4.08,
+   "phrase": "add up",
+   "ipa": "/æd ʌp/",
+   "quote": "add up. And not only do they add up and",
+   "meaning_vi": "tích tiểu thành đại, cộng dồn lại theo thời gian",
+   "usage_vi": "Dùng để diễn tả những hành động nhỏ hoặc khoản chi phí nhỏ khi gộp lại sẽ tạo ra tác động rất lớn.",
+   "example_en": "Taking short breaks throughout the day might seem harmless, but those lost minutes add up quickly.",
+   "example_vi": "Nghỉ giải lao ngắn trong ngày có vẻ vô hại, nhưng những phút bị lãng phí đó cộng dồn lại rất nhanh."
+  },
+  {
+   "t": 462.12,
+   "d": 2.6,
+   "phrase": "move the needle",
+   "ipa": "/muːv ðə ˈniːdəl/",
+   "quote": "does not move the [ __ ] needle. That",
+   "meaning_vi": "tạo ra sự thay đổi hoặc tiến triển rõ rệt",
+   "usage_vi": "Cụm từ C1/C2 rất ấn tượng trong IELTS Speaking và Writing Task 2 khi thảo luận về chiến lược kinh doanh hoặc các giải pháp hiệu quả.",
+   "example_en": "Checking your email constantly will not move the needle for your business; strategic planning will.",
+   "example_vi": "Kiểm tra email liên tục sẽ không tạo ra thay đổi lớn cho doanh nghiệp của bạn; lập kế hoạch chiến lược mới làm được điều đó."
+  },
+  {
+   "t": 528.36,
+   "d": 3.72,
+   "phrase": "be a bottleneck",
+   "ipa": "/bi ə ˈbɑːtəlˌnɛk/",
+   "quote": "bottleneck. So, every time you repeat",
+   "meaning_vi": "trở thành điểm nghẽn làm chậm tiến độ",
+   "usage_vi": "Dùng để chỉ một cá nhân, bộ phận hoặc công đoạn gây ra sự chậm trễ cho toàn bộ quy trình làm việc.",
+   "example_en": "If the manager insists on approving every single decision, he will become the bottleneck of the company.",
+   "example_vi": "Nếu người quản lý cứ nhất quyết đòi phê duyệt từng quyết định một, anh ấy sẽ trở thành điểm nghẽn của công ty."
+  },
+  {
+   "t": 576.48,
+   "d": 3.96,
+   "phrase": "be in the zone",
+   "ipa": "/bi ɪn ðə zoʊn/",
+   "quote": "being in the zone is the skill of flow.",
+   "meaning_vi": "ở trạng thái tập trung cao độ và làm việc cực kỳ hiệu quả",
+   "usage_vi": "Thích hợp dùng trong các bài nói về trải nghiệm học tập, làm việc hoặc chơi thể thao khi bạn hoàn toàn làm chủ kỹ năng.",
+   "example_en": "When I put on my noise-canceling headphones, I can be in the zone for hours without any distraction.",
+   "example_vi": "Khi tôi đeo tai nghe chống ồn vào, tôi có thể chìm vào trạng thái tập trung cao độ hàng giờ liền mà không bị xao nhãng."
+  },
+  {
+   "t": 660.04,
+   "d": 3.88,
+   "phrase": "price of entry",
+   "ipa": "/praɪs əv ˈɛntri/",
+   "quote": "That is the price of entry because of",
+   "meaning_vi": "điều kiện bắt buộc / cái giá phải trả để đạt điều gì",
+   "usage_vi": "Dùng để chỉ thử thách hoặc sự nỗ lực tối thiểu bạn bắt buộc phải trải qua trước khi gặt hái thành công.",
+   "example_en": "Feeling initial discomfort during deep work is simply the price of entry to mastering a new skill.",
+   "example_vi": "Cảm giác khó chịu ban đầu khi làm việc sâu chỉ đơn giản là cái giá phải trả để thành thạo một kỹ năng mới."
+  },
+  {
+   "t": 678.12,
+   "d": 3.24,
+   "phrase": "push through discomfort",
+   "ipa": "/pʊʃ θruː dɪsˈkʌmfərt/",
+   "quote": "pushing through the discomfort, which",
+   "meaning_vi": "nỗ lực kiên trì vượt qua cảm giác khó chịu",
+   "usage_vi": "Thường dùng khi thảo luận về việc rèn luyện tính kỷ luật bản thân, thể thao hoặc vượt qua giai đoạn đầu khó khăn của công việc.",
+   "example_en": "Successful learners are those who can push through discomfort to complete challenging tasks.",
+   "example_vi": "Những người học thành công là những người có thể nỗ lực vượt qua sự khó chịu để hoàn thành các nhiệm vụ đầy thách thức."
+  },
+  {
+   "t": 783.64,
+   "d": 3.52,
+   "phrase": "double down on",
+   "ipa": "/ˈdʌbəl daʊn ɑːn/",
+   "quote": "working, we fix it, and then we double down on what is working. So, track your",
+   "meaning_vi": "gấp đôi nỗ lực / đầu tư thêm nguồn lực vào một hướng đi",
+   "usage_vi": "Cụm từ rất hay dùng trong chiến lược phát triển bản thân và doanh nghiệp khi quyết định tập trung tối đa vào điểm mạnh.",
+   "example_en": "Once we identified our most profitable marketing channel, we decided to double down on it.",
+   "example_vi": "Ngay khi xác định được kênh tiếp thị mang lại lợi nhuận cao nhất, chúng tôi quyết định dốc toàn lực vào nó."
+  },
+  {
+   "t": 873.88,
+   "d": 4.2,
+   "phrase": "go down a rabbit hole",
+   "ipa": "/ɡoʊ daʊn ə ˈræbɪt hoʊl/",
+   "quote": "distracted, going down rabbit holes,",
+   "meaning_vi": "sa đà vào chuỗi thông tin lan man tốn thời gian",
+   "usage_vi": "Rất phổ biến khi nói về việc sử dụng mạng xã hội, tìm kiếm thông tin trên mạng hoặc làm những việc không đúng trọng tâm.",
+   "example_en": "I intended to search for an IELTS grammar rule, but I ended up going down a rabbit hole of random videos on social media.",
+   "example_vi": "Tôi định tìm kiếm một quy tắc ngữ pháp IELTS, nhưng rốt cuộc lại sa đà vào một chuỗi video ngẫu nhiên trên mạng xã hội."
+  }
+ ]
+}

@@ -1,0 +1,143 @@
+{
+ "id": "uxb8OjkiZBY",
+ "created": "2026-11-10",
+ "source": "youtube-auto",
+ "language": "en",
+ "ai": "gemini-3.6-flash",
+ "summary_vi": "Video kể về câu chuyện của nhà triết học Thomas Aquinas - người từng bỏ ngang tác phẩm để đời của mình sau một trải nghiệm tâm linh, từ đó tác giả suy ngẫm về hành trình buông bỏ danh vọng và áp lực thành tích cá nhân trên mạng xã hội. Qua đó, tác giả tìm lại niềm vui thuần khiết trong việc sáng tạo nội dung mà không còn bị ràng buộc bởi sự công nhận của đám đông.",
+ "level": "C1",
+ "phrases": [
+  {
+   "t": 45.8,
+   "d": 6.2,
+   "phrase": "weigh down",
+   "ipa": "/weɪ daʊn/",
+   "quote": "that was weighing me down tremendously.",
+   "meaning_vi": "đè nặng, làm lo âu kiệt sức",
+   "usage_vi": "Dùng khi áp lực, lo âu hoặc trách nhiệm khiến ai đó cảm thấy bị đè nén tinh thần.",
+   "example_en": "The financial stress began to weigh him down after losing his job.",
+   "example_vi": "Áp lực tài chính bắt đầu đè nặng lên anh ấy sau khi mất việc."
+  },
+  {
+   "t": 86.76,
+   "d": 4.2,
+   "phrase": "a whole different ballgame",
+   "ipa": "/ə hoʊl ˈdɪfərənt ˈbɔːlɡeɪm/",
+   "quote": "the streets, preach. Totally different ballgame. And what does his family do?",
+   "meaning_vi": "một hoàn cảnh hoàn toàn khác",
+   "usage_vi": "Thành ngữ dùng để so sánh một tình huống mới khó khăn hoặc hoàn toàn khác biệt so với trải nghiệm trước đó.",
+   "example_en": "Managing a team of fifty people is a whole different ballgame compared to working solo.",
+   "example_vi": "Quản lý một đội ngũ 50 người là một hoàn toàn cảnh hoàn toàn khác so với việc làm việc một mình."
+  },
+  {
+   "t": 259.72,
+   "d": 3.52,
+   "phrase": "reconcile something with something",
+   "ipa": "/ˈrekənsaɪl ˈsʌmθɪŋ wɪð ˈsʌmθɪŋ/",
+   "quote": "reconciling [music]",
+   "meaning_vi": "dung hòa hai điều đối lập",
+   "usage_vi": "Rất hữu ích trong IELTS Writing/Speaking khi nói về việc cân bằng hai khái niệm trái ngược nhau.",
+   "example_en": "It can be difficult to reconcile career ambitions with family responsibilities.",
+   "example_vi": "Có thể rất khó để dung hòa tham vọng sự nghiệp với trách nhiệm gia đình."
+  },
+  {
+   "t": 423.8,
+   "d": 4.64,
+   "phrase": "ponder on",
+   "ipa": "/ˈpɑːndər ɑːn/",
+   "quote": "fascinating question to ponder on. Maybe",
+   "meaning_vi": "suy ngẫm, trăn trở về",
+   "usage_vi": "Động từ C1 nâng cao thay cho 'think about', dùng khi ngẫm nghĩ sâu sắc về một vấn đề triết lý hoặc cá nhân.",
+   "example_en": "She sat quietly by the river to ponder on her future career path.",
+   "example_vi": "Cô ấy ngồi yên lặng bên bờ sông để suy ngẫm về con đường sự nghiệp tương lai của mình."
+  },
+  {
+   "t": 460.24,
+   "d": 4.28,
+   "phrase": "deeply resonant",
+   "ipa": "/ˈdiːpli ˈrezənənt/",
+   "quote": "deeply resonant in this story. Not",
+   "meaning_vi": "tạo sự đồng cảm sâu sắc",
+   "usage_vi": "Collocation hay trong IELTS Speaking/Writing khi miêu tả một ý tưởng, cuốn sách hoặc câu chuyện có sức ảnh hưởng tinh thần lớn.",
+   "example_en": "The author's memoir was deeply resonant with readers who had faced similar struggles.",
+   "example_vi": "Cuốn hồi ký của tác giả đã tạo sự đồng cảm sâu sắc với những độc giả từng trải qua những khó khăn tương tự."
+  },
+  {
+   "t": 476.4,
+   "d": 3.06,
+   "phrase": "have a change of heart",
+   "ipa": "/hæv ə tʃeɪndʒ əv hɑːrt/",
+   "quote": "and then having a change of heart and",
+   "meaning_vi": "thay đổi suy nghĩ hay quyết định",
+   "usage_vi": "Thành ngữ tự nhiên dùng khi ai đó thay đổi ý định hoặc thái độ về một vấn đề quan trọng.",
+   "example_en": "He initially rejected the job offer, but had a change of heart after negotiating the salary.",
+   "example_vi": "Ban đầu anh ấy từ chối lời đề nghị công việc, nhưng đã đổi ý sau khi đàm phán mức lương."
+  },
+  {
+   "t": 566.96,
+   "d": 2.88,
+   "phrase": "identify with",
+   "ipa": "/aɪˈdentɪfaɪ wɪð/",
+   "quote": "everything. I think identifying with my",
+   "meaning_vi": "đồng nhất bản thân với, gắn liền với",
+   "usage_vi": "Dùng khi định hình bản sắc bản thân qua công việc, vai trò xã hội hoặc đồng cảm với hoàn cảnh của ai đó.",
+   "example_en": "Many young professionals identify so strongly with their jobs that they neglect their personal lives.",
+   "example_vi": "Nhiều người trẻ đi làm gắn bản sắc cá nhân quá mạnh mẽ với công việc đến mức bỏ rơi cuộc sống riêng."
+  },
+  {
+   "t": 741.2,
+   "d": 4.92,
+   "phrase": "lose sight of",
+   "ipa": "/luːz saɪt əv/",
+   "quote": "that you can lose yourself, you can lose sight of why you originally started",
+   "meaning_vi": "quên mất, đánh mất mục tiêu cốt lõi",
+   "usage_vi": "Cụm từ rất phổ biến trong IELTS khi thảo luận việc bị cuốn vào chi tiết phụ mà quên đi giá trị ban đầu.",
+   "example_en": "In the pursuit of success, we must not lose sight of what truly brings us happiness.",
+   "example_vi": "Trong quá trình theo đuổi thành công, chúng ta không được quên mất những gì thực sự mang lại hạnh phúc."
+  },
+  {
+   "t": 871.0,
+   "d": 4.04,
+   "phrase": "the allure of",
+   "ipa": "/ði əˈlʊr əv/",
+   "quote": "it. I just was so pulled by the allure",
+   "meaning_vi": "sức hút, sự quyến rũ của",
+   "usage_vi": "Danh từ C1 ăn điểm cao dùng để nói về sức hấp dẫn của danh vọng, tiền tài, thành phố lớn hay công nghệ.",
+   "example_en": "The allure of big city life continues to attract thousands of young graduates every year.",
+   "example_vi": "Sức hút của cuộc sống thành phố lớn tiếp tục hấp dẫn hàng ngàn sinh viên mới tốt nghiệp mỗi năm."
+  },
+  {
+   "t": 969.08,
+   "d": 3.56,
+   "phrase": "come to terms with",
+   "ipa": "/kʌm tuː tɜːrmz wɪð/",
+   "quote": "coming to [music] terms",
+   "meaning_vi": "chấp nhận một thực tế khó khăn",
+   "usage_vi": "Thành ngữ C1 dùng khi học cách chấp nhận sự thật đau buồn hoặc sự thay đổi không thể tránh khỏi.",
+   "example_en": "It took her several months to come to terms with the end of her relationship.",
+   "example_vi": "Cô ấy mất vài tháng để chấp nhận sự kết thúc của mối quan hệ."
+  },
+  {
+   "t": 997.08,
+   "d": 4.36,
+   "phrase": "demystify",
+   "ipa": "/ˌdiːˈmɪstɪfaɪ/",
+   "quote": ">> to demystify them, to see clearly. I",
+   "meaning_vi": "làm sáng tỏ, bóc tách sự huyền bí",
+   "usage_vi": "Động từ C1 dùng trong thảo luận học thuật/IELTS khi giải thích hoặc làm cho điều gì trở nên dễ hiểu qua trải nghiệm.",
+   "example_en": "This documentary aims to demystify the complex world of artificial intelligence for everyday users.",
+   "example_vi": "Bộ phim tài liệu này nhằm mục đích làm sáng tỏ thế giới phức tạp của trí tuệ nhân tạo cho người dùng phổ thông."
+  },
+  {
+   "t": 1174.16,
+   "d": 3.36,
+   "phrase": "food for thought",
+   "ipa": "/fuːd fər θɔːt/",
+   "quote": "given you some food for thought [music]",
+   "meaning_vi": "điều đáng để suy ngẫm",
+   "usage_vi": "Thành ngữ tự nhiên dùng ở cuối bài nói hoặc sau một cuộc thảo luận để gợi mở suy nghĩ.",
+   "example_en": "The speaker's insights provided plenty of food for thought on how we approach work-life balance.",
+   "example_vi": "Góc nhìn của diễn giả đã mang lại nhiều điều đáng suy ngẫm về cách chúng ta tiếp cận sự cân bằng giữa công việc và cuộc sống."
+  }
+ ]
+}
