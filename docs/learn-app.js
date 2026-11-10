@@ -214,29 +214,23 @@
 
   /* ===== Đồng bộ TV · iPad · iPhone ===== */
   function openSync() {
-    const link = SYNC.joinLink('iphone.html');
+    const link = location.href.replace(/[?#].*$/, '').replace(/[^/]*$/, '') + 'iphone.html';
     const age = SYNC.lastPull ? Math.round((Date.now() - SYNC.lastPull) / 60000) : null;
     openSheet({
       title: 'Đồng bộ TV · iPad · iPhone',
-      sub: 'Dùng chung danh sách đã xem, Lịch sử học và từ đã lưu.',
+      sub: 'Mọi thiết bị mở trang học đều tự dùng chung một kho: đã xem, Lịch sử học, từ đã lưu. Không cần quét mã.',
       body: `<div class="sync">
         <div class="qr" id="qr"></div>
         <div class="sync-txt">
-          <p><b>Nối máy này với TV:</b> trên TV mở “⇅ Đồng bộ” rồi quét mã QR trên TV bằng Camera. Hoặc dán mã/link của máy kia vào đây:</p>
-          <div class="join"><input id="joinIn" placeholder="Dán mã hoặc link đồng bộ" autocapitalize="off" autocomplete="off" spellcheck="false"><button id="joinBtn">Nối</button></div>
-          <p class="small">Mã của máy này: <code>${esc(SYNC.code)}</code></p>
+          <p><b>Mở trang học trên máy khác:</b> quét mã QR này bằng Camera, hoặc gửi link bên dưới.</p>
+          <p class="small">Kho: <code>${esc(SYNC.code)}</code>${SYNC.isDefault ? ' (kho chung)' : ' · <a href="#" id="useDefault">dùng lại kho chung</a>'} · ${SYNC.words().length} từ đã lưu</p>
           <p class="small">${SYNC.online ? '● Đã kết nối' : '○ Chưa kết nối'}${age !== null ? ` · cập nhật ${age < 1 ? 'vừa xong' : age + ' phút trước'}` : ''}</p>
         </div></div>`,
-      actions: [{ label: navigator.share ? 'Gửi link sang máy khác' : 'Sao chép link', fn: () => shareLink(link) }, { label: 'Đóng', fn: () => {} }],
+      actions: [{ label: navigator.share ? 'Gửi link trang học' : 'Sao chép link', fn: () => shareLink(link) }, { label: 'Đóng', fn: () => {} }],
     });
     LC.qr($('#qr'), link, 180);
-    $('#joinBtn').onclick = async () => {
-      const raw = $('#joinIn').value.trim();
-      const m = raw.match(/[?&]sync=([a-z0-9-]+)/i);
-      const ok = await SYNC.join(m ? m[1] : raw);
-      if (ok) { closeSheet(); toast('Đã nối đồng bộ. Danh sách đang cập nhật…'); }
-      else toast('Mã chưa đúng. Mã có ít nhất 20 ký tự (chữ, số, gạch ngang).');
-    };
+    const ud = $('#useDefault');
+    if (ud) ud.onclick = async e => { e.preventDefault(); await SYNC.useDefault(); closeSheet(); toast('Đã chuyển về kho chung'); };
   }
   async function shareLink(link) {
     try { if (navigator.share) { await navigator.share({ title: 'Học qua video: đồng bộ', url: link }); return; } } catch (e) { return; }

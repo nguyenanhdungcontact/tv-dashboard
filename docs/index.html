@@ -298,6 +298,31 @@ applyTheme(); setInterval(applyTheme, 60000);
     font-size: clamp(1.1rem, 1.8vw, 1.9rem); opacity: 0; transition: opacity .3s ease, transform .3s ease;
   }
   #themeNote.show { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+  /* Màn hình cảm ứng (iPad, iPhone): luôn hiện nút ở góc trên, không tự ẩn như trên TV */
+  @media (pointer: coarse) { #hud.quiet { opacity: 1; pointer-events: auto; } }
+  /* Số từ ở góc phải dưới */
+  #wcount { position: fixed; right: calc(14px + env(safe-area-inset-right, 0px)); bottom: calc(10px + env(safe-area-inset-bottom, 0px));
+    z-index: 9; font-size: clamp(0.7rem, 0.8vw, 0.9rem); color: var(--muted); opacity: .55; pointer-events: none; font-variant-numeric: tabular-nums; }
+  /* Danh sách từ: vuốt sang trái/phải để hiện nút xoá */
+  #wlist { width: min(640px, calc(100vw - 24px)); padding: 18px 0 0; }
+  #wlist h3, #wlist > p { padding: 0 20px; }
+  #wlist .wl-search { margin: 4px 20px 10px; width: calc(100% - 40px); min-height: 42px; border-radius: 10px; border: 1px solid var(--panel-edge);
+    background: transparent; color: var(--text); padding: 0 12px; font: inherit; font-size: 16px; }
+  #wlBody { max-height: min(60vh, 560px); overflow-y: auto; border-top: 1px solid var(--panel-edge); -webkit-overflow-scrolling: touch; }
+  .wrow { position: relative; overflow: hidden; border-bottom: 1px solid var(--panel-edge); }
+  .wrow .del { position: absolute; inset: 0 0 0 auto; width: 120px; border: 0; background: #d9534f; color: #fff; font: inherit; font-weight: 600; cursor: pointer; }
+  .wrow.left .del { inset: 0 auto 0 0; }
+  .wrow .in { position: relative; display: flex; gap: 10px; align-items: baseline; padding: 12px 20px; background: #10143a; touch-action: pan-y;
+    transition: transform .2s ease; user-select: none; -webkit-user-select: none; cursor: grab; }
+  :root.day .wrow .in { background: #fbf8ef; }
+  .wrow.armed .in { transform: translateX(-120px); }
+  .wrow.armed.left .in { transform: translateX(120px); }
+  .wrow .w { font-weight: 700; }
+  .wrow .v { color: var(--muted); font-size: .92em; flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .wrow .s { color: var(--tail); }
+  #wlUndo { display: none; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 20px; background: var(--card-hover); font-size: .95rem; }
+  #wlUndo.show { display: flex; }
+  #wlist .actions { padding: 0 20px 18px; }
   #paused {
     position: fixed; top: 50%; left: 66.666vw;
     transform: translate(-50%, -50%);
@@ -432,8 +457,10 @@ applyTheme(); setInterval(applyTheme, 60000);
     <span><kbd>←</kbd>sáng/tối</span>
   </div>
   <button class="pill" id="themeBtn" type="button"></button>
+  <button class="pill" id="listBtn" type="button">Danh sách từ</button>
   <button class="pill" id="editBtn" type="button">Sửa danh sách từ</button>
 </div>
+<div id="wcount" aria-live="polite"></div>
 <div id="themeNote" aria-live="polite"></div>
 
 <div id="paused">Đang tạm dừng</div>
@@ -447,6 +474,14 @@ applyTheme(); setInterval(applyTheme, 60000);
   <p class="nav" id="cNav"></p>
 </section>
 
+<dialog id="wlist">
+  <h3>Từ đang bay</h3>
+  <p id="wlInfo">Vuốt một từ sang trái hoặc phải rồi bấm <b>Xoá</b> để bỏ từ đó ở mọi thiết bị.</p>
+  <input class="wl-search" id="wlSearch" type="search" placeholder="Tìm từ…" autocomplete="off" autocapitalize="off" spellcheck="false">
+  <div id="wlUndo"><span id="wlUndoTxt"></span><button class="pill" id="wlUndoBtn" type="button">Hoàn tác</button></div>
+  <div id="wlBody"></div>
+  <div class="actions"><button class="pill primary" type="button" id="wlClose">Xong</button></div>
+</dialog>
 <dialog id="editor">
   <h3>Danh sách từ vựng</h3>
   <p>Mỗi dòng một từ, các phần cách nhau bằng dấu <code>|</code>:<br>
@@ -766,10 +801,17 @@ Chỉ dựa trên thông tin ở trên và kiến thức chung. Không bịa th�
       return Array.isArray(lst) ? lst.filter(o => o && o.w) : [];
     } catch (e) { return []; }
   }
+  const hiddenW = w => !!(window.LearnCore && LearnCore.Sync.isHidden(w));
+  function shuffle(a) {
+    for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; }
+    return a;
+  }
+  /* Từ đã lưu + danh sách nền, bỏ từ đã xoá (ẩn ở mọi máy), xếp NGẪU NHIÊN (cả khi bấm ← → để đổi từ) */
   function withSaved(base) {
     const saved = savedWords();
     const have = new Set(saved.map(o => o.w.toLowerCase()));
-    return saved.concat(base.filter(o => o && o.w && !have.has(String(o.w).toLowerCase())));
+    return shuffle(saved.concat(base.filter(o => o && o.w && !have.has(String(o.w).toLowerCase())))
+      .filter(o => !hiddenW(o.w)));
   }
   function loadWords() {
     try {
@@ -801,6 +843,8 @@ Chỉ dựa trên thông tin ở trên và kiến thức chung. Không bịa th�
       if (what !== "data") return;
       words = (!hasCustomWords && remoteWords) ? withSaved(remoteWords) : loadWords();
       bag = [];
+      paintCount();
+      if (wlist.open) renderWordList();
     });
     LearnCore.Sync.start();
   }
@@ -1001,7 +1045,7 @@ Chỉ dựa trên thông tin ở trên và kiến thức chung. Không bịa th�
   // News: ↑ ↓ change story, → go to vocabulary, OK holds/releases the current story.
   // Vocabulary: ← → previous/next word, ↑ ↓ meteor speed, Back returns to the news.
   window.addEventListener("keydown", (e) => {
-    if (editor.open) return;
+    if (editor.open || wlist.open) return;
     const k = e.key;
     if (k === " " || k === "MediaPlayPause") { e.preventDefault(); setPaused(!paused); return; }
 
@@ -1045,6 +1089,7 @@ Chỉ dựa trên thông tin ở trên và kiến thức chung. Không bịa th�
   // Called by the Android app when the remote's Back button is pressed (hold Back to quit).
   window.tvBack = function () {
     if (editor.open) { editor.close(); return; }
+    if (wlist.open) { wlist.close(); return; }
     if (mode === "news" && reading) { setReading(false); return; }
     if (mode === "vocab") exitVocab();
     else clearSpotlight();
@@ -1056,6 +1101,7 @@ Chỉ dựa trên thông tin ở trên và kiến thức chung. Không bịa th�
     hudTimer = setTimeout(() => hud.classList.add("quiet"), 6000);
   }
   window.addEventListener("pointermove", wakeHud);
+  window.addEventListener("pointerdown", wakeHud);
   window.addEventListener("keydown", (e) => { if (e.key === "ContextMenu" || e.key === "m" || e.key === "M") wakeHud(); });
 
   /* =================== SÁNG / TỐI =================== */
@@ -1078,6 +1124,71 @@ Chỉ dựa trên thông tin ở trên và kiến thức chung. Không bịa th�
   }
   themeBtn.addEventListener("click", cycleTheme);
   paintThemeBtn();
+
+  /* =================== SỐ TỪ + DANH SÁCH TỪ =================== */
+  const wlist = $("wlist");
+  function paintCount() {
+    const saved = window.LearnCore ? LearnCore.Sync.words().length : savedWords().length;
+    $("wcount").textContent = `${words.length} từ${saved ? ` · ★ ${saved} đã lưu` : ""}`;
+  }
+  paintCount(); setInterval(paintCount, 5000);
+
+  let undoT = null, lastDel = null;
+  function renderWordList() {
+    const q = $("wlSearch").value.trim().toLowerCase();
+    const list = words.slice().sort((a, b) => (b.saved ? 1 : 0) - (a.saved ? 1 : 0) || String(a.w).localeCompare(String(b.w)))
+      .filter(o => !q || String(o.w).toLowerCase().includes(q) || String(o.vi || "").toLowerCase().includes(q));
+    $("wlInfo").innerHTML = `${words.length} từ đang bay. Vuốt một từ sang trái hoặc phải rồi bấm <b>Xoá</b> để bỏ từ đó ở mọi thiết bị.`;
+    $("wlBody").innerHTML = list.map(o => `<div class="wrow" data-w="${encodeURIComponent(o.w)}">
+        <button class="del" type="button">Xoá</button>
+        <div class="in"><span class="w">${o.saved ? '<span class="s">★ </span>' : ""}${escH(o.w)}</span><span class="v">${escH(o.vi || "")}</span></div></div>`).join("");
+  }
+  const escH = t => String(t).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  function disarm(except) { document.querySelectorAll("#wlBody .wrow.armed").forEach(r => { if (r !== except) r.classList.remove("armed", "left"); }); }
+  // Vuốt: kéo hàng sang trái → nút Xoá bên phải; sang phải → nút Xoá bên trái. Chuột: bấm vào hàng cũng hiện nút.
+  let drag = null;
+  $("wlBody").addEventListener("pointerdown", e => {
+    const row = e.target.closest(".wrow"); if (!row || e.target.closest(".del")) return;
+    drag = { row, x: e.clientX, y: e.clientY, dx: 0, moved: false };
+  });
+  window.addEventListener("pointermove", e => {
+    if (!drag) return;
+    drag.dx = e.clientX - drag.x;
+    if (Math.abs(drag.dx) > 8 && Math.abs(drag.dx) > Math.abs(e.clientY - drag.y)) {
+      drag.moved = true;
+      const inner = drag.row.querySelector(".in");
+      inner.style.transition = "none";
+      inner.style.transform = `translateX(${Math.max(-140, Math.min(140, drag.dx))}px)`;
+      drag.row.classList.toggle("left", drag.dx > 0);
+    }
+  });
+  window.addEventListener("pointerup", () => {
+    if (!drag) return;
+    const { row, dx, moved } = drag; drag = null;
+    const inner = row.querySelector(".in"); inner.style.transition = ""; inner.style.transform = "";
+    if (moved && Math.abs(dx) > 60) { disarm(row); row.classList.add("armed"); row.classList.toggle("left", dx > 0); }
+    else if (moved) row.classList.remove("armed", "left");
+    else { const was = row.classList.contains("armed"); disarm(); if (!was) row.classList.add("armed"); }
+  });
+  $("wlBody").addEventListener("click", e => {
+    const b = e.target.closest(".del"); if (!b || !window.LearnCore) return;
+    const w = decodeURIComponent(b.parentNode.dataset.w);
+    const item = words.find(o => o.w === w);
+    lastDel = { w, saved: item && item.saved ? item : null };
+    LearnCore.Sync.hideWord(w);
+    $("wlUndoTxt").textContent = `Đã xoá “${w}”`;
+    $("wlUndo").classList.add("show");
+    clearTimeout(undoT); undoT = setTimeout(() => $("wlUndo").classList.remove("show"), 6000);
+  });
+  $("wlUndoBtn").addEventListener("click", () => {
+    if (!lastDel || !window.LearnCore) return;
+    LearnCore.Sync.unhideWord(lastDel.w, lastDel.saved);
+    $("wlUndo").classList.remove("show"); lastDel = null;
+  });
+  $("wlSearch").addEventListener("input", renderWordList);
+  $("listBtn").addEventListener("click", () => { $("wlSearch").value = ""; renderWordList(); setPaused(true); wlist.showModal(); });
+  $("wlClose").addEventListener("click", () => wlist.close());
+  wlist.addEventListener("close", () => setPaused(false));
 
   /* =================== WORD LIST EDITOR =================== */
   const txt = $("txt"), err = $("err");

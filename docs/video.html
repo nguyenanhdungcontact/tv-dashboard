@@ -788,14 +788,14 @@ function askKey(k){
 /* ===== Màn đồng bộ: mã QR để iPhone/iPad dùng chung cờ và từ đã lưu ===== */
 function openSync(){
   S.sync = true;
-  const link = SYNC.joinLink('iphone.html');
+  const link = location.href.replace(/[?#].*$/, '').replace(/[^/]*$/, '') + 'iphone.html';
   const age = SYNC.lastPull ? Math.round((Date.now() - SYNC.lastPull) / 60000) : null;
   $('#syncbox').innerHTML = `<div class="sbox"><div class="qr" id="qr"></div><div>
     <h3>Đồng bộ TV · iPad · iPhone</h3>
-    <ol><li>Mở Camera trên iPhone hoặc iPad, quét mã bên trái.</li>
-        <li>Bấm vào link hiện ra: máy đó sẽ dùng chung danh sách <b>đã xem</b>, <b>Lịch sử học</b> và <b>từ đã lưu</b> với TV.</li>
-        <li>Đánh dấu ở máy nào, máy khác cập nhật sau khoảng 1 phút.</li></ol>
-    <div class="code">Mã đồng bộ: ${esc(SYNC.code)}</div>
+    <ol><li>TV, iPad, iPhone mở trang học là <b>tự dùng chung một kho</b>: danh sách <b>đã xem</b>, <b>Lịch sử học</b> và <b>từ đã lưu</b>. Không cần quét mã.</li>
+        <li>Đánh dấu ở máy nào, máy khác cập nhật sau khoảng 1 phút.</li>
+        <li>Muốn mở trang học trên iPhone/iPad: quét mã bên trái bằng Camera.</li></ol>
+    <div class="code">Kho: ${esc(SYNC.code)}${SYNC.isDefault ? ' (kho chung)' : ''} · ${SYNC.words().length} từ đã lưu</div>
     <div class="st">Trạng thái: ${SYNC.online ? '<b>đã kết nối</b>' : '<b class="off">chưa kết nối</b>'}${age !== null ? ` · cập nhật ${age < 1 ? 'vừa xong' : age + ' phút trước'}` : ''}</div>
     <div class="st">Back hoặc OK để đóng</div></div></div>`;
   $('#syncbox').classList.add('show');

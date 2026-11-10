@@ -2,16 +2,18 @@
  *
  * 1. Đồng bộ giữa các thiết bị qua Firebase Realtime Database (REST, không cần thư viện):
  *    - cờ video: 'watched' (đã xem, xếp cuối hàng) | 'archived' (đưa vào Lịch sử học) | '' (bình thường)
- *    - từ đã lưu (★), cũng là từ bay trên màn hình sao băng
- *    Mỗi nhà dùng một MÃ ĐỒNG BỘ (≥ 20 ký tự, tự tạo ở thiết bị đầu tiên). Thiết bị khác tham gia bằng cách
- *    quét mã QR hoặc mở link có ?sync=MÃ. Dữ liệu nằm ở /sync/<MÃ>/{flags,words}; quy tắc bảo mật
- *    (video/firebase-rules.json) chỉ cho đọc/ghi khi biết mã. Hai thiết bị sửa cùng mục: bản mới hơn thắng.
+ *    - từ đã lưu (★), cũng là từ bay trên màn hình sao băng; từ bị xoá khỏi danh sách (ẩn ở mọi máy)
+ *    Mọi thiết bị mở trang đều tự dùng chung KHO CỦA NHÀ (DEFAULT_CODE bên dưới), không cần quét mã.
+ *    Dữ liệu nằm ở /sync/<MÃ>/{flags,words}; quy tắc bảo mật (video/firebase-rules.json) chỉ cho đọc/ghi
+ *    khi biết mã (≥ 20 ký tự). Mã nằm trong trang công khai nên ai đọc mã nguồn cũng thấy được: chỉ chứa
+ *    cờ đã xem và từ vựng, không có thông tin cá nhân. Hai thiết bị sửa cùng mục: bản mới hơn thắng.
  * 2. Danh mục video: xếp hàng theo chủ đề, video mới lên trước, đã xem xuống cuối, lưu trữ vào Lịch sử học.
  * 3. Tiện ích nhỏ: tải JSON, tô cụm từ trong câu, tìm câu phụ đề theo thời gian, đọc từ, mã QR.
  */
 (function () {
   const SYNC_DB = 'https://tv-video-daily-default-rtdb.asia-southeast1.firebasedatabase.app';
-  const K = { code: 'learn.sync.code', flags: 'learn.flags.v1', words: 'learn.words.v1', saved: 'meteor-saved-v1', pulled: 'learn.sync.pulled' };
+  const DEFAULT_CODE = 'nhaminh-mrs7zgnr-4uh33v3t';   // kho chung của nhà: mọi thiết bị tự dùng
+  const K = { code: 'learn.sync.code', custom: 'learn.sync.custom', flags: 'learn.flags.v1', words: 'learn.words.v1', saved: 'meteor-saved-v1', pulled: 'learn.sync.pulled' };
   const POLL_MS = 45000;
 
   const ls = {
@@ -39,8 +41,10 @@
     (Array.isArray(old) ? old : []).forEach((o, i) => { if (o && o.w) words[wordKey(o.w)] = Object.assign({}, o, { t: now() - i, del: false }); });
     ls.set(K.words, words);
   }
+  /* Mặc định dùng kho chung. Máy nào trước đây có mã riêng (tự tạo) thì chuyển sang kho chung,
+     dữ liệu cũ của máy được gộp vào ở lần kéo đầu tiên (vì máy này có mục mới hơn → đẩy lên). */
   let code = ls.raw(K.code);
-  if (!validCode(code)) { code = newCode(); ls.rawSet(K.code, code); }
+  if (!(validCode(code) && ls.raw(K.custom) === '1')) { code = DEFAULT_CODE; ls.rawSet(K.code, code); }
 
   const listeners = new Set();
   const emit = what => listeners.forEach(fn => { try { fn(what); } catch (e) {} });
@@ -125,6 +129,8 @@
   /* ---------- API đồng bộ ---------- */
   const Sync = {
     db: SYNC_DB,
+    get isDefault() { return code === DEFAULT_CODE; },
+    useDefault() { ls.rawSet(K.custom, '0'); return this.join(DEFAULT_CODE); },
     get code() { return code; },
     get online() { return online; },
     get error() { return lastErr; },
@@ -155,12 +161,25 @@
       words[k] = Object.assign({}, words[k], { t: now(), del: true });
       ls.set(K.words, words); writeSavedArray(); queue('words/' + k, words[k]); emit('data');
     },
+    /* Xoá một từ khỏi màn hình sao băng ở mọi thiết bị (kể cả từ trong danh sách hằng ngày) */
+    hideWord(w) {
+      const k = wordKey(w);
+      words[k] = Object.assign({ w }, words[k] || {}, { t: now(), del: true, hide: true });
+      ls.set(K.words, words); writeSavedArray(); queue('words/' + k, words[k]); emit('data');
+    },
+    unhideWord(w, restore) {
+      const k = wordKey(w);
+      words[k] = restore ? Object.assign({}, restore, { t: now(), del: false, hide: false })
+                         : Object.assign({}, words[k] || { w }, { t: now(), del: true, hide: false });
+      ls.set(K.words, words); writeSavedArray(); queue('words/' + k, words[k]); emit('data');
+    },
+    isHidden(w) { const o = words[wordKey(w)]; return !!(o && o.hide); },
     /* Mã đồng bộ */
     async join(newC) {
       newC = String(newC || '').trim().toLowerCase();
       if (!validCode(newC)) return false;
       if (newC === code) { await pull(); return true; }
-      code = newC; ls.rawSet(K.code, code);
+      code = newC; ls.rawSet(K.code, code); ls.rawSet(K.custom, newC === DEFAULT_CODE ? '0' : '1');
       await pull();                           // gộp dữ liệu máy này vào mã mới
       return true;
     },
