@@ -92,7 +92,7 @@ body:not(.playing) .ctrl{opacity:.35}
 @media (orientation:landscape) and (max-height:500px){
   .card{padding:16px 18px 14px;width:min(640px,100%)}
   .card h1{font-size:24px}
-  .legend{grid-template-columns:repeat(4,1fr)}
+  .legend{grid-template-columns:repeat(5,1fr)}
   .big{min-height:46px;margin-top:12px}
   #fire{width:100px;height:100px}
   #stick{width:124px;height:124px}
@@ -120,6 +120,7 @@ body:not(.playing) .ctrl{opacity:.35}
     <div><b id="lgR">Ngón cái phải</b><br><span id="lgRt">giữ nút BẮN</span></div>
     <div><b style="color:var(--gold)">★ Vàng</b><br>từ bạn đã lưu → đạn tia laser</div>
     <div><b style="color:var(--violet)">◆ Tím</b><br>từ khó → đạn chùm 3 tia</div>
+    <div><b style="color:#ff8a6a">● Đá đen nhỏ</b><br>không bắn vỡ được, phải né</div>
   </div>
   <p id="wordInfo">Đang tải từ vựng…</p>
   <button class="big" id="startBtn">Bắt đầu</button>
@@ -176,7 +177,7 @@ function resize() {
   land = W > H;
   readSafe();
   stars = Array.from({ length: Math.round(W * H / 2600) }, () => ({ x: Math.random() * W, y: Math.random() * H, z: Math.random(), tw: Math.random() * 6 }));
-  if (G && wasLand !== land) { G.rocks = []; G.bullets = []; placeShip(); }   // xoay máy giữa lượt: dọn màn, chơi tiếp
+  if (G && wasLand !== land) { G.rocks = []; G.darks = []; G.bullets = []; placeShip(); }   // xoay máy giữa lượt: dọn màn, chơi tiếp
   if (G) clampShip();
 }
 addEventListener('resize', resize);
@@ -296,13 +297,13 @@ function keyAxis() {
 /* ---------- Trạng thái lượt chơi ---------- */
 let G = null;
 const WEAPONS = {
-  blaster: { name: 'Đạn thường', color: '#ffe9a8', rate: 0.14 },
+  blaster: { name: 'Đạn thường', color: '#ffe9a8', rate: 0.18 },
   spread:  { name: '◆ Đạn chùm 3 tia', color: '#c49bff', rate: 0.17, time: 12 },
   laser:   { name: '★ Tia laser xuyên', color: '#7fe7ff', rate: 0.075, time: 12 },
   twin:    { name: '⚡ Đạn đôi siêu nhanh', color: '#9dffb0', rate: 0.07, time: 10 },
 };
 function newGame() {
-  G = { state: 'play', t: 0, score: 0, lives: 3, level: 1, rocks: [], bullets: [], frags: [], sparks: [], pops: [], banners: [],
+  G = { state: 'play', t: 0, score: 0, lives: 3, level: 1, rocks: [], darks: [], darkT: 3, bullets: [], frags: [], sparks: [], pops: [], banners: [],
         weapon: 'blaster', wTime: 0, cool: 0, spawnT: 0.6, inv: 0, learned: [], nextId: 1, shotN: 0 };
   G.ship = { x: 0, y: 0, vx: 0, vy: 0, r: 16 * U, tilt: 0 };
   placeShip(); paintHud();
@@ -329,6 +330,31 @@ function labelLines(text, r) {
   }
   return { size, lines: best.lines };
 }
+/* Đá đen: nhỏ, đen sẫm, viền đỏ mờ cảnh báo; bay chéo nhẹ để buộc phải né */
+function spawnDark() {
+  const r = rand(9, 16) * U, sp = rand(55, 85) * U * (1 + (G.level - 1) * 0.07);
+  const ang = rand(-0.35, 0.35);
+  let x, y, vx, vy;
+  if (land) { x = W + r + 6; y = rand(safe.t + 50, H - safe.b - r); vx = -Math.cos(ang) * sp; vy = Math.sin(ang) * sp; }
+  else { x = rand(safe.l + r, W - safe.r - r); y = -r - 6; vx = Math.sin(ang) * sp; vy = Math.cos(ang) * sp; }
+  const n = 7 + Math.floor(Math.random() * 3), shape = [];
+  for (let i = 0; i < n; i++) shape.push({ a: i / n * Math.PI * 2 + rand(-0.15, 0.15), k: rand(0.75, 1.08) });
+  G.darks.push({ x, y, vx, vy, r, rot: rand(0, 6.3), vr: rand(-2, 2), shape, pulse: rand(0, 6), flash: 0 });
+}
+function drawDark(o) {
+  ctx.save(); ctx.translate(o.x, o.y);
+  ctx.shadowColor = `rgba(255,70,50,${0.45 + 0.25 * Math.sin(o.pulse)})`; ctx.shadowBlur = 12 * U;
+  ctx.beginPath();
+  o.shape.forEach((p, i) => { const px = Math.cos(p.a + o.rot) * o.r * p.k, py = Math.sin(p.a + o.rot) * o.r * p.k; i ? ctx.lineTo(px, py) : ctx.moveTo(px, py); });
+  ctx.closePath();
+  const g = ctx.createRadialGradient(-o.r * 0.3, -o.r * 0.3, o.r * 0.1, 0, 0, o.r);
+  g.addColorStop(0, '#3a3440'); g.addColorStop(1, '#0a080e');
+  ctx.fillStyle = g; ctx.fill();
+  ctx.shadowBlur = 0;
+  ctx.lineWidth = 1.4 * U; ctx.strokeStyle = `rgba(255,110,80,${0.55 + 0.25 * Math.sin(o.pulse)})`; ctx.stroke();
+  if (o.flash > 0) { o.flash -= 1 / 60; ctx.fillStyle = `rgba(255,160,120,${o.flash * 3})`; ctx.fill(); }
+  ctx.restore();
+}
 function spawnRock() {
   if (!WORDS.length) return;
   let it = nextWord();
@@ -342,9 +368,9 @@ function spawnRock() {
   const tw = Math.min(ctx.measureText(it.w).width, ctx.measureText(it.w).width * (/\s/.test(it.w) ? 0.62 : 1));
   const sizeRoll = Math.random();
   const r = clamp(tw / 2 + 14 * U, 26 * U, 66 * U) * (sizeRoll < 0.45 ? 1 : sizeRoll < 0.8 ? 1.22 : 1.45);
-  const hp = r < 36 * U ? 1 : r < 50 * U ? 2 : r < 64 * U ? 4 : r < 78 * U ? 6 : 8;
+  const hp = r < 36 * U ? 3 : r < 50 * U ? 5 : r < 64 * U ? 8 : r < 78 * U ? 11 : 14;   // cần nhiều phát: kịp đọc từ
   const L = labelLines(it.w, r);
-  const speed = (34 + Math.random() * 28) * U * (1 + (G.level - 1) * 0.09) * (r < 40 * U ? 1.25 : 1);
+  const speed = (20 + Math.random() * 14) * U * (1 + (G.level - 1) * 0.06) * (r < 40 * U ? 1.15 : 1);
   let x, y;
   for (let tries = 0; tries < 6; tries++) {
     if (land) { x = W + r + 8; y = rand(safe.t + 50 + r * 0.6, H - safe.b - r * 0.6); }
@@ -527,15 +553,29 @@ function update(dt) {
   if (G.weapon !== 'blaster') { G.wTime -= dt; if (G.wTime <= 0) { G.weapon = 'blaster'; banner('Hết đạn đặc biệt', '#a9b0de'); } }
   // Sinh thiên thạch
   G.spawnT -= dt;
-  const maxRocks = Math.min(4 + G.level, 10), every = Math.max(0.65, 1.7 - G.level * 0.12);
-  if (G.spawnT <= 0) { if (G.rocks.length < maxRocks) spawnRock(); G.spawnT = every * rand(0.7, 1.3); }
+  const maxRocks = Math.min(3 + G.level, 7), every = Math.max(1.5, 3 - G.level * 0.15);
+  if (G.spawnT <= 0) { if (G.rocks.length < maxRocks) spawnRock(); G.spawnT = every * rand(0.75, 1.25); }
+  // Đá đen: nhỏ, trôi nhanh hơn, không bắn vỡ được, chỉ né. Nhiều dần theo cấp
+  G.darkT -= dt;
+  const maxDark = Math.min(1 + G.level, 6), darkEvery = Math.max(1.6, 4.2 - G.level * 0.35);
+  if (G.darkT <= 0) { if (G.darks.length < maxDark) spawnDark(); G.darkT = darkEvery * rand(0.7, 1.3); }
+  G.darks.forEach(o => { o.x += o.vx * dt; o.y += o.vy * dt; o.rot += o.vr * dt; o.pulse += dt * 3; });
+  G.darks = G.darks.filter(o => o.x > -60 && o.x < W + 80 && o.y > -80 && o.y < H + 60);
   // Di chuyển
   G.rocks.forEach(o => { o.x += o.vx * dt; o.y += o.vy * dt; o.rot += o.vr * dt; if (o.flash > 0) o.flash -= dt; });
   G.rocks = G.rocks.filter(o => land ? o.x > -o.r - 20 : o.y < H + o.r + 20);
   G.bullets.forEach(b => { b.x += b.vx * dt; b.y += b.vy * dt; });
   G.bullets = G.bullets.filter(b => b.x > -40 && b.x < W + 40 && b.y > -40 && b.y < H + 40 && !b.dead);
+  // Đạn đụng đá đen: bị chặn lại (đá đen không vỡ)
+  for (const b of G.bullets) {
+    for (const o of G.darks) {
+      const rr = o.r + b.w;
+      if ((b.x - o.x) ** 2 + (b.y - o.y) ** 2 < rr * rr) { b.dead = true; o.flash = 0.12; burst(b.x, b.y, 3, '#ff8a6a', 90, 0.25); break; }
+    }
+  }
   // Đạn trúng thiên thạch
   for (const b of G.bullets) {
+    if (b.dead) continue;
     for (const o of G.rocks.slice()) {
       if (b.hit.has(o.id)) continue;
       const rr = o.r * 0.92 + b.w;
@@ -546,6 +586,17 @@ function update(dt) {
     }
   }
   G.bullets = G.bullets.filter(b => !b.dead);
+  // Đá đen đâm máy bay: mất mạng, đá đen vẫn trôi tiếp
+  if (G.inv <= 0) {
+    for (const o of G.darks) {
+      if (Math.hypot(o.x - s.x, o.y - s.y) < o.r * 0.9 + s.r * 0.7) {
+        G.lives--; G.inv = 2; sfx.hurt(); burst(s.x, s.y, 30, '#ff7a8a', 240, 0.8);
+        banner('Đâm phải đá đen! Đá đen chỉ né được', '#ff9a8a');
+        if (G.lives <= 0) { gameOver(); return; }
+        break;
+      }
+    }
+  }
   // Thiên thạch đâm máy bay
   if (G.inv <= 0) {
     for (const o of G.rocks) {
@@ -622,6 +673,7 @@ function draw(dt) {
   drawBg(dt);
   if (!G) return;
   G.rocks.forEach(drawRock);
+  G.darks.forEach(drawDark);
   // Mảnh vỡ
   G.frags.forEach(p => {
     const a = 1 - p.t / p.life;
