@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="vi" data-layout="phone">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Học video">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#f6f1e4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b0f2a" media="(prefers-color-scheme: dark)">
+<title>Học qua video</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&display=swap" rel="stylesheet">
+<script>
+/* Sáng/tối dùng chung với dashboard, TV, iPad: 'auto' theo giờ (6:00–18:00 sáng), 'day', 'night' */
+window.themePref = function(){
+  const q = new URLSearchParams(location.search).get('theme');
+  if (q === 'day' || q === 'night') return q;
+  try { const v = localStorage.getItem('tvv.theme'); if (v === 'day' || v === 'night') return v; } catch(e){}
+  return 'auto';
+};
+window.applyTheme = function(){
+  const pref = themePref(), h = new Date().getHours();
+  const day = pref === 'auto' ? (h >= 6 && h < 18) : pref === 'day';
+  document.documentElement.classList.toggle('day', day);
+  document.documentElement.classList.toggle('night', !day);
+};
+window.setThemePref = function(v){ try { localStorage.setItem('tvv.theme', v); } catch(e){} applyTheme(); };
+applyTheme(); setInterval(applyTheme, 60000);
+</script>
+<style>
+:root{
+  --bg:#f6f1e4; --surface:#fffdf7; --surface2:#f0eadb; --line:rgba(52,70,42,.13);
+  --ink:#26331f; --ink2:#5b6852; --ink3:#8b927e;
+  --accent:#4f7d45; --accent-ink:#fff; --accent-soft:rgba(79,125,69,.13);
+  --warm:#c06a1f; --warm-soft:rgba(192,106,31,.12); --ipa:#3c7486;
+  --shadow:0 6px 18px rgba(52,62,36,.12);
+  --head:'Fraunces',Georgia,serif; --body:'Be Vietnam Pro',system-ui,-apple-system,sans-serif;
+  --top:calc(52px + env(safe-area-inset-top));
+  --tabbar:calc(58px + env(safe-area-inset-bottom));
+  color-scheme:light;
+}
+:root.night{
+  --bg:#0b0f2a; --surface:#151b44; --surface2:#1d2456; --line:rgba(200,208,255,.13);
+  --ink:#eef0ff; --ink2:#a9b0de; --ink3:#747cb2;
+  --accent:#8fa2ff; --accent-ink:#0b0f2a; --accent-soft:rgba(143,162,255,.17);
+  --warm:#ffd36e; --warm-soft:rgba(255,211,110,.14); --ipa:#8fd0e0;
+  --shadow:0 6px 22px rgba(0,0,0,.4);
+  color-scheme:dark;
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html,body{background:var(--bg);color:var(--ink);font-family:var(--body);-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%}
+body{min-height:100dvh;padding-left:env(safe-area-inset-left);padding-right:env(safe-area-inset-right);overscroll-behavior-y:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;touch-action:manipulation}
+.hide{display:none!important}
+
+/* ---------- Thanh trên (tránh Dynamic Island) ---------- */
+.top{position:fixed;top:0;left:0;right:0;z-index:30;height:var(--top);padding:env(safe-area-inset-top) 12px 0;display:flex;align-items:center;gap:8px;
+  background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:saturate(1.4) blur(18px);-webkit-backdrop-filter:saturate(1.4) blur(18px);border-bottom:.5px solid var(--line)}
+.top h1{flex:1;min-width:0;font-family:var(--head);font-weight:800;font-size:21px;letter-spacing:-.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+body.watching .top h1{font-family:var(--body);font-weight:600;font-size:15px}
+.ib{flex:none;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--surface2);font-size:17px;font-weight:600}
+#backBtn{display:none;font-size:20px}
+body.watching #backBtn{display:grid}
+#syncBtn.off{box-shadow:inset 0 0 0 2px #e8643c}
+main,#savedView{padding-top:calc(var(--top) + 6px);padding-bottom:calc(var(--tabbar) + 18px)}
+
+/* ---------- Thanh tab dưới ---------- */
+.tabbar{position:fixed;left:0;right:0;bottom:0;z-index:30;height:var(--tabbar);padding:6px 16px env(safe-area-inset-bottom);display:flex;gap:8px;
+  background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(1.4) blur(18px);-webkit-backdrop-filter:saturate(1.4) blur(18px);border-top:.5px solid var(--line)}
+.tabbar button{flex:1;border-radius:14px;font-size:12px;font-weight:600;color:var(--ink3);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px}
+.tabbar button b{font-size:20px;line-height:1}
+.tabbar button.on{color:var(--accent);background:var(--accent-soft)}
+.savedCount:not(:empty){margin-left:4px;padding:0 6px;border-radius:9px;background:var(--warm);color:#fff;font-size:11px}
+body.watching .tabbar{display:none}
+
+/* ---------- Trang chủ ---------- */
+.row{margin:16px 0 2px}
+.row h2{font-family:var(--head);font-weight:700;font-size:19px;padding:0 16px;display:flex;align-items:baseline;gap:8px}
+.row h2 small{font-family:var(--body);font-weight:500;font-size:12.5px;color:var(--ink3)}
+.track{display:flex;gap:12px;overflow-x:auto;padding:10px 16px 6px;scroll-snap-type:x mandatory;scroll-padding:0 16px;scrollbar-width:none}
+.track::-webkit-scrollbar{display:none}
+.card{flex:0 0 min(70vw,272px);scroll-snap-align:start;text-align:left}
+.thumb{position:relative;aspect-ratio:16/9;border-radius:14px;overflow:hidden;background:var(--surface2);box-shadow:var(--shadow)}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.dur{position:absolute;right:7px;bottom:7px;background:rgba(10,12,20,.8);color:#fff;font-size:11.5px;font-weight:600;padding:2px 6px;border-radius:6px}
+.badge{position:absolute;left:7px;top:7px;background:var(--accent);color:var(--accent-ink);font-size:11.5px;font-weight:700;padding:2px 7px;border-radius:7px}
+.newb{position:absolute;right:7px;top:7px;background:#e8643c;color:#fff;font-size:10.5px;font-weight:800;letter-spacing:.04em;padding:2px 6px;border-radius:6px}
+.wl{position:absolute;left:7px;bottom:7px;background:rgba(10,12,20,.8);color:#fff;font-size:11.5px;font-weight:700;padding:2px 7px;border-radius:6px}
+.card.watched .thumb img{opacity:.45;filter:saturate(.6)}
+.card .t{margin-top:8px;font-weight:600;font-size:14.5px;line-height:1.33;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.card .c{margin-top:2px;font-size:12.5px;color:var(--ink3)}
+.card:active .thumb{transform:scale(.98)}
+.hist{margin:26px 16px 0;border-top:.5px solid var(--line)}
+.hist-head{display:flex;align-items:baseline;gap:8px;width:100%;padding:14px 0;text-align:left}
+.hist-head span{font-family:var(--head);font-weight:700;font-size:18px}
+.hist-head small{font-size:12.5px;color:var(--ink3)}
+.hist-head em{margin-left:auto;font-style:normal;font-weight:600;font-size:14px;color:var(--accent)}
+.hist .track{padding-left:0;padding-right:0;scroll-padding:0}
+.note{margin:18px 16px 0;color:var(--ink3);font-size:13px;line-height:1.5}
+
+/* ---------- Màn xem (dọc): video + phụ đề + nút ghim trên cùng, cụm từ cuộn bên dưới ---------- */
+.watch{padding:var(--top) 0 calc(24px + env(safe-area-inset-bottom))}
+.stage{position:sticky;top:var(--top);z-index:10;background:var(--bg);padding:8px 12px 8px;border-bottom:.5px solid var(--line)}
+.vbox{position:relative;aspect-ratio:16/9;border-radius:14px;overflow:hidden;background:#000}
+.vbox iframe,.vbox #yt{position:absolute;inset:0;width:100%;height:100%;border:0}
+/* Cắt khung YouTube: ẩn tiêu đề, nút, thanh thời gian (hình vẫn đầy khung 16:9) */
+#vbox #yt{top:-40%;bottom:auto;height:180%}
+.vbox .tap{position:absolute;inset:0;z-index:2;display:none}
+.vbox.started .tap{display:block}
+.vbox.started iframe{pointer-events:none}
+.cap{margin-top:8px;padding:7px 10px;border-radius:10px;background:var(--surface);border:.5px solid var(--line);
+  font-size:15px;line-height:1.35;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-height:36px}
+.cap:empty::before{content:"Phụ đề hiện ở đây";color:var(--ink3);font-size:13px}
+.cap mark,.quote mark{background:none;color:var(--warm);font-weight:700}
+.cap.off{display:none}
+.ctrls{display:flex;gap:5px;margin-top:8px}
+.ctrls button{flex:1 1 0;min-width:0;height:40px;border-radius:11px;background:var(--surface);border:.5px solid var(--line);font-weight:600;font-size:14.5px;white-space:nowrap}
+.ctrls button.main{flex:1.4 1 0;background:var(--accent);color:var(--accent-ink);border-color:transparent;font-size:15px}
+.ctrls button.on{background:var(--accent-soft);border-color:var(--accent);color:var(--accent)}
+.vtitle,.vsub,#detail{display:none}
+
+.side{padding:4px 12px 0}
+.lhead{display:flex;align-items:baseline;gap:8px;margin:12px 2px 6px}
+.lhead h3{font-family:var(--head);font-size:18px}
+.lhead span{font-size:12.5px;color:var(--ink3)}
+.lvl{font-size:11.5px;font-weight:700;color:var(--warm);border:1px solid var(--warm);border-radius:6px;padding:0 5px}
+.sum{margin:0 2px 10px;font-size:13.5px;line-height:1.5;color:var(--ink2);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.ph-wrap{margin-bottom:7px;border-radius:14px;background:var(--surface);border:.5px solid var(--line);overflow:hidden}
+.ph-wrap.open{border-color:var(--accent);box-shadow:0 0 0 1.5px var(--accent)}
+.ph{display:flex;align-items:center;gap:8px;width:100%;text-align:left;padding:11px 12px}
+.ph .tx{flex:1;min-width:0}
+.ph .p{font-weight:700;font-size:15.5px}
+.ph .m{font-size:13px;color:var(--ink2);margin-top:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ph-wrap.open .ph .m{white-space:normal}
+.ph .tm{font-size:12px;color:var(--ink3);font-weight:600;font-variant-numeric:tabular-nums}
+.ph .st{font-size:14px;color:var(--warm);width:14px;text-align:center}
+.ph.now .tm{color:var(--warm)}
+.ph.now .tm::before{content:"● "}
+.detail{padding:0 14px 14px}
+.d-top{display:flex;justify-content:space-between;font-size:11.5px;color:var(--ink3);font-weight:600}
+.d-top .live{color:var(--warm)}
+.d-row{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin-top:4px}
+.d-p{font-family:var(--head);font-weight:800;font-size:22px;line-height:1.15}
+.d-ipa{color:var(--ipa);font-size:14px}
+.d-m{font-size:15px;margin-top:4px;font-weight:500}
+.quote{margin-top:10px;padding:8px 10px;border-left:3px solid var(--warm);background:var(--warm-soft);border-radius:3px 10px 10px 3px;font-style:italic;font-size:14.5px;line-height:1.45}
+.d-u{margin-top:8px;font-size:13.5px;line-height:1.5;color:var(--ink2)}
+.d-ex{margin-top:8px;font-size:14px;line-height:1.45}
+.d-ex small{display:block;color:var(--ink2);font-size:13px;margin-top:2px}
+.d-act{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:6px;margin-top:12px}
+.d-act button{height:44px;border-radius:12px;background:var(--surface2);font-weight:600;font-size:14px}
+.d-act button.primary{background:var(--accent);color:var(--accent-ink)}
+.d-act button.saved{background:var(--warm-soft);color:var(--warm)}
+.empty{margin:12px;padding:18px;border-radius:14px;background:var(--surface);border:.5px dashed var(--line);color:var(--ink2);line-height:1.55;font-size:14.5px}
+
+/* ---------- Từ đã lưu ---------- */
+#savedView{padding-left:14px;padding-right:14px}
+.sw{background:var(--surface);border:.5px solid var(--line);border-radius:16px;padding:14px 15px;margin-bottom:10px;box-shadow:var(--shadow)}
+.sw .h{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.sw .w{font-family:var(--head);font-weight:800;font-size:20px}
+.sw .i{color:var(--ipa);font-size:13.5px}
+.sw .v{margin-top:3px;font-size:15px}
+.sw .e{margin-top:5px;font-size:14px;color:var(--ink2);font-style:italic}
+.sw .src{margin-top:7px;font-size:12px;color:var(--ink3)}
+.sw .a{display:flex;gap:6px;margin-top:10px;flex-wrap:wrap}
+.sw .a button{height:38px;padding:0 12px;border-radius:10px;background:var(--surface2);font-weight:600;font-size:13.5px}
+
+/* ---------- Bảng trượt ---------- */
+#sheet{position:fixed;inset:0;z-index:60;display:none}
+#sheet.show{display:block}
+.sheet-bg{position:absolute;inset:0;background:rgba(10,12,20,.45);animation:fade .2s}
+.sheet-card{position:absolute;left:0;right:0;bottom:0;max-height:90dvh;overflow:auto;background:var(--surface);border-radius:22px 22px 0 0;
+  padding:8px 18px calc(18px + env(safe-area-inset-bottom));box-shadow:0 -10px 40px rgba(0,0,0,.25);animation:up .25s ease}
+.grab{width:38px;height:5px;border-radius:3px;background:var(--line);margin:0 auto 12px}
+.sheet-card h3{font-family:var(--head);font-weight:800;font-size:20px;line-height:1.25}
+.sheet-card .sub{margin-top:5px;color:var(--ink2);font-size:14px;line-height:1.45}
+.sheet-acts{display:flex;flex-direction:column;gap:8px;margin-top:16px}
+.sheet-acts button{min-height:50px;border-radius:14px;background:var(--surface2);font-weight:600;font-size:15.5px;padding:6px 14px}
+.sheet-acts button.primary{background:var(--accent);color:var(--accent-ink)}
+.sync{display:flex;flex-direction:column;align-items:center;gap:14px;margin-top:14px}
+.sync .qr{width:176px;height:176px;padding:8px;border-radius:14px;background:#fff;display:grid;place-items:center}
+.sync .qr img,.sync .qr canvas{width:100%!important;height:auto!important}
+.sync-txt{font-size:14px;line-height:1.5;color:var(--ink2);width:100%}
+.sync-txt b{color:var(--ink)}
+.sync-txt .small{font-size:12px;margin-top:8px;word-break:break-all}
+.sync-txt code{font-size:11.5px;color:var(--ink)}
+.join{display:flex;gap:6px;margin-top:10px}
+.join input{flex:1;min-width:0;height:44px;border-radius:12px;border:.5px solid var(--line);background:var(--bg);color:var(--ink);padding:0 12px;font:inherit;font-size:16px}
+.join button{height:44px;padding:0 16px;border-radius:12px;background:var(--accent);color:var(--accent-ink);font-weight:600}
+@keyframes up{from{transform:translateY(40px);opacity:0}to{transform:none;opacity:1}}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+
+#toast{position:fixed;left:50%;bottom:calc(var(--tabbar) + 14px);transform:translate(-50%,16px);opacity:0;pointer-events:none;z-index:70;
+  background:var(--ink);color:var(--bg);padding:11px 16px;border-radius:12px;font-size:14px;font-weight:500;width:max-content;max-width:calc(100vw - 32px);transition:opacity .25s,transform .25s}
+body.watching #toast{bottom:calc(20px + env(safe-area-inset-bottom))}
+#toast.show{opacity:1;transform:translate(-50%,0)}
+
+/* ---------- iPhone nằm ngang: video trái, cụm từ phải ---------- */
+@media (orientation:landscape) and (max-height:500px){
+  :root{--top:calc(44px + env(safe-area-inset-top))}
+  body.watching{overflow:hidden}
+  .watch:not(.hide){display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:12px;height:100dvh;padding:var(--top) 8px 0}
+  .stage{position:static;border:0;padding:8px 0;display:flex;flex-direction:column;min-height:0}
+  .vbox{flex:1;min-height:0;aspect-ratio:auto}
+  .side{overflow:auto;-webkit-overflow-scrolling:touch;padding:8px 4px calc(10px + env(safe-area-inset-bottom))}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body data-view="videos">
+<header class="top">
+  <button class="ib" id="backBtn" aria-label="Quay lại">←</button>
+  <h1 id="title">Học qua video</h1>
+  <button class="ib" id="syncBtn" aria-label="Đồng bộ">⇅</button>
+  <button class="ib" id="themeBtn" aria-label="Đổi sáng/tối"></button>
+</header>
+
+<main id="home"></main>
+
+<section id="watch" class="watch hide">
+  <div class="stage">
+    <div class="vbox" id="vbox"><div id="yt"></div><button class="tap" id="tapLayer" aria-label="Phát / dừng"></button></div>
+    <div class="cap" id="cap"></div>
+    <div class="ctrls">
+      <button id="bBack" aria-label="Lùi 5 giây">⟲5</button>
+      <button class="main" id="bPlay" aria-label="Phát / dừng">▶</button>
+      <button id="bFwd" aria-label="Tới 10 giây">10⟳</button>
+      <button id="bSpeed" aria-label="Tốc độ">1×</button>
+      <button id="bCC" class="on" aria-label="Phụ đề">CC</button>
+      <button id="bDone" class="hide" aria-label="Đánh dấu đã xem">✓</button>
+      <button id="bArch" class="hide" aria-label="Lưu vào Lịch sử học">🗂</button>
+      <button id="bYT" aria-label="Mở trong app YouTube">YT↗</button>
+    </div>
+    <div class="vtitle" id="vTitle"></div>
+    <div class="vsub" id="vSub"></div>
+  </div>
+  <div id="detail"></div>
+  <div class="side" id="side"></div>
+</section>
+
+<section id="savedView" class="hide"></section>
+
+<nav class="tabbar" id="tabs">
+  <button data-tab="videos" class="on"><b>▶︎</b>Video</button>
+  <button data-tab="saved"><b>★</b><span>Từ đã lưu<span class="savedCount"></span></span></button>
+</nav>
+
+<div id="sheet"></div>
+<div id="toast"></div>
+
+<script src="learn-core.js"></script>
+<script src="learn-app.js"></script>
+</body>
+</html>

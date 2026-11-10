@@ -227,6 +227,48 @@ body.simple #player.panel #cap{font-size:1.5rem}
 .ph .p .star,.lw-p .star{color:#ffd36e;margin-left:.4rem;font-size:.85em}
 :root.day .ph .p .star,:root.day .lw-p .star{color:#c8742a}
 
+/* Cờ video: đã xem (mờ, xếp cuối hàng), mới thêm; thẻ mở Lịch sử học */
+.card.watched .thumb img{opacity:.42;filter:saturate(.6)}
+.wlabel{position:absolute;left:.5rem;bottom:.5rem;background:rgba(10,14,40,.85);color:#fff;font-size:.82rem;font-weight:700;padding:.15rem .55rem;border-radius:.35rem}
+.newb{position:absolute;right:.5rem;top:.5rem;background:#ff7a59;color:#fff;font-size:.78rem;font-weight:800;letter-spacing:.04em;padding:.12rem .5rem;border-radius:.35rem}
+.card.stub .thumb{display:grid;place-items:center;background:linear-gradient(135deg,rgba(143,162,255,.22),rgba(143,162,255,.06));border:.12rem dashed rgba(255,255,255,.25)}
+.card.stub .thumb b{font-size:3rem;line-height:1}
+.card.stub .thumb span{display:block;margin-top:.5rem;font-size:1rem;font-weight:600;color:var(--ink2)}
+.row.history h2{color:var(--ink2)}
+:root.day .wlabel{background:rgba(40,52,32,.85)}
+:root.day .card.stub .thumb{background:linear-gradient(135deg,rgba(79,125,69,.16),rgba(79,125,69,.05));border-color:rgba(60,80,50,.25)}
+
+/* Hộp hỏi đánh dấu khi thoát / hết video, và màn đồng bộ */
+#ask{position:absolute;inset:0;z-index:9;display:none;align-items:center;justify-content:center;background:rgba(6,9,32,.78)}
+#ask.show{display:flex}
+.askbox{max-width:64rem;padding:2.4rem 2.8rem;border-radius:1.4rem;background:var(--bg1);box-shadow:0 1.4rem 4rem rgba(0,0,0,.5);text-align:center}
+.askbox .lbl{color:var(--ink2);font-size:1.15rem}
+.askbox h3{font-family:var(--head);font-weight:800;font-size:2.2rem;line-height:1.15;margin:.5rem 0 1.6rem}
+.opts{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.opt{padding:1rem 1.8rem;border-radius:99rem;border:0;font-size:1.25rem;font-weight:600;background:rgba(255,255,255,.1);color:var(--ink);cursor:pointer}
+.opt.sel{background:#fff;color:#141846;box-shadow:0 0 0 .3rem var(--glow)}
+.askbox .foot{margin-top:1.4rem;color:var(--ink3);font-size:1rem}
+.endopts{margin-top:1.6rem}
+.endopts .opts{justify-content:flex-start}
+:root.day #ask{background:rgba(240,234,218,.85)}
+:root.day .askbox{background:var(--bg1)}
+:root.day .opt{background:rgba(60,80,50,.1)}
+:root.day .opt.sel{background:var(--accent);color:#fff}
+body.simple .opt{font-size:1.6rem}
+
+#syncbox{position:fixed;inset:0;z-index:40;display:none;align-items:center;justify-content:center;background:rgba(6,9,32,.86)}
+#syncbox.show{display:flex}
+.sbox{display:flex;gap:3rem;align-items:center;max-width:80rem;padding:2.6rem 3rem;border-radius:1.6rem;background:var(--bg1);box-shadow:0 1.4rem 4rem rgba(0,0,0,.5)}
+.sbox .qr{flex:none;width:17rem;height:17rem;padding:1rem;border-radius:1rem;background:#fff;display:grid;place-items:center}
+.sbox .qr img,.sbox .qr canvas{width:100%!important;height:auto!important}
+.sbox h3{font-family:var(--head);font-weight:800;font-size:2.2rem;letter-spacing:-.02em}
+.sbox ol{margin:1rem 0 0 1.3rem;font-size:1.15rem;line-height:1.6;color:var(--ink2)}
+.sbox .code{margin-top:1.1rem;font-family:ui-monospace,Menlo,monospace;font-size:1.05rem;color:var(--ink);word-break:break-all}
+.sbox .st{margin-top:.7rem;font-size:1rem;color:var(--ink3)}
+.sbox .st b{color:#7fe0b8}
+.sbox .st b.off{color:#ffb4a8}
+:root.day #syncbox{background:rgba(240,234,218,.9)}
+
 /* Huy hiệu "có cụm từ" trên thẻ video */
 .badge{position:absolute;left:.5rem;top:.5rem;background:rgba(255,211,110,.95);color:#2a1e00;font-size:.8rem;font-weight:700;padding:.12rem .5rem;border-radius:.35rem}
 body.simple .badge{font-size:1.05rem}
@@ -331,6 +373,7 @@ body.simple #toast{font-size:1.6rem}
     <div class="brand"><span class="moon"></span>Kênh nhà mình</div>
     <div class="hright">
       <div class="clock" id="clock"></div>
+      <button class="chip" id="syncChip">⇅ Đồng bộ</button>
       <button class="chip" id="chip"></button>
     </div>
   </header>
@@ -351,10 +394,13 @@ body.simple #toast{font-size:1.6rem}
   <div id="cap"></div>
   <div id="qmenu"></div>
   <div id="endcard"></div>
+  <div id="ask"></div>
 </section>
+<div id="syncbox"></div>
 
 <div id="toast"></div>
 
+<script src="learn-core.js"></script>
 <script>
 /* ===== Dữ liệu mẫu (sau này thay bằng JSON do GitHub Actions tạo) ===== */
 const V = (id, title, channel, dur) => ({ id, title, channel, dur });
@@ -371,32 +417,8 @@ const SHORT_FILMS = [
 const PROFILES = {
   me: {
     label:'Mình', initial:'A', cls:'me', simple:false,
-    desc:'Học tiếng Anh: du lịch, công nghệ, TED, khoa học',
+    desc:'Học tiếng Anh: du lịch, công nghệ, TED, tâm lý…',
     rows:[
-      { title:'Marketing & tư duy kinh doanh', items:[
-        V('qp0HIF3SfI4','How great leaders inspire action','TED','18:04'),
-        V('xBIVlM435Zg','How to get your ideas to spread','TED','17:01'),
-        V('rrkrvAUbU9Y','The puzzle of motivation','TED','18:36'),
-        V('Ks-_Mh1QhMc','Your body language may shape who you are','TED','21:02'),
-        V('arj7oStGLkU','Inside the mind of a master procrastinator','TED','14:03'),
-        V('iG9CE55wbtY','Do schools kill creativity?','TED','20:03'),
-      ]},
-      { title:'TED: luyện nghe', items:[
-        V('eIho2S0ZahI','How to speak so that people want to listen','TED','9:58'),
-        V('UNP03fDSj1U','Try something new for 30 days','TED','3:27'),
-        V('iCvmsMzlF7o','The power of vulnerability','TED','20:49'),
-        V('fLJsdqxnZb0','The happy secret to better work','TED','12:20'),
-        V('H14bBuluwB8','Grit: the power of passion and perseverance','TED','6:12'),
-        V('86x-u-tz0MA','Your elusive creative genius','TED','19:28'),
-      ]},
-      { title:'Khoa học dễ hiểu', items:[
-        V('h6fcK_fRYaI','The Egg – A Short Story','Kurzgesagt','7:55'),
-        V('zQGOcOUBi6s','The Immune System Explained','Kurzgesagt','6:48'),
-        V('JQVmkDUkZT4','What Are You?','Kurzgesagt','6:42'),
-        V('MBRqu0YOH14','Optimistic Nihilism','Kurzgesagt','6:11'),
-        V('UjtOGPJ0URM','Why Alien Life Would be our Doom','Kurzgesagt','9:44'),
-        V('n3Xv_g3g-mA','Loneliness','Kurzgesagt','7:00'),
-      ]},
       { title:'Phim ngắn cuối tuần', items: SHORT_FILMS },
     ]
   },
@@ -427,19 +449,30 @@ const PROFILES = {
 };
 const PKEYS = ['me','parents'];
 
-/* ===== Danh sách video tiếng Anh theo chủ đề (scripts/video_catalog.py tạo) ===== */
-const BASE_ME_ROWS = PROFILES.me.rows.slice();
-let PHR_INDEX = {};
+/* ===== Danh mục video tiếng Anh (scripts/video_daily.py tạo mỗi ngày) + cờ đồng bộ ===== */
+const LC = window.LearnCore, SYNC = LC.Sync;
+const BASE_ME_ROWS = PROFILES.me.rows.slice();   // Phim ngắn cuối tuần (không học từ)
+let CATALOG = null, PHR_INDEX = {};
 const getJSON = url => fetch(url, { cache:'no-store' }).then(r => r.ok ? r.json() : null).catch(() => null);
 const catalogReady = Promise.race([
   Promise.all([getJSON('video-data/catalog.json'), getJSON('video-data/phrases/index.json')]).then(([cat, idx]) => {
-    PHR_INDEX = idx || {};
-    const extra = ((cat && cat.rows) || []).filter(r => r.items && r.items.length)
-      .map(r => ({ title: r.title, items: r.items.map(v => V(v.id, v.title, v.channel, v.dur)) }));
-    PROFILES.me.rows = [...extra, ...BASE_ME_ROWS];
+    CATALOG = cat; PHR_INDEX = idx || {};
   }),
   new Promise(res => setTimeout(res, 3000)),
 ]);
+/* Hàng của hồ sơ Mình: Mới thêm → các chủ đề (chưa xem trước, đã xem cuối) → phim ngắn → Lịch sử học */
+function buildMeRows(){
+  const b = LC.buildRows(CATALOG || { videos:[] });
+  const out = b.rows.map(r => ({ id:r.id, title:r.title, items:r.items, isNewRow:r.isNewRow }));
+  out.push(...BASE_ME_ROWS);
+  S.history = b.history;
+  if (b.history.length){
+    const stub = { stub:true, id:'__hist', title: S.histOpen ? 'Thu gọn' : 'Mở lịch sử học', count: b.history.length };
+    out.push({ id:'history', title:'Lịch sử học', history:true, items: S.histOpen ? [stub, ...b.history] : [stub] });
+  }
+  PROFILES.me.rows = out;
+}
+const rowKey = row => row ? (row.id || row.title) : '';
 
 /* ===== Tiện ích ===== */
 const $ = s => document.querySelector(s);
@@ -458,7 +491,7 @@ function toast(msg, ms=2600){
   clearTimeout(toastT); toastT = setTimeout(() => el.classList.remove('show'), ms);
 }
 
-const S = { screen:'profile', pIdx:0, profile:null, row:0, cols:[], header:false, play:null, end:false, endTimer:null, endNext:null, errors:0 };
+const S = { screen:'profile', pIdx:0, profile:null, row:0, cols:[], header:false, hIdx:1, play:null, end:false, endTimer:null, endNext:null, errors:0, history:[], histOpen:false, ask:null, sync:false };
 const rows = () => PROFILES[S.profile].rows;
 
 function show(id){
@@ -499,20 +532,47 @@ function profileKey(k){
 
 /* ===== Màn hình chính ===== */
 function cardHTML(v, r, c){
-  return `<div class="card${v.blocked?' blocked':''}" data-r="${r}" data-c="${c}">
-    <div class="thumb"><img loading="lazy" src="${thumbUrl(v.id)}" alt="" onerror="this.parentNode.classList.add('noimg');this.remove()"><span class="dur">${esc(v.dur)}</span>${PHR_INDEX[v.id] ? `<span class="badge">Aa ${PHR_INDEX[v.id].n}</span>` : ''}</div>
+  if (v.stub) return `<div class="card stub" data-r="${r}" data-c="${c}" data-id="${v.id}">
+    <div class="thumb"><div><b>${S.histOpen ? '▴' : '🗂'}</b><span>${S.histOpen ? 'Thu gọn lịch sử' : `${v.count} video đã lưu`}</span></div></div>
+    <div class="meta"><div class="t">${esc(v.title)}</div><div class="c">${S.histOpen ? 'OK để ẩn' : 'OK để xem lại'}</div></div></div>`;
+  const n = v.n || (PHR_INDEX[v.id] && PHR_INDEX[v.id].n);
+  const flag = v.id ? SYNC.flag(v.id) : '';
+  return `<div class="card${v.blocked?' blocked':''}${flag === 'watched' ? ' watched' : ''}" data-r="${r}" data-c="${c}" data-id="${esc(v.id)}">
+    <div class="thumb"><img loading="lazy" src="${thumbUrl(v.id)}" alt="" onerror="this.parentNode.classList.add('noimg');this.remove()"><span class="dur">${esc(v.dur)}</span>${n ? `<span class="badge">Aa ${n}</span>` : ''}${v.isNew && !flag ? '<span class="newb">MỚI</span>' : ''}${flag === 'watched' ? '<span class="wlabel">✓ Đã xem</span>' : flag === 'archived' ? '<span class="wlabel">🗂 Lịch sử</span>' : ''}</div>
     <div class="meta"><div class="t">${esc(v.title)}</div><div class="c">${esc(v.channel)}</div></div>
   </div>`;
 }
-function renderHome(){
+function renderHome(keep = false){
   const p = PROFILES[S.profile];
+  // Nhớ hàng + video đang chọn để giữ nguyên chỗ khi danh sách sắp xếp lại
+  const prev = keep ? rows().map((r, i) => ({ key: rowKey(r), id: (r.items[S.cols[i]] || {}).id, col: S.cols[i] || 0 })) : null;
+  const prevRow = keep ? rowKey(rows()[S.row]) : null;
+  if (S.profile === 'me') buildMeRows();
   $('#chip').innerHTML = `<span class="av ${p.cls}">${p.initial}</span><span>${p.label}<em>Đổi hồ sơ</em></span>`;
+  $('#syncChip').style.display = S.profile === 'me' ? '' : 'none';
   $('#rowsInner').innerHTML = p.rows.map((row,r) =>
-    `<section class="row"><h2>${esc(row.title)}<span>${row.items.length} video</span></h2>
+    `<section class="row${row.history ? ' history' : ''}"><h2>${esc(row.title)}<span>${row.history ? `${S.history.length} video` : `${row.items.length} video`}</span></h2>
      <div class="track-wrap"><div class="track">${row.items.map((v,c) => cardHTML(v,r,c)).join('')}</div></div></section>`
   ).join('');
-  S.row = 0; S.cols = p.rows.map(() => 0); S.header = false;
-  $('#rowsInner').style.transform = 'translateY(0)';
+  if (keep && prev){
+    S.cols = p.rows.map(row => {
+      const old = prev.find(x => x.key === rowKey(row)); if (!old) return 0;
+      const i = row.items.findIndex(v => v.id === old.id);
+      return i >= 0 ? i : Math.min(old.col, row.items.length - 1);
+    });
+    const ri = p.rows.findIndex(r => rowKey(r) === prevRow);
+    S.row = ri >= 0 ? ri : Math.min(S.row, p.rows.length - 1);
+  } else {
+    S.row = 0; S.cols = p.rows.map(() => 0); S.header = false;
+    $('#rowsInner').style.transform = 'translateY(0)';
+  }
+}
+function toggleHistory(){
+  S.histOpen = !S.histOpen;
+  renderHome(true);
+  const hi = rows().findIndex(r => r.history);
+  if (hi >= 0){ S.row = hi; S.cols[hi] = S.histOpen && rows()[hi].items.length > 1 ? 1 : 0; }
+  updateFocus();
 }
 function rowEls(){ return document.querySelectorAll('#rowsInner .row'); }
 
@@ -520,7 +580,8 @@ function updateFocus(scroll = true){
   document.querySelectorAll('#home .focused').forEach(e => e.classList.remove('focused'));
   const inner = $('#rowsInner');
   if (S.header){
-    $('#chip').classList.add('focused');
+    const hb = S.profile === 'me' ? ['#syncChip','#chip'] : ['#chip'];
+    $(hb[Math.min(S.hIdx, hb.length - 1)]).classList.add('focused');
     if (scroll) inner.style.transform = 'translateY(0)';
     return;
   }
@@ -550,12 +611,15 @@ function updateFocus(scroll = true){
 function homeKey(k){
   const rs = rows();
   if (S.header){
+    const two = S.profile === 'me';
     if (k === 'down') S.header = false;
+    else if ((k === 'left' || k === 'right') && two) S.hIdx = k === 'left' ? 0 : 1;
+    else if (k === 'ok' && two && S.hIdx === 0){ openSync(); return; }
     else if (k === 'ok' || k === 'back'){ goProfiles(); return; }
     updateFocus(); return;
   }
   const c = S.cols[S.row];
-  if (k === 'up'){ if (S.row === 0) S.header = true; else S.row--; }
+  if (k === 'up'){ if (S.row === 0){ S.header = true; S.hIdx = 1; } else S.row--; }
   else if (k === 'down'){ if (S.row < rs.length - 1) S.row++; }
   else if (k === 'left'){ if (c > 0) S.cols[S.row]--; }
   else if (k === 'right'){ if (c < rs[S.row].items.length - 1) S.cols[S.row]++; }
@@ -581,18 +645,30 @@ window.onYouTubeIframeAPIReady = () => {
   document.head.appendChild(s);
 })();
 
-function cur(){ return S.play ? rows()[S.play.r].items[S.play.c] : null; }
-function nextIdx(r, c){
-  const items = rows()[r].items;
-  for (let i = c + 1; i < items.length; i++) if (!items[i].blocked) return i;
+function cur(){ return S.play ? S.play.v : null; }
+function playRow(){ return S.play ? (rows().find(r => rowKey(r) === S.play.rowKey) || rows()[S.play.r]) : null; }
+/* Video kế tiếp trong cùng hàng: bỏ qua video lỗi, đã xem, đã lưu trữ */
+function nextVideo(){
+  const row = playRow(); if (!row) return null;
+  const items = row.items, i = items.findIndex(x => x.id === S.play.v.id);
+  for (let j = i + 1; j < items.length; j++){
+    const x = items[j];
+    if (!x.stub && !x.blocked && !SYNC.flag(x.id)) return x;
+  }
   return null;
 }
+const isLearn = v => !!(v && v.row && S.profile === 'me');   // video trong danh mục học (có cờ đồng bộ)
 
 function play(r, c){
   const v = rows()[r].items[c];
+  if (v.stub){ toggleHistory(); return; }
+  S.cols[r] = c;
+  playV(r, v);
+}
+function playV(r, v){
   if (v.blocked){ toast('Video này không phát được trên TV, hãy chọn video khác'); return; }
-  clearEnd();
-  S.play = { r, c }; S.row = r; S.cols[r] = c; S.ccApplied = false;
+  clearEnd(); closeAsk();
+  S.play = { r, v, rowKey: rowKey(rows()[r]) }; S.row = r; S.ccApplied = false;
   S.phr = null; S.sel = 0; S.nowIdx = -1; S.cap = null; S.capIdx = -1; $('#cap').textContent = ''; closeMenu();
   loadCaptions(v.id).then(c => { const now = cur(); if (now && now.id === v.id) S.cap = c; });
   show('player');
@@ -645,31 +721,88 @@ function onErr(e){
   const v = cur(); if (!v) return;
   const code = e.data;
   v.blocked = true;
-  const card = document.querySelector(`.card[data-r="${S.play.r}"][data-c="${S.play.c}"]`);
-  if (card) card.classList.add('blocked');
+  document.querySelectorAll(`.card[data-id="${v.id}"]`).forEach(card => card.classList.add('blocked'));
   const msg = (code === 101 || code === 150) ? 'Kênh này không cho phát video trên trang khác. Đang chuyển sang video tiếp theo.'
             : code === 100 ? 'Video không còn trên YouTube. Đang chuyển sang video tiếp theo.'
             : 'Video này không phát được. Đang chuyển sang video tiếp theo.';
   toast(msg, 2400);
   S.errors++;
-  const { r, c } = S.play;
   setTimeout(() => {
     if (S.screen !== 'player') return;
-    const n = nextIdx(r, c);
-    if (n !== null && S.errors < 5) play(r, n);
+    const n = nextVideo();
+    if (n && S.errors < 5) playV(S.play.r, n);
     else { closePlayer(); toast('Không còn video phát được trong hàng này'); }
   }, 1800);
 }
 
 function closePlayer(){
-  clearEnd(); closeMenu(); closePanel(false);
+  clearEnd(); closeMenu(); closePanel(false); closeAsk();
   if (player){ try { player.destroy(); } catch(e){} player = null; }   // giải phóng RAM cho TV
   $('#ytWrap').innerHTML = '';
   pendingId = null;
   if (document.fullscreenElement) document.exitFullscreen().catch(() => {});
   show('home');
+  renderHome(true);   // cờ đã xem / lưu trữ vừa đổi → sắp xếp lại hàng
   requestAnimationFrame(() => updateFocus());
 }
+
+/* ===== Đánh dấu video: đã xem / Lịch sử học (đồng bộ mọi thiết bị) ===== */
+function setFlag(v, s, note = true){
+  if (!v || !v.id) return;
+  SYNC.setFlag(v.id, s);
+  if (note) toast(s === 'watched' ? '✓ Đã đánh dấu đã xem. Video xuống cuối hàng.'
+               : s === 'archived' ? '🗂 Đã lưu vào Lịch sử học (cuối trang).' : 'Đã bỏ đánh dấu.', 2600);
+}
+/* Bấm Back khi đang xem: nếu đã xem khá nhiều mà chưa đánh dấu thì hỏi */
+function requestClose(){
+  const v = cur();
+  const { t, d } = progress();
+  if (isLearn(v) && !SYNC.flag(v.id) && (t >= 180 || (d && t / d >= 0.5))){
+    showAsk('Bạn xem xong video này chưa?', v.title, [
+      { label:'✓ Đã xem', act:() => { setFlag(v, 'watched'); closePlayer(); } },
+      { label:'🗂 Lưu vào lịch sử học', act:() => { setFlag(v, 'archived'); closePlayer(); } },
+      { label:'Chưa, để sau', act:() => closePlayer() },
+    ], d && t / d >= 0.85 ? 0 : 2, () => closePlayer());
+    return;
+  }
+  closePlayer();
+}
+function showAsk(lbl, title, opts, sel, onBack){
+  S.ask = { opts, sel, onBack };
+  try { player.pauseVideo(); } catch(e){}
+  $('#ask').innerHTML = `<div class="askbox"><div class="lbl">${esc(lbl)}</div><h3>${esc(title)}</h3>
+    <div class="opts">${opts.map((o, i) => `<button class="opt${i === sel ? ' sel' : ''}" data-i="${i}">${esc(o.label)}</button>`).join('')}</div>
+    <div class="foot">◀ ▶ chọn · OK xác nhận · Back: thoát không đánh dấu</div></div>`;
+  $('#ask').classList.add('show');
+}
+function closeAsk(){ S.ask = null; const a = $('#ask'); if (a) a.classList.remove('show'); }
+function askKey(k){
+  const A = S.ask, n = A.opts.length;
+  if (k === 'left'){ A.sel = (A.sel + n - 1) % n; }
+  else if (k === 'right'){ A.sel = (A.sel + 1) % n; }
+  else if (k === 'ok'){ const o = A.opts[A.sel]; closeAsk(); o.act(); return; }
+  else if (k === 'back'){ const f = A.onBack; closeAsk(); f && f(); return; }
+  document.querySelectorAll('#ask .opt').forEach((b, i) => b.classList.toggle('sel', i === A.sel));
+}
+
+/* ===== Màn đồng bộ: mã QR để iPhone/iPad dùng chung cờ và từ đã lưu ===== */
+function openSync(){
+  S.sync = true;
+  const link = SYNC.joinLink('iphone.html');
+  const age = SYNC.lastPull ? Math.round((Date.now() - SYNC.lastPull) / 60000) : null;
+  $('#syncbox').innerHTML = `<div class="sbox"><div class="qr" id="qr"></div><div>
+    <h3>Đồng bộ TV · iPad · iPhone</h3>
+    <ol><li>Mở Camera trên iPhone hoặc iPad, quét mã bên trái.</li>
+        <li>Bấm vào link hiện ra: máy đó sẽ dùng chung danh sách <b>đã xem</b>, <b>Lịch sử học</b> và <b>từ đã lưu</b> với TV.</li>
+        <li>Đánh dấu ở máy nào, máy khác cập nhật sau khoảng 1 phút.</li></ol>
+    <div class="code">Mã đồng bộ: ${esc(SYNC.code)}</div>
+    <div class="st">Trạng thái: ${SYNC.online ? '<b>đã kết nối</b>' : '<b class="off">chưa kết nối</b>'}${age !== null ? ` · cập nhật ${age < 1 ? 'vừa xong' : age + ' phút trước'}` : ''}</div>
+    <div class="st">Back hoặc OK để đóng</div></div></div>`;
+  $('#syncbox').classList.add('show');
+  LC.qr($('#qr'), link, 300);
+  SYNC.pull();
+}
+function closeSync(){ S.sync = false; $('#syncbox').classList.remove('show'); }
 
 function progress(){
   try { return { t: player.getCurrentTime() || 0, d: player.getDuration() || 0 }; }
@@ -800,47 +933,76 @@ function toggleFullscreen(){
   else if (el.requestFullscreen) el.requestFullscreen().catch(() => {});
 }
 
-/* Màn hình hết video: tự phát video kế trong cùng hàng, không có gợi ý ngoài danh sách */
+/* Màn hình hết video. Video học: hỏi đánh dấu (tự chọn "Đã xem, xem tiếp" sau 15 giây).
+   Video khác: tự phát video kế trong cùng hàng. */
 function showEnd(){
   clearEnd(); closeMenu();
-  const { r, c } = S.play;
-  const row = rows()[r];
-  const n = nextIdx(r, c);
+  const v = cur(), row = playRow(), next = nextVideo();
   const el = $('#endcard');
-  if (n === null){
-    el.innerHTML = `<div class="endbox"><div class="endinfo"><div class="lbl">Bạn đã xem hết hàng</div><h3>${esc(row.title)}</h3>
+  const nextBox = next ? `<div class="endthumb"><div class="thumb"><img src="${thumbUrl(next.id)}" alt=""><span class="dur">${esc(next.dur)}</span></div></div>` : '';
+  let s = isLearn(v) ? 15 : 10;
+  if (isLearn(v)){
+    const opts = [
+      { label: next ? '✓ Đã xem, xem tiếp' : '✓ Đã xem', act: () => { setFlag(v, 'watched'); next ? playV(S.play.r, next) : closePlayer(); } },
+      { label: next ? 'Chưa đánh dấu, xem tiếp' : 'Để sau', act: () => { next ? playV(S.play.r, next) : closePlayer(); } },
+      { label: '🗂 Lưu vào lịch sử học', act: () => { setFlag(v, 'archived'); closePlayer(); } },
+    ];
+    S.endOpts = opts; S.endSel = 0;
+    el.innerHTML = `<div class="endbox">${nextBox}
+      <div class="endinfo"><div class="lbl">Xem xong: ${esc(v.title)}</div>
+        <h3>${next ? esc(next.title) : 'Bạn đã xem hết hàng ' + esc(row ? row.title : '')}</h3>${next ? `<div class="ch">Tiếp theo · ${esc(next.channel)}</div>` : ''}
+        <div class="endopts"><div class="opts">${opts.map((o, i) => `<button class="opt${i === 0 ? ' sel' : ''}" data-i="${i}">${esc(o.label)}</button>`).join('')}</div></div>
+        <div class="cnt">Tự chọn “${esc(opts[0].label)}” sau <b id="cd">${s}</b> giây · ◀ ▶ chọn · Back: về danh sách</div>
+      </div></div>`;
+    S.endTimer = setInterval(() => {
+      s--; const cd = $('#cd'); if (cd) cd.textContent = s;
+      if (s <= 0){ clearInterval(S.endTimer); opts[0].act(); }
+    }, 1000);
+  } else if (!next){
+    S.endOpts = null;
+    el.innerHTML = `<div class="endbox"><div class="endinfo"><div class="lbl">Bạn đã xem hết hàng</div><h3>${esc(row ? row.title : '')}</h3>
       <div class="btns"><button class="btn primary" data-act="back">Back: Về danh sách</button></div></div></div>`;
   } else {
-    const v = row.items[n]; let s = 10;
-    el.innerHTML = `<div class="endbox">
-      <div class="endthumb"><div class="thumb"><img src="${thumbUrl(v.id)}" alt=""><span class="dur">${esc(v.dur)}</span></div></div>
-      <div class="endinfo"><div class="lbl">Tiếp theo trong ${esc(row.title)}</div><h3>${esc(v.title)}</h3><div class="ch">${esc(v.channel)}</div>
+    S.endOpts = null;
+    el.innerHTML = `<div class="endbox">${nextBox}
+      <div class="endinfo"><div class="lbl">Tiếp theo trong ${esc(row.title)}</div><h3>${esc(next.title)}</h3><div class="ch">${esc(next.channel)}</div>
         <div class="cnt">Tự phát sau <b id="cd">${s}</b> giây</div>
         <div class="btns"><button class="btn primary" data-act="next">OK: Xem ngay</button><button class="btn" data-act="back">Back: Về danh sách</button></div>
       </div></div>`;
-    S.endNext = n;
+    S.endNext = next;
     S.endTimer = setInterval(() => {
       s--; const cd = $('#cd'); if (cd) cd.textContent = s;
-      if (s <= 0) play(r, n);
+      if (s <= 0) playV(S.play.r, next);
     }, 1000);
   }
   el.classList.add('show'); S.end = true;
 }
 function clearEnd(){
-  clearInterval(S.endTimer); S.endTimer = null; S.end = false; S.endNext = null;
+  clearInterval(S.endTimer); S.endTimer = null; S.end = false; S.endNext = null; S.endOpts = null;
   $('#endcard').classList.remove('show');
 }
 
 function playerKey(k){
+  if (S.ask){ askKey(k); return; }
   if (S.end){
-    if (k === 'ok' && S.endNext !== null) play(S.play.r, S.endNext);
+    if (S.endOpts){
+      const n = S.endOpts.length;
+      if (k === 'left' || k === 'right'){
+        clearInterval(S.endTimer); const cd = $('#endcard .cnt'); if (cd) cd.textContent = '◀ ▶ chọn · OK xác nhận · Back: về danh sách';
+        S.endSel = (S.endSel + (k === 'left' ? n - 1 : 1)) % n;
+        document.querySelectorAll('#endcard .opt').forEach((b, i) => b.classList.toggle('sel', i === S.endSel));
+      } else if (k === 'ok'){ const o = S.endOpts[S.endSel]; clearEnd(); o.act(); }
+      else if (k === 'back') closePlayer();
+      return;
+    }
+    if (k === 'ok' && S.endNext) playV(S.play.r, S.endNext);
     else if (k === 'back' || k === 'ok') closePlayer();
     return;
   }
   if (S.menu){ menuKey(k); return; }
   if (S.panel){ panelKey(k); return; }
   switch (k){
-    case 'back': closePlayer(); break;
+    case 'back': requestClose(); break;
     case 'ok': case 'playpause': togglePlay(); break;
     case 'left': seek(-10); break;
     case 'right': seek(10); break;
@@ -987,25 +1149,20 @@ function closePanel(remember = true){
   if (remember) store.set('tvv.learn.' + S.profile, '0');
   $('#player').classList.remove('panel');
 }
-/* Lưu cụm từ vào kho chung: dashboard sao băng đọc cùng localStorage (cùng địa chỉ trang) */
-const SAVED_KEY = 'meteor-saved-v1';
-function savedList(){ try { const l = JSON.parse(localStorage.getItem(SAVED_KEY) || '[]'); return Array.isArray(l) ? l : []; } catch(e){ return []; } }
-const isSaved = w => savedList().some(o => (o.w || '').toLowerCase() === String(w).toLowerCase());
+/* Lưu cụm từ vào kho chung (đồng bộ mọi thiết bị; dashboard sao băng đọc cùng kho) */
+const isSaved = w => SYNC.isSaved(w);
 function toggleSave(i){
   const p = S.phr && S.phr.phrases[i]; if (!p) return;
-  let l = savedList();
-  const key = p.phrase.toLowerCase();
-  if (l.some(o => (o.w || '').toLowerCase() === key)){
-    l = l.filter(o => (o.w || '').toLowerCase() !== key);
+  if (SYNC.isSaved(p.phrase)){
+    SYNC.removeWord(p.phrase);
     toast(`Đã bỏ lưu “${p.phrase}”`);
   } else {
     const v = cur();
-    l.unshift({ w: p.phrase, ipa: p.ipa || '', pos: 'từ video', vi: p.meaning_vi || '', ex: p.example_en || p.quote || '',
-                col: p.quote ? [p.quote.length > 60 ? p.quote.slice(0, 57) + '…' : p.quote] : [],
-                saved: true, added: new Date().toISOString().slice(0, 10), src: { id: v && v.id, t: p.t, title: v && v.title } });
+    SYNC.saveWord({ w: p.phrase, ipa: p.ipa || '', pos: 'từ video', vi: p.meaning_vi || '', ex: p.example_en || p.quote || '',
+                    col: p.quote ? [p.quote.length > 60 ? p.quote.slice(0, 57) + '…' : p.quote] : [],
+                    src: { id: v && v.id, t: p.t, title: v && v.title } });
     toast(`★ Đã lưu “${p.phrase}”. Từ này sẽ bay trên màn hình sao băng.`, 3200);
   }
-  try { localStorage.setItem(SAVED_KEY, JSON.stringify(l)); } catch(e){ toast('Không lưu được trên thiết bị này'); }
   const keep = S.sel; renderPanel(); selectPhrase(keep, false);
 }
 
@@ -1059,9 +1216,14 @@ function nextSpeed(){
 /* ===== Menu nhanh (▼): tốc độ, phụ đề, chất lượng ===== */
 let menuT;
 function menuItems(){
+  const v = cur(), f = isLearn(v) ? SYNC.flag(v.id) : null;
   return [
     { key:'speed', label:`Tốc độ ${String(speedGet()).replace('.', ',')}×`, sub:'OK để đổi' },
     { key:'cc', label:CC_LABEL[ccGet()], sub:'OK để đổi' },
+    ...(f === null ? [] : [
+      { key:'watched', label: f === 'watched' ? '✓ Đã xem' : 'Đánh dấu đã xem', sub: f === 'watched' ? 'OK để bỏ' : 'Xếp cuối hàng' },
+      { key:'archive', label: f === 'archived' ? '🗂 Đang ở Lịch sử học' : '🗂 Lưu lịch sử học', sub: f === 'archived' ? 'OK để bỏ' : 'Cất xuống cuối trang' },
+    ]),
     { key:'quality', label:qualityLabel(), sub:'Chất lượng (YouTube tự chọn)', info:true },
   ];
 }
@@ -1076,6 +1238,8 @@ function menuAct(i){
   const it = menuItems()[i];
   if (it.key === 'speed') nextSpeed();
   else if (it.key === 'cc'){ cycleCC(); setTimeout(() => S.menu && renderMenu(), 900); }
+  else if (it.key === 'watched'){ const v = cur(); setFlag(v, SYNC.flag(v.id) === 'watched' ? '' : 'watched'); }
+  else if (it.key === 'archive'){ const v = cur(); setFlag(v, SYNC.flag(v.id) === 'archived' ? '' : 'archived'); }
   renderMenu(); bumpMenuTimer();
 }
 function menuKey(k){
@@ -1103,6 +1267,7 @@ function keyName(e){
 let lastBack = 0;
 function dispatch(k){
   if (k === 'back'){ const now = Date.now(); if (now - lastBack < 300) return; lastBack = now; }
+  if (S.sync){ if (k === 'back' || k === 'ok') closeSync(); return; }
   if (S.screen === 'profile') profileKey(k);
   else if (S.screen === 'home') homeKey(k);
   else if (S.screen === 'player') playerKey(k);
@@ -1117,6 +1282,9 @@ window.addEventListener('blur', () => { if (S.screen === 'player') refocus(); })
 $('#profiles').addEventListener('click', e => { const p = e.target.closest('.pcard'); if (p) enterProfile(PKEYS[+p.dataset.i]); });
 $('#profiles').addEventListener('mouseover', e => { const p = e.target.closest('.pcard'); if (p){ S.pIdx = +p.dataset.i; focusProfile(); } });
 $('#chip').addEventListener('click', goProfiles);
+$('#syncChip').addEventListener('click', openSync);
+$('#syncbox').addEventListener('click', closeSync);
+$('#ask').addEventListener('click', e => { const b = e.target.closest('.opt'); if (b && S.ask){ S.ask.sel = +b.dataset.i; askKey('ok'); } });
 $('#rowsInner').addEventListener('click', e => { const c = e.target.closest('.card'); if (c) play(+c.dataset.r, +c.dataset.c); });
 $('#rowsInner').addEventListener('mouseover', e => {
   const c = e.target.closest('.card'); if (!c) return;
@@ -1130,12 +1298,14 @@ $('#home').addEventListener('wheel', e => {
   if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) homeKey(e.deltaX > 0 ? 'right' : 'left');
   else homeKey(e.deltaY > 0 ? 'down' : 'up');
 }, { passive:false });
-$('#pBack').addEventListener('click', closePlayer);
+$('#pBack').addEventListener('click', requestClose);
 $('#panel').addEventListener('click', e => { const p = e.target.closest('.ph'); if (p){ selectPhrase(+p.dataset.i); playPhrase(+p.dataset.i); } });
 $('#qmenu').addEventListener('click', e => { const q = e.target.closest('.qi'); if (q){ S.msel = +q.dataset.i; menuAct(S.msel); } });
 $('#endcard').addEventListener('click', e => {
+  const o = e.target.closest('.opt');
+  if (o && S.endOpts){ const f = S.endOpts[+o.dataset.i]; clearEnd(); f.act(); return; }
   const b = e.target.closest('[data-act]'); if (!b) return;
-  if (b.dataset.act === 'next' && S.endNext !== null) play(S.play.r, S.endNext); else closePlayer();
+  if (b.dataset.act === 'next' && S.endNext) playV(S.play.r, S.endNext); else closePlayer();
 });
 window.addEventListener('resize', () => { if (S.screen === 'home') updateFocus(); });
 
@@ -1149,6 +1319,13 @@ function tick(){
 tick(); setInterval(tick, 15000);
 
 renderProfiles(); show('profile');
+
+/* Đồng bộ: kéo cờ + từ đã lưu từ máy chủ mỗi ~45 giây; danh sách tự sắp xếp lại khi có thay đổi */
+SYNC.consumeParam().then(ok => { if (ok) toast('Đã nối đồng bộ với các thiết bị khác'); });
+SYNC.on(what => {
+  if (what === 'data' && S.screen === 'home' && S.profile === 'me' && !S.sync){ renderHome(true); updateFocus(false); }
+});
+SYNC.start();
 </script>
 </body>
 </html>

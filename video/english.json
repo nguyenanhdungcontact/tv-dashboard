@@ -1,12 +1,5 @@
 {
-  "_ghi_chu": "Danh sách video tiếng Anh. 'videos' là video chọn tay (hàng TED). 'topics' là các hàng tự cập nhật: mỗi lần chạy scripts/run_local.sh, script lấy video mới của các kênh, chỉ giữ video nhúng được, có phụ đề tiếng Anh, dài trong khoảng cho phép (lọc luôn Shorts). Thêm kênh: ghi handle (không có @) và mã kênh UC... (mở trang kênh, xem 'Chia sẻ kênh' > 'Sao chép mã kênh'). Thứ tự hàng: dễ trước, khó sau.",
-  "settings": {
-    "per_row": 10,
-    "min_minutes": 8,
-    "max_minutes": 25,
-    "max_age_days": 730,
-    "checks_per_topic": 6
-  },
+  "_ghi_chu": "Video chọn tay để soạn cụm từ khi chạy scripts/video_phrases.py. Nguồn video tự động mỗi ngày nằm ở video/sources.json; danh mục video nằm ở docs/video-data/catalog.json (chỉ thêm, không xoá).",
   "videos": [
     "eIho2S0ZahI",
     "UNP03fDSj1U",
@@ -14,89 +7,5 @@
     "fLJsdqxnZb0",
     "H14bBuluwB8",
     "86x-u-tz0MA"
-  ],
-  "topics": [
-    {
-      "key": "travel",
-      "title": "Du lịch, văn hoá & kiến trúc",
-      "channels": {
-        "RickStevesEurope": "UCJ7FVLKSOlpTNbuyvqOjPqw",
-        "KaraandNate": "UC4ijq8Cg-8zQKx8OH12dUSw",
-        "LostLeBlanc": "UCt_NLJ4McJlCyYM-dSPRo7Q",
-        "drewbinsky": "UC0Ize0RLIbGdH5x4wI45G-A",
-        "claire_holt12": "UCy8iEj62cZ6h9yMuWVypI1A",
-        "joshuapaine": "UCl8WDfJr27ZngCfWXwS3LOQ",
-        "GeographyNow": "UCmmPgObSUPw1HL2lq6H4ffA",
-        "TheB1M": "UC6n8I1UDTKP1IWjQMg6_TwA"
-      }
-    },
-    {
-      "key": "life",
-      "title": "Vlog & sống chậm",
-      "channels": {
-        "nathanieldrew": "UCrdWRLq10OHuy7HmSckV3Vg",
-        "mattdavella": "UCJ24N4O0bP7LGLBDvye7oCA",
-        "nobackupplan": "UCZbOmMsPgxuWmj5pGymAOnA",
-        "havenotats": "UCdARRyTPX1Y-IAG2Ojp6HgA",
-        "joshczuba": "UCKZdVJU8cEBceM3lUAFJTpg",
-        "_jared": "UC2Kyj04yISmHr1V-UlJz4eg"
-      }
-    },
-    {
-      "key": "tech",
-      "title": "Công nghệ, Apple & AI",
-      "channels": {
-        "ChrisLawley": "UC8raOG7HXJoCUygx219fU4A",
-        "HTXStudio": "UCwffSP9kO8pMZVr1Ugqvbzw",
-        "thesamuelnam": "UCovagaiL6pBYWfvThaXVniA",
-        "OliurOnline": "UCKvaSxHH11xccltyc8IFXjA",
-        "theryanthomas": "UCNorHyg3UZYJq5jJY9ZSt-w",
-        "gawxboi": "UCE8rti_AqMxKeNtd8qWU-Cg",
-        "WaveformClips": "UCc_ycus0q7DSd85ZkmEY5ig",
-        "JerryRigEverything": "UCWFKCr40YwOZQx8FHU_ZqqQ",
-        "enricotartarotti": "UCuQT7Vc3OjjZuGkqehNxb6w"
-      }
-    },
-    {
-      "key": "learn",
-      "title": "Năng suất & cách học",
-      "channels": {
-        "aliabdaal": "UCoOae5nYA7VqaXzerajD0lg",
-        "JeffSu": "UCwAnu01qlnVg1Ai2AbtTMaA",
-        "ThomasFrankExplains": "UCd_WBvzBg1UbHE8j8MIL5Ng",
-        "JustinSung": "UC2Zs9v2hL2qZZ7vsAENsg4w"
-      }
-    },
-    {
-      "key": "talk",
-      "title": "Giao tiếp & tâm lý",
-      "channels": {
-        "askvinh": "UC9K9Wnz6t4cLnCdTzAVrXqQ",
-        "DoctorRamani": "UC9Qixc77KhCo88E5muxUjmA",
-        "Psych2go": "UCkJEpR7JmS36tajD34Gp4VA",
-        "chasehughesofficial": "UCUBj_5pwQZaoXfBrEQQbADw"
-      }
-    },
-    {
-      "key": "biz",
-      "title": "Kinh doanh & làm creator",
-      "channels": {
-        "TheRossHarkness": "UCCKLNC83b571kYbaizPOs_w",
-        "harshibar": "UCsp_z4KR3dOczXw7Q-SPqQg"
-      }
-    },
-    {
-      "key": "world",
-      "title": "Thế giới & khoa học (nói nhanh)",
-      "min_minutes": 5,
-      "channels": {
-        "johnnyharris": "UCmGSJVG3mCRXVOP4yZrU1Dw",
-        "Vox": "UCLXo7UDZvByw2ixzpQCufnA",
-        "kurzgesagt": "UCsXVk37bltHxD1rDPwtNM8Q",
-        "TomScottGo": "UCBa659QWEk1AI4Tg--mrJ2A",
-        "Wendoverproductions": "UC9RM-iSvTu1uPJb8X5yp3EQ",
-        "BrightSunFilms": "UC5k3Kc0avyDJ2nG9Kxm9JmQ"
-      }
-    }
   ]
 }

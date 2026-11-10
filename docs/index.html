@@ -25,6 +25,7 @@ window.applyTheme = function(){
 window.setThemePref = function(v){ try { localStorage.setItem('tvv.theme', v); } catch(e){} applyTheme(); };
 applyTheme(); setInterval(applyTheme, 60000);
 </script>
+<script src="learn-core.js"></script>
 <style>
   :root {
     --space-deep: #141d4a;
@@ -793,6 +794,15 @@ Chỉ dựa trên thông tin ở trên và kiến thức chung. Không bịa th�
       remoteWords = list.filter(o => o && o.w);
       if (!hasCustomWords) { words = withSaved(remoteWords); bag = []; }
     } catch (e) { /* offline or not hosted: keep current list */ }
+  }
+  /* Từ lưu ở TV/iPad/iPhone được đồng bộ qua learn-core.js: khi có thay đổi thì nạp lại danh sách */
+  if (window.LearnCore) {
+    LearnCore.Sync.on(what => {
+      if (what !== "data") return;
+      words = (!hasCustomWords && remoteWords) ? withSaved(remoteWords) : loadWords();
+      bag = [];
+    });
+    LearnCore.Sync.start();
   }
   let bag = [];
   function nextWord() {

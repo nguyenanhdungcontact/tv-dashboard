@@ -1,8 +1,10 @@
-name: Video phrases (YouTube captions)
+name: Video daily (new videos + phrases)
 
 on:
   schedule:
-    - cron: "0 21 * * *"   # 4:00 sáng giờ Việt Nam
+    # 4:00 sáng giờ VN. YouTube thường chặn lấy phụ đề từ máy chủ GitHub; khi đó máy Mac
+    # (scripts/install_daily_mac.sh, 6:30 sáng) sẽ làm phần còn lại.
+    - cron: "0 21 * * *"
   workflow_dispatch:
 
 permissions:
@@ -34,26 +36,27 @@ jobs:
           key: transcripts-${{ github.run_id }}
           restore-keys: transcripts-
 
-      - name: Lấy phụ đề YouTube, AI soạn cụm từ
+      - name: Tìm video mới, lấy phụ đề, soạn cụm từ
         env:
           AI_PROVIDER: ${{ vars.AI_PROVIDER }}
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           CLAUDE_MODEL: ${{ vars.CLAUDE_MODEL }}
-        run: python -u scripts/video_phrases.py
+        run: python -u scripts/video_daily.py
 
       - name: Lưu kết quả vào repo
         if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/video-data
+          git add docs/video-data video/state.json
           if git diff --cached --quiet; then
             echo "Không có gì mới."
             exit 0
           fi
-          git commit -m "Cập nhật cụm từ video $(date -u +%Y-%m-%d)"
+          git commit -m "Video mới và cụm từ $(date -u +%Y-%m-%d)"
           for i in 1 2 3; do
             git pull --rebase && git push && exit 0
             sleep 10

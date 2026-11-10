@@ -1,191 +1,468 @@
 {
- "updated": "2026-11-09",
+ "updated": "2026-11-10",
  "rows": [
   {
-   "key": "travel",
-   "title": "Du lịch, văn hoá & kiến trúc",
-   "items": [
-    {
-     "id": "cZhn_FwFpnI",
-     "title": "Places That Exist Outside Their Own Governments",
-     "channel": "Geography Now",
-     "dur": "24:52",
-     "published": "2026-11-09",
-     "captions": "auto"
-    },
-    {
-     "id": "zEgrugE_eq8",
-     "title": "This US City May Need to be Completely Evacuated",
-     "channel": "The B1M",
-     "dur": "17:23",
-     "published": "2026-11-04",
-     "captions": "manual"
-    },
-    {
-     "id": "Pybe5h1DB5w",
-     "title": "London's New Supertall Skyscraper is Coming",
-     "channel": "The B1M",
-     "dur": "19:14",
-     "published": "2026-11-03",
-     "captions": "manual"
-    },
-    {
-     "id": "cYhGqtQELd0",
-     "title": "Hong Kong Is Building an $8BN Groundscraper",
-     "channel": "The B1M",
-     "dur": "10:32",
-     "published": "2026-10-30",
-     "captions": "manual"
-    },
-    {
-     "id": "Ws-YNxTdZJQ",
-     "title": "Turkey's $25BN Nuclear Megaproject Built By Russia",
-     "channel": "The B1M",
-     "dur": "14:06",
-     "published": "2026-10-26",
-     "captions": "manual"
-    },
-    {
-     "id": "MtReULe2bMQ",
-     "title": "Geography Now!",
-     "channel": "Geography Now",
-     "dur": "11:01",
-     "published": "2026-10-24",
-     "captions": "auto"
-    },
-    {
-     "id": "m4KcYvHn3Mo",
-     "title": "i quit my job and went to ho chi minh city vietnam",
-     "channel": "Claire Holt",
-     "dur": "23:22",
-     "published": "2026-10-23",
-     "captions": "auto"
-    },
-    {
-     "id": "hTPCXNGbUZw",
-     "title": "i quit my job and went to ninh binh vietnam",
-     "channel": "Claire Holt",
-     "dur": "23:44",
-     "published": "2026-10-17",
-     "captions": "auto"
-    },
-    {
-     "id": "ZHBB8Go0e_k",
-     "title": "the art of summer",
-     "channel": "Joshua Paine",
-     "dur": "12:33",
-     "published": "2026-10-11",
-     "captions": "auto"
-    },
-    {
-     "id": "FmykXVUsPdw",
-     "title": "Entering The World's Narrowest Island (Philippines)",
-     "channel": "Drew Binsky",
-     "dur": "24:36",
-     "published": "2026-09-19",
-     "captions": "manual"
-    }
-   ]
+   "id": "travel",
+   "title": "Du lịch, văn hoá & kiến trúc"
   },
   {
-   "key": "life",
-   "title": "Vlog & sống chậm",
-   "items": [
-    {
-     "id": "iMmhGfFiXEM",
-     "title": "i had a quarter life crisis and went freelance",
-     "channel": "tatsuki",
-     "dur": "20:51",
-     "published": "2026-11-08",
-     "captions": "auto"
-    },
-    {
-     "id": "0q50D19lHuQ",
-     "title": "How to learn creative writing and heal your brain rot",
-     "channel": "Josh Czuba",
-     "dur": "17:35",
-     "published": "2026-11-05",
-     "captions": "auto"
-    },
-    {
-     "id": "XrZ4Vozni3o",
-     "title": "They sold us a lie (and it’s still working)",
-     "channel": "Matt D'Avella",
-     "dur": "19:53",
-     "published": "2026-10-31",
-     "captions": "auto"
-    },
-    {
-     "id": "h0VepbvDyV0",
-     "title": "no, I'm sorry, I refuse.",
-     "channel": "No Backup Plan – Nathaniel Drew",
-     "dur": "17:02",
-     "published": "2026-10-27",
-     "captions": "auto"
-    },
-    {
-     "id": "Hd4KWd7tgwo",
-     "title": "I wrote a book, and I can finally talk about it.",
-     "channel": "Jared Henderson",
-     "dur": "14:11",
-     "published": "2026-10-23",
-     "captions": "auto"
-    },
-    {
-     "id": "0y9CyrU2o3M",
-     "title": "A professional stylist rebuilt my minimalist wardrobe",
-     "channel": "Matt D'Avella",
-     "dur": "18:08",
-     "published": "2026-09-27",
-     "captions": "auto"
-    },
-    {
-     "id": "hAQDznajvvc",
-     "title": "I moved into a tiny flat (seriously).",
-     "channel": "Nathaniel Drew",
-     "dur": "13:33",
-     "published": "2026-08-22",
-     "captions": "auto"
-    },
-    {
-     "id": "XVLNqM4-0-U",
-     "title": "I'm selling my house.",
-     "channel": "Nathaniel Drew",
-     "dur": "22:12",
-     "published": "2026-07-31",
-     "captions": "auto"
-    }
-   ]
+   "id": "tech",
+   "title": "Công nghệ, Apple & AI"
   },
   {
-   "key": "tech",
-   "title": "Công nghệ, Apple & AI",
-   "items": [
-    {
-     "id": "Fbe8ujdXxFk",
-     "title": "I Can't Go Back to a MacBook Without Touch",
-     "channel": "Christopher Lawley",
-     "dur": "18:53",
-     "published": "2026-11-05",
-     "captions": "manual"
-    },
-    {
-     "id": "qMepRe7YbeM",
-     "title": "A Touchscreen… But Why? New MacBook Review",
-     "channel": "HTX Studio",
-     "dur": "17:11",
-     "published": "2026-11-05",
-     "captions": "manual"
-    },
-    {
-     "id": "2jF3i4fuznY",
-     "title": "iPhone Duo after a week.. one of us is returning it",
-     "channel": "Samuel Nam",
-     "dur": "16:42",
-     "published": "2026-11-03",
-     "captions": "auto"
-    }
-   ]
+   "id": "learn",
+   "title": "Năng suất & cách học"
+  },
+  {
+   "id": "life",
+   "title": "Vlog & sống chậm"
+  },
+  {
+   "id": "talk",
+   "title": "Giao tiếp & tâm lý"
+  },
+  {
+   "id": "ted",
+   "title": "TED: luyện nghe"
+  },
+  {
+   "id": "world",
+   "title": "Thế giới & khoa học (nói nhanh)"
+  },
+  {
+   "id": "biz",
+   "title": "Kinh doanh, marketing & creator"
+  }
+ ],
+ "videos": [
+  {
+   "id": "cZhn_FwFpnI",
+   "row": "travel",
+   "title": "Places That Exist Outside Their Own Governments",
+   "channel": "Geography Now",
+   "dur": "24:52",
+   "added": "2026-11-08",
+   "published": "2026-11-09",
+   "n": 12,
+   "level": "C1"
+  },
+  {
+   "id": "zEgrugE_eq8",
+   "row": "travel",
+   "title": "This US City May Need to be Completely Evacuated",
+   "channel": "The B1M",
+   "dur": "17:23",
+   "added": "2026-11-08",
+   "published": "2026-11-04",
+   "n": 12,
+   "level": "C1"
+  },
+  {
+   "id": "Pybe5h1DB5w",
+   "row": "travel",
+   "title": "London's New Supertall Skyscraper is Coming",
+   "channel": "The B1M",
+   "dur": "19:14",
+   "added": "2026-11-08",
+   "published": "2026-11-03",
+   "n": 11,
+   "level": "C1"
+  },
+  {
+   "id": "cYhGqtQELd0",
+   "row": "travel",
+   "title": "Hong Kong Is Building an $8BN Groundscraper",
+   "channel": "The B1M",
+   "dur": "10:32",
+   "added": "2026-11-08",
+   "published": "2026-10-30",
+   "n": 10,
+   "level": "C1"
+  },
+  {
+   "id": "Ws-YNxTdZJQ",
+   "row": "travel",
+   "title": "Turkey's $25BN Nuclear Megaproject Built By Russia",
+   "channel": "The B1M",
+   "dur": "14:06",
+   "added": "2026-11-08",
+   "published": "2026-10-26",
+   "n": 9,
+   "level": "C1"
+  },
+  {
+   "id": "MtReULe2bMQ",
+   "row": "travel",
+   "title": "Geography Now!",
+   "channel": "Geography Now",
+   "dur": "11:01",
+   "added": "2026-11-08",
+   "published": "2026-10-24",
+   "n": 11,
+   "level": "B2"
+  },
+  {
+   "id": "m4KcYvHn3Mo",
+   "row": "travel",
+   "title": "i quit my job and went to ho chi minh city vietnam",
+   "channel": "Claire Holt",
+   "dur": "23:22",
+   "added": "2026-11-08",
+   "published": "2026-10-23",
+   "n": 12,
+   "level": "B2"
+  },
+  {
+   "id": "hTPCXNGbUZw",
+   "row": "travel",
+   "title": "i quit my job and went to ninh binh vietnam",
+   "channel": "Claire Holt",
+   "dur": "23:44",
+   "added": "2026-11-08",
+   "published": "2026-10-17",
+   "n": 12,
+   "level": "C1"
+  },
+  {
+   "id": "ZHBB8Go0e_k",
+   "row": "travel",
+   "title": "the art of summer",
+   "channel": "Joshua Paine",
+   "dur": "12:33",
+   "added": "2026-11-08",
+   "published": "2026-10-11",
+   "n": 11,
+   "level": "C1"
+  },
+  {
+   "id": "FmykXVUsPdw",
+   "row": "travel",
+   "title": "Entering The World's Narrowest Island (Philippines)",
+   "channel": "Drew Binsky",
+   "dur": "24:36",
+   "added": "2026-11-08",
+   "published": "2026-09-19",
+   "n": 12,
+   "level": "B2"
+  },
+  {
+   "id": "iMmhGfFiXEM",
+   "row": "life",
+   "title": "i had a quarter life crisis and went freelance",
+   "channel": "tatsuki",
+   "dur": "20:51",
+   "added": "2026-11-08",
+   "published": "2026-11-08",
+   "n": 12,
+   "level": "B2"
+  },
+  {
+   "id": "0q50D19lHuQ",
+   "row": "life",
+   "title": "How to learn creative writing and heal your brain rot",
+   "channel": "Josh Czuba",
+   "dur": "17:35",
+   "added": "2026-11-08",
+   "published": "2026-11-05",
+   "n": 12,
+   "level": "C1"
+  },
+  {
+   "id": "XrZ4Vozni3o",
+   "row": "life",
+   "title": "They sold us a lie (and it’s still working)",
+   "channel": "Matt D'Avella",
+   "dur": "19:53",
+   "added": "2026-11-08",
+   "published": "2026-10-31",
+   "n": 11,
+   "level": "C1"
+  },
+  {
+   "id": "h0VepbvDyV0",
+   "row": "life",
+   "title": "no, I'm sorry, I refuse.",
+   "channel": "No Backup Plan – Nathaniel Drew",
+   "dur": "17:02",
+   "added": "2026-11-08",
+   "published": "2026-10-27",
+   "n": 12,
+   "level": "C1"
+  },
+  {
+   "id": "Hd4KWd7tgwo",
+   "row": "life",
+   "title": "I wrote a book, and I can finally talk about it.",
+   "channel": "Jared Henderson",
+   "dur": "14:11",
+   "added": "2026-11-08",
+   "published": "2026-10-23",
+   "n": 12,
+   "level": "B2"
+  },
+  {
+   "id": "0y9CyrU2o3M",
+   "row": "life",
+   "title": "A professional stylist rebuilt my minimalist wardrobe",
+   "channel": "Matt D'Avella",
+   "dur": "18:08",
+   "added": "2026-11-08",
+   "published": "2026-09-27",
+   "n": 11,
+   "level": "B2"
+  },
+  {
+   "id": "hAQDznajvvc",
+   "row": "life",
+   "title": "I moved into a tiny flat (seriously).",
+   "channel": "Nathaniel Drew",
+   "dur": "13:33",
+   "added": "2026-11-08",
+   "published": "2026-08-22",
+   "n": 11,
+   "level": "C1"
+  },
+  {
+   "id": "XVLNqM4-0-U",
+   "row": "life",
+   "title": "I'm selling my house.",
+   "channel": "Nathaniel Drew",
+   "dur": "22:12",
+   "added": "2026-11-08",
+   "published": "2026-07-31",
+   "n": 0,
+   "level": ""
+  },
+  {
+   "id": "Fbe8ujdXxFk",
+   "row": "tech",
+   "title": "I Can't Go Back to a MacBook Without Touch",
+   "channel": "Christopher Lawley",
+   "dur": "18:53",
+   "added": "2026-11-08",
+   "published": "2026-11-05",
+   "n": 10,
+   "level": "C1"
+  },
+  {
+   "id": "qMepRe7YbeM",
+   "row": "tech",
+   "title": "A Touchscreen… But Why? New MacBook Review",
+   "channel": "HTX Studio",
+   "dur": "17:11",
+   "added": "2026-11-08",
+   "published": "2026-11-05",
+   "n": 12,
+   "level": "C1"
+  },
+  {
+   "id": "2jF3i4fuznY",
+   "row": "tech",
+   "title": "iPhone Duo after a week.. one of us is returning it",
+   "channel": "Samuel Nam",
+   "dur": "16:42",
+   "added": "2026-11-08",
+   "published": "2026-11-03",
+   "n": 11,
+   "level": "C1"
+  },
+  {
+   "id": "eIho2S0ZahI",
+   "row": "ted",
+   "title": "How to speak so that people want to listen",
+   "channel": "TED",
+   "dur": "9:58",
+   "added": "2026-11-01",
+   "published": "",
+   "n": 13,
+   "level": "B2"
+  },
+  {
+   "id": "UNP03fDSj1U",
+   "row": "ted",
+   "title": "Try something new for 30 days",
+   "channel": "TED",
+   "dur": "3:27",
+   "added": "2026-11-01",
+   "published": "",
+   "n": 12,
+   "level": "B2"
+  },
+  {
+   "id": "iCvmsMzlF7o",
+   "row": "ted",
+   "title": "The power of vulnerability",
+   "channel": "TED",
+   "dur": "20:49",
+   "added": "2026-11-01",
+   "published": "",
+   "n": 12,
+   "level": "B2"
+  },
+  {
+   "id": "fLJsdqxnZb0",
+   "row": "ted",
+   "title": "The happy secret to better work",
+   "channel": "TED",
+   "dur": "12:20",
+   "added": "2026-11-01",
+   "published": "",
+   "n": 10,
+   "level": "C1"
+  },
+  {
+   "id": "H14bBuluwB8",
+   "row": "ted",
+   "title": "Grit: the power of passion and perseverance",
+   "channel": "TED",
+   "dur": "6:12",
+   "added": "2026-11-01",
+   "published": "",
+   "n": 11,
+   "level": "B2"
+  },
+  {
+   "id": "86x-u-tz0MA",
+   "row": "ted",
+   "title": "Your elusive creative genius",
+   "channel": "TED",
+   "dur": "19:28",
+   "added": "2026-11-01",
+   "published": "",
+   "n": 12,
+   "level": "B2"
+  },
+  {
+   "id": "qp0HIF3SfI4",
+   "row": "biz",
+   "title": "How great leaders inspire action",
+   "channel": "TED",
+   "dur": "18:04",
+   "added": "2026-11-01",
+   "published": "",
+   "n": 0,
+   "level": ""
+  },
+  {
+   "id": "xBIVlM435Zg",
+   "row": "biz",
+   "title": "How to get your ideas to spread",
+   "channel": "TED",
+   "dur": "17:01",
+   "added": "2026-11-01",
+   "published": "",
+   "n": 0,
+   "level": ""
+  },
+  {
+   "id": "rrkrvAUbU9Y",
+   "row": "biz",
+   "title": "The puzzle of motivation",
+   "channel": "TED",
+   "dur": "18:36",
+   "added": "2026-11-01",
+   "published": "",
+   "n": 0,
+   "level": ""
+  },
+  {
+   "id": "Ks-_Mh1QhMc",
+   "row": "biz",
+   "title": "Your body language may shape who you are",
+   "channel": "TED",
+   "dur": "21:02",
+   "added": "2026-11-01",
+   "published": "",
+   "n": 0,
+   "level": ""
+  },
+  {
+   "id": "arj7oStGLkU",
+   "row": "biz",
+   "title": "Inside the mind of a master procrastinator",
+   "channel": "TED",
+   "dur": "14:03",
+   "added": "2026-11-01",
+   "published": "",
+   "n": 0,
+   "level": ""
+  },
+  {
+   "id": "iG9CE55wbtY",
+   "row": "biz",
+   "title": "Do schools kill creativity?",
+   "channel": "TED",
+   "dur": "20:03",
+   "added": "2026-11-01",
+   "published": "",
+   "n": 0,
+   "level": ""
+  },
+  {
+   "id": "h6fcK_fRYaI",
+   "row": "world",
+   "title": "The Egg – A Short Story",
+   "channel": "Kurzgesagt",
+   "dur": "7:55",
+   "added": "2026-11-01",
+   "published": "",
+   "n": 0,
+   "level": ""
+  },
+  {
+   "id": "zQGOcOUBi6s",
+   "row": "world",
+   "title": "The Immune System Explained",
+   "channel": "Kurzgesagt",
+   "dur": "6:48",
+   "added": "2026-11-01",
+   "published": "",
+   "n": 0,
+   "level": ""
+  },
+  {
+   "id": "JQVmkDUkZT4",
+   "row": "world",
+   "title": "What Are You?",
+   "channel": "Kurzgesagt",
+   "dur": "6:42",
+   "added": "2026-11-01",
+   "published": "",
+   "n": 0,
+   "level": ""
+  },
+  {
+   "id": "MBRqu0YOH14",
+   "row": "world",
+   "title": "Optimistic Nihilism",
+   "channel": "Kurzgesagt",
+   "dur": "6:11",
+   "added": "2026-11-01",
+   "published": "",
+   "n": 0,
+   "level": ""
+  },
+  {
+   "id": "UjtOGPJ0URM",
+   "row": "world",
+   "title": "Why Alien Life Would be our Doom",
+   "channel": "Kurzgesagt",
+   "dur": "9:44",
+   "added": "2026-11-01",
+   "published": "",
+   "n": 0,
+   "level": ""
+  },
+  {
+   "id": "n3Xv_g3g-mA",
+   "row": "world",
+   "title": "Loneliness",
+   "channel": "Kurzgesagt",
+   "dur": "7:00",
+   "added": "2026-11-01",
+   "published": "",
+   "n": 0,
+   "level": ""
   }
  ]
 }

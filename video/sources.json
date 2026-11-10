@@ -1,0 +1,149 @@
+{
+  "_huong_dan": "Nguồn video cho scripts/video_daily.py. Mỗi 'row' là một chủ đề (một hàng trên màn hình), hàng đứng trước hiện trước. channels: {handle: mã kênh UC...} (mở trang kênh > Chia sẻ kênh > Sao chép mã kênh). queries: cụm từ tìm kiếm tiếng Anh, mỗi ngày xoay vòng vài cụm (mỗi lần tìm tốn 100/10.000 đơn vị hạn mức YouTube). weight: hàng có số lớn hơn được nhận nhiều video mới hơn mỗi ngày. Video không bao giờ bị xoá khỏi danh mục.",
+  "target_per_day": 12,
+  "max_transcript_tries": 40,
+  "max_searches_per_day": 6,
+  "backfill_per_run": 4,
+  "min_minutes": 6,
+  "max_minutes": 25,
+  "search_recent_days": 180,
+  "uploads_per_channel": 12,
+  "rows": [
+    {
+      "id": "travel",
+      "title": "Du lịch, văn hoá & kiến trúc",
+      "weight": 3,
+      "channels": {
+        "drewbinsky": "UC0Ize0RLIbGdH5x4wI45G-A",
+        "KaraandNate": "UC4ijq8Cg-8zQKx8OH12dUSw",
+        "LostLeBlanc": "UCt_NLJ4McJlCyYM-dSPRo7Q",
+        "MarkWiens": "UCyEd6QBSgat5kkC6svyjudA",
+        "claire_holt12": "UCy8iEj62cZ6h9yMuWVypI1A",
+        "joshuapaine": "UCl8WDfJr27ZngCfWXwS3LOQ",
+        "GeographyNow": "UCmmPgObSUPw1HL2lq6H4ffA",
+        "TheB1M": "UC6n8I1UDTKP1IWjQMg6_TwA"
+      },
+      "queries": [
+        "city history and architecture travel documentary",
+        "things to know before you visit travel guide",
+        "Japan culture explained travel",
+        "Europe old town history walking tour explained",
+        "Southeast Asia travel culture food explained",
+        "famous building architecture explained",
+        "country geography explained"
+      ]
+    },
+    {
+      "id": "tech",
+      "title": "Công nghệ, Apple & AI",
+      "weight": 2,
+      "channels": {
+        "ChrisLawley": "UC8raOG7HXJoCUygx219fU4A",
+        "HTXStudio": "UCwffSP9kO8pMZVr1Ugqvbzw",
+        "thesamuelnam": "UCovagaiL6pBYWfvThaXVniA",
+        "OliurOnline": "UCKvaSxHH11xccltyc8IFXjA",
+        "theryanthomas": "UCNorHyg3UZYJq5jJY9ZSt-w",
+        "gawxboi": "UCE8rti_AqMxKeNtd8qWU-Cg",
+        "WaveformClips": "UCc_ycus0q7DSd85ZkmEY5ig",
+        "JerryRigEverything": "UCWFKCr40YwOZQx8FHU_ZqqQ",
+        "enricotartarotti": "UCuQT7Vc3OjjZuGkqehNxb6w"
+      },
+      "queries": [
+        "iPad productivity workflow",
+        "AI tools explained for beginners",
+        "vibe coding build an app with AI",
+        "how this technology works explained",
+        "minimal phone digital minimalism tech"
+      ]
+    },
+    {
+      "id": "learn",
+      "title": "Năng suất & cách học",
+      "weight": 1,
+      "channels": {
+        "aliabdaal": "UCoOae5nYA7VqaXzerajD0lg",
+        "JeffSu": "UCwAnu01qlnVg1Ai2AbtTMaA",
+        "ThomasFrankExplains": "UCd_WBvzBg1UbHE8j8MIL5Ng",
+        "JustinSung": "UC2Zs9v2hL2qZZ7vsAENsg4w"
+      },
+      "queries": [
+        "how to learn faster study techniques",
+        "productivity system explained",
+        "note taking system explained"
+      ]
+    },
+    {
+      "id": "life",
+      "title": "Vlog & sống chậm",
+      "weight": 1,
+      "channels": {
+        "nathanieldrew": "UCrdWRLq10OHuy7HmSckV3Vg",
+        "mattdavella": "UCJ24N4O0bP7LGLBDvye7oCA",
+        "nobackupplan": "UCZbOmMsPgxuWmj5pGymAOnA",
+        "havenotats": "UCdARRyTPX1Y-IAG2Ojp6HgA",
+        "joshczuba": "UCKZdVJU8cEBceM3lUAFJTpg",
+        "_jared": "UC2Kyj04yISmHr1V-UlJz4eg"
+      },
+      "queries": [
+        "slow living vlog english",
+        "digital minimalism phone addiction"
+      ]
+    },
+    {
+      "id": "talk",
+      "title": "Giao tiếp & tâm lý",
+      "weight": 1,
+      "channels": {
+        "askvinh": "UC9K9Wnz6t4cLnCdTzAVrXqQ",
+        "DoctorRamani": "UC9Qixc77KhCo88E5muxUjmA",
+        "Psych2go": "UCkJEpR7JmS36tajD34Gp4VA",
+        "chasehughesofficial": "UCUBj_5pwQZaoXfBrEQQbADw"
+      },
+      "queries": [
+        "how to speak with confidence communication skills",
+        "psychology of relationships explained"
+      ]
+    },
+    {
+      "id": "ted",
+      "title": "TED: luyện nghe",
+      "weight": 1,
+      "channels": {
+        "TED": "UCAuUUnT6oDeKwE6v1NGQxug",
+        "TEDEd": "UCsooa4yRKGN_zEE8iknghZA"
+      },
+      "queries": []
+    },
+    {
+      "id": "world",
+      "title": "Thế giới & khoa học (nói nhanh)",
+      "weight": 1,
+      "channels": {
+        "johnnyharris": "UCmGSJVG3mCRXVOP4yZrU1Dw",
+        "Vox": "UCLXo7UDZvByw2ixzpQCufnA",
+        "kurzgesagt": "UCsXVk37bltHxD1rDPwtNM8Q",
+        "TomScottGo": "UCBa659QWEk1AI4Tg--mrJ2A",
+        "Wendoverproductions": "UC9RM-iSvTu1uPJb8X5yp3EQ",
+        "BrightSunFilms": "UC5k3Kc0avyDJ2nG9Kxm9JmQ"
+      },
+      "queries": [
+        "economy explained",
+        "megaproject explained"
+      ]
+    },
+    {
+      "id": "biz",
+      "title": "Kinh doanh, marketing & creator",
+      "weight": 1,
+      "channels": {
+        "TheRossHarkness": "UCCKLNC83b571kYbaizPOs_w",
+        "harshibar": "UCsp_z4KR3dOczXw7Q-SPqQg"
+      },
+      "queries": [
+        "marketing strategy explained",
+        "one person business explained",
+        "storytelling for creators"
+      ]
+    }
+  ]
+}

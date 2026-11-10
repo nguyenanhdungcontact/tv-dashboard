@@ -1,0 +1,17 @@
+{
+  "rules": {
+    ".read": false,
+    ".write": false,
+    "sync": {
+      "$id": {
+        ".read": "$id.length >= 20",
+        ".write": "$id.length >= 20",
+        "flags": {
+          "$video": {
+            ".validate": "newData.hasChildren(['t']) && newData.child('t').isNumber()"
+          }
+        }
+      }
+    }
+  }
+}

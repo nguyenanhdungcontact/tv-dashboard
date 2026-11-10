@@ -270,18 +270,17 @@ def needs_work(vid: str) -> bool:
 
 
 def video_ids() -> list:
-    """Video chọn tay trước, rồi video trong catalog xen kẽ giữa các hàng (mỗi hàng sớm có cụm từ)."""
+    """Video chọn tay (video/english.json) trước, rồi mọi video trong danh mục docs/video-data/catalog.json."""
     ids = list(json.loads(LIST_FILE.read_text(encoding="utf-8")).get("videos", []))
     cat = ROOT / "docs" / "video-data" / "catalog.json"
     if cat.exists():
         try:
-            rows = [r.get("items", []) for r in json.loads(cat.read_text(encoding="utf-8")).get("rows", [])]
+            vids = json.loads(cat.read_text(encoding="utf-8")).get("videos", [])
         except Exception:
-            rows = []
-        for i in range(max((len(r) for r in rows), default=0)):
-            for r in rows:
-                if i < len(r) and r[i]["id"] not in ids:
-                    ids.append(r[i]["id"])
+            vids = []
+        for v in vids:
+            if v["id"] not in ids:
+                ids.append(v["id"])
     return ids
 
 

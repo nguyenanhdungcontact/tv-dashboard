@@ -7,6 +7,7 @@ local.properties
 app/src/main/assets/
 .DS_Store
 
-# Bộ nhớ đệm transcript và môi trường Python (không đưa lên repo công khai)
+# Bộ nhớ đệm transcript, môi trường Python và khóa API trên máy (không đưa lên repo công khai)
 .cache/
 .venv/
+.env.local
