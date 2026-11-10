@@ -454,12 +454,15 @@ function shatter(o) {
 }
 /* Nghĩa "vỡ" ra gần chỗ thiên thạch, bay lên chậm rồi mờ dần.
    Mỗi nghĩa tìm một chỗ trống: không đè nghĩa khác, không nằm dưới nút BẮN / vòng điều khiển. */
-const RISE = 14;
+const RISE = 14, WORD_PX = 24, MEAN_PX = 13.5;
+const HEAD = "'Bricolage Grotesque', 'Be Vietnam Pro', system-ui, sans-serif";
 function popMeaning(o) {
-  ctx.font = `800 ${20 * U}px ${FONT}`;
-  const lines = wrapText(o.item.vi || '', Math.min(W * 0.46, 250 * U));
-  const bw = Math.max(...lines.map(l => ctx.measureText(l).width), 70 * U) + 16 * U;
-  const bh = (lines.length * 23 + 22) * U;
+  ctx.font = `800 ${WORD_PX * U}px ${HEAD}`;
+  const ww = ctx.measureText(o.item.w).width;
+  ctx.font = `600 ${MEAN_PX * U}px ${FONT}`;
+  const lines = wrapText(o.item.vi || '', Math.max(ww, Math.min(W * 0.4, 210 * U))).slice(0, 2);
+  const bw = Math.max(ww, ...lines.map(l => ctx.measureText(l).width), 60 * U) + 16 * U;
+  const bh = (WORD_PX + 6 + lines.length * (MEAN_PX + 4)) * U + 8 * U;
   const blocks = ['#fire', '#stick'].map(sel => { const r = $(sel).getBoundingClientRect(); return { x0: r.left - 8, x1: r.right + 8, y0: r.top - 8, y1: r.bottom + 8 }; });
   const hits = (cx, cy) => {
     const b = { x0: cx - bw / 2, x1: cx + bw / 2, y0: cy - bh / 2, y1: cy + bh / 2 };
@@ -647,13 +650,18 @@ function draw(dt) {
     ctx.save(); ctx.globalAlpha = clamp(a, 0, 1);
     ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
     const x = p.x, top = p.y - p.t * RISE * U - p.bh / 2;
-    ctx.font = `600 ${12 * U}px ${FONT}`; ctx.fillStyle = 'rgba(200,210,255,.85)';
-    ctx.fillText(p.w, x, top + 8 * U);
-    ctx.font = `800 ${20 * U * sc}px ${FONT}`;
+    // Từ tiếng Anh: to, đậm, nổi bật
+    ctx.font = `800 ${WORD_PX * U * sc}px ${HEAD}`;
+    const wy = top + (WORD_PX / 2 + 4) * U;
+    ctx.lineWidth = 6 * U; ctx.strokeStyle = 'rgba(5,6,26,.9)'; ctx.strokeText(p.w, x, wy);
+    ctx.fillStyle = p.special === 'gold' ? '#ffd36e' : p.special === 'violet' ? '#e2cfff' : p.special === 'cyan' ? '#9df0ff' : '#ffffff';
+    ctx.fillText(p.w, x, wy);
+    // Nghĩa: nhỏ gọn bên dưới
+    ctx.font = `600 ${MEAN_PX * U}px ${FONT}`;
     p.lines.forEach((l, i) => {
-      const y = top + (28 + i * 23) * U;
-      ctx.lineWidth = 5 * U; ctx.strokeStyle = 'rgba(5,6,26,.85)'; ctx.strokeText(l, x, y);
-      ctx.fillStyle = p.special === 'gold' ? '#ffd36e' : p.special === 'violet' ? '#d9c2ff' : '#fff6d8'; ctx.fillText(l, x, y);
+      const y = top + (WORD_PX + 6 + MEAN_PX / 2 + 2 + i * (MEAN_PX + 4)) * U;
+      ctx.lineWidth = 4 * U; ctx.strokeStyle = 'rgba(5,6,26,.85)'; ctx.strokeText(l, x, y);
+      ctx.fillStyle = 'rgba(214,222,255,.92)'; ctx.fillText(l, x, y);
     });
     ctx.restore();
   });
