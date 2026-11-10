@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Gạch từ vựng">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#070a24">
+<title>Gạch từ vựng</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@500;600;700;800&family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sat:env(safe-area-inset-top,0px); --sar:env(safe-area-inset-right,0px); --sab:env(safe-area-inset-bottom,0px); --sal:env(safe-area-inset-left,0px);
+  --ink:#eef0ff; --ink2:#a9b0de; --gold:#ffd36e; --violet:#c49bff; --cyan:#7fe7ff; --green:#9dffb0; --bad:#ff7a8a;
+  --body:'Be Vietnam Pro',system-ui,-apple-system,sans-serif; --head:'Bricolage Grotesque','Be Vietnam Pro',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html,body{height:100%;background:#070a24;color:var(--ink);font-family:var(--body);overflow:hidden;overscroll-behavior:none;
+  touch-action:none;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;-webkit-text-size-adjust:100%}
+canvas#c{position:fixed;inset:0;width:100%;height:100%;display:block}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+
+/* ---------- Thanh trên ---------- */
+.hud{position:fixed;left:0;right:0;top:0;z-index:5;display:flex;align-items:center;gap:10px;pointer-events:none;
+  padding:calc(var(--sat) + 8px) calc(var(--sar) + 12px) 0 calc(var(--sal) + 12px)}
+.score{font-family:var(--head);font-weight:800;font-size:22px;min-width:80px;text-shadow:0 2px 10px rgba(0,0,0,.6)}
+.score small{display:block;font-family:var(--body);font-weight:600;font-size:11px;color:var(--ink2)}
+.powers{flex:1;display:flex;justify-content:center;gap:6px;flex-wrap:wrap}
+.pchip{display:flex;align-items:center;gap:6px;padding:4px 10px 4px 8px;border-radius:99px;background:rgba(10,14,46,.72);border:1px solid rgba(255,255,255,.15);font-weight:700;font-size:12px}
+.pchip i{display:block;width:42px;height:4px;border-radius:3px;background:rgba(255,255,255,.18);overflow:hidden}
+.pchip i b{display:block;height:100%;background:currentColor}
+.lives{font-size:17px;letter-spacing:2px;color:var(--bad);text-shadow:0 2px 8px rgba(0,0,0,.6)}
+.pbtn{pointer-events:auto;width:40px;height:40px;border-radius:50%;background:rgba(10,14,46,.6);border:1px solid rgba(255,255,255,.15);font-size:15px;font-weight:800}
+
+/* ---------- Hai nút ◀ ▶ (giữ để kéo thanh đỡ) ---------- */
+.mv{position:fixed;z-index:6;touch-action:none;width:96px;height:96px;border-radius:50%;display:grid;place-items:center;font-size:34px;color:#fff;
+  background:radial-gradient(circle at 50% 40%,rgba(127,231,255,.32),rgba(127,231,255,.10) 70%);border:2px solid rgba(127,231,255,.45);
+  box-shadow:0 8px 26px rgba(0,0,0,.4);transition:transform .06s,background .06s}
+.mv.on{transform:scale(.92);background:radial-gradient(circle at 50% 40%,rgba(127,231,255,.6),rgba(127,231,255,.25) 70%)}
+#left{left:calc(var(--sal) + 20px);bottom:calc(var(--sab) + 18px)}
+#right{right:calc(var(--sar) + 20px);bottom:calc(var(--sab) + 18px)}
+/* Màn ngang: hai nút nằm hai bên sân, sân chơi ở giữa */
+@media (orientation:landscape){ .mv{bottom:calc(var(--sab) + 26px)} }
+body:not(.playing) .mv{opacity:.35}
+
+/* ---------- Màn bắt đầu / tạm dừng / kết thúc ---------- */
+.ov{position:fixed;inset:0;z-index:10;display:none;align-items:center;justify-content:center;background:rgba(4,5,22,.72);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+  padding:calc(var(--sat) + 14px) calc(var(--sar) + 14px) calc(var(--sab) + 14px) calc(var(--sal) + 14px)}
+.ov.show{display:flex}
+.card{width:min(520px,100%);max-height:100%;overflow:auto;border-radius:22px;background:linear-gradient(180deg,#141a4a,#0b0f30);border:1px solid rgba(255,255,255,.12);
+  box-shadow:0 20px 60px rgba(0,0,0,.5);padding:22px 22px 18px;text-align:center;touch-action:pan-y;-webkit-overflow-scrolling:touch}
+.card h1{font-family:var(--head);font-weight:800;font-size:28px;line-height:1.1}
+.card h1 span{color:var(--cyan)}
+.card p{color:var(--ink2);font-size:14px;line-height:1.5;margin-top:8px}
+.legend{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px;text-align:left;font-size:13px;color:var(--ink2)}
+.legend div{background:rgba(255,255,255,.05);border-radius:12px;padding:8px 10px}
+.legend b{color:var(--ink)}
+.big{display:block;width:100%;margin-top:16px;min-height:52px;border-radius:16px;background:linear-gradient(180deg,#9df0ff,#4cc3e6);color:#06233a;font-weight:800;font-size:18px}
+.row2{display:flex;gap:8px;margin-top:10px}
+.row2 button,.row2 a{flex:1;min-height:44px;border-radius:14px;background:rgba(255,255,255,.08);font-weight:700;font-size:14px;color:var(--ink);text-decoration:none;display:grid;place-items:center}
+.stats{display:flex;justify-content:center;gap:22px;margin-top:10px}
+.stats div{font-size:12px;color:var(--ink2)}
+.stats b{display:block;font-family:var(--head);font-size:26px;color:var(--ink)}
+.learned{margin-top:14px;text-align:left;border-top:1px solid rgba(255,255,255,.1)}
+.learned h3{font-size:13px;color:var(--ink2);font-weight:600;margin:12px 0 4px}
+.learned .hint{font-size:12px;color:var(--ink2);margin:0 0 6px;line-height:1.45}
+.lw{position:relative;overflow:hidden;border-bottom:1px solid rgba(255,255,255,.06)}
+.lw .del{position:absolute;left:0;top:0;bottom:0;width:96px;background:#d9534f;color:#fff;font-weight:700;font-size:14px}
+.lw .in{position:relative;display:flex;align-items:center;gap:10px;padding:7px 2px;background:#111641;transition:transform .2s ease;touch-action:pan-y}
+.lw.armed .in{transform:translateX(96px)}
+.lw .t{flex:1;min-width:0}
+.lw .w{font-weight:700;font-size:15px}
+.lw .v{font-size:13px;color:var(--ink2)}
+.lw .star{flex:none;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.07);font-size:17px;color:var(--ink2)}
+.lw .star.on{color:var(--gold)}
+.lw.gone .in{justify-content:space-between;color:var(--ink2);font-size:13px;min-height:50px}
+.lw.gone .undo{flex:none;padding:6px 12px;border-radius:99px;background:rgba(255,255,255,.08);font-weight:700;font-size:13px;color:var(--ink)}
+@media (orientation:landscape) and (max-height:500px){
+  .card{padding:16px 18px 14px;width:min(640px,100%)}
+  .card h1{font-size:24px}
+  .legend{grid-template-columns:repeat(4,1fr)}
+  .big{min-height:46px;margin-top:12px}
+  .mv{width:84px;height:84px;font-size:30px}
+}
+</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+
+<div class="hud">
+  <div class="score"><span id="score">0</span><small id="level">Màn 1</small></div>
+  <div class="powers" id="powers"></div>
+  <div class="lives" id="lives">♥♥♥</div>
+  <button class="pbtn" id="pauseBtn" aria-label="Tạm dừng">❚❚</button>
+</div>
+
+<div class="mv" id="left" aria-label="Sang trái">◀</div>
+<div class="mv" id="right" aria-label="Sang phải">▶</div>
+
+<div class="ov show" id="startOv"><div class="card">
+  <h1>Gạch <span>từ vựng</span></h1>
+  <p>Giữ ◀ ▶ để kéo thanh đỡ, đỡ bóng đập vỡ gạch. Mỗi viên gạch là một từ tiếng Anh; vỡ ra thì hiện nghĩa. Chạm màn hình để thả bóng.</p>
+  <div class="legend">
+    <div><b style="color:var(--gold)">★ Gạch vàng</b><br>từ bạn đã lưu → chia 3 bóng</div>
+    <div><b style="color:var(--violet)">◆ Gạch tím</b><br>từ khó → bóng lửa xuyên gạch</div>
+    <div><b style="color:var(--cyan)">⇔ Xanh ngọc</b><br>thanh đỡ dài ra</div>
+    <div><b style="color:var(--green)">◎ Xanh lá</b><br>bóng chạy chậm lại</div>
+  </div>
+  <p id="wordInfo">Đang tải từ vựng…</p>
+  <button class="big" id="startBtn">Bắt đầu</button>
+  <div class="row2"><button id="muteBtn">🔊 Âm thanh: bật</button><a href="game.html">☄︎ Game thiên thạch</a><a href="iphone.html">← Trang học</a></div>
+</div></div>
+
+<div class="ov" id="pauseOv"><div class="card">
+  <h1>Tạm dừng</h1>
+  <button class="big" id="resumeBtn">Chơi tiếp</button>
+  <div class="row2"><button id="muteBtn2">🔊 Âm thanh</button><button id="quitBtn">Kết thúc lượt</button></div>
+</div></div>
+
+<div class="ov" id="overOv"><div class="card">
+  <h1 id="overTitle">Hết lượt!</h1>
+  <div class="stats"><div><b id="oScore">0</b>điểm</div><div><b id="oLevel">1</b>màn</div><div><b id="oWords">0</b>từ đã phá</div><div><b id="oBest">0</b>kỷ lục</div></div>
+  <button class="big" id="againBtn">Chơi lại</button>
+  <div class="learned" id="learned"></div>
+</div></div>
+
+<script src="learn-core.js"></script>
+<script>
+(() => {
+'use strict';
+/* =====================================================================
+   Gạch từ vựng: kéo thanh đỡ bằng hai nút ◀ ▶, đỡ bóng đập vỡ gạch.
+   Mỗi viên gạch mang một từ tiếng Anh (words.json + từ đã lưu ★ trong kho đồng bộ, bỏ từ đã xoá).
+   Gạch thường: từ đơn giản, 1 phát. Gạch đặc biệt: từ khó / từ hay, cứng hơn, vỡ ra cho bóng tính năng mới.
+   ===================================================================== */
+const $ = s => document.querySelector(s);
+const cv = $('#c'), ctx = cv.getContext('2d');
+const FONT = "'Be Vietnam Pro', system-ui, -apple-system, sans-serif";
+const HEAD = "'Bricolage Grotesque', 'Be Vietnam Pro', system-ui, sans-serif";
+const rand = (a, b) => a + Math.random() * (b - a);
+const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+const store = { get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }, set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} } };
+const esc = t => String(t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const SYNC = window.LearnCore ? LearnCore.Sync : null;
+
+/* ---------- Màn hình & sân chơi ---------- */
+let W = 0, H = 0, DPR = 1, U = 1, land = false;
+const safe = { t: 0, r: 0, b: 0, l: 0 };
+const F = { x0: 0, x1: 0, y0: 0, padY: 0 };   // sân: trái, phải, trần, đường thanh đỡ
+function readSafe() {
+  const cs = getComputedStyle(document.documentElement);
+  ['t', 'r', 'b', 'l'].forEach(k => safe[k] = parseFloat(cs.getPropertyValue('--sa' + k)) || 0);
+}
+let stars = [];
+function layoutField() {
+  const btn = land ? 84 : 96;
+  if (land) { F.x0 = safe.l + btn + 34; F.x1 = W - safe.r - btn - 34; F.padY = H - safe.b - 34 * U; }
+  else { F.x0 = safe.l + 8; F.x1 = W - safe.r - 8; F.padY = H - safe.b - btn - 40; }
+  F.y0 = safe.t + 68;
+}
+function resize() {
+  const was = land;
+  W = innerWidth; H = innerHeight; DPR = Math.min(devicePixelRatio || 1, 2.5);
+  cv.width = Math.round(W * DPR); cv.height = Math.round(H * DPR);
+  ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+  U = clamp(Math.min(W, H) / 400, 0.8, 1.8);
+  land = W > H;
+  readSafe(); layoutField();
+  stars = Array.from({ length: Math.round(W * H / 3200) }, () => ({ x: Math.random() * W, y: Math.random() * H, z: Math.random(), tw: Math.random() * 6 }));
+  if (G && G.state !== 'over' && was !== land) { buildLevel(true); }   // xoay máy: xếp lại gạch còn lại theo sân mới
+  if (G) { G.pad.y = F.padY; G.pad.x = clamp(G.pad.x, F.x0 + G.pad.w / 2, F.x1 - G.pad.w / 2); }
+}
+addEventListener('resize', resize);
+addEventListener('orientationchange', () => setTimeout(resize, 250));
+document.addEventListener('touchmove', e => { if (!e.target.closest('.card')) e.preventDefault(); }, { passive: false });
+document.addEventListener('gesturestart', e => e.preventDefault());
+document.addEventListener('dblclick', e => e.preventDefault());
+
+/* ---------- Từ vựng ---------- */
+const FALLBACK = [
+  { w: 'insight', vi: 'sự thấu hiểu' }, { w: 'goal', vi: 'mục tiêu' }, { w: 'habit', vi: 'thói quen' }, { w: 'focus', vi: 'tập trung' },
+  { w: 'resilient', vi: 'kiên cường' }, { w: 'break the ice', vi: 'phá vỡ sự ngại ngùng', pos: 'idiom' },
+];
+let POOL = { simple: [], hard: [], saved: [], all: [] };
+const isHard = o => /idiom/i.test(o.pos || '') || (o.w.split(' ').length >= 3) || (!/\s/.test(o.w) && o.w.length >= 11);
+const isSimple = o => !isHard(o) && o.w.length <= 12;
+async function loadWords() {
+  let base = [];
+  try { const r = await fetch('words.json', { cache: 'no-store' }); if (r.ok) base = (await r.json()).filter(o => o && o.w && o.vi); } catch (e) {}
+  if (!base.length) base = FALLBACK.slice();
+  const seen = new Set(), saved = [], rest = [];
+  (SYNC ? SYNC.words() : []).forEach(o => { const k = o.w.toLowerCase(); if (o.w && !seen.has(k)) { seen.add(k); saved.push(o); } });
+  base.forEach(o => { const k = o.w.toLowerCase(); if (!seen.has(k) && !(SYNC && SYNC.isHidden(o.w))) { seen.add(k); rest.push(o); } });
+  POOL = { saved, simple: rest.filter(isSimple), hard: rest.filter(isHard), all: rest };
+  $('#wordInfo').textContent = `${rest.length + saved.length} từ · ${POOL.simple.length} từ đơn giản · ◆ ${POOL.hard.length} từ khó · ★ ${saved.length} từ đã lưu`;
+}
+const used = new Set();
+function pick(list) {
+  if (!list.length) return null;
+  const fresh = list.filter(o => !used.has(o.w));
+  const src = fresh.length ? fresh : list;
+  const o = src[Math.floor(Math.random() * src.length)];
+  used.add(o.w); return o;
+}
+
+/* ---------- Âm thanh (Web Audio) ---------- */
+let AC = null, muted = store.get('bricks.mute') === '1';
+function audio() {
+  if (muted) return null;
+  if (!AC) { try { AC = new (window.AudioContext || window.webkitAudioContext)(); } catch (e) { return null; } }
+  if (AC.state === 'suspended') AC.resume();
+  return AC;
+}
+function tone(f, dur, type = 'square', vol = 0.035, f2 = 0) {
+  const a = audio(); if (!a) return;
+  const o = a.createOscillator(), g = a.createGain(), t = a.currentTime;
+  o.type = type; o.frequency.setValueAtTime(f, t); if (f2) o.frequency.exponentialRampToValueAtTime(f2, t + dur);
+  g.gain.setValueAtTime(vol, t); g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+  o.connect(g).connect(a.destination); o.start(t); o.stop(t + dur);
+}
+const sfx = {
+  paddle: () => tone(330, 0.07, 'triangle', 0.05, 440),
+  wall: () => tone(220, 0.04, 'triangle', 0.03),
+  hit: () => tone(520, 0.05, 'square', 0.025, 380),
+  brk: hard => { tone(hard ? 660 : 880, 0.09, 'square', 0.03, hard ? 1320 : 1760); },
+  power: () => { tone(520, 0.12, 'triangle', 0.05, 1040); setTimeout(() => tone(780, 0.16, 'triangle', 0.05, 1560), 90); },
+  lose: () => tone(300, 0.4, 'sawtooth', 0.04, 80),
+  clear: () => [523, 659, 784, 1046].forEach((f, i) => setTimeout(() => tone(f, 0.14, 'triangle', 0.05), i * 110)),
+};
+function paintMute() { ['#muteBtn', '#muteBtn2'].forEach(s => $(s).textContent = muted ? '🔇 Âm thanh: tắt' : '🔊 Âm thanh: bật'); }
+function toggleMute() { muted = !muted; store.set('bricks.mute', muted ? '1' : '0'); paintMute(); }
+$('#muteBtn').onclick = toggleMute; $('#muteBtn2').onclick = toggleMute; paintMute();
+
+/* ---------- Điều khiển: giữ ◀ ▶; chạm sân để thả bóng; bàn phím ← → / Space để thử trên máy tính ---------- */
+const input = { left: false, right: false };
+function holdBtn(el, key) {
+  let pid = null;
+  el.addEventListener('pointerdown', e => { e.preventDefault(); pid = e.pointerId; input[key] = true; el.classList.add('on'); try { el.setPointerCapture(pid); } catch (x) {} audio(); });
+  const up = e => { if (e.pointerId !== pid) return; pid = null; input[key] = false; el.classList.remove('on'); };
+  el.addEventListener('pointerup', up); el.addEventListener('pointercancel', up); el.addEventListener('lostpointercapture', up);
+}
+holdBtn($('#left'), 'left'); holdBtn($('#right'), 'right');
+cv.addEventListener('pointerdown', () => { if (G && G.state === 'play') launch(); });
+addEventListener('keydown', e => {
+  if (e.key === 'ArrowLeft') input.left = true;
+  if (e.key === 'ArrowRight') input.right = true;
+  if (e.key === ' ') { e.preventDefault(); if (G && G.state === 'play') launch(); }
+  if ((e.key === 'p' || e.key === 'Escape') && G && G.state === 'play') pause();
+});
+addEventListener('keyup', e => { if (e.key === 'ArrowLeft') input.left = false; if (e.key === 'ArrowRight') input.right = false; });
+
+/* ---------- Lượt chơi ---------- */
+let G = null;
+const POWERS = {
+  multi: { name: '★ 3 bóng', color: '#ffd36e' },
+  fire:  { name: '◆ Bóng lửa', color: '#c49bff', time: 8 },
+  wide:  { name: '⇔ Thanh dài', color: '#7fe7ff', time: 15 },
+  slow:  { name: '◎ Bóng chậm', color: '#9dffb0', time: 10 },
+};
+function newGame() {
+  used.clear();
+  G = { state: 'play', score: 0, lives: 3, level: 1, bricks: [], balls: [], sparks: [], pops: [], banners: [], learned: [],
+        pw: { fire: 0, wide: 0, slow: 0 }, launchT: 2.5, combo: 0 };
+  G.pad = { x: (F.x0 + F.x1) / 2, y: F.padY, w: 0, h: 14 * U, v: 0 };
+  buildLevel(); resetBall(); paintHud();
+}
+const baseSpeed = () => (300 + (G.level - 1) * 22) * U * (G.pw.slow > 0 ? 0.68 : 1);
+const padW = () => clamp((F.x1 - F.x0) * (land ? 0.17 : 0.27), 76 * U, 150 * U) * (G.pw.wide > 0 ? 1.55 : 1);
+function resetBall() {
+  G.pad.w = padW();
+  G.balls = [{ x: G.pad.x, y: G.pad.y - 9 * U, vx: 0, vy: 0, r: 8 * U, stuck: true, trail: [] }];
+  G.launchT = 2.5;
+}
+function launch() {
+  G.balls.forEach(b => {
+    if (!b.stuck) return;
+    const a = rand(-0.45, 0.45), s = baseSpeed();
+    b.vx = Math.sin(a) * s; b.vy = -Math.cos(a) * s; b.stuck = false;
+  });
+}
+
+/* ---------- Xếp gạch: mỗi viên một từ, rộng theo chữ, căn đều từng hàng ---------- */
+function brickFont() { return `700 ${13 * U}px ${FONT}`; }
+function buildLevel(keepRemaining) {
+  const fieldW = F.x1 - F.x0, gap = 6 * U, rowH = 30 * U;
+  const maxRows = Math.max(3, Math.floor(((F.padY - F.y0) * (land ? 0.5 : 0.46)) / (rowH + gap)));
+  const rows = Math.min(maxRows, 4 + G.level);
+  ctx.font = brickFont();
+  const fits = o => ctx.measureText(o.w).width + 22 * U <= fieldW - 4;
+  let items;
+  if (keepRemaining) items = G.bricks.map(b => b.src);
+  else {
+    // Nhiều gạch đặc biệt hơn ở màn sau
+    const pHard = Math.min(0.06 + G.level * 0.04, 0.3), pGold = POOL.saved.length ? Math.min(0.06 + G.level * 0.02, 0.18) : 0, pRare = 0.08;
+    items = [];
+    const target = rows * (land ? 5 : 3) + 2;
+    for (let i = 0; i < target * 3 && items.length < target; i++) {
+      const r = Math.random(); let o, kind;
+      if (r < pGold) { o = pick(POOL.saved); kind = 'gold'; }
+      else if (r < pGold + pHard) { o = pick(POOL.hard); kind = 'violet'; }
+      else { o = pick(POOL.simple.length ? POOL.simple : POOL.all); kind = Math.random() < pRare ? (Math.random() < 0.5 ? 'cyan' : 'green') : 'normal'; }
+      if (!o || !fits(o)) continue;
+      items.push({ item: o, kind });
+    }
+  }
+  // Xếp vào hàng
+  const out = []; let row = [], rowW = 0, r = 0;
+  const flush = () => {
+    if (!row.length) return;
+    const extra = (fieldW - rowW + gap) / row.length;   // giãn đều cho kín hàng
+    let x = F.x0;
+    row.forEach(s => { const w = s.w + extra; out.push(Object.assign(s, { x, y: F.y0 + r * (rowH + gap), w: w - gap, h: rowH })); x += w; });
+    row = []; rowW = 0; r++;
+  };
+  for (const it of items) {
+    const w = ctx.measureText(it.item.w).width + 22 * U;
+    if (rowW + w > fieldW && row.length) flush();
+    if (r >= rows) break;
+    const hp = it.kind === 'violet' ? (G.level >= 4 ? 3 : 2) : it.kind === 'gold' ? 2 : 1;
+    const old = keepRemaining ? G.bricks.find(b => b.src === it) : null;
+    row.push({ src: it, item: it.item, kind: it.kind, hp: old ? old.hp : hp, maxHp: old ? old.maxHp : hp, w, flash: 0 });
+    rowW += w + gap;
+  }
+  if (r < rows) flush();
+  G.bricks = out;
+}
+
+/* ---------- Hiệu ứng ---------- */
+function burst(x, y, n, color, speed = 160, life = 0.6) {
+  for (let i = 0; i < n && G.sparks.length < 500; i++) {
+    const a = rand(0, 6.3), v = rand(0.3, 1) * speed * U;
+    G.sparks.push({ x, y, vx: Math.cos(a) * v, vy: Math.sin(a) * v, t: 0, life: rand(life * 0.5, life), color, s: rand(1.5, 3.2) * U });
+  }
+}
+function banner(text, color) {
+  const same = G.banners.find(b => b.text === text);
+  if (same) { same.t = Math.min(same.t, 0.2); return; }
+  G.banners.push({ text, color, t: 0, life: 2 });
+  if (G.banners.length > 2) G.banners.shift();
+}
+function wrapText(text, maxW) {
+  const words = String(text).split(' '), lines = []; let cur = '';
+  words.forEach(w => { const t = cur ? cur + ' ' + w : w; if (ctx.measureText(t).width > maxW && cur) { lines.push(cur); cur = w; } else cur = t; });
+  if (cur) lines.push(cur);
+  return lines.slice(0, 2);
+}
+/* Từ to + nghĩa gọn, đặt vào chỗ trống giữa vùng gạch và thanh đỡ, không đè nhau */
+const WORD_PX = 22, MEAN_PX = 13;
+function popMeaning(b) {
+  ctx.font = `800 ${WORD_PX * U}px ${HEAD}`;
+  const ww = ctx.measureText(b.item.w).width;
+  ctx.font = `600 ${MEAN_PX * U}px ${FONT}`;
+  const lines = wrapText(b.item.vi || '', Math.max(ww, Math.min(W * 0.6, 230 * U)));
+  const bw = Math.max(ww, ...lines.map(l => ctx.measureText(l).width), 60 * U) + 16 * U;
+  const bh = (WORD_PX + 6 + lines.length * (MEAN_PX + 4)) * U + 8 * U;
+  const bricksBottom = G.bricks.reduce((m, q) => Math.max(m, q.y + q.h), F.y0);
+  const x0 = Math.max(F.x0, safe.l + 8) + bw / 2, x1 = Math.min(F.x1, W - safe.r - 8) - bw / 2;
+  const y0 = Math.max(bricksBottom + 8, F.y0) + bh / 2, y1 = F.padY - 24 * U - bh / 2;
+  const cx = b.x + b.w / 2, cy = b.y + b.h / 2;
+  const hits = (x, y) => G.pops.some(p => Math.abs(p.x - x) < (p.bw + bw) / 2 && Math.abs(p.y - y) < (p.bh + bh) / 2);
+  const cands = [];
+  if (x1 >= x0 && y1 >= y0) {
+    for (let y = y0; y <= y1 + 0.1; y += Math.max(bh * 0.6, 20)) for (let x = x0; x <= x1 + 0.1; x += Math.max(bw * 0.4, 30)) cands.push({ x, y });
+  }
+  cands.push({ x: clamp(cx, x0, Math.max(x0, x1)), y: clamp(cy + 40 * U, F.y0 + bh / 2, F.padY - bh / 2) });
+  cands.sort((a, c) => Math.hypot(a.x - cx, a.y - cy) - Math.hypot(c.x - cx, c.y - cy));
+  let best = cands.find(c => !hits(c.x, c.y));
+  if (!best) { G.pops.shift(); best = cands.find(c => !hits(c.x, c.y)) || cands[0]; }
+  G.pops.push({ x: best.x, y: best.y, w: b.item.w, lines, bw, bh, t: 0, life: 2.8, kind: b.kind });
+  if (G.pops.length > 5) G.pops.shift();
+}
+
+/* ---------- Va chạm ---------- */
+function breakBrick(b) {
+  G.bricks.splice(G.bricks.indexOf(b), 1);
+  G.combo++;
+  G.score += (b.maxHp * 10 + (b.kind !== 'normal' ? 20 : 0)) * Math.min(1 + G.combo * 0.1, 2.5) | 0;
+  const col = KCOL[b.kind];
+  burst(b.x + b.w / 2, b.y + b.h / 2, 18, col.glow || col.c1, 200, 0.6);
+  popMeaning(b); sfx.brk(b.kind !== 'normal');
+  if (!G.learned.some(x => x.w === b.item.w)) G.learned.push(b.item);
+  const power = { gold: 'multi', violet: 'fire', cyan: 'wide', green: 'slow' }[b.kind];
+  if (power) givePower(power);
+  if (!G.bricks.length) levelClear();
+}
+function givePower(p) {
+  sfx.power(); banner(POWERS[p].name + (POWERS[p].time ? ` · ${POWERS[p].time} giây` : ''), POWERS[p].color);
+  if (p === 'multi') {
+    const src = G.balls.find(b => !b.stuck) || G.balls[0];
+    const s = Math.hypot(src.vx, src.vy) || baseSpeed();
+    for (const a of [-0.5, 0.5]) {
+      if (G.balls.length >= 7) break;
+      const ang = Math.atan2(src.vy || -1, src.vx) + a;
+      G.balls.push({ x: src.x, y: src.y, vx: Math.cos(ang) * s, vy: Math.sin(ang) * s, r: src.r, stuck: false, trail: [] });
+    }
+    G.balls.forEach(b => { if (b.stuck) launch(); });
+  } else {
+    G.pw[p] = POWERS[p].time;
+    if (p === 'wide') G.pad.w = padW();
+    if (p === 'slow') G.balls.forEach(b => { const s = Math.hypot(b.vx, b.vy); if (s) { b.vx *= baseSpeed() / s; b.vy *= baseSpeed() / s; } });
+  }
+}
+function levelClear() {
+  sfx.clear(); G.score += 100 * G.level;
+  banner(`Xong màn ${G.level}! +${100 * G.level}`, '#9df0ff');
+  G.level++;
+  G.state = 'between'; G.betweenT = 1.6;
+}
+function circleRect(b, r) {
+  const cx = clamp(b.x, r.x, r.x + r.w), cy = clamp(b.y, r.y, r.y + r.h);
+  const dx = b.x - cx, dy = b.y - cy;
+  return dx * dx + dy * dy <= b.r * b.r ? { dx, dy, cx, cy } : null;
+}
+function stepBall(b, dt) {
+  b.x += b.vx * dt; b.y += b.vy * dt;
+  // Tường và trần
+  if (b.x < F.x0 + b.r) { b.x = F.x0 + b.r; b.vx = Math.abs(b.vx); sfx.wall(); }
+  if (b.x > F.x1 - b.r) { b.x = F.x1 - b.r; b.vx = -Math.abs(b.vx); sfx.wall(); }
+  if (b.y < F.y0 - 6 * U + b.r) { b.y = F.y0 - 6 * U + b.r; b.vy = Math.abs(b.vy); sfx.wall(); }
+  // Thanh đỡ: góc nảy theo chỗ chạm (giữa → thẳng lên, mép → xiên)
+  const p = G.pad;
+  if (b.vy > 0 && b.y + b.r >= p.y && b.y - b.r <= p.y + p.h && b.x >= p.x - p.w / 2 - b.r && b.x <= p.x + p.w / 2 + b.r) {
+    const rel = clamp((b.x - p.x) / (p.w / 2), -1, 1), a = rel * 1.05, s = baseSpeed();
+    b.vx = Math.sin(a) * s + p.v * 0.12; b.vy = -Math.abs(Math.cos(a) * s);
+    b.y = p.y - b.r; G.combo = 0; sfx.paddle();
+  }
+  // Gạch
+  for (const k of G.bricks) {
+    const c = circleRect(b, k); if (!c) continue;
+    if (G.pw.fire > 0) { k.hp = 0; breakBrick(k); return; }          // bóng lửa: xuyên, không nảy
+    let nx = c.dx, ny = c.dy;
+    if (!nx && !ny) { ny = -Math.sign(b.vy) || -1; }
+    if (Math.abs(nx) > Math.abs(ny)) { b.vx = Math.sign(nx) * Math.abs(b.vx); b.x = c.cx + Math.sign(nx) * b.r; }
+    else { b.vy = Math.sign(ny) * Math.abs(b.vy); b.y = c.cy + Math.sign(ny) * b.r; }
+    k.hp--; k.flash = 0.1;
+    if (k.hp <= 0) breakBrick(k); else { sfx.hit(); burst(c.cx, c.cy, 5, '#fff', 120, 0.3); }
+    return;
+  }
+}
+function keepAngle(b) {
+  const s = Math.hypot(b.vx, b.vy) || baseSpeed(), want = baseSpeed();
+  b.vx *= want / s; b.vy *= want / s;
+  if (Math.abs(b.vy) < want * 0.3) { b.vy = Math.sign(b.vy || -1) * want * 0.3; b.vx = Math.sign(b.vx || 1) * Math.sqrt(want * want - b.vy * b.vy); }
+}
+
+/* ---------- Cập nhật ---------- */
+function update(dt) {
+  if (G.state === 'between') {
+    G.betweenT -= dt; tickFx(dt);
+    if (G.betweenT <= 0) { G.state = 'play'; G.pw = { fire: 0, wide: 0, slow: 0 }; buildLevel(); resetBall(); }
+    paintHud(); return;
+  }
+  // Thanh đỡ: giữ nút → tăng tốc mượt tới tốc độ vừa phải
+  const p = G.pad, dir = (input.right ? 1 : 0) - (input.left ? 1 : 0), maxV = (land ? 420 : 360) * U;
+  p.v += (dir * maxV - p.v) * Math.min(1, dt * (dir ? 9 : 14));
+  p.x = clamp(p.x + p.v * dt, F.x0 + p.w / 2, F.x1 - p.w / 2);
+  if (Math.abs(p.x - (F.x0 + p.w / 2)) < 0.5 || Math.abs(p.x - (F.x1 - p.w / 2)) < 0.5) p.v *= 0.5;
+  // Hiệu lực
+  for (const k of ['fire', 'wide', 'slow']) if (G.pw[k] > 0) {
+    G.pw[k] -= dt;
+    if (G.pw[k] <= 0) { G.pw[k] = 0; if (k === 'wide') p.w = padW(); }
+  }
+  // Bóng
+  for (const b of G.balls.slice()) {
+    if (b.stuck) { b.x = p.x; b.y = p.y - b.r - 1; continue; }
+    const dist = Math.hypot(b.vx, b.vy) * dt, n = Math.max(1, Math.ceil(dist / (b.r * 0.5)));
+    for (let i = 0; i < n && G.state === 'play'; i++) stepBall(b, dt / n);
+    keepAngle(b);
+    b.trail.push({ x: b.x, y: b.y }); if (b.trail.length > 8) b.trail.shift();
+    if (b.y - b.r > H) G.balls.splice(G.balls.indexOf(b), 1);
+  }
+  if (G.state !== 'play') { paintHud(); return; }
+  if (G.balls.some(b => b.stuck)) { G.launchT -= dt; if (G.launchT <= 0) launch(); }
+  if (!G.balls.length) {
+    G.lives--; sfx.lose(); burst(p.x, p.y, 24, '#ff7a8a', 200, 0.7);
+    if (G.lives <= 0) { gameOver(); return; }
+    G.pw = { fire: 0, wide: 0, slow: 0 }; resetBall(); banner('Mất bóng! Chạm màn hình để thả bóng mới', '#ff9aa8');
+  }
+  tickFx(dt);
+  paintHud();
+}
+function tickFx(dt) {
+  G.bricks.forEach(k => { if (k.flash > 0) k.flash -= dt; });
+  G.sparks.forEach(s => { s.t += dt; s.x += s.vx * dt; s.y += s.vy * dt; s.vy += 220 * U * dt; });
+  G.sparks = G.sparks.filter(s => s.t < s.life);
+  G.pops.forEach(q => q.t += dt); G.pops = G.pops.filter(q => q.t < q.life);
+  G.banners.forEach(q => q.t += dt); G.banners = G.banners.filter(q => q.t < q.life);
+}
+
+/* ---------- Vẽ ---------- */
+const KCOL = {
+  normal: { c1: '#3b4f8f', c2: '#28366b', text: '#eef2ff', edge: 'rgba(170,190,255,.35)' },
+  gold:   { c1: '#ffe39a', c2: '#c9902c', text: '#3a2400', edge: 'rgba(255,230,160,.9)', glow: '#ffd36e', icon: '★' },
+  violet: { c1: '#b48cff', c2: '#6a3fc2', text: '#ffffff', edge: 'rgba(225,205,255,.9)', glow: '#c49bff', icon: '◆' },
+  cyan:   { c1: '#8ff0ff', c2: '#2b9fbf', text: '#04263a', edge: 'rgba(200,250,255,.9)', glow: '#7fe7ff', icon: '⇔' },
+  green:  { c1: '#b5ffc3', c2: '#3fae63', text: '#06301a', edge: 'rgba(210,255,220,.9)', glow: '#9dffb0', icon: '◎' },
+};
+const ROWTINT = ['#3b4f8f', '#3d6b8f', '#4a5a9a', '#3f7a86', '#5a4f95', '#3b6a9e', '#476089', '#3e7f9a'];
+function rrect(x, y, w, h, r) {
+  ctx.beginPath(); ctx.moveTo(x + r, y); ctx.arcTo(x + w, y, x + w, y + h, r); ctx.arcTo(x + w, y + h, x, y + h, r);
+  ctx.arcTo(x, y + h, x, y, r); ctx.arcTo(x, y, x + w, y, r); ctx.closePath();
+}
+function drawBrick(k, i) {
+  const c = KCOL[k.kind];
+  const g = ctx.createLinearGradient(0, k.y, 0, k.y + k.h);
+  if (k.kind === 'normal') { const t = ROWTINT[Math.round((k.y - F.y0) / (36 * U)) % ROWTINT.length]; g.addColorStop(0, t); g.addColorStop(1, '#1f2a5a'); }
+  else { g.addColorStop(0, c.c1); g.addColorStop(1, c.c2); }
+  if (c.glow) { ctx.shadowColor = c.glow; ctx.shadowBlur = 12 * U; }
+  rrect(k.x, k.y, k.w, k.h, 7 * U); ctx.fillStyle = g; ctx.fill();
+  ctx.shadowBlur = 0;
+  ctx.lineWidth = 1.2 * U; ctx.strokeStyle = c.edge; ctx.stroke();
+  // Vạch sáng trên mép + vết nứt khi đã trúng
+  ctx.fillStyle = 'rgba(255,255,255,.14)'; rrect(k.x + 3 * U, k.y + 2 * U, k.w - 6 * U, k.h * 0.32, 5 * U); ctx.fill();
+  if (k.hp < k.maxHp) {
+    ctx.strokeStyle = 'rgba(0,0,0,.45)'; ctx.lineWidth = 1.5 * U; ctx.beginPath();
+    const m = k.x + k.w * 0.5;
+    ctx.moveTo(m - 8 * U, k.y + 3 * U); ctx.lineTo(m + 2 * U, k.y + k.h * 0.5); ctx.lineTo(m - 4 * U, k.y + k.h - 3 * U);
+    if (k.maxHp - k.hp > 1) { ctx.moveTo(k.x + k.w * 0.2, k.y + k.h); ctx.lineTo(k.x + k.w * 0.3, k.y + k.h * 0.4); }
+    ctx.stroke();
+  }
+  if (k.flash > 0) { rrect(k.x, k.y, k.w, k.h, 7 * U); ctx.fillStyle = `rgba(255,255,255,${k.flash * 6})`; ctx.fill(); }
+  ctx.font = brickFont(); ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+  ctx.fillStyle = c.text;
+  const label = c.icon ? `${c.icon} ${k.item.w}` : k.item.w;
+  ctx.fillText(ctx.measureText(label).width < k.w - 8 ? label : k.item.w, k.x + k.w / 2, k.y + k.h / 2 + 1);
+}
+function draw(dt) {
+  const g = ctx.createLinearGradient(0, 0, 0, H); g.addColorStop(0, '#0d1238'); g.addColorStop(1, '#060820');
+  ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+  ctx.fillStyle = '#fff';
+  stars.forEach(s => { s.tw += dt * 1.6; ctx.globalAlpha = 0.18 + s.z * 0.5 * (0.7 + 0.3 * Math.sin(s.tw)); ctx.fillRect(s.x, s.y, 0.6 + s.z, 0.6 + s.z); });
+  ctx.globalAlpha = 1;
+  if (!G) return;
+  // Viền sân
+  ctx.strokeStyle = 'rgba(127,231,255,.18)'; ctx.lineWidth = 2;
+  ctx.beginPath(); ctx.moveTo(F.x0 - 2, H); ctx.lineTo(F.x0 - 2, F.y0 - 8 * U); ctx.lineTo(F.x1 + 2, F.y0 - 8 * U); ctx.lineTo(F.x1 + 2, H); ctx.stroke();
+  G.bricks.forEach(drawBrick);
+  // Thanh đỡ
+  const p = G.pad;
+  const pg = ctx.createLinearGradient(0, p.y, 0, p.y + p.h); pg.addColorStop(0, '#e8fbff'); pg.addColorStop(1, '#59c6e4');
+  ctx.shadowColor = G.pw.wide > 0 ? '#7fe7ff' : 'rgba(127,231,255,.6)'; ctx.shadowBlur = 14 * U;
+  rrect(p.x - p.w / 2, p.y, p.w, p.h, p.h / 2); ctx.fillStyle = pg; ctx.fill(); ctx.shadowBlur = 0;
+  // Bóng + vệt
+  G.balls.forEach(b => {
+    const fire = G.pw.fire > 0;
+    b.trail.forEach((t, i) => { ctx.globalAlpha = (i + 1) / b.trail.length * 0.35; ctx.fillStyle = fire ? '#ff9a5a' : '#bdefff';
+      ctx.beginPath(); ctx.arc(t.x, t.y, b.r * (0.4 + i / b.trail.length * 0.5), 0, 6.3); ctx.fill(); });
+    ctx.globalAlpha = 1;
+    const bg = ctx.createRadialGradient(b.x - b.r * 0.35, b.y - b.r * 0.35, b.r * 0.1, b.x, b.y, b.r);
+    if (fire) { bg.addColorStop(0, '#fff3c0'); bg.addColorStop(0.5, '#ff9a3c'); bg.addColorStop(1, '#d4311f'); ctx.shadowColor = '#ff7a3c'; }
+    else { bg.addColorStop(0, '#ffffff'); bg.addColorStop(1, '#8fdcff'); ctx.shadowColor = '#7fe7ff'; }
+    ctx.shadowBlur = 16 * U; ctx.fillStyle = bg; ctx.beginPath(); ctx.arc(b.x, b.y, b.r, 0, 6.3); ctx.fill(); ctx.shadowBlur = 0;
+  });
+  // Tia lửa
+  G.sparks.forEach(s => { ctx.globalAlpha = 1 - s.t / s.life; ctx.fillStyle = s.color; ctx.fillRect(s.x, s.y, s.s, s.s); });
+  ctx.globalAlpha = 1;
+  // Từ + nghĩa vừa vỡ
+  G.pops.forEach(q => {
+    const a = q.t < 0.2 ? q.t / 0.2 : 1 - Math.max(0, q.t - q.life + 0.8) / 0.8, sc = q.t < 0.2 ? 0.75 + q.t * 1.25 : 1;
+    ctx.save(); ctx.globalAlpha = clamp(a, 0, 1); ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+    const top = q.y - q.t * 10 * U - q.bh / 2;
+    ctx.font = `800 ${WORD_PX * U * sc}px ${HEAD}`;
+    const wy = top + (WORD_PX / 2 + 4) * U;
+    ctx.lineWidth = 6 * U; ctx.strokeStyle = 'rgba(5,6,26,.9)'; ctx.strokeText(q.w, q.x, wy);
+    const kc = KCOL[q.kind]; ctx.fillStyle = q.kind === 'normal' ? '#ffffff' : kc.glow; ctx.fillText(q.w, q.x, wy);
+    ctx.font = `600 ${MEAN_PX * U}px ${FONT}`;
+    q.lines.forEach((l, i) => {
+      const y = top + (WORD_PX + 6 + MEAN_PX / 2 + 2 + i * (MEAN_PX + 4)) * U;
+      ctx.lineWidth = 4 * U; ctx.strokeStyle = 'rgba(5,6,26,.85)'; ctx.strokeText(l, q.x, y);
+      ctx.fillStyle = 'rgba(214,222,255,.92)'; ctx.fillText(l, q.x, y);
+    });
+    ctx.restore();
+  });
+  // Thông báo (ngay trên thanh đỡ)
+  G.banners.forEach((bn, i) => {
+    const a = bn.t < 0.2 ? bn.t / 0.2 : 1 - Math.max(0, bn.t - bn.life + 0.5) / 0.5;
+    ctx.globalAlpha = clamp(a, 0, 1); ctx.textAlign = 'center';
+    ctx.font = `800 ${15 * U}px ${FONT}`; ctx.lineWidth = 4 * U; ctx.strokeStyle = 'rgba(5,6,26,.85)';
+    const y = F.padY - 40 * U - i * 22 * U, x = (F.x0 + F.x1) / 2;
+    ctx.strokeText(bn.text, x, y); ctx.fillStyle = bn.color; ctx.fillText(bn.text, x, y);
+  });
+  ctx.globalAlpha = 1;
+  if (G.state === 'play' && G.balls.some(b => b.stuck)) {
+    ctx.textAlign = 'center'; ctx.font = `600 ${13 * U}px ${FONT}`; ctx.fillStyle = 'rgba(214,222,255,.8)';
+    ctx.fillText('Chạm màn hình để thả bóng', (F.x0 + F.x1) / 2, land ? G.pad.y - 30 * U : G.pad.y + G.pad.h + 18 * U);
+  }
+}
+
+/* ---------- Thanh trên ---------- */
+let hudKey = '';
+function paintHud() {
+  const k = `${G.score}|${G.level}|${G.lives}|${Math.ceil(G.pw.fire * 4)}|${Math.ceil(G.pw.wide * 4)}|${Math.ceil(G.pw.slow * 4)}|${G.learned.length}`;
+  if (k === hudKey) return; hudKey = k;
+  $('#score').textContent = G.score; $('#level').textContent = `Màn ${G.level} · ${G.learned.length} từ`;
+  $('#lives').textContent = '♥'.repeat(Math.max(0, G.lives)) + '♡'.repeat(Math.max(0, 3 - G.lives));
+  $('#powers').innerHTML = ['fire', 'wide', 'slow'].filter(p => G.pw[p] > 0).map(p =>
+    `<div class="pchip" style="color:${POWERS[p].color}">${POWERS[p].name}<i><b style="width:${clamp(G.pw[p] / POWERS[p].time, 0, 1) * 100}%"></b></i></div>`).join('');
+}
+
+/* ---------- Bắt đầu / tạm dừng / kết thúc ---------- */
+const show = (id, on) => $(id).classList.toggle('show', on);
+function start() { audio(); newGame(); show('#startOv', false); show('#overOv', false); show('#pauseOv', false); document.body.classList.add('playing'); }
+function pause() { if (!G || G.state !== 'play') return; G.state = 'pause'; show('#pauseOv', true); document.body.classList.remove('playing'); }
+function resume() { if (!G) return; G.state = 'play'; show('#pauseOv', false); document.body.classList.add('playing'); last = performance.now(); }
+function gameOver() {
+  G.state = 'over'; document.body.classList.remove('playing'); input.left = input.right = false;
+  const best = Math.max(+store.get('bricks.best') || 0, G.score); store.set('bricks.best', best);
+  $('#oScore').textContent = G.score; $('#oLevel').textContent = G.level; $('#oWords').textContent = G.learned.length; $('#oBest').textContent = best;
+  $('#overTitle').textContent = G.score >= best && G.score > 0 ? 'Kỷ lục mới!' : 'Hết lượt!';
+  renderLearned(G.learned.slice(-40).reverse());
+  setTimeout(() => show('#overOv', true), 600);
+}
+/* Danh sách từ vừa phá: ☆ đánh dấu cần ôn; vuốt sang phải → Xoá (ẩn ở game, dashboard, mọi thiết bị; có Hoàn tác) */
+let LL = [];
+function rowHTML(o, i) {
+  if (o._gone) return `<div class="lw gone"><div class="in"><span>Đã xoá “${esc(o.w)}”</span><button class="undo" data-undo="${i}">Hoàn tác</button></div></div>`;
+  const on = SYNC && SYNC.isSaved(o.w);
+  return `<div class="lw" data-i="${i}"><button class="del" data-del="${i}">Xoá</button><div class="in">
+    <div class="t"><div class="w">${esc(o.w)}</div><div class="v">${esc(o.vi || '')}</div></div>
+    <button class="star${on ? ' on' : ''}" data-star="${i}" aria-label="Đánh dấu cần ôn">${on ? '★' : '☆'}</button></div></div>`;
+}
+function renderLearned(list) {
+  if (list) LL = list.map(o => Object.assign({}, o));
+  $('#learned').innerHTML = LL.length ? `<h3>Từ bạn đã phá trong lượt này</h3>
+    <p class="hint">☆ đánh dấu từ cần ôn (thành gạch vàng, bay nhiều hơn trên dashboard). Vuốt một từ sang phải để xoá khỏi game và dashboard ở mọi thiết bị.</p>`
+    + LL.map(rowHTML).join('') : '';
+}
+const lwBox = $('#learned');
+lwBox.addEventListener('click', e => {
+  if (!SYNC) return;
+  const star = e.target.closest('[data-star]'), del = e.target.closest('[data-del]'), undo = e.target.closest('[data-undo]');
+  if (star) {
+    const o = LL[+star.dataset.star];
+    if (SYNC.isSaved(o.w)) SYNC.removeWord(o.w);
+    else SYNC.saveWord({ w: o.w, ipa: o.ipa || '', pos: o.pos || '', vi: o.vi || '', ex: o.ex || '', col: o.col || [] });
+    renderLearned();
+  } else if (del) {
+    const o = LL[+del.dataset.del];
+    o._was = SYNC.isSaved(o.w) ? SYNC.words().find(x => x.w.toLowerCase() === o.w.toLowerCase()) : null;
+    SYNC.hideWord(o.w); o._gone = true; renderLearned();
+  } else if (undo) {
+    const o = LL[+undo.dataset.undo];
+    SYNC.unhideWord(o.w, o._was || null); o._gone = false; renderLearned();
+  }
+});
+let sw = null;
+lwBox.addEventListener('pointerdown', e => {
+  const row = e.target.closest('.lw'); if (!row || row.classList.contains('gone') || e.target.closest('button')) return;
+  sw = { row, x: e.clientX, y: e.clientY, dx: 0, on: row.classList.contains('armed') };
+});
+lwBox.addEventListener('pointermove', e => {
+  if (!sw) return;
+  const dx = e.clientX - sw.x, dy = e.clientY - sw.y;
+  if (Math.abs(dy) > 12 && Math.abs(dy) > Math.abs(dx)) { sw.row.querySelector('.in').style.transform = ''; sw = null; return; }
+  sw.dx = dx;
+  const inn = sw.row.querySelector('.in'); inn.style.transition = 'none'; inn.style.transform = `translateX(${clamp((sw.on ? 96 : 0) + dx, 0, 120)}px)`;
+});
+const swEnd = () => {
+  if (!sw) return;
+  const { row, dx, on } = sw; sw = null;
+  const inn = row.querySelector('.in'); inn.style.transition = ''; inn.style.transform = '';
+  lwBox.querySelectorAll('.lw.armed').forEach(r => { if (r !== row) r.classList.remove('armed'); });
+  row.classList.toggle('armed', on ? dx > -40 : dx > 60);
+};
+lwBox.addEventListener('pointerup', swEnd); lwBox.addEventListener('pointercancel', swEnd);
+
+$('#startBtn').onclick = start;
+$('#againBtn').onclick = async () => { await loadWords(); start(); };
+$('#pauseBtn').onclick = () => (G && G.state === 'pause') ? resume() : pause();
+$('#resumeBtn').onclick = resume;
+$('#quitBtn').onclick = () => { show('#pauseOv', false); G.state = 'play'; gameOver(); };
+document.addEventListener('visibilitychange', () => { if (document.hidden) pause(); });
+
+/* ---------- Chạy ---------- */
+let last = performance.now();
+function frame(now) {
+  const dt = Math.min(0.033, (now - last) / 1000); last = now;
+  if (G && (G.state === 'play' || G.state === 'between')) update(dt);
+  draw(dt);
+  requestAnimationFrame(frame);
+}
+resize();
+loadWords();
+if (SYNC) { SYNC.start(); SYNC.on(w => { if (w === 'data' && (!G || G.state === 'over')) loadWords(); }); }
+requestAnimationFrame(frame);
+window.__bricks = { get G() { return G; }, input, start, launch, givePower };   // để kiểm thử
+})();
+</script>
+</body>
+</html>
