@@ -2178,5 +2178,135 @@
       "stop fretting about it"
     ],
     "added": "2026-11-10"
+  },
+  {
+    "w": "cohort",
+    "ipa": "/ˈkəʊhɔːt/",
+    "pos": "noun",
+    "vi": "nhóm người dùng có chung đặc điểm hoặc thời điểm bắt đầu",
+    "ex": "We’re comparing the retention rates of each signup cohort.",
+    "col": [
+      "user cohort",
+      "cohort analysis",
+      "cohort retention"
+    ],
+    "added": "2026-11-11"
+  },
+  {
+    "w": "outperform",
+    "ipa": "/ˌaʊtpəˈfɔːm/",
+    "pos": "verb",
+    "vi": "vượt trội hơn, làm tốt hơn",
+    "ex": "The new creative actually outperformed our control ad by 30 percent.",
+    "col": [
+      "outperform expectations",
+      "outperform the benchmark",
+      "consistently outperform competitors"
+    ],
+    "added": "2026-11-11"
+  },
+  {
+    "w": "methodology",
+    "ipa": "/ˌmeθəˈdɒlədʒi/",
+    "pos": "noun",
+    "vi": "phương pháp luận, cách thức thực hiện có hệ thống",
+    "ex": "Can you walk me through the attribution methodology behind these numbers?",
+    "col": [
+      "research methodology",
+      "testing methodology",
+      "a sound methodology"
+    ],
+    "added": "2026-11-11"
+  },
+  {
+    "w": "compelling",
+    "ipa": "/kəmˈpelɪŋ/",
+    "pos": "adjective",
+    "vi": "thuyết phục, cuốn hút mạnh mẽ",
+    "ex": "The case study gives us a compelling story for the sales team.",
+    "col": [
+      "compelling evidence",
+      "compelling argument",
+      "a compelling offer"
+    ],
+    "added": "2026-11-11"
+  },
+  {
+    "w": "tighten",
+    "ipa": "/ˈtaɪtn/",
+    "pos": "verb",
+    "vi": "siết chặt, thắt chặt (ngân sách, tiêu chí)",
+    "ex": "We need to tighten targeting before the budget gets wasted on irrelevant clicks.",
+    "col": [
+      "tighten up the budget",
+      "tighten the targeting",
+      "tighten the belt"
+    ],
+    "added": "2026-11-11"
+  },
+  {
+    "w": "creative",
+    "ipa": "/kriˈeɪtɪv/",
+    "pos": "noun",
+    "vi": "nội dung sáng tạo của quảng cáo (hình ảnh, video, tiêu đề)",
+    "ex": "The creative is strong, but the landing page is dragging conversions down.",
+    "col": [
+      "ad creative",
+      "creative refresh",
+      "creative testing"
+    ],
+    "added": "2026-11-11"
+  },
+  {
+    "w": "lose touch with someone",
+    "ipa": "/luːz tʌtʃ wɪð ˈsʌmwʌn/",
+    "pos": "phrase",
+    "vi": "mất liên lạc với ai đó",
+    "ex": "We lost touch after university, but we reconnected on LinkedIn last year.",
+    "col": [
+      "gradually lose touch with someone",
+      "lose touch with old friends",
+      "lose touch with reality"
+    ],
+    "added": "2026-11-11"
+  },
+  {
+    "w": "apprehensive",
+    "ipa": "/ˌæprɪˈhensɪv/",
+    "pos": "adjective",
+    "vi": "lo lắng, e ngại về điều sắp xảy ra",
+    "ex": "I felt apprehensive before presenting to the board, but it went well.",
+    "col": [
+      "feel apprehensive about something",
+      "somewhat apprehensive",
+      "apprehensive about the future"
+    ],
+    "added": "2026-11-11"
+  },
+  {
+    "w": "envious",
+    "ipa": "/ˈenviəs/",
+    "pos": "adjective",
+    "vi": "ghen tị, thèm muốn điều người khác có",
+    "ex": "Honestly, I’m a bit envious of her ability to stay calm under pressure.",
+    "col": [
+      "envious of someone",
+      "envious glance",
+      "feel envious"
+    ],
+    "added": "2026-11-11"
+  },
+  {
+    "w": "make up one’s mind",
+    "ipa": "/meɪk ʌp wʌnz maɪnd/",
+    "pos": "idiom",
+    "vi": "quyết định dứt khoát",
+    "ex": "Let’s make up our minds on the budget before the Monday meeting.",
+    "col": [
+      "make up your mind",
+      "make up one’s mind about something",
+      "take time to make up one’s mind"
+    ],
+    "added": "2026-11-11"
   }
 ]

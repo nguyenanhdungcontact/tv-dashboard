@@ -1,6 +1,6 @@
 {
-  "date": "2026-11-10",
-  "updated": "Cập nhật 11:39 thứ Ba, 10/11/2026",
+  "date": "2026-11-11",
+  "updated": "Cập nhật 09:47 thứ Tư, 11/11/2026",
   "sections": [
     {
       "id": "hot",
@@ -8,31 +8,31 @@
       "color": "--c-hot",
       "items": [
         {
-          "title": "Dự toán thu ngân sách 2027 vượt 3,33 triệu tỷ đồng",
-          "summary": "Ngân sách năm 2027 dự kiến thu hơn 3,33 triệu tỷ đồng, trong đó nguồn thu từ nhà đất có thể chiếm gần một phần tư, tương đương hơn 775.000 tỷ đồng. Nguồn tích lũy cải cách tiền lương sẽ được dùng để điều chỉnh lương hưu và phụ cấp.",
+          "title": "Mỹ có thể đề xuất vẽ lại ranh giới Donbass để chấm dứt xung đột",
+          "summary": "Theo bài báo, Mỹ dường như đã đưa ra ý tưởng điều chỉnh lại ranh giới vùng Donbass. Theo đó, Nga sẽ tuyên bố kiểm soát vùng này, còn Ukraine không phải từ bỏ những khu vực còn lại.",
           "points": [],
           "why": "",
           "source": "VnExpress",
-          "date": "09/11",
-          "link": "https://vnexpress.net/ngan-sach-du-thu-hon-775-000-ty-dong-tu-nha-dat-nam-sau-5142350.html"
+          "date": "11/11",
+          "link": "https://vnexpress.net/my-co-the-da-de-xuat-ve-lai-ban-do-de-cham-dut-chien-su-ukraine-5143055.html"
         },
         {
-          "title": "Ông Trump thấy tín hiệu tích cực trong xung đột với Iran",
-          "summary": "Sau cuộc gặp Thủ tướng Qatar tại Nhà Trắng, Tổng thống Trump cho biết đã xuất hiện động lực tích cực hướng tới việc chấm dứt xung đột với Iran.",
+          "title": "Ngân hàng Ueno sụp đổ khiến Tổng thống Paraguay bị phế truất",
+          "summary": "Vụ sụp đổ của ngân hàng Ueno đã đóng băng tiền tiết kiệm của gần 3 triệu người dân Paraguay. Biến cố này cũng khiến Tổng thống Pena mất ghế.",
+          "points": [],
+          "why": "",
+          "source": "VnExpress",
+          "date": "11/11",
+          "link": "https://vnexpress.net/cu-sap-ngan-hang-khien-tong-thong-paraguay-bi-phe-truat-5142531.html"
+        },
+        {
+          "title": "Ngân hàng Nhà nước định kỳ mua USD từ các ngân hàng thương mại",
+          "summary": "Từ ngày 11/11, Ngân hàng Nhà nước quay lại mua ngoại tệ giao ngay từ các ngân hàng thương mại, mỗi tuần hai lần. Mức giá áp dụng là 25.500 đồng một USD.",
           "points": [],
           "why": "",
           "source": "VnExpress",
           "date": "10/11",
-          "link": "https://vnexpress.net/ong-trump-thay-tin-hieu-tich-cuc-trong-xung-dot-voi-iran-5142700.html"
-        },
-        {
-          "title": "Vàng thế giới tăng mạnh, giá dầu giảm sâu",
-          "summary": "Giá vàng thế giới tăng gần 70 USD mỗi ounce nhờ đồng đôla Mỹ suy yếu. Cùng lúc, giá dầu Brent giảm gần 6 USD mỗi thùng.",
-          "points": [],
-          "why": "",
-          "source": "VnExpress",
-          "date": "10/11",
-          "link": "https://vnexpress.net/gia-vang-the-gioi-tang-manh-gia-dau-lao-doc-5142686.html"
+          "link": "https://vnexpress.net/ngan-hang-nha-nuoc-se-dinh-ky-mua-usd-tu-cac-nha-bang-5142801.html"
         }
       ]
     },
@@ -42,8 +42,17 @@
       "color": "--c-work",
       "items": [
         {
-          "title": "Demand Gen đổi cách nhắm mục tiêu Display từ tuần 1/12/2026",
-          "summary": "Từ tuần đầu tiên của tháng 12 năm 2026, chiến dịch Demand Gen tạo mới sẽ mặc định bật nhắm mục tiêu Display ở cấp chiến dịch. Việc nhắm mạng Display sẽ được quản lý trực tiếp ở cấp nhóm quảng cáo thông qua các tùy chọn kiểm soát kênh.",
+          "title": "Google bắt đầu triển khai bản cập nhật lõi tháng 11/2026",
+          "summary": "Google vừa chính thức thông báo bắt đầu triển khai bản cập nhật lõi tháng 11/2026 vào chiều thứ Ba theo giờ miền Đông Mỹ. Quá trình triển khai dự kiến kéo dài khoảng 2 tuần. Đây là bản cập nhật định kỳ nhằm hiển thị tốt hơn nội dung phù hợp và hữu ích cho người tìm kiếm.",
+          "points": [],
+          "why": "",
+          "source": "Search Engine Roundtable",
+          "date": "11/11",
+          "link": "https://www.seroundtable.com/google-november-2026-core-update-42504.html"
+        },
+        {
+          "title": "Demand Gen thay đổi cách nhắm mục tiêu Display từ tuần 1/12/2026",
+          "summary": "Từ tuần bắt đầu ngày 1/12/2026, với chiến dịch Demand Gen tạo mới, thiết lập nhắm mục tiêu Display ở cấp chiến dịch sẽ mặc định được bật. Việc nhắm mục tiêu mạng Display sẽ được quản lý trực tiếp ở cấp nhóm quảng cáo thông qua các tùy chọn kiểm soát kênh.",
           "points": [],
           "why": "",
           "source": "Google Ads Developer Blog",
@@ -51,22 +60,13 @@
           "link": "http://ads-developers.googleblog.com/2026/11/display-targeting-changes-in-demand-gen.html"
         },
         {
-          "title": "Google thử nghiệm tóm tắt AI phía trên và trong quảng cáo",
-          "summary": "Google đang thử thêm nhiều bản tóm tắt do AI tạo ra trong quảng cáo tìm kiếm. Một bản tóm tắt nằm phía trên nhóm kết quả được tài trợ, gộp nội dung quảng cáo của mọi nhà quảng cáo, và có thêm tóm tắt AI bên dưới phần mô tả của từng quảng cáo.",
+          "title": "ChatGPT ra mắt trung tâm doanh nghiệp có số liệu lượt nhấp",
+          "summary": "OpenAI vừa giới thiệu ChatGPT Business Hub, nơi doanh nghiệp xem số liệu về lượt được nhắc đến và lượt xem hồ sơ. Đáng chú ý, công cụ này còn cho biết có bao nhiêu người nhấp từ ChatGPT sang website của doanh nghiệp.",
           "points": [],
           "why": "",
           "source": "Search Engine Roundtable",
-          "date": "09/11",
-          "link": "https://www.seroundtable.com/google-ads-ai-generated-summaries-42482.html"
-        },
-        {
-          "title": "Quảng cáo Multiturn trong AI Mode đã xuất hiện",
-          "summary": "Vài tuần sau khi Google công bố, quảng cáo Multiturn, tức quảng cáo hiện ở phản hồi cho các câu hỏi tiếp theo của người dùng, dường như đã chạy thật. Tác giả thử AI Mode vào chiều thứ Sáu và chia sẻ ảnh chụp cùng video minh họa.",
-          "points": [],
-          "why": "",
-          "source": "Search Engine Roundtable",
-          "date": "09/11",
-          "link": "https://www.seroundtable.com/google-ai-mode-multiturn-ads-42478.html"
+          "date": "11/11",
+          "link": "https://www.seroundtable.com/chatgpt-business-hub-42505.html"
         }
       ]
     },
@@ -76,31 +76,31 @@
       "color": "--c-life",
       "items": [
         {
-          "title": "Khởi công cải tạo rạch Văn Thánh, vốn hơn 8.500 tỷ đồng",
-          "summary": "Dự án cải tạo rạch Văn Thánh dài 2,2 km đã khởi công gói thầu đầu tiên vào sáng 9/11. Tổng vốn hơn 8.500 tỷ đồng, nhằm giảm ô nhiễm và chỉnh trang đô thị khu trung tâm TP HCM.",
-          "points": [],
-          "why": "",
-          "source": "VnExpress",
-          "date": "09/11",
-          "link": "https://vnexpress.net/khoi-cong-cai-tao-rach-van-thanh-o-trung-tam-tp-hcm-5142379.html"
-        },
-        {
-          "title": "Cao tốc TP HCM đi Cần Thơ hạn chế làn trong 20 ngày",
-          "summary": "Cao tốc TP HCM - Trung Lương - Mỹ Thuận tạm dừng khai thác làn số 1 theo hướng về miền Tây, đoạn qua xã Thủ Thừa. Việc hạn chế diễn ra từ 22h đến 6h trong 20 ngày để lắp dầm cầu.",
-          "points": [],
-          "why": "",
-          "source": "VnExpress",
-          "date": "10/11",
-          "link": "https://vnexpress.net/cao-toc-tu-tp-hcm-di-can-tho-dieu-chinh-giao-thong-20-ngay-5142724.html"
-        },
-        {
-          "title": "TP.HCM bắt đầu cắt điện, nước công trình và cơ sở vi phạm",
-          "summary": "UBND TP.HCM yêu cầu các địa phương thực hiện quy định cắt điện, nước với công trình vi phạm xây dựng và cơ sở gây ô nhiễm môi trường mà không chịu khắc phục.",
+          "title": "Giá dầu thế giới giảm, xăng dầu trong nước có thể giảm mạnh ngày mai",
+          "summary": "Giá dầu thế giới tiếp tục giảm, xuống mức thấp nhất trong 2 tháng qua, kéo giá xăng dầu thành phẩm tại châu Á đi xuống. Dự báo kỳ điều chỉnh ngày 12/11 giá xăng dầu trong nước giảm đồng loạt, trong đó dầu diesel có thể giảm tới 2.000 đồng mỗi lít.",
           "points": [],
           "why": "",
           "source": "Thanh Niên",
+          "date": "11/11",
+          "link": "https://thanhnien.vn/gia-xang-dau-hom-nay-11112026-dau-diesel-sap-co-dot-giam-gia-manh-185261111081857441.htm"
+        },
+        {
+          "title": "TP.HCM nâng trần phí quản lý chung cư lên 13.700 đồng mỗi m2",
+          "summary": "Khung giá dịch vụ quản lý chung cư mới tại TP.HCM dao động từ 600 đến 13.700 đồng mỗi m2 mỗi tháng. Mức trần mới tăng gần gấp đôi so với quy định cũ.",
+          "points": [],
+          "why": "",
+          "source": "VnExpress",
           "date": "10/11",
-          "link": "https://thanhnien.vn/tphcm-bat-dau-cat-dien-nuoc-co-so-gay-o-nhiem-cong-trinh-vi-pham-xay-dung-185261110101345208.htm"
+          "link": "https://vnexpress.net/tp-hcm-nang-tran-khung-phi-quan-ly-chung-cu-len-toi-da-13-700-dong-moi-m2-5142712.html"
+        },
+        {
+          "title": "Cao tốc TP.HCM - Long Thành dần thành hình sau hơn một năm mở rộng",
+          "summary": "Sau hơn một năm thi công, nhiều đoạn cao tốc nối TP.HCM với sân bay Long Thành đã được mở rộng lên 10-12 làn xe. Các cây cầu và nút giao lớn cũng dần hiện rõ hình hài.",
+          "points": [],
+          "why": "",
+          "source": "VnExpress",
+          "date": "11/11",
+          "link": "https://vnexpress.net/cao-toc-tp-hcm-long-thanh-sau-hon-mot-nam-mo-rong-5142778.html"
         }
       ]
     },
@@ -110,31 +110,31 @@
       "color": "--c-heart",
       "items": [
         {
-          "title": "Hai chị em Đắk Lắk có 6 thân nhân là liệt sĩ đi lấy mẫu ADN",
-          "summary": "Hai chị em ở Đắk Lắk có 6 người thân hy sinh trong kháng chiến. Họ đến buổi lấy mẫu ADN để giúp xác định danh tính cho 4 liệt sĩ là cậu ruột của mình.",
+          "title": "Hai thanh niên tranh thủ ngoài giờ làm để vá ổ gà",
+          "summary": "Anh Nguyễn Văn Tân làm nghề cắt tóc, tận dụng thời gian rảnh ra đường vá ổ gà. Anh tự bỏ tiền mua vật liệu với mong muốn người dân đi lại an toàn hơn.",
+          "points": [],
+          "why": "",
+          "source": "Thanh Niên",
+          "date": "11/11",
+          "link": "https://thanhnien.vn/hai-thanh-nien-ngoai-gio-lam-la-ra-duong-va-o-ga-185261110211653915.htm"
+        },
+        {
+          "title": "Bài học lớn về lòng nhân ái từ những đứa trẻ khó khăn",
+          "summary": "Tác giả nhớ lại thời sinh viên năm ba Đại học Sư phạm TP.HCM, từng tình nguyện dạy kèm học sinh có hoàn cảnh khó khăn tại Trường Phổ cập Ánh Sáng ở Quận 3. Kỷ niệm ấy đến nay vẫn còn nguyên cảm xúc ấm áp và xúc động.",
+          "points": [],
+          "why": "",
+          "source": "Thanh Niên",
+          "date": "11/11",
+          "link": "https://thanhnien.vn/nhung-trai-tim-nho-va-bai-hoc-lon-ve-long-nhan-ai-185261107145549403.htm"
+        },
+        {
+          "title": "Trường không điện thoại biến giờ ra chơi thành khoảng thời gian vui vẻ",
+          "summary": "Tại Trường THPT Nguyễn Thượng Hiền (TP.HCM), học sinh không còn ngồi dán mắt vào điện thoại trong giờ giải lao. Nhà trường duy trì kỷ luật nghiêm và tổ chức các hoạt động trải nghiệm, giúp 45 phút ra chơi trở thành không gian sinh hoạt học đường đúng nghĩa.",
           "points": [],
           "why": "",
           "source": "Tuổi Trẻ",
-          "date": "10/11",
-          "link": "https://tuoitre.vn/tam-su-xuc-dong-cua-nguoi-co-6-than-nhan-la-liet-si-tai-buoi-lay-mau-adn-100261110095657537.htm"
-        },
-        {
-          "title": "Người đàn ông ngồi xe lăn đi du lịch khắp 7 châu lục",
-          "summary": "Ở tuổi 36, dù bị khuyết tật, Cory Lee đã đặt chân đến 56 quốc gia và vùng lãnh thổ trên cả 7 châu lục, kể cả Nam Cực.",
-          "points": [],
-          "why": "",
-          "source": "Tuổi Trẻ",
-          "date": "10/11",
-          "link": "https://tuoitre.vn/ngoi-xe-lan-du-lich-hang-chuc-quoc-gia-7-chau-luc-100261109164029698.htm"
-        },
-        {
-          "title": "Bác sĩ trẻ ban ngày thực hành, tối chạy xe ôm công nghệ",
-          "summary": "Hoàng Đức Hùng kết thúc ca thực hành tại Bệnh viện Châm cứu Trung ương lúc 17h. Sau đó anh cởi áo blouse, khoác đồng phục xe ôm công nghệ để bắt đầu ca làm buổi tối.",
-          "points": [],
-          "why": "",
-          "source": "VnExpress",
-          "date": "10/11",
-          "link": "https://vnexpress.net/bac-si-tre-ngay-khoac-blouse-toi-chay-xe-om-cong-nghe-5142151.html"
+          "date": "11/11",
+          "link": "https://tuoitre.vn/nhung-ngoi-truong-khong-dien-thoai-45-phut-ra-choi-hanh-phuc-100261110205129604.htm"
         }
       ]
     }
