@@ -2308,5 +2308,135 @@
       "take time to make up one’s mind"
     ],
     "added": "2026-11-11"
+  },
+  {
+    "w": "negotiate",
+    "ipa": "/nɪˈɡəʊʃieɪt/",
+    "pos": "verb",
+    "vi": "đàm phán, thương lượng",
+    "ex": "We’ll need to negotiate a lower CPC before renewing the contract.",
+    "col": [
+      "negotiate terms",
+      "negotiate a deal",
+      "negotiate a better rate"
+    ],
+    "added": "2026-11-12"
+  },
+  {
+    "w": "quantify",
+    "ipa": "/ˈkwɒntɪfaɪ/",
+    "pos": "verb",
+    "vi": "định lượng, đo lường thành con số cụ thể",
+    "ex": "It’s hard to quantify brand awareness without a proper survey.",
+    "col": [
+      "quantify the impact",
+      "quantify results",
+      "hard to quantify"
+    ],
+    "added": "2026-11-12"
+  },
+  {
+    "w": "accountable",
+    "ipa": "/əˈkaʊntəbl/",
+    "pos": "adjective",
+    "vi": "chịu trách nhiệm, phải giải trình",
+    "ex": "Every channel owner should be accountable for their own budget.",
+    "col": [
+      "accountable for results",
+      "hold someone accountable",
+      "feel accountable"
+    ],
+    "added": "2026-11-12"
+  },
+  {
+    "w": "proactive",
+    "ipa": "/prəʊˈæktɪv/",
+    "pos": "adjective",
+    "vi": "chủ động",
+    "ex": "Being proactive about budget pacing saved us from overspending twice.",
+    "col": [
+      "proactive approach",
+      "be proactive about",
+      "proactive monitoring"
+    ],
+    "added": "2026-11-12"
+  },
+  {
+    "w": "monetize",
+    "ipa": "/ˈmɒnɪtaɪz/",
+    "pos": "verb",
+    "vi": "biến thành tiền, kiếm tiền từ",
+    "ex": "The team wants to monetize the newsletter through sponsored placements.",
+    "col": [
+      "monetize traffic",
+      "monetize the audience",
+      "monetize content"
+    ],
+    "added": "2026-11-12"
+  },
+  {
+    "w": "engagement",
+    "ipa": "/ɪnˈɡeɪdʒmənt/",
+    "pos": "noun",
+    "vi": "mức độ tương tác, sự gắn kết",
+    "ex": "Engagement dropped after we changed the ad copy on mobile.",
+    "col": [
+      "boost engagement",
+      "engagement rate",
+      "meaningful engagement"
+    ],
+    "added": "2026-11-12"
+  },
+  {
+    "w": "dwell on",
+    "ipa": "/dwel ɒn/",
+    "pos": "phrasal verb",
+    "vi": "day dứt, cứ nghĩ mãi về điều gì",
+    "ex": "Don’t dwell on the failed campaign; focus on what we learned.",
+    "col": [
+      "dwell on the past",
+      "dwell on mistakes",
+      "dwell on negative thoughts"
+    ],
+    "added": "2026-11-12"
+  },
+  {
+    "w": "resonate with",
+    "ipa": "/ˈrezəneɪt wɪð/",
+    "pos": "phrasal verb",
+    "vi": "gây được tiếng vang, chạm đến ai đó",
+    "ex": "Our new message really resonated with younger customers in Hanoi.",
+    "col": [
+      "resonate with audiences",
+      "resonate with someone",
+      "a message that resonates"
+    ],
+    "added": "2026-11-12"
+  },
+  {
+    "w": "estranged",
+    "ipa": "/ɪˈstreɪndʒd/",
+    "pos": "adjective",
+    "vi": "xa cách, không còn gần gũi (vì mâu thuẫn)",
+    "ex": "He’s been estranged from his brother since their father’s funeral.",
+    "col": [
+      "become estranged",
+      "estranged from family",
+      "estranged couple"
+    ],
+    "added": "2026-11-12"
+  },
+  {
+    "w": "compassionate",
+    "ipa": "/kəmˈpæʃənət/",
+    "pos": "adjective",
+    "vi": "giàu lòng trắc ẩn, thấu cảm",
+    "ex": "She’s compassionate with her team when someone is struggling personally.",
+    "col": [
+      "compassionate leader",
+      "compassionate approach",
+      "deeply compassionate"
+    ],
+    "added": "2026-11-12"
   }
 ]
