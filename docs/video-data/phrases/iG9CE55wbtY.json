@@ -1,0 +1,143 @@
+{
+ "id": "iG9CE55wbtY",
+ "created": "2026-11-12",
+ "source": "youtube-manual",
+ "language": "en",
+ "ai": "gemini-3.6-flash",
+ "summary_vi": "Diễn giả Sir Ken Robinson nhấn mạnh tầm quan trọng của sự sáng tạo trong giáo dục và cho rằng nó nên được coi trọng ngang hàng với kỹ năng đọc viết. Ông cảnh báo rằng hệ thống giáo dục hiện đại đang vô tình làm mai một tài năng bẩm sinh của trẻ em do quá tập trung vào thành tích học thuật và sự sợ hãi phạm sai lầm.",
+ "level": "C1",
+ "phrases": [
+  {
+   "t": 33.41,
+   "d": 2.32,
+   "phrase": "be blown away by something",
+   "ipa": "/biː bloʊn əˈweɪ baɪ ˈsʌmθɪŋ/",
+   "quote": "I've been blown away by the whole thing.",
+   "meaning_vi": "bị ấn tượng mạnh mẽ, bị cuốn hút",
+   "usage_vi": "Dùng trong giao tiếp và IELTS Speaking để diễn tả cảm giác vô cùng kinh ngạc hoặc thán phục trước điều gì.",
+   "example_en": "I was completely blown away by the incredible talent of the young performers.",
+   "example_vi": "Tôi hoàn toàn bị ấn tượng mạnh mẽ bởi tài năng kinh ngạc của các diễn viên trẻ."
+  },
+  {
+   "t": 130.03,
+   "d": 1.8,
+   "phrase": "vested interest",
+   "ipa": "/ˈvɛstəd ˈɪntrəst/",
+   "quote": "We have a huge vested interest in it,",
+   "meaning_vi": "quyền lợi gắn liền, lợi ích cá nhân",
+   "usage_vi": "Rất hữu ích cho IELTS Writing Task 2 & Speaking Part 3 khi giải thích lý do một cá nhân hoặc tổ chức quan tâm sâu sắc đến một chủ đề.",
+   "example_en": "Parents have a vested interest in improving the quality of local education.",
+   "example_vi": "Phụ huynh có lợi ích gắn liền trong việc nâng cao chất lượng giáo dục địa phương."
+  },
+  {
+   "t": 188.7,
+   "d": 2.39,
+   "phrase": "squander",
+   "ipa": "/ˈskwɑːndər/",
+   "quote": "and we squander them, pretty ruthlessly.",
+   "meaning_vi": "lãng phí, phung phí (tài năng, cơ hội, tiền bạc)",
+   "usage_vi": "Từ vựng C1 đắt giá cho IELTS Writing & Speaking khi phê bình việc không biết trân trọng hoặc tận dụng nguồn lực.",
+   "example_en": "Many promising young athletes squander their talent because they lack self-discipline.",
+   "example_vi": "Nhiều vận động viên trẻ đầy triển vọng lãng phí tài năng của mình vì thiếu tính kỷ luật bản thân."
+  },
+  {
+   "t": 335.71,
+   "d": 3.09,
+   "phrase": "take a chance",
+   "ipa": "/teɪk ə tʃæns/",
+   "quote": "What these things have in common is that kids will take a chance.",
+   "meaning_vi": "mạo hiểm, sẵn sàng nắm bắt cơ hội",
+   "usage_vi": "Diễn tả hành động dám thử sức dù chưa biết chắc kết quả, thích hợp cho các bài nói về khởi nghiệp hay phát triển bản thân.",
+   "example_en": "If you want to advance your career, you need to be willing to take a chance on new responsibilities.",
+   "example_vi": "Nếu bạn muốn thăng tiến sự nghiệp, bạn cần sẵn sàng mạo hiểm đảm nhận những trách nhiệm mới."
+  },
+  {
+   "t": 338.82,
+   "d": 3.48,
+   "phrase": "have a go",
+   "ipa": "/hæv ə ɡoʊ/",
+   "quote": "If they don't know, they'll have a go.",
+   "meaning_vi": "thử làm việc gì đó",
+   "usage_vi": "Cụm từ giao tiếp rất tự nhiên trong tiếng Anh, hay dùng trong IELTS Speaking khi kể về trải nghiệm thử sức với điều mới.",
+   "example_en": "Even though I had never played tennis before, I decided to have a go during the vacation.",
+   "example_vi": "Mặc dù trước đây tôi chưa từng chơi quần vợt, tôi vẫn quyết định thử chơi trong kỳ nghỉ."
+  },
+  {
+   "t": 366.66,
+   "d": 1.65,
+   "phrase": "stigmatize",
+   "ipa": "/ˈstɪɡmətaɪz/",
+   "quote": "We stigmatize mistakes.",
+   "meaning_vi": "kỳ thị, coi là đáng xấu hổ",
+   "usage_vi": "Dùng trong IELTS Writing Task 2 khi thảo luận về định kiến xã hội, sai lầm, hoặc các vấn đề tâm lý.",
+   "example_en": "Modern schools should encourage innovation rather than stigmatize students who make mistakes.",
+   "example_vi": "Trường học hiện đại nên khuyến khích sự đổi mới thay vì kỳ thị những học sinh mắc sai lầm."
+  },
+  {
+   "t": 588.0,
+   "d": 2.73,
+   "phrase": "brownie points",
+   "ipa": "/ˈbraʊni pɔɪnts/",
+   "quote": "who gets all the brownie points, who are the winners --",
+   "meaning_vi": "điểm cộng, sự ghi nhận hoặc khen ngợi",
+   "usage_vi": "Thành ngữ thân mật miêu tả việc cố gắng làm điều gì đó tốt để lấy lòng hoặc được người khác (sếp, thầy cô) khen ngợi.",
+   "example_en": "She stayed late at the office to finish the report and earn some brownie points with her supervisor.",
+   "example_vi": "Cô ấy ở lại văn phòng muộn để hoàn thiện báo cáo nhằm lấy điểm cộng với cấp trên."
+  },
+  {
+   "t": 724.25,
+   "d": 3.66,
+   "phrase": "protracted process",
+   "ipa": "/prəˈtræktəd ˈprɑːsɛs/",
+   "quote": "the whole system of public education around the world is a protracted process",
+   "meaning_vi": "quá trình kéo dài, dai dẳng",
+   "usage_vi": "Cụm C1/C2 trang trọng, rất thích hợp dùng trong IELTS Writing Task 2 khi miêu tả quy trình, đàm phán hay thủ tục.",
+   "example_en": "Applying for a international visa can sometimes be a protracted process.",
+   "example_vi": "Việc xin thị thực quốc tế đôi khi có thể là một quá trình kéo dài dai dẳng."
+  },
+  {
+   "t": 782.2,
+   "d": 1.78,
+   "phrase": "academic inflation",
+   "ipa": "/ˌækəˈdɛmɪk ɪnˈfleɪʃən/",
+   "quote": "It's a process of academic inflation.",
+   "meaning_vi": "sự lạm phát bằng cấp",
+   "usage_vi": "Thuật ngữ chuyên môn xuất sắc trong bài luận IELTS chủ đề Giáo dục và Việc làm (Education & Employment).",
+   "example_en": "Academic inflation has made a master's degree essential for entry-level positions.",
+   "example_vi": "Sự lạm phát bằng cấp đã khiến bằng thạc sĩ trở nên thiết yếu ngay cả đối với các vị trí công việc khởi điểm."
+  },
+  {
+   "t": 820.51,
+   "d": 1.93,
+   "phrase": "more often than not",
+   "ipa": "/mɔːr ˈɔːfən ðæn nɑːt/",
+   "quote": "more often than not comes about",
+   "meaning_vi": "thường xuyên, hầu như luôn luôn",
+   "usage_vi": "Cụm trạng từ nối tự nhiên giúp nâng điểm Lexical Resource trong IELTS Speaking & Writing thay cho 'usually'.",
+   "example_en": "More often than not, successful entrepreneurs failure multiple times before reaching their goals.",
+   "example_vi": "Hầu như luôn luôn, các doanh nhân thành công đều trải qua thất bại nhiều lần trước khi đạt mục tiêu."
+  },
+  {
+   "t": 909.11,
+   "d": 2.5,
+   "phrase": "epiphany",
+   "ipa": "/ɪˈpɪfəni/",
+   "quote": "I'm doing a new book at the moment called \"Epiphany,\"",
+   "meaning_vi": "khoảnh khắc ngộ ra, nhận ra điều cốt yếu",
+   "usage_vi": "Từ vựng C2 nâng cao dùng trong IELTS Speaking Part 2 khi kể về một bước ngoặt tư duy hoặc trải nghiệm đột phá.",
+   "example_en": "While traveling abroad, she had an epiphany about what she truly wanted to do with her life.",
+   "example_vi": "Trong khi đi du lịch nước ngoài, cô ấy đã có một khoảnh khắc ngộ ra điều cô thực sự muốn làm với cuộc đời mình."
+  },
+  {
+   "t": 1096.52,
+   "d": 3.44,
+   "phrase": "strip-mine",
+   "ipa": "/ˈstrɪp maɪn/",
+   "quote": "in the way that we strip-mine the earth for a particular commodity.",
+   "meaning_vi": "khai thác kiệt quệ, bóc ngắn cắn dài",
+   "usage_vi": "Động từ dùng theo nghĩa đen (khai thác mỏ lộ thiên) hoặc ẩn dụ (vắt kiệt chất xám, tiềm năng hay tài nguyên).",
+   "example_en": "Intense exam pressure can strip-mine students' genuine enthusiasm for learning.",
+   "example_vi": "Áp lực thi cử gay gắt có thể vắt kiệt niềm hứng thú học tập chân chính của học sinh."
+  }
+ ]
+}

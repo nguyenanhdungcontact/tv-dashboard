@@ -1,0 +1,121 @@
+{
+ "id": "y-Isi60Gz8k",
+ "created": "2026-11-12",
+ "source": "youtube-manual",
+ "language": "en",
+ "ai": "gemini-3.6-flash",
+ "summary_vi": "Trong video này, creator He Tongxue (Richard) chia sẻ về hành trình phát triển kênh công nghệ HTX Studio, cách họ tìm kiếm tài trợ và nảy ra ý tưởng cho các dự án DIY độc đáo. Anh cũng chia sẻ hậu trường làm video vất vả nhưng đầy cảm hứng cùng mục tiêu mang lại niềm vui cho người xem.",
+ "level": "B2",
+ "phrases": [
+  {
+   "t": 116.6,
+   "d": 1.53,
+   "phrase": "come up with",
+   "ipa": "/kʌm ʌp wɪð/",
+   "quote": "Coming up with good ideas",
+   "meaning_vi": "nảy ra, nghĩ ra (ý tưởng, giải pháp)",
+   "usage_vi": "Rất phổ biến trong IELTS Speaking và Writing khi thảo luận về việc giải quyết vấn đề hoặc đổi mới sáng tạo.",
+   "example_en": "The design team needs to come up with a better solution before the deadline.",
+   "example_vi": "Đội ngũ thiết kế cần nghĩ ra một giải pháp tốt hơn trước thời hạn."
+  },
+  {
+   "t": 159.57,
+   "d": 1.07,
+   "phrase": "figure things out as you go",
+   "ipa": "/ˈfɪɡjər θɪŋz aʊt æz juː ɡoʊ/",
+   "quote": "I hope you liked them We definitely figure things out as we go",
+   "meaning_vi": "vừa làm vừa rút kinh nghiệm, ứng biến theo tình hình",
+   "usage_vi": "Dùng để miêu tả việc bắt tay vào làm điều gì đó mới mà không có kế hoạch hoàn hảo từ trước.",
+   "example_en": "Starting a business is terrifying, but you just have to figure things out as you go.",
+   "example_vi": "Khởi nghiệp rất đáng sợ, nhưng bạn chỉ cần vừa làm vừa học hỏi thôi."
+  },
+  {
+   "t": 238.25,
+   "d": 1.4,
+   "phrase": "take a different approach",
+   "ipa": "/teɪk ə ˈdɪfrənt əˈproʊtʃ/",
+   "quote": "try a different approach",
+   "meaning_vi": "thử một phương pháp/cách tiếp cận khác",
+   "usage_vi": "Cực kỳ ăn điểm trong IELTS Writing Task 2 và Speaking khi đề xuất giải pháp mới hoặc thay đổi chiến lược.",
+   "example_en": "If the current marketing strategy fails, we will take a different approach.",
+   "example_vi": "Nếu chiến lược tiếp thị hiện tại thất bại, chúng tôi sẽ thử một cách tiếp cận khác."
+  },
+  {
+   "t": 301.82,
+   "d": 2.3,
+   "phrase": "in midair",
+   "ipa": "/ɪn ˌmɪdˈɛr/",
+   "quote": "To make two things hit each other in midair",
+   "meaning_vi": "ở lơ lửng trên không trung",
+   "usage_vi": "Dùng làm trạng từ miêu tả hành động hoặc sự vật xuất hiện/xảy ra khi chưa chạm đất.",
+   "example_en": "The acrobat caught her partner's hands in midair during the performance.",
+   "example_vi": "Nữ diễn viên xiếc đã nắm lấy tay bạn diễn trên không trung trong suốt buổi biểu diễn."
+  },
+  {
+   "t": 368.28,
+   "d": 2.0,
+   "phrase": "a huge gap",
+   "ipa": "/ə hjuːdʒ ɡæp/",
+   "quote": "you'll know there's a huge gap",
+   "meaning_vi": "khoảng cách lớn, sự chênh lệch lớn",
+   "usage_vi": "Hữu ích trong IELTS Task 2/Speaking khi so sánh giữa lý thuyết và thực hành, hoặc khoảng cách thế hệ.",
+   "example_en": "There is often a huge gap between academic theories and practical business experience.",
+   "example_vi": "Thường có một khoảng cách rất lớn giữa lý thuyết học thuật và kinh nghiệm kinh doanh thực tế."
+  },
+  {
+   "t": 375.89,
+   "d": 3.54,
+   "phrase": "run smoothly",
+   "ipa": "/rʌn ˈsmuːðli/",
+   "quote": "getting it to run smoothly was a long and painful process",
+   "meaning_vi": "vận hành trơn tru, diễn ra suôn sẻ",
+   "usage_vi": "Collocation quen thuộc dùng cho máy móc, phần mềm, sự kiện hoặc kế hoạch công việc.",
+   "example_en": "After updating the system, the mobile app started to run smoothly.",
+   "example_vi": "Sau khi cập nhật hệ thống, ứng dụng di động đã bắt đầu vận hành trơn tru."
+  },
+  {
+   "t": 390.1,
+   "d": 0.77,
+   "phrase": "sunk cost",
+   "ipa": "/sʌŋk kɑːst/",
+   "quote": "Sunk cost",
+   "meaning_vi": "chi phí chìm (khoản đầu tư đã bỏ ra không thể thu hồi)",
+   "usage_vi": "Thuật ngữ kinh tế/tâm lý học giúp nâng band Lexical Resource trong IELTS khi nói về việc ra quyết định.",
+   "example_en": "Don't pour more money into a failing venture just because of sunk cost.",
+   "example_vi": "Đừng đổ thêm tiền vào một dự án thất bại chỉ vì tiếc chi phí chìm đã bỏ ra."
+  },
+  {
+   "t": 471.12,
+   "d": 1.64,
+   "phrase": "be meant to be",
+   "ipa": "/bi mɛnt tə bi/",
+   "quote": "So I guess it was meant to be",
+   "meaning_vi": "được định sẵn, là duyên số",
+   "usage_vi": "Dùng trong giao tiếp khi nói về mối quan hệ nhân duyên hoặc những sự kiện trùng hợp mang tính định mệnh.",
+   "example_en": "They met by chance in Tokyo and felt their relationship was meant to be.",
+   "example_vi": "Họ tình cờ gặp nhau ở Tokyo và cảm thấy mối quan hệ của họ là do định mệnh."
+  },
+  {
+   "t": 513.53,
+   "d": 1.23,
+   "phrase": "be worth it",
+   "ipa": "/bi wɜːrθ ɪt/",
+   "quote": "it was all worth it",
+   "meaning_vi": "xứng đáng (với công sức hay chi phí bỏ ra)",
+   "usage_vi": "Diễn đạt rất tự nhiên trong IELTS Speaking khi nhận xét về một chuyến đi, công việc hay mục tiêu gian khổ.",
+   "example_en": "Preparing for the exam took months, but getting the high score made it all worth it.",
+   "example_vi": "Chuẩn bị cho kỳ thi mất nhiều tháng, nhưng đạt điểm cao khiến mọi nỗ lực đều hoàn toàn xứng đáng."
+  },
+  {
+   "t": 559.21,
+   "d": 2.17,
+   "phrase": "have something to do with",
+   "ipa": "/hæv ˈsʌmθɪŋ tə duː wɪð/",
+   "quote": "and I didn't have many friends",
+   "meaning_vi": "có liên quan đến, xuất phát từ lý do nào đó",
+   "usage_vi": "Cấu trúc giao tiếp ăn điểm IELTS Speaking khi giải thích nguyên nhân gián tiếp của một vấn đề.",
+   "example_en": "Her interest in architecture might have something to do with growing up in Italy.",
+   "example_vi": "Sự yêu thích kiến trúc của cô ấy có thể có liên quan đến việc lớn lên ở Ý."
+  }
+ ]
+}

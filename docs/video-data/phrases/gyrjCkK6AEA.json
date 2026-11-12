@@ -1,0 +1,143 @@
+{
+ "id": "gyrjCkK6AEA",
+ "created": "2026-11-12",
+ "source": "youtube-manual",
+ "language": "en",
+ "ai": "gemini-3.6-flash",
+ "summary_vi": "Video giới thiệu các tính năng mới và cải tiến đáng chú ý trên bản cập nhật iOS và iPadOS 27 Public Beta. Tác giả nhấn mạnh vào widget siêu lớn, cải tiến Safari, nâng cấp ứng dụng Shortcuts và hệ thống Siri AI hoàn toàn mới.",
+ "level": "C1",
+ "phrases": [
+  {
+   "t": 9.52,
+   "d": 4.48,
+   "phrase": "deep dive",
+   "ipa": "/ˈdiːp daɪv/",
+   "quote": "I'm going to have my deep dive walkthroughs of the OS updates in the fall like I normally do.",
+   "meaning_vi": "sự phân tích / tìm hiểu sâu rộng",
+   "usage_vi": "Dùng khi nói về việc nghiên cứu kỹ lưỡng một chủ đề, sản phẩm hoặc báo cáo chi tiết.",
+   "example_en": "Before starting the project, the team conducted a deep dive into customer feedback.",
+   "example_vi": "Trước khi bắt đầu dự án, nhóm đã tiến hành nghiên cứu sâu vào ý kiến phản hồi của khách hàng."
+  },
+  {
+   "t": 99.54,
+   "d": 4.96,
+   "phrase": "check off one's wishlist",
+   "ipa": "/tʃɛk ɑːf wʌnz ˈwɪʃlɪst/",
+   "quote": "A feature I can finally check off my wishlist. If you're using an iPad with an external monitor,",
+   "meaning_vi": "hoàn thành một mục trong danh sách nguyện vọng",
+   "usage_vi": "Rất hay dùng trong IELTS Speaking Part 1/2 khi chia sẻ về việc đạt được mục tiêu cá nhân hay trải nghiệm du lịch.",
+   "example_en": "Visiting the Great Wall of China was an item I finally got to check off my wishlist.",
+   "example_vi": "Đến thăm Vạn Lý Trường Thành là mục tiêu mà cuối cùng tôi cũng gạch được khỏi danh sách ước nguyện của mình."
+  },
+  {
+   "t": 117.48,
+   "d": 7.04,
+   "phrase": "a fair way of putting it",
+   "ipa": "/ə fɛr weɪ ʌv ˈpʊtɪŋ ɪt/",
+   "quote": "including iOS and iPadOS. And some people liked it more than others, I think is a fair way of putting it.",
+   "meaning_vi": "một cách nhận xét/diễn đạt hợp lý",
+   "usage_vi": "Thích hợp dùng trong thảo luận hoặc IELTS Speaking để thừa nhận một quan điểm một cách khéo léo.",
+   "example_en": "Calling the exam challenging is a fair way of putting it, considering how many students failed.",
+   "example_vi": "Nói kỳ thi này đầy thách thức là một cách diễn đạt hợp lý, xét đến số lượng sinh viên bị trượt."
+  },
+  {
+   "t": 145.76,
+   "d": 4.56,
+   "phrase": "killer feature",
+   "ipa": "/ˈkɪlər ˈfiːtʃər/",
+   "quote": "when you have multiple things on top of each other. Safari got some killer features.",
+   "meaning_vi": "tính năng vượt trội / điểm bán hàng đắt giá",
+   "usage_vi": "Dùng khi miêu tả ưu điểm ăn tiền nhất của một phần mềm, công nghệ hoặc sản phẩm dịch vụ.",
+   "example_en": "Long battery life is the killer feature of this new smartphone model.",
+   "example_vi": "Thời lượng pin dài chính là tính năng ăn tiền của mẫu điện thoại thông minh mới này."
+  },
+  {
+   "t": 322.5,
+   "d": 5.14,
+   "phrase": "defeat the purpose",
+   "ipa": "/dɪˈfiːt ðə ˈpɜːrpəs/",
+   "quote": "And keeping logs using a VPN just defeats the purpose. But having a VPN isn't just about security,",
+   "meaning_vi": "làm mất đi mục đích ban đầu",
+   "usage_vi": "Điểm cộng lớn cho IELTS Speaking/Writing khi lập luận về tính hiệu quả của một hành động hay chính sách.",
+   "example_en": "Buying cheap tools that break easily defeats the purpose of trying to save money.",
+   "example_vi": "Mua dụng cụ rẻ tiền nhưng dễ hỏng sẽ làm mất đi mục đích tiết kiệm tiền ban đầu."
+  },
+  {
+   "t": 447.02,
+   "d": 6.32,
+   "phrase": "nail something",
+   "ipa": "/neɪl ˈsʌmθɪŋ/",
+   "quote": "So I just told it to make one of those, and it nailed it. And then I did talk to it a little bit and…",
+   "meaning_vi": "làm hoàn hảo / thực hiện xuất sắc",
+   "usage_vi": "Thường dùng trong tiếng Anh giao tiếp tự nhiên để khen ngợi ai đó làm thành công bài thi, buổi thuyết trình.",
+   "example_en": "She spent weeks practicing her presentation and completely nailed it.",
+   "example_vi": "Cô ấy đã dành nhiều tuần luyện tập bài thuyết trình và đã làm vô cùng xuất sắc."
+  },
+  {
+   "t": 486.58,
+   "d": 4.26,
+   "phrase": "get an overhaul",
+   "ipa": "/ɡɛt ən ˈoʊvərhɔːl/",
+   "quote": "I've been playing around with this and I'm pretty happy. Automations got an overhaul as well.",
+   "meaning_vi": "được cải tổ / đại tu toàn bộ",
+   "usage_vi": "Phù hợp dùng cho IELTS Writing và Speaking khi bàn về việc nâng cấp hệ thống, quy trình hoặc hạ tầng.",
+   "example_en": "The public transport system needs to get a major overhaul to meet peak demand.",
+   "example_vi": "Hệ thống giao thông công cộng cần được đại tu toàn bộ để đáp ứng nhu cầu vào giờ cao điểm."
+  },
+  {
+   "t": 726.52,
+   "d": 7.3,
+   "phrase": "from the ground up",
+   "ipa": "/frʌm ðə ɡraʊnd ʌp/",
+   "quote": "but it sounds really good and very natural. Spotlight has been completely rebuilt from the ground up.",
+   "meaning_vi": "từ con số không / từ gốc đến ngọn",
+   "usage_vi": "Dùng để diễn tả việc xây dựng, thiết kế hay tái tạo thứ gì đó hoàn toàn mới ngay từ đầu.",
+   "example_en": "The company built its new software architecture from the ground up to ensure security.",
+   "example_vi": "Công ty đã xây dựng kiến trúc phần mềm mới của mình từ gốc đến ngọn để đảm bảo tính bảo mật."
+  },
+  {
+   "t": 751.3,
+   "d": 6.8,
+   "phrase": "point out",
+   "ipa": "/pɔɪnt aʊt/",
+   "quote": "I have a feeling it'll get faster, but I did want to point out right now, It is a little sluggish for me.",
+   "meaning_vi": "chỉ ra / nhấn mạnh lưu ý",
+   "usage_vi": "Phù hợp dùng trong thuyết trình, giao tiếp công việc hoặc bài viết IELTS Academic để đưa ra nhận xét.",
+   "example_en": "The lecturer pointed out several flaws in the initial research methodology.",
+   "example_vi": "Giảng viên đã chỉ ra một số thiếu sót trong phương pháp nghiên cứu ban đầu."
+  },
+  {
+   "t": 813.2,
+   "d": 7.34,
+   "phrase": "over the top",
+   "ipa": "/ˈoʊvər ðə tɑːp/",
+   "quote": "On the iPad, it has this killer animation that you can do. You can move it around. Like, so over the top, but perfect.",
+   "meaning_vi": "quá mức cần thiết / phô trương",
+   "usage_vi": "Dùng trong giao tiếp hàng ngày để nhận xét về thiết kế, hành vi hoặc phong cách làm quá đà.",
+   "example_en": "Her birthday decorations were a bit over the top, but everyone enjoyed the party.",
+   "example_vi": "Trang trí sinh nhật của cô ấy hơi quá đà một chút, nhưng mọi người đều thích bữa tiệc."
+  },
+  {
+   "t": 892.8,
+   "d": 4.0,
+   "phrase": "run-on sentence",
+   "ipa": "/ˈrʌn.ɑːn ˈsɛntəns/",
+   "quote": "I do a lot of run-on sentences or anything like that, and it'll take care of that for you.",
+   "meaning_vi": "câu lê thê (lỗi nối nhiều mệnh đề không đúng ngữ pháp)",
+   "usage_vi": "Dùng trong chủ đề học thuật, học ngoại ngữ hoặc nhận xét về kỹ năng viết lách.",
+   "example_en": "Try to break up long run-on sentences to make your essay clearer.",
+   "example_vi": "Hãy cố gắng ngắt các câu lê thê ra để bài viết của bạn trở nên rõ ràng hơn."
+  },
+  {
+   "t": 925.24,
+   "d": 8.12,
+   "phrase": "follow up",
+   "ipa": "/ˈfɑːloʊ ʌp/",
+   "quote": "This way, if you make complex mistakes that the built in proofreading system doesn't get, there's a way to kind of follow up and have…",
+   "meaning_vi": "tiếp tục theo dõi / xử lý bổ sung",
+   "usage_vi": "Cụm động từ vô cùng phổ biến trong giao tiếp công việc, trao đổi email và làm việc nhóm.",
+   "example_en": "I will send an email to follow up on our discussion from yesterday's meeting.",
+   "example_vi": "Tôi sẽ gửi email để theo dõi tiếp nội dung thảo luận từ cuộc họp ngày hôm qua."
+  }
+ ]
+}

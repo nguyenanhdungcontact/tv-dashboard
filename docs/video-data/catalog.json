@@ -373,8 +373,8 @@
    "dur": "21:02",
    "added": "2026-11-01",
    "published": "",
-   "n": 0,
-   "level": ""
+   "n": 12,
+   "level": "C1"
   },
   {
    "id": "arj7oStGLkU",
@@ -384,8 +384,8 @@
    "dur": "14:03",
    "added": "2026-11-01",
    "published": "",
-   "n": 0,
-   "level": ""
+   "n": 11,
+   "level": "C1"
   },
   {
    "id": "iG9CE55wbtY",
@@ -395,8 +395,8 @@
    "dur": "20:03",
    "added": "2026-11-01",
    "published": "",
-   "n": 0,
-   "level": ""
+   "n": 12,
+   "level": "C1"
   },
   {
    "id": "h6fcK_fRYaI",
@@ -606,6 +606,138 @@
    "published": "",
    "n": 12,
    "level": "C1"
+  },
+  {
+   "id": "86dSixZOtFo",
+   "row": "travel",
+   "title": "we are pregnant",
+   "channel": "Kara and Nate",
+   "dur": "21:12",
+   "added": "2026-11-12",
+   "published": "2026-08-23",
+   "level": "B2",
+   "n": 12
+  },
+  {
+   "id": "frl6fnb-Hu8",
+   "row": "travel",
+   "title": "wholesome camping trip with my girls (+ my reading & writing goals)",
+   "channel": "Claire Holt",
+   "dur": "23:36",
+   "added": "2026-11-12",
+   "published": "2026-09-30",
+   "level": "C1",
+   "n": 13
+  },
+  {
+   "id": "imYb9esIC28",
+   "row": "travel",
+   "title": "go on that solo trip",
+   "channel": "Joshua Paine",
+   "dur": "20:05",
+   "added": "2026-11-12",
+   "published": "2026-07-26",
+   "level": "C1",
+   "n": 11
+  },
+  {
+   "id": "gyrjCkK6AEA",
+   "row": "tech",
+   "title": "iOS & iPadOS 27 Is Like Butter… Smooth",
+   "channel": "Christopher Lawley",
+   "dur": "16:25",
+   "added": "2026-11-12",
+   "published": "2026-07-22",
+   "level": "C1",
+   "n": 12
+  },
+  {
+   "id": "y-Isi60Gz8k",
+   "row": "tech",
+   "title": "What Does Our Company Actually Do?| HTX Studio’s Q&A",
+   "channel": "HTX Studio",
+   "dur": "10:17",
+   "added": "2026-11-12",
+   "published": "2026-10-29",
+   "level": "B2",
+   "n": 10
+  },
+  {
+   "id": "U-w7Koq_LkE",
+   "row": "life",
+   "title": "I made a terrible mistake with the house.",
+   "channel": "Nathaniel Drew",
+   "dur": "11:29",
+   "added": "2026-11-12",
+   "published": "2026-02-02",
+   "level": "C1",
+   "n": 11
+  },
+  {
+   "id": "LBgjki-bf1k",
+   "row": "biz",
+   "title": "This is what your job actually is as a business owner",
+   "channel": "Ross Harkness",
+   "dur": "7:38",
+   "added": "2026-11-12",
+   "published": "2026-10-18",
+   "level": "B2",
+   "n": 12
+  },
+  {
+   "id": "9Hwanevuhd8",
+   "row": "learn",
+   "title": "6 Insanely Practical AI Tips (in 18 minutes)",
+   "channel": "Jeff Su",
+   "dur": "18:10",
+   "added": "2026-11-12",
+   "published": "2026-11-10",
+   "level": "C1",
+   "n": 12
+  },
+  {
+   "id": "pTdvsfIMGes",
+   "row": "ted",
+   "title": "How People Are Using AI to Grieve, Love and Connect | Jennifer Cearns | TED",
+   "channel": "TED",
+   "dur": "14:02",
+   "added": "2026-11-12",
+   "published": "2026-11-10",
+   "level": "C1",
+   "n": 12
+  },
+  {
+   "id": "B74hdg_zo3Q",
+   "row": "world",
+   "title": "The untold history of diabetes and Black Americans",
+   "channel": "Vox",
+   "dur": "9:33",
+   "added": "2026-11-12",
+   "published": "2026-11-11",
+   "level": "C1",
+   "n": 13
+  },
+  {
+   "id": "7cZcawTt5kg",
+   "row": "talk",
+   "title": "How Narcissists Get What They Want Without Ever Asking",
+   "channel": "DoctorRamani",
+   "dur": "11:02",
+   "added": "2026-11-12",
+   "published": "2026-11-09",
+   "level": "C1",
+   "n": 12
+  },
+  {
+   "id": "1iQigUJx33s",
+   "row": "travel",
+   "title": "the art of going alone",
+   "channel": "Joshua Paine",
+   "dur": "16:40",
+   "added": "2026-11-12",
+   "published": "2026-07-12",
+   "level": "B2",
+   "n": 12
   }
  ]
 }

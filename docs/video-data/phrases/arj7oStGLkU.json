@@ -1,0 +1,132 @@
+{
+ "id": "arj7oStGLkU",
+ "created": "2026-11-12",
+ "source": "youtube-manual",
+ "language": "en",
+ "ai": "gemini-3.6-flash",
+ "summary_vi": "Tim Urban chia sẻ góc nhìn hài hước nhưng sâu sắc về cơ chế trì hoãn thông qua hình ảnh chú khỉ đòi thỏa mãn tức thì và quái vật hoảng loạn. Bài nói cảnh báo về tác hại thầm lặng của sự trì hoãn dài hạn - nơi không có hạn chót - và nhắc nhở chúng ta trân trọng quỹ thời gian có hạn của cuộc đời.",
+ "level": "C1",
+ "phrases": [
+  {
+   "t": 21.5,
+   "d": 2.37,
+   "phrase": "spread something out",
+   "ipa": "/sprɛd ˈsʌmθɪŋ aʊt/",
+   "quote": "they might spread the work out a little like this.",
+   "meaning_vi": "phân bổ công việc/thời gian đều ra",
+   "usage_vi": "Dùng khi nói về việc lập kế hoạch chia nhỏ khối lượng công việc theo thời gian thay vì dồn vào một lúc.",
+   "example_en": "Instead of cramming the night before the exam, it is much better to spread your revision out over several weeks.",
+   "example_vi": "Thay vì học dồn vào đêm trước ngày thi, tốt hơn nhiều là bạn nên phân bổ thời gian ôn tập đều ra nhiều tuần."
+  },
+  {
+   "t": 73.59,
+   "d": 2.63,
+   "phrase": "kick into high gear",
+   "ipa": "/kɪk ˈɪntu haɪ ɡɪr/",
+   "quote": "and then at the end, I would kick it up into high gear",
+   "meaning_vi": "tăng tốc, bắt đầu hoạt động hết công suất",
+   "usage_vi": "Rất thích hợp dùng trong IELTS Speaking để miêu tả giai đoạn một dự án hay công việc bước vào thời điểm quyết liệt.",
+   "example_en": "As the product launch date approached, the entire marketing team kicked into high gear.",
+   "example_vi": "Khi ngày ra mắt sản phẩm đến gần, toàn bộ đội ngũ tiếp thị đã bắt đầu hoạt động hết công suất."
+  },
+  {
+   "t": 120.17,
+   "d": 2.28,
+   "phrase": "pull an all-nighter",
+   "ipa": "/pʊl æn ˌɔːlˈnaɪtər/",
+   "quote": "pulling not one but two all-nighters --",
+   "meaning_vi": "thức trắng đêm để làm việc hoặc học bài",
+   "usage_vi": "Cụm từ tự nhiên dùng trong đời sống hàng ngày cũng như IELTS Speaking khi kể về trải nghiệm học tập, làm việc dưới áp lực.",
+   "example_en": "I had to pull an all-nighter to finish the market research report before the client meeting.",
+   "example_vi": "Tôi đã phải thức trắng đêm để hoàn thành báo cáo nghiên cứu thị trường trước cuộc họp với khách hàng."
+  },
+  {
+   "t": 259.29,
+   "d": 1.51,
+   "phrase": "take the wheel",
+   "ipa": "/teɪk ðə wiːl/",
+   "quote": "so he actually takes the wheel,",
+   "meaning_vi": "nắm quyền kiểm soát, chèo lái",
+   "usage_vi": "Thường dùng theo nghĩa ẩn dụ khi ai đó hoặc yếu tố nào đó đứng ra tiếp quản, điều hành một tình huống.",
+   "example_en": "When the project manager fell ill, Sarah stepped up to take the wheel and guide the team to completion.",
+   "example_vi": "Khi quản lý dự án bị ốm, Sarah đã đứng ra chèo lái và dẫn dắt đội ngũ hoàn thành công việc."
+  },
+  {
+   "t": 358.8,
+   "d": 2.48,
+   "phrase": "take something into account",
+   "ipa": "/teɪk ˈsʌmθɪŋ ˈɪntu əˈkaʊnt/",
+   "quote": "And he wants to take all of that into account.",
+   "meaning_vi": "cân nhắc, tính đến một yếu tố nào đó",
+   "usage_vi": "Cụm từ ăn điểm cao trong IELTS Writing Task 2 và Speaking Part 3 dùng khi xem xét kỹ các khía cạnh của một vấn đề.",
+   "example_en": "Urban planners must take future population growth into account when designing public transport systems.",
+   "example_vi": "Các nhà hoạch định đô thị phải tính đến sự gia tăng dân số trong tương lai khi thiết kế hệ thống giao thông công cộng."
+  },
+  {
+   "t": 384.03,
+   "d": 1.54,
+   "phrase": "for the sake of something",
+   "ipa": "/fɔːr ðə seɪk ʌv ˈsʌmθɪŋ/",
+   "quote": "for the sake of the big picture.",
+   "meaning_vi": "vì lợi ích / vì mục đích của cái gì",
+   "usage_vi": "Dùng trong cả văn viết chính thức và văn nói để giải thích động cơ đạt được lợi ích dài hạn.",
+   "example_en": "Many people choose to reduce their consumption of processed foods for the sake of their long-term health.",
+   "example_vi": "Nhiều người chọn giảm tiêu thụ thực phẩm chế biến sẵn vì lợi ích sức khỏe lâu dài của họ."
+  },
+  {
+   "t": 557.43,
+   "d": 2.45,
+   "phrase": "lose one's mind",
+   "ipa": "/luːz wʌnz maɪnd/",
+   "quote": "So the Panic Monster starts losing his mind,",
+   "meaning_vi": "hoảng loạn, phát điên, mất trí",
+   "usage_vi": "Thường dùng trong IELTS Speaking Part 1 & 2 để mô tả cảm xúc khi gặp áp lực cực lớn hoặc sự cố bất ngờ.",
+   "example_en": "I thought I was going to lose my mind when I realized I had left my passport at home right before my flight.",
+   "example_vi": "Tôi tưởng như sắp phát điên khi nhận ra mình đã quên hộ chiếu ở nhà ngay trước giờ bay."
+  },
+  {
+   "t": 589.4,
+   "d": 2.77,
+   "phrase": "work ethic",
+   "ipa": "/wɜːrk ˈɛθɪk/",
+   "quote": "and then miraculously find the unbelievable work ethic",
+   "meaning_vi": "tinh thần trách nhiệm với công việc",
+   "usage_vi": "Từ vựng C1 rất hay dùng trong chủ đề Work/Education để khen ngợi sự chăm chỉ và tính kỉ luật của cá nhân.",
+   "example_en": "Employers strongly value candidates who demonstrate a strong work ethic and adaptability.",
+   "example_vi": "Các nhà tuyển dụng đánh giá rất cao những ứng viên thể hiện tinh thần trách nhiệm cao trong công việc và khả năng thích ứng."
+  },
+  {
+   "t": 674.82,
+   "d": 2.69,
+   "phrase": "self-starter",
+   "ipa": "/ˌsɛlf ˈstɑːrtər/",
+   "quote": "So if you wanted a career where you're a self-starter --",
+   "meaning_vi": "người chủ động, tự giác làm việc",
+   "usage_vi": "Danh từ C1 rất tốt để tự tả bản thân hoặc mô tả tố chất cần có của người làm tự do, khởi nghiệp.",
+   "example_en": "Working remotely requires you to be a disciplined self-starter who can manage time effectively without supervision.",
+   "example_vi": "Làm việc từ xa đòi hỏi bạn phải là một người tự giác có kỷ luật, có thể quản lý thời gian hiệu quả mà không cần sự giám sát."
+  },
+  {
+   "t": 685.78,
+   "d": 1.63,
+   "phrase": "get momentum",
+   "ipa": "/ɡɛt moʊˈmɛntəm/",
+   "quote": "to get momentum, get things going.",
+   "meaning_vi": "tạo được đà phát triển, lấy được đà",
+   "usage_vi": "Dùng khi mô tả một công việc, thói quen hoặc dự án bắt đầu có tiến triển thuận lợi và tăng tốc.",
+   "example_en": "Once the startup got momentum after its first successful funding round, it expanded rapidly across the region.",
+   "example_vi": "Một khi công ty khởi nghiệp lấy được đà phát triển sau vòng gọi vốn thành công đầu tiên, nó đã mở rộng nhanh chóng ra khắp khu vực."
+  },
+  {
+   "t": 756.71,
+   "d": 4.18,
+   "phrase": "have an epiphany",
+   "ipa": "/hæv æn ɪˈpɪfəni/",
+   "quote": "So I read these emails and I had a little bit of an epiphany --",
+   "meaning_vi": "bất ngờ nhận ra / ngộ ra một sự thật quan trọng",
+   "usage_vi": "Cụm C2 ấn tượng trong IELTS Speaking Part 2 khi kể về một khoảnh khắc bước ngoặt làm thay đổi suy nghĩ.",
+   "example_en": "She had an epiphany while traveling alone, realizing she wanted to change her career path entirely.",
+   "example_vi": "Cô ấy đã ngộ ra một điều quan trọng trong chuyến du lịch một mình, nhận ra rằng mình muốn thay đổi hoàn toàn định hướng nghề nghiệp."
+  }
+ ]
+}

@@ -1,0 +1,154 @@
+{
+ "id": "B74hdg_zo3Q",
+ "created": "2026-11-12",
+ "source": "youtube-manual",
+ "language": "en-US",
+ "ai": "gemini-3.6-flash",
+ "summary_vi": "Video giải thích lịch sử định kiến y tế tại Mỹ dẫn đến việc người da đen chịu tỷ lệ mắc bệnh tiểu đường cao nhưng lại khó tiếp cận các dòng thuốc GLP-1 mới nhất. Qua đó, video nhấn mạnh rằng giải pháp lâu dài đòi hỏi phải giải quyết các yếu tố kinh tế - xã hội cốt lõi chứ không chỉ dựa vào dược phẩm.",
+ "level": "C1",
+ "phrases": [
+  {
+   "t": 0.03,
+   "d": 3.0,
+   "phrase": "be all the rage",
+   "ipa": "/biː ɔːl ðə reɪdʒ/",
+   "quote": "GLP-1s are now all the rage.",
+   "meaning_vi": "đang rất thịnh hành, tạo cơn sốt",
+   "usage_vi": "Dùng để mô tả một xu hướng, sản phẩm hoặc công nghệ đang cực kỳ phổ biến tại một thời điểm.",
+   "example_en": "Electric cars are all the rage in major European cities these days.",
+   "example_vi": "Xe điện đang cực kỳ thịnh hành ở các thành phố lớn tại Châu Âu dạo này."
+  },
+  {
+   "t": 58.19,
+   "d": 3.0,
+   "phrase": "first in line",
+   "ipa": "/fɜːrst ɪn laɪn/",
+   "quote": "to be among the first in line for this lifesaving medicine.",
+   "meaning_vi": "được ưu tiên hàng đầu, xếp đầu danh sách",
+   "usage_vi": "Dùng khi nói về người hoặc đối tượng có quyền hoặc khả năng nhận được điều gì đó sớm nhất.",
+   "example_en": "Tech-savvy professionals are often first in line to try out new software tools.",
+   "example_vi": "Những chuyên gia am hiểu công nghệ thường là những người đầu tiên dùng thử các công cụ phần mềm mới."
+  },
+  {
+   "t": 82.65,
+   "d": 4.5,
+   "phrase": "lie in",
+   "ipa": "/laɪ ɪn/",
+   "quote": "the most? Part of that answer lies in the long history of misconceptions",
+   "meaning_vi": "nằm ở, bắt nguồn từ",
+   "usage_vi": "Dùng để giải thích nguyên nhân gốc rễ hoặc bản chất của một vấn đề trong tranh luận.",
+   "example_en": "The secret to successful teamwork lies in open communication and mutual trust.",
+   "example_vi": "Bí quyết để làm việc nhóm thành công nằm ở sự giao tiếp cởi mở và niềm tin lẫn nhau."
+  },
+  {
+   "t": 134.17,
+   "d": 3.3,
+   "phrase": "health disparities",
+   "ipa": "/hɛlθ dɪˈspærətiːz/",
+   "quote": "and class to explain health disparities.",
+   "meaning_vi": "sự chênh lệch/bất bình đẳng về y tế",
+   "usage_vi": "Cụm danh từ học thuật chủ đề xã hội và sức khỏe, rất thích hợp cho IELTS Writing Task 2.",
+   "example_en": "Governments must implement policies to reduce health disparities between urban and rural populations.",
+   "example_vi": "Các chính phủ phải thực thi chính sách để giảm thiểu sự bất bình đẳng y tế giữa dân số thành thị và nông thôn."
+  },
+  {
+   "t": 198.16,
+   "d": 3.37,
+   "phrase": "turn up",
+   "ipa": "/tɜːrn ʌp/",
+   "quote": "Rather, they're noticing who turned up in their practices,",
+   "meaning_vi": "xuất hiện, có mặt",
+   "usage_vi": "Cụm động từ tự nhiên dùng khi ai đó xuất hiện tại một sự kiện, địa điểm hoặc cuộc hẹn.",
+   "example_en": "Surprisingly, over a hundred applicants turned up for the job interview.",
+   "example_vi": "Thật kinh ngạc khi hơn một trăm ứng viên đã xuất hiện tại buổi phỏng vấn xin việc."
+  },
+  {
+   "t": 245.91,
+   "d": 5.54,
+   "phrase": "fathom",
+   "ipa": "/ˈfæðəm/",
+   "quote": "fathom that anyone whose skin was dark could possibly have diabetes.",
+   "meaning_vi": "hiểu thấu, hình dung nổi",
+   "usage_vi": "Thường dùng ở dạng phủ định (cannot/couldn't fathom) để diễn tả sự ngạc nhiên hoặc khó tin.",
+   "example_en": "I cannot fathom why anyone would choose to travel without travel insurance.",
+   "example_vi": "Tôi không thể hiểu nổi tại sao lại có người chọn đi du lịch mà không mua bảo hiểm du lịch."
+  },
+  {
+   "t": 302.83,
+   "d": 3.5,
+   "phrase": "play a role in",
+   "ipa": "/pleɪ ə roʊl ɪn/",
+   "quote": "But this did not eliminate the ways race and class played a role",
+   "meaning_vi": "đóng vai trò trong",
+   "usage_vi": "Diễn tả sự đóng góp hoặc ảnh hưởng của một yếu tố lên kết quả chung, dùng phổ biến trong cả Speaking và Writing.",
+   "example_en": "Dietary habits play a crucial role in maintaining long-term physical well-being.",
+   "example_vi": "Thói quen ăn uống đóng vai trò quan trọng trong việc duy trì sức khỏe thể chất lâu dài."
+  },
+  {
+   "t": 337.04,
+   "d": 2.7,
+   "phrase": "multifactorial",
+   "ipa": "/ˌmʌltiˌfækˈtɔːriəl/",
+   "quote": "The truth is that it's multifactorial.",
+   "meaning_vi": "do nhiều yếu tố tạo thành",
+   "usage_vi": "Tính từ học thuật dùng để phân tích các vấn đề phức tạp có nhiều nguyên nhân kết hợp.",
+   "example_en": "Economic inequality is a multifactorial issue that cannot be solved by a single policy.",
+   "example_vi": "Bất bình đẳng kinh tế là một vấn đề do nhiều yếu tố tạo thành, không thể giải quyết bằng một chính sách đơn lẻ."
+  },
+  {
+   "t": 376.18,
+   "d": 3.1,
+   "phrase": "catch up with",
+   "ipa": "/kætʃ ʌp wɪð/",
+   "quote": "where healthcare is still catching up with the consequences of",
+   "meaning_vi": "gánh chịu hậu quả từ, bắt kịp",
+   "usage_vi": "Dùng theo nghĩa bóng khi những hành động hay thói quen sai lầm trong quá khứ bắt đầu gây ra hậu quả xấu.",
+   "example_en": "Years of poor sleeping habits eventually caught up with his health.",
+   "example_vi": "Nhiều năm duy trì thói quen ngủ kém cuối cùng đã ảnh hưởng xấu đến sức khỏe của anh ấy."
+  },
+  {
+   "t": 390.42,
+   "d": 4.65,
+   "phrase": "play out",
+   "ipa": "/pleɪ aʊt/",
+   "quote": "Now we're seeing that play out again with access to the new class of GLP-1",
+   "meaning_vi": "diễn ra, tiến triển",
+   "usage_vi": "Mô tả cách một tình huống, cuộc khủng hoảng hoặc xu hướng diễn tiến theo thời gian.",
+   "example_en": "We will have to wait and see how the economic crisis plays out in the coming months.",
+   "example_vi": "Chúng ta sẽ phải chờ xem cuộc khủng hoảng kinh tế diễn ra như thế nào trong những tháng tới."
+  },
+  {
+   "t": 454.55,
+   "d": 3.84,
+   "phrase": "step into the ring",
+   "ipa": "/stɛp ˈɪntuː ðə rɪŋ/",
+   "quote": "Organizations like the NAACP are also stepping into the ring",
+   "meaning_vi": "tham gia vào cuộc chiến/thử thách",
+   "usage_vi": "Thành ngữ hình ảnh dùng khi cá nhân hoặc tổ chức tham gia giải quyết một cuộc tranh luận hay xung đột.",
+   "example_en": "Several non-profit organizations stepped into the ring to defend workers' rights.",
+   "example_vi": "Nhiều tổ chức phi lợi nhuận đã tham gia vào cuộc chiến để bảo vệ quyền lợi của người lao động."
+  },
+  {
+   "t": 508.61,
+   "d": 5.14,
+   "phrase": "address the underlying issues",
+   "ipa": "/əˈdrɛs ðə ˌʌndərˈlaɪɪŋ ˈɪʃuːz/",
+   "quote": "But more pharmaceutical solutions won't fully address the underlying issues.",
+   "meaning_vi": "giải quyết các vấn đề cốt lõi/gốc rễ",
+   "usage_vi": "Cụm từ ăn điểm cao trong IELTS Writing khi đề xuất giải pháp xử lý triệt để nguyên nhân sâu xa.",
+   "example_en": "Poverty reduction programs must address the underlying issues such as lack of education and employment opportunities.",
+   "example_vi": "Các chương trình giảm nghèo phải giải quyết các vấn đề gốc rễ như thiếu giáo dục và cơ hội việc làm."
+  },
+  {
+   "t": 513.78,
+   "d": 3.9,
+   "phrase": "a milestone in",
+   "ipa": "/ə ˈmaɪlstoʊn ɪn/",
+   "quote": "I think that GLP-1s are a milestone in medical history",
+   "meaning_vi": "cột mốc quan trọng trong",
+   "usage_vi": "Dùng để mô tả một sự kiện hoặc bước tiến quan trọng đánh dấu sự thay đổi lớn.",
+   "example_en": "The launch of the new AI model marks a major milestone in technological innovation.",
+   "example_vi": "Việc ra mắt mô hình AI mới đánh dấu một cột mốc quan trọng trong đổi mới công nghệ."
+  }
+ ]
+}

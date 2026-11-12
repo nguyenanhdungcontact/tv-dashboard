@@ -1,0 +1,143 @@
+{
+ "id": "Ks-_Mh1QhMc",
+ "created": "2026-11-12",
+ "source": "youtube-manual",
+ "language": "en",
+ "ai": "gemini-3.6-flash",
+ "summary_vi": "Diễn giả Amy Cuddy giải thích cách ngôn ngữ cơ thể không chỉ tác động đến đánh giá của người khác mà còn làm thay đổi nồng độ hormone và tâm lý của chính chúng ta. Việc thực hành các tư thế quyền lực (power posing) trong 2 phút trước tình huống áp lực có thể giúp tăng sự tự tin và mang lại kết quả tích cực.",
+ "level": "C1",
+ "phrases": [
+  {
+   "t": 59.28,
+   "d": 3.41,
+   "phrase": "unfold",
+   "ipa": "/ʌnˈfoʊld/",
+   "quote": "it could significantly change the way your life unfolds.",
+   "meaning_vi": "diễn ra, mở ra (sự việc, cuộc sống)",
+   "usage_vi": "Dùng khi miêu tả cách các sự kiện, câu chuyện hoặc cuộc đời phát triển theo thời gian.",
+   "example_en": "As the story unfolded, the audience was completely captivated by the plot twists.",
+   "example_vi": "Khi câu chuyện diễn ra, khán giả hoàn toàn bị cuốn hút bởi những bước ngoặt của cốt truyện."
+  },
+  {
+   "t": 141.47,
+   "d": 3.42,
+   "phrase": "sweeping judgment",
+   "ipa": "/ˈswiːpɪŋ ˈdʒʌdʒmənt/",
+   "quote": "And we make sweeping judgments and inferences from body language.",
+   "meaning_vi": "đánh giá vội vã, vơ đũa cả nắm",
+   "usage_vi": "Dùng khi chỉ sự nhận xét quá khái quát hoặc vội vàng mà chưa cân nhắc kỹ thông tin chi tiết.",
+   "example_en": "It is unfair to make a sweeping judgment about a candidate based solely on their appearance.",
+   "example_vi": "Thật không công bằng khi đưa ra đánh giá vội vã về một ứng viên chỉ dựa vào vẻ ngoài của họ."
+  },
+  {
+   "t": 426.64,
+   "d": 3.53,
+   "phrase": "fake it till you make it",
+   "ipa": "/feɪk ɪt tɪl juː meɪk ɪt/",
+   "quote": "and I really wanted to know, can you fake it till you make it?",
+   "meaning_vi": "giả vờ tự tin cho đến khi thành công thật",
+   "usage_vi": "Dùng như một lời khuyên để khuyến khích ai đó hành động tự tin ngay cả khi họ đang lo lắng.",
+   "example_en": "When starting a new leadership role, sometimes you just have to fake it till you make it.",
+   "example_vi": "Khi mới đảm nhận vị trí lãnh đạo, đôi khi bạn đành phải giả vờ tự tin cho đến khi thực sự làm chủ được nó."
+  },
+  {
+   "t": 570.92,
+   "d": 2.72,
+   "phrase": "stress-reactive",
+   "ipa": "/stres riˈæktɪv/",
+   "quote": "high on testosterone, but really stress reactive?",
+   "meaning_vi": "phản ứng mạnh với căng thẳng",
+   "usage_vi": "Dùng để mô tả tính cách hoặc trạng thái sinh lý dễ mất bình tĩnh khi chịu áp lực.",
+   "example_en": "Great leaders tend to stay calm under pressure rather than becoming highly stress-reactive.",
+   "example_vi": "Những nhà lãnh đạo tuyệt vời có xu hướng giữ bình tĩnh dưới áp lực thay vì phản ứng quá đà với căng thẳng."
+  },
+  {
+   "t": 704.63,
+   "d": 3.98,
+   "phrase": "whopping",
+   "ipa": "/ˈwɑːpɪŋ/",
+   "quote": "only 60 percent, and that's a whopping significant difference.",
+   "meaning_vi": "cực kỳ to lớn, khổng lồ",
+   "usage_vi": "Dùng làm tính từ trước một con số hoặc sự so sánh để nhấn mạnh độ lớn bất ngờ.",
+   "example_en": "The company reported a whopping 50 percent increase in annual revenue.",
+   "example_vi": "Công ty đã báo cáo mức tăng doanh thu hàng năm cực kỳ ấn tượng lên tới 50%."
+  },
+  {
+   "t": 775.21,
+   "d": 6.74,
+   "phrase": "evaluative situation",
+   "ipa": "/ɪˈvæljuətɪv ˌsɪtʃuˈeɪʃn/",
+   "quote": "And so we think where you want to use this is evaluative situations,",
+   "meaning_vi": "tình huống bị đánh giá hoặc kiểm tra năng lực",
+   "usage_vi": "Dùng trong bối cảnh thi cử, phỏng vấn xin việc hay thuyết trình trước cấp trên.",
+   "example_en": "Nervousness is a completely natural reaction when facing an evaluative situation like an IELTS speaking exam.",
+   "example_vi": "Cảm giác hồi hộp là phản ứng hoàn toàn tự nhiên khi đối mặt với một tình huống bị đánh giá như bài thi nói IELTS."
+  },
+  {
+   "t": 867.35,
+   "d": 4.6,
+   "phrase": "heckle",
+   "ipa": "/ˈhekl/",
+   "quote": "So for five minutes, nothing, and this is worse than being heckled.",
+   "meaning_vi": "la ó, ngắt lời (người thuyết trình/biểu diễn)",
+   "usage_vi": "Dùng khi nói về việc ai đó trong đám đông cố tình quấy rầy người đang phát biểu.",
+   "example_en": "The speaker handled the audience brilliantly even when a few people tried to heckle him.",
+   "example_vi": "Diễn giả đã xử lý tình huống với khán giả rất tuyệt vời ngay cả khi một vài người cố tình la ó ngắt lời ông."
+  },
+  {
+   "t": 910.89,
+   "d": 2.85,
+   "phrase": "presence",
+   "ipa": "/ˈprezns/",
+   "quote": "It's about the presence that they're bringing to the speech.",
+   "meaning_vi": "thần thái, phong thái tự tin đầy cuốn hút",
+   "usage_vi": "Dùng để khen ngợi khả năng thu hút sự chú ý và tôn lên vẻ tự tin của một người trước đám đông.",
+   "example_en": "She walked into the interview room with remarkable presence and authority.",
+   "example_vi": "Cô ấy bước vào phòng phỏng vấn với thần thái và sự uy nghiêm vô cùng ấn tượng."
+  },
+  {
+   "t": 957.62,
+   "d": 1.81,
+   "phrase": "feel like an impostor",
+   "ipa": "/fiːl laɪk æn ɪmˈpɑːstər/",
+   "quote": "I don't want to feel like an impostor.",
+   "meaning_vi": "cảm thấy mình là kẻ mạo danh",
+   "usage_vi": "Dùng khi mô tả tâm lý tự nghi ngờ thành công của bản thân và sợ bị người khác phát hiện là không đủ giỏi.",
+   "example_en": "Despite his impressive achievements, he often felt like an impostor in his new role.",
+   "example_vi": "Dù sở hữu những thành tích đáng kinh ngạc, anh ấy vẫn thường cảm thấy mình như một kẻ mạo danh ở vị trí mới."
+  },
+  {
+   "t": 1055.91,
+   "d": 2.53,
+   "phrase": "take a gamble on",
+   "ipa": "/teɪk ə ˈɡæmbl ɑːn/",
+   "quote": "because I took a gamble on you, and you're staying.",
+   "meaning_vi": "mạo hiểm đặt niềm tin / trao cơ hội cho ai",
+   "usage_vi": "Dùng khi một ai đó sẵn sàng chấp nhận rủi ro để trao cơ hội cho người khác.",
+   "example_en": "The manager decided to take a gamble on the young graduate and offered her the position.",
+   "example_vi": "Người quản lý đã quyết định mạo hiểm trao cơ hội cho cô sinh viên mới ra trường và trao cho cô vị trí đó."
+  },
+  {
+   "t": 1070.51,
+   "d": 2.35,
+   "phrase": "out-of-body experience",
+   "ipa": "/aʊt əv ˈbɑːdi ɪkˈspɪriəns/",
+   "quote": "and having an out-of-body experience,",
+   "meaning_vi": "cảm giác thoát xác / mất kết nối thực tại vì quá lo lắng",
+   "usage_vi": "Dùng hình hóa cảm giác cực kỳ lo âu đến mức thấy mình như đứng ngoài xem chính mình.",
+   "example_en": "Giving my first public talk felt like an out-of-body experience because of how terrified I was.",
+   "example_vi": "Buổi nói chuyện trước công chúng đầu tiên của tôi giống như một trải nghiệm thoát xác vì tôi lúc đó quá sợ hãi."
+  },
+  {
+   "t": 1180.87,
+   "d": 4.45,
+   "phrase": "tiny tweak",
+   "ipa": "/ˈtaɪni twiːk/",
+   "quote": "Tiny tweaks can lead to big changes.",
+   "meaning_vi": "sự thay đổi hoặc điều chỉnh rất nhỏ",
+   "usage_vi": "Dùng để nói về những chỉnh sửa nhỏ nhưng mang lại sự cải thiện vượt bậc.",
+   "example_en": "With just a few tiny tweaks to your resume, you can make a much stronger impression on recruiters.",
+   "example_vi": "Chỉ với vài sự điều chỉnh nhỏ trong CV, bạn có thể tạo ấn tượng mạnh mẽ hơn nhiều đối với nhà tuyển dụng."
+  }
+ ]
+}

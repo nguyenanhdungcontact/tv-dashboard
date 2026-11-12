@@ -1,0 +1,143 @@
+{
+ "id": "86dSixZOtFo",
+ "created": "2026-11-12",
+ "source": "youtube-auto",
+ "language": "en",
+ "ai": "gemini-3.6-flash",
+ "summary_vi": "Video ghi lại khoảnh khắc bất ngờ và tràn ngập niềm vui của cặp đôi sáng tạo nội dung du lịch Kara & Nate khi biết tin có thai ngay trước hành trình Mongol Rally đầy thử thách. Họ đã chia sẻ tin vui với người thân, bạn bè và cùng cả đoàn xe đi siêu âm lần đầu tiên ở Tbilisi, Georgia.",
+ "level": "B2",
+ "phrases": [
+  {
+   "t": 23.76,
+   "d": 3.6,
+   "phrase": "live out of (something)",
+   "ipa": "/lɪv aʊt ʌv/",
+   "quote": "we're going to be living out of a bus",
+   "meaning_vi": "sống tạm trong (xe, vali, không gian hẹp)",
+   "usage_vi": "Dùng khi mô tả phong cách sống di chuyển liên tục, chỉ ở tạm và dùng đồ đạc lấy trực tiếp từ vali hay phương tiện.",
+   "example_en": "During our three-month road trip across Europe, we had to live out of our small van.",
+   "example_vi": "Trong chuyến du lịch bằng đường bộ kéo dài ba tháng qua châu Âu, chúng tôi đã phải sống tạm trên chiếc xe van nhỏ."
+  },
+  {
+   "t": 261.52,
+   "d": 4.08,
+   "phrase": "dial in",
+   "ipa": "/ˈdaɪəl ɪn/",
+   "quote": "years trying to dial in my epilepsy",
+   "meaning_vi": "tinh chỉnh, điều chỉnh tối ưu",
+   "usage_vi": "Dùng khi cần điều chỉnh thiết bị, kế hoạch hoặc liều lượng thuốc cho đạt trạng thái hoàn hảo nhất.",
+   "example_en": "It took the athlete several weeks to dial in his daily nutrition plan.",
+   "example_vi": "Vận động viên phải mất vài tuần để tinh chỉnh kế hoạch dinh dưỡng hằng ngày của mình."
+  },
+  {
+   "t": 275.76,
+   "d": 5.52,
+   "phrase": "set the scene",
+   "ipa": "/sɛt ðə siːn/",
+   "quote": "were so low. Just to set the scene,",
+   "meaning_vi": "mô tả bối cảnh, dựng lại khung cảnh",
+   "usage_vi": "Dùng làm cụm từ mở đầu trước khi kể một câu chuyện để người nghe hình dung được thời gian, không gian.",
+   "example_en": "Let me set the scene before I tell you what happened at the airport.",
+   "example_vi": "Để tôi mô tả bối cảnh trước khi kể cho bạn nghe chuyện gì đã xảy ra ở sân bay."
+  },
+  {
+   "t": 296.88,
+   "d": 5.04,
+   "phrase": "sign up for (something)",
+   "ipa": "/saɪn ʌp fɔːr/",
+   "quote": "adventure we've ever signed up for on",
+   "meaning_vi": "đăng ký tham gia (thử thách, hoạt động)",
+   "usage_vi": "Rất tự nhiên trong IELTS Speaking khi nói về việc tự nguyện tham gia một khóa học, sự kiện hoặc chuyến đi.",
+   "example_en": "She decided to sign up for an intensive IELTS preparation course this summer.",
+   "example_vi": "Cô ấy quyết định đăng ký tham gia một khóa học luyện thi IELTS cấp tốc vào mùa hè này."
+  },
+  {
+   "t": 514.16,
+   "d": 4.32,
+   "phrase": "sink in",
+   "ipa": "/sɪŋk ɪn/",
+   "quote": "Things are definitely sinking in because",
+   "meaning_vi": "dần ngấm vào trí óc, bắt đầu thấu hiểu",
+   "usage_vi": "Dùng khi một sự thật lớn hoặc tin tức bất ngờ mất một khoảng thời gian để tâm trí tiếp nhận hoàn toàn.",
+   "example_en": "It took a few days for the reality of winning the scholarship to sink in.",
+   "example_vi": "Phải mất vài ngày thì thực tế giành được học bổng mới thực sự ngấm vào trí óc cô ấy."
+  },
+  {
+   "t": 518.48,
+   "d": 4.16,
+   "phrase": "food aversion",
+   "ipa": "/fuːd əˈvɜːrʒən/",
+   "quote": "fatigue, vomiting, food aversions, food",
+   "meaning_vi": "sự sợ ăn/nôn nao với thức ăn",
+   "usage_vi": "Dùng trong chủ đề sức khỏe, thai kỳ hoặc thói quen ăn uống khi cơ thể tự nhiên thấy chán ghét một món ăn nào đó.",
+   "example_en": "During her pregnancy, she developed a strong food aversion to garlic.",
+   "example_vi": "Trong suốt thai kỳ, cô ấy xuất hiện cảm giác cực kỳ sợ mùi tỏi."
+  },
+  {
+   "t": 538.72,
+   "d": 3.76,
+   "phrase": "wear off",
+   "ipa": "/wɛr ɔːf/",
+   "quote": "has worn off for the most part, it's",
+   "meaning_vi": "dần tan biến, nhạt phai (cảm xúc, hiệu lực thuốc)",
+   "usage_vi": "Dùng để mô tả tác dụng của thuốc hoặc cảm giác mạnh (sốc, vui, lo lắng) giảm dần theo thời gian.",
+   "example_en": "As the painkiller started to wear off, he felt a sharp ache in his shoulder.",
+   "example_vi": "Khi thuốc giảm đau bắt đầu hết tác dụng, anh ấy cảm thấy đau nhói ở vai."
+  },
+  {
+   "t": 593.68,
+   "d": 2.88,
+   "phrase": "game changer",
+   "ipa": "/ˈɡeɪm ˌtʃeɪndʒər/",
+   "quote": "separate drinks. [music] Game changer.",
+   "meaning_vi": "yếu tố thay đổi hoàn toàn cục diện",
+   "usage_vi": "Tuyệt vời cho IELTS Speaking/Writing khi nhận xét về một công nghệ, thói quen hay giải pháp mang tính đột phá.",
+   "example_en": "Working remotely has been a total game changer for young working parents.",
+   "example_vi": "Làm việc từ xa là một yếu tố thay đổi hoàn toàn cuộc sống của các ông bố bà mẹ trẻ."
+  },
+  {
+   "t": 753.12,
+   "d": 4.4,
+   "phrase": "go in either direction",
+   "ipa": "/ɡoʊ ɪn ˈiːðər dɪˈrɛkʃən/",
+   "quote": ">> Maybe it could go either direction. I",
+   "meaning_vi": "có thể diễn biến theo bất kỳ hướng nào",
+   "usage_vi": "Dùng khi đánh giá một tình huống chưa chắc chắn, kết quả có thể tốt hoặc xấu.",
+   "example_en": "The job interview was intense, so the final result could go in either direction.",
+   "example_vi": "Buổi phỏng vấn xin việc diễn ra rất căng thẳng, vì vậy kết quả cuối cùng có thể đi theo bất kỳ hướng nào."
+  },
+  {
+   "t": 886.0,
+   "d": 2.32,
+   "phrase": "leave someone out in the cold",
+   "ipa": "/liːv ˈsʌmwʌn aʊt ɪn ðə koʊld/",
+   "quote": ">> Destiny's still left out in the cold",
+   "meaning_vi": "bỏ rơi ai đó, để ai đó đứng ngoài cuộc",
+   "usage_vi": "Thành ngữ tự nhiên dùng khi ai đó bị gạt ra khỏi một cuộc trò chuyện, kế hoạch hoặc một nhóm bạn.",
+   "example_en": "If you don't keep your team updated, some members will feel left out in the cold.",
+   "example_vi": "Nếu bạn không cập nhật thông tin cho nhóm, một số thành viên sẽ cảm thấy bị bỏ rơi."
+  },
+  {
+   "t": 998.96,
+   "d": 3.92,
+   "phrase": "have a bad connotation",
+   "ipa": "/hæv ə bæd ˌkɑːnəˈteɪʃən/",
+   "quote": "successfully. It doesn't have the bad connotation.",
+   "meaning_vi": "mang sắc thái/hàm ý tiêu cực",
+   "usage_vi": "Thích hợp dùng trong IELTS Writing Task 2 hoặc Speaking Part 3 khi phân tích ý nghĩa từ ngữ, con số hoặc biểu tượng.",
+   "example_en": "In some cultures, the number four has a bad connotation because it sounds like death.",
+   "example_vi": "Ở một số văn hóa, con số bốn mang sắc thái tiêu cực vì nó phát âm giống như từ chết."
+  },
+  {
+   "t": 1048.08,
+   "d": 4.04,
+   "phrase": "out of control",
+   "ipa": "/aʊt ʌv kənˈtroʊl/",
+   "quote": "hormones are out of control.",
+   "meaning_vi": "vượt khỏi tầm kiểm soát",
+   "usage_vi": "Dùng để diễn tả cảm xúc, chi phí, thời tiết hoặc tình huống đang đi quá đà không kiềm chế được.",
+   "example_en": "Without proper budgeting, your travel expenses can easily get out of control.",
+   "example_vi": "Nếu không lập ngân sách cẩn thận, chi phí du lịch của bạn có thể dễ dàng vượt khỏi tầm kiểm soát."
+  }
+ ]
+}

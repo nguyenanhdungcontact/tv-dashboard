@@ -1,0 +1,132 @@
+{
+ "id": "imYb9esIC28",
+ "created": "2026-11-12",
+ "source": "youtube-auto",
+ "language": "en",
+ "ai": "gemini-3.6-flash",
+ "summary_vi": "Video ghi lại chuyến du lịch ngắn ngày tự túc của tác giả từ Los Angeles đến Santa Barbara, trải nghiệm ngắm hoàng hôn, bình minh và ngủ đêm trên xe hơi. Qua chuyến đi, tác giả cũng chia sẻ những lời khuyên chân thành về cách bắt đầu các chuyến phiêu lưu cá nhân từ những bước nhỏ nhất.",
+ "level": "C1",
+ "phrases": [
+  {
+   "t": 33.88,
+   "d": 3.64,
+   "phrase": "beside the point",
+   "ipa": "/bɪˈsaɪd ðə pɔɪnt/",
+   "quote": "snoozed my alarm, but that's beside the point because I don't know if you can",
+   "meaning_vi": "không quan trọng, không liên quan đến vấn đề chính",
+   "usage_vi": "Dùng khi muốn gạt bỏ một chi tiết phụ để tập trung vào chủ đề quan trọng hơn trong giao tiếp hoặc thảo luận.",
+   "example_en": "Whether we take the train or drive is beside the point; the main problem is we haven't booked tickets yet.",
+   "example_vi": "Việc chúng ta đi tàu hay tự lái xe không quan trọng; vấn đề chính là chúng ta vẫn chưa đặt vé."
+  },
+  {
+   "t": 55.0,
+   "d": 3.84,
+   "phrase": "miles ahead of schedule",
+   "ipa": "/maɪlz əˈhɛd əv ˈskɛdʒuːl/",
+   "quote": "Anyway, I'm miles ahead of schedule.",
+   "meaning_vi": "xong sớm hơn kế hoạch rất nhiều",
+   "usage_vi": "Dùng trong công việc hoặc lịch trình du lịch khi bạn hoàn thành các công việc nhanh hơn dự tính.",
+   "example_en": "Thanks to the team's hard work, the project was completed miles ahead of schedule.",
+   "example_vi": "Nhờ sự chăm chỉ của cả đội, dự án đã hoàn thành sớm hơn kế hoạch rất nhiều."
+  },
+  {
+   "t": 467.32,
+   "d": 4.28,
+   "phrase": "break the bank",
+   "ipa": "/breɪk ðə bæŋk/",
+   "quote": "I've got to get this. Break the bank.",
+   "meaning_vi": "tốn quá nhiều tiền",
+   "usage_vi": "Thường dùng ở dạng phủ định (won't break the bank) để miêu tả một món đồ hoặc chuyến đi có giá cả hợp lý.",
+   "example_en": "You can enjoy a luxury weekend getaway without breaking the bank if you book early.",
+   "example_vi": "Bạn có thể tận hưởng chuyến nghỉ dưỡng cuối tuần sang trọng mà không tốn quá nhiều tiền nếu đặt sớm."
+  },
+  {
+   "t": 548.16,
+   "d": 3.56,
+   "phrase": "breathtaking",
+   "ipa": "/ˈbreθˌteɪkɪŋ/",
+   "quote": "Like a breathtaking [music] sunset. I",
+   "meaning_vi": "đẹp đến ngạt thở, ngoạn mục",
+   "usage_vi": "Tính từ cao cấp rất phù hợp cho IELTS Speaking khi mô tả phong cảnh thiên nhiên, tầm nhìn từ trên cao hoặc các công trình đẹp.",
+   "example_en": "The coastal highway offers breathtaking views of the Pacific Ocean.",
+   "example_vi": "Tuyến đường cao tốc ven biển mang lại tầm nhìn ngoạn mục ra Thái Bình Dương."
+  },
+  {
+   "t": 607.16,
+   "d": 3.48,
+   "phrase": "inconspicuous",
+   "ipa": "/ˌɪnkənˈspɪkjuəs/",
+   "quote": "inconspicuous.",
+   "meaning_vi": "kín đáo, không thu hút sự chú ý",
+   "usage_vi": "Dùng để mô tả ai đó hoặc thứ gì đó hòa lẫn vào môi trường xung quanh, tránh bị người khác dòm ngó.",
+   "example_en": "He parked his camper van in an inconspicuous spot near the park.",
+   "example_vi": "Anh ấy đỗ chiếc xe cắm trại của mình ở một nơi kín đáo gần công viên."
+  },
+  {
+   "t": 649.96,
+   "d": 2.84,
+   "phrase": "tough it out",
+   "ipa": "/tʌf ɪt aʊt/",
+   "quote": "I'll tough it out.",
+   "meaning_vi": "cắn răng chịu đựng, cố gắng vượt qua",
+   "usage_vi": "Cụm động từ tự nhiên mô tả việc kiên trì chịu đựng hoàn cảnh khó khăn hoặc thời tiết khắc nghiệt mà không bỏ cuộc.",
+   "example_en": "The air conditioning broke down, but we decided to tough it out for one night.",
+   "example_vi": "Điều hòa bị hỏng, nhưng chúng tôi quyết định cắn răng chịu đựng trong một đêm."
+  },
+  {
+   "t": 764.16,
+   "d": 3.52,
+   "phrase": "articulate",
+   "ipa": "/ɑːrˈtɪkjuleɪt/",
+   "quote": "articulate it, but just seeing them",
+   "meaning_vi": "diễn đạt rõ ràng bằng lời",
+   "usage_vi": "Động từ C1 dùng khi muốn thể hiện những ý tưởng, cảm xúc phức tạp thành lời nói một cách mạch lạc.",
+   "example_en": "It can be difficult to articulate exactly how peaceful it feels to watch the sunrise alone.",
+   "example_vi": "Thật khó để diễn đạt chính xác cảm giác bình yên như thế nào khi ngắm bình minh một mình."
+  },
+  {
+   "t": 981.16,
+   "d": 4.04,
+   "phrase": "underestimate",
+   "ipa": "/ˌʌndərˈɛstəˌmeɪt/",
+   "quote": "underestimated how busy um it is. Like,",
+   "meaning_vi": "đánh giá thấp, dự đoán không đủ",
+   "usage_vi": "Dùng khi tính toán sai độ khó, thời gian hoặc quy mô của một vấn đề.",
+   "example_en": "We underestimated how crowded the tourist spots would be on a holiday weekend.",
+   "example_vi": "Chúng tôi đã đánh giá thấp mức độ đông đúc của các điểm du lịch vào kỳ nghỉ cuối tuần."
+  },
+  {
+   "t": 1077.92,
+   "d": 2.64,
+   "phrase": "can't be bothered",
+   "ipa": "/kænt bi ˈbɑːðərd/",
+   "quote": "down in the light. I can't really be bothered using my phone torch all the",
+   "meaning_vi": "ngại, không buồn làm việc gì",
+   "usage_vi": "Thành ngữ giao tiếp phổ biến khi bạn cảm thấy lười biếng hoặc không muốn tốn sức làm một việc nhỏ.",
+   "example_en": "After a long day of hiking, I couldn't be bothered to cook dinner, so I ordered takeout.",
+   "example_vi": "Sau một ngày dài đi bộ đường dài, tôi ngại chẳng buồn nấu ăn nên đã đặt đồ về nhà."
+  },
+  {
+   "t": 1125.44,
+   "d": 4.0,
+   "phrase": "underlying assumption",
+   "ipa": "/ˌʌndərˈlaɪɪŋ əˈsʌmpʃən/",
+   "quote": "underlying assumption that everyone is",
+   "meaning_vi": "giả định ngầm, niềm tin ngầm định",
+   "usage_vi": "Cụm từ ngầm hiểu rất tốt cho IELTS Writing Task 2 và Speaking Part 3 khi phân tích tâm lý hoặc suy nghĩ của con người.",
+   "example_en": "Many people hesitate to travel alone because of the underlying assumption that it is lonely.",
+   "example_vi": "Nhiều người ngần ngại đi du lịch một mình vì định kiến ngầm rằng việc đó rất cô đơn."
+  },
+  {
+   "t": 1145.04,
+   "d": 4.84,
+   "phrase": "bite-size chunks",
+   "ipa": "/ˈbaɪt.saɪz tʃʌŋks/",
+   "quote": "it in lots of little bite-size chunks,",
+   "meaning_vi": "những phần nhỏ dễ quản lý",
+   "usage_vi": "Dùng để nói về việc chia nhỏ công việc, mục tiêu lớn hoặc bài học thành các bước nhỏ để dễ thực hiện.",
+   "example_en": "Breaking your IELTS preparation into bite-size chunks makes studying much less overwhelming.",
+   "example_vi": "Chia nhỏ quá trình luyện thi IELTS thành các phần nhỏ giúp việc học bớt áp lực hơn nhiều."
+  }
+ ]
+}

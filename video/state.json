@@ -250,16 +250,47 @@
   "0ztFlnYPbg0": "quá ngắn",
   "5t8dh3DSdBk": "quá dài",
   "_RHiFAxISuM": "quá ngắn",
-  "U19ivbjjdIg": "phát trực tiếp"
+  "U19ivbjjdIg": "phát trực tiếp",
+  "rrkrvAUbU9Y": "lỗi: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=300)",
+  "pYYUt_dGJR0": "quá dài",
+  "WXnioZZVXtA": "quá ngắn",
+  "KtXNcuDICw8": "quá ngắn",
+  "FfUvKe3WCBQ": "quá ngắn",
+  "Obfdb_krtzI": "quá ngắn",
+  "lYVViwnJShk": "quá ngắn",
+  "e05bYBRCjBY": "quá ngắn",
+  "7H5Dff8riTE": "quá ngắn",
+  "RQE8fBr_7uQ": "quá ngắn",
+  "D4QNDBfNwGM": "quá ngắn",
+  "kJYp82nE-m4": "quá dài",
+  "raHNTeSKoac": "quá ngắn",
+  "k6dhqxA0R30": "quá ngắn",
+  "cQoD6tuTTmA": "quá ngắn",
+  "pb9DDUknxv8": "quá ngắn",
+  "9z_XG5VKOoc": "không phải tiếng Anh (hi)",
+  "FDNbcfMaF6o": "quá ngắn",
+  "EqmlRr2PJAM": "quá ngắn",
+  "EDFABOhRZoc": "quá ngắn",
+  "yaEs-mYdRzM": "quá ngắn",
+  "6rGpkWbV1tE": "quá ngắn",
+  "R5lJDHz5HHw": "quá ngắn",
+  "EETxwWpN6dE": "không phải tiếng Anh (bn)",
+  "F0XN6qhbHes": "quá ngắn",
+  "mxIIFNC4bEU": "video dọc",
+  "w2qysjMLed4": "quá ngắn",
+  "zADXmS7I5HA": "quá ngắn",
+  "ZpxjUHQqoL4": "quá ngắn",
+  "y2O61OpyIUk": "quá dài",
+  "dWh3ik0CoEA": "quá dài",
+  "vhYS1diXZMM": "quá dài",
+  "3b1Lr_VzAUE": "quá ngắn"
  },
  "retries": {
-  "LBgjki-bf1k": 1,
-  "gyrjCkK6AEA": 1,
-  "rrkrvAUbU9Y": 1
+  "rrkrvAUbU9Y": 2
  },
  "added_per_day": {
   "2026-11-10": 11,
   "2026-11-11": 0,
-  "2026-11-12": 0
+  "2026-11-12": 12
  }
 }

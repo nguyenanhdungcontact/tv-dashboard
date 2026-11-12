@@ -1,0 +1,143 @@
+{
+ "id": "7cZcawTt5kg",
+ "created": "2026-11-12",
+ "source": "youtube-auto",
+ "language": "en",
+ "ai": "gemini-3.6-flash",
+ "summary_vi": "Video giải thích cách những người có tính cách vị kỷ thao túng người xung quanh tự động đáp ứng nhu cầu của họ mà không cần phải cất lời yêu cầu. Hiện tượng này xuất phát từ cơ chế tạo áp lực tâm lý lâu dài, khiến đối phương hình thành thói quen nhún nhường để tránh căng thẳng và cảm giác tội lỗi.",
+ "level": "C1",
+ "phrases": [
+  {
+   "t": 24.76,
+   "d": 4.92,
+   "phrase": "articulate",
+   "ipa": "/ɑːrˈtɪkjəleɪt/",
+   "quote": "without ever fully articulating them.",
+   "meaning_vi": "diễn đạt rõ ràng",
+   "usage_vi": "Dùng khi muốn nói đến việc thể hiện ý tưởng, suy nghĩ hoặc nhu cầu một cách gãy gọn và mạch lạc trong văn nói lẫn văn viết.",
+   "example_en": "It is crucial for candidates to articulate their career goals clearly during the interview.",
+   "example_vi": "Ứng viên cần phải diễn đạt rõ ràng mục tiêu nghề nghiệp của mình trong buổi phỏng vấn."
+  },
+  {
+   "t": 139.0,
+   "d": 3.72,
+   "phrase": "rough patch",
+   "ipa": "/rʌf pætʃ/",
+   "quote": "easy to rationalize the rough patches as",
+   "meaning_vi": "giai đoạn khó khăn",
+   "usage_vi": "Dùng để mô tả một khoảng thời gian gặp nhiều trắc trở trong mối quan hệ, công việc hoặc đời sống cá nhân.",
+   "example_en": "Every marriage goes through a rough patch, but effective communication helps couples overcome it.",
+   "example_vi": "Cuộc hôn nhân nào cũng trải qua giai đoạn khó khăn, nhưng sự giao tiếp hiệu quả sẽ giúp các cặp đôi vượt qua."
+  },
+  {
+   "t": 158.44,
+   "d": 5.64,
+   "phrase": "play upon",
+   "ipa": "/pleɪ əˈpɑːn/",
+   "quote": "can be played upon.",
+   "meaning_vi": "lợi dụng, khai thác",
+   "usage_vi": "Dùng khi ai đó cố tình tác động vào cảm xúc, niềm tin hoặc nỗi sợ của người khác để đạt mục đích cá nhân.",
+   "example_en": "Advertisers often play upon people's insecurities to sell beauty products.",
+   "example_vi": "Các nhà quảng cáo thường lợi dụng sự thiếu tự tin của mọi người để bán sản phẩm làm đẹp."
+  },
+  {
+   "t": 295.88,
+   "d": 6.36,
+   "phrase": "read the room",
+   "ipa": "/riːd ðə ruːm/",
+   "quote": "to an almost unreal level to always read the room to anticipate what the parent",
+   "meaning_vi": "quan sát bầu không khí",
+   "usage_vi": "Dùng trong giao tiếp ứng xử khi cần nhạy bén nhận biết cảm xúc và tâm lý của những người xung quanh trước khi nói hay làm gì.",
+   "example_en": "Before making a joke during a tense meeting, you should learn to read the room.",
+   "example_vi": "Trước khi đưa ra lời nói đùa trong một cuộc họp căng thẳng, bạn nên học cách quan sát bầu không khí."
+  },
+  {
+   "t": 339.4,
+   "d": 5.04,
+   "phrase": "knock oneself out",
+   "ipa": "/nɑːk wʌnˈsɛlf aʊt/",
+   "quote": "adults in the environment also knocking themselves out to meet the narcissistic",
+   "meaning_vi": "dốc hết sức lực",
+   "usage_vi": "Dùng khi mô tả ai đó vắt cạn sức lực làm việc gì đó, hoặc dùng trong văn nói thân mật với nghĩa 'cứ tự nhiên'.",
+   "example_en": "She knocked herself out preparing the final presentation for the client.",
+   "example_vi": "Cô ấy đã dốc hết sức chuẩn bị bài thuyết trình cuối cùng cho khách hàng."
+  },
+  {
+   "t": 369.92,
+   "d": 3.96,
+   "phrase": "lickety-split",
+   "ipa": "/ˈlɪkəti splɪt/",
+   "quote": "lickety-split. And if it's not, then",
+   "meaning_vi": "rất nhanh chóng",
+   "usage_vi": "Quán ngữ thân mật dùng để mô tả một hành động diễn ra ngay lập tức hoặc cực kỳ nhanh gọn.",
+   "example_en": "When the alarm went off, the firefighters got ready lickety-split.",
+   "example_vi": "Khi chuông báo động vang lên, các chiến sĩ chữa cháy đã chuẩn bị sẵn sàng cực kỳ nhanh chóng."
+  },
+  {
+   "t": 442.96,
+   "d": 4.52,
+   "phrase": "keep the trains running on time",
+   "ipa": "/kiːp ðə treɪnz ˈrʌnɪŋ ɑːn taɪm/",
+   "quote": "of the psychological trains running on time, to stay safe.",
+   "meaning_vi": "duy trì mọi thứ trơn tru",
+   "usage_vi": "Ẩn dụ thường dùng trong quản lý công việc hoặc gia đình để chỉ việc đảm bảo mọi hoạt động diễn ra đúng kế hoạch.",
+   "example_en": "As an executive assistant, her main job is to keep the trains running on time.",
+   "example_vi": "Với tư cách là trợ lý điều hành, công việc chính của cô ấy là đảm bảo mọi việc vận hành trơn tru."
+  },
+  {
+   "t": 478.36,
+   "d": 3.28,
+   "phrase": "block off",
+   "ipa": "/blɑːk ˈɔːf/",
+   "quote": "you better block off your whole",
+   "meaning_vi": "dành riêng (thời gian)",
+   "usage_vi": "Cụm động từ rất phổ biến trong công sở để nói về việc sắp xếp, khóa một khoảng thời gian cho việc quan trọng.",
+   "example_en": "I always block off two hours every morning for deep, uninterrupted work.",
+   "example_vi": "Tôi luôn dành riêng hai tiếng mỗi sáng để làm việc tập trung không bị gián đoạn."
+  },
+  {
+   "t": 497.88,
+   "d": 6.64,
+   "phrase": "in one's bones",
+   "ipa": "/ɪn wʌnz boʊnz/",
+   "quote": "Like this is entitlement in their bones.",
+   "meaning_vi": "thấm vào bản chất",
+   "usage_vi": "Dùng khi mô tả một niềm tin, thói quen hay nét tính cách đã ăn sâu vào tiềm thức và khó thay đổi.",
+   "example_en": "He felt it in his bones that the new project would be a huge success.",
+   "example_vi": "Anh ấy cảm nhận rõ từ trong bản chất rằng dự án mới sẽ thành công rực rỡ."
+  },
+  {
+   "t": 594.72,
+   "d": 3.68,
+   "phrase": "status quo",
+   "ipa": "/ˈsteɪtəs kwoʊ/",
+   "quote": "maintaining the status quo and the",
+   "meaning_vi": "trạng thái hiện tại",
+   "usage_vi": "Thuật ngữ cao cấp (C1/C2) rất phù hợp cho IELTS Writing/Speaking khi nói về việc duy trì hoặc thay đổi thực trạng.",
+   "example_en": "Innovative companies are rarely satisfied with maintaining the status quo.",
+   "example_vi": "Các công ty sáng tạo hiếm khi hài lòng với việc duy trì trạng thái hiện tại."
+  },
+  {
+   "t": 598.4,
+   "d": 4.16,
+   "phrase": "lighten one's load",
+   "ipa": "/ˈlaɪtn̩ wʌnz loʊd/",
+   "quote": "or stop doing all of that, lighten my own load,",
+   "meaning_vi": "giảm bớt gánh nặng",
+   "usage_vi": "Dùng khi hỗ trợ san sẻ công việc hoặc giảm bớt áp lực tinh thần/thể chất cho bản thân hoặc người khác.",
+   "example_en": "Hiring an intern helped lighten the senior team's load during peak season.",
+   "example_vi": "Tuyển thêm thực tập sinh đã giúp giảm bớt gánh nặng cho đội ngũ nhân sự chính trong mùa cao điểm."
+  },
+  {
+   "t": 612.72,
+   "d": 5.36,
+   "phrase": "quadruple whammy",
+   "ipa": "/kwɑːˈdruːpl ˈwæmi/",
+   "quote": "it's a freaking quadruple whammy",
+   "meaning_vi": "bốn bất lợi dồn dập",
+   "usage_vi": "Thành ngữ nâng cao dùng để nhấn mạnh chuỗi bốn tai hại hoặc khó khăn ập đến cùng một thời điểm.",
+   "example_en": "Rising inflation, high interest rates, supply chain delays, and fuel prices created a quadruple whammy for small businesses.",
+   "example_vi": "Lạm phát tăng, lãi suất cao, chuỗi cung ứng gián đoạn và giá nhiên liệu đã tạo ra bốn bất lợi dồn dập cho các doanh nghiệp nhỏ."
+  }
+ ]
+}

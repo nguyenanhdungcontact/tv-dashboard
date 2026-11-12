@@ -1,0 +1,132 @@
+{
+ "id": "U-w7Koq_LkE",
+ "created": "2026-11-12",
+ "source": "youtube-auto",
+ "language": "en",
+ "ai": "gemini-3.6-flash",
+ "summary_vi": "Tác giả chia sẻ trải nghiệm cá nhân về nỗi sợ bị từ chối cùng sự lo lắng thái quá khi nghĩ ngôi nhà của mình bị vỡ ống nước do thời tiết đóng băng. Qua đó, video truyền tải thông điệp về việc học cách giải tỏa tâm lý hoảng loạn, ngừng tự suy diễn tiêu cực và mở lòng đón nhận cuộc sống một cách thong dong hơn.",
+ "level": "C1",
+ "phrases": [
+  {
+   "t": 15.96,
+   "d": 3.92,
+   "phrase": "freeze over",
+   "ipa": "/friːz ˈoʊvər/",
+   "quote": "over. And if that is the case, I almost",
+   "meaning_vi": "đóng băng toàn bộ bề mặt",
+   "usage_vi": "Dùng khi miêu tả thời tiết cực lạnh làm nước hoặc bề mặt bị đóng băng hoàn toàn.",
+   "example_en": "The lake froze over during the severe winter storm, allowing locals to ice skate.",
+   "example_vi": "Hồ nước đã đóng băng hoàn toàn trong đợt bão mùa đông khắc nghiệt, cho phép người dân địa phương trượt băng."
+  },
+  {
+   "t": 44.2,
+   "d": 3.92,
+   "phrase": "summon up the courage",
+   "ipa": "/ˈsʌmən ʌp ðə ˈkɜːrɪdʒ/",
+   "quote": "summoned up the courage to ask her",
+   "meaning_vi": "lấy hết dũng khí, dồn hết can đảm",
+   "usage_vi": "Dùng khi mô tả việc cố gắng vượt qua nỗi sợ hãi để hành động hoặc đối mặt với việc khó khăn.",
+   "example_en": "She finally summoned up the courage to present her proposal to the board of directors.",
+   "example_vi": "Cô ấy cuối cùng cũng lấy hết dũng khí để trình bày đề xuất của mình trước hội đồng quản trị."
+  },
+  {
+   "t": 108.8,
+   "d": 3.44,
+   "phrase": "jump to conclusions",
+   "ipa": "/dʒʌmp tə kənˈkluːʒənz/",
+   "quote": "and then jumping to all kinds of conclusions, emotionally charged",
+   "meaning_vi": "vội vàng kết luận",
+   "usage_vi": "Dùng để nhắc nhở hoặc phê bình việc đưa ra phán xét quá sớm khi chưa có đủ thông tin.",
+   "example_en": "Instead of jumping to conclusions, we should wait until all the test results are available.",
+   "example_vi": "Thay vì vội vàng kết luận, chúng ta nên đợi cho đến khi có đầy đủ kết quả kiểm tra."
+  },
+  {
+   "t": 218.92,
+   "d": 3.78,
+   "phrase": "marvel at",
+   "ipa": "/ˈmɑːrvəl æt/",
+   "quote": "was just marveling at the immense",
+   "meaning_vi": "trầm ồ, kinh ngạc trước điều gì",
+   "usage_vi": "Dùng để diễn tả sự ngưỡng mộ, ngạc nhiên trước một vẻ đẹp, thành tựu hoặc hiện tượng kỳ diệu.",
+   "example_en": "Tourists gathered at the peak to marvel at the breathtaking sunrise over the mountains.",
+   "example_vi": "Du khách tập trung trên đỉnh núi để ngắm nhìn và trầm ồ trước cảnh bình minh tuyệt đẹp."
+  },
+  {
+   "t": 254.72,
+   "d": 4.08,
+   "phrase": "stumble upon",
+   "ipa": "/ˈstʌmbəl əˈpɑːn/",
+   "quote": "stumbled upon something way bigger than",
+   "meaning_vi": "tình cờ phát hiện hoặc gặp phải",
+   "usage_vi": "Dùng khi bạn bất ngờ tìm thấy một thông tin, ý tưởng hay vật quý giá mà không hề cố ý tìm kiếm.",
+   "example_en": "While researching in the library, he stumbled upon a rare historical document.",
+   "example_vi": "Khi đang nghiên cứu trong thư viện, anh ấy tình cờ phát hiện ra một tài liệu lịch sử quý hiếm."
+  },
+  {
+   "t": 261.76,
+   "d": 5.4,
+   "phrase": "disaster scenario",
+   "ipa": "/dɪˈzæstər səˈnæriˌoʊ/",
+   "quote": "miraculous that the disaster scenario",
+   "meaning_vi": "kịch bản thảm họa, trường hợp xấu nhất",
+   "usage_vi": "Dùng trong hoạch định chiến lược hoặc tâm lý học để nói về viễn cảnh tồi tệ nhất có thể xảy ra.",
+   "example_en": "The company developed a contingency plan to prepare for any potential disaster scenario.",
+   "example_vi": "Công ty đã xây dựng một kế hoạch dự phòng để chuẩn bị cho bất kỳ kịch bản thảm họa tiềm tàng nào."
+  },
+  {
+   "t": 348.64,
+   "d": 3.68,
+   "phrase": "make up one's mind",
+   "ipa": "/meɪk ʌp wʌnz maɪnd/",
+   "quote": "see different perspectives and make up your own mind about things. [music] We",
+   "meaning_vi": "tự mình đưa ra quyết định",
+   "usage_vi": "Diễn tả sự chủ động lựa chọn hoặc chốt lại quyết định sau khi đã cân nhắc.",
+   "example_en": "After weighing all the options, she made up her mind to study abroad.",
+   "example_vi": "Sau khi cân nhắc tất cả các lựa chọn, cô ấy đã đưa ra quyết định đi du học."
+  },
+  {
+   "t": 434.48,
+   "d": 4.52,
+   "phrase": "get caught up in something",
+   "ipa": "/ɡɛt kɔːt ʌp ɪn ˈsʌmθɪŋ/",
+   "quote": "I just got caught up in this outcome.",
+   "meaning_vi": "bị cuốn vào, bị làm cho bận tâm quá mức",
+   "usage_vi": "Dùng khi ai đó quá chú ý vào một chi tiết, cảm xúc hay sự việc mà quên mất mục tiêu lớn hơn.",
+   "example_en": "It is easy to get caught up in daily stress and forget to enjoy the present moment.",
+   "example_vi": "Rất dễ bị cuốn vào căng thẳng hàng ngày mà quên mất việc tận hưởng khoảnh khắc hiện tại."
+  },
+  {
+   "t": 472.32,
+   "d": 5.28,
+   "phrase": "takeaway",
+   "ipa": "/ˈteɪkəˌweɪ/",
+   "quote": "takeaway. I like to propose a different",
+   "meaning_vi": "bài học cốt lõi, điểm chính rút ra",
+   "usage_vi": "Thường dùng trong học tập, công việc hoặc cuộc sống sau khi trải qua một sự kiện, bài giảng hay cuốn sách.",
+   "example_en": "The main takeaway from the workshop was the importance of effective team communication.",
+   "example_vi": "Bài học cốt lõi rút ra từ buổi hội thảo là tầm quan trọng của việc giao tiếp hiệu quả trong đội ngũ."
+  },
+  {
+   "t": 541.2,
+   "d": 4.8,
+   "phrase": "lose the plot",
+   "ipa": "/luːz ðə plɑːt/",
+   "quote": "plot like a thousand times to remember once, only to lose it a thousand times",
+   "meaning_vi": "mất phương hướng, quên mất mục tiêu ban đầu",
+   "usage_vi": "Thành ngữ tự nhiên dùng trong văn nói khi một người hành xử rối trí, mất tập trung hoặc quên mất ý nghĩa chính.",
+   "example_en": "If you focus only on making money and neglect your health, you might lose the plot.",
+   "example_vi": "Nếu bạn chỉ tập trung vào việc kiếm tiền mà bỏ qua sức khỏe, bạn có thể sẽ mất đi phương hướng ban đầu."
+  },
+  {
+   "t": 592.92,
+   "d": 6.2,
+   "phrase": "freak out",
+   "ipa": "/friːk aʊt/",
+   "quote": "making is freaking out about this kind",
+   "meaning_vi": "hoảng loạn, hoảng sợ tột độ",
+   "usage_vi": "Cụm động từ thân mật rất phổ biến trong IELTS Speaking để mô tả phản ứng lo lắng hoặc sợ hãi quá đà.",
+   "example_en": "Don't freak out if the system goes offline briefly; it will restart automatically.",
+   "example_vi": "Đừng hoảng loạn nếu hệ thống ngoại tuyến một lát; nó sẽ tự động khởi động lại."
+  }
+ ]
+}

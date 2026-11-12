@@ -1,0 +1,143 @@
+{
+ "id": "LBgjki-bf1k",
+ "created": "2026-11-12",
+ "source": "youtube-auto",
+ "language": "en",
+ "ai": "gemini-3.6-flash",
+ "summary_vi": "Video giải thích rằng vai trò cốt lõi của chủ doanh nghiệp là tập trung phát triển công ty bằng cách ưu tiên tháo gỡ các điểm nghẽn (constraints) quan trọng nhất. Để làm được điều đó, người chủ cần xây dựng hệ thống và ủy quyền công việc vận hành hàng ngày thay vì tự mình ôm đồm tất cả.",
+ "level": "B2",
+ "phrases": [
+  {
+   "t": 16.2,
+   "d": 3.08,
+   "phrase": "get anywhere",
+   "ipa": "/ɡɛt ˈɛniˌwɛr/",
+   "quote": "not really getting anywhere, not getting",
+   "meaning_vi": "đạt được tiến triển, thành công",
+   "usage_vi": "Dùng trong ngữ cảnh nói về tiến độ công việc hoặc sự nghiệp, thường ở dạng phủ định (not getting anywhere) để chỉ sự bế tắc.",
+   "example_en": "Despite working long hours every day, I felt like I wasn't getting anywhere with my research.",
+   "example_vi": "Mặc dù làm việc nhiều giờ mỗi ngày, tôi cảm thấy mình chẳng đạt được tiến triển nào với đề tài nghiên cứu."
+  },
+  {
+   "t": 20.44,
+   "d": 4.12,
+   "phrase": "beat oneself up",
+   "ipa": "/biːt wʌnˈsɛlf ʌp/",
+   "quote": "beating myself up because sacrificing",
+   "meaning_vi": "tự dằn vặt, trách móc bản thân",
+   "usage_vi": "Dùng khi ai đó quá khắt khe với chính mình sau một lỗi lầm hoặc thất bại.",
+   "example_en": "Don't beat yourself up over a minor mistake in the presentation; everyone thought you did great.",
+   "example_vi": "Đừng tự dằn vặt bản thân vì một lỗi nhỏ trong bài thuyết trình; ai cũng thấy bạn làm rất tốt."
+  },
+  {
+   "t": 63.12,
+   "d": 4.0,
+   "phrase": "hold back",
+   "ipa": "/hoʊld bæk/",
+   "quote": "bottleneck that's holding the business back. Or maybe it's marketing, so",
+   "meaning_vi": "cản trở, kìm hãm sự phát triển",
+   "usage_vi": "Dùng khi nói về yếu tố, rào cản ngăn ai đó hoặc cái gì đó tiến bộ hay thành công.",
+   "example_en": "Fear of failure can hold back many talented individuals from pursuing their dreams.",
+   "example_vi": "Nỗi sợ thất bại có thể kìm hãm nhiều cá nhân tài năng theo đuổi ước mơ của họ."
+  },
+  {
+   "t": 99.48,
+   "d": 3.4,
+   "phrase": "run into a problem",
+   "ipa": "/rʌn ˈɪntuː ə ˈprɑːbləm/",
+   "quote": "you the problem most business owners run",
+   "meaning_vi": "gặp phải vấn đề, trục trặc",
+   "usage_vi": "Cụm động từ tự nhiên dùng trong cả công việc lẫn đời sống khi bất ngờ gặp rắc rối.",
+   "example_en": "We ran into a few technical problems during the product launch, but we resolved them quickly.",
+   "example_vi": "Chúng tôi gặp một vài sự cố kỹ thuật trong đợt ra mắt sản phẩm, nhưng đã giải quyết nhanh chóng."
+  },
+  {
+   "t": 131.8,
+   "d": 3.76,
+   "phrase": "stay stuck",
+   "ipa": "/steɪ stʌk/",
+   "quote": "you stay stuck. The fix here on",
+   "meaning_vi": "bị mắc kẹt, không tiến triển",
+   "usage_vi": "Diễn tả trạng thái duy trì sự trì trệ, không tìm ra lối thoát trong công việc hoặc cuộc sống.",
+   "example_en": "If you don't learn new technologies, your career might stay stuck in the same position.",
+   "example_vi": "Nếu bạn không học hỏi công nghệ mới, sự nghiệp của bạn có thể sẽ mãi dậm chân tại chỗ."
+  },
+  {
+   "t": 184.48,
+   "d": 3.12,
+   "phrase": "the likes of",
+   "ipa": "/ðə laɪks ʌv/",
+   "quote": "business right now, because the likes of",
+   "meaning_vi": "những thứ/người như là",
+   "usage_vi": "Dùng để liệt kê ví dụ đại diện cho một nhóm đối tượng cụ thể (rất hay dùng trong văn nói và viết IELTS).",
+   "example_en": "Tech giants, the likes of Google and Apple, invest billions of dollars into artificial intelligence.",
+   "example_vi": "Các gã khổng lồ công nghệ, chẳng hạn như Google và Apple, đầu tư hàng tỷ đô la vào trí tuệ nhân tạo."
+  },
+  {
+   "t": 190.88,
+   "d": 2.76,
+   "phrase": "work towards",
+   "ipa": "/wɜːrk tɔːrdz/",
+   "quote": "result you're working towards, whether",
+   "meaning_vi": "nỗ lực hướng tới (mục tiêu)",
+   "usage_vi": "Kết hợp với danh từ chỉ mục tiêu như goal, objective, result để thể hiện quá trình phấn đấu.",
+   "example_en": "The team is working towards achieving an 8.0 score in their upcoming IELTS exam.",
+   "example_vi": "Đội ngũ đang nỗ lực hướng tới việc đạt band 8.0 trong kỳ thi IELTS sắp tới."
+  },
+  {
+   "t": 214.68,
+   "d": 4.92,
+   "phrase": "constraint",
+   "ipa": "/kənˈstreɪnt/",
+   "quote": "achieving it. What is the constraint in",
+   "meaning_vi": "yếu tố hạn chế, điểm nghẽn",
+   "usage_vi": "Từ vựng C1 rất tốt cho IELTS Speaking/Writing Task 2 khi thảo luận về rào cản, ngân sách hay nguồn lực.",
+   "example_en": "Time constraints prevented us from fully testing all the new software features.",
+   "example_vi": "Sự giới hạn về thời gian đã ngăn chúng tôi kiểm thử đầy đủ tất cả tính năng phần mềm mới."
+  },
+  {
+   "t": 265.04,
+   "d": 3.28,
+   "phrase": "screw over",
+   "ipa": "/skruː ˈoʊvər/",
+   "quote": "you're just going to screw over your",
+   "meaning_vi": "xử xấu, làm hại, gây thiệt hại nặng",
+   "usage_vi": "Cụm từ thân mật (informal), thích hợp dùng trong giao tiếp đời thường khi nói về việc ai đó xử xấu hoặc làm hỏng kế hoạch.",
+   "example_en": "If you don't read the contract carefully, you might get screwed over by hidden fees.",
+   "example_vi": "Nếu bạn không đọc hợp đồng kỹ lưỡng, bạn có thể bị thiệt hại bởi các khoản phí ẩn."
+  },
+  {
+   "t": 329.36,
+   "d": 4.48,
+   "phrase": "create space",
+   "ipa": "/kriːˈeɪt speɪs/",
+   "quote": "create the space to work on it, which",
+   "meaning_vi": "tạo khoảng trống/thời gian",
+   "usage_vi": "Có thể dùng theo nghĩa đen (không gian) hoặc nghĩa bóng (dành ra thời gian/tâm trí cho việc quan trọng).",
+   "example_en": "Delegating routine tasks creates space for leaders to think about long-term strategic goals.",
+   "example_vi": "Ủy quyền công việc thường nhật giúp tạo thời gian cho các nhà lãnh đạo suy nghĩ về mục tiêu chiến lược dài hạn."
+  },
+  {
+   "t": 405.6,
+   "d": 2.68,
+   "phrase": "put off",
+   "ipa": "/pʊt ˈɔːf/",
+   "quote": "longer you put it off in the day, the",
+   "meaning_vi": "trì hoãn",
+   "usage_vi": "Phrasal verb thông dụng thay thế cho 'postpone' hoặc 'procrastinate' trong giao tiếp tự nhiên.",
+   "example_en": "The longer you put off exercising, the harder it becomes to build a daily habit.",
+   "example_vi": "Bạn càng trì hoãn việc tập thể dục lâu thì càng khó xây dựng thói quen hàng ngày."
+  },
+  {
+   "t": 446.68,
+   "d": 4.08,
+   "phrase": "work on",
+   "ipa": "/wɜːrk ɑːn/",
+   "quote": "it to grow. This is how you work on the",
+   "meaning_vi": "tập trung cải thiện/phát triển cái gì",
+   "usage_vi": "Phân biệt giữa 'work in' (làm công việc vận hành) và 'work on' (tập trung nâng cấp, cải tiến hệ thống hoặc bản thân).",
+   "example_en": "She spent the weekend working on her English pronunciation before the interview.",
+   "example_vi": "Cô ấy dành toàn bộ cuối tuần để tập trung cải thiện phát âm tiếng Anh trước buổi phỏng vấn."
+  }
+ ]
+}

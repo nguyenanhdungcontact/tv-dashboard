@@ -1,0 +1,154 @@
+{
+ "id": "frl6fnb-Hu8",
+ "created": "2026-11-12",
+ "source": "youtube-auto",
+ "language": "en",
+ "ai": "gemini-3.6-flash",
+ "summary_vi": "Video ghi lại chuyến đi cắm trại mừng sinh nhật người bạn Talia tại Big Bear, California cùng một nhóm bạn thân thiết. Bên cạnh những khoảnh khắc dã ngoại vui vẻ, vlogger còn chia sẻ góc nhìn sâu sắc về thói quen đọc sách, rèn luyện tư duy tập trung và tình bạn khăng khít.",
+ "level": "C1",
+ "phrases": [
+  {
+   "t": 82.36,
+   "d": 3.36,
+   "phrase": "long story short",
+   "ipa": "/lɔŋ ˈstɔri ʃɔrt/",
+   "quote": "Cuz long story short, there's like some",
+   "meaning_vi": "tóm lại, nói ngắn gọn",
+   "usage_vi": "Thường dùng ở đầu hoặc giữa câu để bỏ qua các chi tiết rườm rà và đi thẳng vào kết quả của câu chuyện.",
+   "example_en": "Long story short, we missed the last train and had to sleep at the station.",
+   "example_vi": "Nói ngắn gọn là chúng tôi đã lỡ chuyến tàu cuối cùng và phải ngủ lại ga."
+  },
+  {
+   "t": 253.12,
+   "d": 3.28,
+   "phrase": "low expectations",
+   "ipa": "/loʊ ˌɛkspɛkˈteɪʃənz/",
+   "quote": "Low expectations.",
+   "meaning_vi": "kỳ vọng thấp",
+   "usage_vi": "Dùng khi khuyên ai đó không nên mong đợi quá nhiều để không bị thất vọng khi kết quả không như ý.",
+   "example_en": "Setting low expectations for the first trial helped us stay relaxed throughout the process.",
+   "example_vi": "Việc đặt kỳ vọng thấp cho lần thử đầu tiên giúp chúng tôi giữ tâm lý thoải mái trong suốt quá trình."
+  },
+  {
+   "t": 312.84,
+   "d": 5.92,
+   "phrase": "on top of the world",
+   "ipa": "/ɑn tɑp ʌv ðə wɜrld/",
+   "quote": "So, I'm on top of the world.",
+   "meaning_vi": "vô cùng hạnh phúc và tự hào",
+   "usage_vi": "Thành ngữ tự nhiên dùng trong IELTS Speaking Part 1 và 2 khi miêu tả cảm xúc thăng hoa sau một thành tựu hoặc niềm vui lớn.",
+   "example_en": "After receiving the IELTS score of 8.0, she felt on top of the world.",
+   "example_vi": "Sau khi nhận kết quả IELTS 8.0, cô ấy cảm thấy vô cùng sung sướng."
+  },
+  {
+   "t": 531.16,
+   "d": 3.52,
+   "phrase": "bicker",
+   "ipa": "/ˈbɪkər/",
+   "quote": "they were bickering a lot. And they were",
+   "meaning_vi": "cãi lộn vặt, tranh cãi chuyện nhỏ",
+   "usage_vi": "Động từ miêu tả việc tranh cãi về những chuyện lặt vặt không đáng kể, rất thích hợp dùng khi nói về mối quan hệ bạn bè hoặc cặp đôi.",
+   "example_en": "My siblings always bicker about who gets to control the television remote.",
+   "example_vi": "Anh chị em tôi lúc nào cũng cãi nhau vặt về việc ai được giữ chiếc điều khiển ti vi."
+  },
+  {
+   "t": 820.56,
+   "d": 4.04,
+   "phrase": "a pain in the ass",
+   "ipa": "/ə peɪn ɪn ðə æs/",
+   "quote": ">> First of all, it's just a pain in the ass, mostly.",
+   "meaning_vi": "dự án/việc cực kỳ phiền phức",
+   "usage_vi": "Thành ngữ khẩu ngữ (informal) dùng để bực bội than phiền về một việc gì đó tốn công sức hoặc gây rắc rối.",
+   "example_en": "Finding a parking spot downtown during peak hours is a real pain in the ass.",
+   "example_vi": "Tìm chỗ đậu xe ở trung tâm vào giờ cao điểm thật sự là một điều cực kỳ phiền phức."
+  },
+  {
+   "t": 840.6,
+   "d": 3.2,
+   "phrase": "socialize someone to do something",
+   "ipa": "/ˈsoʊʃəˌlaɪz/",
+   "quote": "was like socialized to",
+   "meaning_vi": "được định hình/giáo dục bởi chuẩn mực xã hội",
+   "usage_vi": "Từ vựng C1 rất tốt cho IELTS Writing Task 2 khi phân tích cách xã hội ảnh hưởng lên tư duy và hành vi cá nhân.",
+   "example_en": "Children are often socialized to follow certain gender roles from a very young age.",
+   "example_vi": "Trẻ em thường được xã hội định hình để tuân theo các vai trò giới tính nhất định từ khi còn rất nhỏ."
+  },
+  {
+   "t": 964.04,
+   "d": 4.0,
+   "phrase": "keep something up",
+   "ipa": "/kip ˈsʌmθɪŋ ʌp/",
+   "quote": "books this year. I really want to keep",
+   "meaning_vi": "tiếp tục duy trì phong độ hoặc thói quen tốt",
+   "usage_vi": "Phrasal verb phổ biến dùng khi khích lệ ai đó tiếp tục phát huy hoặc bản thân muốn duy trì một tiến độ tích cực.",
+   "example_en": "You have made great progress in writing, so try to keep it up!",
+   "example_vi": "Bạn đã tiến bộ rất nhiều trong kỹ năng viết, vì vậy hãy cố gắng duy trì phong độ đó nhé!"
+  },
+  {
+   "t": 1012.36,
+   "d": 4.96,
+   "phrase": "advocate for",
+   "ipa": "/ˈædvəkət fɔr/",
+   "quote": "is advocating for this idea of",
+   "meaning_vi": "công khai ủng hộ, cổ vũ cho",
+   "usage_vi": "Động từ học thuật cao cấp cho IELTS Speaking/Writing khi bày tỏ lập trường về một chính sách, giải pháp hay lối sống.",
+   "example_en": "Many experts advocate for reducing screen time to improve mental health.",
+   "example_vi": "Nhiều chuyên gia công khai ủng hộ việc giảm thời gian sử dụng màn hình để cải thiện sức khỏe tinh thần."
+  },
+  {
+   "t": 1038.48,
+   "d": 3.16,
+   "phrase": "task switching",
+   "ipa": "/tæsk ˈswɪʧɪŋ/",
+   "quote": "day-to-day is like task switching",
+   "meaning_vi": "sự chuyển đổi liên tục giữa các nhiệm vụ",
+   "usage_vi": "Cụm danh từ chuyên dùng khi thảo luận về năng suất làm việc, sự xao nhãng và khả năng tập trung trong môi trường hiện đại.",
+   "example_en": "Frequent task switching often leads to cognitive fatigue and reduced efficiency.",
+   "example_vi": "Việc chuyển đổi công việc liên tục thường dẫn đến mệt mỏi về nhận thức và giảm hiệu suất."
+  },
+  {
+   "t": 1063.84,
+   "d": 4.64,
+   "phrase": "deep dive",
+   "ipa": "/dip daɪv/",
+   "quote": "having like a deep dive, something like",
+   "meaning_vi": "sự phân tích/nghiên cứu kỹ lưỡng và sâu sắc",
+   "usage_vi": "Dùng khi muốn nói về việc dành thời gian đi sâu vào tìm hiểu một vấn đề thay vì chỉ nắm bắt qua loa trên bề mặt.",
+   "example_en": "Before starting the research project, we did a deep dive into the recent academic literature.",
+   "example_vi": "Trước khi bắt đầu dự án nghiên cứu, chúng tôi đã tìm hiểu rất sâu vào các tài liệu học thuật gần đây."
+  },
+  {
+   "t": 1096.36,
+   "d": 3.96,
+   "phrase": "work one's way up",
+   "ipa": "/wɜrk wʌnz weɪ ʌp/",
+   "quote": "something interesting and then work your way up to something that feels more hard",
+   "meaning_vi": "từng bước nỗ lực vươn lên",
+   "usage_vi": "Dùng để miêu tả quá trình kiên trì học tập hay làm việc từ mức độ cơ bản để từng bước đạt tới vị trí hoặc trình độ cao hơn.",
+   "example_en": "She started as an intern and worked her way up to become the department manager.",
+   "example_vi": "Cô ấy bắt đầu với vị trí thực tập sinh và từng bước nỗ lực vươn lên trở thành trưởng phòng."
+  },
+  {
+   "t": 1184.52,
+   "d": 6.96,
+   "phrase": "synthesize",
+   "ipa": "/ˈsɪnθəˌsaɪz/",
+   "quote": "being able to synthesize and reiterate",
+   "meaning_vi": "tổng hợp (thông tin, ý tưởng)",
+   "usage_vi": "Động từ C1 thuộc danh mục từ vựng học thuật (Academic Word List), cực kỳ ấn tượng cho IELTS Writing Task 1 & 2.",
+   "example_en": "A key academic skill is the ability to synthesize information from multiple sources.",
+   "example_vi": "Một kỹ năng học thuật cốt lõi là khả năng tổng hợp thông tin từ nhiều nguồn khác nhau."
+  },
+  {
+   "t": 1363.32,
+   "d": 2.37,
+   "phrase": "type A personality",
+   "ipa": "/taɪp eɪ pɜrsəˈnælɪti/",
+   "quote": "a type A person in this type B group",
+   "meaning_vi": "nét tính cách nhóm A (ngăn nắp, tham vọng, cầu toàn)",
+   "usage_vi": "Thuật ngữ tâm lý đời sống dùng để mô tả những người thích lập kế hoạch tỉ mỉ, ngăn nắp và luôn muốn kiểm soát công việc.",
+   "example_en": "As a type A personality, he prefers to plan every detail of the trip well in advance.",
+   "example_vi": "Là một người có tính cách nhóm A, anh ấy thích lên kế hoạch tỉ mỉ cho từng chi tiết của chuyến đi từ trước."
+  }
+ ]
+}

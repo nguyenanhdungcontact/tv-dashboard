@@ -1,0 +1,143 @@
+{
+ "id": "9Hwanevuhd8",
+ "created": "2026-11-12",
+ "source": "youtube-auto",
+ "language": "en",
+ "ai": "gemini-3.6-flash",
+ "summary_vi": "Video chia sẻ 6 mẹo ứng dụng AI thực tế và bền vững giúp tiết kiệm dữ liệu (tokens), giảm bớt thao tác thủ công và tối ưu hóa quy trình làm việc cá nhân. Nhờ kết hợp các tệp gọn nhẹ, phím tắt lệnh cùng cách thiết lập quy tắc tự động, người dùng có thể điều khiển AI làm việc chuẩn xác và thông minh hơn theo thời gian.",
+ "level": "C1",
+ "phrases": [
+  {
+   "t": 1.68,
+   "d": 3.68,
+   "phrase": "go outdated",
+   "ipa": "/ɡoʊ aʊtˈdeɪtɪd/",
+   "quote": "go outdated almost immediately, then",
+   "meaning_vi": "trở nên lỗi thời, lạc hậu",
+   "usage_vi": "Dùng khi nói về công nghệ, kiến thức hoặc kỹ năng không còn phù hợp với xu hướng hiện tại.",
+   "example_en": "Tech skills can go outdated quickly if you do not continuously update your knowledge.",
+   "example_vi": "Kỹ năng công nghệ có thể trở nên lỗi thời rất nhanh nếu bạn không liên tục cập nhật kiến thức."
+  },
+  {
+   "t": 27.2,
+   "d": 4.24,
+   "phrase": "kick things off",
+   "ipa": "/kɪk θɪŋz ɔːf/",
+   "quote": "time. Let's get started. Kicking things off with tip number one, the markdown",
+   "meaning_vi": "bắt đầu, khởi động",
+   "usage_vi": "Cụm động từ tự nhiên để mở đầu một cuộc họp, buổi thuyết trình hoặc chuỗi hoạt động.",
+   "example_en": "To kick things off, let's briefly review the agenda for today's workshop.",
+   "example_vi": "Để bắt đầu, chúng ta hãy điểm qua nhanh chương trình làm việc của buổi hội thảo hôm nay."
+  },
+  {
+   "t": 145.76,
+   "d": 4.48,
+   "phrase": "add up",
+   "ipa": "/æd ʌp/",
+   "quote": "savings add up real quick. As a rule of",
+   "meaning_vi": "tích tụ thành số lượng lớn, tăng dần lên",
+   "usage_vi": "Dùng để chỉ những việc/khoản tiền nhỏ tích góp lại theo thời gian sẽ thành một con số đáng kể.",
+   "example_en": "Saving just two dollars every day really adds up over a year.",
+   "example_vi": "Tiết kiệm chỉ hai đô la mỗi ngày thực sự tích thành một khoản lớn sau một năm."
+  },
+  {
+   "t": 145.76,
+   "d": 4.48,
+   "phrase": "rule of thumb",
+   "ipa": "/ruːl əv θʌm/",
+   "quote": "savings add up real quick. As a rule of thumb, this applies to any file that's",
+   "meaning_vi": "quy tắc kinh nghiệm, nguyên tắc chung",
+   "usage_vi": "Thành ngữ C1 tuyệt vời cho IELTS Speaking/Writing khi đưa ra một chỉ dẫn dựa trên kinh nghiệm thực tế.",
+   "example_en": "As a rule of thumb, you should review your IELTS vocabulary for 20 minutes every evening.",
+   "example_vi": "Theo kinh nghiệm chung, bạn nên ôn tập từ vựng IELTS 20 phút mỗi tối."
+  },
+  {
+   "t": 234.64,
+   "d": 4.32,
+   "phrase": "dive right into",
+   "ipa": "/daɪv raɪt ˈɪntuː/",
+   "quote": "Diving right into an example, let's say",
+   "meaning_vi": "đi thẳng vào vấn đề, bắt tay vào làm ngay",
+   "usage_vi": "Dùng trong giao tiếp làm việc hoặc thuyết trình khi muốn bỏ qua phần dạo đầu và đi vào trọng tâm.",
+   "example_en": "Instead of making small talk, let's dive right into the main topic of our presentation.",
+   "example_vi": "Thay vì trò chuyện xã giao, chúng ta hãy đi thẳng vào chủ đề chính của bài thuyết trình."
+  },
+  {
+   "t": 461.36,
+   "d": 4.32,
+   "phrase": "full-circle moment",
+   "ipa": "/fʊl ˈsɜːrkəl ˈmoʊmənt/",
+   "quote": "it feels like a bit of a full circle moment to be sharing a free guide he put",
+   "meaning_vi": "khoảnh khắc trọn vẹn, sự trở lại điểm xuất phát đầy ý nghĩa",
+   "usage_vi": "Dùng khi bạn quay trở lại một vị trí, hoàn cảnh hoặc mối quan hệ cũ nhưng với vị thế hoàn toàn mới.",
+   "example_en": "Teaching at the university where she once studied was a true full-circle moment for her.",
+   "example_vi": "Giảng dạy tại trường đại học nơi cô từng theo học là một khoảnh khắc trọn vẹn ý nghĩa đối với cô."
+  },
+  {
+   "t": 528.56,
+   "d": 6.48,
+   "phrase": "high-stakes",
+   "ipa": "/haɪ steɪks/",
+   "quote": "high stakes requests, research from",
+   "meaning_vi": "có rủi ro cao, mang tính chất quan trọng quyết định",
+   "usage_vi": "Tính từ rất hay trong IELTS Writing/Speaking để miêu tả dự án, cuộc thi hay quyết định quan trọng.",
+   "example_en": "Job interviews at top technology companies are often high-stakes situations.",
+   "example_vi": "Phỏng vấn xin việc tại các công ty công nghệ hàng đầu thường là những tình huống mang tính quyết định cao."
+  },
+  {
+   "t": 549.04,
+   "d": 4.96,
+   "phrase": "course-correct",
+   "ipa": "/kɔːrs kəˈrɛkt/",
+   "quote": "for your review. So you can course correct before it does any of the work.",
+   "meaning_vi": "điều chỉnh hướng đi, sửa đổi phương hướng kịp thời",
+   "usage_vi": "Thường dùng trong công việc hoặc quản lý dự án khi nhận ra sai sót và thay đổi kế hoạch.",
+   "example_en": "Good managers continuously observe feedback so they can course-correct before small issues become big problems.",
+   "example_vi": "Những người quản lý giỏi luôn theo sát phản hồi để có thể điều chỉnh hướng đi trước khi sự cố nhỏ trở thành vấn đề lớn."
+  },
+  {
+   "t": 574.16,
+   "d": 4.48,
+   "phrase": "rationale",
+   "ipa": "/ˌræʃəˈnæl/",
+   "quote": "only explains its rationale in words",
+   "meaning_vi": "lý do căn bản, cơ sở lý luận",
+   "usage_vi": "Từ vựng trang trọng (C1) thích hợp cho IELTS Task 2 và Speaking Part 3 khi giải thích căn nguyên quyết định.",
+   "example_en": "The director carefully explained the financial rationale behind the restructuring plan.",
+   "example_vi": "Giám đốc đã giải thích cẩn thận cơ sở tài chính đằng sau kế hoạch tái cấu trúc."
+  },
+  {
+   "t": 665.84,
+   "d": 4.64,
+   "phrase": "round out",
+   "ipa": "/raʊnd aʊt/",
+   "quote": "your intent. Rounding out the tips for",
+   "meaning_vi": "hoàn thiện, khép lại (chuỗi danh sách/nội dung)",
+   "usage_vi": "Dùng khi bổ sung mục cuối cùng để hoàn chỉnh một chương trình, danh sách hoặc chuỗi công việc.",
+   "example_en": "To round out our trip, we decided to visit a quiet seaside village on the last day.",
+   "example_vi": "Để khép lại chuyến đi, chúng tôi quyết định ghé thăm một làng quê ven biển yên bình vào ngày cuối cùng."
+  },
+  {
+   "t": 724.24,
+   "d": 5.36,
+   "phrase": "in plain English",
+   "ipa": "/ɪn pleɪn ˈɪŋɡlɪʃ/",
+   "quote": "just describe the change I want in plain English. And using the wayback machine,",
+   "meaning_vi": "bằng ngôn ngữ đơn giản, dễ hiểu",
+   "usage_vi": "Dùng khi yêu cầu ai đó giải thích thuật ngữ chuyên môn phức tạp theo cách bình dân nhất.",
+   "example_en": "Could you explain this legal contract to me in plain English?",
+   "example_vi": "Bạn có thể giải thích hợp đồng pháp lý này cho tôi bằng ngôn ngữ dễ hiểu được không?"
+  },
+  {
+   "t": 953.28,
+   "d": 4.24,
+   "phrase": "make a massive difference",
+   "ipa": "/meɪk ə ˈmæsɪv ˈdɪfrəns/",
+   "quote": "small improvements like that make a massive difference over time. As a rule",
+   "meaning_vi": "tạo ra sự khác biệt cực kỳ lớn",
+   "usage_vi": "Collocation tự nhiên thay thế cho 'change a lot', rất phù hợp để nhấn mạnh tầm quan trọng của giải pháp.",
+   "example_en": "Installing smart home software made a massive difference to our monthly electricity bills.",
+   "example_vi": "Cài đặt phần mềm nhà thông minh đã tạo ra sự khác biệt cực kỳ lớn đối với hóa đơn tiền điện hàng tháng của chúng tôi."
+  }
+ ]
+}
