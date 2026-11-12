@@ -24,6 +24,9 @@ window.applyTheme = function(){
 };
 window.setThemePref = function(v){ try { localStorage.setItem('tvv.theme', v); } catch(e){} applyTheme(); };
 applyTheme(); setInterval(applyTheme, 60000);
+/* Điện thoại (dọc hoặc ngang): sao băng phủ cả màn hình, bản tin gom vào nút "Tin tức" */
+window.isPhone = function(){ return matchMedia('(max-width: 760px), (pointer: coarse) and (max-height: 500px)').matches; };
+document.documentElement.classList.toggle('phone', isPhone());
 </script>
 <script src="learn-core.js"></script>
 <style>
@@ -438,6 +441,52 @@ applyTheme(); setInterval(applyTheme, 60000);
   :root.day #err { color: #b03a2a; }
   :root.day #bar { background: rgba(60, 80, 50, 0.12); }
   :root.day #feature, :root.day #queue { scrollbar-color: rgba(60, 80, 50, 0.25) transparent; }
+
+  /* ================= Điện thoại: sao băng full màn hình, tin tức mở bằng nút ================= */
+  a.pill { font: inherit; color: var(--text); background: var(--panel); border: 1px solid var(--panel-edge); border-radius: 999px;
+    padding: 0.55em 1.1em; text-decoration: none; display: inline-flex; align-items: center; }
+  .phone-only { display: none !important; }
+  :root.phone .phone-only { display: inline-flex !important; }
+  :root.phone #field { left: 0; right: 0; top: 0; bottom: 0; }
+  :root.phone body.wl-open #field { right: 0; }
+  :root.phone #news { top: 0; bottom: 0; left: 0; right: 0; width: auto; height: auto; z-index: 45; border: 0;
+    background: var(--space-deep); transform: translateY(100%); visibility: hidden; transition: transform .35s ease, visibility .35s; }
+  :root.phone body.news-open #news { transform: none; visibility: visible; }
+  :root.phone #news header { display: flex; align-items: flex-start; gap: 12px; padding: 14px 16px 10px; }
+  :root.phone #news header > div { flex: 1; min-width: 0; }
+  :root.phone #news h1 { font-size: 1.5rem; }
+  :root.phone #news .stamp { font-size: .85rem; }
+  :root.phone #feature { max-height: 60%; margin: 4px 12px 0; box-shadow: none !important; }
+  :root.phone #feature .cat { font-size: .85rem; }
+  :root.phone #feature .count, :root.phone #feature .src { font-size: .78rem; }
+  :root.phone #feature h3 { font-size: 1.15rem; }
+  :root.phone #feature p, :root.phone #dPoints li { font-size: .95rem; }
+  :root.phone #readHint { display: none !important; }
+  :root.phone #queue { padding: 12px 12px calc(16px + env(safe-area-inset-bottom, 0px)); }
+  :root.phone #queue h4 { font-size: .85rem; }
+  :root.phone .q { font-size: .9rem; padding: 9px 8px; }
+  :root.phone #wpanel { width: 100%; left: 0; z-index: 40; background: var(--space-deep); }
+  :root.phone #hud { top: calc(10px + env(safe-area-inset-top, 0px)); left: 10px; right: 10px; justify-content: flex-end; gap: 8px; }
+  :root.phone #hud .pill { padding: .5em .85em; font-size: .9rem; }
+  :root.phone #editBtn, :root.phone #hint { display: none; }
+  :root.phone #card { left: 12px; right: 12px; max-width: 520px; bottom: calc(14px + env(safe-area-inset-bottom, 0px));
+    padding: 16px 18px; touch-action: pan-y; user-select: none; -webkit-user-select: none; }
+  :root.phone #card.show { pointer-events: auto; }
+  :root.phone #card h2 { font-size: 1.85rem; }
+  :root.phone #card .meta { font-size: .9rem; }
+  :root.phone #card .mean { font-size: 1.15rem; }
+  :root.phone #card .ex { font-size: .95rem; }
+  :root.phone #card .col span { font-size: .8rem; }
+  :root.phone #card .nav { font-size: .78rem; }
+  :root.phone #card.swipe-l { transform: translateX(-18px); opacity: .6; }
+  :root.phone #card.swipe-r { transform: translateX(18px); opacity: .6; }
+  :root.phone #paused, :root.phone #themeNote { left: 50%; }
+  :root.phone #themeNote { font-size: 1.1rem; }
+  :root.phone .meteor { font-size: calc(var(--s) * 1.55rem); }
+  :root.phone .meteor .tail { width: calc(var(--s) * 30vmin); }
+  :root.phone .meteor .vi { max-width: 14em; }
+  :root.phone #wcount { font-size: .75rem; }
+  :root.phone body.card-on #wcount { opacity: 0; }
 </style>
 </head>
 <body>
@@ -446,8 +495,9 @@ applyTheme(); setInterval(applyTheme, 60000);
 
 <aside id="news" aria-label="Bản tin hôm nay">
   <header>
-    <h1>Bản tin hôm nay</h1>
-    <p class="stamp" id="stamp"></p>
+    <div><h1>Bản tin hôm nay</h1>
+    <p class="stamp" id="stamp"></p></div>
+    <button class="pill phone-only" type="button" id="newsClose" aria-label="Đóng bản tin">✕</button>
   </header>
   <article id="feature" tabindex="0" aria-live="polite">
     <div class="top"><span class="cat" id="dCat"></span><span class="count" id="dCount"></span></div>
@@ -478,7 +528,9 @@ applyTheme(); setInterval(applyTheme, 60000);
     <span><kbd>←</kbd>sáng/tối</span>
   </div>
   <button class="pill" id="themeBtn" type="button"></button>
+  <button class="pill phone-only" id="newsBtn" type="button">📰 Tin tức</button>
   <button class="pill" id="listBtn" type="button">Danh sách từ</button>
+  <a class="pill phone-only" id="videoLink" href="iphone.html">▶ Video</a>
   <button class="pill" id="editBtn" type="button">Sửa danh sách từ</button>
 </div>
 <div id="wcount" aria-live="polite"></div>
@@ -652,6 +704,7 @@ applyTheme(); setInterval(applyTheme, 60000);
   const STORE_KEY = "meteor-words-v1";
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const $ = (id) => document.getElementById(id);
+  const phone = () => document.documentElement.classList.contains("phone");
 
   /* =================== NEWS RAIL (auto-rotating full stories) =================== */
   const brief = JSON.parse($("brief-data").textContent);
@@ -928,7 +981,7 @@ Chỉ dựa trên thông tin ở trên và kiến thức chung. Không bịa th�
   function pickX() {
     let x = 0;
     for (let i = 0; i < 6; i++) {
-      x = 0.02 * FW + Math.random() * 0.68 * FW;
+      x = 0.02 * FW + Math.random() * (phone() ? 0.5 : 0.68) * FW;
       if (Math.abs(x - lastX) > FW * 0.18) break;
     }
     lastX = x;
@@ -941,23 +994,31 @@ Chỉ dựa trên thông tin ở trên và kiến thức chung. Không bịa th�
     const el = document.createElement("div");
     el.className = "meteor";
     el.style.setProperty("--s", z.toFixed(3));
-    el.style.setProperty("--tail-angle", TAIL_ANGLE + "deg");
+    const drift = phone() ? 0.12 : DRIFT;
+    el.style.setProperty("--tail-angle", ((Math.atan2(1, drift) * 180 / Math.PI) + 180) + "deg");
     el.innerHTML = '<i class="tail"></i><i class="head"></i><span class="label"><b class="w"></b><span class="vi"></span></span>';
     el.querySelector(".w").textContent = item.w;
     el.querySelector(".vi").textContent = item.vi || "";
     const m = {
-      el, item, z,
+      el, item, z, drift,
       x: pickX(),
       y: startY != null ? startY : -80 - Math.random() * 60,
       v: (55 + Math.random() * 30) * z * Math.max(0.6, FH / 900)
     };
-    el.addEventListener("click", () => spotlight(m));
     field.appendChild(el);
+    if (phone()) {                                   // màn hẹp: cụm từ dài không bị cắt ở mép phải
+      const lw = el.querySelector(".label").offsetWidth + 12, room = FW - lw - drift * FH * 0.7;
+      if (m.x > room) m.x = Math.max(4, room);
+    }
+    el.addEventListener("click", () => {
+      if (phone()) { seq = null; setMode("vocab"); }   // điện thoại: thẻ nghĩa ở lại, vuốt để đổi từ
+      spotlight(m);
+    });
     meteors.push(m);
     return m;
   }
 
-  let mode = "news", vIdx = 0;
+  let mode = "news", vIdx = 0, seq = null;   // seq: thứ tự từ trong danh sách đang lọc (điện thoại, vuốt thẻ)
   function setMode(m) {
     mode = m;
     document.body.classList.toggle("mode-news", m === "news");
@@ -984,10 +1045,16 @@ Chỉ dựa trên thông tin ở trên và kiến thức chung. Không bịa th�
       span.textContent = c;
       col.appendChild(span);
     });
+    if (phone()) {
+      const list = seq || words.map(o => o.w), at = list.indexOf(item.w);
+      $("cNav").innerHTML = mode === "vocab"
+        ? `<span>${at + 1}/${list.length}</span><span>Vuốt ← → đổi từ</span><span>Chạm để đóng</span>` : "";
+    } else
     $("cNav").innerHTML = mode === "vocab"
       ? `<span>${vIdx + 1}/${words.length}</span><span>← → đổi từ</span><span>Back: về bản tin</span>`
       : "";
     card.classList.add("show");
+    document.body.classList.add("card-on");
     clearTimeout(cardTimer);
     if (mode !== "vocab") cardTimer = setTimeout(clearSpotlight, 9000);
   }
@@ -1007,6 +1074,7 @@ Chỉ dựa trên thông tin ở trên và kiến thức chung. Không bịa th�
 
   function clearSpotlight() {
     card.classList.remove("show");
+    document.body.classList.remove("card-on");
     lightMeteor(null);
   }
 
@@ -1032,6 +1100,7 @@ Chỉ dựa trên thông tin ở trên và kiến thức chung. Không bịa th�
   }
 
   function exitVocab() {
+    seq = null;
     setMode("news");
     clearSpotlight();
   }
@@ -1051,7 +1120,7 @@ Chỉ dựa trên thông tin ở trên và kiến thức chung. Không bịa th�
         const m = meteors[i];
         const step = m.v * speed * (m === lit ? 0.25 : 1) * dt;
         m.y += step;
-        m.x += step * DRIFT;
+        m.x += step * m.drift;
         m.el.style.transform = `translate3d(${m.x.toFixed(1)}px, ${m.y.toFixed(1)}px, 0)`;
         if (m.y > FH + 120 || m.x > FW + 400) {
           if (m === lit) { if (mode === "vocab") lightMeteor(null); else clearSpotlight(); }
@@ -1116,6 +1185,7 @@ Chỉ dựa trên thông tin ở trên và kiến thức chung. Không bịa th�
   window.tvBack = function () {
     if (editor.open) { editor.close(); return; }
     if (panelOpen()) { setPanel(false); return; }
+    if (document.body.classList.contains("news-open")) { setNews(false); return; }
     if (mode === "news" && reading) { setReading(false); return; }
     if (mode === "vocab") exitVocab();
     else clearSpotlight();
@@ -1136,7 +1206,7 @@ Chỉ dựa trên thông tin ở trên và kiến thức chung. Không bịa th�
   const THEME_BTN = { auto: "◐ Tự động", day: "☀ Sáng", night: "☾ Tối" };
   const themeBtn = $("themeBtn"), themeNote = $("themeNote");
   let themeNoteT;
-  function paintThemeBtn() { themeBtn.textContent = THEME_BTN[themePref()]; }
+  function paintThemeBtn() { themeBtn.textContent = phone() ? THEME_BTN[themePref()].split(" ")[0] : THEME_BTN[themePref()]; }
   function cycleTheme() {
     const next = THEMES[(THEMES.indexOf(themePref()) + 1) % THEMES.length];
     if (new URLSearchParams(location.search).has("theme")) history.replaceState(null, "", location.pathname);
@@ -1165,7 +1235,7 @@ Chỉ dựa trên thông tin ở trên và kiến thức chung. Không bịa th�
   }
   paintCount(); setInterval(paintCount, 5000);
 
-  let undoT = null, lastDel = null;
+  let undoT = null, lastDel = null, listNames = [];
   function renderWordList() {
     const q = $("wlSearch").value.trim().toLowerCase();
     // Đang tìm: chỉ hiện từ khớp, từ bắt đầu bằng chữ đang gõ lên đầu. Không tìm: từ đã lưu lên đầu rồi theo ABC
@@ -1175,7 +1245,8 @@ Chỉ dựa trên thông tin ở trên và kiến thức chung. Không bịa th�
              .sort((a, b) => rank(a) - rank(b) || String(a.w).localeCompare(String(b.w)))
       : words.slice().sort((a, b) => (b.saved ? 1 : 0) - (a.saved ? 1 : 0) || String(a.w).localeCompare(String(b.w))));
     $("wlInfo").innerHTML = q ? `${list.length} kết quả cho “${escH(q)}”` :
-      `${words.length} từ đang bay, đồng bộ mọi thiết bị. Chạm một từ để xem nghĩa; vuốt sang trái/phải rồi bấm <b>Xoá</b> để bỏ.`;
+      `${words.length} từ đang bay, đồng bộ mọi thiết bị. Chạm một từ để xem nghĩa${phone() ? " (vuốt thẻ ← → để xem từ kế)" : ""}; vuốt hàng sang trái/phải rồi bấm <b>Xoá</b> để bỏ.`;
+    listNames = list.map(o => o.w);
     if (!list.length) { $("wlBody").innerHTML = `<div class="empty">Không thấy từ nào. Có thể thêm ở ô “Thêm từ” phía trên.</div>`; return; }
     $("wlBody").innerHTML = list.map(o => `<div class="wrow" data-w="${encodeURIComponent(o.w)}">
         <button class="del" type="button">Xoá</button>
@@ -1189,7 +1260,12 @@ Chỉ dựa trên thông tin ở trên và kiến thức chung. Không bịa th�
     document.querySelectorAll("#wlBody .wrow.on").forEach(r => r.classList.remove("on"));
     const row = [...document.querySelectorAll("#wlBody .wrow")].find(r => decodeURIComponent(r.dataset.w) === w);
     if (row) row.classList.add("on");
-    if (matchMedia("(max-width: 760px)").matches) setPanel(false);   // iPhone dọc: danh sách phủ màn hình, đóng lại để thấy thẻ
+    if (phone() || matchMedia("(max-width: 760px)").matches) {
+      // Điện thoại: danh sách phủ màn hình, đóng lại để thấy thẻ; vuốt thẻ để đi tiếp theo thứ tự danh sách đang lọc
+      setPanel(false);
+      seq = listNames.slice();
+      setMode("vocab");
+    }
     showWordAt(i);
   }
   let drag = null;
@@ -1256,8 +1332,49 @@ Chỉ dựa trên thông tin ở trên và kiến thức chung. Không bịa th�
   (() => {
     let pref = null; try { pref = localStorage.getItem("dash.wpanel"); } catch (e) {}
     const wideTouch = matchMedia("(pointer: coarse) and (min-width: 900px)").matches;
-    if (pref === "1" || (pref === null && wideTouch)) setPanel(true);
+    if (pref === "1" || (pref === null && wideTouch && !phone())) setPanel(true);
   })();
+
+  /* =================== ĐIỆN THOẠI: nút Tin tức + vuốt thẻ nghĩa =================== */
+  function setNews(open) {
+    document.body.classList.toggle("news-open", open);
+    if (open) { if (mode === "vocab") exitVocab(); else clearSpotlight(); }
+  }
+  $("newsBtn").addEventListener("click", () => setNews(true));
+  $("newsClose").addEventListener("click", () => setNews(false));
+  function stepCard(d) {
+    if (!lit && !card.classList.contains("show")) return;
+    const cur = $("cWord").textContent;
+    if (seq && seq.length) {
+      let at = seq.indexOf(cur), n = 0, w;
+      do { at = (at + d + seq.length) % seq.length; w = seq[at]; n++; } while (words.findIndex(o => o.w === w) < 0 && n < seq.length);
+      const i = words.findIndex(o => o.w === w);
+      if (i >= 0) showWordAt(i);
+    } else {
+      const i = words.findIndex(o => o.w === cur);
+      showWordAt((i >= 0 ? i : vIdx) + d);
+    }
+    if (!reduceMotion) {
+      card.classList.add(d > 0 ? "swipe-l" : "swipe-r");
+      setTimeout(() => card.classList.remove("swipe-l", "swipe-r"), 160);
+    }
+  }
+  let cardDrag = null;
+  card.addEventListener("pointerdown", e => { if (phone()) cardDrag = { x: e.clientX, y: e.clientY }; });
+  card.addEventListener("pointerup", e => {
+    if (!cardDrag) return;
+    const dx = e.clientX - cardDrag.x, dy = e.clientY - cardDrag.y; cardDrag = null;
+    if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy)) { if (mode !== "vocab") { seq = null; setMode("vocab"); } stepCard(dx < 0 ? 1 : -1); }
+    else if (Math.abs(dx) < 10 && Math.abs(dy) < 10) { if (mode === "vocab") exitVocab(); else clearSpotlight(); }
+  });
+  card.addEventListener("pointercancel", () => cardDrag = null);
+  function paintPhone() {
+    document.documentElement.classList.toggle("phone", isPhone());
+    $("listBtn").textContent = phone() ? "☰ Từ vựng" : "Danh sách từ";
+    paintThemeBtn();
+  }
+  paintPhone();
+  window.addEventListener("resize", paintPhone);
 
   /* =================== WORD LIST EDITOR =================== */
   const txt = $("txt"), err = $("err");
