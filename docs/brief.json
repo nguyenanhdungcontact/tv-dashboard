@@ -1,6 +1,6 @@
 {
-  "date": "2026-11-11",
-  "updated": "Cập nhật 09:47 thứ Tư, 11/11/2026",
+  "date": "2026-11-13",
+  "updated": "Cập nhật 10:26 thứ Sáu, 13/11/2026",
   "sections": [
     {
       "id": "hot",
@@ -8,31 +8,31 @@
       "color": "--c-hot",
       "items": [
         {
-          "title": "Mỹ có thể đề xuất vẽ lại ranh giới Donbass để chấm dứt xung đột",
-          "summary": "Theo bài báo, Mỹ dường như đã đưa ra ý tưởng điều chỉnh lại ranh giới vùng Donbass. Theo đó, Nga sẽ tuyên bố kiểm soát vùng này, còn Ukraine không phải từ bỏ những khu vực còn lại.",
+          "title": "Ông Lê Quốc Phong được bầu làm Chủ tịch UBND TP HCM",
+          "summary": "HĐND TP HCM đã bầu ông Lê Quốc Phong, 48 tuổi, Phó bí thư thường trực Thành ủy, giữ chức Chủ tịch UBND thành phố. Ông thay ông Nguyễn Văn Được ở vị trí này.",
           "points": [],
           "why": "",
           "source": "VnExpress",
-          "date": "11/11",
-          "link": "https://vnexpress.net/my-co-the-da-de-xuat-ve-lai-ban-do-de-cham-dut-chien-su-ukraine-5143055.html"
+          "date": "12/11",
+          "link": "https://vnexpress.net/ong-le-quoc-phong-lam-chu-tich-ubnd-tp-hcm-5143543.html"
         },
         {
-          "title": "Ngân hàng Ueno sụp đổ khiến Tổng thống Paraguay bị phế truất",
-          "summary": "Vụ sụp đổ của ngân hàng Ueno đã đóng băng tiền tiết kiệm của gần 3 triệu người dân Paraguay. Biến cố này cũng khiến Tổng thống Pena mất ghế.",
+          "title": "Jensen Huang từ chức CEO Nvidia sau bê bối ngoại tình",
+          "summary": "Theo bài báo, Jensen Huang rời ghế CEO Nvidia vì bê bối ngoại tình của chính ông. Đây là lần đầu tiên hãng chip có giá trị nhất thế giới thay CEO sau 33 năm.",
           "points": [],
           "why": "",
           "source": "VnExpress",
-          "date": "11/11",
-          "link": "https://vnexpress.net/cu-sap-ngan-hang-khien-tong-thong-paraguay-bi-phe-truat-5142531.html"
+          "date": "12/11",
+          "link": "https://vnexpress.net/jensen-huang-tu-chuc-ceo-nvidia-5143768.html"
         },
         {
-          "title": "Ngân hàng Nhà nước định kỳ mua USD từ các ngân hàng thương mại",
-          "summary": "Từ ngày 11/11, Ngân hàng Nhà nước quay lại mua ngoại tệ giao ngay từ các ngân hàng thương mại, mỗi tuần hai lần. Mức giá áp dụng là 25.500 đồng một USD.",
+          "title": "Thủ tướng: năm 2027 cần huy động 6–6,4 triệu tỷ đồng vốn đầu tư",
+          "summary": "Thủ tướng Lê Minh Hưng cho biết tổng vốn đầu tư toàn xã hội năm 2027 cần huy động khoảng 36 đến 38% GDP. Con số này tương đương 6 đến 6,4 triệu tỷ đồng.",
           "points": [],
           "why": "",
           "source": "VnExpress",
-          "date": "10/11",
-          "link": "https://vnexpress.net/ngan-hang-nha-nuoc-se-dinh-ky-mua-usd-tu-cac-nha-bang-5142801.html"
+          "date": "12/11",
+          "link": "https://vnexpress.net/thu-tuong-nam-2027-can-huy-dong-toi-6-4-trieu-ty-dong-von-dau-tu-5143983.html"
         }
       ]
     },
@@ -42,31 +42,31 @@
       "color": "--c-work",
       "items": [
         {
-          "title": "Google bắt đầu triển khai bản cập nhật lõi tháng 11/2026",
-          "summary": "Google vừa chính thức thông báo bắt đầu triển khai bản cập nhật lõi tháng 11/2026 vào chiều thứ Ba theo giờ miền Đông Mỹ. Quá trình triển khai dự kiến kéo dài khoảng 2 tuần. Đây là bản cập nhật định kỳ nhằm hiển thị tốt hơn nội dung phù hợp và hữu ích cho người tìm kiếm.",
+          "title": "Google Search nâng cấp lớn với mô hình Gemini 4 Hydrogen",
+          "summary": "Nick Fox của Google cho biết Google Search vừa có một bản nâng cấp lớn với Gemini 4 Hydrogen. Robby Stein gọi đây là lần nâng cấp mô hình lớn nhất từ trước đến nay của Search. Công cụ chạy rất nhanh, hiểu truy vấn tốt hơn, cải thiện query fan-out và liên kết, phản hồi trực quan hơn và ngôn ngữ phong phú hơn.",
           "points": [],
           "why": "",
           "source": "Search Engine Roundtable",
-          "date": "11/11",
-          "link": "https://www.seroundtable.com/google-november-2026-core-update-42504.html"
+          "date": "13/11",
+          "link": "https://www.seroundtable.com/google-search-gemini-4-hydrogen-42526.html"
         },
         {
-          "title": "Demand Gen thay đổi cách nhắm mục tiêu Display từ tuần 1/12/2026",
-          "summary": "Từ tuần bắt đầu ngày 1/12/2026, với chiến dịch Demand Gen tạo mới, thiết lập nhắm mục tiêu Display ở cấp chiến dịch sẽ mặc định được bật. Việc nhắm mục tiêu mạng Display sẽ được quản lý trực tiếp ở cấp nhóm quảng cáo thông qua các tùy chọn kiểm soát kênh.",
-          "points": [],
-          "why": "",
-          "source": "Google Ads Developer Blog",
-          "date": "10/11",
-          "link": "http://ads-developers.googleblog.com/2026/11/display-targeting-changes-in-demand-gen.html"
-        },
-        {
-          "title": "ChatGPT ra mắt trung tâm doanh nghiệp có số liệu lượt nhấp",
-          "summary": "OpenAI vừa giới thiệu ChatGPT Business Hub, nơi doanh nghiệp xem số liệu về lượt được nhắc đến và lượt xem hồ sơ. Đáng chú ý, công cụ này còn cho biết có bao nhiêu người nhấp từ ChatGPT sang website của doanh nghiệp.",
+          "title": "Google Ads ra mắt thẻ tổng quan lưu lượng không hợp lệ (IVT)",
+          "summary": "Google Ads đang triển khai thẻ Invalid Traffic Overview Card, hiển thị thông tin về lưu lượng không hợp lệ. Theo Keerat Sharma của Google, thẻ này giúp nhà quảng cáo thấy rõ ngay trên giao diện cách Google bảo vệ chiến dịch của họ.",
           "points": [],
           "why": "",
           "source": "Search Engine Roundtable",
-          "date": "11/11",
-          "link": "https://www.seroundtable.com/chatgpt-business-hub-42505.html"
+          "date": "12/11",
+          "link": "https://www.seroundtable.com/google-ads-invalid-traffic-ivt-overview-card-42513.html"
+        },
+        {
+          "title": "ChatGPT Ads cập nhật đấu thầu thông minh và mục tiêu chi phí mới",
+          "summary": "Trong email cập nhật hằng tuần về ChatGPT Ads, OpenAI công bố tính năng đấu thầu thông minh và các mục tiêu chi phí mới trong Ads Manager. Hãng cũng cho phép linh hoạt hơn về địa lý với chiến dịch product feed và về bộ lọc nhóm sản phẩm.",
+          "points": [],
+          "why": "",
+          "source": "Search Engine Roundtable",
+          "date": "12/11",
+          "link": "https://www.seroundtable.com/openai-chatgpt-ads-updates-42524.html"
         }
       ]
     },
@@ -76,65 +76,22 @@
       "color": "--c-life",
       "items": [
         {
-          "title": "Giá dầu thế giới giảm, xăng dầu trong nước có thể giảm mạnh ngày mai",
-          "summary": "Giá dầu thế giới tiếp tục giảm, xuống mức thấp nhất trong 2 tháng qua, kéo giá xăng dầu thành phẩm tại châu Á đi xuống. Dự báo kỳ điều chỉnh ngày 12/11 giá xăng dầu trong nước giảm đồng loạt, trong đó dầu diesel có thể giảm tới 2.000 đồng mỗi lít.",
-          "points": [],
-          "why": "",
-          "source": "Thanh Niên",
-          "date": "11/11",
-          "link": "https://thanhnien.vn/gia-xang-dau-hom-nay-11112026-dau-diesel-sap-co-dot-giam-gia-manh-185261111081857441.htm"
-        },
-        {
-          "title": "TP.HCM nâng trần phí quản lý chung cư lên 13.700 đồng mỗi m2",
-          "summary": "Khung giá dịch vụ quản lý chung cư mới tại TP.HCM dao động từ 600 đến 13.700 đồng mỗi m2 mỗi tháng. Mức trần mới tăng gần gấp đôi so với quy định cũ.",
+          "title": "Tân Chủ tịch TP HCM ưu tiên xử lý kẹt xe, ngập nước",
+          "summary": "Ông Lê Quốc Phong, tân Chủ tịch UBND TP HCM, cho biết sẽ tập trung giải quyết kẹt xe, ngập nước và ô nhiễm môi trường. Mục tiêu là nâng cao chất lượng sống của người dân khi ông nhận nhiệm vụ.",
           "points": [],
           "why": "",
           "source": "VnExpress",
-          "date": "10/11",
-          "link": "https://vnexpress.net/tp-hcm-nang-tran-khung-phi-quan-ly-chung-cu-len-toi-da-13-700-dong-moi-m2-5142712.html"
+          "date": "12/11",
+          "link": "https://vnexpress.net/tan-chu-tich-tp-hcm-uu-tien-giai-quyet-ket-xe-ngap-nuoc-5143787.html"
         },
         {
-          "title": "Cao tốc TP.HCM - Long Thành dần thành hình sau hơn một năm mở rộng",
-          "summary": "Sau hơn một năm thi công, nhiều đoạn cao tốc nối TP.HCM với sân bay Long Thành đã được mở rộng lên 10-12 làn xe. Các cây cầu và nút giao lớn cũng dần hiện rõ hình hài.",
+          "title": "Giá xăng giảm, về dưới 20.000 đồng một lít",
+          "summary": "Từ 15h hôm nay, giá các loại xăng dầu cùng giảm từ 1.310 đến 2.260 đồng một lít. Đợt điều chỉnh này theo diễn biến của thị trường năng lượng thế giới, đưa giá xăng xuống dưới 20.000 đồng một lít.",
           "points": [],
           "why": "",
           "source": "VnExpress",
-          "date": "11/11",
-          "link": "https://vnexpress.net/cao-toc-tp-hcm-long-thanh-sau-hon-mot-nam-mo-rong-5142778.html"
-        }
-      ]
-    },
-    {
-      "id": "heart",
-      "name": "Ý nghĩa",
-      "color": "--c-heart",
-      "items": [
-        {
-          "title": "Hai thanh niên tranh thủ ngoài giờ làm để vá ổ gà",
-          "summary": "Anh Nguyễn Văn Tân làm nghề cắt tóc, tận dụng thời gian rảnh ra đường vá ổ gà. Anh tự bỏ tiền mua vật liệu với mong muốn người dân đi lại an toàn hơn.",
-          "points": [],
-          "why": "",
-          "source": "Thanh Niên",
-          "date": "11/11",
-          "link": "https://thanhnien.vn/hai-thanh-nien-ngoai-gio-lam-la-ra-duong-va-o-ga-185261110211653915.htm"
-        },
-        {
-          "title": "Bài học lớn về lòng nhân ái từ những đứa trẻ khó khăn",
-          "summary": "Tác giả nhớ lại thời sinh viên năm ba Đại học Sư phạm TP.HCM, từng tình nguyện dạy kèm học sinh có hoàn cảnh khó khăn tại Trường Phổ cập Ánh Sáng ở Quận 3. Kỷ niệm ấy đến nay vẫn còn nguyên cảm xúc ấm áp và xúc động.",
-          "points": [],
-          "why": "",
-          "source": "Thanh Niên",
-          "date": "11/11",
-          "link": "https://thanhnien.vn/nhung-trai-tim-nho-va-bai-hoc-lon-ve-long-nhan-ai-185261107145549403.htm"
-        },
-        {
-          "title": "Trường không điện thoại biến giờ ra chơi thành khoảng thời gian vui vẻ",
-          "summary": "Tại Trường THPT Nguyễn Thượng Hiền (TP.HCM), học sinh không còn ngồi dán mắt vào điện thoại trong giờ giải lao. Nhà trường duy trì kỷ luật nghiêm và tổ chức các hoạt động trải nghiệm, giúp 45 phút ra chơi trở thành không gian sinh hoạt học đường đúng nghĩa.",
-          "points": [],
-          "why": "",
-          "source": "Tuổi Trẻ",
-          "date": "11/11",
-          "link": "https://tuoitre.vn/nhung-ngoi-truong-khong-dien-thoai-45-phut-ra-choi-hanh-phuc-100261110205129604.htm"
+          "date": "12/11",
+          "link": "https://vnexpress.net/gia-xang-dau-moi-nhat-hom-nay-12-11-5143841.html"
         }
       ]
     }

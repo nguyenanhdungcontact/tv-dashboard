@@ -2438,5 +2438,135 @@
       "deeply compassionate"
     ],
     "added": "2026-11-12"
+  },
+  {
+    "w": "prune",
+    "ipa": "/pruːn/",
+    "pos": "verb",
+    "vi": "cắt bỏ, loại bỏ (từ khóa, chiến dịch kém hiệu quả)",
+    "ex": "We’ll prune underperforming keywords before raising the budget.",
+    "col": [
+      "prune underperforming keywords",
+      "prune low-performing campaigns",
+      "prune the account structure"
+    ],
+    "added": "2026-11-13"
+  },
+  {
+    "w": "flag",
+    "ipa": "/flæɡ/",
+    "pos": "verb",
+    "vi": "đánh dấu, báo cho biết về một vấn đề",
+    "ex": "Please flag any tracking issues before the campaign goes live.",
+    "col": [
+      "flag an issue",
+      "flag a risk early",
+      "flag something for review"
+    ],
+    "added": "2026-11-13"
+  },
+  {
+    "w": "dial back",
+    "ipa": "/ˈdaɪəl bæk/",
+    "pos": "phrasal verb",
+    "vi": "giảm bớt, điều chỉnh xuống",
+    "ex": "We should dial back spend on branded keywords this month.",
+    "col": [
+      "dial back spending",
+      "dial back the bids",
+      "dial back expectations"
+    ],
+    "added": "2026-11-13"
+  },
+  {
+    "w": "keep someone posted",
+    "ipa": "/kiːp ˈsʌmwʌn ˈpəʊstɪd/",
+    "pos": "phrase",
+    "vi": "cập nhật thông tin cho ai đó",
+    "ex": "I’ll keep you posted once the new creatives are approved.",
+    "col": [
+      "keep the client posted",
+      "keep me posted on progress",
+      "keep the team posted"
+    ],
+    "added": "2026-11-13"
+  },
+  {
+    "w": "prototype",
+    "ipa": "/ˈprəʊtətaɪp/",
+    "pos": "noun",
+    "vi": "bản mẫu thử nghiệm",
+    "ex": "We built a quick prototype of the landing page for testing.",
+    "col": [
+      "build a prototype",
+      "rough prototype",
+      "test a prototype"
+    ],
+    "added": "2026-11-13"
+  },
+  {
+    "w": "bottom line",
+    "ipa": "/ˌbɒtəm ˈlaɪn/",
+    "pos": "noun",
+    "vi": "điểm mấu chốt, kết quả cuối cùng",
+    "ex": "The bottom line is that this campaign needs to drive sales.",
+    "col": [
+      "the bottom line is",
+      "get to the bottom line",
+      "bottom-line impact"
+    ],
+    "added": "2026-11-13"
+  },
+  {
+    "w": "patch things up",
+    "ipa": "/pætʃ θɪŋz ʌp/",
+    "pos": "phrasal verb",
+    "vi": "làm hòa, hàn gắn lại quan hệ",
+    "ex": "After weeks of silence, they finally patched things up over lunch.",
+    "col": [
+      "patch things up with someone",
+      "trying to patch things up",
+      "hard to patch things up"
+    ],
+    "added": "2026-11-13"
+  },
+  {
+    "w": "look out for someone",
+    "ipa": "/lʊk aʊt fɔː ˈsʌmwʌn/",
+    "pos": "phrasal verb",
+    "vi": "chăm sóc, bảo vệ ai đó",
+    "ex": "My manager always looks out for her team’s wellbeing.",
+    "col": [
+      "look out for each other",
+      "look out for your colleagues",
+      "look out for newcomers"
+    ],
+    "added": "2026-11-13"
+  },
+  {
+    "w": "homesick",
+    "ipa": "/ˈhəʊmsɪk/",
+    "pos": "adjective",
+    "vi": "nhớ nhà",
+    "ex": "I felt homesick during my first month working abroad.",
+    "col": [
+      "feel homesick",
+      "get homesick",
+      "homesick for Vietnamese food"
+    ],
+    "added": "2026-11-13"
+  },
+  {
+    "w": "feel left out",
+    "ipa": "/fiːl left aʊt/",
+    "pos": "phrase",
+    "vi": "cảm thấy bị bỏ rơi, không được hòa nhập",
+    "ex": "She felt left out when the team went to lunch without her.",
+    "col": [
+      "feel left out of decisions",
+      "feel left out socially",
+      "avoid making anyone feel left out"
+    ],
+    "added": "2026-11-13"
   }
 ]
