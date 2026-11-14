@@ -1,6 +1,6 @@
 {
-  "date": "2026-11-13",
-  "updated": "Cập nhật 10:26 thứ Sáu, 13/11/2026",
+  "date": "2026-11-14",
+  "updated": "Cập nhật 10:05 thứ Bảy, 14/11/2026",
   "sections": [
     {
       "id": "hot",
@@ -8,31 +8,31 @@
       "color": "--c-hot",
       "items": [
         {
-          "title": "Ông Lê Quốc Phong được bầu làm Chủ tịch UBND TP HCM",
-          "summary": "HĐND TP HCM đã bầu ông Lê Quốc Phong, 48 tuổi, Phó bí thư thường trực Thành ủy, giữ chức Chủ tịch UBND thành phố. Ông thay ông Nguyễn Văn Được ở vị trí này.",
+          "title": "Mỹ tạm dừng toàn bộ chuyến bay cất cánh vì sự cố liên lạc",
+          "summary": "Cục Hàng không Liên bang Mỹ (FAA) ra lệnh tạm dừng việc cất cánh của mọi chuyến bay trên toàn nước Mỹ. Nguyên nhân là sự cố liên lạc ảnh hưởng đến các đài kiểm soát không lưu. Tiêu đề bài báo nhấn mạnh đây không phải một vụ 11.9 mới.",
           "points": [],
           "why": "",
-          "source": "VnExpress",
-          "date": "12/11",
-          "link": "https://vnexpress.net/ong-le-quoc-phong-lam-chu-tich-ubnd-tp-hcm-5143543.html"
+          "source": "Thanh Niên",
+          "date": "14/11",
+          "link": "https://thanhnien.vn/my-tam-dung-khoi-hanh-bay-tren-toan-quoc-khong-phai-vu-119-moi-185261114092952525.htm"
         },
         {
-          "title": "Jensen Huang từ chức CEO Nvidia sau bê bối ngoại tình",
-          "summary": "Theo bài báo, Jensen Huang rời ghế CEO Nvidia vì bê bối ngoại tình của chính ông. Đây là lần đầu tiên hãng chip có giá trị nhất thế giới thay CEO sau 33 năm.",
+          "title": "Ông Trump dự kiến họp ba bên với ông Tập và ông Putin",
+          "summary": "Tổng thống Trump dự kiến hội đàm với Tổng thống Putin và Chủ tịch Tập Cận Bình bên lề Tuần lễ Cấp cao APEC tại Thâm Quyến, Trung Quốc. Cuộc gặp diễn ra vào tuần tới và sẽ là lần đầu ba nhà lãnh đạo họp cùng nhau.",
           "points": [],
           "why": "",
           "source": "VnExpress",
-          "date": "12/11",
-          "link": "https://vnexpress.net/jensen-huang-tu-chuc-ceo-nvidia-5143768.html"
+          "date": "14/11",
+          "link": "https://vnexpress.net/ong-trump-sap-lan-dau-hop-3-ben-voi-ong-tap-va-ong-putin-5144527.html"
         },
         {
-          "title": "Thủ tướng: năm 2027 cần huy động 6–6,4 triệu tỷ đồng vốn đầu tư",
-          "summary": "Thủ tướng Lê Minh Hưng cho biết tổng vốn đầu tư toàn xã hội năm 2027 cần huy động khoảng 36 đến 38% GDP. Con số này tương đương 6 đến 6,4 triệu tỷ đồng.",
+          "title": "IMF: Việt Nam kiểm soát tốt rủi ro lạm phát",
+          "summary": "Đại diện Quỹ Tiền tệ Quốc tế cho rằng Việt Nam đang kiểm soát tốt rủi ro lạm phát. Tuy nhiên, IMF khuyến nghị nên điều chỉnh chính sách tiền tệ nếu áp lực giá cả tăng lên.",
           "points": [],
           "why": "",
           "source": "VnExpress",
-          "date": "12/11",
-          "link": "https://vnexpress.net/thu-tuong-nam-2027-can-huy-dong-toi-6-4-trieu-ty-dong-von-dau-tu-5143983.html"
+          "date": "13/11",
+          "link": "https://vnexpress.net/imf-danh-gia-viet-nam-kiem-soat-tot-rui-ro-lam-phat-5144481.html"
         }
       ]
     },
@@ -42,8 +42,8 @@
       "color": "--c-work",
       "items": [
         {
-          "title": "Google Search nâng cấp lớn với mô hình Gemini 4 Hydrogen",
-          "summary": "Nick Fox của Google cho biết Google Search vừa có một bản nâng cấp lớn với Gemini 4 Hydrogen. Robby Stein gọi đây là lần nâng cấp mô hình lớn nhất từ trước đến nay của Search. Công cụ chạy rất nhanh, hiểu truy vấn tốt hơn, cải thiện query fan-out và liên kết, phản hồi trực quan hơn và ngôn ngữ phong phú hơn.",
+          "title": "Google Search nâng cấp lớn với Gemini 4 Hydrogen",
+          "summary": "Các đại diện Google cho biết Search vừa nhận bản nâng cấp mô hình lớn nhất từ trước đến nay với Gemini 4 Hydrogen. Mô hình này chạy rất nhanh, hiểu truy vấn tốt hơn, cải thiện việc mở rộng truy vấn và liên kết, đồng thời cho câu trả lời trực quan và ngôn ngữ phong phú hơn.",
           "points": [],
           "why": "",
           "source": "Search Engine Roundtable",
@@ -51,17 +51,17 @@
           "link": "https://www.seroundtable.com/google-search-gemini-4-hydrogen-42526.html"
         },
         {
-          "title": "Google Ads ra mắt thẻ tổng quan lưu lượng không hợp lệ (IVT)",
-          "summary": "Google Ads đang triển khai thẻ Invalid Traffic Overview Card, hiển thị thông tin về lưu lượng không hợp lệ. Theo Keerat Sharma của Google, thẻ này giúp nhà quảng cáo thấy rõ ngay trên giao diện cách Google bảo vệ chiến dịch của họ.",
+          "title": "Tin tìm kiếm: Google bắt đầu core update tháng 11, ChatGPT có trung tâm doanh nghiệp",
+          "summary": "Google bắt đầu triển khai core update tháng 11/2026, sau khi thứ hạng tìm kiếm biến động vào ngày 8 và 9/11. Google cũng ra bản cập nhật lớn cho Search với Gemini 4 Hydrogen, chỉ vài ngày sau Gemini 4 Carbon. Bản tin còn nhắc đến trung tâm doanh nghiệp của ChatGPT mang lại lượt nhấp, hướng đi mới của Yahoo về tìm kiếm và vấn đề lưu lượng không hợp lệ trên Google Ads.",
           "points": [],
           "why": "",
           "source": "Search Engine Roundtable",
-          "date": "12/11",
-          "link": "https://www.seroundtable.com/google-ads-invalid-traffic-ivt-overview-card-42513.html"
+          "date": "13/11",
+          "link": "https://www.seroundtable.com/video-11-13-2026-42523.html"
         },
         {
-          "title": "ChatGPT Ads cập nhật đấu thầu thông minh và mục tiêu chi phí mới",
-          "summary": "Trong email cập nhật hằng tuần về ChatGPT Ads, OpenAI công bố tính năng đấu thầu thông minh và các mục tiêu chi phí mới trong Ads Manager. Hãng cũng cho phép linh hoạt hơn về địa lý với chiến dịch product feed và về bộ lọc nhóm sản phẩm.",
+          "title": "ChatGPT Ads bổ sung đặt giá thông minh và mục tiêu chi phí mới",
+          "summary": "OpenAI gửi email cập nhật hằng tuần về ChatGPT Ads với nhiều tính năng mới. Đó là đặt giá thông minh, các mục tiêu chi phí mới trong Ads Manager, linh hoạt hơn về địa lý cho chiến dịch dùng nguồn cấp sản phẩm và bộ lọc nhóm sản phẩm linh hoạt hơn.",
           "points": [],
           "why": "",
           "source": "Search Engine Roundtable",
@@ -76,22 +76,65 @@
       "color": "--c-life",
       "items": [
         {
-          "title": "Tân Chủ tịch TP HCM ưu tiên xử lý kẹt xe, ngập nước",
-          "summary": "Ông Lê Quốc Phong, tân Chủ tịch UBND TP HCM, cho biết sẽ tập trung giải quyết kẹt xe, ngập nước và ô nhiễm môi trường. Mục tiêu là nâng cao chất lượng sống của người dân khi ông nhận nhiệm vụ.",
+          "title": "Nguồn cung căn hộ tăng, giá nhà TP.HCM có giảm?",
+          "summary": "Thị trường bất động sản TP.HCM và vùng phụ cận bước vào những tháng cuối năm 2026 với tín hiệu tích cực về nguồn cung. Dự kiến khoảng 10.000 căn hộ mới sắp được mở bán. Câu hỏi đặt ra là liệu giá nhà có giảm theo hay không.",
           "points": [],
           "why": "",
-          "source": "VnExpress",
-          "date": "12/11",
-          "link": "https://vnexpress.net/tan-chu-tich-tp-hcm-uu-tien-giai-quyet-ket-xe-ngap-nuoc-5143787.html"
+          "source": "Tuổi Trẻ",
+          "date": "14/11",
+          "link": "https://tuoitre.vn/nguon-cung-tang-gia-nha-tphcm-co-giam-100261113201436923.htm"
         },
         {
-          "title": "Giá xăng giảm, về dưới 20.000 đồng một lít",
-          "summary": "Từ 15h hôm nay, giá các loại xăng dầu cùng giảm từ 1.310 đến 2.260 đồng một lít. Đợt điều chỉnh này theo diễn biến của thị trường năng lượng thế giới, đưa giá xăng xuống dưới 20.000 đồng một lít.",
+          "title": "Đồng hồ điện, nước đo sai thì phải hoàn tiền thu thừa",
+          "summary": "Luật Đo lường sửa đổi quy định phải trả lại tiền đã thu không đúng do kết quả đo sai lệch. Người tiêu dùng có thể yêu cầu cung cấp dữ liệu để khiếu nại. Luật cũng tăng kiểm soát gian lận trong cân đo.",
           "points": [],
           "why": "",
           "source": "VnExpress",
-          "date": "12/11",
-          "link": "https://vnexpress.net/gia-xang-dau-moi-nhat-hom-nay-12-11-5143841.html"
+          "date": "13/11",
+          "link": "https://vnexpress.net/thu-thua-tien-dien-nuoc-do-dong-ho-do-sai-phai-tra-lai-5144130.html"
+        },
+        {
+          "title": "Lưu ý khi thanh toán BHYT, BHXH qua ứng dụng",
+          "summary": "Nhiều người đã trả tiền gia hạn thẻ BHYT hoặc đóng BHXH tự nguyện qua ứng dụng ngân hàng, ví điện tử nhưng hệ thống BHXH chưa ghi nhận giao dịch. BHXH Việt Nam khuyến cáo người tham gia kiểm tra kỹ kết quả và tránh thanh toán trùng.",
+          "points": [],
+          "why": "",
+          "source": "Thanh Niên",
+          "date": "14/11",
+          "link": "https://thanhnien.vn/nguoi-tham-gia-bhyt-bhxh-can-luu-y-gi-khi-thanh-toan-online-185261113184438478.htm"
+        }
+      ]
+    },
+    {
+      "id": "heart",
+      "name": "Ý nghĩa",
+      "color": "--c-heart",
+      "items": [
+        {
+          "title": "Vợ chồng nhà giáo Jrai 18 năm dạy học xa nhà",
+          "summary": "Thầy Glin và cô H’Xinh suốt 18 năm đi dạy ở hai hướng khác nhau, cách nhà 80km. Hai vợ chồng chỉ có chưa đầy 36 tiếng cuối tuần bên ba đứa con nhỏ.",
+          "points": [],
+          "why": "",
+          "source": "Tuổi Trẻ",
+          "date": "14/11",
+          "link": "https://tuoitre.vn/18-nam-vo-chong-nha-giao-jrai-di-day-hai-nga-moi-tuan-chi-co-36-tieng-ben-con-100261111220714319.htm"
+        },
+        {
+          "title": "Thiếu niên sống sót 6 ngày trong rừng nhờ gói bim bim",
+          "summary": "William, 17 tuổi, bị lạc 6 ngày giữa rừng ở bang Victoria. Cậu cầm cự nhờ một gói bim bim được chia nhỏ để ăn dè và uống nước suối.",
+          "points": [],
+          "why": "",
+          "source": "VnExpress",
+          "date": "13/11",
+          "link": "https://vnexpress.net/thieu-nien-song-sot-6-ngay-giua-rung-nho-goi-bim-bim-5144355.html"
+        },
+        {
+          "title": "Chàng trai đoạt giải nhất Loa Thành 2026 với tòa nhà 240 m",
+          "summary": "Thạch giành giải nhất Giải thưởng Loa Thành 2026 nhờ đồ án tốt nghiệp về Trung tâm tài chính quốc tế Saigon Marina IFC. Trước đó, cậu còn tốt nghiệp thủ khoa toàn khóa tại Trường ĐH Công nghệ TP.HCM.",
+          "points": [],
+          "why": "",
+          "source": "Thanh Niên",
+          "date": "14/11",
+          "link": "https://thanhnien.vn/chang-trai-gianh-giai-nhat-tu-do-an-ve-toa-nha-cao-240-m-185261113194102645.htm"
         }
       ]
     }

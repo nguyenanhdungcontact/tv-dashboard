@@ -2568,5 +2568,135 @@
       "avoid making anyone feel left out"
     ],
     "added": "2026-11-13"
+  },
+  {
+    "w": "onboarding",
+    "ipa": "/ˈɒnbɔːdɪŋ/",
+    "pos": "noun",
+    "vi": "quá trình hướng dẫn, làm quen cho nhân viên mới",
+    "ex": "The new hires’ onboarding takes two weeks, including the analytics training.",
+    "col": [
+      "employee onboarding",
+      "onboarding process",
+      "onboarding session"
+    ],
+    "added": "2026-11-14"
+  },
+  {
+    "w": "kick-off",
+    "ipa": "/ˈkɪk ɒf/",
+    "pos": "noun",
+    "vi": "buổi khởi động, cuộc họp mở đầu dự án",
+    "ex": "Let’s schedule a kick-off call to align on the Q3 targets.",
+    "col": [
+      "project kick-off",
+      "kick-off meeting",
+      "kick-off call"
+    ],
+    "added": "2026-11-14"
+  },
+  {
+    "w": "data silo",
+    "ipa": "/ˈdeɪtə ˈsaɪləʊ/",
+    "pos": "noun",
+    "vi": "dữ liệu bị tách biệt, khó chia sẻ giữa các bộ phận",
+    "ex": "Our CRM is a data silo, so we can’t see the full journey.",
+    "col": [
+      "break down data silos",
+      "data silo problem",
+      "isolated data silo"
+    ],
+    "added": "2026-11-14"
+  },
+  {
+    "w": "lookalike audience",
+    "ipa": "/ˈlʊkəlaɪk ˈɔːdiəns/",
+    "pos": "noun phrase",
+    "vi": "nhóm đối tượng có đặc điểm giống khách hàng hiện tại",
+    "ex": "Building a lookalike audience from purchasers boosted our conversions significantly last month.",
+    "col": [
+      "create a lookalike audience",
+      "lookalike audience targeting",
+      "seed a lookalike audience"
+    ],
+    "added": "2026-11-14"
+  },
+  {
+    "w": "take ownership of",
+    "ipa": "/teɪk ˈəʊnəʃɪp əv/",
+    "pos": "phrasal verb",
+    "vi": "nhận trách nhiệm chính đối với việc gì",
+    "ex": "She took ownership of the failed campaign and fixed the tracking issues.",
+    "col": [
+      "take ownership of the project",
+      "take ownership of mistakes",
+      "take ownership of the outcome"
+    ],
+    "added": "2026-11-14"
+  },
+  {
+    "w": "hand off",
+    "ipa": "/hænd ɒf/",
+    "pos": "phrasal verb",
+    "vi": "giao lại công việc cho người khác tiếp nhận",
+    "ex": "I’ll hand off the reporting to Minh while I focus on bidding.",
+    "col": [
+      "hand off a task",
+      "smooth handoff",
+      "hand off responsibilities"
+    ],
+    "added": "2026-11-14"
+  },
+  {
+    "w": "dread",
+    "ipa": "/dred/",
+    "pos": "verb",
+    "vi": "lo sợ, ngại ngùng trước điều sắp xảy ra",
+    "ex": "I dread Monday mornings when the weekly performance report is due.",
+    "col": [
+      "dread the meeting",
+      "dread doing something",
+      "dread the outcome"
+    ],
+    "added": "2026-11-14"
+  },
+  {
+    "w": "give someone the cold shoulder",
+    "ipa": "/ɡɪv ˈsʌmwʌn ðə kəʊld ˈʃəʊldə/",
+    "pos": "idiom",
+    "vi": "lạnh nhạt, cố tình phớt lờ ai đó",
+    "ex": "After the argument, she gave me the cold shoulder for days.",
+    "col": [
+      "get the cold shoulder",
+      "give the cold shoulder to colleagues",
+      "receive the cold shoulder"
+    ],
+    "added": "2026-11-14"
+  },
+  {
+    "w": "composure",
+    "ipa": "/kəmˈpəʊʒə/",
+    "pos": "noun",
+    "vi": "sự bình tĩnh, giữ được tự chủ trong tình huống căng thẳng",
+    "ex": "He kept his composure when the client shouted during the review.",
+    "col": [
+      "lose one’s composure",
+      "keep one’s composure",
+      "calm composure"
+    ],
+    "added": "2026-11-14"
+  },
+  {
+    "w": "bitter",
+    "ipa": "/ˈbɪtə/",
+    "pos": "adjective",
+    "vi": "cay đắng, oán giận vì bị đối xử bất công",
+    "ex": "She still feels bitter about being passed over for the promotion.",
+    "col": [
+      "feel bitter about",
+      "bitter disappointment",
+      "bitter rivalry"
+    ],
+    "added": "2026-11-14"
   }
 ]
