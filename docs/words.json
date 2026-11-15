@@ -2698,5 +2698,135 @@
       "bitter rivalry"
     ],
     "added": "2026-11-14"
+  },
+  {
+    "w": "recalibrate",
+    "ipa": "/ˌriːˈkæl.ɪ.breɪt/",
+    "pos": "verb",
+    "vi": "điều chỉnh lại cho phù hợp",
+    "ex": "We need to recalibrate our targets after the holiday dip.",
+    "col": [
+      "recalibrate expectations",
+      "recalibrate the bidding strategy",
+      "recalibrate the forecast model"
+    ],
+    "added": "2026-11-15"
+  },
+  {
+    "w": "validate",
+    "ipa": "/ˈvæl.ɪ.deɪt/",
+    "pos": "verb",
+    "vi": "xác thực, kiểm chứng",
+    "ex": "Let’s validate the conversion data before we scale the budget.",
+    "col": [
+      "validate the data",
+      "validate an assumption",
+      "validate with real users"
+    ],
+    "added": "2026-11-15"
+  },
+  {
+    "w": "spearhead",
+    "ipa": "/ˈspɪə.hed/",
+    "pos": "verb",
+    "vi": "dẫn dắt, đứng đầu một việc quan trọng",
+    "ex": "Maya will spearhead the new Q3 brand campaign.",
+    "col": [
+      "spearhead a campaign",
+      "spearhead the initiative",
+      "spearhead a rebrand"
+    ],
+    "added": "2026-11-15"
+  },
+  {
+    "w": "spike",
+    "ipa": "/spaɪk/",
+    "pos": "noun",
+    "vi": "sự tăng vọt đột ngột",
+    "ex": "Cost per click spiked overnight after the competitor launched ads.",
+    "col": [
+      "a sudden spike",
+      "spike in traffic",
+      "spike in costs"
+    ],
+    "added": "2026-11-15"
+  },
+  {
+    "w": "data integrity",
+    "ipa": "/ˈdeɪ.tə ɪnˈteg.rə.ti/",
+    "pos": "noun",
+    "vi": "tính toàn vẹn và chính xác của dữ liệu",
+    "ex": "Broken tracking pixels can seriously compromise data integrity.",
+    "col": [
+      "ensure data integrity",
+      "maintain data integrity",
+      "compromise data integrity"
+    ],
+    "added": "2026-11-15"
+  },
+  {
+    "w": "meticulous",
+    "ipa": "/məˈtɪk.jə.ləs/",
+    "pos": "adjective",
+    "vi": "tỉ mỉ, kỹ lưỡng",
+    "ex": "She’s meticulous about checking every negative keyword list.",
+    "col": [
+      "meticulous attention to detail",
+      "meticulous planning",
+      "meticulous about deadlines"
+    ],
+    "added": "2026-11-15"
+  },
+  {
+    "w": "unsettled",
+    "ipa": "/ʌnˈset.ld/",
+    "pos": "adjective",
+    "vi": "bất an, không yên lòng",
+    "ex": "I felt unsettled after that tense conversation with my manager.",
+    "col": [
+      "feel unsettled",
+      "deeply unsettled",
+      "unsettled by something"
+    ],
+    "added": "2026-11-15"
+  },
+  {
+    "w": "heartfelt",
+    "ipa": "/ˈhɑːtˌfelt/",
+    "pos": "adjective",
+    "vi": "chân thành, xuất phát từ đáy lòng",
+    "ex": "Thanks for the heartfelt message when my dad was sick.",
+    "col": [
+      "heartfelt apology",
+      "heartfelt thanks",
+      "heartfelt congratulations"
+    ],
+    "added": "2026-11-15"
+  },
+  {
+    "w": "bicker",
+    "ipa": "/ˈbɪk.ər/",
+    "pos": "verb",
+    "vi": "cãi vặt, đấu khẩu",
+    "ex": "My sister and I still bicker like kids over the smallest things.",
+    "col": [
+      "bicker with someone",
+      "bicker about something",
+      "bicker over money"
+    ],
+    "added": "2026-11-15"
+  },
+  {
+    "w": "open-minded",
+    "ipa": "/ˌəʊpənˈmaɪn.dɪd/",
+    "pos": "adjective",
+    "vi": "cởi mở, sẵn sàng lắng nghe ý kiến khác",
+    "ex": "Try to stay open-minded; the client may have a point.",
+    "col": [
+      "stay open-minded",
+      "open-minded attitude",
+      "remain open-minded about"
+    ],
+    "added": "2026-11-15"
   }
 ]
